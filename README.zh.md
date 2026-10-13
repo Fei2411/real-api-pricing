@@ -93,7 +93,7 @@ Coding Agent Index v1.5。每个分数对应一组测过的 harness × 模型 ×
 
 ![Terminal-Bench 4.0](charts/zh/pareto/帕累托_TB4终端榜.svg)
 
-Stanford、Harbor 和 Laude Institute 维护的 66 题官方榜（快照 2026-09-03），<!-- stat:configs_terminal_bench_4 -->31<!-- /stat --> 个公开配置全部收录。官方榜还没收的模型，补上厂商自报分并标 [self-reported]，例如 Cognition 发布博客里 SWE-2 · Devin Pro 的 27.3%。
+Stanford、Harbor 和 Laude Institute 维护的 66 题官方榜（快照 2026-09-03），<!-- stat:configs_terminal_bench_4 -->32<!-- /stat --> 个公开配置全部收录。官方榜还没收的模型，补上厂商自报分并标 [self-reported]，例如 Cognition 发布博客里 SWE-2 · Devin Pro 的 27.3%。
 
 ### Terminal-Bench 4.0（AA）
 
@@ -155,7 +155,7 @@ Stanford、Harbor 和 Laude Institute 维护的 66 题官方榜（快照 2026-09
 | Code Arena | <!-- stat:scored_arena_code -->264<!-- /stat --> |
 | Agent Arena | <!-- stat:scored_arena_agent_mode -->204<!-- /stat --> |
 | OpenDesign 设计榜 | <!-- stat:scored_open_design_arena -->73<!-- /stat --> |
-| Terminal-Bench 4.0 | <!-- stat:scored_terminal_bench_4 -->119<!-- /stat --> |
+| Terminal-Bench 4.0 | <!-- stat:scored_terminal_bench_4 -->125<!-- /stat --> |
 | Terminal-Bench 4.0（AA） | <!-- stat:scored_aa_terminal_bench_4 -->278<!-- /stat --> |
 | DeepSWE v1.1 | <!-- stat:scored_deepswe_1_1 -->213<!-- /stat --> |
 
@@ -163,7 +163,7 @@ Stanford、Harbor 和 Laude Institute 维护的 66 题官方榜（快照 2026-09
 
 **下载：** [采用值 CSV](data/adopted.csv) · [计算结果 CSV](derived/points.csv) / [JSON](derived/points.json) · [数据说明](data/README.md) · [分日期原始证据](data/research/)
 
-**全部评测配置**（不只每个模型的最高分）：[评测配置存档](derived/benchmark-configurations.json)（[CSV](derived/benchmark-configurations.csv)）完整保留 <!-- stat:configs_total -->531<!-- /stat --> 条记录，含原始标签、harness、effort、分数区间和任务成本。[套餐与配置的映射](derived/benchmark-points.json)（[CSV](derived/benchmark-points.csv)）有 <!-- stat:refs_total -->2724<!-- /stat --> 条明确对应。不知道的 harness、effort 和区间一律留空，不猜。[全配置交互图](charts/zh/pareto/帕累托交互图.html)可以切换配置和思考强度；需下载后本地打开，Plotly 要联网。
+**全部评测配置**（不只每个模型的最高分）：[评测配置存档](derived/benchmark-configurations.json)（[CSV](derived/benchmark-configurations.csv)）完整保留 <!-- stat:configs_total -->532<!-- /stat --> 条记录，含原始标签、harness、effort、分数区间和任务成本。[套餐与配置的映射](derived/benchmark-points.json)（[CSV](derived/benchmark-points.csv)）有 <!-- stat:refs_total -->2730<!-- /stat --> 条明确对应。不知道的 harness、effort 和区间一律留空，不猜。[全配置交互图](charts/zh/pareto/帕累托交互图.html)可以切换配置和思考强度；需下载后本地打开，Plotly 要联网。
 
 ## 已知局限
 

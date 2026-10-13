@@ -15,7 +15,7 @@ These files are the public redacted edition. Original local evidence is backed u
 | Code Arena | <!-- stat:scored_arena_code -->264<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_arena_code -->68<!-- /stat --> |
 | Agent Arena | <!-- stat:scored_arena_agent_mode -->204<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_arena_agent_mode -->128<!-- /stat --> |
 | OpenDesign Arena | <!-- stat:scored_open_design_arena -->73<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_open_design_arena -->259<!-- /stat --> |
-| Terminal-Bench 4.0 | <!-- stat:scored_terminal_bench_4 -->119<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_terminal_bench_4 -->213<!-- /stat --> |
+| Terminal-Bench 4.0 | <!-- stat:scored_terminal_bench_4 -->125<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_terminal_bench_4 -->207<!-- /stat --> |
 | Terminal-Bench 4.0 (AA) | <!-- stat:scored_aa_terminal_bench_4 -->278<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_aa_terminal_bench_4 -->54<!-- /stat --> |
 | DeepSWE v1.1 | <!-- stat:scored_deepswe_1_1 -->213<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_deepswe_1_1 -->119<!-- /stat --> |
 

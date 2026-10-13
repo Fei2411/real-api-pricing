@@ -101,7 +101,7 @@ The 0–100 average task score: requirements 30 + design quality 70. OpenDesign'
 
 ![Terminal-Bench 4.0](charts/en/pareto/pareto-terminal-bench-4.svg)
 
-The official 66-task leaderboard hosted by Stanford, Harbor and the Laude Institute (snapshot 2026-09-03), with all <!-- stat:configs_terminal_bench_4 -->31<!-- /stat --> published configurations. Vendor-reported scores for models the official board doesn't list are added and labelled [self-reported], for example SWE-2 · Devin Pro at 27.3% from Cognition's launch post.
+The official 66-task leaderboard hosted by Stanford, Harbor and the Laude Institute (snapshot 2026-09-03), with all <!-- stat:configs_terminal_bench_4 -->32<!-- /stat --> published configurations. Vendor-reported scores for models the official board doesn't list are added and labelled [self-reported], for example SWE-2 · Devin Pro at 27.3% from Cognition's launch post.
 
 ### Terminal-Bench 4.0 (AA)
 
@@ -163,7 +163,7 @@ Chinese charts count tokens in 亿 (100 million): 77.37 亿 = 7.737 billion.
 | Code Arena | <!-- stat:scored_arena_code -->264<!-- /stat --> |
 | Agent Arena | <!-- stat:scored_arena_agent_mode -->204<!-- /stat --> |
 | OpenDesign Arena | <!-- stat:scored_open_design_arena -->73<!-- /stat --> |
-| Terminal-Bench 4.0 | <!-- stat:scored_terminal_bench_4 -->119<!-- /stat --> |
+| Terminal-Bench 4.0 | <!-- stat:scored_terminal_bench_4 -->125<!-- /stat --> |
 | Terminal-Bench 4.0 (AA) | <!-- stat:scored_aa_terminal_bench_4 -->278<!-- /stat --> |
 | DeepSWE v1.1 | <!-- stat:scored_deepswe_1_1 -->213<!-- /stat --> |
 
@@ -171,7 +171,7 @@ The largest plan families are Command Code GOAT (<!-- stat:plans_command_code_go
 
 **Downloads:** [adopted values (CSV)](data/adopted.csv) · [computed points (CSV)](derived/points.csv) / [JSON](derived/points.json) · [data notes](data/README.md) · [dated evidence](data/research/)
 
-**Every benchmark configuration**, not just the highest per model: the [configuration archive](derived/benchmark-configurations.json) ([CSV](derived/benchmark-configurations.csv)) keeps all <!-- stat:configs_total -->531<!-- /stat --> records with their original labels, harness, effort, score intervals and task costs. The [plan-to-configuration mappings](derived/benchmark-points.json) ([CSV](derived/benchmark-points.csv)) hold <!-- stat:refs_total -->2724<!-- /stat --> explicit references. Unknown harnesses, efforts and intervals stay empty instead of being guessed. The [all-configuration interactive chart](charts/zh/pareto/帕累托交互图.html) (Chinese; download and open locally, needs network access for Plotly) lets you switch between configurations and effort levels.
+**Every benchmark configuration**, not just the highest per model: the [configuration archive](derived/benchmark-configurations.json) ([CSV](derived/benchmark-configurations.csv)) keeps all <!-- stat:configs_total -->532<!-- /stat --> records with their original labels, harness, effort, score intervals and task costs. The [plan-to-configuration mappings](derived/benchmark-points.json) ([CSV](derived/benchmark-points.csv)) hold <!-- stat:refs_total -->2730<!-- /stat --> explicit references. Unknown harnesses, efforts and intervals stay empty instead of being guessed. The [all-configuration interactive chart](charts/zh/pareto/帕累托交互图.html) (Chinese; download and open locally, needs network access for Plotly) lets you switch between configurations and effort levels.
 
 ## Known limitations
 

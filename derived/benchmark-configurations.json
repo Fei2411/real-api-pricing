@@ -24264,5 +24264,40 @@
       "checkedAt": "2026-10-13",
       "note": "Anthropic Haiku 5.5 发布页 Performance 表 Agentic coding Terminal-Bench 4.0 行 39.2%（同表 Haiku 4.5 0.0%、GPT-6 Luna 16.4%、Sonnet 5.5 70.6%；FrontierCode 1.1 46.4% 非本仓库榜单仅留证据）。"
     }
+  },
+  {
+    "configuration_id": "terminal_bench_4:7c4cd5d274fbb1e5",
+    "board": "terminal_bench_4",
+    "model": "claude-sonnet-5.5",
+    "variant": "Claude Sonnet 5.5 - self-reported [vendor self-report]",
+    "score_is_estimated": null,
+    "score_is_self_reported": true,
+    "agent_harness": "Claude Code",
+    "reasoning_effort": null,
+    "service_mode": null,
+    "score": 70.6,
+    "score_low": null,
+    "score_high": null,
+    "mean_cost_usd_per_task": null,
+    "median_cost_usd_per_task": null,
+    "source": "https://www.anthropic.com/claude-haiku-5.5",
+    "checked_at": "2026-10-13",
+    "archive": "scores-muse-wonder-haiku55-2026-10-13.json",
+    "raw_record": {
+      "boardId": "terminal_bench_4",
+      "model": "claude-sonnet-5.5",
+      "variantLabel": "Claude Sonnet 5.5 - self-reported",
+      "score": 70.6,
+      "secondary": {
+        "selfReported": true,
+        "reportedBy": "Anthropic",
+        "agentHarness": "Claude Code",
+        "reasoningEffort": null,
+        "effortNote": "同 Haiku 5.5 发布页评测表未标 effort 档"
+      },
+      "source": "https://www.anthropic.com/claude-haiku-5.5",
+      "checkedAt": "2026-10-13",
+      "note": "同表 Anthropic 自报（Haiku 5.5 发布页 Performance 表 Agentic coding Terminal-Bench 4.0 行）；官方榜 sonnet-5.5 无配置行，故登记。GPT-6 Luna 16.4% 系跨厂转引，维持 vendorBenchmarksNotBoards。"
+    }
   }
 ]
