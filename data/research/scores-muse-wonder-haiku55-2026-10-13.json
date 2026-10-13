@@ -90,7 +90,7 @@
     "agentHarness": "SWE-agent harness",
     "reasoningEffort": "high"
    },
-   "source": "scores-stepfun-step5-round1-2026-09-21.json 存档的 StepFun 发布对比图",
+   "source": "https://www.stepfun.com/（scores-stepfun-step5-round1-2026-09-21.json 存档的 Step 5 发布对比图）",
    "checkedAt": "2026-09-21",
    "note": "StepFun 对自家模型的自报（发布图 DeepSWE v1.1 列 Step5(High) 67.7）；同图 K3 67.5 / GLM-5.3 66.9 / Astra 74.1 / Opus5 74.0 为对他人模型的复测，维持 vendorBenchmarksNotBoards 不登记。"
   },
