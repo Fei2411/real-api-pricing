@@ -12,7 +12,7 @@
     "weeklyPoolRatio20xTo5x": 2,
     "confidence": "medium",
     "range20xMonthlyYi": [110, 200],
-    "note": "157是按用户提供的永久口径取整采用值；5x=157/2。5小时窗口倍数与周池比例不可混用；36/70亿候选均不采；旧2.25周池比例保留为未采用历史证据。"
+    "note": "157是按维护者提供的永久口径取整采用值；5x=157/2。5小时窗口倍数与周池比例不可混用；36/70亿候选均不采；旧2.25周池比例保留为未采用历史证据。"
   },
   "sources": [
     {
@@ -29,11 +29,11 @@
   "notAdopted": [
     {
       "item": "Claude Pro Opus5约1.9亿/月",
-      "reason": "由假定周消息数和跨来源token/request拼接，没有纯Opus5的token+周%匹配实测；用户未确认采用。暂保留Opus4.8历史15.88亿及Sonnet39.7亿，不将新推算宣称为实测收紧。"
+      "reason": "由假定周消息数和跨来源token/request拼接，没有纯Opus5的token+周%匹配实测；未经确认采用。暂保留Opus4.8历史15.88亿及Sonnet39.7亿，不将新推算宣称为实测收紧。"
     },
     {
       "item": "Claude Max5x 36或70亿候选",
-      "reason": "用户明确周池20x/5x=2，现采用78.5亿；不再采用跨来源消息数推算或旧2.25倍率。"
+      "reason": "已确认周池20x/5x=2，现采用78.5亿；不再采用跨来源消息数推算或旧2.25倍率。"
     }
   ],
   "archivedResearch": "data/research/claude-quotas-round5-2026-09.json",

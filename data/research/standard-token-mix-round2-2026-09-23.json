@@ -1,7 +1,7 @@
 {
   "recordedAt": "2026-09-23",
   "sourceType": "user_confirmed_project_convention + sample_audit",
-  "userDecision": "2026-09-23 用户裁定：项目统一标准负载改为 缓存读97.0% / 普通输入2.5% / 输出0.5%（用户原话「97.0/2.5/0.5」）；低缓存档输出跟随标准，缓存固定85%，余量归输入 → 85% / 14.5% / 0.5%。",
+  "userDecision": "2026-09-23 裁定：项目统一标准负载改为 缓存读97.0% / 普通输入2.5% / 输出0.5%（维护者原话「97.0/2.5/0.5」）；低缓存档输出跟随标准，缓存固定85%，余量归输入 → 85% / 14.5% / 0.5%。",
   "supersedes": {
     "standardTokenMix": {"cache": 0.975, "input": 0.0215, "output": 0.0035, "origin": "standard-token-mix-round1-2026-09-07.json；源自本机 Kimi ccusage 2026-06~07（5.92亿 tok，输出0.353%）"},
     "lowCacheTokenMix": {"cache": 0.85, "input": 0.1465, "output": 0.0035}
@@ -14,7 +14,7 @@
   "sampleAudit": {
     "method": "从 data/research 与 data/kimi-local.json 取全部带 cache读/未缓存输入/输出 三项分拆的实测样本；cache write（cache_creation）并入普通输入（本质是未命中输入）；份额按各样本 total 计。",
     "excluded": [
-      {"sample": "MiMo OpenCode 单日（mimo-token-plan-panel-round2-2026-09-23.json）", "mix": [0.9204, 0.0608, 0.0188], "reason": "用户裁定低缓存系 OpenCode harness 所致"},
+      {"sample": "MiMo OpenCode 单日（mimo-token-plan-panel-round2-2026-09-23.json）", "mix": [0.9204, 0.0608, 0.0188], "reason": "裁定低缓存系 OpenCode harness 所致"},
       {"sample": "Step-5 本机（stepfun-step5-panel-round5-2026-09-21.json）", "mix": [0.79, 0.2066, 0.0034], "reason": "低缓存档渠道，不进标准档"},
       {"sample": "Claude Fable 5.1（claude-fable51-round3-2026-09-20.json）", "reason": "缺 input/cache_write 分项"},
       {"sample": "ChatGPT Plus Astra（chatgpt-astra-adoption-round7-2026-09-11.json）", "reason": "缺 output 分项"}

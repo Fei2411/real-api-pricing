@@ -1,0 +1,55 @@
+{
+  "collectedAt": "2026-09-29",
+  "subject": "Factory Droid Pro — Claude Opus 5.5 社区口述额度（等价 API 消耗）",
+  "plan": {
+    "name": "Droid Pro",
+    "vendor": "Factory",
+    "priceUsdPerMonth": 20,
+    "source": "https://factory.ai/pricing",
+    "officialUsageNote": "Max ~10x Pro；Rate Limits 为 5-hour / 7-day / 30-day 三个独立滚动窗（docs.factory.ai/pricing/individuals）"
+  },
+  "source": {
+    "type": "community_post_screenshot",
+    "platform": "X",
+    "author": "@SnowyWar36965",
+    "postedAt": "2026-09-28 20:10 (UTC+8)",
+    "providedBy": "维护者转交截图（2026-09-29）",
+    "claimText": "droid 买了个 20 刀一个月的，跑 claude opus 5.5 做了个小动画，用了 70% 左右额度，折扣一下大概五小时是 15 刀，占比 35% 一周是 45%，一个月大概就是 160。如果开 max 的话就是 10 倍额度，大概一个月 1600 刀。周额度和月额度比 devin 多一些。",
+    "table": {
+      "columns": ["Pro 现状", "Max (10x)", "约合 token"],
+      "rows": {
+        "5h": ["≈$15.4", "≈$154", "≈1.76 亿"],
+        "week": ["≈$45", "≈$450", "≈5.1 亿"],
+        "month": ["≈$160", "≈$1,600", "≈18 亿"]
+      },
+      "footer": "$200/mo 买到约 $1,600 的等价 API 消耗，杠杆约 8 倍"
+    }
+  },
+  "calculation": {
+    "workload": "anthropic（同 droid_max×opus-5.5：list-worth ÷ anthropicTokenMix 混合价）",
+    "adoptedWorthUsdPerMonth": 160,
+    "blendedAnthropicUsdPerMTok": 0.419,
+    "formula": "$160 ÷ $0.419/MTok = 3.82 亿/月",
+    "monthlyYi": 3.82,
+    "weekTimes4Alternative": {
+      "worthUsd": 180,
+      "monthlyYi": 4.3,
+      "note": "周 $45 × 4 周；帖主月值 $160 低于 4× 周，按 30 天滚动窗为绑定约束，不采"
+    },
+    "posterTokenColumn": "帖主 token 列 18 亿/$1,600 ≈ $0.89/MTok，为其自身负载估算（缓存占比低于标准档），不采"
+  },
+  "crossChecks": [
+    "本机实测 Droid Max × Opus 5.5 月 list-worth $2,116.91（droid-opus55-max-round1-2026-09-29.json）；÷ 官方约 10× ＝ Pro 约 $211.7（5.05 亿/月）；帖主 Pro $160 约为其 0.76×",
+    "帖主 Max 10x 月 $1,600 同为本机实测 $2,116.91 的 0.76×；实测按周窗 ×4，帖主月值若来自 30 天窗，差异可能反映 30 天窗 < 4× 周池"
+  ],
+  "confidence": "low",
+  "weaknesses": [
+    "口述估算，无面板截图、无 token 分拆",
+    "n=1，单次小动画任务",
+    "5h/周/月三档的换算过程未公开（'占比35%'语义不明）"
+  ],
+  "openQuestions": [
+    "30 天窗与 7 天窗的实际比例（可用 Max 实测账号 /limits 同框验证）",
+    "Pro 是否严格为 Max 的 1/10"
+  ]
+}

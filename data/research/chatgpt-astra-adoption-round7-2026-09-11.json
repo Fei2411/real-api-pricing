@@ -1,15 +1,15 @@
 {
   "collectedAt": "2026-09-11",
-  "scopeNote": "ChatGPT Plus 用户面板 Codex Astra（gpt-6-astra）专项采用记录。用户本人账号 2026-09-11 晚周窗剩余 26%→0% 的 token 抽取（input + cache_read 两列；output/reasoning 未在本次抽取中，按 Codex 历史构成约占 <1%）。同一文件附记本周窗各模型缓存命中率。历史 research 文件不改。",
+  "scopeNote": "ChatGPT Plus 维护者面板 Codex Astra（gpt-6-astra）专项采用记录。维护者本人账号 2026-09-11 晚周窗剩余 26%→0% 的 token 抽取（input + cache_read 两列；output/reasoning 未在本次抽取中，按 Codex 历史构成约占 <1%）。同一文件附记本周窗各模型缓存命中率。历史 research 文件不改。",
   "items": [
     {
       "planId": "chatgpt_plus",
       "priceUsd": 20,
       "model": "gpt-6-astra",
       "evidenceType": "user_dashboard_backcalculation",
-      "source": "用户本人 ChatGPT Plus 账号 Codex 用量抽取，2026-09-11 晚",
+      "source": "维护者本人 ChatGPT Plus 账号 Codex 用量抽取，2026-09-11 晚",
       "sourceDate": "2026-09-11",
-      "userConfirmation": "用户直接提供分段 token 与百分比数据。",
+      "userConfirmation": "维护者直接提供分段 token 与百分比数据。",
       "window": "周窗自 2026-09-06 起，今晚 exhausted（剩余 26%→0%）",
       "observed": {
         "segments": [
@@ -91,7 +91,7 @@
     "astra": 0.9686695022727288,
     "luna": 0.9734836209812816,
     "thirdUnlabeled": 0.9605046544857986,
-    "note": "第三个数值用户未标注对象，原样记录"
+    "note": "第三个数值未标注对象，原样记录"
   },
   "adopted": {
     "chatgpt_plus_gpt_6_astra_monthlyYi": 1.59
@@ -99,6 +99,6 @@
   "withdrawn": {
     "chatgpt_pro_5x_gpt_6_astra": "derived",
     "chatgpt_pro_20x_gpt_6_astra": "derived_then_10pct_then_removed",
-    "reason": "×20/×5 派生法 2026-09-13 弃用：官方倍率是消息条数口径，Plus 端 Astra 又是 limited 子池，派生值系统性偏低，按用户要求从记录中删除。Pro20x 曾于 2026-09-12 短暂采用 round10 的 10% 截图反推值，同日用户决定 Pro20x Astra 暂不展示，撤回。Pro 5x 始终无数据。"
+    "reason": "×20/×5 派生法 2026-09-13 弃用：官方倍率是消息条数口径，Plus 端 Astra 又是 limited 子池，派生值系统性偏低，按裁定从记录中删除。Pro20x 曾于 2026-09-12 短暂采用 round10 的 10% 截图反推值，同日裁定 Pro20x Astra 暂不展示，撤回。Pro 5x 始终无数据。"
   }
 }

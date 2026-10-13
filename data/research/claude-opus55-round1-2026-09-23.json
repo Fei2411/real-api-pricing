@@ -1,11 +1,11 @@
 {
   "recordedAt": "2026-09-23",
   "sourceType": "community_tweet_screenshot + official_launch",
-  "trigger": "用户提供 X @MiaAI_lab 推文截图：OPUS 5.5 experiment 用量统计；用户裁定档位挂 Max 20x",
+  "trigger": "维护者提供 X @MiaAI_lab 推文截图：OPUS 5.5 experiment 用量统计；裁定档位挂 Max 20x",
   "communitySample": {
-    "source": "X @MiaAI_lab 推文（用户提供截图，发布时间约为 2026-09-23）",
+    "source": "X @MiaAI_lab 推文（维护者提供截图，发布时间约为 2026-09-23）",
     "model": "claude-opus-5.5",
-    "planInference": "claude_max_20x $200（用户裁定；档位推文未标——隐含加权5h池 ≈7.07亿，与 Max20x 簇 4.74~11.34亿 自洽，Pro 0.57亿 / 5x ~3.6亿 均不符，仅 20x 成立）",
+    "planInference": "claude_max_20x $200（裁定；档位推文未标——隐含加权5h池 ≈7.07亿，与 Max20x 簇 4.74~11.34亿 自洽，Pro 0.57亿 / 5x ~3.6亿 均不符，仅 20x 成立）",
     "effort": "xHigh",
     "wallClock": "1h 2m",
     "tokens": {
@@ -61,7 +61,7 @@
     "costClosure": "样本按 Opus5.5 标价计 $471.10（in$4/out$20/读$0.2/写5m$5）≈ 推文 $482.63（+2.4%，token 均为 M 取整可闭合）；1h写档$8 计 $534.4 不闭合；Opus5 旧价计 $838.9 远不闭合——模型身份与价表互证"
   },
   "adoptionSummary": {
-    "claude_max_20x::claude-opus-5.5": "新增 301.7亿/月 medium：社区样本窗池推隐含权重0.5204→raw周池75.42亿×4周；标价混合比法305.28亿（+1.2%）留作备选；n=1 推文、档位用户裁定",
+    "claude_max_20x::claude-opus-5.5": "新增 301.7亿/月 medium：社区样本窗池推隐含权重0.5204→raw周池75.42亿×4周；标价混合比法305.28亿（+1.2%）留作备选；n=1 推文、档位裁定",
     "claude_pro::claude-opus-5.5": "36.09亿 low：18.78 × 1.9217 借 20x 隐含权重派生，非独立实测",
     "claude_max_5x::claude-opus-5.5": "150.85亿 low：78.5 × 1.9217 同上",
     "anthropic_opus55_api": "官方标价 cached/input/output = $0.2/$4/$20，标准负载混合价 $0.351/MTok"

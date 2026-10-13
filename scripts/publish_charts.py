@@ -7,17 +7,28 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 BUILD = ROOT / '_build'
 CHARTS = ROOT / 'charts'
-STD_MIX = json.loads((ROOT / 'data/conventions.json').read_text(encoding='utf-8'))['standardTokenMix']
 BOARDS = {
-    'CodeArena榜': ('code-arena', 'Code Arena'),
-    'AgentArena榜': ('agent-arena', 'Agent Arena'),
     'AA智力榜': ('aa-intelligence', 'AA Intelligence'),
     'AA编程Agent榜': ('aa-coding-agent', 'AA Coding Agent'),
+    'CodeArena榜': ('code-arena', 'Code Arena'),
+    'AgentArena榜': ('agent-arena', 'Agent Arena'),
     'OpenDesign设计榜': ('open-design-arena', 'OpenDesign Arena'),
     'TB4终端榜': ('terminal-bench-4', 'Terminal-Bench 4.0'),
     'TB4·AA榜': ('aa-terminal-bench-4', 'Terminal-Bench 4.0 (AA)'),
     'DeepSWE榜': ('deepswe-1-1', 'DeepSWE v1.1'),
 }
+OVERVIEWS = [
+    ('monthly-allowance-overview-fee-0-30-usd', 'Monthly allowance · $0–30 / 月额度 · $0–30'),
+    ('monthly-allowance-overview-fee-30-100-usd', 'Monthly allowance · $30–100 / 月额度 · $30–100'),
+    ('monthly-allowance-overview-fee-100-300-usd', 'Monthly allowance · $100–300 / 月额度 · $100–300'),
+    ('monthly-allowance-overview', 'Monthly allowance · all plans / 月额度 · 全部'),
+    ('monthly-allowance-overview-hybrid-scale', 'Monthly allowance · hybrid scale / 月额度 · 混合比例'),
+    ('real-price-overview', 'Real unit price / 真实单价总览'),
+]
+FRONTIER_KINDS = [
+    ('frontier-price', 'Frontier price', '前沿单价'),
+    ('frontier-allowance', 'Frontier allowance', '前沿额度'),
+]
 
 
 def exports():
@@ -63,24 +74,50 @@ def main():
         if '--fee-bands-only' not in sys.argv or '_月费' in source.stem:
             shutil.copyfile(source, destination)
         exported.append(destination)
+    destinations = {destination: source for source, destination in exports()}
+
+    def zh_pair(en):
+        source = destinations[en]
+        return next(d for s, d in exports()
+                    if s == source.with_name(source.name.replace('_英文', '')))
+
     lines = ['# Charts / 图表目录', '',
              'All Pareto charts use the full dataset. Static charts summarize the highest archived configuration reference. / 帕累托图均使用全量套餐；静态图为最高存档配置参考汇总。', '',
              '[All-configuration interactive view / 全配置交互图（中文）](zh/pareto/帕累托交互图.html) · Download the HTML to open locally; Plotly requires network access. / 下载HTML后本地打开，Plotly需要联网。', '',
-             f"Dollar/credit conversions use {STD_MIX['cache']:.0%} cache reads, {STD_MIX['input']:.1%} fresh input and {STD_MIX['output']:.1%} output; direct total-token measurements are not normalized again. / 美元或credits额度换算统一采用缓存读取{STD_MIX['cache']:.0%}、普通输入{STD_MIX['input']:.1%}、输出{STD_MIX['output']:.1%}；直接total-token实测不重复归一。", '',
-             '| Chart / 图表 | English SVG | 中文 SVG | English PNG | 中文 PNG |',
-             '|---|---|---|---|---|']
-    english = [p for p in exported if p.suffix == '.svg' and p.relative_to(CHARTS).parts[0] == 'en']
-    english.sort(key=lambda p: ({'pareto': 0, 'overview': 1, 'frontier': 2}[p.parent.name], p.name))
-    for en in english:
-        source = next(s for s, d in exports() if d == en)
-        zh_source = source.with_name(source.name.replace('_英文', ''))
-        zh = next(d for s, d in exports() if s == zh_source)
-        links = [f'[{label}]({p.relative_to(CHARTS).as_posix()})' for label, p in [
+             'Token mixes and conversion rules: [CONVENTIONS.md](../CONVENTIONS.md). / 负载与换算口径见 [CONVENTIONS.md](../CONVENTIONS.md)。', '']
+    header = ['| Chart / 图表 | English SVG | 中文 SVG | English PNG | 中文 PNG |',
+              '|---|---|---|---|---|']
+
+    def chart_row(label, en_name, category):
+        en = CHARTS / 'en' / category / (en_name + '.svg')
+        zh = zh_pair(en)
+        links = [f'[{text}]({p.relative_to(CHARTS).as_posix()})' for text, p in [
             ('SVG', en), ('SVG', zh), ('PNG', en.with_suffix('.png')), ('PNG', zh.with_suffix('.png'))]]
-        label = en.stem.replace('-', ' ').title() + ' / ' + zh.stem
         lines.append('| ' + label + ' | ' + ' | '.join(links) + ' |')
-    lines += ['', '## Data tables / 数据表', '']
-    lines += [f'- [{p.relative_to(CHARTS).as_posix()}]({p.relative_to(CHARTS).as_posix()})' for p in exported if p.suffix == '.txt']
+
+    lines += ['## Pareto charts / 帕累托图', ''] + header
+    for tag, (slug, title) in BOARDS.items():
+        chart_row(f'{title} / {tag}', f'pareto-{slug}', 'pareto')
+    lines += ['', '## Overviews / 总览', ''] + header
+    for en_name, label in OVERVIEWS:
+        chart_row(label, en_name, 'overview')
+    lines += ['', '## Frontier subsets / 按榜前沿', ''] + header
+    for en_prefix, en_kind, zh_kind in FRONTIER_KINDS:
+        for tag, (slug, title) in BOARDS.items():
+            chart_row(f'{en_kind} · {title} / {zh_kind} · {tag}', f'{en_prefix}-{slug}', 'frontier')
+    tables = [('frontier', f'{en_prefix}-{slug}-table', f'{en_kind} · {title} / {zh_kind} · {tag}')
+              for en_prefix, en_kind, zh_kind in FRONTIER_KINDS
+              for tag, (slug, title) in BOARDS.items()]
+    tables += [('overview', en_name + '-table', label) for en_name, label in OVERVIEWS]
+    lines += ['', '## Data tables / 数据表', '',
+              '| Table | 中文 TXT | English TXT |', '|---|---|---|']
+    for category, en_name, label in tables:
+        en = CHARTS / 'en' / category / (en_name + '.txt')
+        if en not in destinations:
+            continue
+        zh = zh_pair(en)
+        lines.append(f'| {label} | [TXT]({zh.relative_to(CHARTS).as_posix()}) '
+                     f'| [TXT]({en.relative_to(CHARTS).as_posix()}) |')
     (CHARTS / 'README.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
     (BUILD / 'published-charts.json').write_text(json.dumps([p.relative_to(ROOT).as_posix() for p in exported], ensure_ascii=False, indent=2), encoding='utf-8')
     print(f'Published {len(exported)} files with bilingual index')

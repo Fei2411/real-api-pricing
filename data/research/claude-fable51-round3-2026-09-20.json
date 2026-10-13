@@ -1,10 +1,10 @@
 {
   "collectedAt": "2026-09-20",
-  "scopeNote": "第三轮：用户提供的一份 Max 账号 Fable 5.1 同日同框数据（ccusage 式 token 日志 × /usage 周额度百分比），加上一批社区用量条%与 /cost token 报告。首次出现 token×% 同框样本，可直接反推周池 Fable 当量。口径：全 token 一视同仁；月=4周；饱和使用；Fable 周帽=总额度 50%（官方 Help Center 规则，5 与 5.1 相同）。",
+  "scopeNote": "第三轮：维护者提供的一份 Max 账号 Fable 5.1 同日同框数据（ccusage 式 token 日志 × /usage 周额度百分比），加上一批社区用量条%与 /cost token 报告。首次出现 token×% 同框样本，可直接反推周池 Fable 当量。口径：全 token 一视同仁；月=4周；饱和使用；Fable 周帽=总额度 50%（官方 Help Center 规则，5 与 5.1 相同）。",
   "priorContext": {
     "claudeFable51Round1": "data/research/claude-fable51-round1-2026-09-13.json — 官方可用性/API标价/50%周帽 high；权重标定 notFound",
     "claudeFable51Round2": "data/research/claude-fable51-round2-2026-09-16.json — 9/13后无新标定；口述烧率与API output体积比均不可换算权重；维持不挂点",
-    "claudeAdoptionRound7": "data/research/claude-adoption-round7-2026-09-14.json — 用户拍板：无实测不挂点（本轮起被同框样本覆盖）",
+    "claudeAdoptionRound7": "data/research/claude-adoption-round7-2026-09-14.json — 裁定：无实测不挂点（本轮起被同框样本覆盖）",
     "claudeAdoptionRound6": "data/research/claude-adoption-round6-2026-09-06.json — Max20x=157亿/月、Max5x=78.5亿/月（9/14永久口径）；周池比20x/5x=2"
   },
   "items": [
@@ -29,10 +29,10 @@
       "monthlyTokens": 3006315789,
       "tokenCountingNote": "2.856亿 raw（cache读283M+输出2.6M；input/cache_write未报，参照同类会话约占3~10%，额度略低估）。周池Fable当量=2.856÷0.19=15.03亿；Fable帽50%→7.52亿/周→30.06亿/月。快照2互验：3017轮×~118k≈3.556亿÷24%→29.6亿，一致；预测19%×3017/2443=23.5%≈24%，计量线性。",
       "evidenceType": "same_frame_measurement",
-      "source": "用户提供（社区账号日志转供），计入 claude-fable51-round3-2026-09-20.json",
+      "source": "维护者提供（社区账号日志转供），计入 claude-fable51-round3-2026-09-20.json",
       "sourceDate": "2026-09-19~2026-09-20",
       "confidence": "medium",
-      "note": "档位由用户判断为 Max 20x（9/14永久口径后）。注意：月额度绝对值与档位无关——19%直接定池；挂20x隐含订阅内权重 w=39.25/15.03≈2.61×Opus，若实为5x则 w≈1.31。w≪Fable5的6.5×(20x)，与cache read $1→$0.25降价、负载99%为cache读方向一致。单账号n=1定medium。%取整区间18.5~19.5%→29.3~30.9亿。"
+      "note": "档位由裁定为 Max 20x（9/14永久口径后）。注意：月额度绝对值与档位无关——19%直接定池；挂20x隐含订阅内权重 w=39.25/15.03≈2.61×Opus，若实为5x则 w≈1.31。w≪Fable5的6.5×(20x)，与cache read $1→$0.25降价、负载99%为cache读方向一致。单账号n=1定medium。%取整区间18.5~19.5%→29.3~30.9亿。"
     },
     {
       "planId": "claude_max_5x",
@@ -52,12 +52,12 @@
       "planId": "claude_max_20x",
       "priceUsd": 200,
       "model": "claude-fable-5-1 / claude-opus-5 mixed",
-      "claim": "混合口径（用户提出）：Fable 用满 50% 帽后剩余 50% 池可跑 Opus。20x 全可用 = Fable 30.06亿 + Opus 78.5亿 = 108.6亿 raw/月；5x = 15.03 + 39.25 = 54.3亿。",
+      "claim": "混合口径（维护者提出）：Fable 用满 50% 帽后剩余 50% 池可跑 Opus。20x 全可用 = Fable 30.06亿 + Opus 78.5亿 = 108.6亿 raw/月；5x = 15.03 + 39.25 = 54.3亿。",
       "weeklyTokens": null,
       "monthlyTokens": 10860000000,
       "tokenCountingNote": "混合合计不是单一服务模型，Y轴无分数，不能作 pareto 点；可用于额度总览口径。",
       "evidenceType": "derived_concept",
-      "source": "用户 2026-09-20 提出：总fable额度+总opus×50%为混合状态全部可用额度",
+      "source": "2026-09-20 提出：总fable额度+总opus×50%为混合状态全部可用额度",
       "sourceDate": "2026-09-20",
       "confidence": "medium",
       "note": "组成项分别来自 round3 同框（Fable）与 round6 永久口径（Opus）。"
@@ -71,7 +71,7 @@
       "monthlyTokens": null,
       "tokenCountingNote": "按本round3标定换算：cyan 的周Fable19% = 19%×帽7.52亿(按20x口径15.03亿池)≈1.43亿 raw/2h ultracode——多agent会话量级合理；且 Fable19%×0.5=9.5%池 vs 周all11%，非Fable占1.5%，条间自洽。",
       "evidenceType": "community_report",
-      "source": "X 多帖汇总（用户转供 Grok 搜集批次）",
+      "source": "X 多帖汇总（维护者转交 Grok 搜集批次）",
       "sourceDate": "2026-09-01~2026-09-20",
       "confidence": "low",
       "note": "9/2、9/4 两条在+50%促销期（池1.5×），不与永久口径混用。@bridgemindai 9/2 Fable条78%、@Im_IrushiK 9/4 Fable条100%（/low-priority ~40min打完一周Fable）。"
@@ -85,7 +85,7 @@
       "monthlyTokens": null,
       "tokenCountingNote": "effort是主变量：AA口径 Low 1310万 vs Max effort 1.437亿 token（约11×），解释%读数方差。",
       "evidenceType": "community_report",
-      "source": "X 多帖汇总（用户转供 Grok 搜集批次）",
+      "source": "X 多帖汇总（维护者转交 Grok 搜集批次）",
       "sourceDate": "2026-09-15~2026-09-20",
       "confidence": "low",
       "note": "0x1Gerrad 校验：Fable27%×0.5=13.5%池 ≤ all24%，条间自洽。"
@@ -99,7 +99,7 @@
       "monthlyTokens": null,
       "tokenCountingNote": "全部缺少同一账号同一周的%读数，只能当会话规模参照，不能标定权重。",
       "evidenceType": "community_measurement",
-      "source": "X/掘金/AA/paddo（用户转供 Grok 搜集批次）",
+      "source": "X/掘金/AA/paddo（维护者转交 Grok 搜集批次）",
       "sourceDate": "2026-09",
       "confidence": "low",
       "note": "round2 结论仍成立：除本条 round3 同框样本外，无第二例 token×% 同框。"
@@ -115,7 +115,7 @@
     "input/cache_write 未入样本：额度可能低估约3~10%（同类会话 cache write≈cache读的3.5%）",
     "%读数为整数取整：19%区间18.5~19.5% → 月额度29.3~30.9亿",
     "单账号 n=1；当天是否绝对纯Fable未逐条核（3017轮均记Fable）",
-    "档位按用户判断为20x：绝对值与档位无关，但隐含权重与5x派生值依赖此判断",
+    "档位按裁定为20x：绝对值与档位无关，但隐含权重与5x派生值依赖此判断",
     "混合口径108.6亿/月不是pareto点（无单一模型分数），只作额度概念"
   ],
   "summaryForAdoption": {

@@ -1,19 +1,18 @@
-Artificial Analysis Intelligence Index v4.3 | Intelligence Index | 2026-09-22
+Artificial Analysis Intelligence Index v4.3 | Intelligence Index | 2026-10-01
 Selected by price and score across all subscriptions/APIs (including unmetered ≈$0 promo points, as in the Pareto charts), not by allowance. Equivalent plans retained; unscored models excluded; uncertainty not modeled.
 Monthly token allowance | Subscription plan x served model
-Default month = 4 weeks; Kimi monthly pool = 5× weekly; full utilization, all token types; APIs have no allowance
+Default month = 4 weeks; Kimi monthly pool = 5× weekly, Droid month = 2× weekly; full utilization, all token types; APIs have no allowance
 Allowances within a plan are not additive. Claude Max (9/14+): estimated permanent allowances from 2026-09-14, not current boosted limits. Source: adopted.csv.
 Color = plan/API provider; confidence [H] high / [M] medium / [L] low; numbers indicate row order, not model capability. Ties listed sequentially.
 † Kimi: CNY199 K3 uses a K3-256K-dominant / ~84% weekly sample ×5 = 1.451B; pure K2.7 uses 11.9M / 0.76% = 1.568B. Other tiers are scaled by official ratios. Same-name CN/global tiers are merged; fee and unit price use the international USD list ($19/$39/$99), ¥ is the domestic list price. OpenCode Go uses official dollar pools and rates under the standard workload.
 FX: 1 USD = 6.7787 CNY (2026-09-04, CFETS central parity, via Xinhua); CNY monthly fees divided by this rate (merged same-name Kimi tiers use the international USD list instead).
 FX source: https://www.xinhuanet.com/20260904/4c1ce1cbf39d416997cb9c237d6f5024/c.html
-No.  Plan                               Monthly fee  Served model         Monthly tokens (B)  USD/MTok  Confidence  Intelligence Index  Score variant                        Harness  Reasoning effort  Mapping
----  ---------------------------------  -----------  -------------------  ------------------  --------  ----------  ------------------  -----------------------------------  -------  ----------------  -----------------------------
-1    Step Plan Max (¥699)               CNY 699      Step 3.5 Flash       173.16              0.0006    medium      16.9641             Step 3.5 Flash 2603 [AA estimate]    —        —                 model_configuration_reference
-2    ChatGPT Pro 20x                    USD 200      GPT 5.6 Luna         150.222             0.00133   medium      37.3244             GPT-5.6 Luna (max)                   —        max               model_configuration_reference
-3    Step Plan Max (¥699)               CNY 699      Step 3.7 Flash       85.883              0.0012    medium      19.4813             Step 3.7 Flash [AA estimate]         —        —                 model_configuration_reference
-4    Step Plan Max (¥699)               CNY 699      Step 5 Preview       28.3186             0.00364   medium      44                  Step 5 Preview                       —        —                 model_configuration_reference
-5    OpenCode Go                        USD 10       MiMo V2.5            7.8782              0.00127   medium      25.1743             MiMo-V2.5 [AA estimate]              —        —                 model_configuration_reference
-6    GLM Coding Pro (v2 ¥149) Off-peak  CNY 149      GLM 5.3 Flash        7.492               0.00293   high        41.8075             GLM-5.3-Flash                        —        —                 model_configuration_reference
-7    Command Code GOAT                  USD 10       DeepSeek V4.1 Flash  4.1408              0.00241   medium      39.4562             DeepSeek V4.1 Flash (max)            —        max               model_configuration_reference
-8    Claude Pro                         USD 20       Claude Opus 5.5      3.6089              0.00554   low         57.6224             Claude Opus 5.5 (max with fallback)  —        max               model_configuration_reference
+No.  Plan                   Monthly fee  Served model         Monthly tokens (B)  USD/MTok  Confidence  Intelligence Index  Score variant                          Harness  Reasoning effort  Mapping
+---  ---------------------  -----------  -------------------  ------------------  --------  ----------  ------------------  -------------------------------------  -------  ----------------  -----------------------------
+1    Step Plan Max (¥699)   CNY 699      Step 3.5 Flash       173.16              0.0006    medium      16.9641             Step 3.5 Flash 2603 [AA estimate]      —        —                 model_configuration_reference
+2    Step Plan Max (¥699)   CNY 699      Step 3.7 Flash       85.883              0.0012    medium      19.4813             Step 3.7 Flash [AA estimate]           —        —                 model_configuration_reference
+3    Claude Max 5x (9/14+)  USD 100      Claude Sonnet 5.5    36.668              0.00273   low         55.978              Claude Sonnet 5.5 (max with fallback)  —        max               model_configuration_reference
+4    Claude Max 5x (9/14+)  USD 100      Claude Opus 5.5      18.334              0.00545   medium      57.6224             Claude Opus 5.5 (max with fallback)    —        max               model_configuration_reference
+5    OpenCode Go            USD 10       MiMo V2.6 Flash      7.8782              0.00127   medium      37.8844             MiMo-V2.6-Flash                        —        —                 model_configuration_reference
+6    OpenCode Go            USD 10       DeepSeek V4.1 Flash  6.2112              0.00161   medium      39.4562             DeepSeek V4.1 Flash (max)              —        max               model_configuration_reference
+7    Command Code GOAT      USD 10       DeepSeek V4.1 Flash  6.2112              0.00161   medium      39.4562             DeepSeek V4.1 Flash (max)              —        max               model_configuration_reference

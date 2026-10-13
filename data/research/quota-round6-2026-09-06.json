@@ -178,7 +178,7 @@
       "claim": "2026-06 诉讼转述：Max 20x 实际约为 Pro 的 6–8×（非 20×），Max 5x 约 3.5×；一例称单次 5h 编程会话消耗周额度 15% → 暗示周池约等于 ~6.7 个打满 5h 窗。结构证据：官方 5h 倍率 ≠ 周池倍率",
       "weeklyTokens": null,
       "monthlyTokens": null,
-      "tokenCountingNote": "无 raw token。15% 周/单 5h ⇒ 周≈6.7×5h，与用户确认「20x 周池≈5x 的 2×」同方向（远小于 4×）。",
+      "tokenCountingNote": "无 raw token。15% 周/单 5h ⇒ 周≈6.7×5h，与确认「20x 周池≈5x 的 2×」同方向（远小于 4×）。",
       "evidenceType": "community_measurement",
       "source": "https://www.techtimes.com/articles/318442/20260615/claude-max-lawsuit-accuses-anthropic-overselling-20x-usage-as-credit-caps-begin.htm",
       "sourceDate": "2026-06-16",
@@ -217,7 +217,7 @@
       "sourceDate": "2026-08-15",
       "quote": "As of August 2026, users on Claude Pro get approximately 45 messages per 5-hour window when using Opus 5",
       "confidence": "low",
-      "note": "adoption-round6 已标明用户未确认采用 1.9 亿；本轮仍未找到 Opus5 Pro 的 raw token+周% 金标准。保留 Opus4.8 的 15.88 亿为历史点。"
+      "note": "adoption-round6 已标明未经确认采用 1.9 亿；本轮仍未找到 Opus5 Pro 的 raw token+周% 金标准。保留 Opus4.8 的 15.88 亿为历史点。"
     },
     {
       "planId": "claude_max_20x",
@@ -249,7 +249,7 @@
       "sourceDate": "2026-06-01",
       "quote": "Max 5x ... 15-35 hours of Opus ... Max 20x ... 24-40 hours of Opus ... session-based usage limit will reset every five hours ... weekly usage limit",
       "confidence": "high",
-      "note": "官方自己把 5h 与 weekly 分开；周 Opus 小时 Max20x/Max5x ≈ 24–40 / 15–35 ≈ 1–1.7×，接近用户确认周池比≈2，远小于 4×。"
+      "note": "官方自己把 5h 与 weekly 分开；周 Opus 小时 Max20x/Max5x ≈ 24–40 / 15–35 ≈ 1–1.7×，接近确认周池比≈2，远小于 4×。"
     }
   ],
   "notFound": [
@@ -281,7 +281,7 @@
       "planId": "claude_max_5x",
       "wanted": "任一时期 Max5x 独立账号 token+% 金标准",
       "searched": "同 round5 notFound 渠道再扫一轮",
-      "result": "仍缺。结构上继续依赖 20x 实测 ÷ 用户确认周池比 2。"
+      "result": "仍缺。结构上继续依赖 20x 实测 ÷ 确认周池比 2。"
     }
   ],
   "verdict": {

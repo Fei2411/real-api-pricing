@@ -87,7 +87,7 @@
         "processingFee": {
           "officialText": "+ processing fee on listed plan prices",
           "fixedUsd080": "notFound_on_official_pricing_page",
-          "userClaimUsd080": "用户原话：忽略0.8美元手续费",
+          "userClaimUsd080": "维护者原话：忽略0.8美元手续费",
           "sourceUrl": "https://commandcode.ai/pricing"
         }
       },
@@ -675,7 +675,7 @@
     },
     {
       "priority": 5,
-      "item": "用户 ×2/×1 口径建议在文案写清：×2 仅指 GOAT vs OpenCode 的 DeepSeek Flash 每模型美元额度；×1 仅指 Ollama Pro 与 OpenCode 共享月池同为 $60。",
+      "item": "×2/×1 口径建议在文案写清：×2 仅指 GOAT vs OpenCode 的 DeepSeek Flash 每模型美元额度；×1 仅指 Ollama Pro 与 OpenCode 共享月池同为 $60。",
       "needsUserDecision": false
     }
   ]

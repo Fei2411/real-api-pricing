@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "real-api-pricing",
+  "compatibility_date": "2026-09-30",
+  "workers_dev": true,
+  "previews": {},
+  "assets": {
+    "directory": "./web/dist",
+    "not_found_handling": "none"
+  }
+}

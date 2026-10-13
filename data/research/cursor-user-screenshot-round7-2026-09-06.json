@@ -235,7 +235,7 @@
         },
         {
           "date": "2026-08-19",
-          "what": "用户转发的 Cursor 客户邮件（生效 Aug 24）：Auto 改按模型价；Included usage limits for Cursor Models (including Auto) are increasing and already apply to the current billing cycle",
+          "what": "维护者转发的 Cursor 客户邮件（生效 Aug 24）：Auto 改按模型价；Included usage limits for Cursor Models (including Auto) are increasing and already apply to the current billing cycle",
           "urls": [
             "https://x.com/mark_k/status/2090140666604970222"
           ],
@@ -406,7 +406,7 @@
       "revisedInterpretationAfterTimeline": {
         "doNotTreatFirstWeekAsPermanentPoolInflation": true,
         "residualNumeratorBiasOnly": "8/12–19 半价仍可能略抬高 tokens/%；若促销周用量不大，86.95 已接近永久全价容量观测",
-        "deprecatedPreferredFoldTo80": "先前把 80 当作「轻度促销折减中心」在用户纠正后不再优先——那是把临时首周折扣误当成需要系统性折回稳态池",
+        "deprecatedPreferredFoldTo80": "先前把 80 当作「轻度促销折减中心」在经更正后不再优先——那是把临时首周折扣误当成需要系统性折回稳态池",
         "cellcog3000VsScreenshot4800": {
           "cellcogRaise": "$2000→$3000 = 1.5× permanent dashboard raise on Aug24",
           "screenshotImpliedUsd": "~$4500–$4800",
@@ -570,7 +570,7 @@
     "https://x.com/cursor_ai/status/2079615536963485815"
   ],
   "amendmentAt": "2026-09-06T+timeline",
-  "amendmentNote": "用户纠正后追加：区分 A 首周2x/50%是否结束、B 永久扩池、C 账期%是否按期末新池、D 有无「临时2x永久化」原文。不改 adopted/scripts。",
+  "amendmentNote": "经更正后追加：区分 A 首周2x/50%是否结束、B 永久扩池、C 账期%是否按期末新池、D 有无「临时2x永久化」原文。不改 adopted/scripts。",
   "timelineABCD": {
     "A_first_week_promo": {
       "start": "2026-08-12",

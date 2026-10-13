@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import { ArrowRight, MagnifyingGlass, X } from "@phosphor-icons/react";
 import type { Row, State } from "./types";
 import type { ChartHandle } from "./Chart";
 import { BrandMarks } from "./ProviderLogo";
@@ -10,6 +9,7 @@ import { dotColors } from "./palette";
 import {
   accessLine,
   allowance,
+  barWidth,
   color,
   displayPlan,
   price,
@@ -34,6 +34,7 @@ const escape = (s: string) =>
 export default function Ranking({
   rows,
   state,
+  axis,
   highlight,
   onSelect,
   handle,
@@ -41,6 +42,7 @@ export default function Ranking({
 }: {
   rows: Row[];
   state: State;
+  axis: { low: number; high: number };
   highlight: string | null;
   onSelect: (rows: Row[]) => void;
   handle: React.RefObject<ChartHandle | null>;
@@ -65,18 +67,9 @@ export default function Ranking({
   const { limit, sentinel } = useIncremental(sorted.length, signature + state.view, scrollRef, 60);
   const value = (r: Row) =>
     isPrice ? r.point.real_usd_per_mtok : r.point.monthly_yi!;
-  // Unmetered $0 rows have no log position: they get the shortest bar.
-  const values = sorted.map(value).filter((v) => v > 0),
-    low = values.length ? Math.min(...values) : 0,
-    high = values.length ? Math.max(...values) : 0;
-  const bar = (r: Row) =>
-    value(r) <= 0
-      ? 2
-      : high === low
-        ? 100
-        : 6 +
-          (94 * (Math.log10(value(r)) - Math.log10(low))) /
-            (Math.log10(high) - Math.log10(low));
+  const bar = (r: Row) => barWidth(value(r), axis);
+  const decades = Math.round(Math.log10(axis.high / axis.low));
+  const scaleNote = zh ? "对数刻度 · 每格 10 倍" : "log scale · 10× per tick";
   const formatted = (r: Row) =>
     isPrice
       ? price(value(r)) +
@@ -113,14 +106,14 @@ export default function Ranking({
           format === "png"
             ? Math.max(1, Math.min(2, Math.floor(16384 / Math.max(height, 1))))
             : 1;
-        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}"><rect width="100%" height="100%" fill="${bg}"/><g font-family="DM Sans, Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" fill="${ink}"><text x="32" y="44" font-size="23" font-weight="600">${escape(title)}</text><text x="32" y="72" font-size="12" fill="${muted}">${escape(`${sorted.length} ${zh ? "条筛选结果" : "filtered rows"} · ${unit} · ${zh ? "条形为对数刻度" : "Bars use a logarithmic scale"} · Real API Pricing`)}</text>${sorted
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}"><rect width="100%" height="100%" fill="${bg}"/><g font-family="DM Sans, Segoe UI, PingFang SC, Microsoft YaHei, sans-serif" fill="${ink}"><text x="32" y="44" font-size="23" font-weight="600">${escape(title)}</text><text x="32" y="72" font-size="12" fill="${muted}">${escape(`${sorted.length} ${zh ? "条筛选结果" : "filtered rows"} · ${unit} · ${zh ? "条形为对数刻度，每格 10 倍" : "Bars use a logarithmic scale, 10× per tick"} · Real API Pricing`)}</text>${sorted
           .map((r, i) => {
             const y = 112 + i * rowH;
             const titleSize = rowH < 70 ? 14 : 16,
               metaSize = rowH < 70 ? 11 : 12,
               valueSize = rowH < 70 ? 16 : 18;
             const fill = dotColors(color(r.point), dark).fill;
-            return `<text x="32" y="${y}" fill="${muted}" font-size="13">${i + 1}</text><text x="75" y="${y}" font-size="${titleSize}" font-weight="600">${escape(r.point.model_display)}</text><text x="75" y="${y + 20}" font-size="${metaSize}" fill="${muted}">${escape(displayPlan(r.point.plan, state.lang) + " · " + accessLine(r.point))}</text><rect x="580" y="${y - 9}" width="280" height="7" rx="3.5" fill="${track}"/><rect x="580" y="${y - 9}" width="${bar(r) * 2.8}" height="7" rx="3.5" fill="${fill}"/><text x="1068" y="${y}" text-anchor="end" font-size="${valueSize}" font-weight="600">${escape(formatted(r))}</text><line x1="32" x2="1068" y1="${y + Math.min(40, rowH - 12)}" y2="${y + Math.min(40, rowH - 12)}" stroke="${rule}"/>`;
+            return `<text x="32" y="${y}" fill="${muted}" font-size="13">${i + 1}</text><text x="75" y="${y}" font-size="${titleSize}" font-weight="600">${escape(r.point.model_display)}</text><text x="75" y="${y + 20}" font-size="${metaSize}" fill="${muted}">${escape(displayPlan(r.point.plan, state.lang) + " · " + accessLine(r.point))}</text><rect x="580" y="${y - 9}" width="280" height="7" rx="3.5" fill="${track}"/><rect x="580" y="${y - 9}" width="${bar(r) * 2.8}" height="7" rx="3.5" fill="${fill}"/>${Array.from({ length: decades - 1 }, (_, k) => `<line x1="${580 + (280 * (k + 1)) / decades}" x2="${580 + (280 * (k + 1)) / decades}" y1="${y - 11}" y2="${y}" stroke="${muted}" stroke-opacity="0.35"/>`).join("")}<text x="1068" y="${y}" text-anchor="end" font-size="${valueSize}" font-weight="600">${escape(formatted(r))}</text><line x1="32" x2="1068" y1="${y + Math.min(40, rowH - 12)}" y2="${y + Math.min(40, rowH - 12)}" stroke="${rule}"/>`;
           })
           .join("")}</g></svg>`;
         const blob = new Blob([svg], { type: "image/svg+xml;charset=utf-8" });
@@ -161,39 +154,6 @@ export default function Ranking({
   });
   return (
     <section className="web-ranking" aria-label={title}>
-      <div className="ranking-toolbar">
-        <p>
-          {isPrice
-            ? zh
-              ? "单价由低到高，越低越便宜。"
-              : "Lowest price first. Lower is less expensive."
-            : zh
-              ? "额度由高到低，越高可用量越多。"
-              : "Largest allowance first. Higher means more tokens."}{" "}
-          {zh ? "条形为对数刻度。" : "Bars use a logarithmic scale."}
-        </p>
-        <label className="ranking-search search">
-          <MagnifyingGlass size={16} />
-          <input
-            type="search"
-            aria-label={zh ? "搜索排名" : "Search ranking"}
-            placeholder={
-              zh ? "搜索模型、套餐或渠道…" : "Search model, plan or channel…"
-            }
-            value={state.query}
-            onChange={(e) => onQuery(e.target.value)}
-          />
-          {state.query && (
-            <button
-              className="icon-button"
-              onClick={() => onQuery("")}
-              aria-label={zh ? "清空搜索" : "Clear search"}
-            >
-              <X size={14} />
-            </button>
-          )}
-        </label>
-      </div>
       <div
         className="ranking-scroll"
         ref={scrollRef}
@@ -204,9 +164,18 @@ export default function Ranking({
         <div className="ranking-columns" aria-hidden={sorted.length === 0}>
           <span>#</span>
           <span>{zh ? "模型 · 套餐与渠道" : "Model · plan & channel"}</span>
-          <span>{zh ? "对比（对数刻度）" : "Comparison (log scale)"}</span>
+          <span>
+            {(isPrice
+              ? zh
+                ? "由低到高"
+                : "Cheapest first"
+              : zh
+                ? "由多到少"
+                : "Largest first") +
+              " · " +
+              scaleNote}
+          </span>
           <span>{unit}</span>
-          <span />
         </div>
         {sorted.length ? (
           <>
@@ -232,15 +201,14 @@ export default function Ranking({
                     </strong>
                     <small>
                       <i style={{ background: fill }} />
-                      {accessLine(r.point)} ·{" "}
-                      {r.point.billing === "metered"
-                        ? "API"
-                        : zh
-                          ? "订阅"
-                          : "Subscription"}
+                      {accessLine(r.point)}
                     </small>
                   </span>
-                  <span className="rank-bar" aria-hidden="true">
+                  <span
+                    className="rank-bar"
+                    aria-hidden="true"
+                    style={{ "--decade": `${100 / decades}%` } as React.CSSProperties}
+                  >
                     <span style={{ width: `${bar(r)}%`, background: fill }} />
                   </span>
                   <span className="rank-value">
@@ -263,7 +231,6 @@ export default function Ranking({
                         : price(r.point.price_usd) + (zh ? " / 月" : " / mo")}
                     </small>
                   </span>
-                  <ArrowRight className="rank-arrow" size={16} />
                 </button>
               );
             })}
@@ -292,12 +259,9 @@ export default function Ranking({
             : "Drag to resize the list · double-click to reset"
         }
       />
-      <div className="ranking-status">
-        <b>{sorted.length}</b>{" "}
-        {zh
-          ? "条结果 · 图片导出包含全部筛选行"
-          : "results · image export includes every filtered row"}
-      </div>
+      <small className="ranking-scale-note" aria-hidden="true">
+        {scaleNote}
+      </small>
     </section>
   );
 }

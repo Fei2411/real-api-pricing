@@ -1,6 +1,6 @@
 {
   "collectedAt": "2026-09-24",
-  "scopeNote": "GPT-6 Sol（9/22 新发）ChatGPT Plus 订阅额度首个本机实测。仅记录证据，不入 adopted：用户 2026-09-24 裁定等 PR #38（GPT-6 Sol 榜分存档）合并后再新增采用行，且只加 Plus、不派生 Pro 5x/20x。历史 research 文件不改。",
+  "scopeNote": "GPT-6 Sol（9/22 新发）ChatGPT Plus 订阅额度首个本机实测。仅记录证据，不入 adopted：2026-09-24 裁定等 PR #38（GPT-6 Sol 榜分存档）合并后再新增采用行，且只加 Plus、不派生 Pro 5x/20x。历史 research 文件不改。",
   "items": [
     {
       "planId": "chatgpt_plus",
@@ -8,13 +8,13 @@
       "model": "gpt-6-sol",
       "client": "Codex CLI",
       "evidenceType": "user_local_log_x_panel_percent",
-      "source": "用户本机 Codex 实测截图（2026-09-24 会话内提供）",
+      "source": "维护者本机 Codex 实测截图（2026-09-24 会话内提供）",
       "sourceDate": "2026-09-24",
-      "userConfirmation": "用户原话：『图1是codex 6sol，plus，用了约6%周额度，本机实测』",
+      "userConfirmation": "维护者原话：『图1是codex 6sol，plus，用了约6%周额度，本机实测』",
       "observed": {
         "segment": "今天 10:30 检查点（当日 0）→ 截图时刻的当日增量，全部为 gpt-6-sol",
         "weeklyUsedFractionStated": 0.06,
-        "weeklyUsedFractionNote": "用户口述『约6%』",
+        "weeklyUsedFractionNote": "维护者口述『约6%』",
         "totalTokens": 15716975,
         "inputTokens": 693878,
         "outputTokens": 46713,
@@ -43,7 +43,7 @@
       },
       "tokenCountingNote": "本地日志直接给 total，沿 Luna round6 先例直接采用 total，不按项目标准负载再次归一。",
       "confidenceProposed": "high",
-      "pendingAdoption": "PR #38 合并后：scores-new-models-round1 中 gpt-6-sol 的 unmappedOfficialRows 移入 scores[]，build_adopted.py 新增 chatgpt_plus × gpt-6-sol 10.48 亿；不派生 Pro 5x/20x（用户裁定）。"
+      "pendingAdoption": "PR #38 合并后：scores-new-models-round1 中 gpt-6-sol 的 unmappedOfficialRows 移入 scores[]，build_adopted.py 新增 chatgpt_plus × gpt-6-sol 10.48 亿；不派生 Pro 5x/20x（裁定）。"
     }
   ],
   "relatedFiles": [

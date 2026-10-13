@@ -2,7 +2,7 @@
   "collectedAt": "2026-09-10",
   "sourceType": "official-docs + community search",
   "scope": "核对阶跃星辰自家 Step Plan 是否已入库，并搜集官方 Credit 额度与社区实测。本轮不改 adopted.csv、不改 scripts/build_adopted.py。",
-  "userInstruction": "用户指出 StepFun 好像还没入数据库；官方其实给了清晰 token 额度，但仍想看社区实测。",
+  "userInstruction": "StepFun 好像还没入数据库；官方其实给了清晰 token 额度，但仍想看社区实测。",
   "method": "Coordinator 直接抓官网文档与社区检索。Agent Bridge 本轮 Not connected，未派 Grok。不编数；互相矛盾的来源并列。LINUX DO 帖只记标题与现象，不收录用户粘贴的 API Key。",
   "existingEvidenceReviewed": [
     "scripts/build_adopted.py 无 stepfun_* / 跃问 / 阶跃自家 plan；仅 Command Code GOAT 转售 step-3.7-flash / step-3.5-flash",

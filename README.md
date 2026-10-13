@@ -1,147 +1,189 @@
-## [Explore the interactive website →](https://real-api-pricing.vercel.app)
-
-Compare models, prices and allowances · English / 中文
-
 **English** | [中文](README.zh.md)
 
 # Real API Pricing
 
-**Real unit price = monthly subscription fee ÷ monthly usable tokens.**
+AI coding subscriptions sell a monthly fee, not a per-token price. This project works out what each plan actually costs per million tokens, then plots that price against public leaderboard scores to show which plans give the most capability for the money.
 
-Full adopted data is shown first, followed by one Pareto chart per leaderboard. Monthly figures default to four weeks of saturated use; vendor-defined monthly pools remain as defined (Kimi's monthly pool is 5× its weekly pool). Input, output and cache tokens are all included. Prices use a logarithmic axis, with cheaper points farther right.
+**Real price = monthly fee ÷ tokens you can actually use in a month.**
 
-Dollar/credit pools and three-part token prices are converted with one project-wide standard workload: **97% cache reads, 2.5% fresh input, and 0.5% output**. This is a comparison convention, not a claim about any provider's actual workload. Measurements that already report total tokens—dashboard back-calculations, local usage logs, controlled saturation tests, and official absolute-token tables—are not normalized again. Where only total tokens and a cost-weighted percentage are available but the token-type split is unknown, the observed total is retained and the limitation is recorded rather than inventing a split. Cache writes are not modeled separately; where a provider charges for them, converted token allowances may be overstated. See [conventions](data/conventions.json) and the [token-mix audit](data/research/token-mix-audit-round2-2026-09-07.json).
+**[Open the interactive site →](https://realapipricing.com)** Pick models, filter channels, compare prices and allowances. English / 中文.
 
-GLM Coding Plan is recomputed from Zhipu's official weekly credits and cache/input/output coefficients under the same standard workload. Peak, midpoint and off-peak scenarios are shown separately instead of copying the official 95%-cache example table. A Caijing saturation-cost test and community evidence are consistent in scale, but there is still no fully specified independent V3 Pro/Max saturation test. See the [official-table archive](data/research/quotas-web-2026-09.json) and [community-evidence review](data/research/glm-community-round1-2026-09-07.json). Step Plan CN uses StepFun's official monthly Credit pools (1M Credit = ¥1) converted through CNY list prices under the same standard workload; the international site's USD sticker prices differ and are not adopted, and the superseded Coding Plan prompt/5h limits are retained only as evidence.
+![Real price vs. AA Intelligence Index, Pareto frontier](charts/en/pareto/pareto-aa-intelligence.svg)
 
-Each chart uses scores from its named leaderboard only. Code Arena here specifically means the WebDev Overall Arena Score, not general coding ability. OpenDesign Arena uses the 0–100 average task score (requirements 30 + design quality 70); its cost/speed-weighted recommendation score is not used. GPT-5.6 Luna now uses a ChatGPT Plus dashboard measurement: 112.67 million total tokens consumed about 6% of the weekly allowance, giving 7.511 billion tokens/month for Plus. The 5x and 20x plans are scaled from that measured Plus baseline, so the rightmost Luna point is 150.222 billion tokens/month at medium confidence rather than the superseded 240.24 billion Sol-credit derivation. Claude Max's 15.7 billion-token estimate applies to the permanent terms from September 14, 2026, not a promotional ceiling. Chinese charts use 100-million-token units: 77.37 in Chinese equals 7.737 billion in English.
+**How to read the charts**
 
-**[All charts: English / 中文, SVG / PNG](charts/README.md)** · [English files](charts/en/) · [中文文件](charts/zh/)
+- Each point is one plan × the model it serves. X is the real price in USD per million tokens on a log scale, cheaper to the right. Y is that leaderboard's score.
+- Filled squares are subscriptions; hollow diamonds are metered APIs at list price. Both compete on the same frontier.
+- The black line is the Pareto frontier: for every point on it, no other point is both cheaper and higher-scoring.
+- Subscription prices assume you use the whole allowance. Use half of it and your real price doubles.
 
-## Data snapshot
+Snapshot: <!-- stat:snapshot -->2026-10-08<!-- /stat --> · <!-- stat:points_total -->328<!-- /stat --> plan × model points · [all charts, SVG / PNG, both languages](charts/README.md)
 
-AA Intelligence now uses **Intelligence Index v4.3** (announced September 7, 2026); AA Coding Agent uses **v1.5**. The new intelligence methodology replaces the old snapshot as a whole: lower numerical scores are not evidence of model regression across index versions. All configurations within the selected snapshot are retained, including explicitly marked AA estimates. Historical evidence stays in `data/research/`.
+## Query from the terminal
 
-Snapshot: <!-- stat:snapshot -->2026-09-24<!-- /stat -->. Each row is one **plan × actual served model**; allowances of different models under the same plan are alternatives and must not be added together.
+The TypeScript CLI queries the website's current dataset and separates model,
+company, channel and plan. It automatically falls back to cached or bundled
+data when offline. Requires Node.js 22.12+. Build from this repository:
 
-| Coverage | Rows |
-|---|---:|
-| All adopted plan × model points | <!-- stat:points_total -->283<!-- /stat --> |
-| Subscription points with monthly allowance | <!-- stat:points_allowance -->263<!-- /stat --> |
-| Unmetered promotional points (≈$0) | <!-- stat:points_unmetered -->1<!-- /stat --> |
-| Metered API baselines | <!-- stat:points_metered -->19<!-- /stat --> |
-| OpenCode Go / Command Code GOAT / Ollama / Step Plan | <!-- stat:plans_opencode_go -->32<!-- /stat --> / <!-- stat:plans_command_code_goat -->56<!-- /stat --> / <!-- stat:plans_ollama -->22<!-- /stat --> / <!-- stat:plans_step_plan -->12<!-- /stat --> |
-| Code Arena / Agent Arena scored points | <!-- stat:scored_arena_code -->165<!-- /stat --> / <!-- stat:scored_arena_agent_mode -->152<!-- /stat --> |
-| AA Intelligence / AA Coding Agent scored points | <!-- stat:scored_aa_intelligence_index -->244<!-- /stat --> / <!-- stat:scored_aa_coding_agent_index -->82<!-- /stat --> |
-| OpenDesign Arena scored points | <!-- stat:scored_open_design_arena -->79<!-- /stat --> |
-| Terminal-Bench 4.0 scored points | <!-- stat:scored_terminal_bench_4 -->95<!-- /stat --> |
-| Terminal-Bench 4.0 (AA) scored points | <!-- stat:scored_aa_terminal_bench_4 -->28<!-- /stat --> |
-| DeepSWE v1.1 scored points | <!-- stat:scored_deepswe_1_1 -->177<!-- /stat --> |
+```sh
+npm --prefix cli ci
+npm --prefix cli run build
+node cli/dist/main.js price --company Anthropic
+node cli/dist/main.js allowance --company Anthropic --fee-band 0-30
+```
 
-**Download the data:** [adopted values (CSV)](data/adopted.csv) · [computed points (CSV)](derived/points.csv) · [computed points (JSON)](derived/points.json) · [data notes and score coverage](data/README.md) · [dated evidence](data/research/)
+JSON/CSV exports, filtering, evidence and comparisons are available. See the
+[CLI README](cli/README.md) for installation and the
+[command reference](docs/cli-command-reference.md) for output examples.
+Version 0.1.0 is available from this checkout. After the maintainer publishes
+the npm package, install it with `npm install -g real-api-pricing`.
 
-## Monthly allowance overview
+For coding agents, the [Real Model Price skill](.agents/skills/real-model-price/SKILL.md)
+guides price, allowance and plan comparisons with this CLI. In Codex, invoke
+`$real-model-price` from a session that loads the repository's skills.
 
-The <!-- stat:points_allowance -->263<!-- /stat --> subscription plan × model points are split by adopted USD monthly fee so GitHub can show them without packing every bar into one chart: **$0–30 inclusive**, **>$30 and ≤$100**, **>$100–$300**. Each band ranks monthly usable tokens independently. The undivided chart and hybrid-scale view stay in the [chart index](charts/README.md).
+## How the numbers are made
 
-### $0–30
+- **Monthly allowance.** Tokens per month at saturated use. A month is four weeks unless the vendor defines its own monthly pool (Kimi's is 5× the weekly pool). Input, output and cache tokens all count.
+- **Measured when possible.** The best evidence is a direct measurement: tokens used against the change in the dashboard's quota percentage, local usage logs, controlled saturation runs, or an official absolute-token table. Samples that include a token breakdown are converted to dollar worth at public list prices and then to the channel's workload tier; samples without a breakdown and official token tables use raw totals as-is and are flagged "not workload-normalized" on the site.
+- **Converted when necessary.** Dollar or credit pools, and API list prices, are turned into tokens with one standard workload: 97% cache reads, 2.5% fresh input, 0.5% output. This is a comparison convention, not a claim about anyone's real usage. Anthropic models price the fresh-input share at the cache-write rate, and StepFun and Google use a low-cache variant. See [CONVENTIONS.md](CONVENTIONS.md).
+- **Off-peak pricing** (GLM, DeepSeek, MiMo) is shown as separate scenario points, not averaged.
+- **Confidence.** Every row is rated high, medium or low. High means a dashboard back-calculation, a controlled test or an official table. Medium means an official multiplier applied to a high-confidence anchor, or several consistent independent sources. Low means a single report or a cross-plan assumption. Derived values are never presented as measurements.
+- **One plan, several models.** Each model on a plan gets its own point. Those allowances are alternatives and do not add up.
+- **Scores** are copied from each leaderboard and never mixed across boards. Static charts use each model's highest archived configuration.
+- **Free during a promotion.** A model that a plan temporarily doesn't meter is drawn at ≈$0 on a dedicated slot at the right edge. There are <!-- stat:points_unmetered -->1<!-- /stat --> such points at the moment: SWE-2 on Devin Pro, until 2026-10-31.
 
-[English SVG](charts/en/overview/monthly-allowance-overview-fee-0-30-usd.svg) · [中文 SVG](charts/zh/overview/额度总览_月费0-30美元.svg) · [English PNG](charts/en/overview/monthly-allowance-overview-fee-0-30-usd.png) · [中文 PNG](charts/zh/overview/额度总览_月费0-30美元.png)
-
-![Monthly allowance $0–30](charts/en/overview/monthly-allowance-overview-fee-0-30-usd.svg)
-
-**Table:** [English TXT](charts/en/overview/monthly-allowance-overview-fee-0-30-usd-table.txt) · [中文 TXT](charts/zh/overview/额度总览表_月费0-30美元.txt)
-
-### >$30–$100
-
-[English SVG](charts/en/overview/monthly-allowance-overview-fee-30-100-usd.svg) · [中文 SVG](charts/zh/overview/额度总览_月费30-100美元.svg) · [English PNG](charts/en/overview/monthly-allowance-overview-fee-30-100-usd.png) · [中文 PNG](charts/zh/overview/额度总览_月费30-100美元.png)
-
-![Monthly allowance >$30–$100](charts/en/overview/monthly-allowance-overview-fee-30-100-usd.svg)
-
-**Table:** [English TXT](charts/en/overview/monthly-allowance-overview-fee-30-100-usd-table.txt) · [中文 TXT](charts/zh/overview/额度总览表_月费30-100美元.txt)
-
-### >$100 and ≤$300
-
-[English SVG](charts/en/overview/monthly-allowance-overview-fee-100-300-usd.svg) · [中文 SVG](charts/zh/overview/额度总览_月费100-300美元.svg) · [English PNG](charts/en/overview/monthly-allowance-overview-fee-100-300-usd.png) · [中文 PNG](charts/zh/overview/额度总览_月费100-300美元.png)
-
-![Monthly allowance >$100 and ≤$300](charts/en/overview/monthly-allowance-overview-fee-100-300-usd.svg)
-
-**Table:** [English TXT](charts/en/overview/monthly-allowance-overview-fee-100-300-usd-table.txt) · [中文 TXT](charts/zh/overview/额度总览表_月费100-300美元.txt)
-
-## Real unit price overview
-
-All <!-- stat:points_priced -->282<!-- /stat --> subscription and API points on one comparable $/MTok scale.
-
-[English SVG](charts/en/overview/real-price-overview.svg) · [中文 SVG](charts/zh/overview/单价总览.svg) · [English PNG](charts/en/overview/real-price-overview.png) · [中文 PNG](charts/zh/overview/单价总览.png)
-
-![Real unit price overview](charts/en/overview/real-price-overview.svg)
-
-**Full table:** [English TXT](charts/en/overview/real-price-overview-table.txt) · [中文 TXT](charts/zh/overview/单价总览表.txt)
+Every adopted value, its evidence and the reason for the choice: [DECISIONS.md](DECISIONS.md) and the `decision_note` column of [adopted.csv](data/adopted.csv).
 
 ## Pareto charts by leaderboard
 
-Using Real API Pricing as a new baseline, we plot each leaderboard's scores on the Y-axis to redraw its Pareto frontier; the connected line represents that frontier. Subscriptions and metered APIs follow the same dominance rule and both participate in frontier selection.
-
-### Code Arena
-
-[English SVG](charts/en/pareto/pareto-code-arena.svg) · [中文 SVG](charts/zh/pareto/帕累托_CodeArena榜.svg) · [English PNG](charts/en/pareto/pareto-code-arena.png) · [中文 PNG](charts/zh/pareto/帕累托_CodeArena榜.png)
-
-![Code Arena](charts/en/pareto/pareto-code-arena.svg)
-
-### Agent Arena
-
-[English SVG](charts/en/pareto/pareto-agent-arena.svg) · [中文 SVG](charts/zh/pareto/帕累托_AgentArena榜.svg) · [English PNG](charts/en/pareto/pareto-agent-arena.png) · [中文 PNG](charts/zh/pareto/帕累托_AgentArena榜.png)
-
-![Agent Arena](charts/en/pareto/pareto-agent-arena.svg)
+Each leaderboard gets its own chart, with its own scores and snapshot date. A model missing from a board is left off that chart but stays in the price and allowance data.
 
 ### AA Intelligence
 
-[English SVG](charts/en/pareto/pareto-aa-intelligence.svg) · [中文 SVG](charts/zh/pareto/帕累托_AA智力榜.svg) · [English PNG](charts/en/pareto/pareto-aa-intelligence.png) · [中文 PNG](charts/zh/pareto/帕累托_AA智力榜.png)
+[SVG](charts/en/pareto/pareto-aa-intelligence.svg) · [PNG](charts/en/pareto/pareto-aa-intelligence.png) · [中文 SVG](charts/zh/pareto/帕累托_AA智力榜.svg) · [中文 PNG](charts/zh/pareto/帕累托_AA智力榜.png) · chart shown at the top
 
-![AA Intelligence](charts/en/pareto/pareto-aa-intelligence.svg)
+Artificial Analysis Intelligence Index v4.3. Scores are not comparable with earlier index versions: a lower number after the version change does not mean a model got worse. Rows marked [AA estimate] are Artificial Analysis's own estimates.
 
 ### AA Coding Agent
 
-[English SVG](charts/en/pareto/pareto-aa-coding-agent.svg) · [中文 SVG](charts/zh/pareto/帕累托_AA编程Agent榜.svg) · [English PNG](charts/en/pareto/pareto-aa-coding-agent.png) · [中文 PNG](charts/zh/pareto/帕累托_AA编程Agent榜.png)
+[SVG](charts/en/pareto/pareto-aa-coding-agent.svg) · [PNG](charts/en/pareto/pareto-aa-coding-agent.png) · [中文 SVG](charts/zh/pareto/帕累托_AA编程Agent榜.svg) · [中文 PNG](charts/zh/pareto/帕累托_AA编程Agent榜.png)
 
 ![AA Coding Agent](charts/en/pareto/pareto-aa-coding-agent.svg)
 
+Coding Agent Index v1.5. Each score belongs to a tested harness × model × effort configuration. Higher effort doesn't change the price per token, but it can change how many tokens a task uses.
+
+### Code Arena
+
+[SVG](charts/en/pareto/pareto-code-arena.svg) · [PNG](charts/en/pareto/pareto-code-arena.png) · [中文 SVG](charts/zh/pareto/帕累托_CodeArena榜.svg) · [中文 PNG](charts/zh/pareto/帕累托_CodeArena榜.png)
+
+![Code Arena](charts/en/pareto/pareto-code-arena.svg)
+
+The WebDev Overall Arena Score. It measures web-app building, not general coding ability.
+
+### Agent Arena
+
+[SVG](charts/en/pareto/pareto-agent-arena.svg) · [PNG](charts/en/pareto/pareto-agent-arena.png) · [中文 SVG](charts/zh/pareto/帕累托_AgentArena榜.svg) · [中文 PNG](charts/zh/pareto/帕累托_AgentArena榜.png)
+
+![Agent Arena](charts/en/pareto/pareto-agent-arena.svg)
+
 ### OpenDesign Arena
 
-[English SVG](charts/en/pareto/pareto-open-design-arena.svg) · [中文 SVG](charts/zh/pareto/帕累托_OpenDesign设计榜.svg) · [English PNG](charts/en/pareto/pareto-open-design-arena.png) · [中文 PNG](charts/zh/pareto/帕累托_OpenDesign设计榜.png)
+[SVG](charts/en/pareto/pareto-open-design-arena.svg) · [PNG](charts/en/pareto/pareto-open-design-arena.png) · [中文 SVG](charts/zh/pareto/帕累托_OpenDesign设计榜.svg) · [中文 PNG](charts/zh/pareto/帕累托_OpenDesign设计榜.png)
 
 ![OpenDesign Arena](charts/en/pareto/pareto-open-design-arena.svg)
 
+The 0–100 average task score: requirements 30 + design quality 70. OpenDesign's cost- and speed-weighted recommendation score is not used. All <!-- stat:configs_mapped_open_design_arena -->16<!-- /stat --> archived models map to adopted points.
+
 ### Terminal-Bench 4.0
 
-[English SVG](charts/en/pareto/pareto-terminal-bench-4.svg) · [中文 SVG](charts/zh/pareto/帕累托_TB4终端榜.svg) · [English PNG](charts/en/pareto/pareto-terminal-bench-4.png) · [中文 PNG](charts/zh/pareto/帕累托_TB4终端榜.png)
+[SVG](charts/en/pareto/pareto-terminal-bench-4.svg) · [PNG](charts/en/pareto/pareto-terminal-bench-4.png) · [中文 SVG](charts/zh/pareto/帕累托_TB4终端榜.svg) · [中文 PNG](charts/zh/pareto/帕累托_TB4终端榜.png)
 
 ![Terminal-Bench 4.0](charts/en/pareto/pareto-terminal-bench-4.svg)
 
+The official 66-task leaderboard hosted by Stanford, Harbor and the Laude Institute (snapshot 2026-09-03), with all <!-- stat:configs_terminal_bench_4 -->30<!-- /stat --> published configurations. Vendor-reported scores for models the official board doesn't list are added and labelled [self-reported], for example SWE-2 · Devin Pro at 27.3% from Cognition's launch post.
+
 ### Terminal-Bench 4.0 (AA)
 
-[English SVG](charts/en/pareto/pareto-aa-terminal-bench-4.svg) · [中文 SVG](charts/zh/pareto/帕累托_TB4·AA榜.svg) · [English PNG](charts/en/pareto/pareto-aa-terminal-bench-4.png) · [中文 PNG](charts/zh/pareto/帕累托_TB4·AA榜.png)
+[SVG](charts/en/pareto/pareto-aa-terminal-bench-4.svg) · [PNG](charts/en/pareto/pareto-aa-terminal-bench-4.png) · [中文 SVG](charts/zh/pareto/帕累托_TB4·AA榜.svg) · [中文 PNG](charts/zh/pareto/帕累托_TB4·AA榜.png)
 
 ![Terminal-Bench 4.0 (AA)](charts/en/pareto/pareto-aa-terminal-bench-4.svg)
 
-OpenDesign's full <!-- stat:configs_open_design_arena -->13<!-- /stat -->-model quality ranking is archived, and all <!-- stat:configs_mapped_open_design_arena -->13<!-- /stat --> entries map to exact adopted model identities. DeepSeek V4.1 Flash uses the official USD list price effective September 10: $0.003 cached input / $0.15 uncached input / $0.60 output off-peak, with a separate 2× peak point. The scores are OpenDesign Harness references, not measurements of each subscription/API channel.
+The same 66 tasks run by Artificial Analysis on its own harness (snapshot 2026-09-23). The two Terminal-Bench boards are not interchangeable. On matched configurations the median gap is about 2.6 points, but it can be much larger: Grok 4.7 xhigh scores 37.58 on the official board and 25.76 here.
 
-AA Coding Agent scores describe tested harness × model × effort configurations. Static charts and `points.*` are explicitly **highest archived configuration reference summaries**. They are not measurements of each subscription/API channel; quota-measurement effort and product harness alignment remain unverified. Higher effort does not automatically change $/MTok; it can change tokens consumed per task.
+### DeepSWE v1.1
 
-Terminal-Bench 4.0 is the official 66-task leaderboard hosted by Stanford / Harbor / the Laude Institute (snapshot 2026-09-03). Each published row is a harness × model × effort configuration, and all <!-- stat:configs_terminal_bench_4 -->22<!-- /stat --> rows are archived including GPT-6 Astra's five effort levels; every row maps to an adopted point. One supplemental row is appended to the official snapshot without replacing it: **SWE-2 · Devin Pro** at 27.3%, Cognition's self-reported figure from its launch post (the official board has no SWE-2 row). Only rows run on the official published harnesses or flagged vendor self-reports stay on this board: Artificial Analysis independently benchmarks TB4 on its own `Artificial Analysis` harness, and those runs are scored separately as **Terminal-Bench 4.0 (AA)** — same 66 tasks, different agent configuration, so the two boards are not interchangeable (on matched configurations the median absolute gap is ~2.6 points; Grok 4.7 xhigh scores 37.58 on the official Grok Build harness vs 25.76 under AA). SWE-2 is unmetered for Pro/Max/Teams subscribers during a promotion that Cognition announced as "the next month" and that we record as ending 2026-10-31, so its real price is shown as **≈$0/MTok** on a dedicated axis slot and it becomes the cheapest frontier point. This is a promotional price, not a permanent allowance; the point must be re-evaluated when the promotion ends.
+[SVG](charts/en/pareto/pareto-deepswe-1-1.svg) · [PNG](charts/en/pareto/pareto-deepswe-1-1.png) · [中文 SVG](charts/zh/pareto/帕累托_DeepSWE榜.svg) · [中文 PNG](charts/zh/pareto/帕累托_DeepSWE榜.png)
 
-Terminal-Bench 4.0 (AA) is the same task suite run on Artificial Analysis' own harness (snapshot 2026-09-23), tracked as a separate leaderboard because agent scaffolding differs. It covers models the official board does not yet list — Claude Opus 5.5 (59.6 at max, five effort levels archived), MiMo V2.6 Pro (34.85, its only third-party TB4 score) and Step 5 (33.3).
+![DeepSWE v1.1](charts/en/pareto/pareto-deepswe-1-1.svg)
 
-[All-configuration interactive view (Chinese)](charts/zh/pareto/帕累托交互图.html) defaults to the highest-score summary per model and offers every archived configuration plus a reasoning-effort selector as options. Download the HTML and open it locally with network access for Plotly. All configurations currently use reference mappings, not a verified product-configuration frontier.
+Pass@1 on 113 tasks, official rows run on mini-swe-agent (snapshot 2026-09-03). Vendor-reported scores are added as supplements and labelled [self-reported].
 
-The [configuration archive (JSON)](derived/benchmark-configurations.json) / [CSV](derived/benchmark-configurations.csv) retains all <!-- stat:configs_total -->319<!-- /stat --> records, original labels, known harness/effort, source score intervals, and source task-cost records. The [plan-to-configuration mappings (JSON)](derived/benchmark-points.json) / [CSV](derived/benchmark-points.csv) contains <!-- stat:refs_total -->1602<!-- /stat --> explicit references, including lower-effort variants. Composer Standard/Fast require their own mode; a missing mode stays unscored. Unknown harnesses, efforts and intervals stay null.
+## Real price and monthly allowance, all plans
 
-Source mean and median task costs are separate fields, not subscription task costs. Score intervals are preserved and available in interactive hover details, but uncertainty does not yet change frontier membership. Numerical quota ranges, robust-frontier analysis and workload sensitivity remain follow-up work; qualitative confidence labels are not numerical error bars.
+### Real price
 
-## Method and reproduction
+All <!-- stat:points_priced -->327<!-- /stat --> priced subscription and API points on one $/MTok scale.
 
-[Build instructions](BUILD.md) · [Data documentation](data/README.md) · [Sources and attribution](SOURCES.md)
+[SVG](charts/en/overview/real-price-overview.svg) · [PNG](charts/en/overview/real-price-overview.png) · [Table](charts/en/overview/real-price-overview-table.txt) · [中文 SVG](charts/zh/overview/单价总览.svg) · [中文 PNG](charts/zh/overview/单价总览.png) · [中文表](charts/zh/overview/单价总览表.txt)
 
-## License and acknowledgements
+![Real price overview](charts/en/overview/real-price-overview.svg)
 
-Original software: [MIT](LICENSE). Data references include [Awesome Coding Plan](https://github.com/mahonzhan/awesome-coding-plan) (CC BY 4.0) and the Caijing article 《Token经济，中国账本》. See [SOURCES.md](SOURCES.md) for attribution, changes and third-party terms.
+### Monthly allowance
+
+The <!-- stat:points_allowance -->306<!-- /stat --> subscription points with a monthly allowance, split into three bands by monthly fee in USD. Each band is ranked on its own. The undivided chart and a hybrid-scale view are in the [chart index](charts/README.md).
+
+**$0–30** · [SVG](charts/en/overview/monthly-allowance-overview-fee-0-30-usd.svg) · [PNG](charts/en/overview/monthly-allowance-overview-fee-0-30-usd.png) · [Table](charts/en/overview/monthly-allowance-overview-fee-0-30-usd-table.txt) · [中文 SVG](charts/zh/overview/额度总览_月费0-30美元.svg) · [中文 PNG](charts/zh/overview/额度总览_月费0-30美元.png) · [中文表](charts/zh/overview/额度总览表_月费0-30美元.txt)
+
+![Monthly allowance, $0–30](charts/en/overview/monthly-allowance-overview-fee-0-30-usd.svg)
+
+**Over $30, up to $100** · [SVG](charts/en/overview/monthly-allowance-overview-fee-30-100-usd.svg) · [PNG](charts/en/overview/monthly-allowance-overview-fee-30-100-usd.png) · [Table](charts/en/overview/monthly-allowance-overview-fee-30-100-usd-table.txt) · [中文 SVG](charts/zh/overview/额度总览_月费30-100美元.svg) · [中文 PNG](charts/zh/overview/额度总览_月费30-100美元.png) · [中文表](charts/zh/overview/额度总览表_月费30-100美元.txt)
+
+![Monthly allowance, over $30 up to $100](charts/en/overview/monthly-allowance-overview-fee-30-100-usd.svg)
+
+**Over $100, up to $300** · [SVG](charts/en/overview/monthly-allowance-overview-fee-100-300-usd.svg) · [PNG](charts/en/overview/monthly-allowance-overview-fee-100-300-usd.png) · [Table](charts/en/overview/monthly-allowance-overview-fee-100-300-usd-table.txt) · [中文 SVG](charts/zh/overview/额度总览_月费100-300美元.svg) · [中文 PNG](charts/zh/overview/额度总览_月费100-300美元.png) · [中文表](charts/zh/overview/额度总览表_月费100-300美元.txt)
+
+![Monthly allowance, over $100 up to $300](charts/en/overview/monthly-allowance-overview-fee-100-300-usd.svg)
+
+Chinese charts count tokens in 亿 (100 million): 77.37 亿 = 7.737 billion.
+
+## Data
+
+| Points | Count |
+|---|---:|
+| All plan × model points | <!-- stat:points_total -->328<!-- /stat --> |
+| Subscriptions with a monthly allowance | <!-- stat:points_allowance -->306<!-- /stat --> |
+| Free during a promotion (≈$0) | <!-- stat:points_unmetered -->1<!-- /stat --> |
+| Metered APIs at list price | <!-- stat:points_metered -->21<!-- /stat --> |
+
+| Leaderboard | Scored points |
+|---|---:|
+| AA Intelligence | <!-- stat:scored_aa_intelligence_index -->293<!-- /stat --> |
+| AA Coding Agent | <!-- stat:scored_aa_coding_agent_index -->120<!-- /stat --> |
+| Code Arena | <!-- stat:scored_arena_code -->264<!-- /stat --> |
+| Agent Arena | <!-- stat:scored_arena_agent_mode -->204<!-- /stat --> |
+| OpenDesign Arena | <!-- stat:scored_open_design_arena -->73<!-- /stat --> |
+| Terminal-Bench 4.0 | <!-- stat:scored_terminal_bench_4 -->113<!-- /stat --> |
+| Terminal-Bench 4.0 (AA) | <!-- stat:scored_aa_terminal_bench_4 -->278<!-- /stat --> |
+| DeepSWE v1.1 | <!-- stat:scored_deepswe_1_1 -->195<!-- /stat --> |
+
+The largest plan families are Command Code GOAT (<!-- stat:plans_command_code_goat -->58<!-- /stat --> points), MiMo Token Plan (<!-- stat:plans_mimo_token -->32<!-- /stat -->), OpenCode Go (<!-- stat:plans_opencode_go -->28<!-- /stat -->), Droid Max (<!-- stat:plans_droid_max -->27<!-- /stat -->), Ollama (<!-- stat:plans_ollama -->22<!-- /stat -->) and Step Plan (<!-- stat:plans_step_plan -->12<!-- /stat -->).
+
+**Downloads:** [adopted values (CSV)](data/adopted.csv) · [computed points (CSV)](derived/points.csv) / [JSON](derived/points.json) · [data notes](data/README.md) · [dated evidence](data/research/)
+
+**Every benchmark configuration**, not just the highest per model: the [configuration archive](derived/benchmark-configurations.json) ([CSV](derived/benchmark-configurations.csv)) keeps all <!-- stat:configs_total -->525<!-- /stat --> records with their original labels, harness, effort, score intervals and task costs. The [plan-to-configuration mappings](derived/benchmark-points.json) ([CSV](derived/benchmark-points.csv)) hold <!-- stat:refs_total -->2700<!-- /stat --> explicit references. Unknown harnesses, efforts and intervals stay empty instead of being guessed. The [all-configuration interactive chart](charts/zh/pareto/帕累托交互图.html) (Chinese; download and open locally, needs network access for Plotly) lets you switch between configurations and effort levels.
+
+## Known limitations
+
+- Real prices are lower bounds. They assume the full allowance is used.
+- Benchmark scores are references for a harness × model × effort configuration. They are not tests of each subscription channel, and whether a quota measurement used the same effort and harness is unverified.
+- Score intervals are kept (visible on hover in the interactive views) but don't yet affect which points are on the frontier. Confidence labels are qualitative, not error bars.
+- Source task costs are kept as separate fields. They are not the cost of the same task on a subscription.
+- Tokenizer differences between vendors are not corrected.
+- Promotional ≈$0 points have to be re-checked when the promotion ends.
+
+## Reproduce, contribute, credit
+
+- Rebuild everything: [BUILD.md](BUILD.md). Rules and conversions: [CONVENTIONS.md](CONVENTIONS.md). Why each value was chosen: [DECISIONS.md](DECISIONS.md).
+- Have a usage measurement of your own (tokens used vs. quota percentage)? [Open a data issue](https://github.com/FeiZhuLulu/real-api-pricing/issues/new?template=contribute-data.md).
+- Original software is [MIT](LICENSE). Data references include [Awesome Coding Plan](https://github.com/mahonzhan/awesome-coding-plan) (CC BY 4.0) and the Caijing article 《Token经济，中国账本》. Attribution, changes and third-party terms: [SOURCES.md](SOURCES.md). Redaction scope of this public edition: [PUBLICATION.md](PUBLICATION.md).

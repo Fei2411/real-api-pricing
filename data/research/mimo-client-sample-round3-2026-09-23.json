@@ -1,10 +1,10 @@
 {
  "collectedAt": "2026-09-23",
  "subject": "MiMo Token Plan 另一客户端两题用量样本：cache 命中率 95.0%（对照 OpenCode harness 单日样本 92.04%）",
- "source": "用户提供的客户端用量面板截图（2026-09-23 会话附件）",
+ "source": "维护者提供的客户端用量面板截图（2026-09-23 会话附件）",
  "client": {
   "label": "mimo/kimi desktop",
-  "labelNote": "客户端标签按用户原文 verbatim 记录；确切客户端/模型版本未经确认"
+  "labelNote": "客户端标签按维护者原文 verbatim 记录；确切客户端/模型版本未经确认"
  },
  "unitNote": "本表 Input 列不含 cache：total = input + output + cache_read（三行已逐项核对一致），与 OpenCode harness 面板口径不同处在于 input 是否含缓存读",
  "rawRows": [
@@ -54,8 +54,8 @@
  },
  "comparison": {
   "opencodeHarnessDay": "2026-09-22 单日 73.72M tok（mimo-token-plan-panel-round2-2026-09-23.json）：cache读 92.04% / 输入 6.08% / 输出 1.88%",
-  "interpretation": "2026-09-23 用户裁定：round2 单日样本的低缓存系 OpenCode harness 所致，非 MiMo 服务本身属性；本客户端两题样本 cache 95.0% 更接近项目标准负载 97.5%"
+  "interpretation": "2026-09-23 裁定：round2 单日样本的低缓存系 OpenCode harness 所致，非 MiMo 服务本身属性；本客户端两题样本 cache 95.0% 更接近项目标准负载 97.5%"
  },
  "decision": "取代 round2 的 adoptionDecision：MiMo Token Plan 32 行回到统一标准负载（97.5/2.15/0.35）折算，round2 的 measuredMix 采用作废；round2 的面板 burn 率互证（应扣 23.47 亿 vs 实扣 21.91 亿，−6.6%）保留在 decision_note；两套实测 mix（OpenCode 92.04%、本客户端 95.01%）仅留作对照，不入采用值",
- "openQuestion": "输出占比：本客户端 1.72%、OpenCode 1.88%，均高于标准负载 0.35%——是否调整标准负载的输出占比待用户裁定，本轮不动"
+ "openQuestion": "输出占比：本客户端 1.72%、OpenCode 1.88%，均高于标准负载 0.35%——是否调整标准负载的输出占比待裁定，本轮不动"
 }

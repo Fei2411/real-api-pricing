@@ -1,5 +1,5 @@
 import type { Group } from "./types";
-import { manufacturer } from "./domain";
+import { isThirdParty, manufacturer } from "./domain";
 
 export type LabelMode = "frontier" | "all" | "none";
 
@@ -26,6 +26,7 @@ export interface ArenaPlacement {
   width: number;
   height: number;
   radius: number;
+  maker: string | null;
 }
 
 /** A marker a label must not cover: pixel centre plus its clearance radius. */
@@ -162,12 +163,12 @@ export function clearLabelSizeCache() {
  * renders (canvas measureText, no layout), plus 7px/3px padding and a 1px
  * border (6px/2px on mobile). Works for CJK as well as Latin names.
  */
-export function measureLabel(label: string, mobile: boolean) {
+export function measureLabel(label: string, mobile: boolean, logo = false) {
   const cap = mobile ? 168 : 224;
   const font = mobile ? 10 : 11;
   const padX = mobile ? 6 : 7;
   const padY = mobile ? 2 : 3;
-  const cacheKey = `${mobile ? 1 : 0}|${label}`;
+  const cacheKey = `${mobile ? 1 : 0}|${logo ? 1 : 0}|${label}`;
   const hit = sizeCache.get(cacheKey);
   if (hit) return hit;
   if (measureCtx === undefined)
@@ -185,9 +186,11 @@ export function measureLabel(label: string, mobile: boolean) {
       0,
     );
   }
+  // Room for the maker mini-logo that sits before the text, plus its gap.
+  const extra = logo ? (mobile ? 14 : 16) : 0;
   // One extra pixel: sub-pixel advances would otherwise clip the last glyph.
   const size = {
-    width: Math.min(cap, Math.ceil(text + padX * 2 + 2 + 1)),
+    width: Math.min(cap, Math.ceil(text + padX * 2 + 2 + 1 + extra)),
     height: Math.ceil(font * 1.25) + padY * 2 + 2,
   };
   sizeCache.set(cacheKey, size);
@@ -198,10 +201,10 @@ export function measureLabel(label: string, mobile: boolean) {
  * The label text that fits in `width` (the measured box, capped), ending in
  * an ellipsis when the full name would overflow.
  */
-export function fitLabel(label: string, mobile: boolean): string {
+export function fitLabel(label: string, mobile: boolean, logo = false): string {
   const cap = mobile ? 168 : 224;
   // measureLabel clamps at the cap, so reaching it means the name overflows.
-  const fits = (text: string) => measureLabel(text, mobile).width < cap;
+  const fits = (text: string) => measureLabel(text, mobile, logo).width < cap;
   if (fits(label)) return label;
   let lo = 1;
   let hi = label.length;
@@ -329,7 +332,10 @@ export function placeTextLabels(
     const anchor = anchors.get(g.key);
     if (!anchor) continue;
     const label = modelLabel(g, lang);
-    const size = measureLabel(label, mobile);
+    const maker = isThirdParty(g.rows[0].point)
+      ? manufacturer(g.rows[0].point.vendor)
+      : null;
+    const size = measureLabel(label, mobile, maker !== null);
     let best: { slot: (typeof DIRECTIONS)[number] & { ax: number; ay: number }; box: Box; lead: Segment | null } | null = null;
     let bestPenalty = Infinity;
     let index = 0;
@@ -392,6 +398,7 @@ export function placeTextLabels(
       width: size.width,
       height: size.height,
       radius: anchor.r,
+      maker,
     });
   }
   return out;

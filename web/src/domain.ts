@@ -1,4 +1,4 @@
-import type { State, SiteData, Row, Point, Group, FilterKey } from "./types";
+import type { State, SiteData, Row, Point, Group, FilterKey, Lang } from "./types";
 import feeBandDefinitions from "../../config/allowance-fee-bands.json";
 import { channelColors, FALLBACK_COLOR } from "./palette";
 export const feeBands = feeBandDefinitions;
@@ -12,6 +12,12 @@ export function matchesFeeBand(fee: number | null, id: string): boolean {
     (band.maxInclusive ? fee <= band.max : fee < band.max)
   );
 }
+/** Most items the allowance comparison lays over one another. */
+export const COMPARE_MAX = 3;
+/** Prefix of a comparison slot that has a plan but no model yet. */
+export const PLAN_SLOT = "plan:";
+/** Shared by the pickers: plans with one name per plan_id stay apart. */
+export const planKey = (p: Point) => `${p.plan_id}|${p.plan}`;
 export const filterKeys: FilterKey[] = [
   "vendors",
   "channels",
@@ -25,6 +31,9 @@ export const filterKeys: FilterKey[] = [
 export const colors = channelColors;
 export const defaultState = (): State => ({
   feeBand: "all",
+  layout: "list",
+  compare: [],
+  cards: [],
   lang: "en",
   view: "pareto",
   board: "aa_intelligence_index",
@@ -87,6 +96,38 @@ export function visiblePoints(data: SiteData, s: State): Point[] {
           matchesFeeBand(p.price_usd, s.feeBand))),
   );
 }
+/**
+ * Decade-aligned log axis for the ranking bars, spanning every point that the
+ * unfiltered view could show, so a bar's length depends only on its own value.
+ */
+export function barAxis(
+  data: SiteData,
+  view: State["view"],
+): { low: number; high: number } {
+  const values = data.points
+    .filter(
+      (p) =>
+        view !== "allowance" ||
+        (p.billing !== "metered" && p.monthly_yi !== null),
+    )
+    .map((p) => (view === "allowance" ? p.monthly_yi : p.real_usd_per_mtok))
+    .filter((v): v is number => v !== null && Number.isFinite(v) && v > 0);
+  if (!values.length) return { low: 1, high: 10 };
+  const low = Math.floor(Math.log10(Math.min(...values))),
+    high = Math.ceil(Math.log10(Math.max(...values)));
+  return { low: 10 ** low, high: 10 ** Math.max(high, low + 1) };
+}
+/** Bar length in percent on a log axis; values with no log position get 0. */
+export function barWidth(
+  value: number,
+  axis: { low: number; high: number },
+): number {
+  if (!(value > 0)) return 0;
+  const f =
+    (Math.log10(value) - Math.log10(axis.low)) /
+    (Math.log10(axis.high) - Math.log10(axis.low));
+  return 100 * Math.min(1, Math.max(0, f));
+}
 export function rowsFor(data: SiteData, s: State): Row[] {
   const byPoint = new Map<string, typeof data.mappings>();
   for (const m of data.mappings)
@@ -101,7 +142,8 @@ export function rowsFor(data: SiteData, s: State): Row[] {
     let mappings = byPoint.get(p.id) || [];
     if (s.configuration === "summary" && mappings.length)
       mappings = [mappings.reduce((a, b) => (a.score >= b.score ? a : b))];
-    if (s.view !== "pareto") {
+    // The full table shares the chart's per-configuration score rows.
+    if (s.view !== "pareto" && s.view !== "table") {
       const m = mappings.length
         ? mappings.reduce((a, b) => (a.score >= b.score ? a : b))
         : null;
@@ -135,7 +177,7 @@ export function tableRows(rows: Row[], s: State): Row[] {
     .filter(
       (r) =>
         !q ||
-        `${r.point.label} ${displayPlan(r.point.plan, s.lang)} ${r.point.channel} ${r.mapping?.variant ?? ""}`
+        `${r.point.label} ${r.point.model} ${displayPlan(r.point.plan, s.lang)} ${r.point.channel} ${r.mapping?.variant ?? ""}`
           .toLocaleLowerCase()
           .includes(q),
     )
@@ -476,6 +518,9 @@ export function serialize(s: State): string {
   if (s.configuration !== d.configuration) p.set("config", s.configuration);
   if (s.labels !== d.labels) p.set("labels", s.labels);
   if (s.feeBand !== d.feeBand) p.set("fee", s.feeBand);
+  if (s.layout !== d.layout) p.set("layout", s.layout);
+  for (const id of s.compare) p.append("cmp", id);
+  for (const id of s.cards) p.append("card", id);
   if (s.query) p.set("q", s.query);
   if (s.find) p.set("find", s.find);
   if (s.lock) p.set("lock", serializeLock(s.lock));
@@ -506,10 +551,11 @@ export function restore(
   let warning = false;
   const enums: Record<string, [keyof State, string[]]> = {
     lang: ["lang", ["en", "zh"]],
-    view: ["view", ["pareto", "price", "allowance", "method"]],
+    view: ["view", ["pareto", "price", "allowance", "table", "method"]],
     config: ["configuration", ["all", "summary"]],
     labels: ["labels", ["frontier", "all", "none"]],
     fee: ["feeBand", ["all", ...feeBands.map((b) => b.id)]],
+    layout: ["layout", ["list", "cards", "compare"]],
     sort: ["sort", ["price", "model", "plan", "score", "allowance", "fee"]],
     dir: ["direction", ["asc", "desc"]],
   };
@@ -547,6 +593,23 @@ export function restore(
     if (known) state.lock = parsed;
     else warning = true;
   }
+  const allowanceIds = new Set(
+    data.points.filter((p) => p.billing !== "metered" && p.monthly_yi !== null).map((p) => p.id),
+  );
+  if (params.has("cmp")) {
+    const wanted = params.getAll("cmp");
+    const planKeys = new Set(
+      data.points.filter((p) => allowanceIds.has(p.id)).map((p) => PLAN_SLOT + planKey(p)),
+    );
+    const slots = wanted.filter((v) => v === "" || allowanceIds.has(v) || planKeys.has(v));
+    if (slots.length !== wanted.length || slots.length > COMPARE_MAX) warning = true;
+    state.compare = slots.slice(0, COMPARE_MAX);
+  }
+  if (params.has("card")) {
+    const wanted = params.getAll("card");
+    state.cards = [...new Set(wanted.filter((id) => allowanceIds.has(id)))];
+    if (state.cards.length !== wanted.length) warning = true;
+  }
   if (params.has("sel")) {
     const wanted = params.getAll("sel").filter((id) => id !== "");
     if (!wanted.length) state.selected = [];
@@ -559,12 +622,15 @@ export function restore(
   const opts = options(data);
   for (const k of filterKeys) {
     if (!params.has(k)) continue;
-    const wanted = params.getAll(k);
+    const wanted = params.getAll(k).map(renameEntity);
     state[k] = wanted.filter((v) => opts[k].includes(v));
     if (state[k].length !== wanted.length) warning = true;
   }
   return { state, warning };
 }
+/** Display names that were renamed after links were shared (xAI → SpaceXAI). */
+const RENAMED: Record<string, string> = { xAI: "SpaceXAI" };
+const renameEntity = (v: string) => RENAMED[v] ?? v;
 /** The original "#s=<json>" share format; kept so old links still resolve. */
 function restoreLegacy(
   s: string,
@@ -605,9 +671,10 @@ function restoreLegacy(
     const opts = options(data);
     for (const k of filterKeys) {
       if (Array.isArray(raw[k])) {
-        state[k] = raw[k].filter(
-          (v: unknown) => typeof v === "string" && opts[k].includes(v),
-        );
+        state[k] = raw[k]
+          .filter((v: unknown) => typeof v === "string")
+          .map(renameEntity)
+          .filter((v: string) => opts[k].includes(v));
         if (state[k].length !== raw[k].length) warning = true;
       } else if (raw[k] !== undefined) warning = true;
     }
@@ -676,8 +743,30 @@ export function workloadLine(
       : `Standard workload: ${pct(m.cache)} cache reads / ${pct(m.input)} input / ${pct(m.output)} output`;
   }
   return zh
-    ? "实测口径：面板/日志 raw token 直测或同源派生，不经负载折算"
-    : "Measured real usage: raw tokens, no workload conversion";
+    ? "未折算：样本缺 token 分项（或为官方绝对 token 表），直接采用 raw token"
+    : "Not workload-normalized: sample lacks a token breakdown (or is an official absolute token table); raw tokens used as-is";
+}
+
+/** Data-date line for the detail panel: when this quota data was sampled or published. */
+export function dataDateLine(p: Point, lang: Lang): string {
+  if (!p.data_date) return "";
+  const zh = lang === "zh";
+  const date = p.data_date.replace("~", zh ? " ~ " : " – ");
+  const kind =
+    p.data_date_kind === "sample"
+      ? zh
+        ? "实测采样"
+        : "sampled"
+      : p.data_date_kind === "official"
+        ? zh
+          ? "官方来源日期"
+          : "official source date"
+        : p.data_date_kind === "derived"
+          ? zh
+            ? `派生，沿用 ${p.data_date_from} 的数据日期`
+            : `derived; uses the data date of ${p.data_date_from}`
+          : null;
+  return kind ? `${date} · ${kind}` : date;
 }
 
 /** Official metered API list prices, shown next to the workload basis. */
@@ -708,6 +797,7 @@ const EFFORT: Record<string, [string, string]> = {
   high: ["High", "高"],
   xhigh: ["xhigh", "超高"],
   max: ["Max", "最高"],
+  thinking: ["Thinking", "思考"],
 };
 /** Reasoning-effort level in the reader's language; unknown levels stay as published. */
 export const effortLabel = (effort: string | null, lang: string) =>
@@ -715,8 +805,25 @@ export const effortLabel = (effort: string | null, lang: string) =>
 /** Leaderboard metric in the reader's language; unknown metrics stay as published. */
 export const metricLabel = (metric: string, lang: string) =>
   lang === "zh" ? (METRIC_ZH[metric] ?? metric) : metric;
+/** Mapping notes are published in English; Chinese shows the translation. */
+const MAPPING_NOTE_ZH: Record<string, string> = {
+  "Exact served-model reference; quota-measurement effort is unverified.":
+    "精确对应所服务的模型；额度实测的推理强度未经验证。",
+  "Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.":
+    "仅精确对应所服务的模型；产品框架和额度实测的推理强度未经验证。并非该订阅或 API 渠道的评测结果。",
+  "Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel. Vendor self-reported score, not an official leaderboard run.":
+    "仅精确对应所服务的模型；产品框架和额度实测的推理强度未经验证。并非该订阅或 API 渠道的评测结果。厂商自报成绩，非官方榜单数据。",
+};
+export const mappingNoteLabel = (note: string, lang: string) =>
+  lang === "zh" ? (MAPPING_NOTE_ZH[note] ?? note) : note;
 export const safeUrl = (url: string) =>
   /^https?:\/\//i.test(url) || url.startsWith("/data/") ? url : undefined;
+/** First URL inside a source text (same match regex as build-data.mjs — the
+    character class already excludes CJK and fullwidth punctuation), with
+    trailing ASCII sentence punctuation trimmed so the href is clean. */
+export const firstUrl = (text: string) =>
+  text.match(/https?:\/\/[^\s<>"'\u3000-\u9fff\uff00-\uffef]+/)?.[0]?.replace(/[;,.]+$/, "");
+
 export const manufacturer = (vendor: string) =>
   vendor === "Muse" ? "Meta" : vendor === "Cognition" ? "Devin" : vendor;
 /** Short promo/unmetered qualifier for a $0 point, or "" for priced points. */
@@ -762,6 +869,8 @@ export function displayPlan(plan: string, lang: string): string {
     闲时: "Off-peak",
     中间值: "Midpoint",
     忙时: "Peak",
+    " 日间": " (Day)",
+    " 夜间0.8×": " (Night 0.8x)",
     "促销至 ": "promo until ",
   };
   return Object.entries(words).reduce(
@@ -841,8 +950,8 @@ export function csv(rows: Row[], lang: string): string {
         r.mapping?.score_is_self_reported,
         r.mapping?.agent_harness,
         r.mapping?.reasoning_effort,
-        r.mapping?.source,
-        r.point.source,
+        lang === "zh" ? r.mapping?.source : (r.mapping?.source_en ?? r.mapping?.source),
+        lang === "zh" ? r.point.source : (r.point.source_en ?? r.point.source),
       ]),
     ]
       .map((row) => row.map(escape).join(","))

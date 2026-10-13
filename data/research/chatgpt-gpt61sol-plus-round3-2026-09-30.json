@@ -1,0 +1,83 @@
+{
+  "collectedAt": "2026-09-30",
+  "scopeNote": "GPT-6.1 Sol ChatGPT Plus 周窗第三段实测：60%→50%（10pp）段内 14,860,374 tok，与前两段在 60% 边界拼接为整段 81%→50%（31pp）/ 55,532,850 tok。整段分量与三段之和逐项吻合（截图整段标题仍写 82%/32pp，沿用更正后起始值 81%→真实 31pp）。同时按 2026-09-30 统一折算裁定，把 GPT61_SOL_LIST 从「假设同 GPT-6 Sol」改为 GPT-6.1 Sol 官方价（cached $0.10/input $2/output $10）：段 list-worth $13.2824 ÷31% ×4周 ÷标准档混合价 $0.197/MTok = 8.70 亿/月，替代按 6-Sol 价折算的 8.96 亿；raw total 口径 7.17 亿留作对照。",
+  "items": [
+    {
+      "planId": "chatgpt_plus",
+      "priceUsd": 20,
+      "model": "gpt-6.1-sol",
+      "client": "Codex CLI",
+      "evidenceType": "user_local_log_x_panel_percent",
+      "source": "维护者本机 Codex 实测截图（2026-09-30 会话内提供，续 round1/round2 同窗口）",
+      "sourceDate": "2026-09-30",
+      "userConfirmation": "维护者原话：『又补了点数据』",
+      "observed": {
+        "windowSegment3": "周额度剩余 60% → 50%，差 10pp，全部增量为 gpt-6.1-sol",
+        "segment3": {
+          "inputTokens": 707281,
+          "cacheReadTokens": 14105472,
+          "cacheWriteTokens": 0,
+          "outputTokens": 47621,
+          "reasoningTokensSubsetOfOutput": 17597,
+          "totalTokens": 14860374,
+          "cacheHitRate": 0.9523,
+          "tokensPerPoint": 1486037.4,
+          "listWorthUsd": 3.3013192
+        },
+        "windowCumulative": "周额度剩余 81% → 50%，差 31pp（截图标题写 82%→50% · 32pp，起始读数沿用更正后读数 81%）",
+        "cumulative": {
+          "inputTokens": 2742389,
+          "cacheReadTokens": 52536064,
+          "cacheWriteTokens": 0,
+          "outputTokens": 254397,
+          "reasoningTokensSubsetOfOutput": 72105,
+          "totalTokens": 55532850,
+          "cacheHitRate": 0.9504,
+          "inputShareOfTotal": 0.0493835,
+          "outputShareOfTotal": 0.0045811,
+          "cacheReadShareOfTotal": 0.9460353,
+          "reasoningShareOfOutput": 0.2834324,
+          "tokensPerPoint": 1791382.26,
+          "listWorthUsd": 13.2823544,
+          "worthUsdPerPoint": 0.42846
+        }
+      },
+      "verification": "第三段分量与整段逐项拼合：2,035,108+707,281=2,742,389 ✓、38,430,592+14,105,472=52,536,064 ✓、206,776+47,621=254,397 ✓、54,508+17,597=72,105 ✓、40,672,476+14,860,374=55,532,850 ✓；第三段 hit = 14,105,472/(707,281+14,105,472) = 95.23%；整段 hit = 52,536,064/55,278,453 = 95.04%。起始 81% 下整段 Δpp=31（截图按错误起点 82 算 32pp，不采）。",
+      "priceBasis": {
+        "adopted": "GPT-6.1 Sol 官方价 cached $0.10 / input $2 / output $10（USD/MTok）：learn.chatgpt.com token rates 表 credits 2.5/50/250 ÷25 一致；developers.openai.com gpt-6.1-sol 页 $2/$0.10/$2.50写/$10，cached=输入 5%",
+        "supersedes": "workload-conversion-round1 时「库内无 6.1 Sol 标价，假设同 GPT-6 Sol $0.2/$2/$10」——现为官方价，cache 段价比从 1:10 修正为 1:20",
+        "counterfactual6SolParity": "若仍按 (0.2,2,10)：段 worth $18.5360 ÷31%×4 = $239.17 ÷$0.294 = 8.14 亿/月（差异主因 cache_read 占 94.6%）",
+        "cacheWrite": "cache_write 段内为 0，$2.50/MTok 写价不参与"
+      },
+      "calculation": {
+        "adoptedWindow": "81%→50%（31pp，round1+round2+round3 合并整段）",
+        "formula": "段 list-worth $13.2823544 ÷ 0.31 × 4周 = 月 worth $171.3852 ÷ 标准档混合价 $0.197/MTok（0.97×$0.10＋0.025×$2＋0.005×$10）",
+        "monthlyWorthUsd": 171.3852,
+        "monthlyTokensCentral": 869975726,
+        "monthlyYiCentral": 8.7,
+        "weeklyPoolWorthUsd": 42.8463,
+        "weeklyPoolCredits": 1071.16,
+        "rawMonthlyYi": 7.17,
+        "realUsdPerMTokCentral": 0.0230,
+        "roundedPercentMonthlyYiLow": 8.43,
+        "roundedPercentMonthlyYiHigh": 8.99,
+        "roundedPercentNote": "端点 81/50 若为四舍五入整数，则真实 Δpp∈[30,32]，对应 8.43~8.99 亿/月；中心值按 31pp。"
+      },
+      "poolCrossCheck": "按 6.1 官方 credits 档整段耗 332.06 credits → 周池 1,071 cr（$42.85）；linux.do 观察的 Plus 周池约 3,426 credits 与 Pro20x 同池 Sol-worth $2,200~2,500÷20（≈$110~125）均更接近按 5.6-Sol 等价费率反推的 $119.6/周（2,990 cr）——6.1-Sol 订阅内计费率可能高于公布的标准档，或池口径已变化；主值仍按官方 6.1 价折算，差异记入不确定性。",
+      "confidence": "high",
+      "pendingAdoption": "chatgpt_plus × gpt-6.1-sol 更新为整段 8.70 亿/月（high, standard）；分段密度（6.1 价）：seg1 $0.476/pp、seg2 $0.473/pp、seg3 $0.330/pp、整段 $0.428/pp；raw 口径 7.17 亿留作对照；Pro 5x/20x 不派生（沿 Sol 裁定）；暂无榜分，有分后再补 scores supplement。"
+    }
+  ],
+  "doubts": [
+    "第三段 60%→50% 每 1% $0.330，比前两段 $0.476/$0.473 低约 30%，10pp 整数读数取整（约 ±10%）不足以解释，原因未明"
+  ],
+  "userConfirmation20261001": "维护者原话：『6.1sol缓存就是更便宜，0.1，6还是0.2』",
+  "doubtsRecordedAt": "2026-10-01",
+  "adoptionDecision": "2026-10-01 裁定：先记录疑点，按整段 81%→50%（31pp）采用 8.70 亿/月",
+  "relatedFiles": [
+    "chatgpt-gpt61sol-plus-round1-2026-09-30.json",
+    "chatgpt-gpt61sol-plus-round2-2026-09-30.json",
+    "workload-conversion-round1-2026-09-30.json",
+    "chatgpt-gpt6sol-plus-round1-2026-09-24.json"
+  ]
+}

@@ -1,5 +1,7 @@
 # Website QA — 2026-09-08
 
+Historical QA log from 2026-09-08/09. Counts, the Plotly-based chart and preview URLs reflect that time; current behavior is documented in [README.md](README.md).
+
 Target: the accepted website plan, with Arena's clean spacing and restrained navigation and Artificial Analysis's model-selection/chart controls as references. This is an original project interface, not a pixel-for-pixel clone. The user's accepted top navigation replaces Arena's sidebar deliberately.
 
 ## Visual inspection
@@ -81,18 +83,18 @@ User confirmed GLM ¥49/149/469=v2 and ¥118/538/1078=v3; v1 has no adopted rows
 
 ## Frontier point correction and AA update — 2026-09-09
 
-## Wheel zoom and contribution links — 2026-09-09
-
-Custom wheel zoom is restricted to the plot rectangle, including logo overlays, and keeps the cursor anchored on both reversed-log price and score axes. Real browser wheel testing confirmed: inside plot, ticks change with page scroll fixed at 360; outside plot, page scroll becomes 540 with ticks unchanged; Reset restores the original ticks and five logos. A regression test covers cursor anchoring, direction and reversible zoom; 19 tests and production build pass.
-
-Header adds bilingual GitHub Issue evidence template and Star link/count via public repository API. Mobile 390×844 and Chinese labels inspected. The current network's GitHub API rate limit caused the count to be omitted; the Star link remains usable. No issue or Star action was submitted. Grok implemented the header through Agent Bridge, Codex reviewed it and implemented/tested wheel zoom. Preview verified: https://real-api-pricing-agvi8wdpm-feizhululus-projects.vercel.app .
-
 - User clarified that the frontier coordinate itself must be a logo, not a numbered circle with a logo in its label. Grok implemented this through Agent Bridge; Codex independently reviewed and fixed neighbouring-label avoidance, logarithmic export annotation coordinates, logo export backgrounds and responsive export height.
 - Desktop and 390×844 browser views inspected: five Code Arena frontier logos and five bottom cards remain; no numbered scatter text. Clicking Opus 5 opens both coincident Max plans. Zoom hides offscreen logos; Reset restores all five. The detail table has its own horizontal scroll container.
 - Downloaded actual SVG and PNG. The first PNG exposed a mutable-layout height bug; the corrected PNG was downloaded and visually checked, with centered logo markers, readable names and five separate key rows.
 - Kimi SVG and its assembly recipe now specify a black K and blue dot.
 - AA data checks: 149 current AA configurations match raw scores, variants, harnesses and estimate flags. 188 points, 204 configurations, 886 references; prices, quotas and both Arena boards remain unchanged. All 18 web tests and TypeScript/Vite build pass.
 - Final preview opened successfully and Code Arena logo buttons/cards were confirmed online: https://real-api-pricing-r3pgysog6-feizhululus-projects.vercel.app . A subsequent remote AA-page screenshot call timed out; AA v4.3 and estimate details had already been inspected locally. No production promotion.
+
+## Wheel zoom and contribution links — 2026-09-09
+
+Custom wheel zoom is restricted to the plot rectangle, including logo overlays, and keeps the cursor anchored on both reversed-log price and score axes. Real browser wheel testing confirmed: inside plot, ticks change with page scroll fixed at 360; outside plot, page scroll becomes 540 with ticks unchanged; Reset restores the original ticks and five logos. A regression test covers cursor anchoring, direction and reversible zoom; 19 tests and production build pass.
+
+Header adds bilingual GitHub Issue evidence template and Star link/count via public repository API. Mobile 390×844 and Chinese labels inspected. The current network's GitHub API rate limit caused the count to be omitted; the Star link remains usable. No issue or Star action was submitted. Grok implemented the header through Agent Bridge, Codex reviewed it and implemented/tested wheel zoom. Preview verified: https://real-api-pricing-agvi8wdpm-feizhululus-projects.vercel.app .
 
 ## Overlay, label and hover rework — 2026-09-09
 

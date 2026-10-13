@@ -1,6 +1,6 @@
 {
   "collectedAt": "2026-09-14",
-  "scopeNote": "Devin × gpt-6-astra 周池大样本复核。cc usage 面板（E:\\工具\\cc usage）本周 Astra-only 口径：87pt 用量段（剩余 100%→13%）对 gpt-6-astra-high 单列 305,025,580 tokens，样本量为 round2 采用段（81.2M / 20pt）的 3.76 倍且顶到周池尾部。用户指示只算 Astra，其他模型免费不计额度。",
+  "scopeNote": "Devin × gpt-6-astra 周池大样本复核。cc usage 面板（E:\\工具\\cc usage）本周 Astra-only 口径：87pt 用量段（剩余 100%→13%）对 gpt-6-astra-high 单列 305,025,580 tokens，样本量为 round2 采用段（81.2M / 20pt）的 3.76 倍且顶到周池尾部。裁定只算 Astra，其他模型免费不计额度。",
   "items": [
     {
       "planId": "devin_max",
@@ -10,9 +10,9 @@
       "model": "gpt-6-astra",
       "panelModelName": "gpt-6-astra-high",
       "evidenceType": "user_dashboard_backcalculation",
-      "source": "用户本人 Devin 账号 cc usage 面板截图，2026-09-14 17:27；云端剩余 13% / 已用 87%，本周 Astra 单列",
+      "source": "维护者本人 Devin 账号 cc usage 面板截图，2026-09-14 17:27；云端剩余 13% / 已用 87%，本周 Astra 单列",
       "sourceDate": "2026-09-14",
-      "userConfirmation": "用户原话：只算astra就行，其他应该是免费的；devin astra更准确的数据出来了",
+      "userConfirmation": "维护者原话：只算astra就行，其他应该是免费的；devin astra更准确的数据出来了",
       "observedSegment": {
         "remainingFrom": 1.0,
         "remainingTo": 0.13,
@@ -41,13 +41,13 @@
       },
       "tokenComposition": {
         "cacheHitRateAdoptedConvention": 0.98782,
-        "formula": "cache_read / (input + cache_read + cache_create) = 300,944,710 / 304,655,662，沿用 round3 用户裁定口径",
+        "formula": "cache_read / (input + cache_read + cache_create) = 300,944,710 / 304,655,662，沿用 round3 裁定口径",
         "note": "命中率 98.78% 与 round2/3 段（97.84%）同量级，均为极端缓存型负载；output 占 0.12%，fresh input ≈ 0"
       },
       "excluded": {
         "nonAstraTokens": 19508347,
         "models": "swe-2-max 等本地/免费模型",
-        "reason": "用户确认其他模型免费不计额度；cc usage 已按 Astra-only 口径重算（devin-checkpoint-13pct.md，在工具目录非本项目）"
+        "reason": "确认其他模型免费不计额度；cc usage 已按 Astra-only 口径重算（devin-checkpoint-13pct.md，在工具目录非本项目）"
       },
       "comparisonWithRound2": {
         "round2WeeklyBackcalc": 406036145,
@@ -55,8 +55,8 @@
         "delta": "-13.7%",
         "interpretation": "两次反推同账号同套餐周池不一致：round2 为 20pt 取整段（真实占比 19.5~20.5% 时周池 3.96~4.16 亿），本次为 87pt 近满周段，区间更紧；差异方向说明 round2 段可能含取整偏差或周池在此间下调，本样本统计效力更高"
       },
-      "confidence": "high（用户面板直读、近满周 87pt 大样本、total 与分项自洽；相对 round2 为更优样本）",
-      "decision": "已采用（2026-09-14 用户拍板）：devin_max × gpt-6-astra 16.24 → 14.02 亿/月（周池 3.506 亿）。build_adopted.py 的 DEVIN_MAX_ASTRA_USED_TOKENS/FRACTION 已改为 305,025,580 / 0.87；round2/3 文件留作历史证据不覆盖。"
+      "confidence": "high（维护者面板直读、近满周 87pt 大样本、total 与分项自洽；相对 round2 为更优样本）",
+      "decision": "已采用（2026-09-14 裁定）：devin_max × gpt-6-astra 16.24 → 14.02 亿/月（周池 3.506 亿）。build_adopted.py 的 DEVIN_MAX_ASTRA_USED_TOKENS/FRACTION 已改为 305,025,580 / 0.87；round2/3 文件留作历史证据不覆盖。"
     }
   ],
   "notFound": [

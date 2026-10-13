@@ -126,7 +126,7 @@
   },
   "adoptionDecision": {
     "status": "hold",
-    "reason": "新增独立大样本与V2EX主值同量级，但它混用K3；同时存在显著时期/账号冲突。先保留15.68亿/月为high候选，不写入adopted，等待第二个纯K2.7同等级样本或用户拍板。"
+    "reason": "新增独立大样本与V2EX主值同量级，但它混用K3；同时存在显著时期/账号冲突。先保留15.68亿/月为high候选，不写入adopted，等待第二个纯K2.7同等级样本或裁定。"
   },
   "searchLog": {
     "queriesCovered": [

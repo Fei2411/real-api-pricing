@@ -5,7 +5,7 @@
   "decisions": {
     "glmTimeBands": "GLM Coding Plan不再取忙时/闲时中位，按同一套餐和模型分别展示忙时、闲时两个情景点。两者均用项目统一标准负载与官方周积分/三段积分系数换算。",
     "dollarPoolConfidence": "OpenCode Go、Command Code GOAT、Ollama Pro/Max所有美元或credits额度折算点统一从high降为medium；官方额度和价表可靠，但最终token依赖项目标准负载。",
-    "claudeAndChatgpt": "Claude Max 5x保持78.5亿，ChatGPT Plus Sol保持6.16亿。Claude单用户消息数旁证与Pro 20x缩放出的Plus 7.18亿只保留在research，不进入README主说明。",
+    "claudeAndChatgpt": "Claude Max 5x保持78.5亿，ChatGPT Plus Sol保持6.16亿。Claude单维护者消息数旁证与Pro 20x缩放出的Plus 7.18亿只保留在research，不进入README主说明。",
     "cacheWrite": "项目标准负载暂不单列cache write；公开说明厂商另收缓存写入费时，换算可能偏高估token。",
     "apiFrontier": "订阅与按量API共同参与帕累托筛选、连线和前沿条形；API不再仅作基线。"
   },

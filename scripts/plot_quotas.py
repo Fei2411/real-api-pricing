@@ -62,9 +62,9 @@ plt.rcParams["axes.unicode_minus"] = False
 plt.rcParams["svg.hashsalt"] = "real-api-pricing"
 
 # 色值与 id 前缀统一来自 config/channel-colors.json；此处只定图例顺序。
-VENDOR_COLORS = palette(["OpenAI", "Anthropic", "xAI", "Cursor", "Kimi", "Zhipu", "MiniMax", "Alibaba",
+VENDOR_COLORS = palette(["OpenAI", "Anthropic", "SpaceXAI", "Cursor", "Kimi", "Zhipu", "MiniMax", "Alibaba",
                          "OpenCode", "Command Code", "Ollama", "DeepSeek", "Google", "StepFun",
-                         "Xiaomi", "Devin"])
+                         "Xiaomi", "Devin", "Factory"])
 # 图例沿用旧显示名（GLM/Gemini），内部键均为 canonical 渠道名。
 LABEL = {"Zhipu": "GLM", "Google": "Gemini"}
 VIEW_CN = {"quotas": "额度", "prices": "单价"}
@@ -93,17 +93,17 @@ def output_stem(view: str, board: dict | None, language: str, table: bool = Fals
 
 
 VENDOR_CODES = {
-    "OpenAI": "OA", "Anthropic": "AN", "xAI": "XA", "Cursor": "CU",
+    "OpenAI": "OA", "Anthropic": "AN", "SpaceXAI": "XA", "Cursor": "CU",
     "Kimi": "KI", "Zhipu": "GL", "MiniMax": "MM", "Alibaba": "AL",
     "OpenCode": "OC", "Command Code": "CC", "Ollama": "OL",
     "DeepSeek": "DS", "Google": "GE", "StepFun": "SF", "Devin": "DV",
-    "Xiaomi": "MI",
+    "Xiaomi": "MI", "Factory": "FA",
 }
 TEXT = {
     "zh": {
         "quotas_title": "订阅额度总览 · 套餐 × 实际服务模型",
         "prices_title": "真实单价总览 · 订阅与 API 统一对比",
-        "quotas_subtitle": "默认月 = 4 周，Kimi独立月池 = 周池×5；饱和使用；全口径 token；按量 API 无月额度",
+        "quotas_subtitle": "默认月 = 4 周，Kimi独立月池 = 周池×5，Droid 月 = 周×2；饱和使用；全口径 token；按量 API 无月额度",
         "prices_subtitle": f"美元/credits与API三段价统一按{STD_MIX['cache']:.0%}缓存 / {STD_MIX['input']:.1%}输入 / {STD_MIX['output']:.1%}输出折算；直接total-token实测不重算",
         "quotas_axis": "月可用 token（亿，对数轴）",
         "prices_axis": "真实单价（美元 / 百万 token，对数轴）",
@@ -118,7 +118,7 @@ TEXT = {
     "en": {
         "quotas_title": "Monthly token allowance | Subscription plan x served model",
         "prices_title": "Effective token price | Subscriptions and APIs compared",
-        "quotas_subtitle": "Default month = 4 weeks; Kimi monthly pool = 5× weekly; full utilization, all token types; APIs have no allowance",
+        "quotas_subtitle": "Default month = 4 weeks; Kimi monthly pool = 5× weekly, Droid month = 2× weekly; full utilization, all token types; APIs have no allowance",
         "prices_subtitle": f"Dollar/credit and API rates use {STD_MIX['cache']:.0%} cache / {STD_MIX['input']:.1%} input / {STD_MIX['output']:.1%} output; direct total-token measurements are not normalized",
         "quotas_axis": "Monthly tokens (billions, log scale)",
         "prices_axis": "Effective price (USD per million tokens, log scale)",

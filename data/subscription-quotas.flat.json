@@ -595,8 +595,8 @@
       "modelId": "grok-4.6",
       "monthlyYi": 100.0,
       "weeklyYi": null,
-      "quotaSource": "用户确认",
-      "override": "用户确认",
+      "quotaSource": "确认",
+      "override": "确认",
       "notes": "第一方 Grok。SubPlan 另有 140 亿（Pro 7亿×20）"
     },
     {
@@ -610,7 +610,7 @@
       "monthlyYi": null,
       "weeklyYi": null,
       "quotaSource": "model-access-profiles",
-      "override": "用户确认",
+      "override": "确认",
       "notes": null
     },
     {
@@ -624,7 +624,7 @@
       "monthlyYi": 32.0,
       "weeklyYi": null,
       "quotaSource": "model-access-profiles",
-      "override": "用户确认",
+      "override": "确认",
       "notes": "Third-party pool at provider API rates. Official 2026-09-02 page only says Included; community still cites Pro $20 / Pro+ $70 / Ultra $400."
     },
     {
@@ -1213,8 +1213,8 @@
       "modelId": "grok-4.6",
       "monthlyYi": 48.0,
       "weeklyYi": 12.0,
-      "quotaSource": "用户确认",
-      "override": "用户确认",
+      "quotaSource": "确认",
+      "override": "确认",
       "notes": "周额度 $250 ≈ 12 亿；月 ×4 = 48 亿。SubPlan 20 亿代理作废"
     },
     {

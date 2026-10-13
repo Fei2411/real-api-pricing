@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA, DERIVED = ROOT / "data", ROOT / "derived"
-READMES = (ROOT / "README.md", ROOT / "README.zh.md")
+READMES = (ROOT / "README.md", ROOT / "README.zh.md", ROOT / "data" / "README.md")
 MARKER = re.compile(r"<!--\s*stat:([A-Za-z0-9_]+)\s*-->(.*?)<!--\s*/stat\s*-->")
 
 
@@ -22,6 +22,7 @@ def compute_stats() -> dict[str, str]:
     stats: dict[str, int | str] = {
         "snapshot": points["generatedAt"],
         "points_total": len(adopted),
+        "points_subscription": sum(1 for r in adopted if r["billing"] == "subscription"),
         "points_allowance": sum(1 for r in adopted if r["billing"] == "subscription" and r["monthly_tokens"] != ""),
         "points_unmetered": sum(1 for r in adopted if r.get("unmetered") == "true"),
         "points_metered": sum(1 for r in adopted if r["billing"] == "metered"),
@@ -30,11 +31,15 @@ def compute_stats() -> dict[str, str]:
         "plans_command_code_goat": sum(1 for r in adopted if r["plan_id"].startswith("command_code_goat")),
         "plans_ollama": sum(1 for r in adopted if r["plan_id"].startswith("ollama_")),
         "plans_step_plan": sum(1 for r in adopted if r["plan_id"].startswith("stepfun_")),
+        "plans_mimo_token": sum(1 for r in adopted if r["plan_id"].startswith("mimo_token_")),
+        "plans_droid_max": sum(1 for r in adopted if r["plan_id"].startswith("droid_max")),
         "configs_total": len(configurations),
         "refs_total": len(references),
     }
     for board in points["boards"]:
-        stats[f"scored_{board}"] = sum(1 for p in points["points"] if p[f"{board}__score"] is not None)
+        scored = sum(1 for p in points["points"] if p[f"{board}__score"] is not None)
+        stats[f"scored_{board}"] = scored
+        stats[f"unscored_{board}"] = len(points["points"]) - scored
     mapped_ids = {r["configuration_id"] for r in references}
     for board in points["boards"]:
         configs = [c for c in configurations if c["board"] == board]

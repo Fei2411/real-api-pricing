@@ -1,0 +1,52 @@
+{
+  "collectedAt": "2026-09-30",
+  "scopeNote": "GPT-6.1 Sol（GPT-6 Sol 后继版本）ChatGPT Plus 订阅额度首个本机实测。周窗剩余 81%→65%（16pp）段内 30,109,568 tok 全为 gpt-6.1-sol。反推周池 188,184,800 tok ≈ gpt-6-sol round1 反推周池 261,949,583 的 0.72×——若两面板口径一致，6.1-sol 每 token 占池更快或周池面值更小，单账号单窗不区分。只挂 Plus，Pro 5x/20x 不派生（沿 6-sol/6-luna 裁定）。暂无榜分：不入任何 scores 档，点上帕累托图前需 supplement 分数。",
+  "items": [
+    {
+      "planId": "chatgpt_plus",
+      "priceUsd": 20,
+      "model": "gpt-6.1-sol",
+      "client": "Codex CLI",
+      "evidenceType": "user_local_log_x_panel_percent",
+      "source": "维护者本机 Codex 实测截图（2026-09-30 会话内提供）",
+      "sourceDate": "2026-09-30",
+      "userConfirmation": "维护者原话：『新的GPT Plus 6.1Sol 数据，周额度从81%（图里是82，那是错的）-65%』；截图标题行『82% → 65% · 只有 gpt-6.1-sol · 17 pp』，起始读数实为 81%、差 16pp",
+      "observed": {
+        "window": "周额度剩余 81% → 65%，差 16pp，全部增量为 gpt-6.1-sol（截图标题显示 82%/17pp，口头更正起始值为 81%）",
+        "inputTokens": 1624231,
+        "cacheReadTokens": 28331904,
+        "cacheWriteTokens": 0,
+        "outputTokens": 153433,
+        "reasoningTokensSubsetOfOutput": 36519,
+        "totalTokens": 30109568,
+        "cacheHitRate": 0.9458,
+        "inputShareOfTotal": 0.0539442,
+        "outputShareOfTotal": 0.0050959,
+        "cacheReadShareOfTotal": 0.9409599,
+        "reasoningShareOfOutput": 0.2380136,
+        "tokensPerPoint": 1881848,
+        "weeklyTokensImplied": 188184800
+      },
+      "verification": "1,624,231 + 28,331,904 + 0 + 153,433 = 30,109,568 与 Total 一致（reasoning 为 output 子集不重复相加）；hit = cache_read/(input+cache_read) = 28,331,904/29,956,135 = 94.578% ≈ 截图 94.58%；口述更正 82→81 后 Δpp=16，÷16pp×100 复算周额度 188,184,800。",
+      "calculation": {
+        "adoptedWindow": "81%→65%（16pp）",
+        "weeklyTokensCentral": 188184800,
+        "monthlyTokensCentralExact": 752739200,
+        "monthlyYiCentral": 7.53,
+        "formula": "30,109,568 / 16% * 4 weeks",
+        "roundedPercentMonthlyLow": 708460423.53,
+        "roundedPercentMonthlyHigh": 802921813.33,
+        "roundedPercentNote": "端点 81/65 若为四舍五入整数，则真实 Δpp∈[15,17]，对应 7.09~8.03 亿/月；中心值按 16pp。",
+        "realUsdPerMTokCentral": 0.0265697
+      },
+      "tokenCountingNote": "本地日志直接给 total，沿 Luna round6 / Sol round1 / Luna6 round1/round2 先例直接采用 total，不按项目标准负载再次归一。",
+      "confidence": "high",
+      "pendingAdoption": "chatgpt_plus × gpt-6.1-sol 新增 7.53 亿/月（high, measured）；Pro 5x/20x 不派生（沿 Sol 裁定）；暂无榜分，有分后再补 scores supplement。"
+    }
+  ],
+  "relatedFiles": [
+    "chatgpt-gpt6sol-plus-round1-2026-09-24.json",
+    "chatgpt-gpt6luna-plus-round2-2026-09-28.json",
+    "chatgpt-luna-adoption-round6-2026-09-08.json"
+  ]
+}

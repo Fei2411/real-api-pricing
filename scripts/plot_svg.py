@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import math
+import unicodedata
 from html import escape
 from pathlib import Path
 
@@ -23,12 +24,11 @@ BOARDS = {
     "deepswe_1_1": ("DeepSWE榜", "DeepSWE v1.1"),
 }
 # 色值与 id 前缀统一来自 config/channel-colors.json；此处只定图例顺序。
-COLORS = palette(["OpenAI", "Anthropic", "xAI", "Cursor", "Kimi", "Zhipu", "MiniMax", "Alibaba",
+COLORS = palette(["OpenAI", "Anthropic", "SpaceXAI", "Cursor", "Kimi", "Zhipu", "MiniMax", "Alibaba",
                   "OpenCode", "Command Code", "Ollama", "DeepSeek", "Google", "Xiaomi",
-                  "Tencent", "StepFun", "Devin"])
+                  "Tencent", "StepFun", "Devin", "Factory"])
 # 图例沿用旧显示名（Claude/GLM），内部键均为 canonical 渠道名。
 LABEL = {"Anthropic": "Claude", "Zhipu": "GLM"}
-WIDTH, HEIGHT = 1440, 940
 LEFT, RIGHT, TOP, BOTTOM = 120, 1338, 233, 705
 
 
@@ -68,21 +68,25 @@ def promo_text(p, language):
     return "≈$0 · unmetered" if language == "en" else "≈$0 · 不计额度"
 
 
+def text_width(content, size):
+    # 图例排宽估算：全角字符按 size、其余按 0.58·size 计。
+    return sum(size if unicodedata.east_asian_width(ch) in "WF" else .58 * size
+               for ch in content)
+
+
 def text(x, y, content, size=14, fill="#222522", anchor="start", weight=400, extra=""):
     return (f'<text x="{x:.3f}" y="{y:.3f}" font-size="{size}" fill="{fill}" '
             f'text-anchor="{anchor}" font-weight="{weight}" {extra}>{escape(str(content))}</text>')
 
 
+DEVIN_MARK_D = ("M0 38.6518V14.8349C7.06768e-06 13.7882 0.545676 12.821 1.43146 12.2977L21.5811 0.392519C22.4669 -0.13084 23.5583 -0.13084 24.444 0.392519L44.5937 12.2977C45.4795 12.821 46.0252 13.7882 46.0252 14.835V26.9983C46.1136 31.0401 48.201 34.9385 51.8723 37.1076C55.5435 39.2767 59.8863 39.1775 63.3509 37.2349L73.6442 31.1533C74.53 30.6299 75.6213 30.6299 76.5071 31.1533L96.6568 43.0584C97.5426 43.5818 98.0882 44.549 98.0882 45.5957V69.406C98.0882 70.4527 97.5426 71.4199 96.6568 71.9433L76.5071 83.8485C75.6213 84.3718 74.53 84.3718 73.6442 83.8485L63.4342 77.816C59.9562 75.8284 55.5738 75.7095 51.8732 77.8959C48.202 80.065 46.1146 83.9633 46.0262 88.005V100.165C46.0262 101.212 45.4805 102.179 44.5947 102.702L24.445 114.607C23.5592 115.131 22.4679 115.131 21.5821 114.607L1.43243 102.702C0.546645 102.179 0.000975341 101.212 0.000975341 100.165V76.3547C0.000982408 75.308 0.546652 74.3408 1.43244 73.8175L21.5821 61.9123C22.4679 61.3889 23.5592 61.3889 24.445 61.9123L34.7616 68.0077C38.2221 69.9367 42.5526 70.0305 46.215 67.8666C49.9155 65.6802 52.0061 61.7367 52.063 57.6605C51.9747 53.6187 49.8872 49.3025 46.216 47.1334C42.5447 44.9643 38.202 45.0635 34.7374 47.0061L24.3967 53.1502C23.5071 53.6788 22.4087 53.6783 21.5196 53.1489L1.42323 41.1841C0.542079 40.6595 -7.06754e-06 39.695 0 38.6518Z")
+
+
 def devin_logo(r, fill, opacity=1.0, cx=0.0, cy=0.0):
-    """Devin 标志：三个竖边六边形（左上、左下、右）由中心枢连接。r 为单个六边形外接圆半径。"""
-    centers = [(-0.82, -1.18), (-0.82, 1.18), (1.18, 0.0)]
-    parts = []
-    for ox, oy in centers:
-        pts = [(cx + (ox + math.cos(math.radians(30 + 60 * k))) * r, cy + (oy + math.sin(math.radians(30 + 60 * k))) * r) for k in range(6)]
-        parts.append("M" + " L".join(f"{x:.2f},{y:.2f}" for x, y in pts) + "Z")
-    hub = " ".join(f"M{cx + (ox * .45) * r:.2f},{cy + (oy * .45) * r:.2f} L{cx + (ox * .95) * r:.2f},{cy + (oy * .95) * r:.2f}" for ox, oy in centers)
-    return (f'<path d="{" ".join(parts)}" fill="{fill}" opacity="{opacity}" stroke="{fill}" stroke-width="{r * .18:.2f}" stroke-linejoin="round"/>'
-            f'<path d="{hub}" stroke="{fill}" stroke-width="{r * .9:.2f}" stroke-linecap="round" opacity="{opacity}" fill="none"/>')
+    """官方 Devin mark（viewBox 0 0 99 115 的完整轮廓）。r 沿用旧六边形标志的尺寸口径：总高 4.36·r，居中于 (cx, cy)。"""
+    s = 4.36 * r / 115
+    return (f'<path transform="translate({cx - 49.04 * s:.2f} {cy - 57.5 * s:.2f}) scale({s:.4f})" '
+            f'd="{DEVIN_MARK_D}" fill="{fill}" opacity="{opacity}"/>')
 
 
 def plan_name(plan, language):
@@ -141,14 +145,18 @@ def label_lines(p, language, board=None):
     return name, " / ".join(plans), price
 
 
-def label_position(p, board, x, y):
+def label_position(p, board, x, y, tier="main"):
     # 仅调标签；绝不移动数据点。按这组已核对前沿的邻近关系安排引线和对齐。
     model = p["model"]
     if model == "claude-opus-5":
+        if board == "aa_coding_agent_index":
+            return x + 24, y - 72, "start"
         return x - 24, y - 49, "end"
     if model == "gpt-6-astra":
         if board == "aa_intelligence_index":
             return x - 24, y + 30, "end"
+        if board == "aa_coding_agent_index":
+            return x + 24, y - 108, "start"
     if model == "claude-opus-4.8":
         if board == "aa_intelligence_index":
             return x + 24, y + 43, "start"
@@ -156,30 +164,126 @@ def label_position(p, board, x, y):
             return x - 24, y + 47, "end"
         return x - 24, y + 13, "end"
     if model == "claude-sonnet-5":
+        if board == "arena_agent_mode" and tier == "full":
+            return x - 40, y - 11, "end"
         return x + 22, y - 54, "start"
+    if model == "claude-sonnet-5.5":
+        if tier == "full":
+            if board == "aa_terminal_bench_4":
+                return x - 28, y - 50, "end"
+            if board == "aa_coding_agent_index":
+                return x - 4, y - 60, "end"
+            if board == "aa_intelligence_index":
+                return x + 24, y - 40, "start"
+            if board == "arena_code":
+                return x - 90, y - 20, "end"
+            if board == "open_design_arena":
+                return x - 4, y - 70, "end"
+    if model == "claude-opus-5.5":
+        if tier == "full":
+            if board == "aa_terminal_bench_4":
+                return x + 12, y - 20, "start"
+            if board == "aa_coding_agent_index":
+                return x + 12, y - 34, "start"
+    if model == "gpt-6.1-sol":
+        if board == "open_design_arena" and tier == "full":
+            return x + 0, y - 50, "end"
+    if model == "gpt-6-sol":
+        if board == "open_design_arena" and tier == "full":
+            return x - 20, y + 80, "end"
     if model == "mimo-v2.6-pro":
         if board == "aa_intelligence_index":
             return x - 30, y + 20, "end"
+        if board == "arena_code":
+            return x + 28, y - 47, "start"
+    if model == "mimo-v2.6-flash":
+        if board == "deepswe_1_1":
+            return x + 112, y + 159, "end"
+        if board == "aa_intelligence_index" and tier == "full":
+            return x + 10, y + 0, "start"
+        if board == "aa_terminal_bench_4" and tier == "full":
+            return x - 168, y - 236, "end"
+        if board == "open_design_arena" and tier == "full":
+            return x - 40, y + 52, "end"
     if model == "mimo-v2.5":
         if board == "aa_intelligence_index":
-            return x - 235, y - 72, "end"
+            return x + 20, y - 8, "start"
+        if board == "arena_code" and tier == "full":
+            return x + 0, y + 20, "start"
     if model == "step-5-preview":
         if board == "aa_intelligence_index":
-            return x + 5, y + 28, "end"
+            return x + 45, y - 140, "start"
+        if board == "aa_terminal_bench_4":
+            if tier == "full":
+                return x - 4, y - 156, "start"
+            return x - 1, y + 41, "end"
+    if model == "gemini-3.8-flash":
+        if board == "aa_coding_agent_index":
+            return x - 30, y - 30, "end"
     if model == "glm-5.3":
         if board == "aa_intelligence_index":
             return x + 24, y - 108, "start"
-        return x + 24, y - (58 if board == "arena_code" else 31), "start"
+        if board == "arena_code":
+            if tier == "full":
+                return x - 5, y + 201, "middle"
+            return x + 10, y - 65, "start"
+        return x + 24, y - 31, "start"
     if model == "glm-5.3-flash":
+        if board == "aa_intelligence_index":
+            return x + 95, y - 93, "start"
+        if board == "open_design_arena":
+            return x - 24, y + 45, "end"
+        if board == "arena_agent_mode":
+            return x + 14, y - 68, "start"
+        if board == "arena_code":
+            if tier == "full":
+                return x - 120, y - 23, "end"
+            return x + 16, y + 15, "start"
+        if board == "aa_terminal_bench_4" and tier == "full":
+            return x - 292, y + 20, "end"
         return x + 23, y - 40, "start"
     if model in {"deepseek-v4-flash", "deepseek-v4.1-flash"}:
+        if model == "deepseek-v4.1-flash" and board == "aa_intelligence_index":
+            return x + 10, y - 50, "start"
+        if model == "deepseek-v4.1-flash" and board == "deepswe_1_1":
+            return x - 24, y - 52, "end"
+        if model == "deepseek-v4.1-flash" and board == "terminal_bench_4":
+            return x - 141, y + 21, "end"
+        if model == "deepseek-v4.1-flash" and board == "arena_agent_mode" and tier == "full":
+            return x + 0, y - 100, "middle"
+        if model == "deepseek-v4.1-flash" and board == "arena_code" and tier == "full":
+            return x + 0, y - 160, "middle"
+        if model == "deepseek-v4.1-flash" and board == "aa_terminal_bench_4" and tier == "full":
+            return x - 4, y + 124, "end"
         return x - 24, y + 49, "end"
+    if model == "gpt-6-luna":
+        if board == "aa_terminal_bench_4":
+            if tier == "full":
+                return x - 8, y + 28, "end"
+            return x - 150, y - 30, "end"
+        if board == "aa_intelligence_index":
+            return x + 20, y - 40, "start"
+        if board == "aa_coding_agent_index":
+            if tier == "full":
+                return x + 0, y - 110, "middle"
+            return x + 10, y - 78, "end"
+        if board == "arena_agent_mode" and tier == "full":
+            return x + 0, y - 140, "middle"
+        if board == "arena_code" and tier == "full":
+            return x + 0, y - 140, "middle"
+        if board == "open_design_arena" and tier == "full":
+            return x - 10, y + 118, "end"
+        return x - 20, y - 52, "end"
     if model == "gpt-5.6-luna":
         # TB4 全量里 Luna 分数最低（官方 17.27% / AA 0%），标签整体下移会压过图框下缘。
         if board in ("terminal_bench_4", "aa_terminal_bench_4"):
             return x + 5, y + 25, "end"
         if board == "aa_intelligence_index":
-            return x - 30, y + 113, "end"
+            return x - 24, y + 58, "end"
+        if board == "aa_coding_agent_index" and tier == "full":
+            return x - 30, y - 20, "end"
+        if board == "arena_code" and tier == "full":
+            return x - 10, y + 110, "end"
         return x + 5, y + 57, "end"
     if model == "gpt-5.6-terra":
         if board == "aa_intelligence_index":
@@ -187,12 +291,14 @@ def label_position(p, board, x, y):
         return x + 24, y - 55, "start"
     if model == "step-3.7-flash":
         if board == "aa_intelligence_index":
-            return x - 25, y + 12, "end"
+            return x + 0, y - 70, "start"
     if model == "step-3.5-flash":
         if board == "aa_intelligence_index":
-            return x - 390, y - 62, "end"
+            return x + 0, y + 20, "end"
     if model == "swe-2":
         # 不计额度点贴右边界，标签只能往左上放，且要避开 TB4 里 Luna 的下方标签。
+        if board == "terminal_bench_4":
+            return x + 74, y + 27, "end"
         return x - 30, y + 34, "end"
     return x - 20, y - 52, "end"
 
@@ -229,11 +335,24 @@ def draw(board, meta, points, tier, language="zh"):
     headline = "Real price × benchmark reference" if language == "en" else "真实单价 × 评测配置参考"
     frontier_caption = f"Pareto frontier · {scope}" if language == "en" else f"帕累托前沿 · {scope}"
     snapshot_caption = "Leaderboard snapshot  " if language == "en" else "榜单快照  "
-    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="940" viewBox="0 0 1440 940" role="img" aria-labelledby="title desc">',
+    present = [(name, c) for name, c in COLORS.items() if any(channel(p) == name for p in valid)]
+    frontier_label = "Pareto frontier" if language == "en" else "帕累托前沿"
+    api_label = "Metered API" if language == "en" else "按量 API"
+    legend = [(17 + text_width(LABEL.get(name, name), 12), "mark", (name, c)) for name, c in present]
+    legend += [(39 + text_width(frontier_label, 12), "line", frontier_label),
+               (19 + text_width(api_label, 12), "diamond", api_label)]
+    rows, xx = 1, 57
+    for w, *_ in legend:
+        if xx > 57 and xx + w > 1384:
+            xx, rows = 57, rows + 1
+        xx += w + 26
+    legend_base = 834 + 24 * (rows - 1)
+    height = legend_base + 106 + (21 if has_zero else 0)
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="{height}" viewBox="0 0 1440 {height}" role="img" aria-labelledby="title desc">',
          f'<title id="title">{escape(meta["name"])} · {"Pareto frontier" if language == "en" else "帕累托前沿"} · {scope}</title>',
          '<desc id="desc">Real unit price uses a logarithmic scale and gets cheaper to the right. Higher scores are better. Subscriptions and metered APIs both participate in the Pareto frontier.</desc>' if language == "en" else '<desc id="desc">价格为对数轴，越右越便宜；分数越高越好。订阅和按量API共同参与帕累托前沿。</desc>',
          '<style>text{font-family:"Microsoft YaHei","Segoe UI",sans-serif} .serif{font-family:"Times New Roman",serif} .number{font-family:"Segoe UI",sans-serif;font-variant-numeric:tabular-nums} .label-name{paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round} .point:hover{opacity:1}</style>',
-         '<rect width="1440" height="940" fill="#FAF9F6"/>',
+         f'<rect width="1440" height="{height}" fill="#FAF9F6"/>',
          text(56, 32, "REAL API PRICING", 10, "#90968D", extra='letter-spacing="2.1"'),
          text(54, 85, headline, 36, "#343A33", weight=300, extra='letter-spacing=".8"'),
          '<path d="M61 147 Q197 141 343 147" stroke="#9FDDD0" stroke-width="17" stroke-linecap="round" opacity=".55" fill="none"/>',
@@ -300,7 +419,7 @@ def draw(board, meta, points, tier, language="zh"):
         s.append('</g>')
     for p in reversed(frontier):
         x, y = sx(p["real_usd_per_mtok"]), sy(p[key])
-        lx, ly, anchor = label_position(p, board, x, y)
+        lx, ly, anchor = label_position(p, board, x, y, tier)
         name, plan, price = label_lines(p, language, board)
         # 三行标签直接排字，无卡片；短引线从留白侧连接，最高点靠近自身无需长线。
         end_y = ly + 19 if ly < y else ly - 13
@@ -314,36 +433,49 @@ def draw(board, meta, points, tier, language="zh"):
               text(lx, ly + 20, plan, 11.5, "#8B9487", anchor),
               text(lx, ly + 40, price, 14, "#566150", anchor, 400, 'class="number"'), '</g>']
 
-    present = [(name, c) for name, c in COLORS.items() if any(channel(p) == name for p in valid)]
-    xx = 57
-    for name, c in present:
-        display = LABEL.get(name, name)
-        s += [devin_logo(2.4, c, cx=xx + 4, cy=830) if name == "Devin" else f'<rect x="{xx}" y="826" width="8" height="8" fill="{c}"/>',
-              text(xx + 17, 834, display, 12, "#687168")]
-        xx += max(83, len(display) * 7 + 38)
-    api_mark_x = xx + (190 if language == "en" else 129)
-    s += [f'<path d="M{xx + 9} 830h22" stroke="#303630" stroke-width="1.65"/>', text(xx + 39, 834, "Pareto frontier" if language == "en" else "帕累托前沿", 12, "#687168"),
-          f'<path d="M{api_mark_x} 825l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>',
-          text(api_mark_x + 14, 834, "Metered API" if language == "en" else "按量 API", 12, "#687168"),
-          text(56, 874, f"Default month = 4 weeks; Kimi pool = 5× weekly · Dollar/credit: {STD_MIX['cache']:.0%} cache / {STD_MIX['input']:.1%} input / {STD_MIX['output']:.1%} output · Direct totals unchanged" if language == "en" else f"默认月=4周；Kimi月池=周池×5 · 美元/credits换算：缓存{STD_MIX['cache']:.0%} / 输入{STD_MIX['input']:.1%} / 输出{STD_MIX['output']:.1%} · 直接total实测不重算", 12, "#727B72"),
-          text(1384, 874, (f"{len(subs)} subscription positions / {len(api)} API positions / {len(frontier)} frontier positions" if language == "en" else f"{len(subs)} 个订阅位置 / {len(api)} 个 API 位置 / {len(frontier)} 个前沿位置"), 12, "#727B72", "end"),
-          text(56, 898, ((
-              "OpenDesign Harness reference; product/quota alignment unverified, not channel measurements."
-              if board == "open_design_arena" else
-              "Highest archived configuration reference; harness and effort shown. Product/quota alignment unverified, not channel measurements."
-              if board in ("aa_coding_agent_index", "terminal_bench_4", "aa_terminal_bench_4", "deepswe_1_1") else
-              "Claude Max: permanent allowance estimate from Sep 14; Pro: historical Opus 4.8 measurement. Y uses the top archived variant per model."
-          ) if language == "en" else (
-              "OpenDesign Harness 配置参考；产品/额度实测配置未对齐，不代表各渠道的实测成绩。"
-              if board == "open_design_arena" else
-              "最高存档配置参考；标注harness与effort。产品/额度实测配置未对齐，不代表各渠道的实测成绩。"
-              if board in ("aa_coding_agent_index", "terminal_bench_4", "aa_terminal_bench_4", "deepswe_1_1") else
-              "Claude Max：9/14 起永久额度估算；Pro：Opus 5 周池面板反推。Y 取同模型存档最高分变体。"
-          )) + ((" ≈$0 = SWE-2 promo: unmetered on Devin Pro/Max/Teams until 2026-10-31, not permanent; TB4 score self-reported by Cognition."
-                 if language == "en" else " ≈$0 为 SWE-2 促销价：Devin Pro/Max/Teams 至 2026-10-31 不计额度，非永久口径；TB4 分数为 Cognition 自报。")
-                if has_zero else ""), 11, "#929A90"),
-          text(56, 919, "Subscriptions and metered APIs share one frontier; line segments are visual guides, not purchasable plans." if language == "en" else "订阅与按量API共同参与前沿；连线中间不代表可购套餐。完整出处与假设见项目核对报告。", 11, "#929A90"),
-          text(1384, 919, meta["url"].replace("https://", ""), 11, "#929A90", "end"), '</svg>']
+    xx, row = 57, 0
+    for w, kind, payload in legend:
+        if xx > 57 and xx + w > 1384:
+            xx, row = 57, row + 1
+        ty = 834 + 24 * row
+        if kind == "mark":
+            name, c = payload
+            s += [devin_logo(2.4, c, cx=xx + 4, cy=ty - 4) if name == "Devin" else f'<rect x="{xx}" y="{ty - 8}" width="8" height="8" fill="{c}"/>',
+                  text(xx + 17, ty, LABEL.get(name, name), 12, "#687168")]
+        elif kind == "line":
+            s += [f'<path d="M{xx + 9} {ty - 4}h22" stroke="#303630" stroke-width="1.65"/>',
+                  text(xx + 39, ty, payload, 12, "#687168")]
+        else:
+            s += [f'<path d="M{xx + 5} {ty - 9}l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>',
+                  text(xx + 19, ty, payload, 12, "#687168")]
+        xx += w + 26
+    note = ((
+        "OpenDesign Harness reference; product/quota alignment unverified, not channel measurements."
+        if board == "open_design_arena" else
+        "Highest archived configuration reference; harness and effort shown. Product/quota alignment unverified, not channel measurements."
+        if board in ("aa_coding_agent_index", "terminal_bench_4", "aa_terminal_bench_4", "deepswe_1_1") else
+        "Claude Max: permanent allowance estimate from Sep 14; Pro: historical Opus 4.8 measurement. Y uses the top archived variant per model."
+    ) if language == "en" else (
+        "OpenDesign Harness 配置参考；产品/额度实测配置未对齐，不代表各渠道的实测成绩。"
+        if board == "open_design_arena" else
+        "最高存档配置参考；标注harness与effort。产品/额度实测配置未对齐，不代表各渠道的实测成绩。"
+        if board in ("aa_coding_agent_index", "terminal_bench_4", "aa_terminal_bench_4", "deepswe_1_1") else
+        "Claude Max：9/14 起永久额度估算；Pro：Opus 5 周池面板反推。Y 取同模型存档最高分变体。"
+    ))
+    promo = ("≈$0 = SWE-2 promo: unmetered on Devin Pro/Max/Teams until 2026-10-31, not permanent" +
+             ("; TB4 score self-reported by Cognition" if board == "terminal_bench_4" else "") + "." if language == "en" else
+             "≈$0 为 SWE-2 促销价：Devin Pro/Max/Teams 至 2026-10-31 不计额度，非永久口径" +
+             ("；TB4 分数为 Cognition 自报" if board == "terminal_bench_4" else "") + "。")
+    y = legend_base + 40
+    s += [text(56, y, f"Default month = 4 weeks; Kimi pool = 5×, Droid = 2× weekly · Dollar/credit: {STD_MIX['cache']:.0%} cache / {STD_MIX['input']:.1%} input / {STD_MIX['output']:.1%} output · Direct totals unchanged" if language == "en" else f"默认月=4周；Kimi月池=周池×5，Droid月=周×2 · 美元/credits换算：缓存{STD_MIX['cache']:.0%} / 输入{STD_MIX['input']:.1%} / 输出{STD_MIX['output']:.1%} · 直接total实测不重算", 12, "#727B72"),
+          text(1384, y, (f"{len(subs)} subscription positions / {len(api)} API positions / {len(frontier)} frontier positions" if language == "en" else f"{len(subs)} 个订阅位置 / {len(api)} 个 API 位置 / {len(frontier)} 个前沿位置"), 12, "#727B72", "end"),
+          text(56, y + 24, note, 11, "#929A90")]
+    y += 45
+    if has_zero:
+        s.append(text(56, y, promo, 11, "#929A90"))
+        y += 21
+    s += [text(56, y, "Subscriptions and metered APIs share one frontier; line segments are visual guides, not purchasable plans." if language == "en" else "订阅与按量API共同参与前沿；连线中间不代表可购套餐。完整出处与假设见项目核对报告。", 11, "#929A90"),
+          text(1384, y, meta["url"].replace("https://", ""), 11, "#929A90", "end"), '</svg>']
     OUT.mkdir(exist_ok=True)
     (OUT / f"{stem}.svg").write_text("\n".join(s), encoding="utf-8")
     return dict(stem=stem, board=board, tier=tier, language=language, bounds=[xmin, xmax, ymin, ymax],

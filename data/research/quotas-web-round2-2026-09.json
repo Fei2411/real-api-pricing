@@ -333,7 +333,7 @@
     },
     {
       "planId": "supergrok_heavy",
-      "wanted": "Heavy 周额度的 token+% 面板（用户已确认 ≈$250 标价等效，需独立截图）",
+      "wanted": "Heavy 周额度的 token+% 面板（已确认 ≈$250 标价等效，需独立截图）",
       "searched": "同上 + X @grok 回复",
       "result": "未找到 token+% 截图；@grok 称 exact sizes unpublished。Steven Zhang $11.5k/月美元等效上一轮已有，与用户 $250/周差数量级。"
     },

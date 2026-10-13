@@ -1,0 +1,61 @@
+{
+  "recordedAt": "2026-09-30",
+  "sourceType": "re-derivation of existing evidence (no new sample)",
+  "trigger": "裁定：Max 20x × Opus 5.5 不再借 Opus 5 周池隐含权重，改用 5h 窗/周结构推周额度，并与 Pro×10 对照；两路按百分点加权合并",
+  "inputs": {
+    "miaaiSession": {
+      "source": "claude-opus55-round1-2026-09-23.json（X @MiaAI_lab，档位裁定挂 Max 20x）",
+      "tokens": { "input": 1400000, "output": 8000000, "cacheRead": 1000000000, "cacheWrite": 21100000 },
+      "listWorthUsd": 471.10,
+      "listWorthFormula": "1000M×$0.2 + 21.1M×$5(5m) + 1.4M×$4 + 8.0M×$20 = $471.10（推文自报 $482.63，+2.4% 闭合）",
+      "fractionOf5h": 0.75,
+      "fiveHourWindowWorthUsd": 628.13
+    },
+    "max20xWindowsPerWeek": {
+      "value": 5.5,
+      "source": "claude-adoption-round10-2026-09-25.json 条目#15（同账号多周 /usage 截图序：Max20x ≈5.5 满窗/周；Max5x ≈9~11.1）；round9 chudi 反推 39.25÷7.15≈5.49 同值",
+      "caveat": "截图日期未标；若在 9/22 上调 5h 上限之前，当前窗/周数应略低"
+    },
+    "proOpus55": {
+      "source": "community-issues-round1-2026-09-29.json（issue #52）+ claude-adoption-round10-2026-09-25.json（Reddit 满窗段）",
+      "worthUsd": 628.00,
+      "weeklyPp": 196.333,
+      "worthPerPpUsd": 3.19865,
+      "weeklyWorthUsd": 319.86
+    },
+    "max20xToProWeekly": {
+      "value": 10,
+      "basis": "维护者口径：Max 20x 为 Pro 的 20 倍 5h 窗、10 倍周额度（20x 周池 = 5x 的 2 倍，见 build_adopted.py Claude Max 5x 行）"
+    },
+    "anthropicBlendedUsdPerMtok": 0.419
+  },
+  "derivations": {
+    "routeA_miaaiWindows": {
+      "maxWeeklyPp": 13.636,
+      "formula": "75% 窗 ÷ 5.5 窗/周 = 周 13.636pp；$471.10 ÷ 13.636pp ×100 = 周 $3,454.73 ×4 ÷ $0.419 = 329.81 亿/月",
+      "monthlyYi": 329.81,
+      "roundingRange": "~75% 取 70~80% → 约 309~353 亿"
+    },
+    "routeB_proTimes10": {
+      "maxWeeklyPp": 19.633,
+      "formula": "Pro 196.333pp ÷ 10 = Max 20x 周 19.633pp；$628.00 ÷ 19.633pp ×100 = 周 $3,198.65 ×4 ÷ $0.419 = 305.36 亿/月（= Pro 30.54 × 10）",
+      "monthlyYi": 305.36
+    },
+    "adopted": {
+      "method": "两路按 Max 20x 周百分点加权：($471.10 + $628.00) ÷ (13.636 + 19.633) ×100 = 周 $3,303.61 ×4 ÷ $0.419",
+      "monthlyYi": 315.38,
+      "max5xDerived": "315.38 ÷ 2 = 157.69 亿/月",
+      "confidence": "medium",
+      "workload": "anthropic"
+    },
+    "impliedWindowsPerWeekIfBothExact": "Pro×10 周 $3,198.65 ÷ MiaAI 窗 $628.13 = 5.09 窗/周"
+  },
+  "rejected": {
+    "proRatioApplied": "Pro 13.333%（7.5 窗/周）直接套 Max 20x：$628.13×7.5×4÷$0.419 = 449.7 亿——Max 20x 窗为 Pro 的 20×、周为 10×，窗/周比不同于 Pro",
+    "officialMultipliers3_75": "7.5×10/20 = 3.75 窗/周：$628.13×3.75×4÷$0.419 = 224.9 亿——MiaAI 窗仅为 Pro 窗（$40.48）的 15.5×，与 20×/10× 两倍率同时精确不自洽（若为 20× 需 ~58% 读数）",
+    "equalWeight": "(305.36 + 329.81) ÷ 2 = 317.58 亿",
+    "opus5WeightRoute": "#52/#53 推 Opus 5.5/Opus 5 池权重 0.843 → 186 亿：裁定否决（不从 Opus 5 推 Opus 5.5 Max）",
+    "previousAdopted": "301.7 亿 = 13.74 亿 raw 窗池 × 5.49 窗/周 ×4（raw，未按负载折算）"
+  },
+  "notUsed": "#65 Max 20x 混合样本（全模型周 $1,410.5）：裁定暂不处理"
+}

@@ -209,9 +209,9 @@ def main() -> None:
     data["configuration_points"] = json.loads((ROOT / "derived/benchmark-points.json").read_text(encoding="utf-8"))
     OUT.parent.mkdir(exist_ok=True)
     # 色值统一来自 config/channel-colors.json；键顺序决定图例顺序，other 为未知渠道兜底。
-    colors = palette(["OpenAI", "Anthropic", "xAI", "Kimi", "Zhipu", "MiniMax", "Alibaba", "DeepSeek",
+    colors = palette(["OpenAI", "Anthropic", "SpaceXAI", "Kimi", "Zhipu", "MiniMax", "Alibaba", "DeepSeek",
                       "Google", "Xiaomi", "Tencent", "Cursor", "OpenCode", "Command Code", "Ollama",
-                      "StepFun", "Devin"]) | {"other": FALLBACK}
+                      "StepFun", "Devin", "Factory"]) | {"other": FALLBACK}
     OUT.write_text(TEMPLATE.replace("__DATA__", json.dumps(data, ensure_ascii=False))
                    .replace("__COLORS__", json.dumps(colors, ensure_ascii=False)), encoding="utf-8")
     print(f"-> {OUT} ({OUT.stat().st_size // 1024} KB)")

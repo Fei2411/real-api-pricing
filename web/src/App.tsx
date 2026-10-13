@@ -17,7 +17,11 @@ import {
   MagnifyingGlass,
   Moon,
   SlidersHorizontal,
+  Storefront,
   Sun,
+  Rows,
+  SquaresFour,
+  Stack,
   Table,
   X,
 } from "@phosphor-icons/react";
@@ -26,12 +30,21 @@ import Chart from "./Chart";
 import HeaderActions from "./HeaderActions";
 import { unpackData } from "./loadData";
 import Ranking from "./Ranking";
+import AllowanceCards from "./AllowanceCards";
+import AllowanceCompare from "./AllowanceCompare";
 import ResizeHandle from "./ResizeHandle";
 import { useIncremental } from "./useIncremental";
 import ProviderLogo, { BrandMarks } from "./ProviderLogo";
 import { feeBands } from "./domain";
 import type { ChartHandle } from "./Chart";
 import Modal from "./Modal";
+import CustomProvidersPanel from "./ProviderManager";
+import {
+  loadCustomProviders,
+  mergeCustomProviders,
+  saveCustomProviders,
+  type CustomProvider,
+} from "./customProviders";
 import type {
   FilterKey,
   Lang,
@@ -45,9 +58,11 @@ import { dotColors, FALLBACK_COLOR } from "./palette";
 import {
   accessLine,
   allowance,
+  barAxis,
   color,
   colors,
   csv,
+  dataDateLine,
   defaultState,
   displayPlan,
   filterKeys,
@@ -71,6 +86,8 @@ import {
   listPriceLine,
   metricLabel,
   effortLabel,
+  firstUrl,
+  mappingNoteLabel,
 } from "./domain";
 
 const REPO = "https://github.com/FeiZhuLulu/real-api-pricing";
@@ -174,11 +191,68 @@ function CheckBox({
     />
   );
 }
+/** Channel legend clamped to one line; a toggle reveals the wrapped rest. */
+function OneLineLegend({
+  label,
+  signature,
+  zh,
+  trailing,
+  children,
+}: {
+  label: string;
+  signature: string;
+  zh: boolean;
+  trailing: React.ReactNode;
+  children: React.ReactNode;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(0);
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const measure = () => {
+      const items = [...el.children] as HTMLElement[];
+      const top = items[0]?.offsetTop ?? 0;
+      setHidden(items.filter((item) => item.offsetTop > top + 4).length);
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [signature]);
+  return (
+    <div className={open ? "legend-row is-open" : "legend-row"}>
+      <div ref={ref} className="legend" role="group" aria-label={label}>
+        {children}
+      </div>
+      {hidden > 0 && (
+        <button
+          className="legend-more"
+          aria-expanded={open}
+          onClick={() => setOpen((o) => !o)}
+        >
+          {open ? (zh ? "收起" : "Less") : `+${hidden}`}
+          <CaretDown size={11} />
+        </button>
+      )}
+      {trailing}
+    </div>
+  );
+}
 
 export default function App() {
   const [data, setData] = useState<SiteData | null>(null);
   const [loadError, setLoadError] = useState("");
   const [theme, setTheme] = useState<Theme>(localTheme);
+  const [customProviders, setCustomProviders] = useState<CustomProvider[]>(
+    loadCustomProviders,
+  );
+  const updateCustomProviders = (list: CustomProvider[]) => {
+    const persisted = saveCustomProviders(list);
+    setCustomProviders(list);
+    return persisted;
+  };
   useLayoutEffect(() => {
     document.documentElement.dataset.theme = theme;
     document
@@ -211,6 +285,12 @@ export default function App() {
     };
   }, []);
   const zhBoot = localLanguage() === "zh" || /[#&]lang=zh/.test(location.hash);
+  // User-defined relay providers merge into the published data before any
+  // derivation runs, so every view, filter and export sees them natively.
+  const merged = useMemo(
+    () => (data ? mergeCustomProviders(data, customProviders) : null),
+    [data, customProviders],
+  );
   if (loadError)
     return (
       <main className="boot" role="alert">
@@ -225,12 +305,14 @@ export default function App() {
         </div>
       </main>
     );
-  if (!data) return <BootSkeleton />;
+  if (!merged) return <BootSkeleton />;
   return (
     <ThemeContext.Provider value={theme}>
       <Explorer
-        data={data}
+        data={merged}
         theme={theme}
+        customProviders={customProviders}
+        onCustomProvidersChange={updateCustomProviders}
         onThemeChange={(next) => {
           saveTheme(next);
           document.documentElement.dataset.theme = next;
@@ -258,10 +340,15 @@ function BootSkeleton() {
 function Explorer({
   data,
   theme,
+  customProviders,
+  onCustomProvidersChange,
   onThemeChange,
 }: {
   data: SiteData;
   theme: Theme;
+  customProviders: CustomProvider[];
+  /** Returns false when browser storage rejected the write. */
+  onCustomProvidersChange: (providers: CustomProvider[]) => boolean;
   onThemeChange: (theme: Theme) => void;
 }) {
   const initial = useMemo(
@@ -271,7 +358,7 @@ function Explorer({
   const [state, setState] = useState<State>(initial.state);
   const [warning, setWarning] = useState(initial.warning);
   const [panel, setPanel] = useState<
-    "models" | "filters" | "display" | "download" | "share" | null
+    "models" | "filters" | "display" | "download" | "share" | "providers" | null
   >(null);
   const [detail, setDetail] = useState<Row[] | null>(null);
   const [modelSearch, setModelSearch] = useState("");
@@ -334,6 +421,15 @@ function Explorer({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [data, view, selected, vendors, channels, plans, billing, confidence, feeBand],
   );
+  const axis = useMemo(() => barAxis(data, view), [data, view]);
+  const allowancePoints = useMemo(
+    () => data.points.filter((p) => p.billing !== "metered" && p.monthly_yi !== null),
+    [data],
+  );
+  // Only slots with both a plan and a model count as compared items.
+  const completeCompare = state.compare.filter((v) =>
+    allowancePoints.some((p) => p.id === v),
+  ).length;
   const gs = useMemo(() => groups(rows), [rows]);
   const front = useMemo(() => pareto(gs), [gs]);
   const frontRows = useMemo(
@@ -387,6 +483,9 @@ function Explorer({
       lang: state.lang,
       view: state.view,
       board: state.board,
+      layout: state.layout,
+      compare: state.compare,
+      cards: state.cards,
     });
     setWarning(false);
   };
@@ -457,7 +556,18 @@ function Explorer({
       hintEn: "Adopted subscription allowances",
       hintCn: "全部已采用订阅额度",
     },
+    {
+      view: "table",
+      en: "Full table",
+      cn: "完整数据表",
+      shortEn: "Table",
+      shortCn: "数据表",
+      hintEn: "Every plan, configuration and source",
+      hintCn: "每个套餐、评测配置与来源",
+    },
   ];
+  const scored = state.view === "pareto" || state.view === "table";
+  const [chartSlot, setChartSlot] = useState<HTMLDivElement | null>(null);
   const sort = (key: string) =>
     patch({
       sort: key,
@@ -500,11 +610,6 @@ function Explorer({
   );
   const boardInfo = data.boards[state.board];
   const boardVersion = boardInfo.name.match(/\bv\d+(?:\.\d+)+/)?.[0];
-  const scrollToTable = () => {
-    const table = document.getElementById("all-data");
-    table?.scrollIntoView({ behavior: "smooth", block: "start" });
-    table?.focus({ preventScroll: true });
-  };
   return (
     <>
       <a className="skip-link" href="#workspace">
@@ -540,6 +645,18 @@ function Explorer({
             </button>
           </nav>
           <div className="header-actions">
+            <button
+              className="header-contribute header-providers"
+              onClick={() => setPanel("providers")}
+              aria-label={t("My providers", "我的供应商")}
+              title={t(
+                "Manage your own providers (stored locally)",
+                "管理我的自定义供应商（本地存储）",
+              )}
+            >
+              <Storefront size={16} />
+              <span>{t("My providers", "我的供应商")}</span>
+            </button>
             <HeaderActions lang={state.lang} />
             <button
               className="icon-button theme-toggle"
@@ -600,9 +717,6 @@ function Explorer({
           <>
             <section className="intro">
               <div className="intro-copy">
-                <p className="eyebrow">
-                  {t("Independent data · open methodology", "独立数据 · 公开口径")}
-                </p>
                 <h1>
                   {zh ? (
                     <>
@@ -656,8 +770,10 @@ function Explorer({
                         <ChartScatter size={16} />
                       ) : tab.view === "price" ? (
                         <Coins size={16} />
-                      ) : (
+                      ) : tab.view === "allowance" ? (
                         <ChartBar size={16} />
+                      ) : (
+                        <Table size={16} />
                       )}
                       <span className="tab-long">{t(tab.en, tab.cn)}</span>
                       <span className="tab-short" aria-hidden="true">
@@ -665,10 +781,6 @@ function Explorer({
                       </span>
                     </button>
                   ))}
-                  <button className="view-tab table-jump" onClick={scrollToTable}>
-                    <Table size={16} />
-                    <span>{t("Full table", "完整数据表")}</span>
-                  </button>
                 </div>
                 <div className="chart-actions">
                   <button
@@ -699,7 +811,7 @@ function Explorer({
                   )}
                 </div>
               </div>
-              {state.view === "pareto" && (
+              {scored && (
                 <div className="board-tabs" role="group" aria-label={t("Leaderboards", "榜单")}>
                   {Object.keys(data.boards).map((id) => (
                     <button
@@ -713,47 +825,38 @@ function Explorer({
                   ))}
                 </div>
               )}
-              <div className="chart-heading">
-                <h2>
-                  {state.view === "pareto"
-                    ? t("Price meets performance", "真实单价与模型能力")
-                    : state.view === "price"
-                      ? t("Every model. Its real price.", "每个模型的真实单价。")
-                      : t("How much can you actually use?", "每月实际能用多少？")}
-                </h2>
-                <p>
-                  {state.view === "pareto" ? (
-                    <>
-                      <span>
-                        {metricLabel(boardInfo.metric, state.lang)}
-                        {boardVersion ? ` ${boardVersion}` : ""}
-                        {state.board === "arena_code" ? t(" · WebDev Overall", " · 网页开发 Overall") : ""}
-                      </span>
-                      <span>
-                        {t("Snapshot", "快照")} {boardInfo.snapshot}
-                      </span>
-                      <a href={boardInfo.url} target="_blank" rel="noreferrer">
-                        {t("Source", "来源")}
-                        <ArrowUpRight size={12} />
-                      </a>
-                    </>
-                  ) : state.view === "price" ? (
+              <p className="view-context">
+                {scored ? (
+                  <>
                     <span>
-                      {t(
-                        "Monthly subscription fee ÷ usable tokens. Metered APIs use the project workload (Anthropic models price the input share as cache writes).",
-                        "订阅月费 ÷ 可用 token；按量 API 采用项目统一负载（Anthropic 档以缓存写替代普通输入份额）。",
-                      )}
+                      {metricLabel(boardInfo.metric, state.lang)}
+                      {boardVersion ? ` ${boardVersion}` : ""}
+                      {state.board === "arena_code" ? t(" · WebDev Overall", " · 网页开发 Overall") : ""}
                     </span>
-                  ) : (
                     <span>
-                      {t(
-                        "Saturated use · all token types · subscription plans only",
-                        "饱和使用 · 全口径 token · 仅订阅套餐",
-                      )}
+                      {t("Snapshot", "快照")} {boardInfo.snapshot}
                     </span>
-                  )}
-                </p>
-              </div>
+                    <a href={boardInfo.url} target="_blank" rel="noreferrer">
+                      {t("Source", "来源")}
+                      <ArrowUpRight size={12} />
+                    </a>
+                  </>
+                ) : state.view === "price" ? (
+                  <span>
+                    {t(
+                      "Monthly subscription fee ÷ usable tokens. Metered APIs use the project workload (Anthropic models price the input share as cache writes).",
+                      "订阅月费 ÷ 可用 token；按量 API 采用项目统一负载（Anthropic 档以缓存写替代普通输入份额）。",
+                    )}
+                  </span>
+                ) : (
+                  <span>
+                    {t(
+                      "Saturated use · all token types · subscription plans only",
+                      "饱和使用 · 全口径 token · 仅订阅套餐",
+                    )}
+                  </span>
+                )}
+              </p>
               <div className="toolbar">
                 <button className="select-models" onClick={() => setPanel("models")}>
                   <CheckSquare size={17} />
@@ -771,7 +874,7 @@ function Explorer({
                   {t("Filters", "筛选")}
                   {activeFilters.length > 0 && <span className="count">{activeFilters.length}</span>}
                 </button>
-                {state.view === "pareto" && (
+                {scored && (
                   <label
                     className="config-select"
                     title={t(
@@ -795,9 +898,104 @@ function Explorer({
                     </select>
                   </label>
                 )}
+                {state.view === "allowance" && (
+                  <div className="fee-bands" role="group" aria-label={t("Monthly subscription fee", "订阅月费分档")}>
+                    <span className="fee-label">{t("Monthly fee", "月费")}</span>
+                    <div className="segmented">
+                      <button aria-pressed={state.feeBand === "all"} onClick={() => patch({ feeBand: "all" })}>
+                        {t("All", "全部")}
+                      </button>
+                      {feeBands.map((b) => (
+                        <button
+                          key={b.id}
+                          aria-pressed={state.feeBand === b.id}
+                          title={zh ? b.labelZh : b.labelEn}
+                          onClick={() => patch({ feeBand: b.id })}
+                        >
+                          {b.label}
+                        </button>
+                      ))}
+                    </div>
+                    <span
+                      className="fee-note"
+                      tabIndex={0}
+                      role="note"
+                      title={t(
+                        "USD per month · CNY plans use the project exchange rate. All includes plans over $300.",
+                        "美元 / 月 · 人民币套餐按项目汇率折算；全部包含超过 $300 的套餐。",
+                      )}
+                      aria-label={t(
+                        "USD per month · CNY plans use the project exchange rate. All includes plans over $300.",
+                        "美元 / 月 · 人民币套餐按项目汇率折算；全部包含超过 $300 的套餐。",
+                      )}
+                    >
+                      <Info size={15} />
+                    </span>
+                  </div>
+                )}
+                {state.view === "allowance" && (
+                  <div className="layout-switch segmented" role="group" aria-label={t("Layout", "展示方式")}>
+                    {(
+                      [
+                        ["list", <Rows size={15} />, "Ranking", "排行"],
+                        ["cards", <SquaresFour size={15} />, "Cards", "卡片"],
+                        ["compare", <Stack size={15} />, "Compare", "对比"],
+                      ] as const
+                    ).map(([layout, icon, en, cn]) => (
+                      <button
+                        key={layout}
+                        aria-pressed={state.layout === layout}
+                        onClick={() => patch({ layout })}
+                      >
+                        {icon}
+                        <span>{t(en, cn)}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
                 <span className="toolbar-space" />
+                <div className="chart-tools-slot" ref={setChartSlot} />
+                {state.view !== "pareto" && (
+                  <label className="search toolbar-search">
+                    <MagnifyingGlass size={16} />
+                    <input
+                      type="search"
+                      aria-label={t("Search", "搜索")}
+                      placeholder={t("Search model, plan or channel…", "搜索模型、套餐或渠道…")}
+                      value={state.query}
+                      onChange={(e) => patch({ query: e.target.value })}
+                    />
+                    {state.query && (
+                      <button
+                        className="icon-button"
+                        onClick={() => patch({ query: "" })}
+                        aria-label={t("Clear search", "清空搜索")}
+                      >
+                        <X size={14} />
+                      </button>
+                    )}
+                  </label>
+                )}
                 <span className="results-count">
-                  <b>{pts.length}</b> {t("points in view", "个数据点")}
+                  {state.view === "pareto" ? (
+                    <>
+                      <b>{pts.length}</b> {t("points", "个数据点")}
+                    </>
+                  ) : state.view === "allowance" && state.layout === "cards" ? (
+                    <>
+                      {t("Selected", "已选")} <b>{state.cards.length}</b>{" "}
+                      {t(state.cards.length === 1 ? "model" : "models", "个模型")}
+                    </>
+                  ) : state.view === "allowance" && state.layout === "compare" ? (
+                    <>
+                      {t("Selected", "已选")} <b>{completeCompare}</b>{" "}
+                      {t(completeCompare === 1 ? "item" : "items", "项")}
+                    </>
+                  ) : (
+                    <>
+                      <b>{shown.length}</b> {t("results", "条结果")}
+                    </>
+                  )}
                 </span>
               </div>
               {(activeFilters.length > 0 || state.selected !== null) && (
@@ -819,7 +1017,19 @@ function Explorer({
                   </button>
                 </div>
               )}
-              <div className="legend" role="group" aria-label={t("Access channels", "订阅渠道")}>
+              <OneLineLegend
+                label={t("Access channels", "订阅渠道")}
+                signature={legendCounts.map(([c, n]) => c + n).join("|")}
+                zh={zh}
+                trailing={
+                  state.view === "pareto" && state.frontier ? (
+                    <span className="frontier-legend">
+                      <i />
+                      {t("Frontier of current selection", "当前筛选前沿")}
+                    </span>
+                  ) : null
+                }
+              >
                 {legendCounts.map(([c, n]) => {
                   const active = state.channels.includes(c);
                   const muted = state.channels.length > 0 && !active;
@@ -852,40 +1062,15 @@ function Explorer({
                     </button>
                   );
                 })}
-                {state.view === "pareto" && state.frontier && (
-                  <span className="frontier-legend">
-                    <i />
-                    {t("Frontier of current selection", "当前筛选前沿")}
-                  </span>
-                )}
-              </div>
-              {state.view === "allowance" && (
-                <div className="fee-bands" role="group" aria-label={t("Monthly subscription fee", "订阅月费分档")}>
-                  <strong>{t("Monthly fee", "按订阅月费")}</strong>
-                  <div className="segmented">
-                    <button aria-pressed={state.feeBand === "all"} onClick={() => patch({ feeBand: "all" })}>
-                      {t("All", "全部")}
-                    </button>
-                    {feeBands.map((b) => (
-                      <button
-                        key={b.id}
-                        aria-pressed={state.feeBand === b.id}
-                        title={zh ? b.labelZh : b.labelEn}
-                        onClick={() => patch({ feeBand: b.id })}
-                      >
-                        {b.label}
-                      </button>
-                    ))}
-                  </div>
-                  <small>
-                    {t(
-                      "USD per month · CNY plans use the project exchange rate. All includes plans over $300.",
-                      "美元 / 月 · 人民币套餐按项目汇率折算；全部包含超过 $300 的套餐。",
-                    )}
-                  </small>
-                </div>
-              )}
-              {!pts.length || (state.view === "pareto" && !gs.length) ? (
+              </OneLineLegend>
+              {(!pts.length || (state.view === "pareto" && !gs.length)) &&
+              // The allowance card/compare pickers have their own empty states
+              // and must stay reachable (and keep saved items) under filters
+              // that match nothing.
+              !(
+                state.view === "allowance" &&
+                (state.layout === "cards" || state.layout === "compare")
+              ) ? (
                 <div className="empty">
                   <ChartScatter size={35} />
                   <h3>{t("No points to plot", "没有可绘制的数据点")}</h3>
@@ -904,10 +1089,30 @@ function Explorer({
                     {t("Reset selection", "恢复全部数据")}
                   </button>
                 </div>
+              ) : state.view === "table" ? null : state.view === "allowance" &&
+                state.layout === "cards" ? (
+                <AllowanceCards
+                  points={allowancePoints}
+                  rows={rows}
+                  state={state}
+                  axis={axis}
+                  highlight={highlight}
+                  onChange={(cards) => patch({ cards })}
+                  onSelect={setDetail}
+                />
+              ) : state.view === "allowance" && state.layout === "compare" ? (
+                <AllowanceCompare
+                  points={allowancePoints}
+                  rows={rows}
+                  state={state}
+                  onChange={(compare) => patch({ compare })}
+                  onSelect={setDetail}
+                />
               ) : state.view !== "pareto" ? (
                 <Ranking
                   rows={rows}
                   state={state}
+                  axis={axis}
                   highlight={highlight}
                   onSelect={setDetail}
                   handle={chart}
@@ -923,61 +1128,157 @@ function Explorer({
                   onSelect={setDetail}
                   onSearch={(find, lock) => patch({ find, lock })}
                   handle={chart}
+                  toolsSlot={chartSlot}
                 />
               )}
-              <div className="chart-foot">
-                <p>
-                  <Info size={15} />
-                  <span>
-                    {state.view === "pareto"
-                      ? t(
-                          "Further right is cheaper; higher is more capable. Hover a legend entry to isolate a channel, click to filter. Click any point for its evidence.",
-                          "越右越便宜，越高能力越强。悬停图例可突出某个渠道，点击即筛选；点击数据点查看证据。",
-                        )
-                      : t(
-                          "Scroll inside the list to browse every result. Select a row to inspect its sources.",
-                          "在列表内滚动浏览全部结果，点击任意一行查看来源。",
+              {state.view === "pareto" && (
+                <div className="chart-foot">
+                  {noScore.length > 0 ? (
+                    <details className="unscored">
+                      <summary>
+                        {noScore.length} {t("points without a matching score", "个数据点缺少匹配分数")}
+                      </summary>
+                      <p>
+                        {t(
+                          "No archived score matches this model and the current configuration filters. No score is inferred.",
+                          "当前模型与配置筛选没有匹配的存档分数，不推算补分。",
                         )}
-                  </span>
-                </p>
-                {state.view === "pareto" && (
+                      </p>
+                      <div>
+                        {noScore.map((p) => (
+                          <button
+                            key={p.id}
+                            onClick={() => setDetail([{ key: p.id, point: p, mapping: null, score: null }])}
+                          >
+                            {p.model_display} · {displayPlan(p.plan, state.lang)}
+                            <ArrowUpRight size={12} />
+                          </button>
+                        ))}
+                      </div>
+                    </details>
+                  ) : (
+                    <span />
+                  )}
                   <span className="foot-stats">
                     {gs.length} {t("plotted coordinates", "绘制坐标")} · {front.length}{" "}
                     {t("on the frontier", "前沿坐标")}
                   </span>
-                )}
-              </div>
-              {state.view === "pareto" && noScore.length > 0 && (
-                <details className="unscored">
-                  <summary>
-                    {noScore.length} {t("points without a matching score", "个数据点缺少匹配分数")}
-                  </summary>
-                  <p>
-                    {t(
-                      "No archived score matches this model and the current configuration filters. No score is inferred.",
-                      "当前模型与配置筛选没有匹配的存档分数，不推算补分。",
+                </div>
+              )}
+              {state.view === "table" && pts.length > 0 && (
+                <div className="table-view">
+                  <div
+                    className="table-scroll"
+                    ref={tableScroll}
+                    role="region"
+                    tabIndex={0}
+                    aria-label={t("Scrollable data table", "可滚动数据明细表")}
+                  >
+                    <table>
+                      <thead>
+                        <tr>
+                          <th className="row-number">#</th>
+                          {sortHead("model", "Model", "模型")}
+                          {sortHead("plan", "Plan · channel", "套餐 · 渠道")}
+                          {sortHead("price", "Real price / MTok", "真实单价 / MTok", true)}
+                          {sortHead("fee", "Monthly fee", "订阅月费", true)}
+                          {sortHead("allowance", "Monthly tokens", "月 token", true)}
+                          {sortHead("score", "Score", "分数", true)}
+                          <th>{t("Quota confidence", "额度置信度")}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {shown.slice(0, tableLimit).map((r, i) => {
+                          const config = r.mapping
+                            ? [r.mapping.agent_harness, effortLabel(r.mapping.reasoning_effort, state.lang), r.mapping.service_mode]
+                                .filter(Boolean)
+                                .join(" · ")
+                            : "";
+                          return (
+                            <tr
+                              key={r.key}
+                              onClick={() => setDetail([r])}
+                              className={frontRows.has(r.key) ? "frontier-row" : undefined}
+                            >
+                              <td className="row-number">{i + 1}</td>
+                              <td>
+                                <button
+                                  className="model-cell"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setDetail([r]);
+                                  }}
+                                >
+                                  <BrandMarks point={r.point} size={24} />
+                                  <span>
+                                    <strong>{r.point.model_display}</strong>
+                                    {config && <small>{config}</small>}
+                                  </span>
+                                </button>
+                              </td>
+                              <td>
+                                <strong className="plan-name">{displayPlan(r.point.plan, state.lang)}</strong>
+                                <small className="channel-line">
+                                  <i className="vendor-dot" style={{ background: dotColors(color(r.point), theme === "dark").fill }} />
+                                  {accessLine(r.point)} · {filterValue(r.point.billing)}
+                                </small>
+                              </td>
+                              <td className="numeric real-price">
+                                {price(r.point.real_usd_per_mtok)}
+                                {frontRows.has(r.key) && (
+                                  <small className="frontier-tag">{t("Frontier", "前沿")}</small>
+                                )}
+                              </td>
+                              <td className="numeric">
+                                {r.point.billing === "metered" ? "—" : price(r.point.price_usd)}
+                                {r.point.currency === "CNY" && <small>¥{r.point.original_price}</small>}
+                              </td>
+                              <td className="numeric">{allowance(r.point, state.lang)}</td>
+                              <td className="numeric">
+                                {number(r.score, state.lang, 2)}
+                                {r.mapping?.score_is_estimated && <small>{t("AA estimate", "AA 估计值")}</small>}
+                                {r.mapping?.score_is_self_reported && <small>{t("vendor self-report", "厂商自报")}</small>}
+                              </td>
+                              <td>
+                                <span className={`confidence ${r.point.confidence}`}>
+                                  <i />
+                                  {filterValue(r.point.confidence)}
+                                </span>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                        {tableLimit < shown.length && (
+                          <tr className="sentinel-row" aria-hidden="true">
+                            <td colSpan={8}>
+                              <span ref={(el) => void (tableSentinel.current = el)}>
+                                {t("Loading more rows…", "正在加载更多行…")}
+                              </span>
+                            </td>
+                          </tr>
+                        )}
+                      </tbody>
+                    </table>
+                    {!shown.length && (
+                      <div className="empty table-empty">
+                        <h3>{t("No matching rows", "没有匹配的行")}</h3>
+                        <button onClick={() => patch({ query: "" })}>{t("Clear the search", "清除搜索")}</button>
+                      </div>
                     )}
-                  </p>
-                  <div>
-                    {noScore.map((p) => (
-                      <button
-                        key={p.id}
-                        onClick={() => setDetail([{ key: p.id, point: p, mapping: null, score: null }])}
-                      >
-                        {p.model_display} · {displayPlan(p.plan, state.lang)}
-                        <ArrowUpRight size={12} />
-                      </button>
-                    ))}
                   </div>
-                </details>
+                  <ResizeHandle
+                    target={tableScroll}
+                    label={t("Drag to resize the table · double-click to reset", "拖动调整表格高度，双击恢复")}
+                  />
+                </div>
               )}
             </section>
             <aside className="method-note">
               <Info size={16} />
               <p>
                 {t(
-                  "A price floor at saturated use. All tokens count; a month is 4 weeks, except Kimi’s independent 5-week pool. Model allowances within a plan are alternatives, not additive.",
-                  "这是饱和使用时的价格下限。所有 token 均计入；默认月为 4 周，Kimi 独立月池为周池的 5 倍。同套餐不同模型额度不能相加。",
+                  "A price floor at saturated use. All tokens count; a month is 4 weeks, except Kimi’s independent 5-week pool and Droid’s 2× weekly month. Model allowances within a plan are alternatives, not additive.",
+                  "这是饱和使用时的价格下限。所有 token 均计入；默认月为 4 周，Kimi 独立月池为周池的 5 倍，Droid 月额度为周额度的 2 倍。同套餐不同模型额度不能相加。",
                 )}{" "}
                 <button onClick={() => patch({ view: "method" })}>
                   {t("Read the methodology", "查看完整口径")}
@@ -985,167 +1286,6 @@ function Explorer({
                 </button>
               </p>
             </aside>
-            <section className="data-section" id="all-data" tabIndex={-1}>
-              <div className="table-heading">
-                <div>
-                  <h2>{t("The data, in detail.", "数据明细。")}</h2>
-                  <p>
-                    {t(
-                      "Every plan, configuration and source. Sort any column; select a row for its evidence.",
-                      "每个套餐、评测配置与来源。可按任意列排序，点击一行查看依据。",
-                    )}
-                  </p>
-                </div>
-                <button
-                  className="text-button"
-                  onClick={() =>
-                    downloadText(csv(shown, state.lang), "real-api-pricing-selection.csv", "text/csv;charset=utf-8")
-                  }
-                >
-                  <DownloadSimple size={16} />
-                  {t("Export CSV", "导出 CSV")}
-                </button>
-              </div>
-              <div className="table-tools">
-                <label className="search">
-                  <MagnifyingGlass size={16} />
-                  <input
-                    type="search"
-                    aria-label={t("Search table", "搜索表格")}
-                    placeholder={t("Search models, plans or configurations…", "搜索模型、套餐或配置…")}
-                    value={state.query}
-                    onChange={(e) => patch({ query: e.target.value })}
-                  />
-                  {state.query && (
-                    <button
-                      className="icon-button"
-                      onClick={() => patch({ query: "" })}
-                      aria-label={t("Clear search", "清空搜索")}
-                    >
-                      <X size={14} />
-                    </button>
-                  )}
-                </label>
-                <span>
-                  <b>{shown.length}</b> {t("rows", "行")}
-                  {state.view !== "pareto" && (
-                    <span className="table-reference">
-                      {" · "}
-                      {t("Score: highest matching reference", "分数：匹配配置最高参考值")}
-                    </span>
-                  )}
-                </span>
-              </div>
-              <div
-                className="table-scroll"
-                ref={tableScroll}
-                role="region"
-                tabIndex={0}
-                aria-label={t("Scrollable data table", "可滚动数据明细表")}
-              >
-                <table>
-                  <thead>
-                    <tr>
-                      <th className="row-number">#</th>
-                      {sortHead("model", "Model", "模型")}
-                      {sortHead("plan", "Plan · channel", "套餐 · 渠道")}
-                      {sortHead("price", "Real price / MTok", "真实单价 / MTok", true)}
-                      {sortHead("fee", "Monthly fee", "订阅月费", true)}
-                      {sortHead("allowance", "Monthly tokens", "月 token", true)}
-                      {sortHead("score", "Score", "分数", true)}
-                      <th>{t("Quota confidence", "额度置信度")}</th>
-                      <th>
-                        <span className="sr-only">{t("Details", "详情")}</span>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {shown.slice(0, tableLimit).map((r, i) => {
-                      const config = r.mapping && state.view === "pareto"
-                        ? [r.mapping.agent_harness, effortLabel(r.mapping.reasoning_effort, state.lang), r.mapping.service_mode]
-                            .filter(Boolean)
-                            .join(" · ")
-                        : "";
-                      return (
-                        <tr
-                          key={r.key}
-                          onClick={() => setDetail([r])}
-                          className={frontRows.has(r.key) && state.view === "pareto" ? "frontier-row" : undefined}
-                        >
-                          <td className="row-number">{i + 1}</td>
-                          <td>
-                            <button
-                              className="model-cell"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setDetail([r]);
-                              }}
-                            >
-                              <BrandMarks point={r.point} size={24} />
-                              <span>
-                                <strong>{r.point.model_display}</strong>
-                                {config && <small>{config}</small>}
-                              </span>
-                            </button>
-                          </td>
-                          <td>
-                            <strong className="plan-name">{displayPlan(r.point.plan, state.lang)}</strong>
-                            <small className="channel-line">
-                              <i className="vendor-dot" style={{ background: dotColors(color(r.point), theme === "dark").fill }} />
-                              {accessLine(r.point)} · {filterValue(r.point.billing)}
-                            </small>
-                          </td>
-                          <td className="numeric real-price">
-                            {price(r.point.real_usd_per_mtok)}
-                            {frontRows.has(r.key) && state.view === "pareto" && (
-                              <small className="frontier-tag">{t("Frontier", "前沿")}</small>
-                            )}
-                          </td>
-                          <td className="numeric">
-                            {r.point.billing === "metered" ? "—" : price(r.point.price_usd)}
-                            {r.point.currency === "CNY" && <small>¥{r.point.original_price}</small>}
-                          </td>
-                          <td className="numeric">{allowance(r.point, state.lang)}</td>
-                          <td className="numeric">
-                            {number(r.score, state.lang, 2)}
-                            {r.mapping?.score_is_estimated && <small>{t("AA estimate", "AA 估计值")}</small>}
-                            {r.mapping?.score_is_self_reported && <small>{t("vendor self-report", "厂商自报")}</small>}
-                          </td>
-                          <td>
-                            <span className={`confidence ${r.point.confidence}`}>
-                              <i />
-                              {filterValue(r.point.confidence)}
-                            </span>
-                          </td>
-                          <td className="row-arrow">
-                            <ArrowUpRight size={14} />
-                          </td>
-                        </tr>
-                      );
-                    })}
-                    {tableLimit < shown.length && (
-                      <tr className="sentinel-row" aria-hidden="true">
-                        <td colSpan={9}>
-                          <span ref={(el) => void (tableSentinel.current = el)}>
-                            {t("Loading more rows…", "正在加载更多行…")}
-                          </span>
-                        </td>
-                      </tr>
-                    )}
-                  </tbody>
-                </table>
-                {!shown.length && (
-                  <div className="empty table-empty">
-                    <h3>{t("No matching rows", "没有匹配的行")}</h3>
-                    <button onClick={() => patch({ query: "" })}>{t("Clear the search", "清除搜索")}</button>
-                  </div>
-                )}
-              </div>
-              <ResizeHandle
-                target={tableScroll}
-                label={t("Drag to resize the table · double-click to reset", "拖动调整表格高度，双击恢复")}
-              />
-            </section>
           </>
         )}
       </main>
@@ -1192,12 +1332,22 @@ function Explorer({
                   ? t("Chart settings", "图表设置")
                   : panel === "share"
                     ? t("Share this view", "分享当前视图")
-                    : t("Take the data with you", "下载图表与数据")
+                    : panel === "providers"
+                      ? t("My providers", "我的供应商")
+                      : t("Take the data with you", "下载图表与数据")
           }
           onClose={() => setPanel(null)}
-          wide={panel === "models" || panel === "filters"}
+          wide={panel === "models" || panel === "filters" || panel === "providers"}
           closeLabel={t("Close", "关闭")}
         >
+          {panel === "providers" && (
+            <CustomProvidersPanel
+              data={data}
+              providers={customProviders}
+              onChange={onCustomProvidersChange}
+              lang={state.lang}
+            />
+          )}
           {panel === "models" && (
             <>
               <p className="panel-description">
@@ -1412,7 +1562,15 @@ function Explorer({
           {panel === "download" && (
             <div className="download-list">
               <h3>{t("Current selection", "当前选择")}</h3>
-              {(["png", "svg"] as const).map((format) => (
+              {(state.view === "price" || state.view === "allowance") && (
+                <p className="panel-description">
+                  {t(
+                    "Ranking images include every filtered row, not only the rows on screen.",
+                    "排名图片包含全部筛选行，不只是屏幕上可见的行。",
+                  )}
+                </p>
+              )}
+              {state.view !== "table" && (["png", "svg"] as const).map((format) => (
                 <button
                   key={format}
                   disabled={!chart.current || state.view === "method"}
@@ -1529,6 +1687,11 @@ function Details({
             <i className="vendor-dot" style={{ background: color(p) }} />
             {displayPlan(p.plan, lang)} · {accessLine(p)}
           </p>
+          {dataDateLine(p, lang) !== "" && (
+            <p className="detail-date">
+              <small>{t("Data date", "数据日期")}</small> {dataDateLine(p, lang)}
+            </p>
+          )}
           <div className="detail-metrics">
             <div>
               <small>{t("Real price / MTok", "真实单价 / MTok")}</small>
@@ -1600,16 +1763,22 @@ function Details({
           <details className="evidence-fold">
             <summary>
               {t(
-                "Adoption evidence · original source text",
+                "Adoption evidence · source and rationale (translated from the Chinese record)",
                 "采用依据 · 原始来源文字",
               )}
             </summary>
-            <p className="original-text">{p.source}</p>
+            <p className="original-text">
+              {zh ? p.source : (p.source_en ?? p.source)}
+            </p>
             {p.decision_note && (
-              <p className="original-text">{p.decision_note}</p>
+              <p className="original-text">
+                {zh ? p.decision_note : (p.decision_note_en ?? p.decision_note)}
+              </p>
             )}
             {p.note && p.note !== p.decision_note && (
-              <p className="original-text">{p.note}</p>
+              <p className="original-text">
+                {zh ? p.note : (p.note_en ?? p.note)}
+              </p>
             )}
             <div className="source-links">
               {p.evidence.map((e, i) => (
@@ -1633,6 +1802,12 @@ function Details({
             .filter((r) => r.point.id === p.id && r.mapping)
             .map((r) => {
               const m = r.mapping!;
+              const srcText = zh ? m.source : (m.source_en ?? m.source);
+              const srcUrl = firstUrl(srcText ?? "");
+              const srcAnnotation = srcUrl
+                ? (srcText ?? "").split(srcUrl).slice(1).join("").trim()
+                : srcText;
+              const recordNote = zh ? m.record_note_zh : m.record_note_en;
               return (
                 <section className="configuration-detail" key={r.key}>
                   <strong>{variantLabel(m.variant, lang)}</strong>
@@ -1679,11 +1854,45 @@ function Details({
                       "这是参考映射，并非该订阅/API 渠道的评测。产品框架和额度实测推理强度的对应关系未经验证。来源任务成本不等于订阅任务成本。",
                     )}
                   </p>
-                  <p className="original-text">{m.mapping_note}</p>
-                  <a href={safeUrl(m.source)} target="_blank" rel="noreferrer">
+                  <p className="original-text">{mappingNoteLabel(m.mapping_note, lang)}</p>
+                  <a href={safeUrl(firstUrl(m.source) ?? m.source)} target="_blank" rel="noreferrer">
                     {data.boards[m.board]?.name ?? m.board}
                     <ArrowUpRight size={14} />
                   </a>
+                  <details className="evidence-fold">
+                    <summary>
+                      {t("Score source · original record", "分数来源 · 原始记录")}
+                    </summary>
+                    <dl>
+                      <dt>{t("Source page", "来源页面")}</dt>
+                      <dd>
+                        {srcUrl ? (
+                          <a href={safeUrl(srcUrl)} target="_blank" rel="noreferrer">
+                            {srcUrl}
+                            <ArrowUpRight size={12} />
+                          </a>
+                        ) : null}
+                        {srcAnnotation ? ` ${srcAnnotation}` : null}
+                      </dd>
+                      <dt>{t("Checked", "核对日期")}</dt>
+                      <dd>{m.checked_at}</dd>
+                      <dt>{t("Board label", "榜单原名")}</dt>
+                      <dd>{m.board_label}</dd>
+                      <dt>{t("Archived snapshot", "存档快照")}</dt>
+                      <dd>
+                        <a href={m.archive_url} target="_blank" rel="noreferrer">
+                          {m.archive}
+                          <ArrowUpRight size={12} />
+                        </a>
+                      </dd>
+                      {recordNote ? (
+                        <>
+                          <dt>{t("Record note", "原始记录备注")}</dt>
+                          <dd className="original-text">{recordNote}</dd>
+                        </>
+                      ) : null}
+                    </dl>
+                  </details>
                 </section>
               );
             })}
@@ -1744,8 +1953,8 @@ function Method({
           </p>
           <p>
             {t(
-              `A month defaults to ${data.conventions.monthWeeks} weeks. Kimi has an independent monthly pool equal to five weekly pools. Model allowances within the same plan are alternatives and must not be summed.`,
-              `默认月为 ${data.conventions.monthWeeks} 周；Kimi 独立月池等于周池的 5 倍。同套餐不同模型额度为替代关系，不可相加。`,
+              `A month defaults to ${data.conventions.monthWeeks} weeks. Kimi has an independent monthly pool equal to five weekly pools; Droid's month is 2× its weekly allowance. Model allowances within the same plan are alternatives and must not be summed.`,
+              `默认月为 ${data.conventions.monthWeeks} 周；Kimi 独立月池等于周池的 5 倍；Droid 月额度为周额度的 2 倍。同套餐不同模型额度为替代关系，不可相加。`,
             )}
           </p>
         </article>
@@ -1755,8 +1964,8 @@ function Method({
           </h2>
           <p>
             {t(
-              "Dollar/credit pools priced at public rates and metered APIs are converted using the same three-part workload; for Anthropic models the input share is priced at the 5-minute cache-write rate. Direct total-token measurements are not normalized again, except ruled panel segments converted via list-worth (Devin Max Opus 5.5 / GPT-6 Astra). Vendor dashboard dollars are calibrated from measured usage, not treated as public-price dollars.",
-              "按公开标价记账的美元/credits 池与按量 API，使用统一三段负载折算（Anthropic 档的普通输入份额按 5 分钟缓存写价计）。直接 total-token 实测不重复归一，经裁定折算的面板段除外（Devin Max Opus 5.5 / GPT-6 Astra 按 list-worth 换算）。厂商面板额度美元使用实测标定，不当成公开标价美元。",
+              "Dollar/credit pools priced at public rates and metered APIs are converted using the same three-part workload; for Anthropic models the input share is priced at the 5-minute cache-write rate. Measured samples that include a token breakdown are converted to list-worth at public prices and then to the channel's workload (low-cache for Google and StepFun, Anthropic for Claude); samples without a breakdown and official token tables keep raw totals and are flagged as not workload-normalized. Vendor dashboard dollars are calibrated from measured usage, not treated as public-price dollars.",
+              "按公开标价记账的美元/credits 池与按量 API，使用统一三段负载折算（Anthropic 档的普通输入份额按 5 分钟缓存写价计）。带 token 分项的实测样本先按公开标价折成美元价值，再按渠道负载档换算（Google 与 StepFun 用低缓存档、Claude 用 Anthropic 档）；缺分项的实测样本与官方绝对 token 表直接采用 raw 合计，网页标注「未折算」。厂商面板额度美元使用实测标定，不当成公开标价美元。",
             )}
           </p>
           <div className="mix-values">

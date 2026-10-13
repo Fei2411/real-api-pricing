@@ -146,7 +146,7 @@
       "sourceDate": "2026-09-11",
       "quote": "modelSeries gpt-5.6-sol rawContextPerPoint=35903173; gpt-6-astra rawContextPerPoint=8657662 → ratio≈4.15× quota per token vs Sol",
       "confidence": "medium",
-      "note": "Business Rate Card credits 比约 2.5×；实测 4.1× 含缓存读权重差异与负载差异。round7 用旧 Astra=2× 与 Luna=0.04× 互证 Plus Astra，与本次 4.1× 口径冲突——后续采用需用户拍板用哪条权重。"
+      "note": "Business Rate Card credits 比约 2.5×；实测 4.1× 含缓存读权重差异与负载差异。round7 用旧 Astra=2× 与 Luna=0.04× 互证 Plus Astra，与本次 4.1× 口径冲突——后续采用需裁定用哪条权重。"
     },
     {
       "claim": "OpenAI 开发者社区 Pro20x 用户（2026-09-08/09，已过 09-07 全局重置）给出 token 与周 % 同框：09-08 约 21.8 小时内 2.180B tokens 只动 6 个百分点；随后约 7 小时 472.9M tokens 却动 65 个百分点——同账号同周窗内「每 token 耗额度」差约 50×。作者称无周重置、缓存命中反而升高；多人跟帖称额度被「nuke」后部分被 Support 回滚。属计费异常/延迟入账嫌疑，不能当常态 Astra 池大小。",

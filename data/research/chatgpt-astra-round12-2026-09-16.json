@@ -223,7 +223,7 @@
         "lichengzhe_gateway_weeklyYi_unupdated": "21~23",
         "reism4k_oral_weeklyYi": 20
       },
-      "analysis": "候选解释仍成立：(a) lichengzhe/高簇窗口跨多次 reset 或 % 被回打导致高估；(b) 负载/effort/子代理导致 raw token per % 方差大（Observatory 给的是纯模型区间样本）；(c) Observatory 单账号系统性偏低——但 V2EX 与 sdmat 两条独立来源靠拢 8 亿簇，削弱 (c)。用户拍板『暂不挂点』仍合理：缺第二份可复核的受控打满表，且官方绝对 token 表仍未公布。",
+      "analysis": "候选解释仍成立：(a) lichengzhe/高簇窗口跨多次 reset 或 % 被回打导致高估；(b) 负载/effort/子代理导致 raw token per % 方差大（Observatory 给的是纯模型区间样本）；(c) Observatory 单账号系统性偏低——但 V2EX 与 sdmat 两条独立来源靠拢 8 亿簇，削弱 (c)。裁定『暂不挂点』仍合理：缺第二份可复核的受控打满表，且官方绝对 token 表仍未公布。",
       "confidence": "high（分歧与簇迁移本身）；medium（8.0~8.5 亿为常态池的程度）"
     }
   ],
@@ -240,7 +240,7 @@
     ],
     "pro5xFirstSameFrame": "codex#45085 prolite：198.4M tokens / 86% → 外推约 2.31 亿/周（多代理 Astra High；与把 Pro20x 8.53/4 得 2.13 亿量级接近，但不能直接采用）",
     "lichengzheCleanWeek": "notFound — issue #8 无 09-11 之后补测",
-    "adoptionImplication": "本轮不改 adopted；Pro 两档 Astra 仍建议暂不挂点。若用户要用单一参考中心，09-12 后证据更偏向 ~8.0~8.5 亿/周（月约 32~34 亿），但与 12~23 亿簇未闭环裁决。",
+    "adoptionImplication": "本轮不改 adopted；Pro 两档 Astra 仍建议暂不挂点。若要用单一参考中心，09-12 后证据更偏向 ~8.0~8.5 亿/周（月约 32~34 亿），但与 12~23 亿簇未闭环裁决。",
     "weightCaveat": "Observatory Astra≈4.2× Sol quota/token 相对 round8 的 4.1× 不变；与 lichengzhe 1.5~1.7× 冲突依旧"
   },
   "notFound": [

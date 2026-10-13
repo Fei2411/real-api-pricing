@@ -1,0 +1,446 @@
+{
+  "schemaNote": "Dated screenshot evidence and a contributor-approved provisional adoption proposal; upstream maintainer review is still required.",
+  "checkedAt": "2026-10-01",
+  "status": "contributor_approved_go_basis_not_yet_submitted",
+  "model": "minimax-m3.1-flash-preview",
+  "observedModelLabel": "MiniMax-M3.1-Flash-Preview",
+  "displayName": "MiniMax M3.1 Flash Preview",
+  "pricingRegion": "CN",
+  "currency": "CNY",
+  "sources": [
+    {
+      "id": "annual_screenshot",
+      "type": "user_provided_vendor_screenshot",
+      "file": "data/research/evidence/minimax-m-plan-cn-annual-2026-10-01.png",
+      "sha256": "a87d5dca7a1af2b7e7db4a641e42af04bc79d9f205ab4760f8a8a371ff9e3e8a",
+      "checkedAt": "2026-10-01",
+      "pageUrl": null,
+      "notes": "Annual billing is explicitly visible. Go 490, Explore 1190, Build 4690 CNY/year. Struck-through Explore price is 1490, not 1428; retain the conflict."
+    },
+    {
+      "id": "m_plan_faq_cn",
+      "url": "https://platform.minimax.cn/docs/m-plan/faq",
+      "checkedAt": "2026-10-01",
+      "supports": [
+        "annual price equals ten monthly payments",
+        "Go/Explore/Build 1x/3x/12x",
+        "all modalities share quota",
+        "5-hour and weekly windows are independent"
+      ],
+      "reverifiedForSubmission": "2026-10-01"
+    },
+    {
+      "id": "m_plan_intro_cn",
+      "url": "https://platform.minimax.cn/docs/m-plan/intro",
+      "checkedAt": "2026-10-01",
+      "supports": [
+        "M3.1 Flash Preview available on all three tiers",
+        "Go/Explore/Build 1x/3x/12x"
+      ],
+      "reverifiedForSubmission": "2026-10-01"
+    },
+    {
+      "id": "legacy_price_cn",
+      "url": "https://platform.minimax.cn/docs/guides/pricing-token-plan",
+      "checkedAt": "2026-10-01",
+      "supports": [
+        "Legacy Plus/Max/Ultra monthly prices 49/119/469 CNY. Not standalone proof of the renamed M Plan prices."
+      ]
+    },
+    {
+      "id": "migration_notice_cn",
+      "url": "https://platform.minimax.cn/docs/m-plan/token-plan-notice",
+      "checkedAt": "2026-10-01",
+      "supports": [
+        "M Plan launch notice states subscription price and text usage unchanged",
+        "Legacy benefits can persist without migration and are removed upon migration",
+        "Legacy tiers and new tiers must remain distinguishable"
+      ]
+    },
+    {
+      "id": "paygo_cn",
+      "url": "https://platform.minimax.cn/docs/guides/pricing-paygo",
+      "checkedAt": "2026-10-01",
+      "result": "No exact M3.1 Flash Preview rate row found in the retrieved text; M3 rates must not be silently reused.",
+      "reverifiedForSubmission": "2026-10-01"
+    },
+    {
+      "id": "paygo_global",
+      "url": "https://platform.minimax.io/docs/guides/pricing-paygo",
+      "checkedAt": "2026-10-01",
+      "result": "No exact M3.1 rate row found in the retrieved text."
+    },
+    {
+      "id": "project_rules",
+      "url": "https://github.com/FeiZhuLulu/real-api-pricing/blob/main/CONVENTIONS.md",
+      "blobShaAtRead": "6a63e11184e8043787a495c6d2899959296c1c4d",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "id": "project_numerical_rules",
+      "url": "https://github.com/FeiZhuLulu/real-api-pricing/blob/main/data/conventions.json",
+      "blobShaAtRead": "3d479476f800095b1370f753bdffc332dc6bb35e",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "id": "quota_screenshots",
+      "type": "user_provided_screenshots_in_conversation",
+      "checkedAt": "2026-10-01",
+      "notes": "All five original quota/usage screenshots are archived with hashes. Counts are transcribed, not OCR-derived.",
+      "files": [
+        {
+          "file": "data/research/evidence/minimax-m31-start-quota-2026-10-01.png",
+          "sha256": "3801b72c764359bd6d06f7c24419ac203af451575a4977ebb667ca354d0ba5c9"
+        },
+        {
+          "file": "data/research/evidence/minimax-m31-middle-quota-2026-10-01.png",
+          "sha256": "ae3f7db37d0f8dce2faa3885754f38474ebd8977b7452284f7903101c6c1e7f8"
+        },
+        {
+          "file": "data/research/evidence/minimax-m31-middle-usage-2026-10-01.png",
+          "sha256": "7421e8a3d6b8eca8196890928c4528cbf45ab5519c79a0122f2bb3f56b95db32"
+        },
+        {
+          "file": "data/research/evidence/minimax-m31-end-quota-2026-10-01.png",
+          "sha256": "db4f7debd96988ecc9502c9c520cec6ac89de852cb7b553f12b6ace27c9aed7c"
+        },
+        {
+          "file": "data/research/evidence/minimax-m31-end-usage-2026-10-01.png",
+          "sha256": "0fbcad451859a261cb60fd270594e796a98e11e5b58b32fc9edae0e97a9990b2"
+        }
+      ]
+    }
+  ],
+  "conventionsAtRead": {
+    "snapshotDate": "2026-09-30",
+    "cnyPerUsd": 6.7787,
+    "monthWeeks": 4,
+    "standardTokenMix": {
+      "cache": 0.97,
+      "input": 0.025,
+      "output": 0.005
+    },
+    "fxNote": "Repository comparison constant, not a new current foreign-exchange quote."
+  },
+  "measurement": {
+    "accountPlan": "Go",
+    "accountRegion": "CN",
+    "isMigratedToMPlan": null,
+    "accountMonthlyFeeCny": 49,
+    "effort": null,
+    "quotaTotalDisplayedPercent": {
+      "fiveHour": 100,
+      "weekly": 100
+    },
+    "checkpoints": [
+      {
+        "label": "start",
+        "recordedAt": "2026-10-01T12:01:00+08:00",
+        "timeBasis": "conversation receipt time, not an embedded image timestamp",
+        "fiveHourUsedPercent": 41,
+        "weeklyUsedPercent": 4,
+        "fiveHourResetInMinutes": 96,
+        "weeklyResetLabel": "6天20小时",
+        "bucketCounterAtCheckpoint": null
+      },
+      {
+        "label": "middle",
+        "recordedAt": null,
+        "fiveHourUsedPercent": 71,
+        "weeklyUsedPercent": 7,
+        "fiveHourResetInMinutes": 82,
+        "weeklyResetLabel": "6天20小时",
+        "hourlyBucket": "2026/10/01 12:00~13:00",
+        "cacheHitDisplayedPercent": 95.3
+      },
+      {
+        "label": "end",
+        "recordedAt": null,
+        "fiveHourUsedPercent": 100,
+        "weeklyUsedPercent": 10,
+        "fiveHourResetInMinutes": 52,
+        "weeklyResetLabel": "6天19小时",
+        "hourlyBucket": "2026/10/01 12:00~13:00",
+        "cacheHitDisplayedPercent": 96.5
+      }
+    ],
+    "creditsAutoConsumptionEnabled": false,
+    "creditsBalanceLabel": "暂无积分",
+    "zeroBucketUsageAtStartConfirmed": false,
+    "unrelatedSharedQuotaConsumptionExcluded": null,
+    "counterAndQuotaSynchronizationVerified": false,
+    "reasoningTokensSeparatelyReported": false,
+    "note": "The input, output and cache counters are cumulative within the same hour. Use differences for the middle-to-end segment. Do not add both cumulative rows. No 0-to-100% full-window measurement has been provided.",
+    "accountRegionBasis": "CN pricing screenshot and Go confirmation in the same discussion; no independent account-region export",
+    "accountMonthlyFeeBasis": "Public monthly list price, not a verified payment receipt"
+  },
+  "calculations": {
+    "prices": [
+      {
+        "plan": "Go",
+        "annualCny": 490,
+        "monthlyCny": 49,
+        "monthlyPriceBasis": "annual screenshot price / 10; official M Plan FAQ; cross-checked against legacy prices plus unchanged-price notice",
+        "annualMonthlyEquivalentCnyExact": "490/12",
+        "annualMonthlyEquivalentCny": 40.833333333333336,
+        "twelveMonthlyPaymentsCny": 588,
+        "annualSavingsCny": 98,
+        "annualDiscountFractionExact": "1/6",
+        "usageRelativeToGo": 1,
+        "screenshotStruckThroughAnnualCny": 588,
+        "monthlyPriceUsdAtRepositoryFx": 7.228524643368197,
+        "annualMonthlyEquivalentUsdAtRepositoryFx": 6.023770536140164,
+        "conditionalRawScenario_ONLY_IF_MEASURED_PLAN_IS_GO": {
+          "adopted": false,
+          "requires": [
+            "Measured account is standard CN Go",
+            "zero usage before the starting checkpoint within the hourly bucket",
+            "no unrelated shared-pool consumption",
+            "same quota across billing cycles",
+            "advertised multipliers apply to weekly quota",
+            "raw estimate accepted despite unavailable normalization prices"
+          ],
+          "monthlyTokens": 1598030066.6666667,
+          "monthlyYi": 15.980300666666666,
+          "monthlyBillingCnyPerMTok": 0.030662752236075994,
+          "annualBillingCnyPerMTok": 0.025552293530063327,
+          "monthlyBillingUsdPerMTok": 0.004523397146366706,
+          "annualBillingUsdPerMTok": 0.003769497621972255
+        }
+      },
+      {
+        "plan": "Explore",
+        "annualCny": 1190,
+        "monthlyCny": 119,
+        "monthlyPriceBasis": "annual screenshot price / 10; official M Plan FAQ; cross-checked against legacy prices plus unchanged-price notice",
+        "annualMonthlyEquivalentCnyExact": "1190/12",
+        "annualMonthlyEquivalentCny": 99.16666666666667,
+        "twelveMonthlyPaymentsCny": 1428,
+        "annualSavingsCny": 238,
+        "annualDiscountFractionExact": "1/6",
+        "usageRelativeToGo": 3,
+        "screenshotStruckThroughAnnualCny": 1490,
+        "monthlyPriceUsdAtRepositoryFx": 17.55498841960848,
+        "annualMonthlyEquivalentUsdAtRepositoryFx": 14.6291570163404,
+        "conditionalRawScenario_ONLY_IF_MEASURED_PLAN_IS_GO": {
+          "adopted": false,
+          "requires": [
+            "Measured account is standard CN Go",
+            "zero usage before the starting checkpoint within the hourly bucket",
+            "no unrelated shared-pool consumption",
+            "same quota across billing cycles",
+            "advertised multipliers apply to weekly quota",
+            "raw estimate accepted despite unavailable normalization prices"
+          ],
+          "monthlyTokens": 4794090200.0,
+          "monthlyYi": 47.940902,
+          "monthlyBillingCnyPerMTok": 0.024822228000632947,
+          "annualBillingCnyPerMTok": 0.020685190000527456,
+          "monthlyBillingUsdPerMTok": 0.0036617976899159053,
+          "annualBillingUsdPerMTok": 0.003051498074929921
+        }
+      },
+      {
+        "plan": "Build",
+        "annualCny": 4690,
+        "monthlyCny": 469,
+        "monthlyPriceBasis": "annual screenshot price / 10; official M Plan FAQ; cross-checked against legacy prices plus unchanged-price notice",
+        "annualMonthlyEquivalentCnyExact": "4690/12",
+        "annualMonthlyEquivalentCny": 390.8333333333333,
+        "twelveMonthlyPaymentsCny": 5628,
+        "annualSavingsCny": 938,
+        "annualDiscountFractionExact": "1/6",
+        "usageRelativeToGo": 12,
+        "screenshotStruckThroughAnnualCny": 5628,
+        "monthlyPriceUsdAtRepositoryFx": 69.18730730080989,
+        "annualMonthlyEquivalentUsdAtRepositoryFx": 57.656089417341576,
+        "conditionalRawScenario_ONLY_IF_MEASURED_PLAN_IS_GO": {
+          "adopted": false,
+          "requires": [
+            "Measured account is standard CN Go",
+            "zero usage before the starting checkpoint within the hourly bucket",
+            "no unrelated shared-pool consumption",
+            "same quota across billing cycles",
+            "advertised multipliers apply to weekly quota",
+            "raw estimate accepted despite unavailable normalization prices"
+          ],
+          "monthlyTokens": 19176360800.0,
+          "monthlyYi": 191.763608,
+          "monthlyBillingCnyPerMTok": 0.024457195235917755,
+          "annualBillingCnyPerMTok": 0.020380996029931462,
+          "monthlyBillingUsdPerMTok": 0.00360794772388773,
+          "annualBillingUsdPerMTok": 0.003006623103239775
+        }
+      }
+    ],
+    "usage": {
+      "midBucketCumulative": {
+        "input": 544999,
+        "output": 145400,
+        "cacheRead": 11078373,
+        "cacheWrite": 0
+      },
+      "endBucketCumulative": {
+        "input": 835462,
+        "output": 319359,
+        "cacheRead": 22815630,
+        "cacheWrite": 0
+      },
+      "midToEndDelta": {
+        "input": 290463,
+        "output": 173959,
+        "cacheRead": 11737257,
+        "cacheWrite": 0
+      },
+      "midBucketTotal": 11768772,
+      "endBucketTotal": 23970451,
+      "midToEndDeltaTotal": 12201679,
+      "fullSegmentRawEstimate_CONDITIONAL_ON_ZERO_START_BUCKET_USAGE": {
+        "weeklyTokens": 399507516.6666667,
+        "monthlyTokensFourWeeks": 1598030066.6666667,
+        "monthlyYi": 15.980300666666666,
+        "fiveHourTokens": 40627883.050847456,
+        "monthlyYiDisplayRoundingBounds": [
+          13.697400571428572,
+          19.1763608
+        ],
+        "roundingBoundsNote": "Sensitivity to consistent integer rounding or truncation of two weekly readings: displayed +6pp implies approximately +5 to +7pp. Not a statistical confidence interval; excludes reporting lag and baseline mismatch."
+      },
+      "midToEndRawEstimate_NOT_REQUIRING_ZERO_START_BUCKET_USAGE": {
+        "weeklyTokens": 406722633.3333333,
+        "monthlyTokensFourWeeks": 1626890533.3333333,
+        "monthlyYi": 16.268905333333333,
+        "note": "Still requires aligned quota/counter snapshots, no unrelated shared-pool consumption, and no reset; only +3pp so less precise."
+      },
+      "endBucketTokenMixFractions": {
+        "input": 0.034853828991369414,
+        "output": 0.013323028423620398,
+        "cacheRead": 0.9518231425850102,
+        "cacheWrite": 0.0
+      },
+      "inputCacheHitFraction": 0.9646755422540321
+    }
+  },
+  "normalization": {
+    "adopted": false,
+    "rawOnly": true,
+    "listWorth": null,
+    "officialM31PriceRatiosVerified": false,
+    "reason": "Contributor confirmed Go and authorized the reviewed provisional/raw PR. Exact M3.1 price ratios remain unavailable; this is an explicit proposed exception for maintainer review, not a completed standard-workload normalization.",
+    "contributorApprovedRawProposal": true
+  },
+  "conflictsAndLimitations": [
+    "Explore screenshot struck-through annual price 1490 CNY differs from 119*12=1428. Annual/10 and official unchanged-price documentation support 119/month; record, do not erase, the conflicting display.",
+    "Contributor confirmed Go on 2026-10-01. This does not independently confirm a zero starting hourly counter, exclusive pool use, or absence of historical extra benefits.",
+    "Hourly usage starts at 12:00 while quota baseline was received at 12:01. Full-segment estimate requires confirmation that the starting hourly counter was zero.",
+    "Displayed weekly quota increased only 6pp. Rounding sensitivity is 13.70 to 19.18 yi/month under a common integer-display rule, before other errors.",
+    "Input cache-hit 96.5% is not the same denominator as the project cache share. Actual whole-bucket mix is approximately 95.1823% cache, 3.4854% input, 1.3323% output.",
+    "No M3 benchmark score or M3 API price is assigned to M3.1.",
+    "The standard yearly comparison is annual price / 12 divided by the same four-week monthly estimate, not an invented one-time annual token pool.",
+    "Advertised cross-tier multipliers are evidence, but applying them to weekly quota and to this measured account remains a derived assumption, especially for legacy tiers."
+  ],
+  "proposedAdoption": {
+    "status": "contributor_approved_raw_proposal_pending_upstream_review",
+    "intendedRows": [
+      "minimax_m_plan_go_cn",
+      "minimax_m_plan_go_cn_annual",
+      "minimax_m_plan_explore_cn",
+      "minimax_m_plan_explore_cn_annual",
+      "minimax_m_plan_build_cn",
+      "minimax_m_plan_build_cn_annual"
+    ],
+    "rows": [
+      {
+        "planId": "minimax_m_plan_go_cn",
+        "model": "minimax-m3.1-flash-preview",
+        "billingCycle": "monthly",
+        "upfrontCny": 49,
+        "comparisonMonthlyCnyExact": "49",
+        "usageMultiplier": 1,
+        "confidence": "medium",
+        "workload": "measured",
+        "provisional": true
+      },
+      {
+        "planId": "minimax_m_plan_go_cn_annual",
+        "model": "minimax-m3.1-flash-preview",
+        "billingCycle": "annual",
+        "upfrontCny": 490,
+        "comparisonMonthlyCnyExact": "490/12",
+        "usageMultiplier": 1,
+        "confidence": "low",
+        "workload": "measured",
+        "provisional": true
+      },
+      {
+        "planId": "minimax_m_plan_explore_cn",
+        "model": "minimax-m3.1-flash-preview",
+        "billingCycle": "monthly",
+        "upfrontCny": 119,
+        "comparisonMonthlyCnyExact": "119",
+        "usageMultiplier": 3,
+        "confidence": "low",
+        "workload": "measured",
+        "provisional": true
+      },
+      {
+        "planId": "minimax_m_plan_explore_cn_annual",
+        "model": "minimax-m3.1-flash-preview",
+        "billingCycle": "annual",
+        "upfrontCny": 1190,
+        "comparisonMonthlyCnyExact": "1190/12",
+        "usageMultiplier": 3,
+        "confidence": "low",
+        "workload": "measured",
+        "provisional": true
+      },
+      {
+        "planId": "minimax_m_plan_build_cn",
+        "model": "minimax-m3.1-flash-preview",
+        "billingCycle": "monthly",
+        "upfrontCny": 469,
+        "comparisonMonthlyCnyExact": "469",
+        "usageMultiplier": 12,
+        "confidence": "low",
+        "workload": "measured",
+        "provisional": true
+      },
+      {
+        "planId": "minimax_m_plan_build_cn_annual",
+        "model": "minimax-m3.1-flash-preview",
+        "billingCycle": "annual",
+        "upfrontCny": 4690,
+        "comparisonMonthlyCnyExact": "4690/12",
+        "usageMultiplier": 12,
+        "confidence": "low",
+        "workload": "measured",
+        "provisional": true
+      }
+    ],
+    "evidenceOnlyPrPossible": true,
+    "note": "Six proposed subscription rows; monthly Go medium, annual Go and cross-tier rows low. Keep raw/unnormalized notes. Do not silently override legacy Token Plan rows."
+  },
+  "checks": {
+    "arithmeticRecomputed": true,
+    "jsonValid": true,
+    "repositoryBuildRun": false,
+    "webTestsRun": false,
+    "gitHubPullRequestCreated": false,
+    "remoteWritesPerformed": false,
+    "note": "Status at package preparation. Execution logs are separate; do not infer CI success from this evidence archive."
+  },
+  "contributorConfirmation": {
+    "date": "2026-10-01",
+    "quote": "这是go，可以，pr过去吧",
+    "confirmed": [
+      "Measured tier is Go",
+      "Contributor authorizes the reviewed PR proposal"
+    ],
+    "notSeparatelyConfirmed": [
+      "zero hourly counter at the starting quota checkpoint",
+      "absence of other shared-pool consumption",
+      "legacy or promotional extra benefits",
+      "weekly multiplier and annual quota equivalence"
+    ]
+  }
+}

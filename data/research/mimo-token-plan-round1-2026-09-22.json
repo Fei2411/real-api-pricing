@@ -1,7 +1,7 @@
 {
   "collectedAt": "2026-09-22",
   "subject": "小米 MiMo Token Plan 订阅计费结构（mimo.mi.com 官方文档）",
-  "scope": "8 款覆盖模型：mimo-v2.6-pro、mimo-v2.6-flash、mimo-v2.5-pro、mimo-v2.5、mimo-v2.5-asr、mimo-v2.5-tts-voiceclone、mimo-v2.5-tts-voicedesign、mimo-v2.5-tts；V2.6 于 2026-09-22 列入官方 Token Plan 支持清单（发布次日文档更新，用户订阅页截图互证）",
+  "scope": "8 款覆盖模型：mimo-v2.6-pro、mimo-v2.6-flash、mimo-v2.5-pro、mimo-v2.5、mimo-v2.5-asr、mimo-v2.5-tts-voiceclone、mimo-v2.5-tts-voicedesign、mimo-v2.5-tts；V2.6 于 2026-09-22 列入官方 Token Plan 支持清单（发布次日文档更新，维护者订阅页截图互证）",
   "tiers": [
     {
       "tier": "Lite",
@@ -250,5 +250,5 @@
     "https://platform.xiaomimimo.com/docs/zh-CN/pricing 按量计价页（V2.5 系列）",
     "https://opencode.ai/docs/go/、https://commandcode.ai/docs/plans/goat、OpenRouter 模型页（V2.6 渠道价交叉一致）"
   ],
-  "coverageUpdate": "2026-09-22 二次核验：官方订阅文档支持清单已由 v2.5 系 6 款更新为 8 款（新增 mimo-v2.6-pro/mimo-v2.6-flash，burn 率分别与 v2.5-pro/v2.5 相同），用户订阅页截图四档均标注「支持 V2.6 全新旗舰模型」；官方任务数估算基准由 mimo-v2.5 改为 mimo-v2.6-flash（200/1600/5600/12800 轮/月）"
+  "coverageUpdate": "2026-09-22 二次核验：官方订阅文档支持清单已由 v2.5 系 6 款更新为 8 款（新增 mimo-v2.6-pro/mimo-v2.6-flash，burn 率分别与 v2.5-pro/v2.5 相同），维护者订阅页截图四档均标注「支持 V2.6 全新旗舰模型」；官方任务数估算基准由 mimo-v2.5 改为 mimo-v2.6-flash（200/1600/5600/12800 轮/月）"
 }

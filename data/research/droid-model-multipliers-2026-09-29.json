@@ -1,0 +1,170 @@
+{
+  "collectedAt": "2026-09-29",
+  "subject": "Factory Droid 模型倍率表 → Droid Max 同池各模型月额度折算",
+  "sources": [
+    {
+      "type": "user_screenshot",
+      "note": "app.factory.ai 模型选择器 4 张截图（2026-09-29 14:12–14:13），倍率与官方文档一致"
+    },
+    {
+      "type": "official_docs",
+      "url": "https://docs.factory.ai/docs/models",
+      "note": "Available Models 表（Model ID / Multiplier / Reasoning），2026-09-29 抓取"
+    },
+    {
+      "type": "official_docs",
+      "url": "https://docs.factory.ai/pricing/individuals",
+      "note": "Standard Usage 先扣；Droid Core = 免费开源模型池，在 Standard Usage 用尽后另有独立 Rate Limits；5h/7d/30d 三个滚动窗"
+    }
+  ],
+  "userDecision": "2026-09-29 裁定：按倍率折算、都标 medium；Sonnet 取 5.5，Opus 取到 4.8，GPT 取到 5.6，其他太老的不算",
+  "base": {
+    "planId": "droid_max",
+    "model": "claude-opus-5.5",
+    "multiplier": 1.6,
+    "monthlyYi": 50.52,
+    "evidence": "droid-opus55-max-round1-2026-09-29.json"
+  },
+  "formula": "monthlyYi(model) = 50.52 × 1.6 / multiplier(model)",
+  "multiplierSemanticsCheck": {
+    "factoryCredits": 16935482,
+    "listWorthExThinkingUsd": 42.3382,
+    "impliedCredits": 16935269,
+    "formula": "(cache_read×$0.2 + cache_create×$5 + input×$4 + output×$20)/1e6 ÷ ($4/1.6) = 16,935,269 ≈ 面板 16,935,482（差 0.001%）",
+    "reading": "Factory credits ≈ Anthropic 标价 list-worth ÷ input 价 × 倍率（即 input 等价 token × 倍率），thinking 46,393 未计入。支持“同一池按倍率计价”的折算前提；各模型自身价差结构（缓存折扣、写入费）是否也进入 credits 未验证。"
+  },
+  "adopted": {
+    "claude-fable-5.1": {
+      "multiplier": 4,
+      "monthlyYi": 20.208
+    },
+    "claude-fable-5": {
+      "multiplier": 4,
+      "monthlyYi": 20.208
+    },
+    "claude-opus-5": {
+      "multiplier": 2,
+      "monthlyYi": 40.416
+    },
+    "claude-opus-4.8": {
+      "multiplier": 2,
+      "monthlyYi": 40.416
+    },
+    "claude-sonnet-5.5": {
+      "multiplier": 0.8,
+      "monthlyYi": 101.04
+    },
+    "gpt-6-astra": {
+      "multiplier": 4,
+      "monthlyYi": 20.208
+    },
+    "gpt-6-sol": {
+      "multiplier": 0.8,
+      "monthlyYi": 101.04
+    },
+    "gpt-6-luna": {
+      "multiplier": 0.04,
+      "monthlyYi": 2020.8
+    },
+    "gpt-5.6-sol": {
+      "multiplier": 1.6,
+      "monthlyYi": 50.52
+    },
+    "gpt-5.6-terra": {
+      "multiplier": 0.8,
+      "monthlyYi": 101.04
+    },
+    "gpt-5.6-luna": {
+      "multiplier": 0.08,
+      "monthlyYi": 1010.4
+    },
+    "gemini-3.8-flash": {
+      "multiplier": 0.3,
+      "monthlyYi": 269.44
+    },
+    "gemini-3.7-flash": {
+      "multiplier": 0.3,
+      "monthlyYi": 269.44
+    },
+    "grok-4.7": {
+      "multiplier": 0.8,
+      "monthlyYi": 101.04
+    },
+    "grok-4.6": {
+      "multiplier": 0.8,
+      "monthlyYi": 101.04
+    },
+    "inkling": {
+      "multiplier": 0.4,
+      "monthlyYi": 202.08
+    },
+    "mistral-medium-3.5": {
+      "multiplier": 0.6,
+      "monthlyYi": 134.72
+    },
+    "glm-5.3-flash": {
+      "multiplier": 0.06,
+      "monthlyYi": 1347.2
+    },
+    "glm-5.3": {
+      "multiplier": 0.56,
+      "monthlyYi": 144.343
+    },
+    "glm-5.2": {
+      "multiplier": 0.56,
+      "monthlyYi": 144.343
+    },
+    "glm-5.2-fast": {
+      "multiplier": 0.84,
+      "monthlyYi": 96.229
+    },
+    "kimi-k3": {
+      "multiplier": 1.2,
+      "monthlyYi": 67.36
+    },
+    "qwen3.8-max": {
+      "multiplier": 0.8,
+      "monthlyYi": 101.04
+    },
+    "nemotron-3-ultra": {
+      "multiplier": 0.24,
+      "monthlyYi": 336.8
+    },
+    "deepseek-v4.1-flash": {
+      "multiplier": 0.12,
+      "monthlyYi": 673.6
+    },
+    "minimax-m3": {
+      "multiplier": 0.12,
+      "monthlyYi": 673.6
+    }
+  },
+  "promotions": {
+    "gpt-5.6-sol": {
+      "multiplier": 1.6,
+      "until": "2026-11-22",
+      "after": 2
+    },
+    "gemini-3.8-flash": {
+      "multiplier": 0.3,
+      "until": "2027-01-01",
+      "after": 0.6
+    },
+    "gemini-3.7-flash": {
+      "multiplier": 0.3,
+      "until": "2027-01-01",
+      "after": 0.6
+    }
+  },
+  "excluded": {
+    "fastModes": "Opus 5.5/5/4.8 Fast、GPT-5.6 Sol Fast、GPT-5.5 Fast 等 Fast Mode：仓库无对应模型 id，未挂点",
+    "older": "Opus 4.7/4.6/4.5、Sonnet 5/4.6/4.5、Haiku 4.5、GPT-5.5 及更早、Gemini 3.6/3.5/3 Flash、Gemini 3.1 Pro、Grok 4.5",
+    "deprecated": "DeepSeek V4 Flash 0731、DeepSeek V4 Pro、MiniMax M2.7、Kimi K2.5、GLM-5.1"
+  },
+  "caveats": [
+    "非各模型实测，全部 medium（裁定）",
+    "沿用 Opus 5.5 行的 Anthropic 档负载，未按各模型自身价差重算",
+    "Droid Core 模型只计 Standard Usage 部分；用尽后的免费开源池独立限额未实测",
+    "30 天窗若低于 4× 周池，全部行偏高"
+  ]
+}

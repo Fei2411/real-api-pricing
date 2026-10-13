@@ -60,7 +60,7 @@
       "sourceDate": "2026-08-26",
       "quote": "Supergrok 订阅，取几个不同时间测试，在 $90 ~ $110 波动。Supergrok Heavy 订阅，目前看是 $890 左右，姑且认为是 $900",
       "confidence": "high",
-      "note": "与项目内用户参考「Heavy ≈$250/周」差约 3.6×，方向上大幅高于 $250。作者强调无优惠/无 Cursor 绑定时正价 $300 Heavy 性价比差。@grok 仍称 exact sizes unpublished。"
+      "note": "与项目内维护者参考「Heavy ≈$250/周」差约 3.6×，方向上大幅高于 $250。作者强调无优惠/无 Cursor 绑定时正价 $300 Heavy 性价比差。@grok 仍称 exact sizes unpublished。"
     },
     {
       "planId": "supergrok",
@@ -176,7 +176,7 @@
       "planId": "supergrok_heavy",
       "wanted": "Heavy 在 Grok Build 内受控打满：token 增量 + 周 %（对标 $30 档 V2EX 方法），或官方周 token/credits 表",
       "searched": "linux.do Heavy 打满、X SuperGrok Heavy Build usage、hermes-agent、fulcrum-grok-meter、xAI docs",
-      "result": "新得美元÷% ≈$900/周（高置信）与 Hermes 110M/>20%（中置信、非 Build CLI）。仍缺 Build 路径上「token+%」金标准截图；用户参考 $250/周未被公开源复现，且与 $900 口径冲突。"
+      "result": "新得美元÷% ≈$900/周（高置信）与 Hermes 110M/>20%（中置信、非 Build CLI）。仍缺 Build 路径上「token+%」金标准截图；维护者参考 $250/周未被公开源复现，且与 $900 口径冲突。"
     },
     {
       "planId": "cursor_pro_plus",

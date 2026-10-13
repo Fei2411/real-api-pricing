@@ -1,7 +1,7 @@
 {
  "collectedAt": "2026-09-23",
  "supplement": true,
- "supplementNote": "9/21–22 新发模型（Claude Opus 5.5、GPT-6 Sol/Luna、Grok 4.7、MiMo V2.6、Step 5 Preview）官方/第三方榜单补档。scores[] 只收录榜单方实测行，追加到各榜当前快照（无 baseSnapshot → append 到各板现行快照）。AA Intelligence 线上已是 v4.3.2（10 评测），round4 快照标 v4.3——沿 scores-mimo 档先例，本档分数为 v4.3.2 读数，整榜重拉前混用有版本风险。AA 独立实测 TB4（页面注明 Independently benchmarked by Artificial Analysis）按用户 2026-09-23 裁定拆为独立榜 aa_terminal_bench_4（agentHarness=Artificial Analysis 自动路由），与 tbench.ai 官方 harness 行不互灌。GPT-6 Sol/Luna（9/22 新发）尚无 adopted 套餐行，官方分数移入 unmappedOfficialRows 不灌 scores[]（沿 round4 notableUnmappedNonAdopted 先例）。厂商自报数只进 vendorBenchmarksNotBoards；官方但非项目榜单进 officialBoardsNotInProject。",
+ "supplementNote": "9/21–22 新发模型（Claude Opus 5.5、GPT-6 Sol/Luna、Grok 4.7、MiMo V2.6、Step 5 Preview）官方/第三方榜单补档。scores[] 只收录榜单方实测行，追加到各榜当前快照（无 baseSnapshot → append 到各板现行快照）。AA Intelligence 线上已是 v4.3.2（10 评测），round4 快照标 v4.3——沿 scores-mimo 档先例，本档分数为 v4.3.2 读数，整榜重拉前混用有版本风险。AA 独立实测 TB4（页面注明 Independently benchmarked by Artificial Analysis）按2026-09-23 裁定拆为独立榜 aa_terminal_bench_4（agentHarness=Artificial Analysis 自动路由），与 tbench.ai 官方 harness 行不互灌。GPT-6 Sol/Luna（9/22 新发）尚无 adopted 套餐行，官方分数移入 unmappedOfficialRows 不灌 scores[]（沿 round4 notableUnmappedNonAdopted 先例）。厂商自报数只进 vendorBenchmarksNotBoards；官方但非项目榜单进 officialBoardsNotInProject。",
  "boards": [
   {
    "boardId": "aa_intelligence_index",

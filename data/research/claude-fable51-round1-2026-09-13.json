@@ -270,6 +270,6 @@
     "apiPrice": "claude-fable-5-1: $10 in / $0.25 cached / $50 out（write 5m $12.50 / 1h $20）。input/out 与 Fable 5 同；cached 从 $1 降到 $0.25。",
     "subscriptionWeight": "官方未公布 5.1 新倍数。Fable 5 历史 Reddit 6.50×(20x)/4.25×(5x) 未被本轮复测取代。5.1 方向证据：每 turn 输出约 2× Fable 5（GitHub high），订阅缓存计量未跟 API 降价（ClaudeDevs high），社区称 Fable-minutes 可能只剩 1/3–1/4（medium/low）。50% 周帽对 5+5.1 合计仍适用（official high）。",
     "absolutePoolAfterSep1": "notFound — 无新的 total×% 金标准；9/1、9/4 重置干扰。",
-    "adoptionImplication": "若要为 X 轴新增 (claude_max_*, claude-fable-5-1) 点：可用性与 50% 帽可采；API 标价可采；订阅权重倍数尚不足以把 6.5/4.25 直接改标为 5.1，需用户拍板是否沿用 Fable 5 权重、或等待新标定、或仅用 output/turn≈2× 作保守方向修正。"
+    "adoptionImplication": "若要为 X 轴新增 (claude_max_*, claude-fable-5-1) 点：可用性与 50% 帽可采；API 标价可采；订阅权重倍数尚不足以把 6.5/4.25 直接改标为 5.1，需裁定是否沿用 Fable 5 权重、或等待新标定、或仅用 output/turn≈2× 作保守方向修正。"
   }
 }

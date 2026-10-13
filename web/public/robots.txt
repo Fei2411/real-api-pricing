@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://realapipricing.com/sitemap.xml
