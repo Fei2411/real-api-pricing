@@ -9,8 +9,8 @@
     "lastUpdatedAt": "2026-09-02"
   },
   "overrides": {
-    "cursor_ultra": "用户确认",
-    "supergrok_heavy": "用户确认",
+    "cursor_ultra": "确认",
+    "supergrok_heavy": "确认",
     "kimi_allegretto_cn": "本机反推",
     "kimi_andante_cn": "倍率外推",
     "kimi_moderato_cn": "倍率外推",
@@ -991,7 +991,7 @@
       "quotaBasis": "20x_pro_midpoint",
       "quotaConfidence": "medium",
       "quotaNotes": "Pro 700 × 20. Tokens = 1.4e10. Same Fast-default caveat as Pro. Other Models community-cited $400.",
-      "override": "用户确认",
+      "override": "确认",
       "models": [
         {
           "modelId": "grok-4.6",
@@ -1002,7 +1002,7 @@
           "weeklyYi": null,
           "relativeBurn": null,
           "confidence": null,
-          "quotaSource": "用户确认",
+          "quotaSource": "确认",
           "notes": "第一方 Grok。SubPlan 另有 140 亿（Pro 7亿×20）",
           "fromAccessProfileOnly": true
         },
@@ -2078,7 +2078,7 @@
       "quotaBasis": "heavy_mult_on_supergrok_build",
       "quotaConfidence": "low",
       "quotaNotes": "SuperGrok Heavy: fuller Grok Build multi-agent. Monthly token proxy ~5× SuperGrok practical estimate.",
-      "override": "用户确认",
+      "override": "确认",
       "models": [
         {
           "modelId": "grok-4.6",
@@ -2089,7 +2089,7 @@
           "weeklyYi": 12.0,
           "relativeBurn": 1,
           "confidence": "low",
-          "quotaSource": "用户确认",
+          "quotaSource": "确认",
           "notes": "周额度 $250 ≈ 12 亿；月 ×4 = 48 亿。SubPlan 20 亿代理作废"
         }
       ]

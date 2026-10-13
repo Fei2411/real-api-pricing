@@ -1,6 +1,6 @@
 {
   "collectedAt": "2026-09-22",
-  "subject": "SuperGrok 周池 — Grok 4.7 本机实测（用户账号，/usage 面板 + 会话统计同框）",
+  "subject": "SuperGrok 周池 — Grok 4.7 本机实测（维护者账号，/usage 面板 + 会话统计同框）",
   "source": {
     "type": "user_panel_screenshots",
     "panel": "Weekly limit (SuperGrok), resets September 24 22:37",
@@ -42,11 +42,11 @@
       {
         "id": "删除版",
         "model": "grok-4.7",
-        "note": "会话已删除，仅存统计表行：无 token 总数/成本绝对值。用户确认其为 9% 总消耗的一部分。",
+        "note": "会话已删除，仅存统计表行：无 token 总数/成本绝对值。确认其为 9% 总消耗的一部分。",
         "tableMix": {"cacheReadOverInput": 0.638, "outputOverTotal": 0.037, "reasoningOverTotal": 0.023, "usdPer1MTokens": 0.416, "toolsPerCall": 1.14}
       }
     ],
-    "userConfirmation": "用户 2026-09-22 确认：19%→28% 的 9% 周额度消耗由这三个会话完整构成（\"这是完整的9%\"）。"
+    "userConfirmation": "2026-09-22 确认：19%→28% 的 9% 周额度消耗由这三个会话完整构成（\"这是完整的9%\"）。"
   },
   "derivation": {
     "knownTokens": 13442816,
@@ -77,6 +77,6 @@
     "supergrok_plus": {"monthlyYi": 26.9, "confidence": "medium", "how": "面板$100/25 派生"},
     "supergrok_heavy": {"monthlyYi": 67.2, "confidence": "medium", "how": "面板$250/25 派生"},
     "supergrok_lite": "面板美元未知，不派生；该档保持只有 4.6 点",
-    "confidenceRationale": "本机面板级同框但 n=1 账号 n=1 周窗、删除版份额系推断而非读数；形式上是用户面板截图反推，因推断成分定 medium，重置后受控打满可升 high"
+    "confidenceRationale": "本机面板级同框但 n=1 账号 n=1 周窗、删除版份额系推断而非读数；形式上是维护者面板截图反推，因推断成分定 medium，重置后受控打满可升 high"
   }
 }

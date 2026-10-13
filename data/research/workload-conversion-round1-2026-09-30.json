@@ -1,0 +1,141 @@
+{
+  "recordedAt": "2026-09-30",
+  "sourceType": "methodology_recalculation",
+  "trigger": "2026-09-30 全库审计：adopted 297 行中 workload=measured 73 行（22 个独立实测样本 + 17 行官方档位倍率放大 + 27 行模型比价派生 + 7 行官方绝对 token 表/占位）。Claude Pro × Opus 5.5、Devin Max、Droid Max 已按标价折 list-worth 再按负载档换算，其余带 token 分项的实测样本仍直接用 raw total，同类样本口径不一致。",
+  "userDecision": "2026-09-30 裁定：(1) 带 token 分项的实测样本统一折算（维护者原话「要折算」）；(2) Google 用低缓存档（维护者原话「谷歌我记得有个单独的低负载」——即 conventions.lowCacheTokenMix，2026-09-22 裁定时已写明 Gemini 实测 82.6% 属同族）；(3) 缺分项的样本保留 raw，workload 仍标 measured，并在网页与 README 注明未折算（维护者原话「3.可以」）。",
+  "method": {
+    "formula": "段 list-worth ÷ 段占周额度 → 周 worth ×4 周 → 月 worth ÷ 该模型在负载档下的混合价 = 月 token",
+    "rawVsConverted": "等价于 raw 月值 × (样本每 token 平均价 ÷ 负载档混合价)",
+    "tiers": {
+      "standard": [0.97, 0.025, 0.005],
+      "lowCache": [0.85, 0.145, 0.005],
+      "anthropic": "0.97 × 缓存读价 + 0.025 × 5 分钟缓存写价 + 0.005 × 输出价"
+    },
+    "cacheWriteRule": "Anthropic 样本的缓存写按实际档位计价（1h / 5m），同 issue #52 口径"
+  },
+  "converted": [
+    {
+      "row": "chatgpt_plus × gpt-6-sol",
+      "sample": "chatgpt-gpt6sol-plus-round1-2026-09-24.json：cache 14,976,384 / input 693,878 / output 46,713 = 15,716,975，周 6%",
+      "prices": "cached $0.2 / input $2 / output $10（$2/$10 为 AA 页标价；cached 按 0.1× 推定，与 ChatGPT credits Sol 10/100/500、Astra 25/250/1250 的 1:10:50 比一致）",
+      "worthUsd": 4.8502,
+      "standardBlendUsdPerMTok": 0.294,
+      "rawMonthlyYi": 10.48,
+      "convertedMonthlyYi": 11.00,
+      "factor": 1.0496,
+      "workload": "standard"
+    },
+    {
+      "row": "chatgpt_plus × gpt-6-luna",
+      "sample": "chatgpt-gpt6luna-plus-round2-2026-09-28.json：cache 133,761,408 / input 3,129,683 / output 757,355 = 137,648,446，周 6pp",
+      "prices": "cached $0.01 / input $0.1 / output $0.5（$0.1/$0.5 为 scores-gpt6luna-round1 存档 AA 标价；cached 按 0.1× 推定）",
+      "worthUsd": 2.0293,
+      "standardBlendUsdPerMTok": 0.0147,
+      "rawMonthlyYi": 91.77,
+      "convertedMonthlyYi": 92.03,
+      "factor": 1.0029,
+      "workload": "standard"
+    },
+    {
+      "row": "chatgpt_plus × gpt-6.1-sol",
+      "sample": "chatgpt-gpt61sol-plus-round1/round2-2026-09-30.json：cache 38,430,592 / input 2,035,108 / output 206,776 = 40,672,476，周 21pp",
+      "prices": "假设与 GPT-6 Sol 同价 $0.2/$2/$10——库内无 GPT-6.1 Sol 标价（notFound）；折算只依赖三段价比，若 6.1 Sol 仍为 1:10:50 则结果不变",
+      "worthUsd": 13.8241,
+      "standardBlendUsdPerMTok": 0.294,
+      "rawMonthlyYi": 7.75,
+      "convertedMonthlyYi": 8.96,
+      "factor": 1.1561,
+      "workload": "standard"
+    },
+    {
+      "row": "chatgpt_plus × gpt-5.6-luna（Pro 5x/20x ×5/×20 随动）",
+      "sample": "chatgpt-luna-adoption-round6-2026-09-08.json：cache 109,356,416 / input 2,941,040 / output 369,313 = 112,666,769，周 6%",
+      "prices": "cached $0.02 / input $0.2 / output $1.2（METERED openai_luna_api，1:10:60）",
+      "worthUsd": 3.2185,
+      "standardBlendUsdPerMTok": 0.0304,
+      "rawMonthlyYi": 75.11,
+      "convertedMonthlyYi": 70.58,
+      "factor": 0.9397,
+      "derived": {"chatgpt_pro_5x": 352.91, "chatgpt_pro_20x": 1411.63},
+      "workload": "standard"
+    },
+    {
+      "row": "claude_pro × claude-opus-5（Sonnet 5 ×2.5、Opus 4.8 ×1 随动）",
+      "sample": "community-issues-round1-2026-09-29.json issue #53：cache 1,004.96M / 1h 写 12.99M / input 0.01M / output 4.06M，周 +148pp",
+      "prices": "Opus 5：读 $0.5 / 1h 写 $10 / 5m 写 $6.25 / 入 $5 / 出 $25",
+      "worthUsd": 733.93,
+      "worthPerPctUsd": 4.95899,
+      "anthropicBlendUsdPerMTok": 0.76625,
+      "rawMonthlyYi": 27.62,
+      "convertedMonthlyYi": 25.89,
+      "factor": 0.9373,
+      "derived": {"claude-sonnet-5": 64.725, "claude-opus-4.8": 25.89},
+      "workload": "anthropic"
+    },
+    {
+      "row": "google_ai_pro_us × gemini-3.8-flash（Ultra 5x/20x ×5/×20 随动）",
+      "sample": "维护者 B 段（gemini-weekly-round7）cache 45.688M / input 9.258M / output 0.398M = 周 +9.88%，worth $11.8626；issue #54 cache 695.70M / input 146.25M / output 11.48M = +165.77pp，worth $204.915；按百分点合并",
+      "prices": "Gemini 3.8 Flash 引入价 cached $0.075 / input $0.75 / output $3.75（至 2026-12-31，gemini-weekly-round7）",
+      "worthPerPctUsd": 1.23415,
+      "lowCacheBlendUsdPerMTok": 0.19125,
+      "rawMonthlyYi": 20.70,
+      "convertedMonthlyYi": 25.81,
+      "factor": 1.2469,
+      "derived": {"google_ai_ultra_5x_us": 129.05, "google_ai_ultra_20x_us": 516.2},
+      "reference": "按标准档为 44.78 亿（裁定用低缓存档，不采）",
+      "workload": "lowCache"
+    },
+    {
+      "row": "google_ai_pro_us × gemini-3.6-flash",
+      "sample": "issue #55：cache 78.32M / input 14.95M / output 2.33M = 95.60M，周 +21.70pp，worth $25.824",
+      "prices": "按投稿人所述与 3.8 Flash 同价；每 1% worth $1.190 与 3.8 Flash 的 $1.234 同量级，支持同一按价额度池",
+      "worthPerPctUsd": 1.19005,
+      "lowCacheBlendUsdPerMTok": 0.19125,
+      "rawMonthlyYi": 17.62,
+      "convertedMonthlyYi": 24.89,
+      "factor": 1.4126,
+      "workload": "lowCache"
+    },
+    {
+      "row": "supergrok × grok-4.7（Plus/Heavy 按面板 $100/$250 标定随动）",
+      "sample": "supergrok-grok47-round2-2026-09-22.json「这次」窗：cached 51,728,640 / 未缓存 input 4,621,905 / output 278,838 = 56,629,383，周 +45.5475%",
+      "prices": "Grok 4.7 API cached $0.5 / input $2 / output $6（<200k 档）",
+      "worthUsd": 36.7812,
+      "standardBlendUsdPerMTok": 0.565,
+      "weeklyTokensConverted": 142926384,
+      "rawMonthlyYi": 4.97,
+      "convertedMonthlyYi": 5.72,
+      "factor": 1.1496,
+      "derived": {"supergrok_plus": 22.9, "supergrok_heavy": 57.2},
+      "workload": "standard"
+    },
+    {
+      "row": "supergrok × grok-4.6（Plus/Heavy、Grok 4.5 ×1 随动）",
+      "sample": "issue #56 两平常周 cache 206.4M / input 15.3M / output 1.29M = +193pp，worth $141.54；V2EX 受控打满 127,272,629 token = 整周 100%（无分项）",
+      "prices": "Grok 4.6 API cached $0.5 / input $2 / output $6（<200k 档）",
+      "assumption": "V2EX 样本无分项，按已是标准档计 worth（127,272,629 × $0.565/MTok = $71.909），与 #56 按百分点合并；只用 #56 为 5.19 亿",
+      "standardBlendUsdPerMTok": 0.565,
+      "weeklyTokensConverted": 128937168,
+      "rawMonthlyYi": 4.78,
+      "convertedMonthlyYi": 5.16,
+      "factor": 1.0782,
+      "derived": {"supergrok_plus": 20.6, "supergrok_heavy": 51.6, "supergrok × grok-4.5": 5.16, "supergrok_heavy × grok-4.5": 51.6},
+      "workload": "standard"
+    }
+  ],
+  "keptRaw": [
+    {"row": "chatgpt_plus × gpt-5.6-sol 6.16（Pro 5x 30.8 及 Terra/gpt-5.5 派生）", "reason": "awesome-coding-plan 2026-07-30 实测，无分项"},
+    {"row": "chatgpt_pro_20x × gpt-5.6-sol 129.02", "reason": "五源加权，多数来源无分项"},
+    {"row": "chatgpt_plus × gpt-6-astra 1.59", "reason": "抽取只含 input + cache_read，缺 output"},
+    {"row": "chatgpt_pro_20x × gpt-6-astra 38.12（Pro 5x 派生）", "reason": "八源加权，多数来源无分项"},
+    {"row": "claude_max_20x × claude-opus-5 157（Max 5x 与 Sonnet/Opus 4.8/Fable 派生）", "reason": "Zenn 混合模型样本，无分项"},
+    {"row": "claude_max_20x × claude-opus-5.5 301.7（Max 5x 派生）", "reason": "按 5h 窗 raw 与 Opus 5 周池的隐含权重推得，非直接周% 样本"},
+    {"row": "claude_max_20x × claude-fable-5.1 17.28", "reason": "样本只有 cache 读 + 输出，缺写入/输入分项，且经活动期池分解；本轮不动"},
+    {"row": "cursor_ultra / cursor_ultra_fast / cursor_pro（Pro+ 与 Composer 派生）", "reason": "面板只给 token 合计与费用 %"},
+    {"row": "kimi_allegretto_cn × kimi-k3 14.51（Moderato/Allegro 派生）", "reason": "ccusage 只存周合计"},
+    {"row": "kimi_allegretto_cn × kimi-k2.7-code 15.68（各档派生）", "reason": "只有 cache 11,542,080 / 合计 11,913,113，缺 input/output 分项"},
+    {"row": "aliyun_coding_pro_cn/global × qwen3.7-plus 1.98", "reason": "《财经》¥101/亿，无分项"},
+    {"row": "supergrok_lite × grok-4.6 1.5", "reason": "AA 占位值"},
+    {"row": "minimax_token_* × minimax-m3/m2.7（8 行）", "reason": "官方绝对 token 表，规则上不套负载"}
+  ]
+}

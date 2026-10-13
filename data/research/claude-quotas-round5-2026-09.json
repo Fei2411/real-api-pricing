@@ -99,7 +99,7 @@
       "claim": "Max 5x 实际周额度基线实测：~4–5 条 Opus 消息消耗 1% 周上限，整周平稳跑满约需 400–500 条 Opus 消息（可维持 6–7 天正常工作）。升级 20x 异常时则降为 ~2 条 Opus 消息/1%",
       "weeklyTokens": 1080000000,
       "monthlyTokens": 4320000000,
-      "tokenCountingNote": "用户观测面板每 1% 对应的 Opus 消息数：Max 5x 为 4~5 msg/1% → 周容量 400~500 msg；若按 Claude Code 典型 turn 240k-270k total tokens 估算，周约 9.6–13.5 亿 tokens（中位 10.8 亿），月约 38.4–54 亿 tokens（中位 43.2 亿）。",
+      "tokenCountingNote": "维护者观测面板每 1% 对应的 Opus 消息数：Max 5x 为 4~5 msg/1% → 周容量 400~500 msg；若按 Claude Code 典型 turn 240k-270k total tokens 估算，周约 9.6–13.5 亿 tokens（中位 10.8 亿），月约 38.4–54 亿 tokens（中位 43.2 亿）。",
       "evidenceType": "ccusage_with_pct",
       "source": "https://github.com/anthropics/claude-code/issues/79773",
       "sourceDate": "2026-07-21",

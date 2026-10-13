@@ -1,8 +1,8 @@
 # Public edition / 公开版说明
 
-Prepared on 2026-09-06. This repository contains redacted research records, not the untouched private evidence archive.
+Prepared on 2026-09-06 at the maintainer's request. This repository contains redacted research records, not the untouched private evidence archive. Original files were first backed up at their original paths with SHA-256 recorded; the public copies were then modified on record. `_backup/`, `_build/` and temporary directories are Git-ignored and not part of the publication.
 
-2026-09-06 按维护者要求制作公开脱敏版。原始文件先按原路径备份并记录 SHA-256，再对公开副本进行有记录的修改。`_backup/`、`_build/` 和临时目录由 Git 忽略，不属于发布内容。
+2026-09-06 按裁定制作公开脱敏版。原始文件先按原路径备份并记录 SHA-256，再对公开副本进行有记录的修改。`_backup/`、`_build/` 和临时目录由 Git 忽略，不属于发布内容。
 
 ## Removed or generalized / 移除与泛化
 
@@ -13,7 +13,7 @@ Prepared on 2026-09-06. This repository contains redacted research records, not 
 
 ## Retained / 保留
 
-- The initial 2026-09-06 public snapshot contained all 81 adopted plan × model rows and separate leaderboard scores. The current dataset has since expanded to 179 rows; later additions follow the same redaction rules.
+- The initial 2026-09-06 public snapshot contained 81 adopted plan × model rows; later additions follow the same redaction rules.
 - Aggregate usage measurements needed to understand quota estimates; these are not conversation transcripts or credentials.
 - Evidence dates, public source URLs, model configurations, confidence, rejected claims and decision notes.
 - Necessary technical evidence from other sources and mandatory upstream author attribution. Public source attribution is not treated as a private identifier.

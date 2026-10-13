@@ -1,6 +1,6 @@
 {
   "collectedAt": "2026-09-08",
-  "scopeNote": "Kimi 国内订阅月池与周池关系专项更正。追加用户确认与既有面板比例交叉检查；不修改历史 research 文件。",
+  "scopeNote": "Kimi 国内订阅月池与周池关系专项更正。追加确认与既有面板比例交叉检查；不修改历史 research 文件。",
   "items": [
     {
       "planId": "kimi_allegretto_cn",

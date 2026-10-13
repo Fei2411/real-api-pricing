@@ -1,9 +1,9 @@
 {
   "collectedAt": "2026-09-20",
-  "scopeNote": "第十三轮：用户转供的 Grok 搜集批次——只收 Codex 内 GPT-6 Astra 且 token 与用量条同框的实测（Plus 与 Pro 20x）。其中 V2EX msg7086 已在 round12 归档（本文件标注去重），其余为本轮新证据。口径：全 token 一视同仁；月=4周；饱和使用。",
+  "scopeNote": "第十三轮：维护者转交的 Grok 搜集批次——只收 Codex 内 GPT-6 Astra 且 token 与用量条同框的实测（Plus 与 Pro 20x）。其中 V2EX msg7086 已在 round12 归档（本文件标注去重），其余为本轮新证据。口径：全 token 一视同仁；月=4周；饱和使用。",
   "priorContext": {
-    "round12": "data/research/chatgpt-astra-round12-2026-09-16.json — Pro20x Astra 周池 8亿簇(Observatory 8.53/V2EX 8.07/sdmat>8) vs 高端簇(12~23亿) 未裁决，用户拍板暂不挂点",
-    "round7": "data/research/chatgpt-astra-adoption-round7-2026-09-11.json — Plus Astra 采用 1.59亿/月（用户面板 10.34M=26pt）"
+    "round12": "data/research/chatgpt-astra-round12-2026-09-16.json — Pro20x Astra 周池 8亿簇(Observatory 8.53/V2EX 8.07/sdmat>8) vs 高端簇(12~23亿) 未裁决，裁定暂不挂点",
+    "round7": "data/research/chatgpt-astra-adoption-round7-2026-09-11.json — Plus Astra 采用 1.59亿/月（维护者面板 10.34M=26pt）"
   },
   "items": [
     {
@@ -140,7 +140,7 @@
       "note": "8亿簇现含5条独立来源（含3条token×%同框）；高端簇全部为跨reset或纯口述，裁决为不采。"
     },
     "impliedWeightVsSol": "加权周池9.61亿Astra当量 vs Sol 30.8亿/周 → w≈3.20×；低端簇各源隐含w≈3.7~4.5与Observatory实测4.2×同向，round10隐含w≈2.2~2.8",
-    "adoptionImplication": "推翻round12'暂不挂点'：Pro20x Astra采用加权均值9.61亿/周=38.43亿/月，medium——四条外部实测源按验证等级加权（Observatory 8.53×3 / round10 13.8×3 经用户确认10%与档位真实 / g5a 7.52×3 / msg7086 8.07×2）；用户自测≈32亿/月与lichengzhe网关21~23亿按用户指示不入权，纯口述与仅下限源不进均值。Pro5x按档间4×派生9.61亿/月，low（prolite同框9.2亿/月量级接近但多代理放大，不直接采）。同源真实测量散布6.8~15.6亿/周提示账号间池子可能不同，加权值是中心而非普适常数。",
+    "adoptionImplication": "推翻round12'暂不挂点'：Pro20x Astra采用加权均值9.61亿/周=38.43亿/月，medium——四条外部实测源按验证等级加权（Observatory 8.53×3 / round10 13.8×3 经确认10%与档位真实 / g5a 7.52×3 / msg7086 8.07×2）；维护者自测≈32亿/月与lichengzhe网关21~23亿按裁定不入权，纯口述与仅下限源不进均值。Pro5x按档间4×派生9.61亿/月，low（prolite同框9.2亿/月量级接近但多代理放大，不直接采）。同源真实测量散布6.8~15.6亿/周提示账号间池子可能不同，加权值是中心而非普适常数。",
     "pro5xCorroboration": "round12 #45085 prolite：198.4M/86%→2.31亿/周=9.2亿/月，与派生8.3亿接近"
   },
   "notFound": [

@@ -1,6 +1,6 @@
 {
   "collectedAt": "2026-09-11",
-  "scopeNote": "Devin Max 采用记录。round1（devin-usage-round1-2026-09-11.json）的 59%→39%（20pt）段补齐 output/cache_create/calls 列，用户确认该 20pt 是周额度口径且采用 astra 单列数据反推；swe-2 免费不占额度。新增 devin_max × gpt-6-astra 采用点。",
+  "scopeNote": "Devin Max 采用记录。round1（devin-usage-round1-2026-09-11.json）的 59%→39%（20pt）段补齐 output/cache_create/calls 列，确认该 20pt 是周额度口径且采用 astra 单列数据反推；swe-2 免费不占额度。新增 devin_max × gpt-6-astra 采用点。",
   "items": [
     {
       "planId": "devin_max",
@@ -10,14 +10,14 @@
       "model": "gpt-6-astra",
       "panelModelName": "gpt-6-astra-high",
       "evidenceType": "user_dashboard_backcalculation",
-      "source": "用户本人 Devin Max 账号用量抽取，2026-09-11；同一 20pt 段的完整列",
+      "source": "维护者本人 Devin Max 账号用量抽取，2026-09-11；同一 20pt 段的完整列",
       "sourceDate": "2026-09-11",
-      "userConfirmation": "用户直接提供分模型 token Δ 表，并确认：(a) 该段消耗 20% 周额度；(b) 采用 astra 单列数据；(c) swe-2 免费不计入额度。",
+      "userConfirmation": "维护者直接提供分模型 token Δ 表，并确认：(a) 该段消耗 20% 周额度；(b) 采用 astra 单列数据；(c) swe-2 免费不计入额度。",
       "observedSegment": {
         "remainingFrom": 0.59,
         "remainingTo": 0.39,
         "deltaPercentPoints": 20,
-        "window": "周额度（用户确认；Devin Max 官方口径为周池、无日上限）",
+        "window": "周额度（确认；Devin Max 官方口径为周池、无日上限）",
         "modelRow": {
           "model": "gpt-6-astra-high",
           "callsDelta": 319,
@@ -42,9 +42,9 @@
       "tokenCountingNote": "全口径：input + output + cache_read + cache_create 一视同仁，直接采用面板 total Δ=81,207,229，不按项目标准负载归一。",
       "anomalies": [
         "astra 段 cache_read 79.1M 对 fresh input 仅 957，命中率 99.9988%（含 cache_create 分母 97.84%）：疑似超长上下文会话反复续跑或 cache_read 计数口径含重复读；total 口径已含全部读/写，反推仍成立但单段构成极端",
-        "同段 swe-2 45.5M tokens 与 summarizer/compactor 15.2 万 tokens 不计入：swe-2 用户确认免费；summarizer/compactor 若计费仅占总耗 0.19%，不影响反推"
+        "同段 swe-2 45.5M tokens 与 summarizer/compactor 15.2 万 tokens 不计入：swe-2 确认免费；summarizer/compactor 若计费仅占总耗 0.19%，不影响反推"
       ],
-      "confidence": "high（用户面板直接数据；单段、命中率异常已在 anomalies 记录）",
+      "confidence": "high（维护者面板直接数据；单段、命中率异常已在 anomalies 记录）",
       "decision": "采用。新增 devin_max × gpt-6-astra = 16.24 亿/月，真实单价约 $0.1232/MTok。"
     }
   ],

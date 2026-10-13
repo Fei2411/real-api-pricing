@@ -1,8 +1,8 @@
 {
   "collectedAt": "2026-09-10",
   "sourceType": "official-docs",
-  "scope": "核对用户指出的「1$ ≈ 7M Credits」是否与中文「1M Credit = ¥1」冲突。不改 adopted。",
-  "userInstruction": "用户看到 1$ ≈ 7M Credits，质疑上一轮按 1M Credit = ¥1 的折算。",
+  "scope": "核对所指出的「1$ ≈ 7M Credits」是否与中文「1M Credit = ¥1」冲突。不改 adopted。",
+  "userInstruction": "维护者看到 1$ ≈ 7M Credits，质疑上一轮按 1M Credit = ¥1 的折算。",
   "prior": "data/research/stepfun-step-plan-round1-2026-09-10.json",
   "officialBilingual": {
     "zh": {

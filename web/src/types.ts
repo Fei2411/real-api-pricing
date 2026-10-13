@@ -1,7 +1,7 @@
 import type { Lock } from "./domain";
 
 export type Lang = "en" | "zh";
-export type View = "pareto" | "price" | "allowance" | "method";
+export type View = "pareto" | "price" | "allowance" | "table" | "method";
 export interface Point {
   id: string;
   plan_id: string;
@@ -32,11 +32,21 @@ export interface Point {
   workload?: string;
   /** Plan generation tag for legacy plans, e.g. "v2" on GLM existing-customer tiers. */
   plan_gen?: string;
+  /** Date the quota data was sampled / the official source date, shown in the detail panel. */
+  data_date?: string | null;
+  /** Provenance of data_date: "sample" | "official" | "derived". */
+  data_date_kind?: string | null;
+  /** Anchor point a "derived" data_date is inherited from. */
+  data_date_from?: string | null;
   /** Official metered API list prices per MTok in the vendor's own currency. */
   list_price?: { cached: number; input: number; output: number; currency: string } | null;
   source: string;
   note: string;
   decision_note: string;
+  /** English translations of the Chinese source/note fields (data/i18n). */
+  source_en?: string;
+  note_en?: string;
+  decision_note_en?: string;
   evidence: { label: string; url: string }[];
 }
 export interface Configuration {
@@ -53,8 +63,16 @@ export interface Configuration {
   score_low: number | null;
   score_high: number | null;
   source: string;
+  source_en?: string;
   archive?: string;
   checked_at?: string;
+  /** The board's own label for this configuration (raw_record.variantLabel). */
+  board_label?: string;
+  /** The archived record's note in zh and en (i18n-resolved, website-only). */
+  record_note_zh?: string;
+  record_note_en?: string;
+  /** Local URL of the copied score archive under /data/evidence/. */
+  archive_url?: string;
   mean_cost_usd_per_task?: number | null;
   median_cost_per_task_usd?: number | null;
   median_cost_usd_per_task?: number | null;
@@ -99,8 +117,18 @@ export type FilterKey =
   | "harness"
   | "effort"
   | "modes";
+export type AllowanceLayout = "list" | "cards" | "compare";
 export interface State {
   feeBand: string;
+  /** Presentation of the monthly-allowance view; other views ignore it. */
+  layout: AllowanceLayout;
+  /**
+   * Allowance comparison slots in order: a point id once complete,
+   * `plan:<planKey>` while only the plan is chosen, "" while empty.
+   */
+  compare: string[];
+  /** Point ids shown as allowance cards, grouped by plan; empty shows none. */
+  cards: string[];
   lang: Lang;
   view: View;
   board: string;

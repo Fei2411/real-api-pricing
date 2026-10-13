@@ -40,12 +40,23 @@ for doc in [ROOT/'README.md',ROOT/'README.zh.md',ROOT/'BUILD.md',ROOT/'SOURCES.m
     for target in re.findall(r'\]\(([^)]+)\)', doc.read_text(encoding='utf-8')):
         if not target.startswith(('http:', 'https:', '#')):
             assert (doc.parent/target).exists(), (doc,target)
-for doc,lang in [('README.md','en'),('README.zh.md','zh')]:
-    s=(ROOT/doc).read_text(encoding='utf-8')
+readmes={'en':(ROOT/'README.md').read_text(encoding='utf-8'),
+         'zh':(ROOT/'README.zh.md').read_text(encoding='utf-8')}
+for lang,s in readmes.items():
     pictures=re.findall(r'!\[[^\]]*\]\(([^)]+)\)',s)
-    assert len(pictures)==11 and all(p.startswith(f'charts/{lang}/') for p in pictures)
-    assert s.count('[English SVG]')==11 and s.count('[中文 SVG]')==11
-    assert s.count('[English PNG]')==11 and s.count('[中文 PNG]')==11
+    assert len(pictures)==12 and len(set(pictures))==12, (lang,pictures)
+    assert all(p.startswith(f'charts/{lang}/') for p in pictures), (lang,pictures)
+svgs=sorted(ROOT.joinpath('charts').glob('*/pareto/*.svg'))
+svgs+=sorted(ROOT.joinpath('charts/en/overview').glob('real-price-overview.svg'))
+svgs+=sorted(ROOT.joinpath('charts/zh/overview').glob('单价总览.svg'))
+svgs+=sorted(ROOT.joinpath('charts').glob('en/overview/*fee-*.svg'))
+svgs+=sorted(ROOT.joinpath('charts').glob('zh/overview/*月费*.svg'))
+assert len(svgs)==16+2+6
+for doc,s in readmes.items():
+    for svg in svgs:
+        rel=svg.relative_to(ROOT).as_posix()
+        assert f']({rel})' in s, (doc,rel)
+        assert f']({rel[:-4]}.png)' in s, (doc,rel)
 for f in ROOT.joinpath('charts/en').rglob('*'):
     if f.suffix in ('.txt', '.svg', '.html'):
         leaks = sorted(set(re.findall(r'[\u4e00-\u9fff]', f.read_text(encoding='utf-8'))))

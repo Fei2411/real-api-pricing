@@ -2,7 +2,7 @@
   "recordedAt": "2026-09-06",
   "round": 8,
   "sourceType": "user_current_account_screenshot_and_adoption",
-  "userDecision": "社区8月26日截图可能有大量首周半价用量，按费用百分比反推会稍微虚高；用户自己账号的9月5日截图是当前口径且用量平滑。Fast直接按用户账号的大样本行计算，Standard取两张截图标准主行的中间值。",
+  "userDecision": "社区8月26日截图可能有大量首周半价用量，按费用百分比反推会稍微虚高；维护者自己账号的9月5日截图是当前口径且用量平滑。Fast直接按维护者账号的大样本行计算，Standard取两张截图标准主行的中间值。",
   "scope": "Cursor Ultra individual $200/month; both screenshots are personal Ultra and after the 2026-08-25 permanent pool adjustment",
   "currentAccountScreenshot": {
     "capturedAt": "2026-09-05",
@@ -19,7 +19,7 @@
       {"model": "composer-2.5", "tokensM": 3.9, "usagePct": 0.1}
     ],
     "aggregate": {"tokensB": 1.2, "usagePct": 39.4},
-    "usagePattern": "用户确认整月使用较平滑，不存在一开始几天特别多的情况"
+    "usagePattern": "确认整月使用较平滑，不存在一开始几天特别多的情况"
   },
   "communityScreenshot": {
     "publishedAt": "2026-08-26",
@@ -50,9 +50,9 @@
     "proPlusFormula": "77.37 × 800 / 3000",
     "confidence": "medium"
   },
-  "decisionNote": "round7旧采用80亿Standard/40亿Fast → round8采用77.37亿Standard/30.74亿Fast。Fast取用户当前平滑账号最大样本863.8M/28.1%直接反推；Standard取用户标准主行67.78亿与社区标准主行86.95亿的中间值77.37亿。社区图可能因首周半价用量集中而略高。Standard/Fast不强制保持官方费率2×的raw-token比例，因为面板按费用扣减，而不同截图的token类型分布与折扣期占比不同。",
+  "decisionNote": "round7旧采用80亿Standard/40亿Fast → round8采用77.37亿Standard/30.74亿Fast。Fast取维护者当前平滑账号最大样本863.8M/28.1%直接反推；Standard取维护者标准主行67.78亿与社区标准主行86.95亿的中间值77.37亿。社区图可能因首周半价用量集中而略高。Standard/Fast不强制保持官方费率2×的raw-token比例，因为面板按费用扣减，而不同截图的token类型分布与折扣期占比不同。",
   "caveats": [
-    "Fast 30.74亿是当前用户账号大样本行的直接反推，优先于同图较小high-fast行24.43亿。",
+    "Fast 30.74亿是当前维护者账号大样本行的直接反推，优先于同图较小high-fast行24.43亿。",
     "Standard 77.37亿是两个账号标准主行的中间值，不是单行直接实测。",
     "官方Fast三段价格严格为Standard的2×，但raw total token反推还受输入、缓存读、输出构成影响；不把77.37/30.74解释成隐藏费率倍率。",
     "Cursor Pro保留独立4.7亿；Pro+继续沿用$800/$3000跨档池比。"

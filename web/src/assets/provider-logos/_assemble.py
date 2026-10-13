@@ -37,13 +37,6 @@ def from_fetch(src_name: str, dest_name: str, fill: str | None = None) -> None:
 # Lobe Icons / Simple Icons copies
 from_fetch("openai.svg", "openai.svg", "#111111")
 from_fetch("anthropic.svg", "anthropic.svg", "#191919")
-from_fetch("xai.svg", "xai.svg", "#111111")
-from_fetch("cursor.svg", "cursor.svg", "#111111")
-from_fetch("kimi.svg", "kimi.svg", "#111111")
-kimi = (HERE / "kimi.svg").read_text(encoding="utf-8")
-write("kimi.svg", kimi.replace('<path d="M21.846', '<path fill="#1783FF" d="M21.846'))
-from_fetch("minimax.svg", "minimax.svg", "#E2167E")
-from_fetch("qwen.svg", "alibaba.svg", "#615CED")
 from_fetch("deepseek.svg", "deepseek.svg", "#4D6BFE")
 from_fetch("google-color.svg", "google.svg")
 from_fetch("ollama.svg", "ollama.svg", "#111111")
@@ -62,9 +55,28 @@ meituan = meituan.replace(
 )
 (HERE / "meituan.svg").write_text(meituan, encoding="utf-8")
 
-# zhipu.svg / opencode.svg: traced in _trace.py.
-# command-code.svg: official cmdsymbol from commandcode.ai.
+# alibaba.svg: official Qwen blue mark (qwen-icon.svg) copied from the brand library.
+# minimax.svg: official MiniMax gradient mark (minimax-icon.svg) copied from the brand library.
+# opencode.svg / opencode-dark.svg: official OpenCode mark, light/dark variants
+#   (opencode-icon.svg / opencode-icon-dark.svg) copied from the brand library.
+# command-code.svg: official Command Code symbol (commandcode-icon.svg) copied
+#   from the brand library, minus the thin outer ring (it blurs at 20 px).
+#   command-code-dark.svg: same symbol with tile and glyph colours swapped
+#   (white tile, black ⌘).
+# zhipu.svg: official z.ai mark (zai-icon.svg) copied from the brand library.
+# xai.svg / xai-dark.svg: official SpaceXAI (formerly xAI) squared tiles,
+#   black tile ("spacexai - symbol - white - squared.svg") / white tile
+#   ("spacexai - symbol - black - squared.svg"), copied from the brand library.
 # stepfun.svg: official 5-square mark + current X-avatar gradient.
+# kimi.svg / kimi-dark.svg: official Kimi Logomark tile, light/dark brand-kit variants.
+# devin.svg / devin-dark.svg: official Devin mark, dark-ink and white variants.
+# factory.svg: official factory.ai favicon (realfavicongenerator wrapper
+#   unwrapped to the inner SVG; #020202 tile with #FAFAFA mark, light theme).
+#   factory-dark.svg: same favicon with tile and mark colours swapped
+#   (#FAFAFA tile, #020202 mark).
+# cursor.webp / cursor-dark.webp: official Cursor square avatars
+#   (AVATAR_SQUARE_2D_DARK.png / AVATAR_SQUARE_2D_LIGHT.png), resized to 128px.
+# ollama-dark.webp: official ollama.com apple-touch-icon (180px), dark theme only.
 # Muse Spark uses meta.svg. Do not overwrite those files here.
 
 # Keep fetch only as a cache; do not publish it.

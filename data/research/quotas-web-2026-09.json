@@ -342,7 +342,7 @@
       "claim": "Steven Zhang：SuperGrok Heavy 月可榨约 $11.5k Grok 4.6 API 等效用量（≈$2,875/周）",
       "weeklyTokens": null,
       "monthlyTokens": null,
-      "tokenCountingNote": "美元等效；若按 $2/$0.5/$6 需假设 cache/in/out 比才能转 token。用户本地笔记「周 $250」与此差一个数量级，见 notFound",
+      "tokenCountingNote": "美元等效；若按 $2/$0.5/$6 需假设 cache/in/out 比才能转 token。维护者本地笔记「周 $250」与此差一个数量级，见 notFound",
       "evidenceType": "community_measurement",
       "source": "https://x.com/stevenzhang/status/2092110386569089311",
       "sourceDate": "2026-08-25",
@@ -673,7 +673,7 @@
     "Cursor Pro/Pro+/Ultra：官方公布的 Cursor Models 池美元或 token 绝对值 — 英文文档仅写 Included",
     "Cursor 第一方 Grok 4.6 / Composer 2.5 的可复现「打满月额度」token 数 — 论坛样本因 cache 权重互相矛盾",
     "Google AI Pro/Ultra 5x/20x：Antigravity / Gemini CLI 基线绝对 token 或「每 credit≈多少 token」— 官方只给 5×/20×；帮助中心 credits 表不适用于已剥离的 Antigravity 基线",
-    "SuperGrok Heavy 周预算 $250 API 等效 — 公开网页/X 未找到该数字；仅见项目内用户确认笔记与 Steven Zhang $11.5k/月（≈$2875/周）另一口径",
+    "SuperGrok Heavy 周预算 $250 API 等效 — 公开网页/X 未找到该数字；仅见项目内确认笔记与 Steven Zhang $11.5k/月（≈$2875/周）另一口径",
     "SuperGrok ($30) / SuperGrok Plus ($100) 的官方或可信周/月 token 或美元预算",
     "ChatGPT Plus/Pro：2026-06 后新的、可独立复核的 Codex Sol 打满周/月 ccusage 截图（awesome-coding-plan 6.16 亿/月仍是主要数字来源）"
   ]

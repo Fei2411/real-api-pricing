@@ -1,22 +1,23 @@
 # Data / 数据
 
-Current snapshot: 2026-09-24. The adopted dataset contains 265 plan × model rows: 246 subscription rows (245 with a monthly allowance plus one unmetered promotional row, Devin Pro × SWE-2 at ≈$0/MTok until 2026-10-31) and 19 metered API rows. This covers the project's adopted sample, not every plan or model on the market.
+Current snapshot: <!-- stat:snapshot -->2026-10-13<!-- /stat -->. The adopted dataset contains <!-- stat:points_total -->332<!-- /stat --> plan × model rows: <!-- stat:points_subscription -->311<!-- /stat --> subscription rows (<!-- stat:points_allowance -->310<!-- /stat --> with a monthly allowance plus one unmetered promotional row, Devin Pro × SWE-2 at ≈$0/MTok until 2026-10-31) and <!-- stat:points_metered -->21<!-- /stat --> metered API rows. This covers the project's adopted sample, not every plan or model on the market.
 
 These files are the public redacted edition. Original local evidence is backed up outside Git; see [PUBLICATION.md](../PUBLICATION.md). 本目录为公开脱敏版，保留数值、来源与取舍记录，原件仅存于 Git 忽略的本地备份。
 
-当前采用数据共265条“套餐 × 模型”：246条订阅（245条有月额度，另1条不计额度促销点 Devin Pro × SWE-2，≈$0/MTok，促销至2026-10-31）、19条按量API，包括OpenCode Go 30个模型、Command Code GOAT 41个模型、Ollama Pro/Max各11个模型、Step Plan 国内站12个点、MiMo Token Plan 32个点、Devin Max 2个点、ChatGPT Pro 20x Astra 1个点。所有采用数据都参与对应的全量输出；缺榜单分数的模型不进入该榜帕累托图，但仍保留在额度和单价数据中。
+当前采用数据共<!-- stat:points_total -->332<!-- /stat -->条“套餐 × 模型”：<!-- stat:points_subscription -->311<!-- /stat -->条订阅（<!-- stat:points_allowance -->310<!-- /stat -->条有月额度，另1条不计额度促销点 Devin Pro × SWE-2，≈$0/MTok，促销至2026-10-31）、<!-- stat:points_metered -->21<!-- /stat -->条按量API，包括OpenCode Go <!-- stat:plans_opencode_go -->30<!-- /stat -->个模型、Command Code GOAT <!-- stat:plans_command_code_goat -->60<!-- /stat -->个模型、Ollama <!-- stat:plans_ollama -->22<!-- /stat -->个点、Step Plan 国内站<!-- stat:plans_step_plan -->12<!-- /stat -->个点、MiMo Token Plan <!-- stat:plans_mimo_token -->32<!-- /stat -->个点。所有采用数据都参与对应的全量输出；缺榜单分数的模型不进入该榜帕累托图，但仍保留在额度和单价数据中。
 
-美元/credits额度、三段价格与模型间价格比统一按 `conventions.json` 的标准负载换算：缓存读取97%、普通输入2.5%、输出0.5%。直接给出total tokens的面板、日志、跑满实测和官方绝对token表不重复归一；只有total tokens和费用百分比但缺token类型拆分时，保留观测并标明限制。GLM已从官方95%缓存示例表改为按官方周积分、三段积分系数和统一标准负载重算，并将忙时、中间值与闲时拆成独立情景点。当前标准不单列cache write；厂商另收缓存写入费时，换算可能偏高估token。Anthropic 另有一档 `anthropicTokenMix`（缓存读97%/缓存写2.5%/输出0.5%）：普通输入份额按 5 分钟缓存写入价计，用于 Anthropic 按量 API 行与经用户裁定折算的面板实测行。完整分类见 [`token-mix-audit-round2-2026-09-07.json`](research/token-mix-audit-round2-2026-09-07.json)。
+美元/credits 额度与三段价换算统一按 `conventions.json` 的标准负载（缓存读取 97%、普通输入 2.5%、输出 0.5%）折算；直接给出 total tokens 的面板、日志与跑满实测不重复归一。Anthropic 档与低缓存档等其余负载口径见 [CONVENTIONS.md](../CONVENTIONS.md) 第 2 节；逐样本负载审计见 [`token-mix-audit-round2-2026-09-07.json`](research/token-mix-audit-round2-2026-09-07.json)。
 
 | Board / 榜单 | Scored rows / 有分行 | Unscored rows / 缺分行 |
 |---|---:|---:|
-| Code Arena | 145 / 265 | 120 |
-| Agent Arena | 149 / 265 | 116 |
-| AA Intelligence | 228 / 265 | 37 |
-| AA Coding Agent | 79 / 265 | 186 |
-| OpenDesign Arena | 77 / 265 | 188 |
-| Terminal-Bench 4.0 | 95 / 265 | 170 |
-| Terminal-Bench 4.0 (AA) | 26 / 265 | 239 |
+| AA Intelligence | <!-- stat:scored_aa_intelligence_index -->293<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_aa_intelligence_index -->39<!-- /stat --> |
+| AA Coding Agent | <!-- stat:scored_aa_coding_agent_index -->120<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_aa_coding_agent_index -->212<!-- /stat --> |
+| Code Arena | <!-- stat:scored_arena_code -->264<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_arena_code -->68<!-- /stat --> |
+| Agent Arena | <!-- stat:scored_arena_agent_mode -->204<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_arena_agent_mode -->128<!-- /stat --> |
+| OpenDesign Arena | <!-- stat:scored_open_design_arena -->73<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_open_design_arena -->259<!-- /stat --> |
+| Terminal-Bench 4.0 | <!-- stat:scored_terminal_bench_4 -->125<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_terminal_bench_4 -->207<!-- /stat --> |
+| Terminal-Bench 4.0 (AA) | <!-- stat:scored_aa_terminal_bench_4 -->278<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_aa_terminal_bench_4 -->54<!-- /stat --> |
+| DeepSWE v1.1 | <!-- stat:scored_deepswe_1_1 -->213<!-- /stat --> / <!-- stat:points_total -->332<!-- /stat --> | <!-- stat:unscored_deepswe_1_1 -->119<!-- /stat --> |
 
 具体缺分模型以 [`points.csv`](../derived/points.csv) / [`points.json`](../derived/points.json) 的空分数字段为准；不为缺失模型补造分数。
 
@@ -26,6 +27,7 @@ These files are the public redacted edition. Original local evidence is backed u
 - [points.csv](../derived/points.csv) / [points.json](../derived/points.json): computed prices plus separate leaderboard scores. 绘图使用的完整计算结果。
 - [conventions.json](conventions.json): shared conventions and exchange rate. 部分说明为历史记录，以采用脚本的明确取舍为准。
 - [research/](research/): dated evidence. Historical claims can contradict current decisions; they are not all adopted. 历史证据不等于当前采用结论。
+- [i18n/](i18n/): English translations of the adoption source/decision text shown on the website. When a `source`/`decision_note` changes, run `python scripts/checks/verify_i18n.py --sync` and fill the English. 网站英文界面显示的来源/取舍译文；改动中文原文后运行 `verify_i18n.py --sync` 并补译文。
 - [raw/](raw/), subscription-quotas*.json, subscriptions.json and claim summaries: historical inputs retained for traceability. 历史原料保留用于溯源，不是当前主表。
 - [SOURCES.md](../SOURCES.md): attribution and third-party license boundaries. 来源署名与许可边界。
 

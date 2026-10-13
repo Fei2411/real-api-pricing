@@ -3,7 +3,7 @@
   "colors": {
     "OpenAI": "#16A34A",
     "Anthropic": "#CC5A2E",
-    "xAI": "#9333EA",
+    "SpaceXAI": "#9333EA",
     "Cursor": "#FACC15",
     "Kimi": "#0EA5E9",
     "Zhipu": "#1E1E1E",
@@ -17,7 +17,8 @@
     "Xiaomi": "#FF8A00",
     "Tencent": "#7DD3FC",
     "StepFun": "#00F4E5",
-    "Devin": "#A1A1AA"
+    "Devin": "#A1A1AA",
+    "Factory": "#0A0ABF"
   },
   "aliases": {
     "Claude": "Anthropic",
@@ -29,8 +30,8 @@
     ["openai", "OpenAI"],
     ["claude", "Anthropic"],
     ["anthropic", "Anthropic"],
-    ["supergrok", "xAI"],
-    ["xai", "xAI"],
+    ["supergrok", "SpaceXAI"],
+    ["xai", "SpaceXAI"],
     ["cursor", "Cursor"],
     ["kimi", "Kimi"],
     ["glm", "Zhipu"],
@@ -43,6 +44,7 @@
     ["stepfun", "StepFun"],
     ["mimo_", "Xiaomi"],
     ["devin", "Devin"],
+    ["droid", "Factory"],
     ["google_ai", "Google"]
   ],
   "fallback": "#8A94A6",

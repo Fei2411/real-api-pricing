@@ -24,9 +24,11 @@ The project's original software is licensed under [MIT](LICENSE). This does not 
 
 - [lobehub/lobe-icons](https://github.com/lobehub/lobe-icons), MIT, Copyright (c) 2023 LobeHub. Used for most provider SVG marks in `web/src/assets/provider-logos/`.
 - [Simple Icons](https://github.com/simple-icons/simple-icons), CC0. Used for the Xiaomi mark.
-- Command Code uses the complete official avatar (dark plate + rounded frame + ⌘), not a cropped command-only extraction.
+- Command Code uses the official commandcode.ai/brand symbol (dark plate + rounded frame + ⌘).
 - StepFun five-square mark follows the icon in [stepfun.com](https://www.stepfun.com/assets/logo-B0FsyLQP.svg); the lime–cyan gradient follows the current public avatar.
-- Compact reconstructions (Zhipu Z, OpenCode window) are this project's 22px traces from official rasters, not brand kits.
+- Alibaba uses the official Qwen blue mark cut from the chat.qwen.ai lockup; MiniMax uses the official Brand VI (2026-09-14) vector with the gradient rebuilt as #E21680 → #FF633A; OpenCode is cut from the opencode.ai/brand ornate logo in light and dark variants; Zhipu uses the official z.ai mark; SpaceXAI (formerly xAI, rebranded July 2026) uses the official SpaceXAI symbol (squared variant).
+- Kimi uses the official Kimi Logomark tile from the Kimi brand kit (Light variant for light theme, Dark variant for dark theme); Devin uses the official Devin mark from the Devin design system (dark-ink and white variants).
+- Factory uses the official favicon tile from [factory.ai](https://factory.ai/favicon.svg); Cursor uses the official cursor-brand-assets Avatars/Square 2D tiles (dark tile for light theme, light tile for dark theme); Ollama uses the official apple-touch-icon tile from ollama.com for dark theme.
 - Brand logos remain trademarks of their owners and are used only to identify the corresponding model developer.
 
 ## Leaderboards and other evidence
@@ -35,6 +37,8 @@ The project's original software is licensed under [MIT](LICENSE). This does not 
 - [Artificial Analysis Intelligence Index](https://artificialanalysis.ai/leaderboards/models) and [Coding Agent Index](https://artificialanalysis.ai/agents/coding-agents): separate score snapshots; coding-agent configuration names are retained.
 - [OpenDesign Arena](https://open-design.ai/llm-arena-for-design/): 0–100 average task-score snapshot from OpenDesign's private frontend-design benchmark; requirements and design-quality scores are used, while cost/speed recommendation weights are excluded.
 - [Terminal-Bench 4.0](https://www.tbench.ai/leaderboard): official 66-task leaderboard hosted by Stanford / Harbor / the Laude Institute; every harness × model × effort row is retained with its 95% interval and run cost. See `data/research/scores-terminal-bench4-round1-2026-09-10.json`.
+- Terminal-Bench 4.0 (AA): Artificial Analysis independently benchmarks the same 66 tasks on its own `Artificial Analysis` harness (its pages note "Independently benchmarked by Artificial Analysis"); scored as a separate board because same-task results are not interchangeable with official-harness runs. Source site: [artificialanalysis.ai](https://artificialanalysis.ai/). Rows are recorded as `boardId=terminal_bench_4` with `secondary.agentHarness="Artificial Analysis"` in `data/research/scores-stepfun-step5-round1-2026-09-21.json`, `scores-new-models-round1-2026-09-23.json`, `scores-gpt6sol-round1-2026-09-24.json` and `scores-gpt6luna-round1-2026-09-26.json`.
+- [DeepSWE v1.1](https://deepswe.datacurve.ai/): 113 tasks, Pass@1 %; official rows run on the mini-swe-agent harness; snapshot 2026-09-03. Additional vendor self-reported supplement rows are marked self-reported. Files: `data/research/scores-deepswe-1.1-2026-09-12.json`, `scores-deepswe-selfreport-2026-09-12.json`, `scores-deepswe-mimo-v26-grok47-selfreport-2026-09-22.json`.
 - Official pricing and quota documents, community reports and aggregate local usage measurements: individual sources and adoption rationale are recorded in the data and adoption script.
 
-Source links are attribution and provenance, not a claim that third-party datasets are MIT-licensed. The public edition removes the contributor's account email, machine-specific directories and duplicate verbatim Caijing excerpts. Relevant numeric observations, source URLs, dates and analytical notes remain. Required public author attribution above is intentionally retained. See [PUBLICATION.md](PUBLICATION.md).
+See [PUBLICATION.md](PUBLICATION.md) for the redaction scope.

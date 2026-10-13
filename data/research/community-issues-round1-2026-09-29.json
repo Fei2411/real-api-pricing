@@ -1,0 +1,199 @@
+{
+  "recordedAt": "2026-09-29",
+  "sourceType": "github_issue_community_measurement",
+  "trigger": "GitHub issue #52–#57（NTRYourWaifu，2026-09-27）与 #65（Winefaker，2026-09-29）投稿的本机实测；逐项复核分项合计与标价闭合后换算，月 = 周 × 4",
+  "conventions": {
+    "monthWeeks": 4,
+    "anthropicMixUsdPerMTok": {
+      "claude-opus-5.5": 0.419,
+      "claude-opus-5": 0.76625,
+      "claude-fable-5": 1.5325
+    },
+    "anthropicMixFormula": "0.97 × 缓存读价 + 0.025 × 5 分钟缓存写价 + 0.005 × 输出价（data/conventions.json anthropicTokenMix）"
+  },
+  "entries": [
+    {
+      "id": "issue52-claude-pro-opus55",
+      "source": "https://github.com/FeiZhuLulu/real-api-pricing/issues/52",
+      "author": "NTRYourWaifu",
+      "plan": "claude_pro $20",
+      "model": "claude-opus-5.5",
+      "tool": "Claude Code CLI；每 5 分钟轮询 /api/oauth/usage seven_day %，对照本机 JSONL，按 message.id 去重",
+      "accounts": 2,
+      "period": "2026-09-22 ~ 2026-09-27",
+      "tokensM": {
+        "input": 0.01,
+        "cacheRead": 1366.51,
+        "cacheWrite1h": 20.81,
+        "cacheWrite5m": 2.78,
+        "output": 6.69,
+        "total": 1396.81
+      },
+      "weeklyPctDelta": 183,
+      "segmentRule": "只计 Opus 5.5 占 95% 以上 token 的区段",
+      "listWorthUsd": 587.52,
+      "listPrices": "读 $0.2 / 1h 写 $8 / 5m 写 $5 / 入 $4 / 出 $20",
+      "worthPerPctUsd": 3.2105,
+      "derived": {
+        "anthropicMonthlyYi": 30.65,
+        "rawTotalMonthlyYi": 30.53,
+        "allWritesAt5mMonthlyYi": 27.39,
+        "wholeWeekCheckRawMonthlyYi": 29.08
+      },
+      "effortSplit": {
+        "high": {"pctDelta": 128, "tokensM": 1010.28, "weeklyPoolM": 789},
+        "xhigh": {"pctDelta": 21, "tokensM": 148.73, "weeklyPoolM": 708},
+        "note": "两档每 1% 标价美元均约 $3.2；effort 只影响速率"
+      },
+      "adoption": "与 Reddit 5h 段（worth $40.48 / 周 13.333%）按百分点合并：($40.48 + $587.52) ÷ (13.333 + 183) = $3.19865/pp → 月 $1,279.46 ÷ $0.419 = 30.54 亿；裁定升 high"
+    },
+    {
+      "id": "issue53-claude-pro-opus5",
+      "source": "https://github.com/FeiZhuLulu/real-api-pricing/issues/53",
+      "author": "NTRYourWaifu",
+      "plan": "claude_pro $20",
+      "model": "claude-opus-5",
+      "tool": "同 #52",
+      "accounts": 2,
+      "period": "2026-09-14 ~ 2026-09-22（均在 9/14 永久 +25% 之后）",
+      "tokensM": {
+        "input": 0.01,
+        "cacheRead": 1004.96,
+        "cacheWrite1h": 12.99,
+        "output": 4.06,
+        "total": 1022.02
+      },
+      "weeklyPctDelta": 148,
+      "worthPerPctUsd": 4.959,
+      "derived": {
+        "rawTotalMonthlyYi": 27.62,
+        "wholeWeekChecksRawMonthlyYi": [24.60, 28.96],
+        "anthropicMonthlyYi": 25.89
+      },
+      "conflict": "现采用 18.78 亿（@shownotover 单样本 7% 整数读数，$25.68 ÷ 7% = $3.67/pp，区间 17.53~20.23）；本样本 $4.96/pp 高 35%，raw 高 47%。旧样本测于 9/14 前则 ×1.25 = 23.48",
+      "adoption": "2026-09-30 裁定改用本样本：18.78 → 27.62 亿（raw total 口径，high），不与旧面板样本合并（合并为 27.22）；派生 Pro × Sonnet 5 → 69.05、Pro × Opus 4.8 → 27.62"
+    },
+    {
+      "id": "issue52-53-opus55-vs-opus5-weight",
+      "source": "https://github.com/FeiZhuLulu/real-api-pricing/issues/52",
+      "finding": "同账号 Opus 5 每 1% $4.959，Opus 5.5 的 token 按 Opus 5 标价折算每 1% $5.880 → 5.5 对 Opus 5 的池权重约 0.843，而非标价比 0.5143 / MiaAI 5h 口径 0.5204",
+      "implication": "claude_max_20x × claude-opus-5.5 若按 0.843 计为 157 ÷ 0.843 ≈ 186 亿（现 301.7）；claude_max_5x × claude-opus-5.5 同受影响",
+      "adoption": "未采用，待裁定"
+    },
+    {
+      "id": "issue54-google-ai-pro-gemini38flash",
+      "source": "https://github.com/FeiZhuLulu/real-api-pricing/issues/54",
+      "author": "NTRYourWaifu",
+      "plan": "google_ai_pro_us $19.99",
+      "model": "gemini-3.8-flash",
+      "tool": "Antigravity IDE + agy CLI；每 5 分钟 agy /quota 周额度 %，对照本机对话库 token",
+      "period": "2026-09-12 ~ 2026-09-27（三个周窗）",
+      "tokensM": {
+        "input": 146.25,
+        "cacheRead": 695.70,
+        "output": 11.48,
+        "total": 853.43
+      },
+      "cacheHitPct": 82.6,
+      "weeklyPctDelta": 165.77,
+      "wholeWeeks": [
+        {"pctDelta": 49.4, "tokensM": 250.2},
+        {"pctDelta": 96.9, "tokensM": 468.4},
+        {"pctDelta": 57.6, "tokensM": 304.3}
+      ],
+      "worthPerPctUsd": {"medium": 1.25, "low": 1.19},
+      "derived": {"rawMonthlyYi": 20.59},
+      "adoption": "与维护者本机样本（55.343M / +9.88%）按百分点合并：(55.343 + 853.43) ÷ (9.88 + 165.77) = 5.1738M/pp → 20.70 亿；high"
+    },
+    {
+      "id": "issue55-google-ai-pro-gemini36flash",
+      "source": "https://github.com/FeiZhuLulu/real-api-pricing/issues/55",
+      "author": "NTRYourWaifu",
+      "plan": "google_ai_pro_us $19.99",
+      "model": "gemini-3.6-flash",
+      "tool": "agy CLI；方法同 #54",
+      "period": "2026-09-13 ~ 2026-09-27",
+      "tokensM": {
+        "input": 14.95,
+        "cacheRead": 78.32,
+        "output": 2.33,
+        "total": 95.60
+      },
+      "cacheHitPct": 84.0,
+      "weeklyPctDelta": 21.70,
+      "worthPerPctUsd": 1.19,
+      "derived": {"rawMonthlyYi": 17.62},
+      "note": "投稿称 3.6 Flash 与 3.8 Flash 同价，每 1% 标价美元与 3.8 Flash 几乎相同，支持同一按价额度池",
+      "adoption": "新增 17.62 亿 measured；样本 +21.7 个百分点，medium"
+    },
+    {
+      "id": "issue56-supergrok-grok46",
+      "source": "https://github.com/FeiZhuLulu/real-api-pricing/issues/56",
+      "author": "NTRYourWaifu",
+      "plan": "supergrok $30",
+      "model": "grok-4.6",
+      "tool": "Grok Build CLI；每 5 分钟 _x.ai/billing 周额度 %，对照 ~/.grok/logs/unified.jsonl",
+      "period": "2026-08-23 ~ 08-30、2026-09-13 ~ 09-20 两个完整周窗",
+      "tokensM": {
+        "input": 15.3,
+        "cacheRead": 206.4,
+        "output": 1.29,
+        "total": 223.1
+      },
+      "weeklyPctDelta": 193,
+      "wholeWeeks": [
+        {"pctDelta": 94, "tokensM": 120.9},
+        {"pctDelta": 99, "tokensM": 102.2}
+      ],
+      "excluded": "8/16~8/23、9/06~9/13 两周周池约 236M、274M（疑双倍活动周）；9/06 那周命中率 77.6% 另未计入",
+      "derived": {"rawMonthlyYi": 4.62},
+      "adoption": "与 V2EX 受控打满（127,272,629 token = 整周 100%）按百分点合并：(127.272629 + 223.1) ÷ (100 + 193) = 1.1958M/pp → 4.78 亿；high"
+    },
+    {
+      "id": "issue57-supergrok-grok47",
+      "source": "https://github.com/FeiZhuLulu/real-api-pricing/issues/57",
+      "author": "NTRYourWaifu",
+      "plan": "supergrok $30",
+      "model": "grok-4.7",
+      "period": "2026-09-20 ~ 2026-09-27",
+      "tokensM": {
+        "input": 5.05,
+        "cacheRead": 44.42,
+        "output": 0.76,
+        "grok47Total": 50.24,
+        "grok46Total": 11.49
+      },
+      "weeklyPctDeltaAll": 61,
+      "grok47PctDeltaEstimated": [41, 44],
+      "derived": {"rawMonthlyYiRange": [4.40, 4.80]},
+      "adoption": "不入权：4.7 的百分点由 4.6 平常周单价扣减推定，非直接读数；与现采用 4.97 亿同量级，记作旁证"
+    },
+    {
+      "id": "issue65-claude-max20x-mixed",
+      "source": "https://github.com/FeiZhuLulu/real-api-pricing/issues/65",
+      "author": "Winefaker",
+      "plan": "claude_max_20x $200",
+      "period": "2026-09-27 19:52 ~ 2026-09-28 13:54 EDT（约 18 h）",
+      "tokensM": {
+        "claude-opus-5.5": {"input": 0.006, "cacheWrite5m": 8.03, "cacheWrite1h": 4.28, "cacheRead": 386.95, "output": 3.35, "total": 402.61, "listWorthUsd": 218.88},
+        "claude-fable-5": {"input": 0.001, "cacheWrite5m": 0.73, "cacheWrite1h": 0.54, "cacheRead": 81.02, "output": 0.19, "total": 82.48, "listWorthUsd": 110.66},
+        "claude-fable-5.1": {"input": 0.002, "cacheWrite5m": 1.00, "cacheWrite1h": 0, "cacheRead": 4.71, "output": 0.11, "total": 5.82, "listWorthUsd": 19.12},
+        "claude-sonnet-5": {"input": 0.001, "cacheWrite5m": 2.38, "cacheWrite1h": 0.05, "cacheRead": 56.65, "output": 0.06, "total": 59.14, "listWorthUsd": 18.07},
+        "total": 550.05,
+        "listWorthUsd": 366.72
+      },
+      "weeklyPct": {"allModels": 26, "fable": 24},
+      "checks": "四模型 raw 合计 550.05 与投稿一致；Opus 5.5 按 $4/$20、读 $0.2、5m 写 $5、1h 写 $8 重算 $218.80；Fable 5 按 $10/$50 重算 $110.45；Fable 5.1 按 $10/$50 为 $22.73，与投稿 $19.12 不符，标价待核",
+      "derived": {
+        "allModelsWorthPerWeekUsd": 1410.5,
+        "opus55AnthropicMonthlyYiIfPriceWeighted": 134.7,
+        "fableCapWorthPerWeekUsd": 540.8,
+        "fableAnthropicMonthlyYi": 14.11,
+        "rawMixedMonthlyYi": 84.6,
+        "max20xToProWorthRatio": 4.39
+      },
+      "caveat": "混合模型样本；#52/#53 显示额度不按标价跨模型扣减，按标价拆分不可靠；26%/24% 为整数读数",
+      "adoption": "未采用，待裁定（现 Max 20x × Opus 5.5 301.7、Fable 5.1 17.28、Fable 5 12.08）"
+    }
+  ]
+}

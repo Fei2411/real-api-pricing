@@ -1,0 +1,67 @@
+{
+  "collectedAt": "2026-09-30",
+  "scopeNote": "GPT-6.1 Sol ChatGPT Plus 周窗续段实测：65%→60%（5pp）段内 10,562,908 tok，与 round1 的 81%→65% 段在 65% 边界拼接为整段 81%→60%（21pp）/ 40,672,476 tok。整段分量与两段之和逐项吻合（截图整段标题仍写 82%/22pp，沿用更正后起始值 81%→真实 21pp）。采用值更新为整段口径 7.75 亿/月，round1 段值 7.53 亿留作历史对照。",
+  "items": [
+    {
+      "planId": "chatgpt_plus",
+      "priceUsd": 20,
+      "model": "gpt-6.1-sol",
+      "client": "Codex CLI",
+      "evidenceType": "user_local_log_x_panel_percent",
+      "source": "维护者本机 Codex 实测截图（2026-09-30 会话内提供，续 round1 同窗口）",
+      "sourceDate": "2026-09-30",
+      "userConfirmation": "维护者原话：『还有一组补充，续借刚刚那一段』",
+      "observed": {
+        "windowSegment2": "周额度剩余 65% → 60%，差 5pp，全部增量为 gpt-6.1-sol",
+        "segment2": {
+          "inputTokens": 410877,
+          "cacheReadTokens": 10098688,
+          "cacheWriteTokens": 0,
+          "outputTokens": 53343,
+          "reasoningTokensSubsetOfOutput": 17989,
+          "totalTokens": 10562908,
+          "cacheHitRate": 0.9609,
+          "tokensPerPoint": 2112581.6,
+          "weeklyTokensImplied": 211258160
+        },
+        "windowCumulative": "周额度剩余 81% → 60%，差 21pp（截图标题写 82%→60% · 22pp，起始读数沿用更正后读数 81%）",
+        "cumulative": {
+          "inputTokens": 2035108,
+          "cacheReadTokens": 38430592,
+          "cacheWriteTokens": 0,
+          "outputTokens": 206776,
+          "reasoningTokensSubsetOfOutput": 54508,
+          "totalTokens": 40672476,
+          "cacheHitRate": 0.9497,
+          "inputShareOfTotal": 0.0500316,
+          "outputShareOfTotal": 0.0050839,
+          "cacheReadShareOfTotal": 0.9448845,
+          "reasoningShareOfOutput": 0.2636096,
+          "tokensPerPoint": 1936784.57,
+          "weeklyTokensImplied": 193678457,
+          "remaining60PctTokens": 116207074
+        }
+      },
+      "verification": "续段分量与整段逐项拼合：1,624,231+410,877=2,035,108 ✓、28,331,904+10,098,688=38,430,592 ✓、153,433+53,343=206,776 ✓、36,519+17,989=54,508 ✓、30,109,568+10,562,908=40,672,476 ✓；续段 hit = 10,098,688/(410,877+10,098,688) = 96.086% ≈ 96.09%；整段 hit = 38,430,592/40,465,700 = 94.971% ≈ 94.97%。起始 81% 下整段 Δpp=21（截图按错误起点 82 算 22pp、周额度 184,874,891，均不采）。",
+      "calculation": {
+        "adoptedWindow": "81%→60%（21pp，round1+round2 合并整段）",
+        "weeklyTokensCentral": 193678457,
+        "monthlyTokensCentralExact": 774713828.57,
+        "monthlyYiCentral": 7.75,
+        "formula": "40,672,476 / 21% * 4 weeks",
+        "roundedPercentMonthlyLow": 739499563.64,
+        "roundedPercentMonthlyHigh": 813449520.0,
+        "roundedPercentNote": "端点 81/60 若为四舍五入整数，则真实 Δpp∈[20,22]，对应 7.39~8.13 亿/月；中心值按 21pp。",
+        "realUsdPerMTokCentral": 0.0258
+      },
+      "tokenCountingNote": "本地日志直接给 total，沿 Luna round6 / Sol round1 / Luna6 round1/round2 先例直接采用 total，不按项目标准负载再次归一。",
+      "confidence": "high",
+      "pendingAdoption": "chatgpt_plus × gpt-6.1-sol 更新为整段 7.75 亿/月（high, measured）；分段密度对比：续段 2.11M tok/pp vs 首段 1.88M/pp，整段 1.94M/pp；周池反推 193.7M ≈ gpt-6-sol round1 的 0.74×；Pro 5x/20x 不派生（沿 Sol 裁定）；暂无榜分，有分后再补 scores supplement。"
+    }
+  ],
+  "relatedFiles": [
+    "chatgpt-gpt61sol-plus-round1-2026-09-30.json",
+    "chatgpt-gpt6sol-plus-round1-2026-09-24.json",
+    "chatgpt-gpt6luna-plus-round2-2026-09-28.json"
+  ]
+}

@@ -1,15 +1,15 @@
 {
   "collectedAt": "2026-09-12",
-  "scopeNote": "X 社区对 Codex/ChatGPT 订阅侧 GPT-6 Astra 周额度的数据（用户澄清：截图为 Codex 用量面板，非 Devin）。用户(FeiZ)自述统计≈32亿/月。未改 adopted。",
+  "scopeNote": "X 社区对 Codex/ChatGPT 订阅侧 GPT-6 Astra 周额度的数据（维护者澄清：截图为 Codex 用量面板，非 Devin）。维护者(FeiZ)自述统计≈32亿/月。未改 adopted。",
   "items": [
     {
       "claim": "LumioAI @McQueenCui 发帖『GPT 周限18亿 Astra』并贴 Codex 用量面板截图：『9月7日 使用了 18.7亿 个 Token』（每日/每周/累计 tab）。",
       "evidenceType": "community_report_screenshot",
-      "source": "https://x.com/McQueenCui （用户转贴截图，2026-09-12）",
+      "source": "https://x.com/McQueenCui （维护者转贴截图，2026-09-12）",
       "sourceDate": "2026-09-11",
       "observed": {"dailyTokensYi": 18.7, "date": "2026-09-07", "claimedWeeklyCapYi": 18},
       "confidence": "low",
-      "note": "9月7日恰为官方全局重置日，单日 18.7亿 若属实说明该账号档位很高（Pro 20x 量级）。『周限18亿』为其断言；用户当场回复『我统计的就是32左右，你这个算了重置吗』。"
+      "note": "9月7日恰为官方全局重置日，单日 18.7亿 若属实说明该账号档位很高（Pro 20x 量级）。『周限18亿』为其断言；维护者当场回复『我统计的就是32左右，你这个算了重置吗』。"
     },
     {
       "claim": "Tequila Sunset @Rainnystone 回复：少用子代理时 Astra 周额度大概能做到 15~20亿 token；子代理用得多的话可能在 10亿 左右。",

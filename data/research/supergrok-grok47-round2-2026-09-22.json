@@ -1,6 +1,6 @@
 {
   "collectedAt": "2026-09-22",
-  "subject": "SuperGrok 周池 — Grok 4.7 本机实测 round2（Grok Build CLI，xhigh，用户账号）",
+  "subject": "SuperGrok 周池 — Grok 4.7 本机实测 round2（Grok Build CLI，xhigh，维护者账号）",
   "source": {
     "type": "user_panel_screenshots",
     "panel": "Weekly limit (SuperGrok) 周额度 + Grok Build CLI 本地会话统计同框",
@@ -44,7 +44,7 @@
       }
     ],
     "consistencyCheck": "total = input + output；input 含 cache_read；reasoning ⊂ output；hit = cache_read/input；反推周额度 = total ÷ 周额度增量%（各窗独立自洽，表值与计算差 ≤±10 为显示取整）",
-    "userConfirmation": "用户 2026-09-22：『中间那个数据可信度最高』→ 采用「这次」窗口（45.5475% 最大消耗窗）"
+    "userConfirmation": "维护者 2026-09-22：『中间那个数据可信度最高』→ 采用「这次」窗口（45.5475% 最大消耗窗）"
   },
   "derivation": {
     "adoptedWindow": "这次",

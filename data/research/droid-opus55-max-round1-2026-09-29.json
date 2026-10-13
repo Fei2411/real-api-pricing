@@ -1,0 +1,112 @@
+{
+  "collectedAt": "2026-09-29",
+  "subject": "Factory Droid Max 周池 — Claude Opus 5.5 本机实测 round1（按模型累计 token × 周已用%）",
+  "plan": {
+    "name": "Droid Max",
+    "vendor": "Factory",
+    "priceUsdPerMonth": 200,
+    "source": "https://factory.ai/pricing",
+    "officialUsageNote": "Max ~10x Pro、Plus ~5x Pro；Rate Limits 为 5-hour / 7-day / 30-day 三个独立滚动窗（docs.factory.ai/pricing/individuals）"
+  },
+  "source": {
+    "type": "user_panel_screenshot",
+    "panel": "Droid 本机按模型累计 token 表 × 周额度已用百分比（周已用 9% / 剩 91%）",
+    "userFiles": "droid-checkpoint-opus55-91pct.md / .json（维护者本机，未随截图提供）",
+    "note": "第一场 opus 会话（xhigh）已归档冻结在 5% 检查点；5→9 段几乎全是新会话 47f9711d（high）",
+    "composition": "维护者第二张截图：周 1%→9% · 两场合计 · 8pp 的 token 分拆表"
+  },
+  "rawObservations": {
+    "checkpoint5pct_0813": {
+      "claude-opus-5-5": 35626835,
+      "auto": 41575,
+      "glm-5.3-flash": 0
+    },
+    "checkpoint9pct_1240": {
+      "claude-opus-5-5": 72194781,
+      "auto": 41575,
+      "glm-5.3-flash": 50317
+    },
+    "delta5to9": {
+      "claude-opus-5-5": 36567946,
+      "auto": 0,
+      "glm-5.3-flash": 50317
+    },
+    "impliedCheckpoint1pctOpusCumulative": 28219,
+    "windows": [
+      {
+        "window": "1→5",
+        "effort": "xhigh",
+        "deltaPp": 4,
+        "deltaTokens": 35598616,
+        "tokensPerPp": 8899654,
+        "impliedWeeklyTokens": 889965400
+      },
+      {
+        "window": "5→9",
+        "effort": "high",
+        "deltaPp": 4,
+        "deltaTokens": 36567946,
+        "tokensPerPp": 9141987,
+        "impliedWeeklyTokens": 914198650
+      },
+      {
+        "window": "1→9",
+        "effort": "xhigh+high",
+        "deltaPp": 8,
+        "deltaTokens": 72166562,
+        "tokensPerPp": 9020820,
+        "impliedWeeklyTokens": 902082025
+      }
+    ],
+    "verification": "35,598,616+36,567,946=72,166,562；72,194,781−36,567,946=35,626,835（5% 检查点）；35,626,835−35,598,616=28,219（1% 检查点隐含累计）。glm-5.3-flash 50,317 占 5→9 段 token 的 0.14%，属 Droid Core 免费开源模型池，不计入 Opus 速率；auto 段内 0 增量。",
+    "tokenComposition": "1→9 合计有分拆（composition1to9，五项合计=72,166,562）；单段 1→5 / 5→9 无分拆",
+    "composition1to9": {
+      "input": 793017,
+      "output": 375172,
+      "cache_create": 3640056,
+      "cache_read": 67311924,
+      "thinking": 46393,
+      "total": 72166562,
+      "sharePct": {
+        "input": 1.1,
+        "output": 0.52,
+        "cache_create": 5.04,
+        "cache_read": 93.27,
+        "thinking": 0.06
+      },
+      "hitPct": 93.8211,
+      "hitFormula": "cache_read ÷ (cache_read+input+cache_create) = 67,311,924 / 71,744,997",
+      "factoryCredits": 16935482,
+      "factoryCreditsPerWeekImplied": 211693525
+    }
+  },
+  "calculation": {
+    "adoptedWindow": "1→9（8pp，优先于单段 4pp）",
+    "workload": "anthropic（同 devin_max×opus-5.5 / claude_pro×opus-5.5：按标价折 list-worth 再按 anthropicTokenMix 换算）",
+    "prices": "Opus 5.5 cached $0.2 / cache write 5m $5 / input $4 / output $20；thinking 不计费（2026-09-29 裁定，与 factoryCredits 对账一致）",
+    "segmentWorthUsd": 42.34,
+    "formula": "(67,311,924×0.2 + 3,640,056×5 + 793,017×4 + 375,172×20)/1e6 = $42.34 ÷ 8% × 4 周 = $2,116.91/月 ÷ $0.419/MTok = 50.52 亿/月",
+    "monthlyYi": 50.52,
+    "roundedPercentRange": "Δpp∈[7,9] → 44.91~57.74 亿/月",
+    "cacheWrite1hSensitivity": "写按 1h $8：53.91 亿/月，不采",
+    "rawTotalComparison": {
+      "weeklyTokens": 902082025,
+      "monthlyYi": 36.08,
+      "formula": "72,166,562 ÷ 8% × 4 周"
+    },
+    "supersededWithThinking": {
+      "segmentWorthUsd": 43.27,
+      "monthlyYi": 51.63,
+      "note": "PR #67 初版把 thinking 46,393 按输出价 $20 计入；thinking 不计，改为 50.52"
+    }
+  },
+  "crossChecks": [
+    "两段 4pp 每 pp 8.90M（xhigh）vs 9.14M（high），差 2.7%，在整数% 取整误差内——effort 只影响消耗速率，不改变池（沿 claude round8 / devin round1 口径）",
+    "同模型 Devin Max（$200）worth 口径采用 66.90 亿/月（raw 43.78）；本点 worth 口径 50.52 亿（raw 36.08），同价位约为 Devin 的 0.76×（raw 0.82×）；本点 cache 写 5.04% 低于 Devin 7.67%、输入 1.10% 高于 Devin 0.001%",
+    "Factory 另有 5h 与 30 天滚动窗：本样本只约束 7 天窗，30 天窗若小于 4× 周池，实际月可用会低于本值"
+  ],
+  "openQuestions": [
+    "30 天窗与 7 天窗的比例",
+    "Pro/Plus 是否按官方 ~1/10、~1/5 派生"
+  ]
+}

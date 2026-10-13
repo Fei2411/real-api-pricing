@@ -1,0 +1,70 @@
+{
+  "collectedAt": "2026-09-30",
+  "sourceType": "official-docs + user confirmation",
+  "source": "https://opencode.ai/docs/go/",
+  "relatedSources": [
+    "https://opencode.ai/zen/go/v1/models",
+    "https://opencode.ai/go"
+  ],
+  "checkedAt": "2026-09-30",
+  "scope": "仅核对 OpenCode Go 的 DeepSeek 行（V4.1 Flash 升额、V4 Pro 复查）。Command Code 见 command-code-goat-deepseek-round2-2026-09-30.json。未重采其余非 DeepSeek 模型。",
+  "userInstruction": "2026-09-30 确认：OpenCode Go 与 Command Code GOAT 的 DeepSeek V4.1 Flash 均已转为永久 $60 月额度。",
+  "officialSharedLimitsUnchanged": {
+    "perMonthUsd": 60,
+    "quote": "Each model has the following usage limits: 5-hour — 20% of the monthly limit; weekly — 50%; and monthly — 100%.",
+    "derived": "5-hour $12 / weekly $30 / monthly $60"
+  },
+  "peakHours": "01:00-04:00 and 06:00-10:00 UTC, Monday through Friday; all other hours, including weekends, are Off-Peak",
+  "formula": "min(60, perModelMonthlyUsageUsd) / (0.97*cacheRead + 0.025*input + 0.005*output) / 100 亿",
+  "models": [
+    {
+      "officialDisplayName": "DeepSeek V4.1 Flash",
+      "officialApiId": "deepseek-v4.1-flash",
+      "proposedModelId": "deepseek-v4.1-flash",
+      "action": "update-limit",
+      "perModelMonthlyUsageUsd": 60,
+      "previousPerModelMonthlyUsageUsd": 15,
+      "pricesPer1MUsd": {
+        "offPeak": { "cachedInput": 0.003, "input": 0.15, "output": 0.6 },
+        "peak": { "cachedInput": 0.006, "input": 0.3, "output": 1.2 }
+      },
+      "adopt": {
+        "variant": "Off-Peak",
+        "blendedUsdPer1M": 0.00966,
+        "monthlyYi": 62.112,
+        "realUsdPerMtok": 0.00161,
+        "reason": "官网价表 Monthly limit 由 $15 升为 $60，页面已不再标注『4x · Ends Sep 27』限时记号（曾示为 9/27 截止的 4 倍临时提升），与已确认的永久口径一致。min(共享月池$60, $60)=$60。高峰2×保留为 variant。官网 SDK 表 Model ID 现为 deepseek-v4.1-flash（round6 时为 deepseek-flash）。"
+      },
+      "officialQuote": "DeepSeek V4.1 Flash (Off-Peak) Input $0.15 Output $0.60 Cached Read $0.003 Cached Write - Monthly limit $60",
+      "officialEstimateRequestsPerMonth": 130000,
+      "previousOfficialEstimateRequestsPerMonth": 32500,
+      "typicalTokensPerRequest": { "input": 410, "cacheRead": 71300, "output": 310 }
+    },
+    {
+      "officialDisplayName": "DeepSeek V4 Pro",
+      "officialApiId": "deepseek-v4-pro",
+      "proposedModelId": "deepseek-v4-pro",
+      "action": "keep",
+      "perModelMonthlyUsageUsd": 15,
+      "pricesPer1MUsd": {
+        "offPeak": { "cachedInput": 0.022, "input": 0.66, "output": 1.98 },
+        "peak": { "cachedInput": 0.044, "input": 1.32, "output": 3.96 }
+      },
+      "note": "OpenCode 价表 V4 Pro 仍为旧价、月 Usage $15，未改。"
+    },
+    {
+      "officialDisplayName": "DeepSeek V4 Flash / V4 Flash Vision Exp",
+      "action": "stay-dropped",
+      "note": "官网价表仍列 V4 Flash $30 / Vision $15（价已改成与 V4.1 相同），沿用 round6 裁定：已下线不画点。"
+    }
+  ],
+  "observationsNotAdopted": [
+    "官网新增 Go Plus 档（第二价表），V4.1 Flash 月 Usage $120、估算 260,000 请求/月；项目目前无 opencode_go_plus 套餐，未建点。",
+    "模型列表新增 Space Bunny Free（限时免费）、LongCat 2.5 Preview Free（ZDR 表）；API 目录 zen/go/v1/models 快照未含 deepseek-v4.1-flash，以文档页为准。",
+    "GPT 6 Luna 已在 Go 模型列表（估算 21,130 请求/月），采用集尚无 gpt-6-luna 行，留待裁定。"
+  ],
+  "notChangedThisRound": [
+    "Command Code GOAT 见 command-code-goat-deepseek-round2-2026-09-30.json",
+    "Ollama Pro/Max 本轮未重采"
+  ]
+}

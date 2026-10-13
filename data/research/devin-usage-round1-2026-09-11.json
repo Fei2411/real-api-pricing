@@ -1,13 +1,13 @@
 {
   "collectedAt": "2026-09-11",
-  "scopeNote": "Devin 订阅用量抽取首记。用户本人 Devin 账号一段 59%→39%（20pt）的分模型 token Δ。只记录，不采用：窗口口径（周/月/ACU 周期）未确认，且缓存命中率异常高，需更多段验证后再谈反推。",
+  "scopeNote": "Devin 订阅用量抽取首记。维护者本人 Devin 账号一段 59%→39%（20pt）的分模型 token Δ。只记录，不采用：窗口口径（周/月/ACU 周期）未确认，且缓存命中率异常高，需更多段验证后再谈反推。",
   "items": [
     {
       "planId": "devin",
       "evidenceType": "user_dashboard_backcalculation_raw",
-      "source": "用户本人 Devin 账号用量抽取，2026-09-11",
+      "source": "维护者本人 Devin 账号用量抽取，2026-09-11",
       "sourceDate": "2026-09-11",
-      "userConfirmation": "用户直接提供；并确认 swe-2 是免费的。",
+      "userConfirmation": "维护者直接提供；并确认 swe-2 是免费的。",
       "observedSegment": {
         "remainingFrom": 0.59,
         "remainingTo": 0.39,
@@ -25,7 +25,7 @@
             "totalDelta": 45524513,
             "cacheHitRate": 0.9517061500471186,
             "free": true,
-            "freeNote": "用户 2026-09-11 确认 swe-2 免费；是否消耗该百分比额度未证实"
+            "freeNote": "2026-09-11 确认 swe-2 免费；是否消耗该百分比额度未证实"
           },
           "summarizer": {
             "inputDelta": 42220,

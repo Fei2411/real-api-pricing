@@ -195,8 +195,16 @@ export function niceStep(span: number, count: number): number {
 export function scoreTicks(v: View, b: Box, lang = "en"): Tick[] {
   const count = Math.max(2, Math.round(b.height / 64));
   const step = niceStep(v.yt - v.yb, count);
+  // Smallest precision that prints the step exactly (2.5 → 1, 0.002 → 3,
+  // 5 → 0); coarser would collapse distinct ticks into duplicate labels.
+  let digits = 0;
+  while (
+    digits < 10 &&
+    Math.abs(Math.round(step * 10 ** digits) - step * 10 ** digits) >= 1e-9
+  )
+    digits++;
   const fmt = new Intl.NumberFormat(lang === "zh" ? "zh-CN" : "en-US", {
-    maximumFractionDigits: step < 1 ? 2 : 0,
+    maximumFractionDigits: digits,
   });
   const out: Tick[] = [];
   for (let s = Math.ceil(v.yb / step) * step; s <= v.yt + 1e-9; s += step)

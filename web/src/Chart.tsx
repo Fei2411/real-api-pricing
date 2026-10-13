@@ -6,7 +6,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { flushSync } from "react-dom";
+import { createPortal, flushSync } from "react-dom";
 import { createRoot } from "react-dom/client";
 import {
   ArrowCounterClockwise,
@@ -49,7 +49,6 @@ import {
   cardGroups,
   clearLabelSizeCache,
   fitLabel,
-  labelProvider,
   leaderSegment,
   orderLabelGroups,
   placeTextLabels,
@@ -185,8 +184,8 @@ function ChartScene(p: SceneProps) {
       )}
       <g>
         {/* grid */}
-        {yTicks.map((t) => (
-          <line key={`gy${t.label}`} x1={box.left} x2={box.right} y1={t.pos} y2={t.pos} stroke={c.grid} />
+        {yTicks.map((t, i) => (
+          <line key={`gy${i}`} x1={box.left} x2={box.right} y1={t.pos} y2={t.pos} stroke={c.grid} />
         ))}
         {xTicks.map((t) => (
           <line
@@ -211,9 +210,9 @@ function ChartScene(p: SceneProps) {
         )}
         {/* tick labels */}
         <g fontSize={p.mobile ? 10.5 : 11.5} fill={c.text} style={{ fontVariantNumeric: "tabular-nums" }}>
-          {yTicks.map((t) =>
+          {yTicks.map((t, i) =>
             t.pos >= box.top - 1 && t.pos <= box.bottom + 1 ? (
-              <text key={`ty${t.label}`} x={box.left - 10} y={t.pos} textAnchor="end" dominantBaseline="central">
+              <text key={`ty${i}`} x={box.left - 10} y={t.pos} textAnchor="end" dominantBaseline="central">
                 {t.label}
               </text>
             ) : null,
@@ -314,8 +313,8 @@ function ChartScene(p: SceneProps) {
         {p.badges.map((g) => {
           const { x, y } = toPixel(view, box, g.plotPrice, g.score);
           if (!inBox(box, x, y, -LOGO_SIZE / 2)) return null;
-          const provider = labelProvider(g);
-          const logo = providerLogoUrl(provider, "light");
+          const provider = g.rows[0].point.channel;
+          const logo = providerLogoUrl(provider, p.dark ? "dark" : "light");
           const hit = p.hits.has(g.key);
           const hitColor = color(g.rows[0].point);
           const hover = p.hoverKey === g.key;
@@ -340,7 +339,7 @@ function ChartScene(p: SceneProps) {
                 {logo ? (
                   <image href={logo} x={-10} y={-10} width={20} height={20} preserveAspectRatio="xMidYMid meet" />
                 ) : (
-                  <text textAnchor="middle" dominantBaseline="central" fontSize={9} fontWeight={600} fill="#555">
+                  <text textAnchor="middle" dominantBaseline="central" fontSize={9} fontWeight={600} fill={c.text}>
                     {provider.slice(0, 2)}
                   </text>
                 )}
@@ -359,6 +358,10 @@ function ChartScene(p: SceneProps) {
           const front = p.frontKeys.has(pl.key);
           const faded = g && p.highlight !== null && g.rows[0].point.channel !== p.highlight;
           const hitColor = g ? color(g.rows[0].point) : c.frontier;
+          const makerLogo = pl.maker ? providerLogoUrl(pl.maker, p.dark ? "dark" : "light") : undefined;
+          const padX = p.mobile ? 6 : 7;
+          const logoSize = p.mobile ? 11 : 12;
+          const logoGap = p.mobile ? 3 : 4;
           return (
             <g key={`name-${pl.key}`} opacity={faded ? 0.3 : 1}>
               {hit && g && (
@@ -380,15 +383,25 @@ function ChartScene(p: SceneProps) {
                 fill={c.labelBg}
                 stroke={hit ? hitColor : front ? c.frontierLabel : p.hoverKey === pl.key ? c.labelHover : c.labelBorder}
               />
+              {makerLogo && (
+                <image
+                  href={makerLogo}
+                  x={rect.left + padX}
+                  y={(rect.top + rect.bottom) / 2 - logoSize / 2}
+                  width={logoSize}
+                  height={logoSize}
+                  preserveAspectRatio="xMidYMid meet"
+                />
+              )}
               <text
-                x={(rect.left + rect.right) / 2}
+                x={makerLogo ? rect.left + padX + logoSize + logoGap : (rect.left + rect.right) / 2}
                 y={(rect.top + rect.bottom) / 2}
-                textAnchor="middle"
+                textAnchor={makerLogo ? "start" : "middle"}
                 dominantBaseline="central"
                 fontSize={font}
                 fill={c.ink}
               >
-                {fitLabel(pl.label, p.mobile)}
+                {fitLabel(pl.label, p.mobile, makerLogo !== undefined)}
               </text>
             </g>
           );
@@ -546,6 +559,7 @@ export default function Chart({
   onSelect,
   onSearch,
   handle,
+  toolsSlot = null,
 }: {
   rows: Row[];
   state: State;
@@ -555,6 +569,8 @@ export default function Chart({
   onSelect: (rows: Row[]) => void;
   onSearch: (find: string, lock: Lock | null) => void;
   handle: React.RefObject<ChartHandle | null>;
+  /** Toolbar element that hosts the navigation controls; inline when absent. */
+  toolsSlot?: HTMLElement | null;
 }) {
   const zh = state.lang === "zh";
   const dark = theme === "dark";
@@ -908,7 +924,7 @@ export default function Chart({
               clipId="export-clip"
               header={{
                 title: `${b.name} × ${zh ? "真实单价" : "real price"}`,
-                subtitle: `${metricLabel(b.metric, state.lang)} · ${zh ? "快照" : "Snapshot"} ${b.snapshot} · Real API Pricing · real-api-pricing.vercel.app`,
+                subtitle: `${metricLabel(b.metric, state.lang)} · ${zh ? "快照" : "Snapshot"} ${b.snapshot} · Real API Pricing · realapipricing.com`,
               }}
               keyRows={keyRows}
               fontCss={fontCss}
@@ -974,45 +990,54 @@ export default function Chart({
     Math.abs(view.xl - home.xl) + Math.abs(view.xr - home.xr) > 1e-6 ||
     Math.abs(view.yt - home.yt) + Math.abs(view.yb - home.yb) > 1e-6;
 
+  const controls = (
+    <div className="plot-controls" role="toolbar" aria-label={zh ? "图表操作" : "Chart navigation"}>
+      <div className="segmented" role="group" aria-label={zh ? "拖拽模式" : "Drag mode"}>
+        <button
+          aria-pressed={dragMode === "pan"}
+          title={zh ? "拖拽平移 · 滚轮缩放 · 双击复位" : "Drag to pan · scroll to zoom · double-click to reset"}
+          onClick={() => setDragMode("pan")}
+        >
+          <ArrowsOutCardinal size={15} />
+          <span>{zh ? "平移" : "Pan"}</span>
+        </button>
+        <button
+          aria-pressed={dragMode === "zoom"}
+          title={zh ? "拖出矩形放大 · 双击复位" : "Drag a box to zoom in · double-click to reset"}
+          onClick={() => setDragMode("zoom")}
+        >
+          <SelectionPlus size={15} />
+          <span>{zh ? "框选缩放" : "Box zoom"}</span>
+        </button>
+      </div>
+      <div className="segmented" role="group" aria-label={zh ? "缩放" : "Zoom"}>
+        <button aria-label={zh ? "放大" : "Zoom in"} title={zh ? "放大" : "Zoom in"} onClick={() => zoomBy(0.8)}>
+          <MagnifyingGlassPlus size={15} />
+        </button>
+        <button aria-label={zh ? "缩小" : "Zoom out"} title={zh ? "缩小" : "Zoom out"} onClick={() => zoomBy(1.25)}>
+          <MagnifyingGlassMinus size={15} />
+        </button>
+        <button onClick={reset} disabled={!zoomed} title={zh ? "重置视图（双击图表）" : "Reset view (double-click the plot)"}>
+          <ArrowCounterClockwise size={15} />
+          <span>{zh ? "重置" : "Reset"}</span>
+        </button>
+      </div>
+      <div className="chart-search-slot">
+        <ChartSearch
+          query={state.find}
+          lock={state.lock}
+          candidates={candidates}
+          hits={hits}
+          lang={state.lang}
+          onSearch={onSearch}
+        />
+      </div>
+    </div>
+  );
+
   return (
     <>
-      <div className="plot-controls" role="toolbar" aria-label={zh ? "图表操作" : "Chart navigation"}>
-        <div className="segmented" role="group" aria-label={zh ? "拖拽模式" : "Drag mode"}>
-          <button aria-pressed={dragMode === "pan"} onClick={() => setDragMode("pan")}>
-            <ArrowsOutCardinal size={15} />
-            <span>{zh ? "平移" : "Pan"}</span>
-          </button>
-          <button aria-pressed={dragMode === "zoom"} onClick={() => setDragMode("zoom")}>
-            <SelectionPlus size={15} />
-            <span>{zh ? "框选缩放" : "Box zoom"}</span>
-          </button>
-        </div>
-        <div className="segmented" role="group" aria-label={zh ? "缩放" : "Zoom"}>
-          <button aria-label={zh ? "放大" : "Zoom in"} title={zh ? "放大" : "Zoom in"} onClick={() => zoomBy(0.8)}>
-            <MagnifyingGlassPlus size={15} />
-          </button>
-          <button aria-label={zh ? "缩小" : "Zoom out"} title={zh ? "缩小" : "Zoom out"} onClick={() => zoomBy(1.25)}>
-            <MagnifyingGlassMinus size={15} />
-          </button>
-          <button onClick={reset} disabled={!zoomed} title={zh ? "重置视图（双击图表）" : "Reset view (double-click the plot)"}>
-            <ArrowCounterClockwise size={15} />
-            <span>{zh ? "重置" : "Reset"}</span>
-          </button>
-        </div>
-        <span className="plot-hint">
-          {zh ? "滚轮缩放 · 拖拽平移 · 双击复位" : "Scroll to zoom · drag to pan · double-click to reset"}
-        </span>
-        <div className="chart-search-slot">
-          <ChartSearch
-            query={state.find}
-            lock={state.lock}
-            candidates={candidates}
-            hits={hits}
-            lang={state.lang}
-            onSearch={onSearch}
-          />
-        </div>
-      </div>
+      {toolsSlot ? createPortal(controls, toolsSlot) : controls}
       <div className="chart-shell" ref={shell}>
         <div
           ref={svgWrap}

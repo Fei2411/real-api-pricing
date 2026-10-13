@@ -1,6 +1,6 @@
 {
   "collectedAt": "2026-09-08",
-  "scopeNote": "GPT-5.6 Luna 订阅额度专项采用记录。新增用户自己的 ChatGPT Plus 面板 total tokens + 周额度百分比，并保留 GitHub #8 的 Pro 20x 美元等效口述作为独立比例旁证。历史 research 文件不改。",
+  "scopeNote": "GPT-5.6 Luna 订阅额度专项采用记录。新增维护者自己的 ChatGPT Plus 面板 total tokens + 周额度百分比，并保留 GitHub #8 的 Pro 20x 美元等效口述作为独立比例旁证。历史 research 文件不改。",
   "items": [
     {
       "planId": "chatgpt_plus",
@@ -9,7 +9,7 @@
       "evidenceType": "user_dashboard_backcalculation",
       "source": "https://github.com/FeiZhuLulu/real-api-pricing/issues/10#issuecomment-5576865371",
       "sourceDate": "2026-09-08",
-      "userConfirmation": "Issue #10 截图为用户自己的 ChatGPT Plus 实测。",
+      "userConfirmation": "Issue #10 截图为维护者自己的 ChatGPT Plus 实测。",
       "observed": {
         "weeklyUsedFractionDisplayed": 0.06,
         "totalTokens": 112666769,

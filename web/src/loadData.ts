@@ -13,7 +13,7 @@ export function unpackData(data: PackedData): SiteData {
     mappings: data.mappings.map((m) => {
       const c = configs.get(m.configuration_id);
       if (!c) throw new Error(`Missing benchmark configuration: ${m.configuration_id}`);
-      const { model, archive, checked_at, ...fields } = c;
+      const { model, ...fields } = c;
       return { ...fields, ...m } as Mapping;
     }),
   };

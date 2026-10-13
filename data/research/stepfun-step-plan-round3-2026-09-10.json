@@ -1,7 +1,7 @@
 {
   "collectedAt": "2026-09-10",
   "sourceType": "official-docs + local cross-check",
-  "scope": "用户要求再测算 $1≈7M 与 1M=¥1 两套口径准不准。不改 adopted。",
+  "scope": "裁定再测算 $1≈7M 与 1M=¥1 两套口径准不准。不改 adopted。",
   "prior": [
     "data/research/stepfun-step-plan-round1-2026-09-10.json",
     "data/research/stepfun-step-plan-round2-2026-09-10.json"

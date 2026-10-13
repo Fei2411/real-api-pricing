@@ -1,0 +1,704 @@
+{
+  "collectedAt": "2026-09-30",
+  "collectionMethod": "curl HTML scrape + table/DOM-embedded JSON extraction of both plan pages, English. Historical evidence retained unchanged.",
+  "sources": [
+    "https://commandcode.ai/docs/plans/goat",
+    "https://commandcode.ai/models",
+    "https://opencode.ai/docs/go/"
+  ],
+  "commandCodeGoat": {
+    "sharedPoolUsd": 70,
+    "everyModelTable": [
+      {
+        "model": "gpt-5.6-sol",
+        "monthlyCreditsUsd": 70,
+        "input": 5.0,
+        "output": 30.0,
+        "cachedRead": 0.5,
+        "cacheWrite": 6.25
+      },
+      {
+        "model": "glm-5.2",
+        "monthlyCreditsUsd": 70,
+        "input": 1.4,
+        "output": 4.4,
+        "cachedRead": 0.26
+      },
+      {
+        "model": "hy3",
+        "monthlyCreditsUsd": 70,
+        "input": 0.14,
+        "output": 0.58,
+        "cachedRead": 0.035
+      },
+      {
+        "model": "qwen3.8-27b",
+        "monthlyCreditsUsd": 70,
+        "input": 0.4,
+        "output": 3.0,
+        "cachedRead": 0.04
+      },
+      {
+        "model": "deepseek-v4-flash",
+        "monthlyCreditsUsd": 60,
+        "input": 0.15,
+        "output": 0.6,
+        "cachedRead": 0.003,
+        "label": "DeepSeek V4 Flash (latest)",
+        "requestsPerMonth": 154000
+      },
+      {
+        "model": "deepseek-v4.1-flash",
+        "monthlyCreditsUsd": 60,
+        "input": 0.15,
+        "output": 0.6,
+        "cachedRead": 0.003,
+        "requestsPerMonth": 154000,
+        "note": "$40→$60 permanent, no expiry marker (was '4x · Ends Sep 27')"
+      },
+      {
+        "model": "deepseek-v4.1-flash-fast",
+        "monthlyCreditsUsd": 60,
+        "input": 0.16,
+        "output": 0.58,
+        "cachedRead": 0.016,
+        "requestsPerMonth": 57500
+      },
+      {
+        "model": "kimi-k2.7-code",
+        "monthlyCreditsUsd": 60,
+        "input": 0.95,
+        "output": 4.0,
+        "cachedRead": 0.19
+      },
+      {
+        "model": "kimi-k3",
+        "monthlyCreditsUsd": 20,
+        "input": 3.0,
+        "output": 15.0,
+        "cachedRead": 0.3,
+        "temporaryPromo": "$60 through Oct 7th — excluded per temp-promo policy"
+      },
+      {
+        "model": "longcat-2.0",
+        "monthlyCreditsUsd": 50,
+        "input": 0.3,
+        "output": 1.2,
+        "cachedRead": 0.006
+      },
+      {
+        "model": "minimax-m3",
+        "monthlyCreditsUsd": 47,
+        "input": 0.3,
+        "output": 1.2,
+        "cachedRead": 0.06
+      },
+      {
+        "model": "glm-5.3-flash",
+        "monthlyCreditsUsd": 40,
+        "input": 0.15,
+        "output": 0.5,
+        "cachedRead": 0.03
+      },
+      {
+        "model": "gemini-3.8-flash",
+        "monthlyCreditsUsd": 40,
+        "input": 1.5,
+        "output": 7.5,
+        "cachedRead": 0.15
+      },
+      {
+        "model": "qwen3.7-max",
+        "monthlyCreditsUsd": 33,
+        "input": 2.5,
+        "output": 7.5,
+        "cachedRead": 0.5,
+        "cacheWrite": 3.13
+      },
+      {
+        "model": "qwen3.7-plus",
+        "monthlyCreditsUsd": 33,
+        "input": 0.4,
+        "output": 1.6,
+        "cachedRead": 0.08,
+        "cacheWrite": 0.5
+      },
+      {
+        "model": "qwen3.6-plus",
+        "monthlyCreditsUsd": 33,
+        "input": 0.5,
+        "output": 3.0,
+        "cachedRead": 0.1
+      },
+      {
+        "model": "mimo-v2.5",
+        "monthlyCreditsUsd": 30,
+        "input": 0.14,
+        "output": 0.28,
+        "cachedRead": 0.0028
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "monthlyCreditsUsd": 20,
+        "input": 0.2,
+        "output": 1.2,
+        "cachedRead": 0.02,
+        "cacheWrite": 0.25
+      },
+      {
+        "model": "qwen3.8-max",
+        "monthlyCreditsUsd": 20,
+        "input": 2.0,
+        "output": 6.0,
+        "cachedRead": 0.25,
+        "cacheWrite": 2.5
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "monthlyCreditsUsd": 20,
+        "input": 0.66,
+        "output": 1.98,
+        "cachedRead": 0.022,
+        "label": "DeepSeek V4 Pro (latest)"
+      },
+      {
+        "model": "mimo-v2.5-pro",
+        "monthlyCreditsUsd": 20,
+        "input": 0.435,
+        "output": 0.87,
+        "cachedRead": 0.0036
+      }
+    ],
+    "standaloneTable": [
+      {
+        "model": "claude-sonnet-5.5",
+        "monthlyCreditsUsd": 10,
+        "input": 2.0,
+        "output": 10.0,
+        "cachedRead": 0.2,
+        "cacheWrite": 2.5,
+        "note": "launched 2026-09-28"
+      }
+    ],
+    "newModelsTable": [
+      {
+        "model": "gpt-6-luna",
+        "monthlyCreditsUsd": 20,
+        "input": 0.1,
+        "output": 0.5,
+        "cachedRead": 0.01,
+        "cacheWrite": 0.125
+      },
+      {
+        "model": "qwen3.8-omni-flash",
+        "monthlyCreditsUsd": 20,
+        "input": 0.15,
+        "output": 0.47,
+        "cachedRead": 0.016
+      },
+      {
+        "model": "qwen3.8-max-0902",
+        "monthlyCreditsUsd": 20,
+        "input": 2.0,
+        "output": 6.0,
+        "cachedRead": 0.25
+      },
+      {
+        "model": "hy4-preview",
+        "monthlyCreditsUsd": 20,
+        "input": 0.834,
+        "output": 2.501,
+        "cachedRead": 0.042
+      },
+      {
+        "model": "qwen3.8-flash",
+        "monthlyCreditsUsd": 20,
+        "input": 0.16,
+        "output": 0.47,
+        "cachedRead": 0.016
+      },
+      {
+        "model": "glm-5.3-flashx",
+        "monthlyCreditsUsd": 20,
+        "input": 0.37,
+        "output": 1.25,
+        "cachedRead": 0.075
+      },
+      {
+        "model": "deepseek-v4-flash-vision-exp",
+        "monthlyCreditsUsd": 20,
+        "input": 0.15,
+        "output": 0.6,
+        "cachedRead": 0.003,
+        "label": "DeepSeek V4 Flash Vision (exp)"
+      },
+      {
+        "model": "deepseek-v4-flash-fast",
+        "monthlyCreditsUsd": 20,
+        "input": 0.28,
+        "output": 0.56,
+        "cachedRead": 0.07
+      },
+      {
+        "model": "glm-5.3",
+        "monthlyCreditsUsd": 20,
+        "input": 1.4,
+        "output": 4.4,
+        "cachedRead": 0.26
+      },
+      {
+        "model": "muse-spark-1.3",
+        "monthlyCreditsUsd": 20,
+        "input": 1.25,
+        "output": 4.25,
+        "cachedRead": 0.15
+      },
+      {
+        "model": "muse-spark-1.3-contributor",
+        "monthlyCreditsUsd": 20,
+        "input": 0.1,
+        "output": 0.2,
+        "cachedRead": 0.002
+      },
+      {
+        "model": "muse-spark-1.2",
+        "monthlyCreditsUsd": 20,
+        "input": 1.25,
+        "output": 4.25,
+        "cachedRead": 0.15
+      },
+      {
+        "model": "muse-spark-1.2-contributor",
+        "monthlyCreditsUsd": 20,
+        "input": 0.1,
+        "output": 0.2,
+        "cachedRead": 0.002
+      },
+      {
+        "model": "kimi-k2.7-code-highspeed",
+        "monthlyCreditsUsd": 20,
+        "input": 1.9,
+        "output": 8.0,
+        "cachedRead": 0.38
+      },
+      {
+        "model": "grok-4.5",
+        "monthlyCreditsUsd": 20,
+        "input": 2.0,
+        "output": 6.0,
+        "cachedRead": 0.5
+      },
+      {
+        "model": "grok-4.6",
+        "monthlyCreditsUsd": 20,
+        "input": 2.0,
+        "output": 6.0,
+        "cachedRead": 0.5
+      },
+      {
+        "model": "grok-4.7",
+        "monthlyCreditsUsd": 20,
+        "input": 2.0,
+        "output": 6.0,
+        "cachedRead": 0.5
+      },
+      {
+        "model": "gemini-3.7-flash",
+        "monthlyCreditsUsd": 40,
+        "input": 1.5,
+        "output": 7.5,
+        "cachedRead": 0.15,
+        "cacheWrite": 0.08334
+      },
+      {
+        "model": "glm-5.2-fast",
+        "monthlyCreditsUsd": 20,
+        "input": 3.0,
+        "output": 10.25,
+        "cachedRead": 0.5
+      },
+      {
+        "model": "inkling",
+        "monthlyCreditsUsd": 20,
+        "input": 1.0,
+        "output": 4.05,
+        "cachedRead": 0.17
+      },
+      {
+        "model": "inkling-small",
+        "monthlyCreditsUsd": 20,
+        "input": 0.5,
+        "output": 1.2,
+        "cachedRead": 0.1
+      },
+      {
+        "model": "mimo-v2.6-pro",
+        "monthlyCreditsUsd": 20,
+        "input": 0.435,
+        "output": 0.87,
+        "cachedRead": 0.0036
+      },
+      {
+        "model": "mimo-v2.6-flash",
+        "monthlyCreditsUsd": 20,
+        "input": 0.14,
+        "output": 0.28,
+        "cachedRead": 0.0028,
+        "note": "moved from Every-model $30 to New-models $20"
+      },
+      {
+        "model": "mimo-v2.6-pro-ultraspeed",
+        "monthlyCreditsUsd": 10,
+        "input": 4.35,
+        "output": 8.7,
+        "cachedRead": 0.036
+      },
+      {
+        "model": "step-5-preview",
+        "monthlyCreditsUsd": 20,
+        "input": 1.0,
+        "output": 2.7,
+        "cachedRead": 0.05
+      },
+      {
+        "model": "step-3.7-flash",
+        "monthlyCreditsUsd": 20,
+        "input": 0.2,
+        "output": 1.15,
+        "cachedRead": 0.04
+      },
+      {
+        "model": "step-3.5-flash",
+        "monthlyCreditsUsd": 20,
+        "input": 0.09,
+        "output": 0.3,
+        "cachedRead": 0.02,
+        "note": "input $0.10→$0.09"
+      },
+      {
+        "model": "nemotron-3-ultra",
+        "monthlyCreditsUsd": 20,
+        "input": 0.6,
+        "output": 2.4,
+        "cachedRead": 0.12
+      },
+      {
+        "model": "jev",
+        "monthlyCreditsUsd": 20,
+        "input": 0.042,
+        "output": 0.0,
+        "cachedRead": 0.0,
+        "note": "Decision model (typesafe/jev)"
+      }
+    ],
+    "olderModelsTable": [
+      {
+        "model": "kimi-k2.6",
+        "monthlyCreditsUsd": 20,
+        "input": 0.95,
+        "output": 4.0,
+        "cachedRead": 0.16
+      },
+      {
+        "model": "kimi-k2.5",
+        "monthlyCreditsUsd": 20,
+        "input": 0.6,
+        "output": 3.0,
+        "cachedRead": 0.1
+      },
+      {
+        "model": "glm-5.1",
+        "monthlyCreditsUsd": 20,
+        "input": 1.4,
+        "output": 4.4,
+        "cachedRead": 0.26
+      },
+      {
+        "model": "glm-5",
+        "monthlyCreditsUsd": 20,
+        "input": 1.0,
+        "output": 3.2,
+        "cachedRead": 0.2
+      },
+      {
+        "model": "qwen3.7-flash",
+        "monthlyCreditsUsd": 20,
+        "input": 0.03,
+        "output": 0.13,
+        "cachedRead": 0.006,
+        "note": "≤32K band adopted; ≤256K (0.02/0.1/0.4) and >256K (0.04/0.2/0.8) bands in research"
+      },
+      {
+        "model": "qwen3.6-max-preview",
+        "monthlyCreditsUsd": 20,
+        "input": 1.3,
+        "output": 7.8,
+        "cachedRead": 0.26,
+        "cacheWrite": 1.63
+      },
+      {
+        "model": "minimax-m2.7",
+        "monthlyCreditsUsd": 20,
+        "input": 0.3,
+        "output": 1.2,
+        "cachedRead": 0.06
+      },
+      {
+        "model": "minimax-m2.5",
+        "monthlyCreditsUsd": 20,
+        "input": 0.3,
+        "output": 1.2,
+        "cachedRead": 0.03
+      }
+    ]
+  },
+  "opencodeGo": {
+    "sharedPoolUsd": 60,
+    "tiers": {
+      "go": 10,
+      "goPlus": 40
+    },
+    "goTierModels": [
+      {
+        "model": "glm-5.3-flash",
+        "usageUsd": 60,
+        "input": 0.15,
+        "output": 0.5,
+        "cachedRead": 0.03,
+        "requestsPerMonth": 31580,
+        "note": "$15→$60"
+      },
+      {
+        "model": "glm-5.3",
+        "usageUsd": 15,
+        "input": 1.4,
+        "output": 4.4,
+        "cachedRead": 0.26,
+        "requestsPerMonth": 1080
+      },
+      {
+        "model": "glm-5.2",
+        "usageUsd": 60,
+        "input": 1.4,
+        "output": 4.4,
+        "cachedRead": 0.26
+      },
+      {
+        "model": "kimi-k3",
+        "usageUsd": 15,
+        "input": 3.0,
+        "output": 15.0,
+        "cachedRead": 0.3
+      },
+      {
+        "model": "kimi-k2.7-code",
+        "usageUsd": 60,
+        "input": 0.95,
+        "output": 4.0,
+        "cachedRead": 0.19
+      },
+      {
+        "model": "kimi-k2.6",
+        "usageUsd": 60,
+        "input": 0.95,
+        "output": 4.0,
+        "cachedRead": 0.16
+      },
+      {
+        "model": "longcat-2.0",
+        "usageUsd": 60,
+        "input": 0.3,
+        "output": 1.2,
+        "cachedRead": 0.006
+      },
+      {
+        "model": "longcat-2.5-preview-free",
+        "usageUsd": "unlimited",
+        "note": "free promo, not adopted (temp free tier policy)"
+      },
+      {
+        "model": "mimo-v2.6-flash",
+        "usageUsd": 60,
+        "input": 0.14,
+        "output": 0.28,
+        "cachedRead": 0.0028
+      },
+      {
+        "model": "mimo-v2.6-pro",
+        "usageUsd": 15,
+        "input": 0.435,
+        "output": 0.87,
+        "cachedRead": 0.003625
+      },
+      {
+        "model": "mimo-v2.5",
+        "usageUsd": 60,
+        "input": 0.14,
+        "output": 0.28,
+        "cachedRead": 0.0028
+      },
+      {
+        "model": "mimo-v2.5-pro",
+        "usageUsd": 15,
+        "input": 0.435,
+        "output": 0.87,
+        "cachedRead": 0.003625
+      },
+      {
+        "model": "minimax-m3",
+        "usageUsd": 60,
+        "input": 0.3,
+        "output": 1.2,
+        "cachedRead": 0.06
+      },
+      {
+        "model": "minimax-m2.7",
+        "usageUsd": 60,
+        "input": 0.3,
+        "output": 1.2,
+        "cachedRead": 0.06,
+        "cacheWrite": 0.375
+      },
+      {
+        "model": "muse-spark-1.3-contributor",
+        "usageUsd": 60,
+        "input": 0.1,
+        "output": 0.2,
+        "cachedRead": 0.002
+      },
+      {
+        "model": "muse-spark-1.2-contributor",
+        "usageUsd": 60,
+        "input": 0.1,
+        "output": 0.2,
+        "cachedRead": 0.002
+      },
+      {
+        "model": "qwen3.8-max",
+        "usageUsd": 15,
+        "input": 2.0,
+        "output": 6.0,
+        "cachedRead": 0.25,
+        "cacheWrite": 2.5
+      },
+      {
+        "model": "qwen3.8-flash",
+        "usageUsd": 30,
+        "input": 0.15,
+        "output": 0.47,
+        "cachedRead": 0.016,
+        "cacheWrite": 0.2
+      },
+      {
+        "model": "qwen3.7-plus",
+        "usageUsd": 60,
+        "input": 0.4,
+        "output": 1.6,
+        "cachedRead": 0.04,
+        "cacheWrite": 0.5,
+        "note": "≤256K band; >256K band in research"
+      },
+      {
+        "model": "deepseek-v4.1-flash",
+        "usageUsd": 60,
+        "input": 0.15,
+        "output": 0.6,
+        "cachedRead": 0.003,
+        "requestsPerMonth": 130000,
+        "note": "$15→$60 permanent, no expiry marker; model id now deepseek-v4.1-flash (was deepseek-flash)"
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "usageUsd": 15,
+        "input": 0.66,
+        "output": 1.98,
+        "cachedRead": 0.022,
+        "requestsPerMonth": 5200
+      },
+      {
+        "model": "deepseek-v4-flash",
+        "usageUsd": 30,
+        "input": 0.15,
+        "output": 0.6,
+        "cachedRead": 0.003,
+        "requestsPerMonth": 65000,
+        "note": "restored to catalog after 9/10 delist"
+      },
+      {
+        "model": "deepseek-v4-flash-vision-exp",
+        "usageUsd": 15,
+        "input": 0.15,
+        "output": 0.6,
+        "cachedRead": 0.003,
+        "requestsPerMonth": 32500,
+        "note": "restored to catalog after 9/10 delist"
+      },
+      {
+        "model": "hy4-preview",
+        "usageUsd": 30,
+        "input": 0.834,
+        "output": 2.501,
+        "cachedRead": 0.042
+      },
+      {
+        "model": "hy3",
+        "usageUsd": 60,
+        "input": 0.14,
+        "output": 0.58,
+        "cachedRead": 0.035
+      },
+      {
+        "model": "space-bunny-free",
+        "usageUsd": "unlimited",
+        "note": "free promo, not adopted"
+      },
+      {
+        "model": "grok-4.7",
+        "usageUsd": 15,
+        "input": 2.0,
+        "output": 6.0,
+        "cachedRead": 0.5,
+        "note": "≤200K band"
+      },
+      {
+        "model": "grok-4.6",
+        "usageUsd": 15,
+        "input": 2.0,
+        "output": 6.0,
+        "cachedRead": 0.5,
+        "note": "≤200K band"
+      },
+      {
+        "model": "gpt-6-luna",
+        "usageUsd": 15,
+        "input": 0.1,
+        "output": 0.5,
+        "cachedRead": 0.01,
+        "cacheWrite": 0.125,
+        "requestsPerMonth": 21130,
+        "note": "≤272K band; >272K in research"
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "usageUsd": 15,
+        "input": 0.2,
+        "output": 1.2,
+        "cachedRead": 0.02,
+        "cacheWrite": 0.25,
+        "requestsPerMonth": 10250
+      }
+    ],
+    "absentFromCatalog": [
+      "omen-alpha",
+      "glm-5.1",
+      "minimax-m2.5",
+      "qwen3.7-max",
+      "qwen3.6-plus"
+    ],
+    "deferred": [
+      "Go Plus $40 tier (no matching plan_id yet)",
+      "LongCat 2.5 Preview Free / Space Bunny Free (temporary unlimited-free promos)"
+    ]
+  },
+  "calculationPolicy": "Keep shared pools, standard workload and temporary-promotion exclusions. Monthly token estimates assume usage spread across window limits; per-model allowances cannot be added. Cache write is excluded from the standard workload."
+}

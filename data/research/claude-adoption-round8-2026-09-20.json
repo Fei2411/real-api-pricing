@@ -1,9 +1,9 @@
 {
   "recordedAt": "2026-09-20",
   "sourceType": "user_provided_community_panel_screenshot",
-  "trigger": "用户提供 X 用户 @shownotover 推文与 Claude Code /usage 面板同框截图：Pro $20 跑 Opus 5 (MED effort)，token 明细与 5h/周百分比同时可读",
+  "trigger": "维护者提供 X 用户 @shownotover 推文与 Claude Code /usage 面板同框截图：Pro $20 跑 Opus 5 (MED effort)，token 明细与 5h/周百分比同时可读",
   "panelReading": {
-    "source": "X @shownotover 推文（用户提供截图两张：推文正文 + /usage 面板视频帧 0:57/1:00）",
+    "source": "X @shownotover 推文（维护者提供截图两张：推文正文 + /usage 面板视频帧 0:57/1:00）",
     "plan": "claude_pro $20",
     "effort": "MED（作者自注 forgot to use max；effort 只影响消耗速率，不影响池大小）",
     "sessionCostUsd": 25.72,

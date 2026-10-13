@@ -1,0 +1,76 @@
+{
+  "collectedAt": "2026-09-30",
+  "sourceType": "official-docs + user confirmation",
+  "source": "https://commandcode.ai/docs/plans/goat",
+  "relatedSources": [
+    "https://commandcode.ai/pricing",
+    "https://commandcode.ai/models"
+  ],
+  "checkedAt": "2026-09-30",
+  "scope": "仅核对 Command Code GOAT 的 DeepSeek 行（V4.1 Flash 升额、V4 Pro / V4 Flash Fast 复查）。OpenCode 见 opencode-go-deepseek-round7-2026-09-30.json。未重采其余非 DeepSeek 模型。",
+  "userInstruction": "2026-09-30 确认：OpenCode Go 与 Command Code GOAT 的 DeepSeek V4.1 Flash 均已转为永久 $60 月额度。",
+  "officialSharedLimitsUnchanged": {
+    "per5hUsd": 14,
+    "perWeekUsd": 35,
+    "perMonthUsd": 70,
+    "quote": "5-hour limit - $14 of usage; Weekly limit - $35 of usage; Monthly limit - $70 of usage"
+  },
+  "peakHours": "01:00-04:00 and 06:00-10:00 UTC, Monday through Friday; Off-Peak shown 17h/day",
+  "formula": "min(70, perModelMonthlyCreditsUsd) / (0.97*cacheRead + 0.025*input + 0.005*output) / 100 亿",
+  "models": [
+    {
+      "officialDisplayName": "DeepSeek V4.1 Flash",
+      "proposedModelId": "deepseek-v4.1-flash",
+      "action": "update-limit",
+      "perModelMonthlyCreditsUsd": 60,
+      "previousPerModelMonthlyCreditsUsd": 40,
+      "pricesPer1MUsd": {
+        "offPeak": { "cachedInput": 0.003, "input": 0.15, "output": 0.6 },
+        "peak": { "cachedInput": 0.006, "input": 0.3, "output": 1.2 }
+      },
+      "adopt": {
+        "variant": "Off-Peak",
+        "blendedUsdPer1M": 0.00966,
+        "monthlyYi": 62.112,
+        "realUsdPerMtok": 0.00161,
+        "reason": "模型月 allowance 由 $40 升为 $60：官网估算请求 30,800/5h、76,900/周、154,000/月，与 Every model 表 $60 档的 DeepSeek V4 Flash (latest) 完全同档；确认 $60 为永久口径。min(共享月池$70, $60)=$60。高峰 2× 保留为 variant。"
+      },
+      "officialQuote": "DeepSeek V4.1 Flash Input $0.15 Output $0.60 Cache Read $0.003 — estimated 30,800 req/5h, 76,900 req/week, 154,000 req/month",
+      "officialEstimateRequestsPerMonth": 154000
+    },
+    {
+      "officialDisplayName": "DeepSeek V4 Flash (latest) / V4 Flash Vision (exp)",
+      "action": "stay-dropped",
+      "note": "沿用 round1 裁定：已下线不画点。官网表仍列 V4 Flash latest（$60 档、154,000 请求/月）与 Vision exp 旧价行。"
+    },
+    {
+      "officialDisplayName": "DeepSeek V4 Flash Fast",
+      "proposedModelId": "deepseek-v4-flash-fast",
+      "action": "keep",
+      "perModelMonthlyCreditsUsd": 20,
+      "pricesPer1MUsd": {
+        "offPeak": { "cachedInput": 0.07, "input": 0.28, "output": 0.56 }
+      },
+      "note": "官网三段价与 $20 档未改；与 Flash / V4.1 Flash 额度分开。本轮保持。"
+    },
+    {
+      "officialDisplayName": "DeepSeek V4 Pro (latest)",
+      "proposedModelId": "deepseek-v4-pro",
+      "action": "keep",
+      "perModelMonthlyCreditsUsd": 20,
+      "pricesPer1MUsd": {
+        "offPeak": { "cachedInput": 0.022, "input": 0.66, "output": 1.98 },
+        "peak": { "cachedInput": 0.044, "input": 1.32, "output": 3.96 }
+      },
+      "note": "Command Code 价表仍是旧 V4 Pro 价，未改。本轮不预改 Pro 点。"
+    }
+  ],
+  "observationsNotAdopted": [
+    "GOAT 表新增『DeepSeek V4.1 Flash Fast』：闲时 $0.016/$0.16/$0.58、高峰 $0.32/$1.16（peak 仅标两段价），估算 57,500 请求/月；未建点，留待裁定。",
+    "pricing 页 GOAT 卖点仍写『$60 on DeepSeek V4 Flash』为示例行，未单独标 V4.1 额度；以 docs 估算请求表对齐 $60 档为准。"
+  ],
+  "notChangedThisRound": [
+    "OpenCode Go 见 opencode-go-deepseek-round7-2026-09-30.json",
+    "Ollama Pro/Max 本轮未重采"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "recordedAt": "2026-09-05",
   "round": 6,
-  "topic": "核实用户记忆「Cursor 官方说 fast 是普通 3 倍用量」——未证实；Grok 4.6 Fast 官方为 2×",
+  "topic": "核实维护者记忆「Cursor 官方说 fast 是普通 3 倍用量」——未证实；Grok 4.6 Fast 官方为 2×",
   "findings": [
     {
       "item": "grok46_fast_price_official",
@@ -35,7 +35,7 @@
           "source2": "live 2026-09-05：Grok 4.5 (Fast) $4 / $1 / $18（输出 3×）"
         }
       ],
-      "finding": "Grok 4.5 Fast 输出价在 8-19 ~ 9-05 之间从 $12 改为 $18（输出 3×，输入/缓存仍 2×，按实测负载混合仍 ≈2×）。证明 Cursor 会在周期内静默改 Fast 价；但用户截图行全部是 4.6，不受影响。",
+      "finding": "Grok 4.5 Fast 输出价在 8-19 ~ 9-05 之间从 $12 改为 $18（输出 3×，输入/缓存仍 2×，按实测负载混合仍 ≈2×）。证明 Cursor 会在周期内静默改 Fast 价；但维护者截图行全部是 4.6，不受影响。",
       "confidence": "high"
     },
     {
@@ -62,7 +62,7 @@
       "status": "confound_identified",
       "source": "Wayback 2026-08-19 页脚注 + cursor.com/blog/grok-4-6",
       "quote": "A 50% launch discount for Grok 4.6 applies for one week starting August 12, 2026. / We're offering 2x included usage inside Cursor and Grok Build for the first week.",
-      "finding": "用户截图周期 2026-08-11~09-11 覆盖 4.6 发布周促销（8-12 起一周：50% 计费折扣 / 双倍 included usage）。促销期用量的 % 分母口径与正常周不同，使单行反推池的不确定性最多再扩 ~2×，且方向为使稳态池显得更大（即真实稳态池可能小于反推值）。",
+      "finding": "维护者截图周期 2026-08-11~09-11 覆盖 4.6 发布周促销（8-12 起一周：50% 计费折扣 / 双倍 included usage）。促销期用量的 % 分母口径与正常周不同，使单行反推池的不确定性最多再扩 ~2×，且方向为使稳态池显得更大（即真实稳态池可能小于反推值）。",
       "confidence": "high"
     },
     {
@@ -78,5 +78,5 @@
       "confidence": "high"
     }
   ],
-  "conclusion": "「fast=3×」无官方依据（4.6 官方 2×）；截图按官方价口径支持 ~55-68 亿标准等效，仍与用户确认的 ~100 亿冲突。用户确认值 100 亿维持采用（adopted），此文件仅记录核验过程，不改数。"
+  "conclusion": "「fast=3×」无官方依据（4.6 官方 2×）；截图按官方价口径支持 ~55-68 亿标准等效，仍与已确认的 ~100 亿冲突。确认值 100 亿维持采用（adopted），此文件仅记录核验过程，不改数。"
 }

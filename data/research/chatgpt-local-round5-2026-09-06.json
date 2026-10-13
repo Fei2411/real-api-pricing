@@ -28,10 +28,10 @@
       "08-08→08-15 窗口 0→47% 消耗 5.30亿 → 反推 11.3亿/周（未打满）"
     ],
     "median_full_sweep_yi_per_week": 2.7,
-    "monthly_equiv_yi": "不作估计（见下：用户确认该账号重置频繁，样本不可分窗）",
-    "userConfirmed_2026-09-06": "用户原话：『我本机的codex，经常有重置，所以你可能分不清额度』——中途重置把 % 打回低位而 token 累计不回零，按 resets_at 分组无法干净切窗，本机反推值整体不可用作锚点",
+    "monthly_equiv_yi": "不作估计（见下：确认该账号重置频繁，样本不可分窗）",
+    "userConfirmed_2026-09-06": "维护者原话：『我本机的codex，经常有重置，所以你可能分不清额度』——中途重置把 % 打回低位而 token 累计不回零，按 resets_at 分组无法干净切窗，本机反推值整体不可用作锚点",
     "caveats": [
-      "本机样本作废原因（用户确认）：账号频繁经历 OpenAI 重置（战情室重置、banked reset、善意重置），% 与 token 累计失步 → 0.8~13亿/周 的大方差是污染，不是真实池差异",
+      "本机样本作废原因（确认）：账号频繁经历 OpenAI 重置（战情室重置、banked reset、善意重置），% 与 token 累计失步 → 0.8~13亿/周 的大方差是污染，不是真实池差异",
       "本机数据仅证明机制可行：rollout 的 token_count 事件同框携带服务端确认 token 与 used_percent；无重置的账号可用同法测",
       "used_percent 按加权单位计（Observatory 证实 Sol=1×/Terra=0.4×/Luna=0.04×/Astra=2×），raw token 池随模型 mix 变",
       "旧 adopted 值 chatgpt_plus=6.16亿/月 维持；Observatory 折回 7.18亿/月 为当前最佳外部参照"
@@ -89,8 +89,8 @@
       "confidence": "low"
     },
     "chatgpt_pro_20x": {
-      "current": "123.2亿/月 high(用户拍板)",
-      "candidate": "无直接证据；按 20x×Plus 则 ~216亿/月；与现有 123.2 矛盾，需用户拍板",
+      "current": "123.2亿/月 high(裁定)",
+      "candidate": "无直接证据；按 20x×Plus 则 ~216亿/月；与现有 123.2 矛盾，需裁定",
       "confidence": "low"
     }
   },

@@ -3,7 +3,7 @@
   "scopeNote": "第二轮专项搜集（优先 2026-09-13 之后新证据，并补漏 round1）：Anthropic Claude 订阅（Pro $20 / Max 5x $100 / Max 20x $200）内跑 Claude Fable 5.1 的订阅内计量权重、Fable 50% 周帽是否仍适用、9/14 永久周池口径生效后的绝对 token 打满反推，以及 usagebar/#79773/#93894/typed-meter 类计量标定帖。口径：全 token（输入+缓存读+缓存写+输出）一视同仁；月默认=4周；饱和使用。不覆盖旧 research 文件。矛盾全部保留，不自行择一。不许编数。",
   "priorContext": {
     "claudeFable51Round1": "data/research/claude-fable51-round1-2026-09-13.json — 官方可用性/API 标价/50%周帽 high；权重标定 notFound；#91623 output/turn≈2× Fable 5 非额度权重；9/1 与 9/4 重置干扰",
-    "claudeAdoptionRound7": "data/research/claude-adoption-round7-2026-09-14.json — 用户拍板：5.1 无实测不挂点已撤；usagebar/#79773/#93894 当时不可追溯",
+    "claudeAdoptionRound7": "data/research/claude-adoption-round7-2026-09-14.json — 裁定：5.1 无实测不挂点已撤；usagebar/#79773/#93894 当时不可追溯",
     "claudeAdoptionRound6": "data/research/claude-adoption-round6-2026-09-06.json — Max20x=157亿/月、Max5x=78.5亿/月（9/14 永久口径）；周池比20x/5x=2",
     "claudeQuotasRound5": "data/research/claude-quotas-round5-2026-09.json — Fable 5 历史权重 Reddit 6.50×(20x)/4.25×(5x)；#79773 Max5x Opus 消息/% 基线；usagebar.com Pro≈45 msg/5h"
   },
@@ -211,6 +211,6 @@
     "permanentWeeklyPool": "9/14 永久 +25% 基线（相对夏季 +50% 净 -17%）已官方落地（support 15910845，high）。绝对 token 新打满反推 = notFound；继续沿用 round6 的 157/78.5 亿除非出现新实测。",
     "subscriptionWeight51": "仍 notFound。不得把 Fable 5 的 6.50×/4.25× 静默改标为 5.1。方向证据（非权重）：output/turn 或 AA output ≈1.1–2.1× Fable 5；订阅侧缓存计量未跟 API $0.25 降价；9/14 后口述烧率更高但不可换算倍数。",
     "meteringIssuesTraced": "#93894 标题可追溯（Max5x high-effort 单次 review 烧光 session）；#79773 为 7 月历史；usage 展示工具确认 Fable 独立周桶仍在。均不足以挂 5.1 订阅点。",
-    "adoptionImplication": "维持 round7 用户拍板：Fable 5.1 订阅点不挂、等面板级权重或 total×% 实测。本轮无新可采用值；若未来有人复现 1vx0k69 方法，优先采 Max 20x 与 Max 5x 分档实测，勿假设同倍数。"
+    "adoptionImplication": "维持 round7 裁定：Fable 5.1 订阅点不挂、等面板级权重或 total×% 实测。本轮无新可采用值；若未来有人复现 1vx0k69 方法，优先采 Max 20x 与 Max 5x 分档实测，勿假设同倍数。"
   }
 }

@@ -6,18 +6,18 @@
   "adoption": {
     "standardMonthlyYi": 100,
     "fastMonthlyYi": 30.3,
-    "reason": "用户本轮再次确认标准约100亿、Fast约30亿；标准恢复早期用户确认100亿；Fast保留同量级截图值30.3亿，不以公开API倍率覆盖实测。"
+    "reason": "本轮再次确认标准约100亿、Fast约30亿；标准恢复早期确认100亿；Fast保留同量级截图值30.3亿，不以公开API倍率覆盖实测。"
   },
   "existingEvidence": [
     {
       "file": "data/subscriptions.json",
       "claim": "cursor_ultra_grok monthlyYi=100, quality=你确认",
-      "note": "早期用户确认记录，现由本轮用户再次确认。"
+      "note": "早期确认记录，现由本轮再次确认。"
     },
     {
       "file": "scripts/cursor_ultra_backcalc.py",
       "claim": "标准61.0M/0.9%反推67.8亿；Fast839.5M/27.7%反推30.3亿",
-      "note": "标准结果与本轮用户确认不一致，原始记录保留；未证明二者为相同负载/测量周期，不删除或改写截图证据。"
+      "note": "标准结果与本轮确认不一致，原始记录保留；未证明二者为相同负载/测量周期，不删除或改写截图证据。"
     }
   ]
 }

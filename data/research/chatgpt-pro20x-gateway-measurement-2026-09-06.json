@@ -54,7 +54,7 @@
   "comparison": {
     "currentAdopted": "chatgpt_pro_20x gpt-5.6-sol 123.2 亿/月（Plus 6.16 亿 × 官方 20x），旁证 109 / 131 / 144 亿",
     "thisMeasurement": "139.5 亿/月，段间区间 108–154 亿；与现采用值同量级，落在旁证区间内",
-    "suggestion": "可作为 chatgpt_pro_20x 的独立 raw token 实测旁证；是否把采用值从 123.2 改为实测值由维护者裁定"
+    "suggestion": "可作为 chatgpt_pro_20x 的独立 raw token 实测旁证；是否把采用值从 123.2 改为实测值待裁定"
   },
   "priorEvidenceSameCluster": {
     "note": "2026-08-09~08-13 对另一 Pro 账号用同法做过 52 个 1 点区间的最小二乘：百分点 ≈ 0.336 × 未命中输入(M) + 3.84 × 输出(M)，比 11.4，与官方 Sol 输入/输出定价比同量级，说明周额度按成本计而非按 token 一视同仁；每个周窗另有约 2.8 点固定开销",

@@ -1,9 +1,9 @@
 {
   "collectedAt": "2026-09-24",
-  "subject": "Anthropic 统一负载档 + Devin Max 两行面板实测的负载折算（用户裁定）",
+  "subject": "Anthropic 统一负载档 + Devin Max 两行面板实测的负载折算（裁定）",
   "rule": {
     "decidedAt": "2026-09-24",
-    "decision": "Anthropic 单独收缓存写入费，未命中缓存的输入几乎全部走缓存写，故标准档的普通输入份额对 Anthropic 按 5 分钟缓存写入价计 → anthropicTokenMix = {cache 0.97, cacheWrite 0.025, output 0.005}（份额与 standardTokenMix 联动，cacheWrite = standard.input）。用于 Anthropic 按量 API 行与经用户裁定折算的 Anthropic 面板实测行。",
+    "decision": "Anthropic 单独收缓存写入费，未命中缓存的输入几乎全部走缓存写，故标准档的普通输入份额对 Anthropic 按 5 分钟缓存写入价计 → anthropicTokenMix = {cache 0.97, cacheWrite 0.025, output 0.005}（份额与 standardTokenMix 联动，cacheWrite = standard.input）。用于 Anthropic 按量 API 行与经裁定折算的 Anthropic 面板实测行。",
     "conventionsKey": "data/conventions.json: anthropicTokenMix",
     "evidence": [
       {

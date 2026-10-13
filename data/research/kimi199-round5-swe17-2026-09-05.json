@@ -180,13 +180,13 @@
       "publicationNote": "Verbatim article excerpt omitted from public edition; source and analytical fields retained."
     },
     {
-      "claim": "用户本机 84%  weekly fraction 的精确小数与对应模型 mix 分解",
+      "claim": "维护者本机 84%  weekly fraction 的精确小数与对应模型 mix 分解",
       "plan": "Kimi 会员 199 / Allegretto (CN)",
       "model": "k3-256k / k3 / kimi-for-coding",
       "weeklyTokens": null,
       "monthlyTokens": null,
-      "source": "data/kimi-local.json / 用户口述",
-      "quote": "用户仅给出 '约 84%'，未给出该 7 天窗口内每天模型占比的精确分解",
+      "source": "data/kimi-local.json / 维护者口述",
+      "quote": "维护者仅给出 '约 84%'，未给出该 7 天窗口内每天模型占比的精确分解",
       "confidence": "notFound",
       "note": "84% 是用户近似值；若实际为 83.5%-84.4%，周额度 289M-292M，影响 <1%。但该周是否混入 k3-1M 或 kimi-for-coding 会显著影响 k3-1M 等效额度（官方 2× credits）。"
     }
