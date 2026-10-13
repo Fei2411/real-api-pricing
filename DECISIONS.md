@@ -3,6 +3,14 @@
 本地 `AGENTS.md`（不入库）只放 Agent 工作流程；口径与规则见 [`CONVENTIONS.md`](CONVENTIONS.md)；本文件记录每条采用值的取舍（旧值 → 新值 → 依据 → 未采来源）。
 最权威的表述仍在 `scripts/build_adopted.py` 的 `decision_note` 和 `data/research/` 证据文件里；本文件是按时间的索引摘要。改数只能改 `build_adopted.py`，改完在这里同步记一笔。
 
+## 2026-10-13 · DeepSWE 快照重拉 + GOAT/OpenCode 目录整轮复核（round4）
+
+- **DeepSWE 新官方快照**：`scores-deepswe-1.1-2026-10-13.json`（官方 live 榜 generated_at 2026-09-22，113 任务、70 配置）。分数/CI 与 9-12 快照一致，gpt-6-astra 五档成本字段降约 30–40%——成本口径变化入档，不改采用额度。5 条厂商自报行经 `scores-deepswe-selfreport-carry-2026-10-13.json` 原样转挂（carriedFrom 不变），DeepSeek V4.1 Flash / Grok 4.7 / MiMo V2.5·V2.6 在官方榜仍无行。
+- **OpenCode Go（/docs/go/ 404，价表迁至 /v2/docs/console/go/）**：+2 行——`claude-haiku-5.5`（Usage $15，≤100K 标价 $0.01/$0.10/$0.50，>100K 档留 research）、`space-bunny`（新付费行 $30/$0.03/$0.15/$0.60，原 free promo 消失）。`deepseek-v4.1-flash` 月 Usage $60→$80（Operation Cheepseek Phase 3），effective 仍 min(60,80)=$60 采用值不变；落地页 ID 改 `deepseek-flash`。`kimi-k2.6` 落地页目录缺席但 docs 价表仍在列 $60 → 维持采用并注明。免费 promo 换为 LongCat 2.5 Preview Free / Step 5 Preview Free（限时免费一律不采）；Go Plus $40 档沿用不画裁定。
+- **Command Code GOAT**：`glm-5.3-flash` Every-model credits $40→$60（采用）；`claude-sonnet-5.5` 渠道 cached read $0.20→$0.10（此次系渠道目录自身跟降，采用——与 10-08「渠道目录不随官方价联动」的时点裁定不冲突）；+2 行——`claude-haiku-5.5`（Claude 表 $20，官方口径『Haiku 5.5 gets $20』即 2x credits）、`mistral-large-4`（Every-model $20；页面限时 $40 promo 至 10/20，按临时 promo 一律不采）。`kimi-k3` 限时 $60 promo 10/7 已到期回落 $20（采用值本为 $20，仅注记）。免费 stealth 行（Glyph Cluster Free / Ling 3.1·3.0 Flash Free）与展示变体行（MiniMax M3-50% / MiMo V2.5-98% / V2.5 Pro-99%）不收录。Jev 维持 2026-10-01 不收录裁定（决策模型；用户亦确认作者不收）。
+- **榜分补档** `scores-muse-wonder-haiku55-2026-10-13.json`（supplement）：DeepSWE +5——`muse-wonder-full` 79.0 / `muse-wonder` 78.8（Datacurve 代测经 Meta 模型卡转引，Full 标 xhigh）、`claude-opus-5.5` 74.2（同 Datacurve 代测，官方榜无 opus-5.5 行）、`claude-fable-5.1` 67.4（Anthropic 系统卡自报）、`step-5-preview` 67.7（StepFun 自报，由 9-21 档 vendorBenchmarksNotBoards 提升）；TB4 +1——`claude-haiku-5.5` 39.2（Anthropic 发布页自报）。GPT-6 Astra 74.1 与官方 xhigh 74.115 一致不重复；K3/GLM-5.3/Opus5 的 StepFun 复测值、Muse 卡 TB4-AA/SWE-Marathon/ProgramBench 及 X 帖 Haiku 5.5 DeepSWE 38.6% 均留 vendorBenchmarksNotBoards。Muse Code 订阅档（$5/15/50/200，『10-50 prompts/5h』区间计量）无法折月 token，暂不采用待实测样本。
+- 证据：`goat-opencode-catalogs-round4-2026-10-13.json`、`scores-muse-wonder-haiku55-2026-10-13.json`、`scores-deepswe-1.1-2026-10-13.json`、`scores-deepswe-selfreport-carry-2026-10-13.json`。
+
 ## 2026-10-08 · Claude Haiku 5.5 发布 & Sonnet 5.5 缓存读降价
 
 - **背景**：2026-10-08 Anthropic 发布 Claude Haiku 5.5（官方称迄今最便宜最快的迷你模型，平均比 Haiku 4.5 便宜约 75%），同日 Sonnet 5.5 缓存读价 $0.20→$0.10（改为 base input×0.05，与 Opus 5.5 同口径）。两项价格均已在 platform.claude.com 官方价表复核。维护者供图：X @1kartikkabadi1 推算图把 Pro 月池按各模型混合价拆开，其锚点与库内采用值精确一致（Pro × Opus 5.5 = 30.54 亿，池 worth $1,279.46≈图 $1,280），方法即仓库自身口径。

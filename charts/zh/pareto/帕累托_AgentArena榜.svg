@@ -311,7 +311,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0098000784" data-score="1.68" data-x="977.017" data-y="452.122" transform="translate(977.017 452.122)"><title>GPT-6 Luna · OpenCode Go · $0.0098/MTok · 1.68 · mediumGPT 6 Luna (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0F766E" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0058917104" data-score="-0.28" data-x="1055.986" data-y="480.156" transform="translate(1055.986 480.156)"><title>GLM 5.3 Flash · OpenCode Go · $0.00589/MTok · -0.28 · mediumGLM 5.3 Flash · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0058917104" data-score="-0.28" data-x="1055.986" data-y="480.156" transform="translate(1055.986 480.156)"><title>GLM 5.3 Flash · OpenCode Go / GLM 5.3 Flash · Command Code GOAT · $0.00589/MTok · -0.28 · mediumGLM 5.3 Flash · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel. / GLM 5.3 Flash · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0F766E" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.20618557" data-score="2.57" data-x="504.239" data-y="439.393" transform="translate(504.239 439.393)"><title>GLM 5.3 · OpenCode Go · $0.20619/MTok · 2.57 · mediumGLM 5.3 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
@@ -361,9 +361,6 @@
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#DBA6FA" opacity=".68" stroke="#9571AA" stroke-width=".9"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.01525553" data-score="-6.71" data-x="908.336" data-y="572.125" transform="translate(908.336 572.125)"><title>MiniMax M3 · Command Code GOAT · $0.01526/MTok · -6.71 · mediumMinimax M3 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
-<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#DBA6FA" opacity=".68" stroke="#9571AA" stroke-width=".9"/>
-</g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0088378259" data-score="-0.28" data-x="993.056" data-y="480.156" transform="translate(993.056 480.156)"><title>GLM 5.3 Flash · Command Code GOAT · $0.00884/MTok · -0.28 · mediumGLM 5.3 Flash · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#DBA6FA" opacity=".68" stroke="#9571AA" stroke-width=".9"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.055126792" data-score="2.96" data-x="708.961" data-y="433.815" transform="translate(708.961 433.815)"><title>Gemini 3.8 Flash · Command Code GOAT · $0.05513/MTok · 2.96 · mediumGemini 3.8 Flash (High) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
@@ -713,7 +710,7 @@
 <path d="M278.72 849l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>
 <text x="292.720" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >按量 API</text>
 <text x="56.000" y="898.000" font-size="12" fill="#727B72" text-anchor="start" font-weight="400" >默认月=4周；Kimi月池=周池×5，Droid月=周×2 · 美元/credits换算：缓存97% / 输入2.5% / 输出0.5% · 直接total实测不重算</text>
-<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >182 个订阅位置 / 14 个 API 位置 / 5 个前沿位置</text>
+<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >181 个订阅位置 / 14 个 API 位置 / 5 个前沿位置</text>
 <text x="56.000" y="922.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Claude Max：9/14 起永久额度估算；Pro：Opus 5 周池面板反推。Y 取同模型存档最高分变体。</text>
 <text x="56.000" y="943.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >订阅与按量API共同参与前沿；连线中间不代表可购套餐。完整出处与假设见项目核对报告。</text>
 <text x="1384.000" y="943.000" font-size="11" fill="#929A90" text-anchor="end" font-weight="400" >arena.ai/leaderboard/agent</text>

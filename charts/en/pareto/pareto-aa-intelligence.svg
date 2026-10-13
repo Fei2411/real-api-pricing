@@ -332,7 +332,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0098000784" data-score="37.256" data-x="891.782" data-y="453.362" transform="translate(891.782 453.362)"><title>GPT-6 Luna · OpenCode Go · $0.0098/MTok · 37.256 · mediumGPT-6 Luna (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0F766E" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0058917104" data-score="41.8075" data-x="962.897" data-y="412.828" transform="translate(962.897 412.828)"><title>GLM 5.3 Flash · OpenCode Go · $0.00589/MTok · 41.8075 · mediumGLM-5.3-Flash · Exact served-model reference; quota-measurement effort is unverified.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0058917104" data-score="41.8075" data-x="962.897" data-y="412.828" transform="translate(962.897 412.828)"><title>GLM 5.3 Flash · OpenCode Go / GLM 5.3 Flash · Command Code GOAT · $0.00589/MTok · 41.8075 · mediumGLM-5.3-Flash · Exact served-model reference; quota-measurement effort is unverified. / GLM-5.3-Flash · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0F766E" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.20618557" data-score="44.7774" data-x="466.025" data-y="386.379" transform="translate(466.025 386.379)"><title>GLM 5.3 · OpenCode Go · $0.20619/MTok · 44.7774 · mediumGLM-5.3 (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
@@ -410,9 +410,6 @@
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#DBA6FA" opacity=".68" stroke="#9571AA" stroke-width=".9"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.01525553" data-score="29.2203" data-x="829.932" data-y="524.925" transform="translate(829.932 524.925)"><title>MiniMax M3 · Command Code GOAT · $0.01526/MTok · 29.2203 · mediumMiniMax-M3 · Exact served-model reference; quota-measurement effort is unverified.</title>
-<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#DBA6FA" opacity=".68" stroke="#9571AA" stroke-width=".9"/>
-</g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0088378259" data-score="41.8075" data-x="906.226" data-y="412.828" transform="translate(906.226 412.828)"><title>GLM 5.3 Flash · Command Code GOAT · $0.00884/MTok · 41.8075 · mediumGLM-5.3-Flash · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#DBA6FA" opacity=".68" stroke="#9571AA" stroke-width=".9"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.055126792" data-score="40.9262" data-x="650.386" data-y="420.676" transform="translate(650.386 420.676)"><title>Gemini 3.8 Flash · Command Code GOAT · $0.05513/MTok · 40.9262 · mediumGemini 3.8 Flash (high) · Exact served-model reference; quota-measurement effort is unverified.</title>
@@ -502,7 +499,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0038639876" data-score="19.1123" data-x="1021.854" data-y="614.943" transform="translate(1021.854 614.943)"><title>LongCat 2.0 · Command Code GOAT · $0.00386/MTok · 19.1123 · mediumLongCat 2.0 · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#DBA6FA" opacity=".68" stroke="#9571AA" stroke-width=".9"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.29411765" data-score="55.978" data-x="416.382" data-y="286.630" transform="translate(416.382 286.630)"><title>Claude Sonnet 5.5 · Command Code GOAT · $0.29412/MTok · 55.978 · mediumClaude Sonnet 5.5 (max with fallback) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.19685039" data-score="55.978" data-x="472.500" data-y="286.630" transform="translate(472.500 286.630)"><title>Claude Sonnet 5.5 · Command Code GOAT · $0.19685/MTok · 55.978 · mediumClaude Sonnet 5.5 (max with fallback) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#DBA6FA" opacity=".68" stroke="#9571AA" stroke-width=".9"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.099502488" data-score="26.9792" data-x="567.852" data-y="544.883" transform="translate(567.852 544.883)"><title>Kimi K2.6 · Command Code GOAT · $0.0995/MTok · 26.9792 · mediumKimi K2.6 · Exact served-model reference; quota-measurement effort is unverified.</title>
@@ -991,7 +988,7 @@
 <path d="M400.91999999999996 849l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>
 <text x="414.920" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Metered API</text>
 <text x="56.000" y="898.000" font-size="12" fill="#727B72" text-anchor="start" font-weight="400" >Default month = 4 weeks; Kimi pool = 5×, Droid = 2× weekly · Dollar/credit: 97% cache / 2.5% input / 0.5% output · Direct totals unchanged</text>
-<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >264 subscription positions / 19 API positions / 6 frontier positions</text>
+<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >263 subscription positions / 19 API positions / 6 frontier positions</text>
 <text x="56.000" y="922.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Claude Max: permanent allowance estimate from Sep 14; Pro: historical Opus 4.8 measurement. Y uses the top archived variant per model.</text>
 <text x="56.000" y="943.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Subscriptions and metered APIs share one frontier; line segments are visual guides, not purchasable plans.</text>
 <text x="1384.000" y="943.000" font-size="11" fill="#929A90" text-anchor="end" font-weight="400" >artificialanalysis.ai/leaderboards/models</text>
