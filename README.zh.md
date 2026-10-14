@@ -17,7 +17,7 @@ AI 编程订阅只标月费，不标每 token 多少钱。本项目把每个套�
 - 黑线是帕累托前沿：线上的每个点，都找不到另一个点比它更便宜、分数又更高。
 - 订阅单价按用满额度计算。只用掉一半，实际单价就翻倍。
 
-快照日期 <!-- stat:snapshot -->2026-10-08<!-- /stat --> · 共 <!-- stat:points_total -->328<!-- /stat --> 个「套餐 × 模型」点 · [全部图表（中英文、SVG / PNG）](charts/README.md)
+快照日期 <!-- stat:snapshot -->2026-10-14<!-- /stat --> · 共 <!-- stat:points_total -->330<!-- /stat --> 个「套餐 × 模型」点 · [全部图表（中英文、SVG / PNG）](charts/README.md)
 
 ## 命令行查询
 
@@ -115,7 +115,7 @@ Stanford、Harbor 和 Laude Institute 维护的 66 题官方榜（快照 2026-09
 
 ### 真实单价
 
-全部 <!-- stat:points_priced -->327<!-- /stat --> 个有价格的订阅和 API 点，放在同一把 $/MTok 尺子上。
+全部 <!-- stat:points_priced -->329<!-- /stat --> 个有价格的订阅和 API 点，放在同一把 $/MTok 尺子上。
 
 [SVG](charts/zh/overview/单价总览.svg) · [PNG](charts/zh/overview/单价总览.png) · [数据表](charts/zh/overview/单价总览表.txt) · [English SVG](charts/en/overview/real-price-overview.svg) · [English PNG](charts/en/overview/real-price-overview.png) · [English table](charts/en/overview/real-price-overview-table.txt)
 
@@ -123,7 +123,7 @@ Stanford、Harbor 和 Laude Institute 维护的 66 题官方榜（快照 2026-09
 
 ### 月额度
 
-<!-- stat:points_allowance -->306<!-- /stat --> 个有月额度的订阅点，按美元月费分三档，各档单独排序。不分档的全量图和混合比例图见[图表目录](charts/README.md)。
+<!-- stat:points_allowance -->308<!-- /stat --> 个有月额度的订阅点，按美元月费分三档，各档单独排序。不分档的全量图和混合比例图见[图表目录](charts/README.md)。
 
 **$0–30** · [SVG](charts/zh/overview/额度总览_月费0-30美元.svg) · [PNG](charts/zh/overview/额度总览_月费0-30美元.png) · [数据表](charts/zh/overview/额度总览表_月费0-30美元.txt) · [English SVG](charts/en/overview/monthly-allowance-overview-fee-0-30-usd.svg) · [English PNG](charts/en/overview/monthly-allowance-overview-fee-0-30-usd.png) · [English table](charts/en/overview/monthly-allowance-overview-fee-0-30-usd-table.txt)
 
@@ -143,8 +143,8 @@ Stanford、Harbor 和 Laude Institute 维护的 66 题官方榜（快照 2026-09
 
 | 点 | 数量 |
 |---|---:|
-| 全部「套餐 × 模型」点 | <!-- stat:points_total -->328<!-- /stat --> |
-| 有月额度的订阅 | <!-- stat:points_allowance -->306<!-- /stat --> |
+| 全部「套餐 × 模型」点 | <!-- stat:points_total -->330<!-- /stat --> |
+| 有月额度的订阅 | <!-- stat:points_allowance -->308<!-- /stat --> |
 | 促销期不计额度（≈$0） | <!-- stat:points_unmetered -->1<!-- /stat --> |
 | 按量 API（标价） | <!-- stat:points_metered -->21<!-- /stat --> |
 
@@ -159,7 +159,7 @@ Stanford、Harbor 和 Laude Institute 维护的 66 题官方榜（快照 2026-09
 | Terminal-Bench 4.0（AA） | <!-- stat:scored_aa_terminal_bench_4 -->278<!-- /stat --> |
 | DeepSWE v1.1 | <!-- stat:scored_deepswe_1_1 -->195<!-- /stat --> |
 
-点数最多的几个套餐家族：Command Code GOAT <!-- stat:plans_command_code_goat -->58<!-- /stat --> 个、MiMo Token Plan <!-- stat:plans_mimo_token -->32<!-- /stat --> 个、OpenCode Go <!-- stat:plans_opencode_go -->28<!-- /stat --> 个、Droid Max <!-- stat:plans_droid_max -->27<!-- /stat --> 个、Ollama <!-- stat:plans_ollama -->22<!-- /stat --> 个、Step Plan <!-- stat:plans_step_plan -->12<!-- /stat --> 个。
+点数最多的几个套餐家族：Command Code GOAT <!-- stat:plans_command_code_goat -->58<!-- /stat --> 个、MiMo Token Plan <!-- stat:plans_mimo_token -->32<!-- /stat --> 个、OpenCode Go <!-- stat:plans_opencode_go -->30<!-- /stat --> 个、Droid Max <!-- stat:plans_droid_max -->27<!-- /stat --> 个、Ollama <!-- stat:plans_ollama -->22<!-- /stat --> 个、Step Plan <!-- stat:plans_step_plan -->12<!-- /stat --> 个。
 
 **下载：** [采用值 CSV](data/adopted.csv) · [计算结果 CSV](derived/points.csv) / [JSON](derived/points.json) · [数据说明](data/README.md) · [分日期原始证据](data/research/)
 
