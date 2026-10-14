@@ -1,0 +1,35 @@
+{
+  "collectedAt": "2026-10-13",
+  "collectionMethod": "live page scrape + vendor X announcements",
+  "sources": [
+    "https://commandcode.ai/docs/plans/goat",
+    "https://x.com/CommandCodeAI/status/DeepSeek-V41-Flash-100-promo (vendor X post, relayed by requester)",
+    "https://x.com/cursor_ai/status/X-Subscription-announcement (vendor X post, relayed by requester)",
+    "https://cursor.com/pricing"
+  ],
+  "commandCodeGoat": {
+    "sharedPoolUsd": 70,
+    "deepseekV41Flash": {
+      "monthlyCreditsUsd": 80,
+      "temporaryPromo": "$100 usage through Oct 16 (3 days) — excluded per temp-promo policy",
+      "vendorNote": "X post: 'DeepSeek V4.1 Flash now has $100 usage, next 3 days. After that, we're increasing it to $80'",
+      "prices": {"input": 0.15, "output": 0.60, "cachedRead": 0.003, "cacheWrite": null},
+      "requestsCrossCheck": {"per5h": 51300, "perWeek": 128000, "perMonth": 256000},
+      "effectiveUsage": "min(shared pool $70, model allowance $80) = $70 (was min(70,60)=$60)"
+    }
+  },
+  "cursorXSubscription": {
+    "announcement": "Cursor is now part of The X Subscription (2026-10-12 X post): paid plans share one usage pool across Cursor, Grok Build and other Grok products; 2x coding usage on Grok models vs the equivalent Cursor plan; Premium/Super/Ultra include Grok Bot; third-party models in Cursor move to API list pricing on the new plans; existing Cursor subscribers may keep their current plan or switch.",
+    "tiers": [
+      {"plan": "Free", "priceUsd": 0, "usage": "Limited"},
+      {"plan": "Plus", "priceUsd": 8, "usage": "Basic; Grok models only"},
+      {"plan": "Premium", "priceUsd": 30, "usage": "4x Plus"},
+      {"plan": "Super", "priceUsd": 100, "usage": "15x Plus"},
+      {"plan": "Ultra", "priceUsd": 200, "usage": "50x Plus"},
+      {"plan": "Teams", "priceUsd": 30, "note": "+/user/month"}
+    ],
+    "thirdPartyModels": "available in Cursor on Premium and above, billed separately by usage at API list prices — metered, not part of the shared pool",
+    "adoptability": "NOT ADOPTED — only relative usage multipliers (4x/15x/50x of Plus) are published; no absolute token or dollar allowance for the shared pool, so no monthly-token yield can be computed. Third-party model usage is metered API billing (covered by existing API rows, not a subscription row). Legacy cursor_* rows retained: current subscribers keep their plan.",
+    "source": "https://cursor.com/pricing (scraped 2026-10-13)"
+  }
+}

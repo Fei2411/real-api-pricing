@@ -1,0 +1,133 @@
+{
+ "collectedAt": "2026-10-13",
+ "supplement": true,
+ "supplementNote": "补充档：向当前 deepswe_1_1 与 terminal_bench_4 快照追加厂商自报/榜单运营方代测行，不替换官方快照（本档在 SCORE_FILES 末尾应用）。Muse Wonder 系列 2026-10-12 发布（Meta research.meta.ai/blog/muse-wonder + static/muse-wonder-model-card）：DeepSWE v1.1 中 Muse Wonder / Wonder Full / Opus 5.5 为 Datacurve（本榜运营方）第三方代测，GPT-6 Astra 为 OpenAI 自报（74.1 与官方榜 xhigh 74.115 一致，不重复登记），Fable 5.1 引 Anthropic Fable 5.1 系统卡自报。Step 5 Preview 67.7% 为 StepFun 自报（SWE-agent harness，9-21 存档图中既有读数，按 deepseek/mimo 自报行先例提升为行）。Haiku 5.5 TB4 39.2% 为 Anthropic 发布页评测表自报（default 表未标 effort 档）。Sonnet 5.5 TB4 70.6% 同页同表自报，与 Haiku 39.2 同口径登记；同表 GPT-6 Luna 16.4% 跨厂转引不登记。",
+ "boards": [
+  {
+   "boardId": "deepswe_1_1",
+   "name": "DeepSWE v1.1",
+   "metric": "Pass@1 %",
+   "url": "https://deepswe.datacurve.ai/",
+   "snapshotDate": "2026-09-22",
+   "note": "同 scores-deepswe-1.1-2026-10-13.json 板面元数据；本档不改快照日期。"
+  },
+  {
+   "boardId": "terminal_bench_4",
+   "name": "Terminal-Bench 4.0",
+   "url": "https://www.tbench.ai/leaderboard",
+   "metric": "Resolution Rate %",
+   "snapshotDate": "2026-09-21",
+   "note": "同 scores-terminal-bench4-round3-2026-10-01.json 板面元数据；本档不改快照日期。"
+  }
+ ],
+ "scores": [
+  {
+   "boardId": "deepswe_1_1",
+   "model": "muse-wonder-full",
+   "variantLabel": "Muse Wonder Full",
+   "score": 79.0,
+   "secondary": {
+    "selfReported": true,
+    "reportedBy": "Datacurve (third-party run republished on Meta model card)",
+    "reasoningEffort": "xhigh",
+    "effortNote": "Meta 模型卡注明 Full 以 xhigh 档报告"
+   },
+   "source": "https://research.meta.ai/static/muse-wonder-model-card",
+   "checkedAt": "2026-10-13",
+   "note": "Meta 2026-10-12 发布。模型卡明确 DeepSWE 行 Muse Wonder / Wonder Full / Opus 5.5 为 Datacurve third-party results——Datacurve 即本榜运营方，非厂商自跑；经 Meta 记分卡转引登记。"
+  },
+  {
+   "boardId": "deepswe_1_1",
+   "model": "muse-wonder",
+   "variantLabel": "Muse Wonder",
+   "score": 78.8,
+   "secondary": {
+    "selfReported": true,
+    "reportedBy": "Datacurve (third-party run republished on Meta model card)",
+    "reasoningEffort": null
+   },
+   "source": "https://research.meta.ai/static/muse-wonder-model-card",
+   "checkedAt": "2026-10-13",
+   "note": "同上 Datacurve 代测口径；effort 未标。"
+  },
+  {
+   "boardId": "deepswe_1_1",
+   "model": "claude-opus-5.5",
+   "variantLabel": "Claude Opus 5.5",
+   "score": 74.2,
+   "secondary": {
+    "selfReported": true,
+    "reportedBy": "Datacurve (third-party run republished on Meta model card)",
+    "reasoningEffort": null
+   },
+   "source": "https://research.meta.ai/static/muse-wonder-model-card",
+   "checkedAt": "2026-10-13",
+   "note": "Datacurve 代测 Opus 5.5（非 Anthropic 自报）；官方榜尚无 opus-5.5 配置行，故登记。数值与 pinned deepseek-v4.1-flash 74.2 相同系巧合。"
+  },
+  {
+   "boardId": "deepswe_1_1",
+   "model": "claude-fable-5.1",
+   "variantLabel": "Claude Fable 5.1",
+   "score": 67.4,
+   "secondary": {
+    "selfReported": true,
+    "reportedBy": "Anthropic",
+    "reasoningEffort": null,
+    "effortNote": "Meta 模型卡注明 Fable 5.1 取 Anthropic Claude Fable 5.1 system card 报告值"
+   },
+   "source": "https://research.meta.ai/static/muse-wonder-model-card",
+   "checkedAt": "2026-10-13",
+   "note": "Anthropic 自报（经 Meta 记分卡转引）；官方榜 fable-5 有行、fable-5-1 无行。"
+  },
+  {
+   "boardId": "deepswe_1_1",
+   "model": "step-5-preview",
+   "variantLabel": "Step 5 Preview (High)",
+   "score": 67.7,
+   "secondary": {
+    "selfReported": true,
+    "reportedBy": "StepFun",
+    "agentHarness": "SWE-agent harness",
+    "reasoningEffort": "high"
+   },
+   "source": "https://www.stepfun.com/（scores-stepfun-step5-round1-2026-09-21.json 存档的 Step 5 发布对比图）",
+   "checkedAt": "2026-09-21",
+   "note": "StepFun 对自家模型的自报（发布图 DeepSWE v1.1 列 Step5(High) 67.7）；同图 K3 67.5 / GLM-5.3 66.9 / Astra 74.1 / Opus5 74.0 为对他人模型的复测，维持 vendorBenchmarksNotBoards 不登记。"
+  },
+  {
+   "boardId": "terminal_bench_4",
+   "model": "claude-haiku-5.5",
+   "variantLabel": "Claude Haiku 5.5 - self-reported",
+   "score": 39.2,
+   "secondary": {
+    "selfReported": true,
+    "reportedBy": "Anthropic",
+    "agentHarness": "Claude Code",
+    "reasoningEffort": null,
+    "effortNote": "发布页评测表未标 effort 档"
+   },
+   "source": "https://www.anthropic.com/claude-haiku-5.5",
+   "checkedAt": "2026-10-13",
+   "note": "Anthropic Haiku 5.5 发布页 Performance 表 Agentic coding Terminal-Bench 4.0 行 39.2%（同表 Haiku 4.5 0.0%、GPT-6 Luna 16.4%、Sonnet 5.5 70.6%；FrontierCode 1.1 46.4% 非本仓库榜单仅留证据）。"
+  },
+  {
+   "boardId": "terminal_bench_4",
+   "model": "claude-sonnet-5.5",
+   "variantLabel": "Claude Sonnet 5.5 - self-reported",
+   "score": 70.6,
+   "secondary": {
+    "selfReported": true,
+    "reportedBy": "Anthropic",
+    "agentHarness": "Claude Code",
+    "reasoningEffort": null,
+    "effortNote": "同 Haiku 5.5 发布页评测表未标 effort 档"
+   },
+   "source": "https://www.anthropic.com/claude-haiku-5.5",
+   "checkedAt": "2026-10-13",
+   "note": "同表 Anthropic 自报（Haiku 5.5 发布页 Performance 表 Agentic coding Terminal-Bench 4.0 行）；官方榜 sonnet-5.5 无配置行，故登记。GPT-6 Luna 16.4% 系跨厂转引，维持 vendorBenchmarksNotBoards。"
+  }
+ ],
+ "vendorBenchmarksNotBoards": {
+  "note": "Meta 记分卡其余表非本仓库榜单或口径不一致，仅存档：Terminal-Bench 4.0 (AA harness) Wonder Full 57.1 / Wonder 52.0 / Fable 5.1 52.0 / Astra 59.1 / Opus 5.5 59.6——AA 官方榜如已收录应由 AA 快照覆盖，不经 Meta 转引登记 aa_terminal_bench_4；SWE-Marathon 57.5*/53.1/45.6/42.5/46.3（Abundant AI 代测、跨 harness 不可比）；ProgramBench 59.0/50.0/55.5/52.5/70.5；StepFun 对比图 DeepSWE 读数 K3 67.5 / GLM-5.3 66.9 / Astra 74.1 / Opus5 74.0（见 scores-stepfun-step5-round1-2026-09-21.json）；X 帖引 Haiku 5.5 DeepSWE 38.6% 未见 Anthropic 官方页佐证，不登记为行。Muse Code 订阅档位 $5/15/50/200（Everyday/High/Power/Maximum，5x/20x/80x，『10-50 prompts every 5 hours』区间计量无法折月 token）暂不采用，待可测额度样本。"
+ }
+}
