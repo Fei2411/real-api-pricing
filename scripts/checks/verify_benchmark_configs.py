@@ -98,13 +98,16 @@ assert unknown_mode["service_mode"] is None
 assert not candidates(dict(served_model="composer-2.5", plan_id="cursor_ultra"), [unknown_mode], "aa_coding_agent_index")
 assert configuration(dict(boardId="arena_code", model="a", variantLabel="a-xHigh (codex-harness)", score=1), "test")["reasoning_effort"] == "xhigh"
 open_design = [c for c in configs if c["board"] == "open_design_arena"]
-assert len(open_design) == 16 and all(c["agent_harness"] == "OpenDesign" for c in open_design)
-assert {c["model"] for c in open_design} >= {"gpt-5.6-sol", "deepseek-v4.1-flash", "claude-fable-5.1"}
+assert len(open_design) == 17 and all(c["agent_harness"] == "OpenDesign" for c in open_design)
+assert {c["model"] for c in open_design} >= {"gpt-5.6-sol", "deepseek-v4.1-flash", "claude-fable-5.1", "claude-haiku-5.5"}
 assert not candidates(dict(served_model="claude-fable-5", plan_id="claude_max"), open_design, "open_design_arena")
 assert all(c["mean_cost_usd_per_task"] is not None for c in open_design)
 assert indexed["deepseek_v41_flash_offpeak::deepseek-v4.1-flash"]["real_usd_per_mtok"] == 0.00966
 assert indexed["deepseek_v41_flash_peak::deepseek-v4.1-flash"]["real_usd_per_mtok"] == 0.01932
 assert indexed["deepseek_v41_flash_offpeak::deepseek-v4.1-flash"]["open_design_arena__score"] == 81.2
+# OpenDesign round3 (2026-10-14) added Claude Haiku 5.5 at 82.2; the other 16 scores are unchanged.
+assert indexed["claude_pro::claude-haiku-5.5"]["open_design_arena__score"] == 82.2
+assert indexed["claude_max_5x::claude-haiku-5.5"]["open_design_arena__configuration_count"] == 1
 # AA round4 (2026-09-22) superseded round3, so the round3-pinned intelligence
 # supplement retired and these two scores now come from round4 itself.
 assert indexed["opencode_go::deepseek-v4.1-flash"]["aa_intelligence_index__score"] == 39.4562

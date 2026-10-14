@@ -17,7 +17,7 @@ AI coding subscriptions sell a monthly fee, not a per-token price. This project 
 - The black line is the Pareto frontier: for every point on it, no other point is both cheaper and higher-scoring.
 - Subscription prices assume you use the whole allowance. Use half of it and your real price doubles.
 
-Snapshot: <!-- stat:snapshot -->2026-10-08<!-- /stat --> · <!-- stat:points_total -->328<!-- /stat --> plan × model points · [all charts, SVG / PNG, both languages](charts/README.md)
+Snapshot: <!-- stat:snapshot -->2026-10-14<!-- /stat --> · <!-- stat:points_total -->328<!-- /stat --> plan × model points · [all charts, SVG / PNG, both languages](charts/README.md)
 
 ## Query from the terminal
 
@@ -93,7 +93,7 @@ The WebDev Overall Arena Score. It measures web-app building, not general coding
 
 ![OpenDesign Arena](charts/en/pareto/pareto-open-design-arena.svg)
 
-The 0–100 average task score: requirements 30 + design quality 70. OpenDesign's cost- and speed-weighted recommendation score is not used. All <!-- stat:configs_mapped_open_design_arena -->16<!-- /stat --> archived models map to adopted points.
+The 0–100 average task score: requirements 30 + design quality 70. OpenDesign's cost- and speed-weighted recommendation score is not used. All <!-- stat:configs_mapped_open_design_arena -->17<!-- /stat --> archived models map to adopted points.
 
 ### Terminal-Bench 4.0
 
@@ -162,7 +162,7 @@ Chinese charts count tokens in 亿 (100 million): 77.37 亿 = 7.737 billion.
 | AA Coding Agent | <!-- stat:scored_aa_coding_agent_index -->120<!-- /stat --> |
 | Code Arena | <!-- stat:scored_arena_code -->264<!-- /stat --> |
 | Agent Arena | <!-- stat:scored_arena_agent_mode -->204<!-- /stat --> |
-| OpenDesign Arena | <!-- stat:scored_open_design_arena -->73<!-- /stat --> |
+| OpenDesign Arena | <!-- stat:scored_open_design_arena -->77<!-- /stat --> |
 | Terminal-Bench 4.0 | <!-- stat:scored_terminal_bench_4 -->113<!-- /stat --> |
 | Terminal-Bench 4.0 (AA) | <!-- stat:scored_aa_terminal_bench_4 -->278<!-- /stat --> |
 | DeepSWE v1.1 | <!-- stat:scored_deepswe_1_1 -->195<!-- /stat --> |
@@ -171,7 +171,7 @@ The largest plan families are Command Code GOAT (<!-- stat:plans_command_code_go
 
 **Downloads:** [adopted values (CSV)](data/adopted.csv) · [computed points (CSV)](derived/points.csv) / [JSON](derived/points.json) · [data notes](data/README.md) · [dated evidence](data/research/)
 
-**Every benchmark configuration**, not just the highest per model: the [configuration archive](derived/benchmark-configurations.json) ([CSV](derived/benchmark-configurations.csv)) keeps all <!-- stat:configs_total -->525<!-- /stat --> records with their original labels, harness, effort, score intervals and task costs. The [plan-to-configuration mappings](derived/benchmark-points.json) ([CSV](derived/benchmark-points.csv)) hold <!-- stat:refs_total -->2700<!-- /stat --> explicit references. Unknown harnesses, efforts and intervals stay empty instead of being guessed. The [all-configuration interactive chart](charts/zh/pareto/帕累托交互图.html) (Chinese; download and open locally, needs network access for Plotly) lets you switch between configurations and effort levels.
+**Every benchmark configuration**, not just the highest per model: the [configuration archive](derived/benchmark-configurations.json) ([CSV](derived/benchmark-configurations.csv)) keeps all <!-- stat:configs_total -->526<!-- /stat --> records with their original labels, harness, effort, score intervals and task costs. The [plan-to-configuration mappings](derived/benchmark-points.json) ([CSV](derived/benchmark-points.csv)) hold <!-- stat:refs_total -->2704<!-- /stat --> explicit references. Unknown harnesses, efforts and intervals stay empty instead of being guessed. The [all-configuration interactive chart](charts/zh/pareto/帕累托交互图.html) (Chinese; download and open locally, needs network access for Plotly) lets you switch between configurations and effort levels.
 
 ## Known limitations
 

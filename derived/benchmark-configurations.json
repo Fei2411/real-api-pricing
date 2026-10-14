@@ -22010,7 +22010,7 @@
     }
   },
   {
-    "configuration_id": "open_design_arena:1f49b4d125f7e8d5",
+    "configuration_id": "open_design_arena:df5dd58a2042561b",
     "board": "open_design_arena",
     "model": "gpt-6.1-sol",
     "variant": "GPT-6.1 Sol",
@@ -22025,8 +22025,8 @@
     "mean_cost_usd_per_task": 0.38203,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "gpt-6.1-sol",
@@ -22134,11 +22134,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:63b060c2709bd850",
+    "configuration_id": "open_design_arena:86c381ad40a828d9",
     "board": "open_design_arena",
     "model": "gpt-6-sol",
     "variant": "GPT-6 Sol",
@@ -22153,8 +22153,8 @@
     "mean_cost_usd_per_task": 0.296641,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "gpt-6-sol",
@@ -22262,11 +22262,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:5d69f844da6dc80d",
+    "configuration_id": "open_design_arena:02555c55fd5162bc",
     "board": "open_design_arena",
     "model": "claude-sonnet-5.5",
     "variant": "Claude Sonnet 5.5",
@@ -22281,8 +22281,8 @@
     "mean_cost_usd_per_task": 0.573814,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "claude-sonnet-5.5",
@@ -22390,11 +22390,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:af24dbf7d52582a5",
+    "configuration_id": "open_design_arena:dc15cc268465e84f",
     "board": "open_design_arena",
     "model": "mimo-v2.6-flash",
     "variant": "MiMo 2.6 Flash",
@@ -22409,8 +22409,8 @@
     "mean_cost_usd_per_task": 0.02894,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "mimo-v2.6-flash",
@@ -22518,11 +22518,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:df380d7af56a8dd0",
+    "configuration_id": "open_design_arena:a253f2b6e53c0031",
     "board": "open_design_arena",
     "model": "gpt-6-luna",
     "variant": "GPT-6 Luna",
@@ -22537,8 +22537,8 @@
     "mean_cost_usd_per_task": 0.015871,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "gpt-6-luna",
@@ -22646,11 +22646,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:91957ddea79bc27b",
+    "configuration_id": "open_design_arena:befbcde268d9b9cf",
     "board": "open_design_arena",
     "model": "grok-4.7",
     "variant": "Grok 4.7",
@@ -22665,8 +22665,8 @@
     "mean_cost_usd_per_task": 0.662291,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "grok-4.7",
@@ -22774,11 +22774,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:eab6a68a5b32527b",
+    "configuration_id": "open_design_arena:c05f9f4e9f329641",
     "board": "open_design_arena",
     "model": "gpt-6-astra",
     "variant": "GPT-6 Astra",
@@ -22793,8 +22793,8 @@
     "mean_cost_usd_per_task": 1.612939,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "gpt-6-astra",
@@ -22902,11 +22902,139 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:050e7234636e98be",
+    "configuration_id": "open_design_arena:c38a3c084bfcde0e",
+    "board": "open_design_arena",
+    "model": "claude-haiku-5.5",
+    "variant": "Claude Haiku 5.5",
+    "score_is_estimated": null,
+    "score_is_self_reported": false,
+    "agent_harness": "OpenDesign",
+    "reasoning_effort": null,
+    "service_mode": null,
+    "score": 82.2,
+    "score_low": null,
+    "score_high": null,
+    "mean_cost_usd_per_task": 0.017577,
+    "median_cost_usd_per_task": null,
+    "source": "https://open-design.ai/zh/llm-arena-for-design/",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
+    "raw_record": {
+      "boardId": "open_design_arena",
+      "model": "claude-haiku-5.5",
+      "variantLabel": "Claude Haiku 5.5",
+      "score": 82.2,
+      "secondary": {
+        "rank": 8,
+        "rankBasis": "average_score_desc",
+        "officialName": "Claude Haiku 5.5",
+        "maker": "Anthropic",
+        "icon": "/model-icons/claude-brand.svg",
+        "color": "var(--data-cyan)",
+        "pdr": 62.2,
+        "d0": null,
+        "d1": 26.5,
+        "d2": 55.7,
+        "ttft": 32.1,
+        "time": 148.8,
+        "cacheHit": 80,
+        "inputTokens": 195306,
+        "outputTokens": 24759.7,
+        "cost": 0.017577,
+        "calls": 1.7,
+        "scenarios": [
+          {
+            "id": "webapp",
+            "n": 9,
+            "score": 77.8,
+            "ci95": 6.1,
+            "pdr": 44.4,
+            "d1": 24.9,
+            "d2": 52.9,
+            "ttft": 28.6,
+            "time": 179.3,
+            "cacheHit": 81.5,
+            "inputTokens": 196220.1,
+            "outputTokens": 33261.8,
+            "cost": 0.021743,
+            "calls": 1.4
+          },
+          {
+            "id": "mobile",
+            "n": 9,
+            "score": 80.8,
+            "ci95": 6.1,
+            "pdr": 44.4,
+            "d1": 28.7,
+            "d2": 52.1,
+            "ttft": 26.9,
+            "time": 138.9,
+            "cacheHit": 85,
+            "inputTokens": 265024.3,
+            "outputTokens": 24277,
+            "cost": 0.01806,
+            "calls": 3.1
+          },
+          {
+            "id": "desktop",
+            "n": 9,
+            "score": 87.6,
+            "ci95": 4.9,
+            "pdr": 88.9,
+            "d1": 25.3,
+            "d2": 62.2,
+            "ttft": 31.5,
+            "time": 187.4,
+            "cacheHit": 79.2,
+            "inputTokens": 177598.6,
+            "outputTokens": 24129.8,
+            "cost": 0.016991,
+            "calls": 1.3
+          },
+          {
+            "id": "dashboard",
+            "n": 9,
+            "score": 89.7,
+            "ci95": 4.8,
+            "pdr": 100,
+            "d1": 25.9,
+            "d2": 63.8,
+            "ttft": 31.7,
+            "time": 135.9,
+            "cacheHit": 77.6,
+            "inputTokens": 166513,
+            "outputTokens": 25485.1,
+            "cost": 0.017558,
+            "calls": 1.2
+          },
+          {
+            "id": "landing",
+            "n": 9,
+            "score": 75,
+            "ci95": 8.7,
+            "pdr": 33.3,
+            "d1": 27.6,
+            "d2": 47.4,
+            "ttft": 41.9,
+            "time": 102.7,
+            "cacheHit": 76.9,
+            "inputTokens": 171174.1,
+            "outputTokens": 16644.9,
+            "cost": 0.013536,
+            "calls": 1.2
+          }
+        ]
+      },
+      "source": "https://open-design.ai/zh/llm-arena-for-design/",
+      "checkedAt": "2026-10-14"
+    }
+  },
+  {
+    "configuration_id": "open_design_arena:a4432bb3e59bff2c",
     "board": "open_design_arena",
     "model": "deepseek-v4.1-flash",
     "variant": "DeepSeek V4.1 Flash",
@@ -22921,20 +23049,20 @@
     "mean_cost_usd_per_task": 0.023264,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "deepseek-v4.1-flash",
       "variantLabel": "DeepSeek V4.1 Flash",
       "score": 81.2,
       "secondary": {
-        "rank": 8,
+        "rank": 9,
         "rankBasis": "average_score_desc",
         "officialName": "DeepSeek V4.1 Flash",
         "maker": "DeepSeek",
         "icon": "/agent-icons/deepseek.svg",
-        "color": "var(--data-cyan)",
+        "color": "var(--data-cream)",
         "pdr": 57.7,
         "d0": null,
         "d1": 28.4,
@@ -23030,11 +23158,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:0ed675e0b61ae3ac",
+    "configuration_id": "open_design_arena:e62462415724edde",
     "board": "open_design_arena",
     "model": "claude-fable-5.1",
     "variant": "Claude Fable 5.1",
@@ -23049,20 +23177,20 @@
     "mean_cost_usd_per_task": 3.660199,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "claude-fable-5.1",
       "variantLabel": "Claude Fable 5.1",
       "score": 80.3,
       "secondary": {
-        "rank": 9,
+        "rank": 10,
         "rankBasis": "average_score_desc",
         "officialName": "Claude Fable 5.1",
         "maker": "Anthropic",
         "icon": "/model-icons/claude-brand.svg",
-        "color": "var(--data-cream)",
+        "color": "var(--data-coral)",
         "pdr": 56.7,
         "d0": null,
         "d1": 27.1,
@@ -23158,11 +23286,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:e7590d5e99a8809f",
+    "configuration_id": "open_design_arena:9215e05682492e41",
     "board": "open_design_arena",
     "model": "glm-5.3-flashx",
     "variant": "GLM-5.3 Flash-X",
@@ -23177,20 +23305,20 @@
     "mean_cost_usd_per_task": 0.097833,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "glm-5.3-flashx",
       "variantLabel": "GLM-5.3 Flash-X",
       "score": 80.1,
       "secondary": {
-        "rank": 10,
+        "rank": 11,
         "rankBasis": "average_score_desc",
         "officialName": "GLM-5.3 Flash-X",
         "maker": "Z.ai",
         "icon": "/model-icons/zhipu.svg",
-        "color": "var(--data-coral)",
+        "color": "var(--data-teal)",
         "pdr": 53.7,
         "d0": null,
         "d1": 27,
@@ -23286,11 +23414,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:048a6b75c77d30fe",
+    "configuration_id": "open_design_arena:b4dbcfd14268e399",
     "board": "open_design_arena",
     "model": "gpt-5.6-sol",
     "variant": "GPT-5.6 Sol",
@@ -23305,20 +23433,20 @@
     "mean_cost_usd_per_task": 0.544242,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "gpt-5.6-sol",
       "variantLabel": "GPT-5.6 Sol",
       "score": 77.6,
       "secondary": {
-        "rank": 11,
+        "rank": 12,
         "rankBasis": "average_score_desc",
         "officialName": "GPT-5.6 Sol",
         "maker": "OpenAI",
         "icon": "/agents/openai.svg",
-        "color": "var(--data-teal)",
+        "color": "var(--data-cyan)",
         "pdr": 53.3,
         "d0": 100,
         "d1": 25.8,
@@ -23414,11 +23542,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:1d059a6d807d4308",
+    "configuration_id": "open_design_arena:a2d4dc9bb685561b",
     "board": "open_design_arena",
     "model": "hy4-preview",
     "variant": "Hunyuan H4 Preview",
@@ -23433,20 +23561,20 @@
     "mean_cost_usd_per_task": 0.417793,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "hy4-preview",
       "variantLabel": "Hunyuan H4 Preview",
       "score": 74.6,
       "secondary": {
-        "rank": 12,
+        "rank": 13,
         "rankBasis": "average_score_desc",
         "officialName": "Hunyuan H4 Preview",
         "maker": "Tencent",
         "icon": "/model-icons/hunyuan.svg",
-        "color": "var(--data-cyan)",
+        "color": "var(--data-cream)",
         "pdr": 40,
         "d0": null,
         "d1": 26.8,
@@ -23542,11 +23670,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:fbd3d33fa1d7cf9a",
+    "configuration_id": "open_design_arena:32c9bb7f4db47484",
     "board": "open_design_arena",
     "model": "qwen3.8-max",
     "variant": "Qwen 3.8-Max",
@@ -23561,20 +23689,20 @@
     "mean_cost_usd_per_task": 0.595399,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "qwen3.8-max",
       "variantLabel": "Qwen 3.8-Max",
       "score": 72,
       "secondary": {
-        "rank": 13,
+        "rank": 14,
         "rankBasis": "average_score_desc",
         "officialName": "Qwen 3.8-Max",
         "maker": "Alibaba",
         "icon": "/agent-icons/qwen.svg",
-        "color": "var(--data-cream)",
+        "color": "var(--data-coral)",
         "pdr": 56.7,
         "d0": 90,
         "d1": 23,
@@ -23670,11 +23798,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:e5b1ca76e59dabd0",
+    "configuration_id": "open_design_arena:a9337db44e236092",
     "board": "open_design_arena",
     "model": "gemini-3.8-flash",
     "variant": "Gemini 3.8 Flash",
@@ -23689,20 +23817,20 @@
     "mean_cost_usd_per_task": 0.210201,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "gemini-3.8-flash",
       "variantLabel": "Gemini 3.8 Flash",
       "score": 68.9,
       "secondary": {
-        "rank": 14,
+        "rank": 15,
         "rankBasis": "average_score_desc",
         "officialName": "Gemini 3.8 Flash",
         "maker": "Google",
         "icon": "/model-icons/gemini-brand.svg",
-        "color": "var(--data-coral)",
+        "color": "var(--data-teal)",
         "pdr": 30,
         "d0": null,
         "d1": 25,
@@ -23798,11 +23926,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:3d2b13f88b32b8ff",
+    "configuration_id": "open_design_arena:e8bde899599748c8",
     "board": "open_design_arena",
     "model": "muse-spark-1.3",
     "variant": "Muse Spark 1.3",
@@ -23817,20 +23945,20 @@
     "mean_cost_usd_per_task": 0.267309,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "muse-spark-1.3",
       "variantLabel": "Muse Spark 1.3",
       "score": 66.6,
       "secondary": {
-        "rank": 15,
+        "rank": 16,
         "rankBasis": "average_score_desc",
         "officialName": "Muse Spark 1.3",
         "maker": "Meta",
         "icon": "/model-icons/meta.png",
-        "color": "var(--data-teal)",
+        "color": "var(--data-cyan)",
         "pdr": 35.7,
         "d0": null,
         "d1": 25.6,
@@ -23926,11 +24054,11 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   },
   {
-    "configuration_id": "open_design_arena:9aadc4d724514f03",
+    "configuration_id": "open_design_arena:7015543b494ef946",
     "board": "open_design_arena",
     "model": "kimi-k3",
     "variant": "Kimi K3",
@@ -23945,20 +24073,20 @@
     "mean_cost_usd_per_task": 0.613653,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
-    "checked_at": "2026-10-01",
-    "archive": "scores-open-design-round2-2026-10-01.json",
+    "checked_at": "2026-10-14",
+    "archive": "scores-open-design-round3-2026-10-14.json",
     "raw_record": {
       "boardId": "open_design_arena",
       "model": "kimi-k3",
       "variantLabel": "Kimi K3",
       "score": 65.7,
       "secondary": {
-        "rank": 16,
+        "rank": 17,
         "rankBasis": "average_score_desc",
         "officialName": "Kimi K3",
         "maker": "Moonshot AI",
         "icon": "/model-icons/arena-kimi.svg",
-        "color": "var(--data-cyan)",
+        "color": "var(--data-cream)",
         "pdr": 38.7,
         "d0": 90.3,
         "d1": 22.4,
@@ -24054,7 +24182,7 @@
         ]
       },
       "source": "https://open-design.ai/zh/llm-arena-for-design/",
-      "checkedAt": "2026-10-01"
+      "checkedAt": "2026-10-14"
     }
   }
 ]

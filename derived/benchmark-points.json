@@ -317,7 +317,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-sol",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:048a6b75c77d30fe",
+    "configuration_id": "open_design_arena:b4dbcfd14268e399",
     "variant": "GPT-5.6 Sol",
     "score": 77.6,
     "score_is_estimated": null,
@@ -758,7 +758,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:048a6b75c77d30fe",
+    "configuration_id": "open_design_arena:b4dbcfd14268e399",
     "variant": "GPT-5.6 Sol",
     "score": 77.6,
     "score_is_estimated": null,
@@ -1199,7 +1199,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-sol",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:048a6b75c77d30fe",
+    "configuration_id": "open_design_arena:b4dbcfd14268e399",
     "variant": "GPT-5.6 Sol",
     "score": 77.6,
     "score_is_estimated": null,
@@ -3047,7 +3047,7 @@
   {
     "point_id": "chatgpt_plus::gpt-6-astra",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:eab6a68a5b32527b",
+    "configuration_id": "open_design_arena:c05f9f4e9f329641",
     "variant": "GPT-6 Astra",
     "score": 82.7,
     "score_is_estimated": null,
@@ -3488,7 +3488,7 @@
   {
     "point_id": "chatgpt_plus::gpt-6-sol",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:63b060c2709bd850",
+    "configuration_id": "open_design_arena:86c381ad40a828d9",
     "variant": "GPT-6 Sol",
     "score": 89.9,
     "score_is_estimated": null,
@@ -3824,7 +3824,7 @@
   {
     "point_id": "chatgpt_plus::gpt-6-luna",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:df380d7af56a8dd0",
+    "configuration_id": "open_design_arena:a253f2b6e53c0031",
     "variant": "GPT-6 Luna",
     "score": 83.1,
     "score_is_estimated": null,
@@ -4181,7 +4181,7 @@
   {
     "point_id": "chatgpt_plus::gpt-6.1-sol",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:1f49b4d125f7e8d5",
+    "configuration_id": "open_design_arena:df5dd58a2042561b",
     "variant": "GPT-6.1 Sol",
     "score": 90.1,
     "score_is_estimated": null,
@@ -4601,7 +4601,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-6-astra",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:eab6a68a5b32527b",
+    "configuration_id": "open_design_arena:c05f9f4e9f329641",
     "variant": "GPT-6 Astra",
     "score": 82.7,
     "score_is_estimated": null,
@@ -5126,7 +5126,7 @@
   {
     "point_id": "devin_max::gpt-6-astra",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:eab6a68a5b32527b",
+    "configuration_id": "open_design_arena:c05f9f4e9f329641",
     "variant": "GPT-6 Astra",
     "score": 82.7,
     "score_is_estimated": null,
@@ -6344,7 +6344,7 @@
   {
     "point_id": "google_ai_pro_us::gemini-3.8-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:e5b1ca76e59dabd0",
+    "configuration_id": "open_design_arena:a9337db44e236092",
     "variant": "Gemini 3.8 Flash",
     "score": 68.9,
     "score_is_estimated": null,
@@ -6722,7 +6722,7 @@
   {
     "point_id": "google_ai_ultra_5x_us::gemini-3.8-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:e5b1ca76e59dabd0",
+    "configuration_id": "open_design_arena:a9337db44e236092",
     "variant": "Gemini 3.8 Flash",
     "score": 68.9,
     "score_is_estimated": null,
@@ -6995,7 +6995,7 @@
   {
     "point_id": "google_ai_ultra_20x_us::gemini-3.8-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:e5b1ca76e59dabd0",
+    "configuration_id": "open_design_arena:a9337db44e236092",
     "variant": "Gemini 3.8 Flash",
     "score": 68.9,
     "score_is_estimated": null,
@@ -9032,7 +9032,7 @@
   {
     "point_id": "claude_max_20x::claude-fable-5.1",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:0ed675e0b61ae3ac",
+    "configuration_id": "open_design_arena:e62462415724edde",
     "variant": "Claude Fable 5.1",
     "score": 80.3,
     "score_is_estimated": null,
@@ -11741,7 +11741,7 @@
   {
     "point_id": "supergrok::grok-4.7",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:91957ddea79bc27b",
+    "configuration_id": "open_design_arena:befbcde268d9b9cf",
     "variant": "Grok 4.7",
     "score": 82.9,
     "score_is_estimated": null,
@@ -11951,7 +11951,7 @@
   {
     "point_id": "supergrok_plus::grok-4.7",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:91957ddea79bc27b",
+    "configuration_id": "open_design_arena:befbcde268d9b9cf",
     "variant": "Grok 4.7",
     "score": 82.9,
     "score_is_estimated": null,
@@ -12161,7 +12161,7 @@
   {
     "point_id": "supergrok_heavy::grok-4.7",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:91957ddea79bc27b",
+    "configuration_id": "open_design_arena:befbcde268d9b9cf",
     "variant": "Grok 4.7",
     "score": 82.9,
     "score_is_estimated": null,
@@ -13988,7 +13988,7 @@
   {
     "point_id": "kimi_allegretto_cn::kimi-k3",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:9aadc4d724514f03",
+    "configuration_id": "open_design_arena:7015543b494ef946",
     "variant": "Kimi K3",
     "score": 65.7,
     "score_is_estimated": null,
@@ -14177,7 +14177,7 @@
   {
     "point_id": "kimi_moderato_cn::kimi-k3",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:9aadc4d724514f03",
+    "configuration_id": "open_design_arena:7015543b494ef946",
     "variant": "Kimi K3",
     "score": 65.7,
     "score_is_estimated": null,
@@ -14366,7 +14366,7 @@
   {
     "point_id": "kimi_allegro_cn::kimi-k3",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:9aadc4d724514f03",
+    "configuration_id": "open_design_arena:7015543b494ef946",
     "variant": "Kimi K3",
     "score": 65.7,
     "score_is_estimated": null,
@@ -21170,7 +21170,7 @@
   {
     "point_id": "opencode_go::grok-4.7",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:91957ddea79bc27b",
+    "configuration_id": "open_design_arena:befbcde268d9b9cf",
     "variant": "Grok 4.7",
     "score": 82.9,
     "score_is_estimated": null,
@@ -21968,7 +21968,7 @@
   {
     "point_id": "opencode_go::gpt-6-luna",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:df380d7af56a8dd0",
+    "configuration_id": "open_design_arena:a253f2b6e53c0031",
     "variant": "GPT-6 Luna",
     "score": 83.1,
     "score_is_estimated": null,
@@ -22577,7 +22577,7 @@
   {
     "point_id": "opencode_go::kimi-k3",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:9aadc4d724514f03",
+    "configuration_id": "open_design_arena:7015543b494ef946",
     "variant": "Kimi K3",
     "score": 65.7,
     "score_is_estimated": null,
@@ -23060,7 +23060,7 @@
   {
     "point_id": "opencode_go::mimo-v2.6-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:af24dbf7d52582a5",
+    "configuration_id": "open_design_arena:dc15cc268465e84f",
     "variant": "MiMo 2.6 Flash",
     "score": 83.5,
     "score_is_estimated": null,
@@ -23438,7 +23438,7 @@
   {
     "point_id": "opencode_go::qwen3.8-max",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:fbd3d33fa1d7cf9a",
+    "configuration_id": "open_design_arena:32c9bb7f4db47484",
     "variant": "Qwen 3.8-Max",
     "score": 72,
     "score_is_estimated": null,
@@ -23690,7 +23690,7 @@
   {
     "point_id": "opencode_go::deepseek-v4.1-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:050e7234636e98be",
+    "configuration_id": "open_design_arena:a4432bb3e59bff2c",
     "variant": "DeepSeek V4.1 Flash",
     "score": 81.2,
     "score_is_estimated": null,
@@ -24341,7 +24341,7 @@
   {
     "point_id": "opencode_go::hy4-preview",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:1d059a6d807d4308",
+    "configuration_id": "open_design_arena:a2d4dc9bb685561b",
     "variant": "Hunyuan H4 Preview",
     "score": 74.6,
     "score_is_estimated": null,
@@ -24761,7 +24761,7 @@
   {
     "point_id": "command_code_goat::gpt-5.6-sol",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:048a6b75c77d30fe",
+    "configuration_id": "open_design_arena:b4dbcfd14268e399",
     "variant": "GPT-5.6 Sol",
     "score": 77.6,
     "score_is_estimated": null,
@@ -25475,7 +25475,7 @@
   {
     "point_id": "command_code_goat::deepseek-v4.1-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:050e7234636e98be",
+    "configuration_id": "open_design_arena:a4432bb3e59bff2c",
     "variant": "DeepSeek V4.1 Flash",
     "score": 81.2,
     "score_is_estimated": null,
@@ -26231,7 +26231,7 @@
   {
     "point_id": "command_code_goat::gemini-3.8-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:e5b1ca76e59dabd0",
+    "configuration_id": "open_design_arena:a9337db44e236092",
     "variant": "Gemini 3.8 Flash",
     "score": 68.9,
     "score_is_estimated": null,
@@ -27386,7 +27386,7 @@
   {
     "point_id": "command_code_goat::qwen3.8-max",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:fbd3d33fa1d7cf9a",
+    "configuration_id": "open_design_arena:32c9bb7f4db47484",
     "variant": "Qwen 3.8-Max",
     "score": 72,
     "score_is_estimated": null,
@@ -27722,7 +27722,7 @@
   {
     "point_id": "command_code_goat::grok-4.7",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:91957ddea79bc27b",
+    "configuration_id": "open_design_arena:befbcde268d9b9cf",
     "variant": "Grok 4.7",
     "score": 82.9,
     "score_is_estimated": null,
@@ -28079,7 +28079,7 @@
   {
     "point_id": "command_code_goat::gpt-6-luna",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:df380d7af56a8dd0",
+    "configuration_id": "open_design_arena:a253f2b6e53c0031",
     "variant": "GPT-6 Luna",
     "score": 83.1,
     "score_is_estimated": null,
@@ -28205,7 +28205,7 @@
   {
     "point_id": "command_code_goat::hy4-preview",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:1d059a6d807d4308",
+    "configuration_id": "open_design_arena:a2d4dc9bb685561b",
     "variant": "Hunyuan H4 Preview",
     "score": 74.6,
     "score_is_estimated": null,
@@ -28226,7 +28226,7 @@
   {
     "point_id": "command_code_goat::glm-5.3-flashx",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:e7590d5e99a8809f",
+    "configuration_id": "open_design_arena:9215e05682492e41",
     "variant": "GLM-5.3 Flash-X",
     "score": 80.1,
     "score_is_estimated": null,
@@ -28667,7 +28667,7 @@
   {
     "point_id": "command_code_goat::muse-spark-1.3",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:3d2b13f88b32b8ff",
+    "configuration_id": "open_design_arena:e8bde899599748c8",
     "variant": "Muse Spark 1.3",
     "score": 66.6,
     "score_is_estimated": null,
@@ -28940,7 +28940,7 @@
   {
     "point_id": "command_code_goat::kimi-k3",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:9aadc4d724514f03",
+    "configuration_id": "open_design_arena:7015543b494ef946",
     "variant": "Kimi K3",
     "score": 65.7,
     "score_is_estimated": null,
@@ -29570,7 +29570,7 @@
   {
     "point_id": "command_code_goat::mimo-v2.6-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:af24dbf7d52582a5",
+    "configuration_id": "open_design_arena:dc15cc268465e84f",
     "variant": "MiMo 2.6 Flash",
     "score": 83.5,
     "score_is_estimated": null,
@@ -30515,7 +30515,7 @@
   {
     "point_id": "command_code_goat::claude-sonnet-5.5",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:5d69f844da6dc80d",
+    "configuration_id": "open_design_arena:02555c55fd5162bc",
     "variant": "Claude Sonnet 5.5",
     "score": 86.8,
     "score_is_estimated": null,
@@ -31145,7 +31145,7 @@
   {
     "point_id": "ollama_pro::deepseek-v4.1-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:050e7234636e98be",
+    "configuration_id": "open_design_arena:a4432bb3e59bff2c",
     "variant": "DeepSeek V4.1 Flash",
     "score": 81.2,
     "score_is_estimated": null,
@@ -32384,7 +32384,7 @@
   {
     "point_id": "ollama_pro::kimi-k3",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:9aadc4d724514f03",
+    "configuration_id": "open_design_arena:7015543b494ef946",
     "variant": "Kimi K3",
     "score": 65.7,
     "score_is_estimated": null,
@@ -32804,7 +32804,7 @@
   {
     "point_id": "ollama_max::deepseek-v4.1-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:050e7234636e98be",
+    "configuration_id": "open_design_arena:a4432bb3e59bff2c",
     "variant": "DeepSeek V4.1 Flash",
     "score": 81.2,
     "score_is_estimated": null,
@@ -34043,7 +34043,7 @@
   {
     "point_id": "ollama_max::kimi-k3",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:9aadc4d724514f03",
+    "configuration_id": "open_design_arena:7015543b494ef946",
     "variant": "Kimi K3",
     "score": 65.7,
     "score_is_estimated": null,
@@ -35030,7 +35030,7 @@
   {
     "point_id": "mimo_token_lite_day::mimo-v2.6-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:af24dbf7d52582a5",
+    "configuration_id": "open_design_arena:dc15cc268465e84f",
     "variant": "MiMo 2.6 Flash",
     "score": 83.5,
     "score_is_estimated": null,
@@ -35114,7 +35114,7 @@
   {
     "point_id": "mimo_token_lite_night::mimo-v2.6-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:af24dbf7d52582a5",
+    "configuration_id": "open_design_arena:dc15cc268465e84f",
     "variant": "MiMo 2.6 Flash",
     "score": 83.5,
     "score_is_estimated": null,
@@ -35744,7 +35744,7 @@
   {
     "point_id": "mimo_token_standard_day::mimo-v2.6-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:af24dbf7d52582a5",
+    "configuration_id": "open_design_arena:dc15cc268465e84f",
     "variant": "MiMo 2.6 Flash",
     "score": 83.5,
     "score_is_estimated": null,
@@ -35828,7 +35828,7 @@
   {
     "point_id": "mimo_token_standard_night::mimo-v2.6-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:af24dbf7d52582a5",
+    "configuration_id": "open_design_arena:dc15cc268465e84f",
     "variant": "MiMo 2.6 Flash",
     "score": 83.5,
     "score_is_estimated": null,
@@ -36458,7 +36458,7 @@
   {
     "point_id": "mimo_token_pro_day::mimo-v2.6-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:af24dbf7d52582a5",
+    "configuration_id": "open_design_arena:dc15cc268465e84f",
     "variant": "MiMo 2.6 Flash",
     "score": 83.5,
     "score_is_estimated": null,
@@ -36542,7 +36542,7 @@
   {
     "point_id": "mimo_token_pro_night::mimo-v2.6-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:af24dbf7d52582a5",
+    "configuration_id": "open_design_arena:dc15cc268465e84f",
     "variant": "MiMo 2.6 Flash",
     "score": 83.5,
     "score_is_estimated": null,
@@ -37172,7 +37172,7 @@
   {
     "point_id": "mimo_token_max_day::mimo-v2.6-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:af24dbf7d52582a5",
+    "configuration_id": "open_design_arena:dc15cc268465e84f",
     "variant": "MiMo 2.6 Flash",
     "score": 83.5,
     "score_is_estimated": null,
@@ -37256,7 +37256,7 @@
   {
     "point_id": "mimo_token_max_night::mimo-v2.6-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:af24dbf7d52582a5",
+    "configuration_id": "open_design_arena:dc15cc268465e84f",
     "variant": "MiMo 2.6 Flash",
     "score": 83.5,
     "score_is_estimated": null,
@@ -42485,7 +42485,7 @@
   {
     "point_id": "claude_max_5x::claude-fable-5.1",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:0ed675e0b61ae3ac",
+    "configuration_id": "open_design_arena:e62462415724edde",
     "variant": "Claude Fable 5.1",
     "score": 80.3,
     "score_is_estimated": null,
@@ -42821,7 +42821,7 @@
   {
     "point_id": "claude_pro::claude-sonnet-5.5",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:5d69f844da6dc80d",
+    "configuration_id": "open_design_arena:02555c55fd5162bc",
     "variant": "Claude Sonnet 5.5",
     "score": 86.8,
     "score_is_estimated": null,
@@ -42832,6 +42832,27 @@
     "score_low": null,
     "score_high": null,
     "mean_cost_usd_per_task": 0.573814,
+    "median_cost_usd_per_task": null,
+    "source": "https://open-design.ai/zh/llm-arena-for-design/",
+    "mapping_kind": "agent_configuration_reference",
+    "mapping_confidence": "low",
+    "mapping_note": "Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.",
+    "quota_effort_matched": null
+  },
+  {
+    "point_id": "claude_pro::claude-haiku-5.5",
+    "board": "open_design_arena",
+    "configuration_id": "open_design_arena:c38a3c084bfcde0e",
+    "variant": "Claude Haiku 5.5",
+    "score": 82.2,
+    "score_is_estimated": null,
+    "score_is_self_reported": false,
+    "agent_harness": "OpenDesign",
+    "reasoning_effort": null,
+    "service_mode": null,
+    "score_low": null,
+    "score_high": null,
+    "mean_cost_usd_per_task": 0.017577,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
     "mapping_kind": "agent_configuration_reference",
@@ -43157,7 +43178,7 @@
   {
     "point_id": "claude_max_20x::claude-sonnet-5.5",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:5d69f844da6dc80d",
+    "configuration_id": "open_design_arena:02555c55fd5162bc",
     "variant": "Claude Sonnet 5.5",
     "score": 86.8,
     "score_is_estimated": null,
@@ -43168,6 +43189,27 @@
     "score_low": null,
     "score_high": null,
     "mean_cost_usd_per_task": 0.573814,
+    "median_cost_usd_per_task": null,
+    "source": "https://open-design.ai/zh/llm-arena-for-design/",
+    "mapping_kind": "agent_configuration_reference",
+    "mapping_confidence": "low",
+    "mapping_note": "Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.",
+    "quota_effort_matched": null
+  },
+  {
+    "point_id": "claude_max_20x::claude-haiku-5.5",
+    "board": "open_design_arena",
+    "configuration_id": "open_design_arena:c38a3c084bfcde0e",
+    "variant": "Claude Haiku 5.5",
+    "score": 82.2,
+    "score_is_estimated": null,
+    "score_is_self_reported": false,
+    "agent_harness": "OpenDesign",
+    "reasoning_effort": null,
+    "service_mode": null,
+    "score_low": null,
+    "score_high": null,
+    "mean_cost_usd_per_task": 0.017577,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
     "mapping_kind": "agent_configuration_reference",
@@ -43493,7 +43535,7 @@
   {
     "point_id": "claude_max_5x::claude-sonnet-5.5",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:5d69f844da6dc80d",
+    "configuration_id": "open_design_arena:02555c55fd5162bc",
     "variant": "Claude Sonnet 5.5",
     "score": 86.8,
     "score_is_estimated": null,
@@ -43504,6 +43546,27 @@
     "score_low": null,
     "score_high": null,
     "mean_cost_usd_per_task": 0.573814,
+    "median_cost_usd_per_task": null,
+    "source": "https://open-design.ai/zh/llm-arena-for-design/",
+    "mapping_kind": "agent_configuration_reference",
+    "mapping_confidence": "low",
+    "mapping_note": "Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.",
+    "quota_effort_matched": null
+  },
+  {
+    "point_id": "claude_max_5x::claude-haiku-5.5",
+    "board": "open_design_arena",
+    "configuration_id": "open_design_arena:c38a3c084bfcde0e",
+    "variant": "Claude Haiku 5.5",
+    "score": 82.2,
+    "score_is_estimated": null,
+    "score_is_self_reported": false,
+    "agent_harness": "OpenDesign",
+    "reasoning_effort": null,
+    "service_mode": null,
+    "score_low": null,
+    "score_high": null,
+    "mean_cost_usd_per_task": 0.017577,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
     "mapping_kind": "agent_configuration_reference",
@@ -43913,7 +43976,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-6-astra",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:eab6a68a5b32527b",
+    "configuration_id": "open_design_arena:c05f9f4e9f329641",
     "variant": "GPT-6 Astra",
     "score": 82.7,
     "score_is_estimated": null,
@@ -44816,7 +44879,7 @@
   {
     "point_id": "droid_max::claude-fable-5.1",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:0ed675e0b61ae3ac",
+    "configuration_id": "open_design_arena:e62462415724edde",
     "variant": "Claude Fable 5.1",
     "score": 80.3,
     "score_is_estimated": null,
@@ -46118,7 +46181,7 @@
   {
     "point_id": "droid_max::claude-sonnet-5.5",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:5d69f844da6dc80d",
+    "configuration_id": "open_design_arena:02555c55fd5162bc",
     "variant": "Claude Sonnet 5.5",
     "score": 86.8,
     "score_is_estimated": null,
@@ -46538,7 +46601,7 @@
   {
     "point_id": "droid_max::gpt-6-astra",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:eab6a68a5b32527b",
+    "configuration_id": "open_design_arena:c05f9f4e9f329641",
     "variant": "GPT-6 Astra",
     "score": 82.7,
     "score_is_estimated": null,
@@ -46979,7 +47042,7 @@
   {
     "point_id": "droid_max::gpt-6-sol",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:63b060c2709bd850",
+    "configuration_id": "open_design_arena:86c381ad40a828d9",
     "variant": "GPT-6 Sol",
     "score": 89.9,
     "score_is_estimated": null,
@@ -47315,7 +47378,7 @@
   {
     "point_id": "droid_max::gpt-6-luna",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:df380d7af56a8dd0",
+    "configuration_id": "open_design_arena:a253f2b6e53c0031",
     "variant": "GPT-6 Luna",
     "score": 83.1,
     "score_is_estimated": null,
@@ -47651,7 +47714,7 @@
   {
     "point_id": "droid_max::gpt-5.6-sol",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:048a6b75c77d30fe",
+    "configuration_id": "open_design_arena:b4dbcfd14268e399",
     "variant": "GPT-5.6 Sol",
     "score": 77.6,
     "score_is_estimated": null,
@@ -48848,7 +48911,7 @@
   {
     "point_id": "droid_max::gemini-3.8-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:e5b1ca76e59dabd0",
+    "configuration_id": "open_design_arena:a9337db44e236092",
     "variant": "Gemini 3.8 Flash",
     "score": 68.9,
     "score_is_estimated": null,
@@ -49289,7 +49352,7 @@
   {
     "point_id": "droid_max::grok-4.7",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:91957ddea79bc27b",
+    "configuration_id": "open_design_arena:befbcde268d9b9cf",
     "variant": "Grok 4.7",
     "score": 82.9,
     "score_is_estimated": null,
@@ -50423,7 +50486,7 @@
   {
     "point_id": "droid_max::kimi-k3",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:9aadc4d724514f03",
+    "configuration_id": "open_design_arena:7015543b494ef946",
     "variant": "Kimi K3",
     "score": 65.7,
     "score_is_estimated": null,
@@ -50570,7 +50633,7 @@
   {
     "point_id": "droid_max::qwen3.8-max",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:fbd3d33fa1d7cf9a",
+    "configuration_id": "open_design_arena:32c9bb7f4db47484",
     "variant": "Qwen 3.8-Max",
     "score": 72,
     "score_is_estimated": null,
@@ -50801,7 +50864,7 @@
   {
     "point_id": "droid_max::deepseek-v4.1-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:050e7234636e98be",
+    "configuration_id": "open_design_arena:a4432bb3e59bff2c",
     "variant": "DeepSeek V4.1 Flash",
     "score": 81.2,
     "score_is_estimated": null,
@@ -51221,7 +51284,7 @@
   {
     "point_id": "deepseek_v41_flash_offpeak::deepseek-v4.1-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:050e7234636e98be",
+    "configuration_id": "open_design_arena:a4432bb3e59bff2c",
     "variant": "DeepSeek V4.1 Flash",
     "score": 81.2,
     "score_is_estimated": null,
@@ -51410,7 +51473,7 @@
   {
     "point_id": "deepseek_v41_flash_peak::deepseek-v4.1-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:050e7234636e98be",
+    "configuration_id": "open_design_arena:a4432bb3e59bff2c",
     "variant": "DeepSeek V4.1 Flash",
     "score": 81.2,
     "score_is_estimated": null,
@@ -52817,7 +52880,7 @@
   {
     "point_id": "openai_sol_api::gpt-5.6-sol",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:048a6b75c77d30fe",
+    "configuration_id": "open_design_arena:b4dbcfd14268e399",
     "variant": "GPT-5.6 Sol",
     "score": 77.6,
     "score_is_estimated": null,
@@ -53447,7 +53510,7 @@
   {
     "point_id": "xai_grok47_api::grok-4.7",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:91957ddea79bc27b",
+    "configuration_id": "open_design_arena:befbcde268d9b9cf",
     "variant": "Grok 4.7",
     "score": 82.9,
     "score_is_estimated": null,
@@ -53615,7 +53678,7 @@
   {
     "point_id": "mimo_v26_flash_api::mimo-v2.6-flash",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:af24dbf7d52582a5",
+    "configuration_id": "open_design_arena:dc15cc268465e84f",
     "variant": "MiMo 2.6 Flash",
     "score": 83.5,
     "score_is_estimated": null,
@@ -55190,7 +55253,7 @@
   {
     "point_id": "anthropic_fable51_api::claude-fable-5.1",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:0ed675e0b61ae3ac",
+    "configuration_id": "open_design_arena:e62462415724edde",
     "variant": "Claude Fable 5.1",
     "score": 80.3,
     "score_is_estimated": null,
@@ -55820,7 +55883,7 @@
   {
     "point_id": "anthropic_sonnet55_api::claude-sonnet-5.5",
     "board": "open_design_arena",
-    "configuration_id": "open_design_arena:5d69f844da6dc80d",
+    "configuration_id": "open_design_arena:02555c55fd5162bc",
     "variant": "Claude Sonnet 5.5",
     "score": 86.8,
     "score_is_estimated": null,
@@ -55831,6 +55894,27 @@
     "score_low": null,
     "score_high": null,
     "mean_cost_usd_per_task": 0.573814,
+    "median_cost_usd_per_task": null,
+    "source": "https://open-design.ai/zh/llm-arena-for-design/",
+    "mapping_kind": "agent_configuration_reference",
+    "mapping_confidence": "low",
+    "mapping_note": "Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.",
+    "quota_effort_matched": null
+  },
+  {
+    "point_id": "anthropic_haiku55_api::claude-haiku-5.5",
+    "board": "open_design_arena",
+    "configuration_id": "open_design_arena:c38a3c084bfcde0e",
+    "variant": "Claude Haiku 5.5",
+    "score": 82.2,
+    "score_is_estimated": null,
+    "score_is_self_reported": false,
+    "agent_harness": "OpenDesign",
+    "reasoning_effort": null,
+    "service_mode": null,
+    "score_low": null,
+    "score_high": null,
+    "mean_cost_usd_per_task": 0.017577,
     "median_cost_usd_per_task": null,
     "source": "https://open-design.ai/zh/llm-arena-for-design/",
     "mapping_kind": "agent_configuration_reference",

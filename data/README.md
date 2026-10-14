@@ -1,6 +1,6 @@
 # Data / 数据
 
-Current snapshot: <!-- stat:snapshot -->2026-10-08<!-- /stat -->. The adopted dataset contains <!-- stat:points_total -->328<!-- /stat --> plan × model rows: <!-- stat:points_subscription -->307<!-- /stat --> subscription rows (<!-- stat:points_allowance -->306<!-- /stat --> with a monthly allowance plus one unmetered promotional row, Devin Pro × SWE-2 at ≈$0/MTok until 2026-10-31) and <!-- stat:points_metered -->21<!-- /stat --> metered API rows. This covers the project's adopted sample, not every plan or model on the market.
+Current snapshot: <!-- stat:snapshot -->2026-10-14<!-- /stat -->. The adopted dataset contains <!-- stat:points_total -->328<!-- /stat --> plan × model rows: <!-- stat:points_subscription -->307<!-- /stat --> subscription rows (<!-- stat:points_allowance -->306<!-- /stat --> with a monthly allowance plus one unmetered promotional row, Devin Pro × SWE-2 at ≈$0/MTok until 2026-10-31) and <!-- stat:points_metered -->21<!-- /stat --> metered API rows. This covers the project's adopted sample, not every plan or model on the market.
 
 These files are the public redacted edition. Original local evidence is backed up outside Git; see [PUBLICATION.md](../PUBLICATION.md). 本目录为公开脱敏版，保留数值、来源与取舍记录，原件仅存于 Git 忽略的本地备份。
 
@@ -14,7 +14,7 @@ These files are the public redacted edition. Original local evidence is backed u
 | AA Coding Agent | <!-- stat:scored_aa_coding_agent_index -->120<!-- /stat --> / <!-- stat:points_total -->328<!-- /stat --> | <!-- stat:unscored_aa_coding_agent_index -->208<!-- /stat --> |
 | Code Arena | <!-- stat:scored_arena_code -->264<!-- /stat --> / <!-- stat:points_total -->328<!-- /stat --> | <!-- stat:unscored_arena_code -->64<!-- /stat --> |
 | Agent Arena | <!-- stat:scored_arena_agent_mode -->204<!-- /stat --> / <!-- stat:points_total -->328<!-- /stat --> | <!-- stat:unscored_arena_agent_mode -->124<!-- /stat --> |
-| OpenDesign Arena | <!-- stat:scored_open_design_arena -->73<!-- /stat --> / <!-- stat:points_total -->328<!-- /stat --> | <!-- stat:unscored_open_design_arena -->255<!-- /stat --> |
+| OpenDesign Arena | <!-- stat:scored_open_design_arena -->77<!-- /stat --> / <!-- stat:points_total -->328<!-- /stat --> | <!-- stat:unscored_open_design_arena -->251<!-- /stat --> |
 | Terminal-Bench 4.0 | <!-- stat:scored_terminal_bench_4 -->113<!-- /stat --> / <!-- stat:points_total -->328<!-- /stat --> | <!-- stat:unscored_terminal_bench_4 -->215<!-- /stat --> |
 | Terminal-Bench 4.0 (AA) | <!-- stat:scored_aa_terminal_bench_4 -->278<!-- /stat --> / <!-- stat:points_total -->328<!-- /stat --> | <!-- stat:unscored_aa_terminal_bench_4 -->50<!-- /stat --> |
 | DeepSWE v1.1 | <!-- stat:scored_deepswe_1_1 -->195<!-- /stat --> / <!-- stat:points_total -->328<!-- /stat --> | <!-- stat:unscored_deepswe_1_1 -->133<!-- /stat --> |

@@ -17,7 +17,7 @@ AI 编程订阅只标月费，不标每 token 多少钱。本项目把每个套�
 - 黑线是帕累托前沿：线上的每个点，都找不到另一个点比它更便宜、分数又更高。
 - 订阅单价按用满额度计算。只用掉一半，实际单价就翻倍。
 
-快照日期 <!-- stat:snapshot -->2026-10-08<!-- /stat --> · 共 <!-- stat:points_total -->328<!-- /stat --> 个「套餐 × 模型」点 · [全部图表（中英文、SVG / PNG）](charts/README.md)
+快照日期 <!-- stat:snapshot -->2026-10-14<!-- /stat --> · 共 <!-- stat:points_total -->328<!-- /stat --> 个「套餐 × 模型」点 · [全部图表（中英文、SVG / PNG）](charts/README.md)
 
 ## 命令行查询
 
@@ -85,7 +85,7 @@ Coding Agent Index v1.5。每个分数对应一组测过的 harness × 模型 ×
 
 ![OpenDesign 设计榜](charts/zh/pareto/帕累托_OpenDesign设计榜.svg)
 
-取 0–100 的任务平均分（需求完成度 30 + 设计质量 70），不用它混入成本和速度的推荐分。存档的 <!-- stat:configs_mapped_open_design_arena -->16<!-- /stat --> 个模型全部对上了采用点。
+取 0–100 的任务平均分（需求完成度 30 + 设计质量 70），不用它混入成本和速度的推荐分。存档的 <!-- stat:configs_mapped_open_design_arena -->17<!-- /stat --> 个模型全部对上了采用点。
 
 ### Terminal-Bench 4.0
 
@@ -154,7 +154,7 @@ Stanford、Harbor 和 Laude Institute 维护的 66 题官方榜（快照 2026-09
 | AA 编程 Agent 榜 | <!-- stat:scored_aa_coding_agent_index -->120<!-- /stat --> |
 | Code Arena | <!-- stat:scored_arena_code -->264<!-- /stat --> |
 | Agent Arena | <!-- stat:scored_arena_agent_mode -->204<!-- /stat --> |
-| OpenDesign 设计榜 | <!-- stat:scored_open_design_arena -->73<!-- /stat --> |
+| OpenDesign 设计榜 | <!-- stat:scored_open_design_arena -->77<!-- /stat --> |
 | Terminal-Bench 4.0 | <!-- stat:scored_terminal_bench_4 -->113<!-- /stat --> |
 | Terminal-Bench 4.0（AA） | <!-- stat:scored_aa_terminal_bench_4 -->278<!-- /stat --> |
 | DeepSWE v1.1 | <!-- stat:scored_deepswe_1_1 -->195<!-- /stat --> |
@@ -163,7 +163,7 @@ Stanford、Harbor 和 Laude Institute 维护的 66 题官方榜（快照 2026-09
 
 **下载：** [采用值 CSV](data/adopted.csv) · [计算结果 CSV](derived/points.csv) / [JSON](derived/points.json) · [数据说明](data/README.md) · [分日期原始证据](data/research/)
 
-**全部评测配置**（不只每个模型的最高分）：[评测配置存档](derived/benchmark-configurations.json)（[CSV](derived/benchmark-configurations.csv)）完整保留 <!-- stat:configs_total -->525<!-- /stat --> 条记录，含原始标签、harness、effort、分数区间和任务成本。[套餐与配置的映射](derived/benchmark-points.json)（[CSV](derived/benchmark-points.csv)）有 <!-- stat:refs_total -->2700<!-- /stat --> 条明确对应。不知道的 harness、effort 和区间一律留空，不猜。[全配置交互图](charts/zh/pareto/帕累托交互图.html)可以切换配置和思考强度；需下载后本地打开，Plotly 要联网。
+**全部评测配置**（不只每个模型的最高分）：[评测配置存档](derived/benchmark-configurations.json)（[CSV](derived/benchmark-configurations.csv)）完整保留 <!-- stat:configs_total -->526<!-- /stat --> 条记录，含原始标签、harness、effort、分数区间和任务成本。[套餐与配置的映射](derived/benchmark-points.json)（[CSV](derived/benchmark-points.csv)）有 <!-- stat:refs_total -->2704<!-- /stat --> 条明确对应。不知道的 harness、effort 和区间一律留空，不猜。[全配置交互图](charts/zh/pareto/帕累托交互图.html)可以切换配置和思考强度；需下载后本地打开，Plotly 要联网。
 
 ## 已知局限
 

@@ -178,7 +178,14 @@ def label_position(p, board, x, y, tier="main"):
             if board == "arena_code":
                 return x - 90, y - 20, "end"
             if board == "open_design_arena":
-                return x - 4, y - 70, "end"
+                # 全量图里前沿已排到 5 个点；标签整体右移 29px，避开左侧 GPT-6 Sol 的方块，
+                # 否则读者会把这块标签认到 Plus 点上（引线仍指向 Sonnet 自身）。
+                return x + 25, y - 70, "end"
+    if model == "claude-haiku-5.5":
+        # 2026-10-14 起 OpenDesign 榜最便宜的高分点；标签抬到 MiMo 标签上方，
+        # 留出 MiMo 方块与自身方块之间的空白。
+        if board == "open_design_arena" and tier == "full":
+            return x - 24, y - 110, "end"
     if model == "claude-opus-5.5":
         if tier == "full":
             if board == "aa_terminal_bench_4":
@@ -190,7 +197,8 @@ def label_position(p, board, x, y, tier="main"):
             return x + 0, y - 50, "end"
     if model == "gpt-6-sol":
         if board == "open_design_arena" and tier == "full":
-            return x - 20, y + 80, "end"
+            # 左移 20px 让出右端：$0.02145/MTok 的 Haiku 5.5 按量点正好落在原标签末行下方。
+            return x - 40, y + 80, "end"
     if model == "mimo-v2.6-pro":
         if board == "aa_intelligence_index":
             return x - 30, y + 20, "end"

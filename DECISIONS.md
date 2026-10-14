@@ -3,6 +3,14 @@
 本地 `AGENTS.md`（不入库）只放 Agent 工作流程；口径与规则见 [`CONVENTIONS.md`](CONVENTIONS.md)；本文件记录每条采用值的取舍（旧值 → 新值 → 依据 → 未采来源）。
 最权威的表述仍在 `scripts/build_adopted.py` 的 `decision_note` 和 `data/research/` 证据文件里；本文件是按时间的索引摘要。改数只能改 `build_adopted.py`，改完在这里同步记一笔。
 
+## 2026-10-14 · OpenDesign Arena 榜单快照更新（round3，只换 Y 轴）
+
+- **范围**：只换 OpenDesign Arena 一个榜的全量快照，不改任何采用值（`build_adopted.py` 本轮未动，`data/adopted.csv` 重新生成后逐字节不变）。2026-10-14 重新下载官方 ZH/EN 页（HTTP Last-Modified Wed, 14 Oct 2026 09:38:37 GMT），两份页面的 `<script id=model-rankings-data>` 载荷逐字节相同；新增证据档 `scores-open-design-round3-2026-10-14.json`（revises round2），round3 作为新条目追加到 `compute.py` 的 `SCORE_FILES` 中 round2 之后（与其余榜同一做法：旧轮次条目继续留在列表里，由 `compute.current_score_records` 按列表顺序取最靠后的全量快照、整榜顶掉 round2，实际生效的仍只有 round3 一行）；`scores-open-design-round2-2026-10-01.json` 文件保留为历史证据（该榜此前各轮次文件同样保留在 `data/research/`），`conventions.json` 的 `updatedAt` 同步到 2026-10-14。
+- **榜单变化**：16 → 17 个模型，新增 **Claude Haiku 5.5 平均分 82.2、排名第 8**（GPT-6 Astra 82.7 之后、DeepSeek V4.1 Flash 81.2 之前）。映射 `claude-haiku-5.5`，即 adopted.csv 自 2026-10-08 发布起已在用的 id，精确名，不借近名。round2 的 16 条映射原样沿用；没有模型下架，`notFound` 只少 `claude-haiku-5.5`（59 → 58 条，采用模型里离榜的总数从 59 降到 58）。
+- **逐行核对结论（按当日载荷逐字段比对）**：另外 16 个模型的 maker / icon / score / pdr / d0~d2 / ttft / time / cacheHit / inputTokens / outputTokens / cost / calls 与五个场景全字段与 round2 **逐字节相同**；唯一字段级变化是站内按名次循环分配的 `color`——Haiku 5.5 插进第 8 位后，第 9~17 名的配色整体下移一格（DeepSeek V4.1 Flash cyan→cream、Claude Fable 5.1 cream→coral、GLM-5.3 Flash-X coral→teal、GPT-5.6 Sol teal→cyan、Hunyuan H4 Preview cyan→cream、Qwen 3.8-Max cream→coral、Gemini 3.8 Flash coral→teal、Muse Spark 1.3 teal→cyan、Kimi K3 cyan→cream）。配色按当日载荷原值记录，不沿用 round2 的旧值。分数与全部性能/成本指标零变化，说明 10-01 到 10-14 之间官方没有重跑评测，只加了一个新模型。
+- **派生影响**：open_design_arena 有分行 73 → 77（新增 Claude Pro × Haiku 5.5、Max 5x × Haiku 5.5、Max 20x × Haiku 5.5 与按量 `anthropic_haiku55_api` 四行，均按 82.2 计分）。该榜前沿 **+1**：Claude Haiku 5.5 · Claude Max 5x (9/14+) 以 $0.000279/MTok、82.2 分入选，成为全库最便宜的高分点；其余 4 个前沿点（MiMo V2.6 Flash · OpenCode Go $0.001269/83.5、Claude Sonnet 5.5 · Claude Max 5x $0.002727/86.8、GPT-6 Sol · ChatGPT Plus $0.018182/89.9、GPT-6.1 Sol · ChatGPT Plus $0.022989/90.1）不变。其余 7 榜的快照、有分行与前沿均未变动，订阅/额度数据本轮一行未动。
+- 证据：`data/research/scores-open-design-round3-2026-10-14.json`。
+
 ## 2026-10-08 · Claude Haiku 5.5 发布 & Sonnet 5.5 缓存读降价
 
 - **背景**：2026-10-08 Anthropic 发布 Claude Haiku 5.5（官方称迄今最便宜最快的迷你模型，平均比 Haiku 4.5 便宜约 75%），同日 Sonnet 5.5 缓存读价 $0.20→$0.10（改为 base input×0.05，与 Opus 5.5 同口径）。两项价格均已在 platform.claude.com 官方价表复核。维护者供图：X @1kartikkabadi1 推算图把 Pro 月池按各模型混合价拆开，其锚点与库内采用值精确一致（Pro × Opus 5.5 = 30.54 亿，池 worth $1,279.46≈图 $1,280），方法即仓库自身口径。
