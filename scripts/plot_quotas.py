@@ -234,8 +234,8 @@ def frontier_rule(language: str) -> str:
 
 def evidence_note(language: str) -> str:
     if language == "zh":
-        return "† Kimi：¥199的K3点以K3-256K为主，约84%反推周池×5得14.51亿；K2.7纯样本11.9M/月0.76%得15.68亿；其余档按官方倍率推算；同名档国内外并点，月费/单价按国际版美元标价（$19/$39/$99），¥价为国内实付。OpenCode Go按官方美元池和三段价套统一标准负载换算。"
-    return "† Kimi: CNY199 K3 uses a K3-256K-dominant / ~84% weekly sample ×5 = 1.451B; pure K2.7 uses 11.9M / 0.76% = 1.568B. Other tiers are scaled by official ratios. Same-name CN/global tiers are merged; fee and unit price use the international USD list ($19/$39/$99), ¥ is the domestic list price. OpenCode Go uses official dollar pools and rates under the standard workload."
+        return "† Kimi：¥199的K3点以K3-256K为主，约84%反推周池×5得14.51亿；K2.7纯样本11.9M/月0.76%得15.68亿；其余档按官方倍率推算；同名档国内外并点，月费/单价按国际版美元标价（$19/$39/$99），¥价为国内实付。OpenCode Go按官方每模型月额度和三段价套统一标准负载换算（2026-10-14 起官网不再载共享美元池）。"
+    return "† Kimi: CNY199 K3 uses a K3-256K-dominant / ~84% weekly sample ×5 = 1.451B; pure K2.7 uses 11.9M / 0.76% = 1.568B. Other tiers are scaled by official ratios. Same-name CN/global tiers are merged; fee and unit price use the international USD list ($19/$39/$99), ¥ is the domestic list price. OpenCode Go uses official per-model monthly limits and rates under the standard workload (the shared dollar pool is no longer published as of 2026-10-14)."
 
 
 def exchange_note(language: str) -> str:

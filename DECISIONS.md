@@ -3,6 +3,16 @@
 本地 `AGENTS.md`（不入库）只放 Agent 工作流程；口径与规则见 [`CONVENTIONS.md`](CONVENTIONS.md)；本文件记录每条采用值的取舍（旧值 → 新值 → 依据 → 未采来源）。
 最权威的表述仍在 `scripts/build_adopted.py` 的 `decision_note` 和 `data/research/` 证据文件里；本文件是按时间的索引摘要。改数只能改 `build_adopted.py`，改完在这里同步记一笔。
 
+## 2026-10-14 · OpenCode Go 全目录复核：DeepSeek V4.1 Flash $60→$80，共享池口径取消
+
+- **背景**：2026-10-14 对照 opencode.ai/docs/go/ 价表与 /go 落地页限额表全量复核。订阅价 $10/月未变；除下列两条外，全部行的三段价与月额度与 2026-09-30 复核值一致。
+- **共享月池口径取消（口径变更）**：round5（2026-09-06）官网明示共享额度『5h $12 / 周 $30 / 月 $60』；该引文现已从 docs 页消失，改为『每模型 5h=月限额20%、周=50%、月=100%』，且『Each model's monthly limit below determines how its usage counts』——月限额即价表内该模型自己的 Monthly limit。交叉验证：DeepSeek V4.1 Flash 月额度 $80，官方月估算请求 130,000→173,330（恰为 4/3），5h 估算 34,670≈173,330×20%——估算按 $80 全额推导，若共享 $60 仍在则应维持 130,000。据此 `opencode_go_rows` 取消 `min(共享$60,·)` 截断，每模型月 Usage 即月额度；除 DeepSeek（$80>60）外其余模型 Usage ≤$60，数值不受影响。
+- **DeepSeek V4.1 Flash（Off-Peak）62.112 → 82.816 亿/月（medium）**：模型月 Usage $60→$80（docs 价表 + /go 页 $80 同示）÷ 统一标准负载加权价 $0.00966/MTok；真实单价 $0.00161 → $0.0012075/MTok。闲时三段价不变（cached/input/output $0.003/$0.15/$0.60），高峰 2× 保留 variant。
+- **新增 Space Bunny 行 8.368 亿（medium）**：round7 时为限时免费未建点，本轮 docs 价表列为计费行 $30（cached/in/out $0.03/$0.15/$0.60），/go 限额表同示。真实单价 $0.01195/MTok。
+- **新增 Claude Haiku 5.5 行 10.204 亿（medium）**：月额度 $15，≤100K 档 $0.01/$0.10/$0.50（>100K 档 5× 保留 research，同 grok/gpt-luna/qwen 分档惯例；cache write $0.125 不进标准负载）。≤100K 档三段价与 GPT 6 Luna ≤272K 档相同，同 $15 → 折算与 gpt-6-luna 行一致，互为印证。真实单价 $0.0098/MTok。与 Anthropic 官方 API 行（90/10 混合）口径不同，两行并行。
+- **不采**：LongCat 2.5 Preview Free / Step 5 Preview Free / Cat Jam Free 三个限时免费无限量模型（免费档不画；促销须标截止日，无日不可采）；Go Plus $40 档仍不建点（沿用 2026-10-01『另行处理』裁定，本轮已把官方每模型月额度全表记入证据，待维护者裁定建点）。/go 页请求条形表与 docs 估算表同源同值，不另立口径。
+- 全部 OpenCode Go 行数据日期取 2026-10-14。证据：`data/research/opencode-go-round8-2026-10-14.json`。
+
 ## 2026-10-08 · Claude Haiku 5.5 发布 & Sonnet 5.5 缓存读降价
 
 - **背景**：2026-10-08 Anthropic 发布 Claude Haiku 5.5（官方称迄今最便宜最快的迷你模型，平均比 Haiku 4.5 便宜约 75%），同日 Sonnet 5.5 缓存读价 $0.20→$0.10（改为 base input×0.05，与 Opus 5.5 同口径）。两项价格均已在 platform.claude.com 官方价表复核。维护者供图：X @1kartikkabadi1 推算图把 Pro 月池按各模型混合价拆开，其锚点与库内采用值精确一致（Pro × Opus 5.5 = 30.54 亿，池 worth $1,279.46≈图 $1,280），方法即仓库自身口径。

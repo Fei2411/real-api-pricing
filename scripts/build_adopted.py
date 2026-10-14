@@ -668,7 +668,7 @@ def claude_fable51_max_monthly_yi() -> float:
     )
 
 
-# OpenCode Go 官方给的是共享美元池、每模型月 Usage 和三段价格；按项目统一标准负载折 token。
+# OpenCode Go 官方给的是每模型月 Usage 和三段价格；按项目统一标准负载折 token。
 # 元组：(model, per-model Usage USD, cached read, input, output, 采用价档说明)
 # 证据全量快照：data/research/opencode-go-round5-2026-09-06.json（当时 28 个模型）。
 # DeepSeek 2026-09-10 增量：opencode-go-deepseek-round6-2026-09-10.json。
@@ -676,6 +676,12 @@ def claude_fable51_max_monthly_yi() -> float:
 #   V4 Flash / Vision Exp back in the official catalog, re-adopted; gpt-6-luna added;
 #   glm-5.3-flash and deepseek-v4.1-flash Usage raised to $60; omen-alpha, glm-5.1,
 #   minimax-m2.5, qwen3.7-max, qwen3.6-plus delisted (absent from official tables); now 28 models.
+# 2026-10-14 full re-verification: opencode-go-round8-2026-10-14.json —
+#   deepseek-v4.1-flash Usage $60→$80；space-bunny（原限时免费转计费）、claude-haiku-5.5 新增；
+#   longcat-2.5-preview-free / step-5-preview-free / cat-jam-free 限时免费无限量，不建点；
+#   官网已不载共享月池（round5 的 5h $12/周 $30/月 $60 引文消失），改为每模型 5h=月20%/周=50%/月=100%，
+#   min(共享$60,·) 截断取消（deepseek $80>60，其余模型 Usage ≤$60 数值不变）；
+#   Go Plus $40 档官方已给全表，沿用 2026-10-01 裁定暂不建点。
 OPENCODE_GO_MODELS = (
     ("grok-4.6", 15, 0.5, 2.0, 6.0, "≤200K 标价；>200K 价翻倍，保留在 research variants"),
     ("grok-4.7", 15, 0.5, 2.0, 6.0, "≤200K 标价；>200K 价翻倍，保留在 research variants；mimo-v26-grok47-catalogs-round1-2026-09-22.json"),
@@ -699,12 +705,14 @@ OPENCODE_GO_MODELS = (
     ("qwen3.8-max", 15, 0.25, 2.0, 6.0, "官网单档"),
     ("qwen3.8-flash", 30, 0.016, 0.15, 0.47, "官网单档"),
     ("qwen3.7-plus", 60, 0.04, 0.4, 1.6, "≤256K 标价；>256K 档保留在 research variants"),
-    ("deepseek-v4.1-flash", 60, 0.003, 0.15, 0.60, "官网 Monthly limit 永久 $60；Off-Peak；Peak=2×保留在 research variants"),
+    ("deepseek-v4.1-flash", 80, 0.003, 0.15, 0.60, "官网 Monthly limit $60→$80 (2026-10-14 复核)；Off-Peak；Peak=2×保留在 research variants"),
     ("deepseek-v4-pro", 15, 0.022, 0.66, 1.98, "Off-Peak；Peak 额度为其一半，保留在 research variants；OpenCode 价表未改"),
     ("deepseek-v4-flash", 30, 0.003, 0.15, 0.60, "back in official catalog, Usage $30 (restored after the 9/10 removal); Off-Peak; Peak=2x kept in research variants; goat-opencode-catalogs-round3-2026-09-30.json"),
     ("deepseek-v4-flash-vision-exp", 15, 0.003, 0.15, 0.60, "back in official catalog, Usage $15 (restored after the 9/10 removal); Off-Peak; Peak=2x kept in research variants; goat-opencode-catalogs-round3-2026-09-30.json"),
     ("hy4-preview", 30, 0.042, 0.834, 2.501, "官网单档"),
     ("hy3", 60, 0.035, 0.14, 0.58, "官网单档"),
+    ("space-bunny", 30, 0.03, 0.15, 0.60, "官网单档；2026-10-14 由限时免费 Space Bunny Free 转为计费行 (opencode-go-round8-2026-10-14.json)"),
+    ("claude-haiku-5.5", 15, 0.01, 0.10, 0.50, "≤100K 标价；>100K 档（5×）保留在 research variants；2026-10-14 新增 (opencode-go-round8-2026-10-14.json)"),
 )
 
 OPENCODE_GO_OLD_YI = {
@@ -716,29 +724,30 @@ OPENCODE_GO_OLD_YI = {
 
 OPENCODE_GO_DEFAULT_SOURCE = (
     "https://opencode.ai/docs/go/ official per-model Usage and three-part pricing; opencode-go-round5-2026-09-06.json; "
-    "goat-opencode-catalogs-round3-2026-09-30.json"
+    "goat-opencode-catalogs-round3-2026-09-30.json; opencode-go-round8-2026-10-14.json"
 )
 OPENCODE_GO_DEEPSEEK_SOURCE = (
     "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；"
-    "opencode-go-deepseek-round7-2026-09-30.json"
+    "opencode-go-deepseek-round7-2026-09-30.json; opencode-go-round8-2026-10-14.json"
 )
 OPENCODE_GO_NOTES = {
     "deepseek-v4.1-flash": (
-        "15.528→62.112亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；"
+        "62.112→82.816亿：模型月Usage $60→$80 ÷ 统一标准负载加权价；"
         "官网闲时 cached/input/output=$0.003/$0.15/$0.60，高峰2×。"
-        "模型月Usage由$15升为永久$60（官网曾标4x限时至9/27，9/30页面撤标按$60常态列示，确认永久；"
-        "估算请求130,000/月为旧$15档32,500的4倍，交叉一致）。官网 Model ID 现为 deepseek-v4.1-flash。"
+        "2026-10-14 官网复核 $60→$80，官方估算请求 130,000→173,330/月（4/3 与额度比一致）。"
+        "官网已不载共享月池口径（round5 的『5h $12/周 $30/月 $60』引文消失，改为每模型 5h=月20%/周=50%/月=100%），"
+        "min(共享$60,·) 截断取消，$80 按官网全额计。官网 Model ID deepseek-v4.1-flash。"
         "官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加"
     ),
     "deepseek-v4-flash": (
         "restored: official Usage $30 (reverified 2026-09-30; removed 09-10 as confirmed offline); "
-        "min(shared monthly pool $60, model Usage $30) / standard-workload blended price; "
+        "model monthly Usage $30 / standard-workload blended price (shared monthly pool no longer published, 2026-10-14); "
         "off-peak cached/input/output=$0.003/$0.15/$0.60, peak 2x; official estimate 65,000 requests/mo. "
         "Per-model allowances within the plan do not add"
     ),
     "deepseek-v4-flash-vision-exp": (
         "restored: official Usage $15 (reverified 2026-09-30; removed 09-10 as confirmed offline); "
-        "min(shared monthly pool $60, model Usage $15) / standard-workload blended price; "
+        "model monthly Usage $15 / standard-workload blended price (shared monthly pool no longer published, 2026-10-14); "
         "off-peak cached/input/output=$0.003/$0.15/$0.60, peak 2x; official estimate 32,500 requests/mo. "
         "Per-model allowances within the plan do not add"
     ),
@@ -748,14 +757,14 @@ OPENCODE_GO_NOTES = {
 def opencode_go_rows() -> list[tuple]:
     rows = []
     for model, usage, cached, inp, out, variant_note in OPENCODE_GO_MODELS:
-        effective_usage = min(60, usage)
-        yi = round(effective_usage / blended(cached, inp, out) / 100, 3)
+        # 2026-10-14：官网已不载共享月池（round5 引文消失），每模型月 Usage 即月额度，不再 min($60,·) 截断。
+        yi = round(usage / blended(cached, inp, out) / 100, 3)
         old = OPENCODE_GO_OLD_YI.get(model)
         change = f"旧{old:g}亿（请求估算）→{yi:g}亿" if old is not None else f"新增{yi:g}亿"
         source = OPENCODE_GO_DEEPSEEK_SOURCE if model.startswith("deepseek-") else OPENCODE_GO_DEFAULT_SOURCE
         note = OPENCODE_GO_NOTES.get(
             model,
-            f"{change}：min(共享月池$60, 模型Usage ${usage:g}) ÷ 统一标准负载加权价；{variant_note}。"
+            f"{change}：模型月Usage ${usage:g} ÷ 统一标准负载加权价；{variant_note}。"
             "官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
         )
         rows.append((
@@ -1447,7 +1456,7 @@ def family_data_date(pid: str, model: str) -> str | None:
     if pid in ("ollama_pro", "ollama_max"):
         return "2026-09-11" if model == "deepseek-v4.1-flash" else "2026-09-06"
     if pid == "opencode_go":
-        return "2026-09-30"
+        return "2026-10-14"
     if pid == "command_code_goat":
         return "2026-09-30"
     return None

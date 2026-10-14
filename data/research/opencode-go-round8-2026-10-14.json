@@ -1,0 +1,161 @@
+{
+  "collectedAt": "2026-10-14",
+  "sourceType": "official-docs",
+  "source": "https://opencode.ai/docs/go/",
+  "relatedSources": [
+    "https://opencode.ai/go",
+    "https://opencode.ai/zen/go/v1/models"
+  ],
+  "checkedAt": "2026-10-14",
+  "scope": "OpenCode Go 全量复核（docs 页价表 + /go 落地页限额表）。DeepSeek V4.1 Flash 月额度 $60→$80；Space Bunny 转计费行、Claude Haiku 5.5 新增；三个限时免费无限量模型记录不建点；Go Plus $40 全表记录，沿用 2026-10-01『另行处理』裁定不建点。其余行价格与月额度逐项核对未变。",
+  "officialLimitWording": {
+    "round5QuoteGone": "round5（2026-09-06）页面明示共享额度『5 hour limit — $12 of usage; Weekly limit — $30 of usage; Monthly limit — $60 of usage』；本轮（2026-10-14）该引文已从 docs 页消失。",
+    "currentQuote": "Usage limits are defined as monthly dollar amounts. … Each model has the following usage limits: 5-hour — 20% of the monthly limit; weekly — 50%; and monthly — 100%. Each model's monthly limit below determines how its usage counts toward those allowances.",
+    "interpretation": "『the monthly limit』指价表内该模型自己的 Monthly limit，不再有独立共享池。交叉验证：DeepSeek V4.1 Flash 月额度 $80，官方月估算 173,330 请求 = 旧 $60 档 130,000 的 4/3，且 5h 估算 34,670 ≈ 173,330×20% —— 估算按 $80 全额推导；若共享 $60 仍在，月估算应维持 130,000。据此取消 min(共享$60,·) 截断；除 DeepSeek（$80>60）外其余模型 Usage ≤$60，数值不受影响。",
+    "peakHours": "DeepSeek 系高峰不变：01:00-04:00 and 06:00-10:00 UTC, Monday through Friday; all other hours, including weekends, are Off-Peak.",
+    "formula": "模型月Usage / (0.97*cacheRead + 0.025*input + 0.005*output) / 100 亿（标准负载，与 round7 一致）"
+  },
+  "subscriptionTiers": {
+    "go": { "priceUsd": 10 },
+    "goPlus": { "priceUsd": 40, "note": "2026-09-30 round7 已见于官网第二价表；本轮 /go 与 docs 均有完整额度表，仍不建点（见 goPlusNotAdopted）。" }
+  },
+  "models": [
+    {
+      "officialDisplayName": "DeepSeek V4.1 Flash",
+      "officialApiId": "deepseek-v4.1-flash",
+      "action": "update-limit",
+      "monthlyLimitUsdGo": 80,
+      "previousMonthlyLimitUsdGo": 60,
+      "monthlyLimitUsdGoPlus": 160,
+      "pricesPer1MUsd": {
+        "offPeak": { "cachedInput": 0.003, "input": 0.15, "output": 0.6 },
+        "peak": { "cachedInput": 0.006, "input": 0.3, "output": 1.2 }
+      },
+      "pricesUnchangedSince": "2026-09-30 (round7)",
+      "adopt": {
+        "variant": "Off-Peak",
+        "monthlyYi": 82.816,
+        "previousMonthlyYi": 62.112,
+        "realUsdPerMtok": 0.0012074961,
+        "reason": "官网价表 Go 档 Monthly limit $60→$80，/go 落地页同示 $80；官方估算请求 173,330/月与 $80/typical-request 完全闭合。min(共享$60,·) 截断随共享池口径一并取消。"
+      },
+      "officialQuote": "DeepSeek V4.1 Flash (Off-Peak) | $0.15 | $0.60 | $0.003 | - | $80",
+      "officialEstimateRequestsPerMonthGo": 173330,
+      "previousOfficialEstimateRequestsPerMonthGo": 130000,
+      "typicalTokensPerRequest": { "input": 410, "cacheRead": 71300, "output": 310 }
+    },
+    {
+      "officialDisplayName": "Space Bunny",
+      "officialApiId": "space-bunny",
+      "action": "add",
+      "monthlyLimitUsdGo": 30,
+      "monthlyLimitUsdGoPlus": 120,
+      "pricesPer1MUsd": { "cachedInput": 0.03, "input": 0.15, "output": 0.6 },
+      "adopt": {
+        "variant": "单档",
+        "monthlyYi": 8.368,
+        "realUsdPerMtok": 0.011950287,
+        "reason": "round7 时为『Space Bunny Free（限时免费）』未建点；本轮 docs 价表列为计费行 $30（价格与 GLM-5.3-Flash 同档：cached $0.03 / in $0.15 / out $0.60），/go 落地页限额表同示 $30。按常规计费行收录。"
+      },
+      "officialQuote": "Space Bunny | $0.15 | $0.60 | $0.03 | - | $30",
+      "officialEstimateRequestsPerMonthGo": 15630,
+      "typicalTokensPerRequest": { "input": 1000, "cacheRead": 55000, "output": 200 }
+    },
+    {
+      "officialDisplayName": "Claude Haiku 5.5",
+      "officialApiId": "claude-haiku-5-5",
+      "action": "add",
+      "monthlyLimitUsdGo": 15,
+      "monthlyLimitUsdGoPlus": 60,
+      "pricesPer1MUsd": {
+        "le100k": { "cachedInput": 0.01, "input": 0.10, "output": 0.50, "cachedWrite": 0.125 },
+        "gt100k": { "cachedInput": 0.05, "input": 0.50, "output": 2.50, "cachedWrite": 0.625 }
+      },
+      "adopt": {
+        "variant": "≤100K 档（>100K 档为 5×，保留在 research variants，不另折）",
+        "monthlyYi": 10.204,
+        "realUsdPerMtok": 0.0098000784,
+        "reason": "docs 价表与 /go 限额表（3,850 请求/5h）2026-10-14 新增该行，月额度 $15。分段价沿用 OpenCode 渠道既有惯例（grok-4.6、gpt-6-luna、qwen3.7-plus 同法）：采低档，高档保留 research；cache write $0.125 不进标准负载。≤100K 档三段价与 GPT 6 Luna ≤272K 档完全相同（$0.01/$0.10/$0.50），同 $15 月额度 → 折算 10.204 亿与 gpt-6-luna 行一致，互为印证。注意与 Anthropic 官方 API 行（claude_haiku55_api，90/10 混合）口径不同，两行互不影响。"
+      },
+      "officialQuote": "Claude Haiku 5.5 (≤ 100K tokens) | $0.10 | $0.50 | $0.01 | $0.125 | $15",
+      "officialEstimateRequestsPerMonthGo": 19230,
+      "typicalTokensPerRequest": { "input": 1100, "cacheRead": 55000, "output": 240 }
+    },
+    {
+      "officialDisplayName": "LongCat 2.5 Preview Free",
+      "officialApiId": "longcat-2.5-preview-free",
+      "action": "stay-dropped",
+      "note": "限时免费无限量（Free / Unlimited, limited time），无截止日。免费档不画（对数轴），且促销口径必须标截止日——无日不可采。等官方给出截止日或转计费再议。"
+    },
+    {
+      "officialDisplayName": "Step 5 Preview Free",
+      "officialApiId": "step-5-preview-free",
+      "action": "stay-dropped",
+      "note": "同上，限时免费无限量不建点。"
+    },
+    {
+      "officialDisplayName": "Cat Jam Free",
+      "officialApiId": "cat-jam-free",
+      "action": "stay-dropped",
+      "note": "同上，限时免费无限量不建点。/go 页标注 stealth model。"
+    }
+  ],
+  "reverifiedUnchanged": {
+    "note": "以下行 2026-10-14 逐项核对 docs 价表：三段价与月额度均与采用值一致（含 2026-09-30 round3/goat 复核值），不改数。",
+    "models": [
+      { "model": "glm-5.3-flash", "usage": 60 },
+      { "model": "glm-5.3", "usage": 15 },
+      { "model": "glm-5.2", "usage": 60 },
+      { "model": "kimi-k3", "usage": 15 },
+      { "model": "kimi-k2.7-code", "usage": 60 },
+      { "model": "kimi-k2.6", "usage": 60 },
+      { "model": "longcat-2.0", "usage": 60 },
+      { "model": "mimo-v2.6-flash", "usage": 60 },
+      { "model": "mimo-v2.6-pro", "usage": 15 },
+      { "model": "mimo-v2.5", "usage": 60 },
+      { "model": "mimo-v2.5-pro", "usage": 15 },
+      { "model": "minimax-m3", "usage": 60 },
+      { "model": "minimax-m2.7", "usage": 60 },
+      { "model": "muse-spark-1.3-contributor", "usage": 60 },
+      { "model": "muse-spark-1.2-contributor", "usage": 60 },
+      { "model": "qwen3.8-max", "usage": 15 },
+      { "model": "qwen3.8-flash", "usage": 30 },
+      { "model": "qwen3.7-plus", "usage": 60, "note": "≤256K/>256K 两档，采 ≤256K 档不变" },
+      { "model": "deepseek-v4-pro", "usage": 15 },
+      { "model": "deepseek-v4-flash", "usage": 30 },
+      { "model": "deepseek-v4-flash-vision-exp", "usage": 15 },
+      { "model": "hy4-preview", "usage": 30 },
+      { "model": "hy3", "usage": 60 },
+      { "model": "grok-4.7", "usage": 15, "note": "≤200K/>200K 两档，采 ≤200K 档不变" },
+      { "model": "grok-4.6", "usage": 15 },
+      { "model": "gpt-6-luna", "usage": 15, "note": "≤272K/>272K 两档，采 ≤272K 档不变" },
+      { "model": "gpt-5.6-luna", "usage": 15 }
+    ]
+  },
+  "goPlusNotAdopted": {
+    "priceUsd": 40,
+    "decision": "沿用 2026-10-01 裁定（DECISIONS.md）：『OpenCode 新增常设 Go Plus $40 档本次不收录，另行处理』。本轮官网已给出 Go Plus 每模型完整月额度与请求估算，证据齐备，但建新套餐涉及 plan_id/费率段/精选图等结构决定，留维护者裁定；此处仅记录官方数值。",
+    "monthlyLimitsUsd": {
+      "glm-5.3-flash": 180, "glm-5.3": 120, "glm-5.2": 180, "kimi-k3": 60, "kimi-k2.7-code": 180,
+      "kimi-k2.6": 240, "longcat-2.0": 240, "mimo-v2.6-flash": 120, "mimo-v2.6-pro": 60,
+      "mimo-v2.5": 120, "mimo-v2.5-pro": 60, "minimax-m3": 180, "minimax-m2.7": 240,
+      "muse-spark-1.3-contributor": 120, "muse-spark-1.2-contributor": 120, "qwen3.8-max": 60,
+      "qwen3.8-flash": 90, "qwen3.7-plus": 180, "deepseek-v4.1-flash": 160, "deepseek-v4-pro": 60,
+      "deepseek-v4-flash": 120, "deepseek-v4-flash-vision-exp": 60, "hy4-preview": 120, "hy3": 240,
+      "space-bunny": 120, "grok-4.7": 60, "grok-4.6": 60, "gpt-6-luna": 60, "gpt-5.6-luna": 60,
+      "claude-haiku-5.5": 60
+    },
+    "officialQuote": "Go Plus costs $40/month with higher limits. … Token pricing is the same for Go and Go Plus."
+  },
+  "observationsNotAdopted": [
+    "/go 落地页新增按模型的『Est. requests / 5h』双档对比条形表；数值与 docs 估算表一致（5h=月20%），属同一来源的展示层，不另立口径。",
+    "三个限时免费模型（LongCat 2.5 Preview Free / Step 5 Preview Free / Cat Jam Free）无限量额度、无截止日，不建点（免费档不画；促销须标截止日）。",
+    "docs 新增『If you reach the usage limit, you can continue using the free models』与 Use balance（超出后走按量余额）说明；不影响额度主值。",
+    "Zen 渠道 claude_haiku55_api（90/10 混合，claude-haiku55-round1-2026-10-08.json）与本次 OpenCode 渠道 haiku 行（≤100K 低档）并行不悖。"
+  ],
+  "notChangedThisRound": [
+    "Command Code GOAT 本轮未重采（上轮 command-code-goat-deepseek-round2-2026-09-30.json）",
+    "Ollama Pro/Max 本轮未重采",
+    "订阅价 $10/月未变；估算请求 typical tokens per request 与 round7 一致（DeepSeek 系 410/71,300/310）"
+  ]
+}
