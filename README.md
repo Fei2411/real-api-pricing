@@ -17,7 +17,7 @@ AI coding subscriptions sell a monthly fee, not a per-token price. This project 
 - The black line is the Pareto frontier: for every point on it, no other point is both cheaper and higher-scoring.
 - Subscription prices assume you use the whole allowance. Use half of it and your real price doubles.
 
-Snapshot: <!-- stat:snapshot -->2026-10-14<!-- /stat --> · <!-- stat:points_total -->332<!-- /stat --> plan × model points · [all charts, SVG / PNG, both languages](charts/README.md)
+Snapshot: <!-- stat:snapshot -->2026-10-15<!-- /stat --> · <!-- stat:points_total -->332<!-- /stat --> plan × model points · [all charts, SVG / PNG, both languages](charts/README.md)
 
 ## Query from the terminal
 
@@ -117,7 +117,7 @@ The same 66 tasks run by Artificial Analysis on its own harness (snapshot 2026-0
 
 ![DeepSWE v1.1](charts/en/pareto/pareto-deepswe-1-1.svg)
 
-Pass@1 on 113 tasks, official rows run on mini-swe-agent (snapshot 2026-09-03). Vendor-reported scores are added as supplements and labelled [self-reported].
+Pass@1 on 113 tasks, official rows run on mini-swe-agent (snapshot 2026-09-22). Vendor-reported scores are added as supplements and labelled [self-reported]. Datacurve third-party results republished in Meta's model card are labelled separately.
 
 ## Real price and monthly allowance, all plans
 

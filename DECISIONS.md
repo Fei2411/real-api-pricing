@@ -3,6 +3,14 @@
 本地 `AGENTS.md`（不入库）只放 Agent 工作流程；口径与规则见 [`CONVENTIONS.md`](CONVENTIONS.md)；本文件记录每条采用值的取舍（旧值 → 新值 → 依据 → 未采来源）。
 最权威的表述仍在 `scripts/build_adopted.py` 的 `decision_note` 和 `data/research/` 证据文件里；本文件是按时间的索引摘要。改数只能改 `build_adopted.py`，改完在这里同步记一笔。
 
+## 2026-10-15 · PR #114 follow-up
+
+- OpenCode Go: remove the obsolete shared $60 cap; current per-model 20%/50%/100% window rules and 173,330 requests/month support DeepSeek V4.1 Flash $80 -> 82.816 yi. This correction was also identified in PR #115. Retain V4 Flash/Vision Exp with their original September 30 dates pending delisting confirmation; current tables omit them. Argon remains in separate PR #117.
+- GOAT GLM-5.3 Flash: baseline $80, temporary $100 through Oct 17 excluded; keep the documented shared $70 cap -> 19.802 yi. Ling paid/free/scheduled-deal evidence remains conflicting, so record it without a new adopted point.
+- Correct official catalog evidence dates to the October 13 checks; the two October 15 allowance corrections carry their new check date. Snapshot date advances to October 15.
+- Replace the active Muse/Haiku score supplement with a corrected archive, retaining the original evidence unchanged. Datacurve results are third-party runs republished by Meta, not vendor self-reports. Encode max effort in labels so the existing configuration parser preserves it; the Muse xhigh exception belongs to SWE-Marathon. Haiku/Sonnet TB4 use Claude Code --bare at max, per the system card; preserve trial counts and fallback differences. Scores unchanged.
+- Evidence: `goat-opencode-followup-2026-10-15.json`, `scores-muse-wonder-haiku55-corrected-2026-10-15.json`. No broader quota-effort UI change (#111).
+
 ## 2026-10-13 · DeepSWE 快照重拉 + GOAT/OpenCode 目录整轮复核（round4）
 
 - **DeepSWE 新官方快照**：`scores-deepswe-1.1-2026-10-13.json`（官方 live 榜 generated_at 2026-09-22，113 任务、70 配置）。分数/CI 与 9-12 快照一致，gpt-6-astra 五档成本字段降约 30–40%——成本口径变化入档，不改采用额度。5 条厂商自报行经 `scores-deepswe-selfreport-carry-2026-10-13.json` 原样转挂（carriedFrom 不变），DeepSeek V4.1 Flash / Grok 4.7 / MiMo V2.5·V2.6 在官方榜仍无行。

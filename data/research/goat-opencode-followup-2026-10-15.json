@@ -1,0 +1,64 @@
+{
+  "collectedAt": "2026-10-15",
+  "subject": "Focused PR #114 corrections following source review and comments",
+  "opencodeGo": {
+    "url": "https://opencode.ai/v2/docs/console/go/",
+    "sharedPoolUsd": null,
+    "limitBasis": "Each model: 5-hour 20%, weekly 50%, monthly 100% of its monthly allowance.",
+    "deepseekV41Flash": {
+      "monthlyUsd": 80,
+      "cachedRead": 0.003,
+      "input": 0.15,
+      "output": 0.6,
+      "estimatedRequestsMonthly": 173330,
+      "estimatedRequestsWeekly": 86670,
+      "monthlyYi": 82.816
+    },
+    "relatedPR": "https://github.com/Fei2411/real-api-pricing/pull/115",
+    "retainedUnconfirmedDelistings": [
+      "deepseek-v4-flash",
+      "deepseek-v4-flash-vision-exp"
+    ],
+    "notAdopted": {
+      "gemini-4-argon-contributor": "Separate open PR #117; not duplicated in this follow-up."
+    }
+  },
+  "commandCodeGoat": {
+    "url": "https://commandcode.ai/docs/plans/goat",
+    "sharedMonthlyUsd": 70,
+    "glm53Flash": {
+      "baselineUsd": 80,
+      "temporaryUsd": 100,
+      "temporaryUntil": "2026-10-17",
+      "effectiveUsd": 70,
+      "monthlyYi": 19.802
+    },
+    "ling31Flash": {
+      "baselineUsd": 20,
+      "cachedRead": 0.06,
+      "input": 0.3,
+      "output": 0.9,
+      "adopted": false,
+      "reason": "GOAT embedded creditDeal confirms scheduled $100 with no end date and liveAtBuild=false; paid table currently $20 while pricing landing page retains free language. Preserve discrepancy for later adoption decision.",
+      "paidModelUrl": "https://commandcode.ai/models/ling-3-1-flash",
+      "conflictingUrl": "https://commandcode.ai/pricing",
+      "scheduledDeal": {
+        "starts": "2026-10-15T12:30:00Z",
+        "creditsUsd": 100,
+        "term": "no end date",
+        "liveAtBuild": false
+      }
+    },
+    "introDiscrepancy": "Page introduction says $80 credits while Usage limits explicitly lists $14/$35/$70; retain the explicit $70 monthly cap pending clarification."
+  },
+  "comment": "https://github.com/Fei2411/real-api-pricing/pull/114#issuecomment-6183161423",
+  "benchmarkCorrection": {
+    "source": "https://research.meta.ai/static/muse-wonder-model-card",
+    "scorecardPdfPage": 3,
+    "methodologyPdfPage": 6,
+    "systemCard": "https://www.anthropic.com/claude-haiku-5-5-system-card",
+    "systemCardPage": 115,
+    "correctedArchive": "scores-muse-wonder-haiku55-corrected-2026-10-15.json",
+    "note": "Preserve third-party provenance, max effort and fallback/trial distinctions. Standard errors are not represented as 95% confidence intervals."
+  }
+}

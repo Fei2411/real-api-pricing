@@ -46,7 +46,7 @@ SCORE_FILES = (
     "scores-open-design-round2-2026-10-01.json",
     "scores-deepswe-1.1-2026-10-13.json",
     "scores-deepswe-selfreport-carry-2026-10-13.json",
-    "scores-muse-wonder-haiku55-2026-10-13.json",
+    "scores-muse-wonder-haiku55-corrected-2026-10-15.json",
 )
 LIST_PRICE_FILES = (
     "list-prices-2026-09.json",

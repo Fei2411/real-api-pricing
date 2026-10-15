@@ -17,7 +17,7 @@ AI 编程订阅只标月费，不标每 token 多少钱。本项目把每个套�
 - 黑线是帕累托前沿：线上的每个点，都找不到另一个点比它更便宜、分数又更高。
 - 订阅单价按用满额度计算。只用掉一半，实际单价就翻倍。
 
-快照日期 <!-- stat:snapshot -->2026-10-14<!-- /stat --> · 共 <!-- stat:points_total -->332<!-- /stat --> 个「套餐 × 模型」点 · [全部图表（中英文、SVG / PNG）](charts/README.md)
+快照日期 <!-- stat:snapshot -->2026-10-15<!-- /stat --> · 共 <!-- stat:points_total -->332<!-- /stat --> 个「套餐 × 模型」点 · [全部图表（中英文、SVG / PNG）](charts/README.md)
 
 ## 命令行查询
 
@@ -109,7 +109,7 @@ Stanford、Harbor 和 Laude Institute 维护的 66 题官方榜（快照 2026-09
 
 ![DeepSWE v1.1](charts/zh/pareto/帕累托_DeepSWE榜.svg)
 
-113 题的 Pass@1，官方行统一用 mini-swe-agent 跑（快照 2026-09-03）。厂商自报分作为补充收录，标 [self-reported]。
+113 题的 Pass@1，官方行统一用 mini-swe-agent 跑（快照 2026-09-22）。厂商自报分作为补充收录，标 [self-reported]；Meta 模型卡转引的 Datacurve 第三方结果单独标注。
 
 ## 全部套餐的单价与月额度
 

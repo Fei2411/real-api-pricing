@@ -12525,8 +12525,8 @@ z
    </g>
   </g>
   <g id="text_147">
-   <!-- † Kimi：¥199的K3点以K3-256K为主，约84%反推周池×5得14.51亿；K2.7纯样本11.9M/月0.76%得15.68亿；其余档按官方倍率推算；同名档国内外并点，月费/单价按国际版美元标价（$19/$39/$99），¥价为国内实付。OpenCode Go按官方美元池和三段价套统一标准负载换算。 -->
-   <g style="fill: #505a64" transform="translate(304.012266 1098) scale(0.09 -0.09)">
+   <!-- † Kimi：¥199的K3点以K3-256K为主，约84%反推周池×5得14.51亿；K2.7纯样本11.9M/月0.76%得15.68亿；其余档按官方倍率推算；同名档国内外并点，月费/单价按国际版美元标价（$19/$39/$99），¥价为国内实付。OpenCode Go按官方每模型月额度和三段价套统一标准负载换算。 -->
+   <g style="fill: #505a64" transform="translate(290.512266 1098) scale(0.09 -0.09)">
     <defs>
      <path id="NotoSansCJKsc-Regular-6c33" d="M 3533 2707 
 C 3885 2240 4320 1600 4512 1210 
@@ -14047,6 +14047,68 @@ C 1933 4224 2163 4704 2355 5190
 L 1888 5338 
 z
 " transform="scale(0.015625)"/>
+     <path id="NotoSansCJKsc-Regular-5937" d="M 2502 2931 
+C 2906 2746 3386 2445 3635 2208 
+L 1722 2208 
+L 1856 3219 
+L 4800 3219 
+L 4762 2208 
+L 3674 2208 
+L 3942 2490 
+C 3693 2726 3187 3021 2778 3200 
+L 2502 2931 
+z
+M 275 2221 
+L 275 1786 
+L 1184 1786 
+C 1101 1242 1018 723 934 333 
+L 1197 333 
+L 4608 326 
+C 4570 128 4531 13 4480 -45 
+C 4422 -122 4365 -141 4250 -141 
+C 4122 -141 3827 -134 3507 -109 
+C 3571 -218 3616 -384 3622 -493 
+C 3936 -512 4262 -518 4448 -506 
+C 4646 -486 4781 -435 4902 -269 
+C 4979 -173 5037 6 5088 326 
+L 5914 326 
+L 5914 755 
+L 5139 755 
+C 5171 1030 5190 1370 5216 1786 
+L 6138 1786 
+L 6138 2221 
+L 5235 2221 
+L 5280 3411 
+C 5280 3475 5286 3648 5286 3648 
+L 1427 3648 
+C 1382 3219 1318 2720 1248 2221 
+L 275 2221 
+z
+M 4666 755 
+L 3610 755 
+L 3834 998 
+C 3571 1254 3059 1581 2618 1792 
+L 4742 1792 
+C 4723 1363 4698 1018 4666 755 
+z
+M 2336 1523 
+C 2746 1325 3219 1011 3488 755 
+L 1504 755 
+L 1664 1792 
+L 2598 1792 
+L 2336 1523 
+z
+M 1734 5414 
+C 1395 4602 845 3776 250 3264 
+C 371 3194 582 3053 678 2976 
+C 1024 3322 1382 3789 1696 4294 
+L 5920 4294 
+L 5920 4730 
+L 1946 4730 
+C 2042 4909 2131 5088 2214 5274 
+L 1734 5414 
+z
+" transform="scale(0.015625)"/>
      <path id="NotoSansCJKsc-Regular-2514" d="M 787 4755 
 L 787 4269 
 L 5626 4269 
@@ -14595,23 +14657,26 @@ z
     <use xlink:href="#NotoSansCJKsc-Regular-49dd" transform="translate(10444.171875 0)"/>
     <use xlink:href="#NotoSansCJKsc-Regular-3c87" transform="translate(10544.171875 0)"/>
     <use xlink:href="#NotoSansCJKsc-Regular-4ea1" transform="translate(10644.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-7d07" transform="translate(10744.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-2a55" transform="translate(10844.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-5a22" transform="translate(10944.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-2f70" transform="translate(11044.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-2514" transform="translate(11144.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-5900" transform="translate(11244.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-266f" transform="translate(11344.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-3744" transform="translate(11444.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-7c0a" transform="translate(11544.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-2509" transform="translate(11644.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-525d" transform="translate(11744.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-2b22" transform="translate(11844.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-9846" transform="translate(11944.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-9c09" transform="translate(12044.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-4a66" transform="translate(12144.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-7540" transform="translate(12244.171875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-576" transform="translate(12344.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-5937" transform="translate(10744.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-5617" transform="translate(10844.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-3454" transform="translate(10944.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-50d6" transform="translate(11044.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-ac9c" transform="translate(11144.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-4232" transform="translate(11244.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-2f70" transform="translate(11344.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-2514" transform="translate(11444.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-5900" transform="translate(11544.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-266f" transform="translate(11644.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-3744" transform="translate(11744.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-7c0a" transform="translate(11844.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-2509" transform="translate(11944.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-525d" transform="translate(12044.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-2b22" transform="translate(12144.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-9846" transform="translate(12244.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-9c09" transform="translate(12344.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-4a66" transform="translate(12444.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-7540" transform="translate(12544.171875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-576" transform="translate(12644.171875 0)"/>
    </g>
   </g>
   <g id="text_148">

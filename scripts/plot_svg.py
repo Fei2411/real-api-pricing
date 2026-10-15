@@ -179,6 +179,8 @@ def label_position(p, board, x, y, tier="main"):
                 return x - 90, y - 20, "end"
             if board == "open_design_arena":
                 return x - 4, y - 70, "end"
+    if model == "claude-haiku-5.5" and board == "terminal_bench_4":
+        return x, y + 20, "end"
     if model == "claude-opus-5.5":
         if tier == "full":
             if board == "aa_terminal_bench_4":
@@ -244,7 +246,9 @@ def label_position(p, board, x, y, tier="main"):
         return x + 23, y - 40, "start"
     if model in {"deepseek-v4-flash", "deepseek-v4.1-flash"}:
         if model == "deepseek-v4.1-flash" and board == "aa_intelligence_index":
-            return x + 10, y - 50, "start"
+            return x, y - 50, "start"
+        if model == "deepseek-v4.1-flash" and board == "open_design_arena":
+            return x - 24, y + 105, "end"
         if model == "deepseek-v4.1-flash" and board == "deepswe_1_1":
             return x - 24, y - 52, "end"
         if model == "deepseek-v4.1-flash" and board == "terminal_bench_4":
@@ -291,7 +295,7 @@ def label_position(p, board, x, y, tier="main"):
         return x + 24, y - 55, "start"
     if model == "step-3.7-flash":
         if board == "aa_intelligence_index":
-            return x + 0, y - 70, "start"
+            return x - 80, y - 30, "end"
     if model == "step-3.5-flash":
         if board == "aa_intelligence_index":
             return x + 0, y + 20, "end"
