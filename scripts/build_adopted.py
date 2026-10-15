@@ -668,7 +668,8 @@ def claude_fable51_max_monthly_yi() -> float:
     )
 
 
-# OpenCode Go 官方给的是共享美元池、每模型月 Usage 和三段价格；按项目统一标准负载折 token。
+# OpenCode Go: current per-model monthly allowance / standard-workload blended price.
+# 2026-10-15: the current docs no longer publish the former shared $60 cap (also identified in PR #115).
 # 元组：(model, per-model Usage USD, cached read, input, output, 采用价档说明)
 # 证据全量快照：data/research/opencode-go-round5-2026-09-06.json（当时 28 个模型）。
 # DeepSeek 2026-09-10 增量：opencode-go-deepseek-round6-2026-09-10.json。
@@ -676,6 +677,12 @@ def claude_fable51_max_monthly_yi() -> float:
 #   V4 Flash / Vision Exp back in the official catalog, re-adopted; gpt-6-luna added;
 #   glm-5.3-flash and deepseek-v4.1-flash Usage raised to $60; omen-alpha, glm-5.1,
 #   minimax-m2.5, qwen3.7-max, qwen3.6-plus delisted (absent from official tables); now 28 models.
+# 2026-10-13 re-verification: goat-opencode-catalogs-round4-2026-10-13.json —
+#   /docs/go/ 404, pricing table moved to /v2/docs/console/go/; claude-haiku-5.5 ($15)
+#   and space-bunny ($30, was free promo) added; deepseek-v4.1-flash limit $60->$80
+#   (the former shared cap is superseded below) and renamed 'deepseek-flash' on the landing page;
+#   kimi-k2.6 kept (in docs table at $60 though absent from landing goModels array);
+#   free promos now LongCat 2.5 Preview Free / Step 5 Preview Free.
 OPENCODE_GO_MODELS = (
     ("grok-4.6", 15, 0.5, 2.0, 6.0, "≤200K 标价；>200K 价翻倍，保留在 research variants"),
     ("grok-4.7", 15, 0.5, 2.0, 6.0, "≤200K 标价；>200K 价翻倍，保留在 research variants；mimo-v26-grok47-catalogs-round1-2026-09-22.json"),
@@ -686,7 +693,7 @@ OPENCODE_GO_MODELS = (
     ("glm-5.2", 60, 0.26, 1.4, 4.4, "官网单档"),
     ("kimi-k3", 15, 0.3, 3.0, 15.0, "官网单档"),
     ("kimi-k2.7-code", 60, 0.19, 0.95, 4.0, "官网单档"),
-    ("kimi-k2.6", 60, 0.16, 0.95, 4.0, "官网单档"),
+    ("kimi-k2.6", 60, 0.16, 0.95, 4.0, "官网单档（docs 价表在列 $60；/go 落地页目录暂缺，2026-10-13 核对）"),
     ("longcat-2.0", 60, 0.006, 0.3, 1.2, "官网单档"),
     ("mimo-v2.5", 60, 0.0028, 0.14, 0.28, "官网单档"),
     ("mimo-v2.5-pro", 15, 0.003625, 0.435, 0.87, "官网单档"),
@@ -699,12 +706,14 @@ OPENCODE_GO_MODELS = (
     ("qwen3.8-max", 15, 0.25, 2.0, 6.0, "官网单档"),
     ("qwen3.8-flash", 30, 0.016, 0.15, 0.47, "官网单档"),
     ("qwen3.7-plus", 60, 0.04, 0.4, 1.6, "≤256K 标价；>256K 档保留在 research variants"),
-    ("deepseek-v4.1-flash", 60, 0.003, 0.15, 0.60, "官网 Monthly limit 永久 $60；Off-Peak；Peak=2×保留在 research variants"),
+    ("deepseek-v4.1-flash", 80, 0.003, 0.15, 0.60, "Monthly limit $80; current per-model limit replaces the former shared $60 cap; off-peak; peak 2x retained in research"),
     ("deepseek-v4-pro", 15, 0.022, 0.66, 1.98, "Off-Peak；Peak 额度为其一半，保留在 research variants；OpenCode 价表未改"),
     ("deepseek-v4-flash", 30, 0.003, 0.15, 0.60, "back in official catalog, Usage $30 (restored after the 9/10 removal); Off-Peak; Peak=2x kept in research variants; goat-opencode-catalogs-round3-2026-09-30.json"),
     ("deepseek-v4-flash-vision-exp", 15, 0.003, 0.15, 0.60, "back in official catalog, Usage $15 (restored after the 9/10 removal); Off-Peak; Peak=2x kept in research variants; goat-opencode-catalogs-round3-2026-09-30.json"),
     ("hy4-preview", 30, 0.042, 0.834, 2.501, "官网单档"),
     ("hy3", 60, 0.035, 0.14, 0.58, "官网单档"),
+    ("claude-haiku-5.5", 15, 0.01, 0.1, 0.5, "new official row; <=100K list price; >100K band ($0.5/$2.5/$0.05, write $0.625) kept in research variants; goat-opencode-catalogs-round4-2026-10-13.json"),
+    ("space-bunny", 30, 0.03, 0.15, 0.60, "new paid row (was a free-promo row in earlier catalogs); 官网单档; goat-opencode-catalogs-round4-2026-10-13.json"),
 )
 
 OPENCODE_GO_OLD_YI = {
@@ -715,32 +724,33 @@ OPENCODE_GO_OLD_YI = {
 
 
 OPENCODE_GO_DEFAULT_SOURCE = (
-    "https://opencode.ai/docs/go/ official per-model Usage and three-part pricing; opencode-go-round5-2026-09-06.json; "
-    "goat-opencode-catalogs-round3-2026-09-30.json"
+    "https://opencode.ai/v2/docs/console/go/ official per-model Usage and three-part pricing (moved from /docs/go/); opencode-go-round5-2026-09-06.json; "
+    "goat-opencode-catalogs-round4-2026-10-13.json"
 )
 OPENCODE_GO_DEEPSEEK_SOURCE = (
-    "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；"
-    "opencode-go-deepseek-round7-2026-09-30.json"
+    "https://opencode.ai/v2/docs/console/go/ 官方每模型 Usage 与三段价格（由 /docs/go/ 迁移）；"
+    "opencode-go-deepseek-round7-2026-09-30.json；goat-opencode-catalogs-round4-2026-10-13.json"
 )
 OPENCODE_GO_NOTES = {
     "deepseek-v4.1-flash": (
-        "15.528→62.112亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；"
-        "官网闲时 cached/input/output=$0.003/$0.15/$0.60，高峰2×。"
-        "模型月Usage由$15升为永久$60（官网曾标4x限时至9/27，9/30页面撤标按$60常态列示，确认永久；"
-        "估算请求130,000/月为旧$15档32,500的4倍，交叉一致）。官网 Model ID 现为 deepseek-v4.1-flash。"
-        "官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加"
+        "62.112 -> 82.816 yi: model monthly allowance $80 / standard-workload blended price. "
+        "Current docs define 5h/weekly/monthly as 20%/50%/100% of the model allowance; "
+        "the former shared $60 cap no longer applies. Official estimates 173,330/month and "
+        "86,670/week corroborate the $80 limit. Off-peak cached/input/output $0.003/$0.15/$0.60; "
+        "peak 2x remains a research variant. Per-model allowances cannot be added. "
+        "goat-opencode-followup-2026-10-15.json; also identified in PR #115."
     ),
     "deepseek-v4-flash": (
-        "restored: official Usage $30 (reverified 2026-09-30; removed 09-10 as confirmed offline); "
-        "min(shared monthly pool $60, model Usage $30) / standard-workload blended price; "
-        "off-peak cached/input/output=$0.003/$0.15/$0.60, peak 2x; official estimate 65,000 requests/mo. "
-        "Per-model allowances within the plan do not add"
+        "Retained pending delisting confirmation: last verified Usage $30 on 2026-09-30 / standard-workload "
+        "blended price, off-peak cached/input/output $0.003/$0.15/$0.60. Absent from the current "
+        "2026-10-15 docs model and allowance tables; do not present as freshly reverified. "
+        "Peak 2x remains a research variant; allowances cannot be added. goat-opencode-followup-2026-10-15.json"
     ),
     "deepseek-v4-flash-vision-exp": (
-        "restored: official Usage $15 (reverified 2026-09-30; removed 09-10 as confirmed offline); "
-        "min(shared monthly pool $60, model Usage $15) / standard-workload blended price; "
-        "off-peak cached/input/output=$0.003/$0.15/$0.60, peak 2x; official estimate 32,500 requests/mo. "
-        "Per-model allowances within the plan do not add"
+        "Retained pending delisting confirmation: last verified Usage $15 on 2026-09-30 / standard-workload "
+        "blended price, off-peak cached/input/output $0.003/$0.15/$0.60. Absent from the current "
+        "2026-10-15 docs model and allowance tables; do not present as freshly reverified. "
+        "Peak 2x remains a research variant; allowances cannot be added. goat-opencode-followup-2026-10-15.json"
     ),
 }
 
@@ -748,14 +758,13 @@ OPENCODE_GO_NOTES = {
 def opencode_go_rows() -> list[tuple]:
     rows = []
     for model, usage, cached, inp, out, variant_note in OPENCODE_GO_MODELS:
-        effective_usage = min(60, usage)
-        yi = round(effective_usage / blended(cached, inp, out) / 100, 3)
+        yi = round(usage / blended(cached, inp, out) / 100, 3)
         old = OPENCODE_GO_OLD_YI.get(model)
         change = f"旧{old:g}亿（请求估算）→{yi:g}亿" if old is not None else f"新增{yi:g}亿"
         source = OPENCODE_GO_DEEPSEEK_SOURCE if model.startswith("deepseek-") else OPENCODE_GO_DEFAULT_SOURCE
         note = OPENCODE_GO_NOTES.get(
             model,
-            f"{change}：min(共享月池$60, 模型Usage ${usage:g}) ÷ 统一标准负载加权价；{variant_note}。"
+            f"{change}：模型月Usage ${usage:g} ÷ 统一标准负载加权价；{variant_note}。"
             "官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
         )
         rows.append((
@@ -776,12 +785,12 @@ COMMAND_CODE_GOAT_MODELS = (
     ("glm-5.2", 70, 0.26, 1.4, 4.4, "官网三段价"),
     ("hy3", 70, 0.035, 0.14, 0.58, "官网三段价"),
     ("qwen3.8-27b", 70, 0.04, 0.4, 3.0, "官网三段价"),
-    ("deepseek-v4.1-flash", 60, 0.003, 0.15, 0.60, "官网 allowance 永久 $60；Off-Peak；Peak=2×保留在 research variants"),
+    ("deepseek-v4.1-flash", 80, 0.003, 0.15, 0.60, "官网 allowance $60->$80（限时$100至10/16，促销不采）；effective min(70,80)=$70；Off-Peak；Peak=2×保留在 research variants；goat-v41-flash-80-xsub-round1-2026-10-13.json"),
     ("kimi-k2.7-code", 60, 0.19, 0.95, 4.0, "官网三段价"),
     ("deepseek-v4-flash", 60, 0.003, 0.15, 0.60, "back in official catalog as 'V4 Flash (latest)' at $60 (restored after the 9/10 removal); Off-Peak; Peak=2x kept in research variants; goat-opencode-catalogs-round3-2026-09-30.json"),
     ("deepseek-v4.1-flash-fast", 60, 0.016, 0.16, 0.58, "new official row 'V4.1 Flash Fast' at $60 (off-peak $0.016/$0.16/$0.58, 57,500 requests/mo); goat-opencode-catalogs-round3-2026-09-30.json"),
     ("minimax-m3", 47, 0.06, 0.3, 1.2, "官网页成交/折扣三段价（-50%类）"),
-    ("glm-5.3-flash", 40, 0.03, 0.15, 0.5, "官网三段价"),
+    ("glm-5.3-flash", 80, 0.03, 0.15, 0.5, "baseline $80; temporary $100 through Oct 17 excluded; shared cap $70; goat-opencode-followup-2026-10-15.json"),
     ("gemini-3.8-flash", 40, 0.15, 1.5, 7.5, "官网三段价"),
     ("qwen3.7-max", 33, 0.5, 2.5, 7.5, "官网三段价"),
     ("qwen3.7-plus", 33, 0.08, 0.4, 1.6, "官网三段价（本渠道 cache read=$0.08）"),
@@ -806,7 +815,7 @@ COMMAND_CODE_GOAT_MODELS = (
     ("muse-spark-1.3-contributor", 20, 0.002, 0.1, 0.2, "官网 contributor 三段价；New models 默认$20"),
     ("muse-spark-1.2", 20, 0.15, 1.25, 4.25, "官网标准档三段价；New models 默认$20"),
     ("muse-spark-1.2-contributor", 20, 0.002, 0.1, 0.2, "官网 contributor 三段价；New models 默认$20"),
-    ("kimi-k3", 20, 0.3, 3.0, 15.0, "official three-part price; New models table $20 (temporary $60 promo through 10/7, not adopted per temp-promo policy)"),
+    ("kimi-k3", 20, 0.3, 3.0, 15.0, "official three-part price; $20 (temporary $60 promo through 10/7 expired, plain $20 reverified 2026-10-13); goat-opencode-catalogs-round4-2026-10-13.json"),
     ("kimi-k2.7-code-highspeed", 20, 0.38, 1.9, 8.0, "官网三段价；速度变体独立$20，不继承K2.7 Code的$60"),
     ("grok-4.5", 20, 0.5, 2.0, 6.0, "官网三段价；New models 默认$20"),
     ("grok-4.6", 20, 0.5, 2.0, 6.0, "官网三段价；New models 默认$20"),
@@ -823,8 +832,10 @@ COMMAND_CODE_GOAT_MODELS = (
     ("nemotron-3-ultra", 20, 0.12, 0.6, 2.4, "官网三段价；New models 默认$20"),
     ("jev", 20, 0.0, 0.042, 0.0, "new official row; New models table $20; input $0.042, cache read/output free; Decision model (typesafe/jev); goat-opencode-catalogs-round3-2026-09-30.json"),
     ("longcat-2.0", 50, 0.006, 0.3, 1.2, "official three-part price; Every model table $50; goat-opencode-catalogs-round3-2026-09-30.json"),
-    # -- standalone tier --
-    ("claude-sonnet-5.5", 10, 0.2, 2.0, 10.0, "official three-part price; standalone table $10 (launched 2026-09-28); cache write $2.50 excluded from standard workload; channel catalog price unchanged by vendor cached-read cut (2026-10-08); goat-opencode-catalogs-round3-2026-09-30.json; claude-haiku55-round1-2026-10-08.json"),
+    ("mistral-large-4", 20, 0.14, 1.36, 4.18, "new official row; Every model table $20 (temporary $40 promo through Oct 20 excluded per temp-promo policy); goat-opencode-catalogs-round4-2026-10-13.json"),
+    # -- Claude 表（standalone tier）--
+    ("claude-sonnet-5.5", 10, 0.1, 2.0, 10.0, "official three-part price; Claude table $10 (launched 2026-09-28); cache write $2.50 excluded from standard workload; channel cached-read $0.20->$0.10 (follows vendor cut into channel catalog, reverified 2026-10-13); goat-opencode-catalogs-round4-2026-10-13.json; claude-haiku55-round1-2026-10-08.json"),
+    ("claude-haiku-5.5", 20, 0.01, 0.1, 0.5, "new official row; Claude table $20 ('Claude Haiku 5.5 gets $20', 2x credits); cache write $0.125 excluded from standard workload; goat-opencode-catalogs-round4-2026-10-13.json"),
     # -- Older models table (all $20) --
     ("kimi-k2.6", 20, 0.16, 0.95, 4.0, "official three-part price; Older models all $20; goat-opencode-catalogs-round3-2026-09-30.json"),
     ("kimi-k2.5", 20, 0.1, 0.6, 3.0, "official three-part price; Older models all $20; goat-opencode-catalogs-round3-2026-09-30.json"),
@@ -840,18 +851,21 @@ COMMAND_CODE_GOAT_MODELS = (
 COMMAND_CODE_GOAT_DEFAULT_SOURCE = (
     "https://commandcode.ai/docs/plans/goat official per-model allowance and three-part pricing; "
     "https://commandcode.ai/pricing; $10->$70 credits; code-subscriptions-round1-2026-09-06.json; "
-    "goat-opencode-catalogs-round3-2026-09-30.json"
+    "goat-opencode-catalogs-round4-2026-10-13.json"
 )
 COMMAND_CODE_GOAT_DEEPSEEK_SOURCE = (
     "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；"
     "https://commandcode.ai/pricing；$10→$70 credits；command-code-goat-deepseek-round2-2026-09-30.json"
 )
 COMMAND_CODE_GOAT_NOTES = {
+    "glm-5.3-flash": ("Baseline $80, effective min(shared $70, model $80) = $70; 19.802 yi under the standard workload. "
+                       "Temporary $100 through Oct 17 excluded. goat-opencode-followup-2026-10-15.json"),
     "deepseek-v4.1-flash": (
-        "41.408→62.112亿：min(共享月池$70, 模型allowance $60) ÷ 统一标准负载加权价；"
+        "62.112→72.464亿：min(共享月池$70, 模型allowance $80) ÷ 统一标准负载加权价；"
         "官网闲时 cached/input/output=$0.003/$0.15/$0.60，高峰2×。"
-        "模型月allowance由$40升为永久$60（官网估算请求154,000/月与$60档 V4 Flash latest 完全同档，确认永久）。"
-        "官方请求数仅作交叉检查，不再作为额度主值；忽略 processing fee；同套餐各模型额度不可相加"
+        "模型月allowance $40→$60（9/30确认永久）→$80（2026-10-13，官网列示$80并挂$100限时至10/16，临时促销不采）。"
+        "官方请求数仅作交叉检查，不再作为额度主值；忽略 processing fee；同套餐各模型额度不可相加；"
+        "goat-v41-flash-80-xsub-round1-2026-10-13.json"
     ),
     "deepseek-v4-flash": (
         "restored: official 'V4 Flash (latest)' allowance $60 (reverified 2026-09-30; removed 09-10 as confirmed offline); "
@@ -1342,6 +1356,7 @@ EXCLUDED_SUBSCRIPTIONS = {
 # official=官方页面/公告：有发布日的博文或公告取发布日，否则取项目核对该页的日期；
 # derived=由锚点按倍率/档间比例派生，沿用锚点日期，data_date_from 记锚点。
 DATA_DATES = {
+    ("opencode_go", "deepseek-v4.1-flash"): ("2026-10-15", "official"),
     ("minimax_m_plan_go_cn", "minimax-m3.1-flash-preview"): ("2026-10-01", "sample"),
     ("chatgpt_plus", "gpt-5.6-sol"): ("2026-07-30", "sample"),
     ("chatgpt_pro_20x", "gpt-5.6-sol"): ("2026-06-10~2026-09-06", "sample"),
@@ -1447,9 +1462,9 @@ def family_data_date(pid: str, model: str) -> str | None:
     if pid in ("ollama_pro", "ollama_max"):
         return "2026-09-11" if model == "deepseek-v4.1-flash" else "2026-09-06"
     if pid == "opencode_go":
-        return "2026-09-30"
+        return "2026-09-30" if model in {"deepseek-v4-flash", "deepseek-v4-flash-vision-exp"} else "2026-10-13"
     if pid == "command_code_goat":
-        return "2026-09-30"
+        return "2026-10-15" if model == "glm-5.3-flash" else "2026-10-13"
     return None
 
 
