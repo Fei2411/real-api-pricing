@@ -145,9 +145,30 @@ def label_lines(p, language, board=None):
     return name, " / ".join(plans), price
 
 
+# 完整档前沿标签的逐榜偏移 (dx, dy, anchor)：按 verify_label_overlap 搜索得到，优先于下方规则。
+FULL_TIER_LABEL_OFFSETS = {
+    ("deepseek-v4.1-flash", "aa_intelligence_index"): (40, 40, "middle"),
+    ("claude-haiku-5.5", "aa_intelligence_index"): (-8, -60, "middle"),
+    ("deepseek-v4.1-flash", "aa_terminal_bench_4"): (-32, -20, "end"),
+    ("claude-haiku-5.5", "aa_terminal_bench_4"): (-8, 40, "end"),
+    ("claude-sonnet-5.5", "arena_agent_mode"): (-8, 20, "end"),
+    ("deepseek-v4.1-flash", "arena_agent_mode"): (40, 60, "middle"),
+    ("claude-haiku-5.5", "arena_agent_mode"): (-8, -60, "middle"),
+    ("claude-sonnet-5.5", "arena_code"): (-8, 20, "end"),
+    ("deepseek-v4.1-flash", "arena_code"): (-8, -60, "start"),
+    ("claude-haiku-5.5", "arena_code"): (-8, 20, "end"),
+    ("claude-opus-5.5", "terminal_bench_4"): (16, 40, "end"),
+    ("claude-sonnet-5.5", "terminal_bench_4"): (40, -40, "middle"),
+    ("deepseek-v4.1-flash", "terminal_bench_4"): (-32, -20, "end"),
+    ("mimo-v2.6-flash", "open_design_arena"): (-8, -140, "end"),
+}
+
 def label_position(p, board, x, y, tier="main"):
     # 仅调标签；绝不移动数据点。按这组已核对前沿的邻近关系安排引线和对齐。
     model = p["model"]
+    if tier == "full" and (model, board) in FULL_TIER_LABEL_OFFSETS:
+        dx, dy, anchor = FULL_TIER_LABEL_OFFSETS[(model, board)]
+        return x + dx, y + dy, anchor
     if model == "claude-opus-5":
         if board == "aa_coding_agent_index":
             return x + 24, y - 72, "start"

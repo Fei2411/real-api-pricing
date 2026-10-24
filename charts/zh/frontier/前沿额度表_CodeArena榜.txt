@@ -1,4 +1,4 @@
-Code Arena | WebDev Overall | Arena Score | 2026-09-30
+Code Arena | WebDev Overall | Arena Score | 2026-10-19
 前沿按全量订阅/API（含不计额度的 ≈$0 促销点，与帕累托图一致）的单价与得分筛选，非额度排名；同价同分套餐均保留；缺分模型不参与，估算不确定性未纳入筛选。
 订阅额度总览 · 套餐 × 实际服务模型
 默认月 = 4 周，Kimi独立月池 = 周池×5，Droid 月 = 周×2；饱和使用；全口径 token；按量 API 无月额度
@@ -9,9 +9,7 @@ Code Arena | WebDev Overall | Arena Score | 2026-09-30
 汇率来源：https://www.xinhuanet.com/20260904/4c1ce1cbf39d416997cb9c237d6f5024/c.html
 序号  套餐                   价格/月  服务模型             月额度(亿)  $/MTok   置信度  Arena Score  得分版本                            Harness  思考强度  映射
 ----  ---------------------  -------  -------------------  ----------  -------  ------  -----------  ----------------------------------  -------  --------  -----------------------------
-1     ChatGPT Pro 20x        USD 200  GPT 5.6 Luna         1411.63     0.00142  medium  1518         gpt-5.6-luna-xhigh (codex-harness)  Codex    xhigh     agent_configuration_reference
-2     Claude Max 5x (9/14+)  USD 100  Claude Sonnet 5.5    366.68      0.00273  low     1709         claude-sonnet-5.5-high              —        high      agent_configuration_reference
-3     Claude Max 5x (9/14+)  USD 100  Claude Opus 5.5      183.34      0.00545  medium  1818         claude-opus-5.5-max                 —        max       agent_configuration_reference
-4     OpenCode Go            USD 10   MiMo V2.5            78.782      0.00127  medium  1438         mimo-v2.5                           —        —         agent_configuration_reference
-5     OpenCode Go            USD 10   DeepSeek V4.1 Flash  62.112      0.00161  medium  1620         deepseek-v4.1-flash-max             —        max       agent_configuration_reference
-6     Command Code GOAT      USD 10   DeepSeek V4.1 Flash  62.112      0.00161  medium  1620         deepseek-v4.1-flash-max             —        max       agent_configuration_reference
+1     Claude Max 5x (9/14+)  USD 100  Claude Haiku 5.5     3580.49     0.00028  low     1586         Claude Haiku 5.5 (High)             —        high      agent_configuration_reference
+2     Claude Max 5x (9/14+)  USD 100  Claude Sonnet 5.5    366.68      0.00273  low     1768         Claude Sonnet 5.5 (xHigh)           —        xhigh     agent_configuration_reference
+3     Claude Max 5x (9/14+)  USD 100  Claude Opus 5.5      183.34      0.00545  medium  1807         Claude Opus 5.5 (Max)               —        max       agent_configuration_reference
+4     OpenCode Go            USD 10   DeepSeek V4.1 Flash  82.816      0.00121  medium  1664         DeepSeek-V4.1-Flash-20261017 (Max)  —        max       agent_configuration_reference

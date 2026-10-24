@@ -44,6 +44,12 @@ SCORE_FILES = (
     "scores-code-arena-round2-2026-10-01.json",
     "scores-agent-arena-round2-2026-10-01.json",
     "scores-open-design-round2-2026-10-01.json",
+    "scores-aa-round6-supplement-2026-10-20.json",
+    "scores-terminal-bench4-round4-2026-10-20.json",
+    "scores-terminal-bench4-selfreport-carry-2026-10-20.json",
+    "scores-code-arena-round3-2026-10-20.json",
+    "scores-agent-arena-round3-2026-10-20.json",
+    "scores-deepswe-selfreport-1017-2026-10-20.json",
 )
 LIST_PRICE_FILES = (
     "list-prices-2026-09.json",

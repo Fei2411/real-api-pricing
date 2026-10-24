@@ -1,0 +1,247 @@
+{
+  "collectedAt": "2026-10-20",
+  "supplement": true,
+  "supplementNote": "AA models 榜 2026-10-20 补充档（无 baseSnapshot → 追加到 round5）。本次页面载荷只含 273 个模型（round5 为 688），131 个 round5 slug 不在页内，不能当完整快照替换 round5，所以只追加新行：Claude Haiku 5.5 五档（已有采用行，此前无分）与 DeepSeek V4.1 Flash 1017（slug deepseek-v4-1-flash-1017，2026-10-17 发布，→deepseek-v4.1-flash；旧 slug deepseek-v4-1-flash 已不在页内）。Coding Agent 页无 1017 配置。curl 原始页面在 _build/aa-r6/。",
+  "boards": [
+    {
+      "boardId": "aa_intelligence_index",
+      "name": "Artificial Analysis Intelligence Index v4.3",
+      "url": "https://artificialanalysis.ai/leaderboards/models",
+      "metric": "Intelligence Index",
+      "snapshotDate": "2026-10-01",
+      "note": "Fresh download 2026-10-01, still Intelligence Index v4.3. Scores from public HTML RSC embedded model payload; page UI rounds to integer."
+    },
+    {
+      "boardId": "aa_terminal_bench_4",
+      "name": "Terminal-Bench 4.0 (AA)",
+      "url": "https://artificialanalysis.ai/leaderboards/models",
+      "metric": "Resolution Rate %",
+      "snapshotDate": "2026-10-01",
+      "note": "AA 自家 harness 独立实测的 Terminal-Bench 4.0：取 models 榜载荷 terminalBench40 字段（fraction×100），全量 206 行中按已映射模型收录。与 tbench.ai 官方榜分开计分、不可互换。"
+    }
+  ],
+  "scores": [
+    {
+      "model": "claude-haiku-5.5",
+      "boardId": "aa_intelligence_index",
+      "variantLabel": "Claude Haiku 5.5 (max)",
+      "score": 43.395,
+      "secondary": {
+        "scoreRoundedDisplay": 43,
+        "intelligenceIndexIsEstimated": false,
+        "slug": "claude-haiku-5-5",
+        "shortName": "Claude Haiku 5.5 (max)",
+        "isReasoning": true,
+        "deprecated": false,
+        "modelCreatorName": "Anthropic",
+        "effort": "max",
+        "terminalBench40": 0.328282828282828,
+        "scicode": 0.549768518518518,
+        "hle": 0.443929564411492
+      },
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "model": "claude-haiku-5.5",
+      "boardId": "aa_terminal_bench_4",
+      "variantLabel": "Artificial Analysis - Claude Haiku 5.5 (max)",
+      "score": 32.8283,
+      "secondary": {
+        "agentHarness": "Artificial Analysis",
+        "reasoningEffort": "max",
+        "slug": "claude-haiku-5-5",
+        "shortName": "Claude Haiku 5.5 (max)",
+        "terminalBench40Fraction": 0.328282828282828
+      },
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "checkedAt": "2026-10-20",
+      "note": "AA 自家 harness 独立实测的 Terminal-Bench 4.0（models 榜载荷 terminalBench40 字段，fraction×100）；与 tbench.ai 官方榜分开计分。"
+    },
+    {
+      "model": "claude-haiku-5.5",
+      "boardId": "aa_intelligence_index",
+      "variantLabel": "Claude Haiku 5.5 (xhigh)",
+      "score": 41.2489,
+      "secondary": {
+        "scoreRoundedDisplay": 41,
+        "intelligenceIndexIsEstimated": false,
+        "slug": "claude-haiku-5-5-xhigh",
+        "shortName": "Claude Haiku 5.5 (xhigh)",
+        "isReasoning": true,
+        "deprecated": false,
+        "modelCreatorName": "Anthropic",
+        "effort": "xhigh",
+        "terminalBench40": 0.292929292929293,
+        "scicode": 0.517361111111111,
+        "hle": 0.42678405931418
+      },
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "model": "claude-haiku-5.5",
+      "boardId": "aa_terminal_bench_4",
+      "variantLabel": "Artificial Analysis - Claude Haiku 5.5 (xhigh)",
+      "score": 29.2929,
+      "secondary": {
+        "agentHarness": "Artificial Analysis",
+        "reasoningEffort": "xhigh",
+        "slug": "claude-haiku-5-5-xhigh",
+        "shortName": "Claude Haiku 5.5 (xhigh)",
+        "terminalBench40Fraction": 0.292929292929293
+      },
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "checkedAt": "2026-10-20",
+      "note": "AA 自家 harness 独立实测的 Terminal-Bench 4.0（models 榜载荷 terminalBench40 字段，fraction×100）；与 tbench.ai 官方榜分开计分。"
+    },
+    {
+      "model": "claude-haiku-5.5",
+      "boardId": "aa_intelligence_index",
+      "variantLabel": "Claude Haiku 5.5 (high)",
+      "score": 37.824,
+      "secondary": {
+        "scoreRoundedDisplay": 38,
+        "intelligenceIndexIsEstimated": false,
+        "slug": "claude-haiku-5-5-high",
+        "shortName": "Claude Haiku 5.5 (high)",
+        "isReasoning": true,
+        "deprecated": false,
+        "modelCreatorName": "Anthropic",
+        "effort": "high",
+        "terminalBench40": 0.217171717171717,
+        "scicode": 0.487268518518519,
+        "hle": 0.3725671918443
+      },
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "model": "claude-haiku-5.5",
+      "boardId": "aa_terminal_bench_4",
+      "variantLabel": "Artificial Analysis - Claude Haiku 5.5 (high)",
+      "score": 21.7172,
+      "secondary": {
+        "agentHarness": "Artificial Analysis",
+        "reasoningEffort": "high",
+        "slug": "claude-haiku-5-5-high",
+        "shortName": "Claude Haiku 5.5 (high)",
+        "terminalBench40Fraction": 0.217171717171717
+      },
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "checkedAt": "2026-10-20",
+      "note": "AA 自家 harness 独立实测的 Terminal-Bench 4.0（models 榜载荷 terminalBench40 字段，fraction×100）；与 tbench.ai 官方榜分开计分。"
+    },
+    {
+      "model": "claude-haiku-5.5",
+      "boardId": "aa_intelligence_index",
+      "variantLabel": "Claude Haiku 5.5 (medium)",
+      "score": 34.4647,
+      "secondary": {
+        "scoreRoundedDisplay": 34,
+        "intelligenceIndexIsEstimated": false,
+        "slug": "claude-haiku-5-5-medium",
+        "shortName": "Claude Haiku 5.5 (medium)",
+        "isReasoning": true,
+        "deprecated": false,
+        "modelCreatorName": "Anthropic",
+        "effort": "medium",
+        "terminalBench40": 0.151515151515152,
+        "scicode": 0.489583333333333,
+        "hle": 0.337812789620019
+      },
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "model": "claude-haiku-5.5",
+      "boardId": "aa_terminal_bench_4",
+      "variantLabel": "Artificial Analysis - Claude Haiku 5.5 (medium)",
+      "score": 15.1515,
+      "secondary": {
+        "agentHarness": "Artificial Analysis",
+        "reasoningEffort": "medium",
+        "slug": "claude-haiku-5-5-medium",
+        "shortName": "Claude Haiku 5.5 (medium)",
+        "terminalBench40Fraction": 0.151515151515152
+      },
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "checkedAt": "2026-10-20",
+      "note": "AA 自家 harness 独立实测的 Terminal-Bench 4.0（models 榜载荷 terminalBench40 字段，fraction×100）；与 tbench.ai 官方榜分开计分。"
+    },
+    {
+      "model": "claude-haiku-5.5",
+      "boardId": "aa_intelligence_index",
+      "variantLabel": "Claude Haiku 5.5 (low)",
+      "score": 29.4524,
+      "secondary": {
+        "scoreRoundedDisplay": 29,
+        "intelligenceIndexIsEstimated": false,
+        "slug": "claude-haiku-5-5-low",
+        "shortName": "Claude Haiku 5.5 (low)",
+        "isReasoning": true,
+        "deprecated": false,
+        "modelCreatorName": "Anthropic",
+        "effort": "low",
+        "terminalBench40": 0.126262626262626,
+        "scicode": 0.491898148148148,
+        "hle": 0.270157553290083
+      },
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "model": "claude-haiku-5.5",
+      "boardId": "aa_terminal_bench_4",
+      "variantLabel": "Artificial Analysis - Claude Haiku 5.5 (low)",
+      "score": 12.6263,
+      "secondary": {
+        "agentHarness": "Artificial Analysis",
+        "reasoningEffort": "low",
+        "slug": "claude-haiku-5-5-low",
+        "shortName": "Claude Haiku 5.5 (low)",
+        "terminalBench40Fraction": 0.126262626262626
+      },
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "checkedAt": "2026-10-20",
+      "note": "AA 自家 harness 独立实测的 Terminal-Bench 4.0（models 榜载荷 terminalBench40 字段，fraction×100）；与 tbench.ai 官方榜分开计分。"
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "boardId": "aa_intelligence_index",
+      "variantLabel": "DeepSeek V4.1 Flash 1017 (max)",
+      "score": 45.0965,
+      "secondary": {
+        "scoreRoundedDisplay": 45,
+        "intelligenceIndexIsEstimated": false,
+        "slug": "deepseek-v4-1-flash-1017",
+        "shortName": "DeepSeek V4.1 Flash 1017 (max)",
+        "isReasoning": true,
+        "deprecated": false,
+        "modelCreatorName": "DeepSeek",
+        "effort": "max",
+        "terminalBench40": 0.338383838383838,
+        "scicode": 0.559027777777778,
+        "hle": 0.433271547729379
+      },
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "checkedAt": "2026-10-20"
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "boardId": "aa_terminal_bench_4",
+      "variantLabel": "Artificial Analysis - DeepSeek V4.1 Flash 1017 (max)",
+      "score": 33.8384,
+      "secondary": {
+        "agentHarness": "Artificial Analysis",
+        "reasoningEffort": "max",
+        "slug": "deepseek-v4-1-flash-1017",
+        "shortName": "DeepSeek V4.1 Flash 1017 (max)",
+        "terminalBench40Fraction": 0.338383838383838
+      },
+      "source": "https://artificialanalysis.ai/leaderboards/models",
+      "checkedAt": "2026-10-20",
+      "note": "AA 自家 harness 独立实测的 Terminal-Bench 4.0（models 榜载荷 terminalBench40 字段，fraction×100）；与 tbench.ai 官方榜分开计分。"
+    }
+  ]
+}

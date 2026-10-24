@@ -230,12 +230,12 @@ test("DeepSWE keeps effort levels and vendor provenance through the adapter", ()
   assert.equal(deepseek.mapping?.score_is_self_reported, true);
   assert.equal(deepseek.mapping?.agent_harness, "mini-SWE");
 });
-test("Command Code GOAT DeepSeek V4.1 Flash uses $60 monthly credits", () => {
+test("Command Code GOAT DeepSeek V4.1 Flash uses $80 credits capped by the $70 shared pool", () => {
   const p = data.points.find((p) => p.id === "command_code_goat::deepseek-v4.1-flash")!;
-  // $60 allowance ÷ off-peak (97/2.5/0.5 × $0.003/$0.15/$0.60 = $0.00966/MTok).
-  assert.equal(p.monthly_yi, 62.112);
-  assert.equal(p.real_usd_per_mtok, 0.0016099948);
-  assert.equal(price(p.real_usd_per_mtok), "$0.00161");
+  // min($70 pool, $80 allowance) ÷ off-peak (97/2.5/0.5 × $0.003/$0.15/$0.60 = $0.00966/MTok).
+  assert.equal(p.monthly_yi, 72.464);
+  assert.equal(p.real_usd_per_mtok, 0.0013799956);
+  assert.equal(price(p.real_usd_per_mtok), "$0.00138");
 });
 test("Default selection includes every adopted point, including unscored models", () => {
   const rows = rowsFor(data, defaultState());

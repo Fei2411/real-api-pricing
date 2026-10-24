@@ -499,120 +499,112 @@
       "en": "Not workload-normalized: same source as the CN tier (Caijing ¥101 per hundred million tokens), no breakdown"
     },
     {
-      "zh": "旧0.279亿（请求估算）→0.265亿：min(共享月池$60, 模型Usage $15) ÷ 统一标准负载加权价；≤200K 标价；>200K 价翻倍，保留在 research variants。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Old: 27.9M (request estimate)→26.5M: min(shared monthly pool $60, model Usage $15) ÷ project standard-workload weighted price; ≤200K list price; the >200K price doubles, kept in research variants. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增0.265亿：模型月Usage $15 ÷ 统一标准负载加权价；≤200K 标价；>200K 价翻倍，保留在 research variants；mimo-v26-grok47-catalogs-round1-2026-09-22.json。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 26.5M: model monthly Usage $15 ÷ project standard-workload weighted price; ≤200K list price; the >200K price doubles, kept in research variants; mimo-v26-grok47-catalogs-round1-2026-09-22.json. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增0.265亿：min(共享月池$60, 模型Usage $15) ÷ 统一标准负载加权价；≤200K 标价；>200K 价翻倍，保留在 research variants；mimo-v26-grok47-catalogs-round1-2026-09-22.json。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 26.5M: min(shared monthly pool $60, model Usage $15) ÷ project standard-workload weighted price; ≤200K list price; the >200K price doubles, kept in research variants; mimo-v26-grok47-catalogs-round1-2026-09-22.json. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "旧5.25亿（请求估算）→4.934亿：模型月Usage $15 ÷ 统一标准负载加权价；≤272K 标价；>272K 档保留在 research variants。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Old: 525M (request estimate)→493.4M: model monthly Usage $15 ÷ project standard-workload weighted price; ≤272K list price; the >272K band kept in research variants. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "旧5.25亿（请求估算）→4.934亿：min(共享月池$60, 模型Usage $15) ÷ 统一标准负载加权价；≤272K 标价；>272K 档保留在 research variants。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Old: 525M (request estimate)→493.4M: min(shared monthly pool $60, model Usage $15) ÷ project standard-workload weighted price; ≤272K list price; the >272K band kept in research variants. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增10.204亿：模型月Usage $15 ÷ 统一标准负载加权价；new official row; <=100K list price; >100K band kept in research variants; goat-opencode-catalogs-round4-2026-10-20.json。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 1.0204B: model monthly Usage $15 ÷ project standard-workload weighted price; new official row; <=100K list price; >100K band kept in research variants; goat-opencode-catalogs-round4-2026-10-20.json. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增10.204亿：min(共享月池$60, 模型Usage $15) ÷ 统一标准负载加权价；new official row; <=272K list price; >272K band kept in research variants; goat-opencode-catalogs-round3-2026-09-30.json。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 1.0204B: min(shared monthly pool $60, model Usage $15) ÷ project standard-workload weighted price; new official row; <=272K list price; >272K band kept in research variants; goat-opencode-catalogs-round3-2026-09-30.json. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增10.204亿：模型月Usage $15 ÷ 统一标准负载加权价；new official row; <=272K list price; >272K band kept in research variants; goat-opencode-catalogs-round3-2026-09-30.json。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 1.0204B: model monthly Usage $15 ÷ project standard-workload weighted price; new official row; <=272K list price; >272K band kept in research variants; goat-opencode-catalogs-round3-2026-09-30.json. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "旧4.44亿（请求估算）→16.973亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；official Usage $15->$60 (reverified 2026-09-30); goat-opencode-catalogs-round3-2026-09-30.json。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Old: 444M (request estimate)→1.6973B: min(shared monthly pool $60, model Usage $60) ÷ project standard-workload weighted price; official Usage $15->$60 (reverified 2026-09-30); goat-opencode-catalogs-round3-2026-09-30.json. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "旧4.44亿（请求估算）→16.973亿：模型月Usage $60 ÷ 统一标准负载加权价；official Usage $15->$60 (reverified 2026-09-30); goat-opencode-catalogs-round3-2026-09-30.json。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Old: 444M (request estimate)→1.6973B: model monthly Usage $60 ÷ project standard-workload weighted price; official Usage $15->$60 (reverified 2026-09-30); goat-opencode-catalogs-round3-2026-09-30.json. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "旧0.571亿（请求估算）→0.485亿：min(共享月池$60, 模型Usage $15) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Old: 57.1M (request estimate)→48.5M: min(shared monthly pool $60, model Usage $15) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "旧0.571亿（请求估算）→0.485亿：模型月Usage $15 ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Old: 57.1M (request estimate)→48.5M: model monthly Usage $15 ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增1.94亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 194M: min(shared monthly pool $60, model Usage $60) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增1.94亿：模型月Usage $60 ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 194M: model monthly Usage $60 ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "旧0.381亿（请求估算）→0.34亿：min(共享月池$60, 模型Usage $15) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Old: 38.1M (request estimate)→34M: min(shared monthly pool $60, model Usage $15) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "旧0.381亿（请求估算）→0.34亿：模型月Usage $15 ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Old: 38.1M (request estimate)→34M: model monthly Usage $15 ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "旧3.785亿（请求估算）→2.631亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Old: 378.5M (request estimate)→263.1M: min(shared monthly pool $60, model Usage $60) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "旧3.785亿（请求估算）→2.631亿：模型月Usage $60 ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Old: 378.5M (request estimate)→263.1M: model monthly Usage $60 ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增3.016亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 301.6M: min(shared monthly pool $60, model Usage $60) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增31.056亿：模型月Usage $60 ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 3.1056B: model monthly Usage $60 ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增31.056亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 3.1056B: min(shared monthly pool $60, model Usage $60) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增78.782亿：模型月Usage $60 ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 7.8782B: model monthly Usage $60 ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增78.782亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 7.8782B: min(shared monthly pool $60, model Usage $60) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "旧14.196亿（请求估算）→8.004亿：模型月Usage $15 ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Old: 1.4196B (request estimate)→800.4M: model monthly Usage $15 ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "旧14.196亿（请求估算）→8.004亿：min(共享月池$60, 模型Usage $15) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Old: 1.4196B (request estimate)→800.4M: min(shared monthly pool $60, model Usage $15) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增78.782亿：模型月Usage $60 ÷ 统一标准负载加权价；官网单档；Usage $60。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 7.8782B: model monthly Usage $60 ÷ project standard-workload weighted price; single official tier; Usage $60. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增78.782亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；官网单档；Usage $60。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 7.8782B: min(shared monthly pool $60, model Usage $60) ÷ project standard-workload weighted price; single official tier; Usage $60. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增8.004亿：模型月Usage $15 ÷ 统一标准负载加权价；官网单档；Usage $15；与 v2.5-pro 同 Usage 档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 800.4M: model monthly Usage $15 ÷ project standard-workload weighted price; single official tier; Usage $15; same Usage tier as v2.5-pro. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增8.004亿：min(共享月池$60, 模型Usage $15) ÷ 统一标准负载加权价；官网单档；Usage $15；与 v2.5-pro 同 Usage 档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 800.4M: min(shared monthly pool $60, model Usage $15) ÷ project standard-workload weighted price; single official tier; Usage $15; same Usage tier as v2.5-pro. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "旧9.072亿（请求估算）→8.368亿：模型月Usage $60 ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Old: 907.2M (request estimate)→836.8M: model monthly Usage $60 ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "旧9.072亿（请求估算）→8.368亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Old: 907.2M (request estimate)→836.8M: min(shared monthly pool $60, model Usage $60) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增110.294亿：模型月Usage $60 ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 11.0294B: model monthly Usage $60 ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增8.368亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 836.8M: min(shared monthly pool $60, model Usage $60) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增0.465亿：模型月Usage $15 ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 46.5M: model monthly Usage $15 ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增110.294亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 11.0294B: min(shared monthly pool $60, model Usage $60) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增13.876亿：模型月Usage $30 ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 1.3876B: model monthly Usage $30 ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增0.465亿：min(共享月池$60, 模型Usage $15) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 46.5M: min(shared monthly pool $60, model Usage $15) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
-    },
-    {
-      "zh": "新增13.876亿：min(共享月池$60, 模型Usage $30) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 1.3876B: min(shared monthly pool $60, model Usage $30) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
-    },
-    {
-      "zh": "旧12.461亿（请求估算）→10.563亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；≤256K 标价；>256K 档保留在 research variants。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Old: 1.2461B (request estimate)→1.0563B: min(shared monthly pool $60, model Usage $60) ÷ project standard-workload weighted price; ≤256K list price; the >256K band kept in research variants. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "旧12.461亿（请求估算）→10.563亿：模型月Usage $60 ÷ 统一标准负载加权价；≤256K 标价；>256K 档保留在 research variants。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Old: 1.2461B (request estimate)→1.0563B: model monthly Usage $60 ÷ project standard-workload weighted price; ≤256K list price; the >256K band kept in research variants. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
       "zh": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-deepseek-round7-2026-09-30.json",
       "en": "https://opencode.ai/docs/go/ official per-model Usage and three-part pricing; opencode-go-deepseek-round7-2026-09-30.json"
     },
     {
-      "zh": "15.528→62.112亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；官网闲时 cached/input/output=$0.003/$0.15/$0.60，高峰2×。模型月Usage由$15升为永久$60（官网曾标4x限时至9/27，9/30页面撤标按$60常态列示，确认永久；估算请求130,000/月为旧$15档32,500的4倍，交叉一致）。官网 Model ID 现为 deepseek-v4.1-flash。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "1.5528B→6.2112B: min(shared monthly pool $60, model Usage $60) ÷ project standard-workload weighted price; official off-peak cached/input/output=$0.003/$0.15/$0.60, peak 2×. the model's monthly Usage rose from $15 to a permanent $60 (the official page once showed 4x limited to 9/27; the 9/30 page dropped the tag and lists $60 as the standing price — confirmed permanent; the estimated 130,000 requests/month is 4× the old $15 tier's 32,500, a consistent cross-check). the official Model ID is now deepseek-v4.1-flash. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "62.112→82.816亿：模型月Usage $80 ÷ 统一标准负载加权价（2026-10-20 官网 Monthly limit $60→$80，共享月池$60已从文档移除，每模型月额度单独计）；官网闲时 cached/input/output=$0.003/$0.15/$0.60，高峰2×。估算请求173,330/月。官网 Model ID 为 deepseek-v4.1-flash。官方请求数仅作交叉检查，不作为额度主值；同套餐各模型额度不可相加",
+      "en": "6.2112B→8.2816B: model monthly Usage $80 ÷ project standard-workload weighted price (2026-10-20 official Monthly limit $60→$80; the $60 shared monthly pool has been removed from the docs, so each model's monthly limit counts on its own); official off-peak cached/input/output=$0.003/$0.15/$0.60, peak 2×. Estimated 173,330 requests/month. The official Model ID is deepseek-v4.1-flash. The official request counts serve only as a cross-check and are not the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "旧4.318亿（请求估算）→3.142亿：min(共享月池$60, 模型Usage $15) ÷ 统一标准负载加权价；Off-Peak；Peak 额度为其一半，保留在 research variants；OpenCode 价表未改。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Old: 431.8M (request estimate)→314.2M: min(shared monthly pool $60, model Usage $15) ÷ project standard-workload weighted price; Off-Peak; the Peak allowance is half, kept in research variants; OpenCode's price list unchanged. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "旧4.318亿（请求估算）→3.142亿：模型月Usage $15 ÷ 统一标准负载加权价；Off-Peak；Peak 额度为其一半，保留在 research variants；OpenCode 价表未改。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Old: 431.8M (request estimate)→314.2M: model monthly Usage $15 ÷ project standard-workload weighted price; Off-Peak; the Peak allowance is half, kept in research variants; OpenCode's price list unchanged. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "旧4.917亿（请求估算）→4.049亿：min(共享月池$60, 模型Usage $30) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Old: 491.7M (request estimate)→404.9M: min(shared monthly pool $60, model Usage $30) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "旧4.917亿（请求估算）→4.049亿：模型月Usage $30 ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Old: 491.7M (request estimate)→404.9M: model monthly Usage $30 ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增14.87亿：min(共享月池$60, 模型Usage $60) ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 1.487B: min(shared monthly pool $60, model Usage $60) ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增14.87亿：模型月Usage $60 ÷ 统一标准负载加权价；官网单档。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 1.487B: model monthly Usage $60 ÷ project standard-workload weighted price; single official tier. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增0.761亿：min(共享月池$60, 模型Usage $30) ÷ 统一标准负载加权价；new official row; Go monthly $30; 2x limited-time $60 with no end date excluded per temp-promo policy; $4/$20/cached $0.20; Not ZDR; opencode-go-gemini4-argon-round1-2026-10-15.json。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 76.1M: min(shared monthly pool $60, model Usage $30) / unified standard-workload weighted price; new official row; Go monthly $30; 2x limited-time $60 with no end date excluded per temp-promo policy; $4 input / $20 output / cached read $0.20; Not ZDR; opencode-go-gemini4-argon-round1-2026-10-15.json. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增0.761亿：模型月Usage $30 ÷ 统一标准负载加权价；new official row; Go monthly $30; 2x limited-time $60 with no end date excluded per temp-promo policy; $4/$20/cached $0.20; Not ZDR; opencode-go-gemini4-argon-round1-2026-10-15.json。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 76.1M: model monthly Usage $30 / unified standard-workload weighted price; new official row; Go monthly $30; 2x limited-time $60 with no end date excluded per temp-promo policy; $4 input / $20 output / cached read $0.20; Not ZDR; opencode-go-gemini4-argon-round1-2026-10-15.json. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增1.107亿：min(共享月池$60, 模型Usage $15) ÷ 统一标准负载加权价；new official paid row (was Free unlimited limited-time on 2026-10-15); Go monthly $15; 4x limited-time $60 with no end date excluded per temp-promo policy; $1/$2.70/cached $0.10; opencode-go-step5-preview-round1-2026-10-16.json。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
-      "en": "Added 110.7M: min(shared monthly pool $60, model Usage $15) ÷ project standard-workload weighted price; new official paid row (was Free unlimited limited-time on 2026-10-15); Go monthly $15; 4x limited-time $60 with no end date excluded per temp-promo policy; $1/$2.70/cached $0.10; opencode-go-step5-preview-round1-2026-10-16.json. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
+      "zh": "新增1.107亿：模型月Usage $15 ÷ 统一标准负载加权价；new official paid row (was Free unlimited limited-time on 2026-10-15); Go monthly $15; 4x limited-time $60 with no end date excluded per temp-promo policy; $1/$2.70/cached $0.10; opencode-go-step5-preview-round1-2026-10-16.json。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
+      "en": "Added 110.7M: model monthly Usage $15 ÷ project standard-workload weighted price; new official paid row (was Free unlimited limited-time on 2026-10-15); Go monthly $15; 4x limited-time $60 with no end date excluded per temp-promo policy; $1/$2.70/cached $0.10; opencode-go-step5-preview-round1-2026-10-16.json. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },
     {
-      "zh": "新增0.921亿：min(共享月池$70, 模型allowance $70) ÷ 统一标准负载加权价；官网三段价。忽略 processing fee；同套餐各模型额度不可相加；无面板 token+% 截图，按官方绝对credits+价表",
-      "en": "Added 92.1M: min(shared monthly pool $70, model allowance $70) ÷ project standard-workload weighted price; official three-part pricing. Processing fee ignored; allowances of different models in the same plan are not additive; no usage-panel token+% screenshot — computed from official absolute credits and the price list"
+      "zh": "新增0.263亿：min(共享月池$70, 模型allowance $20) ÷ 统一标准负载加权价；官网三段价；credits $70→$20（2026-10-20）。忽略 processing fee；同套餐各模型额度不可相加；无面板 token+% 截图，按官方绝对credits+价表",
+      "en": "Added 26.3M: min(shared monthly pool $70, model allowance $20) ÷ project standard-workload weighted price; official three-part pricing; credits $70→$20 (2026-10-20). Processing fee ignored; allowances of different models in the same plan are not additive; no usage-panel token+% screenshot — computed from official absolute credits and the price list"
     },
     {
       "zh": "新增2.264亿：min(共享月池$70, 模型allowance $70) ÷ 统一标准负载加权价；官网三段价。忽略 processing fee；同套餐各模型额度不可相加；无面板 token+% 截图，按官方绝对credits+价表",
@@ -631,8 +623,8 @@
       "en": "https://commandcode.ai/docs/plans/goat official per-model allowance and three-part pricing; https://commandcode.ai/pricing; $10→$70 credits; command-code-goat-deepseek-round2-2026-09-30.json"
     },
     {
-      "zh": "41.408→62.112亿：min(共享月池$70, 模型allowance $60) ÷ 统一标准负载加权价；官网闲时 cached/input/output=$0.003/$0.15/$0.60，高峰2×。模型月allowance由$40升为永久$60（官网估算请求154,000/月与$60档 V4 Flash latest 完全同档，确认永久）。官方请求数仅作交叉检查，不再作为额度主值；忽略 processing fee；同套餐各模型额度不可相加",
-      "en": "4.1408B→6.2112B: min(shared monthly pool $70, model allowance $60) ÷ project standard-workload weighted price; official off-peak cached/input/output=$0.003/$0.15/$0.60, peak 2×. the model's monthly allowance rose from $40 to a permanent $60 (the official estimate of 154,000 requests/month is identical in tier to the $60-tier V4 Flash latest — confirmed permanent). The official request counts serve only as a cross-check and are no longer the primary allowance figure; processing fee ignored; allowances of different models in the same plan are not additive"
+      "zh": "62.112→72.464亿：min(共享月池$70, 模型allowance $80) ÷ 统一标准负载加权价；官网闲时 cached/input/output=$0.003/$0.15/$0.60，高峰2×。模型月allowance由$60升为$80（2026-10-20 官网 credits $80；限时 $100 仅 10/20 01:00Z–10/21 01:00Z 24小时，不采用）。官方请求数仅作交叉检查，不作为额度主值；忽略 processing fee；同套餐各模型额度不可相加",
+      "en": "6.2112B→7.2464B: min(shared monthly pool $70, model allowance $80) ÷ project standard-workload weighted price; official off-peak cached/input/output=$0.003/$0.15/$0.60, peak 2×. The model's monthly allowance rose from $60 to $80 (2026-10-20 official credits $80; the limited-time $100 runs only 24 hours, 10/20 01:00Z–10/21 01:00Z, not adopted). The official request counts serve only as a cross-check and are not the primary allowance figure; processing fee ignored; allowances of different models in the same plan are not additive"
     },
     {
       "zh": "新增2.631亿：min(共享月池$70, 模型allowance $60) ÷ 统一标准负载加权价；官网三段价。忽略 processing fee；同套餐各模型额度不可相加；无面板 token+% 截图，按官方绝对credits+价表",
@@ -647,8 +639,8 @@
       "en": "Added 655.5M: min(shared monthly pool $70, model allowance $47) ÷ project standard-workload weighted price; official-page deal/discount three-part pricing (-50% type). Processing fee ignored; allowances of different models in the same plan are not additive; no usage-panel token+% screenshot — computed from official absolute credits and the price list"
     },
     {
-      "zh": "新增11.315亿：min(共享月池$70, 模型allowance $40) ÷ 统一标准负载加权价；官网三段价。忽略 processing fee；同套餐各模型额度不可相加；无面板 token+% 截图，按官方绝对credits+价表",
-      "en": "Added 1.1315B: min(shared monthly pool $70, model allowance $40) ÷ project standard-workload weighted price; official three-part pricing. Processing fee ignored; allowances of different models in the same plan are not additive; no usage-panel token+% screenshot — computed from official absolute credits and the price list"
+      "zh": "新增19.802亿：min(共享月池$70, 模型allowance $80) ÷ 统一标准负载加权价；官网三段价；credits $40→$80（$100 限时至10/17已结束，$80 常态）。忽略 processing fee；同套餐各模型额度不可相加；无面板 token+% 截图，按官方绝对credits+价表",
+      "en": "Added 1.9802B: min(shared monthly pool $70, model allowance $80) ÷ project standard-workload weighted price; official three-part pricing; credits $40→$80 (the limited-time $100 through 10/17 has ended; $80 is the standing tier). Processing fee ignored; allowances of different models in the same plan are not additive; no usage-panel token+% screenshot — computed from official absolute credits and the price list"
     },
     {
       "zh": "新增1.814亿：min(共享月池$70, 模型allowance $40) ÷ 统一标准负载加权价；官网三段价。忽略 processing fee；同套餐各模型额度不可相加；无面板 token+% 截图，按官方绝对credits+价表",
@@ -791,8 +783,12 @@
       "en": "Added 2.588B: min(shared monthly pool $70, model allowance $50) ÷ project standard-workload weighted price; official three-part price; Every model table $50; goat-opencode-catalogs-round3-2026-09-30.json. Processing fee ignored; allowances of different models in the same plan are not additive; no usage-panel token+% screenshot — computed from official absolute credits and the price list"
     },
     {
-      "zh": "新增0.34亿：min(共享月池$70, 模型allowance $10) ÷ 统一标准负载加权价；official three-part price; standalone table $10 (launched 2026-09-28); cache write $2.50 excluded from standard workload; channel catalog price unchanged by vendor cached-read cut (2026-10-08); goat-opencode-catalogs-round3-2026-09-30.json; claude-haiku55-round1-2026-10-08.json。忽略 processing fee；同套餐各模型额度不可相加；无面板 token+% 截图，按官方绝对credits+价表",
-      "en": "Added 34M: min(shared monthly pool $70, model allowance $10) ÷ project standard-workload weighted price; official three-part price; standalone table $10 (launched 2026-9-28); cache write $2.50 excluded from standard workload; channel catalog price unchanged by vendor cached-read cut (2026-10-8); goat-opencode-catalogs-round3-2026-09-30.json; claude-haiku55-round1-2026-10-08.json. Processing fee ignored; allowances of different models in the same plan are not additive; no usage-panel token+% screenshot — computed from official absolute credits and the price list"
+      "zh": "新增0.508亿：min(共享月池$70, 模型allowance $10) ÷ 统一标准负载加权价；official three-part price; standalone table $10 (launched 2026-09-28); cache write $2.50 excluded from standard workload; cached read $0.20->$0.10 (channel now follows the 2026-10-08 vendor cut, reverified 2026-10-20); goat-opencode-catalogs-round4-2026-10-20.json。忽略 processing fee；同套餐各模型额度不可相加；无面板 token+% 截图，按官方绝对credits+价表",
+      "en": "Added 50.8M: min(shared monthly pool $70, model allowance $10) ÷ project standard-workload weighted price; official three-part price; standalone table $10 (launched 2026-09-28); cache write $2.50 excluded from standard workload; cached read $0.20->$0.10 (channel now follows the 2026-10-08 vendor cut, reverified 2026-10-20); goat-opencode-catalogs-round4-2026-10-20.json. Processing fee ignored; allowances of different models in the same plan are not additive; no usage-panel token+% screenshot — computed from official absolute credits and the price list"
+    },
+    {
+      "zh": "新增13.605亿：min(共享月池$70, 模型allowance $20) ÷ 统一标准负载加权价；new official row; premium table $20 (cache write $0.125 excluded from standard workload); goat-opencode-catalogs-round4-2026-10-20.json。忽略 processing fee；同套餐各模型额度不可相加；无面板 token+% 截图，按官方绝对credits+价表",
+      "en": "Added 1.3605B: min(shared monthly pool $70, model allowance $20) ÷ project standard-workload weighted price; new official row; premium table $20 (cache write $0.125 excluded from standard workload); goat-opencode-catalogs-round4-2026-10-20.json. Processing fee ignored; allowances of different models in the same plan are not additive; no usage-panel token+% screenshot — computed from official absolute credits and the price list"
     },
     {
       "zh": "新增1.005亿：min(共享月池$70, 模型allowance $20) ÷ 统一标准负载加权价；official three-part price; Older models all $20; goat-opencode-catalogs-round3-2026-09-30.json。忽略 processing fee；同套餐各模型额度不可相加；无面板 token+% 截图，按官方绝对credits+价表",
@@ -1615,8 +1611,8 @@
       "en": "Vendor self-report, not an official tbench.ai leaderboard run. The Cognition blog's Coding benchmark results table lists Terminal-Bench 4 at 27.3%. The same table's Astra/Sol/Grok 4.6 agree with the official leaderboard; Fable 5.1's 55.8 does not match the official 57.88. No CI, no cost/token data. See devin-swe2-round1-2026-09-12.json."
     },
     {
-      "zh": "厂商自报，非 tbench.ai 官方榜运行。Anthropic 2026-09-22 Opus 5.5 发布页评测表 Terminal-Bench 4 行 66.4%（default effort）；同表 FrontierCode 54.4%、CursorBench 52.5%、GDPval-AA 1846 非本仓库榜单仅留证据；AA/arena/OpenDesign 暂无第三方快照分不补造。见 claude-opus55-round1-2026-09-23.json。",
-      "en": "Vendor self-report, not an official tbench.ai leaderboard run. The Anthropic 2026-09-22 Opus 5.5 release page's eval table shows Terminal-Bench 4 at 66.4% (default effort); the same table's FrontierCode 54.4%, CursorBench 52.5% and GDPval-AA 1846 are not this repository's boards — kept as evidence only; AA/arena/OpenDesign have no third-party snapshot score, so none is fabricated. See claude-opus55-round1-2026-09-23.json."
+      "zh": "厂商自报，非 tbench.ai 官方榜运行。HF 模型卡 Terminal-Bench 4.0 列 42.3。",
+      "en": "Vendor self-report, not an official tbench.ai leaderboard run. The HF model card lists Terminal-Bench 4.0 at 42.3."
     },
     {
       "zh": "AA 内嵌载荷标记 intelligenceIndexIsEstimated=true；按估计值保留，不作完整实测处理。",

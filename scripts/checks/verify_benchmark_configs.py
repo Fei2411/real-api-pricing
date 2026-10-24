@@ -105,10 +105,10 @@ assert all(c["mean_cost_usd_per_task"] is not None for c in open_design)
 assert indexed["deepseek_v41_flash_offpeak::deepseek-v4.1-flash"]["real_usd_per_mtok"] == 0.00966
 assert indexed["deepseek_v41_flash_peak::deepseek-v4.1-flash"]["real_usd_per_mtok"] == 0.01932
 assert indexed["deepseek_v41_flash_offpeak::deepseek-v4.1-flash"]["open_design_arena__score"] == 81.2
-# AA round4 (2026-09-22) superseded round3, so the round3-pinned intelligence
-# supplement retired and these two scores now come from round4 itself.
-assert indexed["opencode_go::deepseek-v4.1-flash"]["aa_intelligence_index__score"] == 39.4562
-assert indexed["opencode_go::deepseek-v4.1-flash"]["terminal_bench_4__score"] == 31.2
+# DeepSeek V4.1 Flash 1017 (2026-10-17) is a dated build of the same served model;
+# its AA and vendor TB4 rows (round6 supplements) outscore the 0910 build.
+assert indexed["opencode_go::deepseek-v4.1-flash"]["aa_intelligence_index__score"] == 45.0965
+assert indexed["opencode_go::deepseek-v4.1-flash"]["terminal_bench_4__score"] == 42.3
 assert indexed["opencode_go::deepseek-v4.1-flash"]["terminal_bench_4__score_is_self_reported"] is True
 assert indexed["chatgpt_plus::gpt-6-astra"]["aa_intelligence_index__score"] == 52.6737
 assert indexed["chatgpt_plus::gpt-6-astra"]["aa_intelligence_index__configuration_count"] == 5

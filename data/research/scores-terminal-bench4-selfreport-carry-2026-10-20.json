@@ -1,0 +1,68 @@
+{
+  "collectedAt": "2026-10-20",
+  "supplement": true,
+  "baseSnapshot": "scores-terminal-bench4-round4-2026-10-20.json",
+  "supplementNote": "补充档：DeepSeek V4.1 Flash 31.2 与 SWE-2 27.3 两条厂商自报行原样转挂到新官方快照 round4（两者官方榜仍无行）。Claude Opus 5.5 自报 66.4 不再转挂：round4 已有官方行 64.85。新增 DeepSeek V4.1 Flash 1017 厂商自报 42.3（HF 模型卡）。",
+  "boards": [
+    {
+      "boardId": "terminal_bench_4",
+      "name": "Terminal-Bench 4.0",
+      "url": "https://www.tbench.ai/leaderboard",
+      "metric": "Resolution Rate %",
+      "snapshotDate": "2026-10-06",
+      "note": "同新官方快照元数据。"
+    }
+  ],
+  "scores": [
+    {
+      "boardId": "terminal_bench_4",
+      "model": "deepseek-v4.1-flash",
+      "variantLabel": "DeepSeek Harness Minimal - DeepSeek V4.1 Flash (max)",
+      "score": 31.2,
+      "secondary": {
+        "selfReported": true,
+        "reportedBy": "DeepSeek",
+        "agentHarness": "DeepSeek Harness Minimal",
+        "reasoningEffort": "max",
+        "contextWindowTokens": 1000000,
+        "temperature": 1.0,
+        "topP": 0.95
+      },
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+      "checkedAt": "2026-09-12",
+      "carriedFrom": "scores-terminal-bench4-round2-selfreport-2026-09-12.json"
+    },
+    {
+      "boardId": "terminal_bench_4",
+      "model": "swe-2",
+      "variantLabel": "Devin CLI - SWE-2 (best effort)",
+      "score": 27.3,
+      "secondary": {
+        "selfReported": true,
+        "reportedBy": "Cognition",
+        "agentHarness": "Devin CLI",
+        "reasoningEffort": null,
+        "effortNote": "博客附录 A：报各 reasoning-effort 中最高分，未指明是 medium/high/max 中哪一档"
+      },
+      "source": "https://cognition.com/blog/swe-2",
+      "checkedAt": "2026-09-12",
+      "note": "厂商自报，非 tbench.ai 官方榜运行。Cognition 博客 Coding benchmark results 表 Terminal-Bench 4 列 27.3%。同表 Astra/Sol/Grok 4.6 与官方榜一致，Fable 5.1 55.8 与官方榜 57.88 不一致。无 CI、无成本/token 数据。见 devin-swe2-round1-2026-09-12.json。",
+      "carriedFrom": "scores-terminal-bench4-round2-selfreport-2026-09-12.json"
+    },
+    {
+      "boardId": "terminal_bench_4",
+      "model": "deepseek-v4.1-flash",
+      "variantLabel": "Claude Code - DeepSeek V4.1 Flash 1017 (max) - self-reported",
+      "score": 42.3,
+      "secondary": {
+        "selfReported": true,
+        "reportedBy": "DeepSeek",
+        "reasoningEffort": "max",
+        "agentHarness": "Claude Code"
+      },
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "checkedAt": "2026-10-20",
+      "note": "厂商自报，非 tbench.ai 官方榜运行。HF 模型卡 Terminal-Bench 4.0 列 42.3。"
+    }
+  ]
+}

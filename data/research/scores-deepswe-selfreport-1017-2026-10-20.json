@@ -1,0 +1,23 @@
+{
+  "collectedAt": "2026-10-20",
+  "supplement": true,
+  "baseSnapshot": "scores-deepswe-1.1-2026-09-12.json",
+  "supplementNote": "DeepSWE 官方榜 2026-10-20 复查：live JSON generated_at 2026-09-22、70 行，与现行快照相同，无 1017 行，不出新快照。只追加 DeepSeek V4.1 Flash 1017 厂商自报 77.0（HF 模型卡）。",
+  "boards": [],
+  "scores": [
+    {
+      "boardId": "deepswe_1_1",
+      "model": "deepseek-v4.1-flash",
+      "variantLabel": "mini-SWE - DeepSeek V4.1 Flash 1017 (max)",
+      "score": 77.0,
+      "secondary": {
+        "selfReported": true,
+        "reportedBy": "DeepSeek",
+        "reasoningEffort": "max",
+        "agentHarness": "mini-SWE"
+      },
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "checkedAt": "2026-10-20"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "collectedAt": "2026-10-20",
+  "collectionMethod": "Fetched the official OpenCode Go docs and plan pages and the Command Code GOAT plan page (RSC payload: credits table with creditDeal, request-estimate rows with budgetUsd/budgetSteps, plan-limit list) around 15:40Z on 2026-10-20. Official tables only.",
+  "sources": [
+    "https://opencode.ai/docs/go/",
+    "https://opencode.ai/go",
+    "https://commandcode.ai/docs/plans/goat",
+    "https://commandcode.ai/pricing"
+  ],
+  "scope": "OpenCode Go and Command Code GOAT catalog/quota re-verification. No leaderboard data.",
+  "opencodeGo": {
+    "sharedPool": "removed: the docs no longer list the $12/$30/$60 shared 5h/week/month usage limits; they now state 'Each model has the following usage limits: 5-hour — 20% of the monthly limit; weekly — 50%; and monthly — 100%.' Adopted formula becomes model monthly limit / standard-workload blended price.",
+    "tiers": {
+      "go": 10,
+      "goPlus": 40
+    },
+    "goPlusDeferred": "Go Plus $40/month (per-model limits roughly 2-8x Go, e.g. DeepSeek V4.1 Flash $160, GLM-5.3-Flash $180, Kimi K3 $60) has no plan_id yet; not adopted in this round.",
+    "changes": [
+      {
+        "model": "deepseek-v4.1-flash",
+        "monthlyLimitUsd": {
+          "old": 60,
+          "new": 80
+        },
+        "monthlyYi": {
+          "old": 62.112,
+          "new": 82.816
+        },
+        "offPeak": {
+          "cachedRead": 0.003,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "peak": {
+          "cachedRead": 0.006,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "requestsPerMonth": 173330
+      },
+      {
+        "model": "claude-haiku-5.5",
+        "added": true,
+        "monthlyLimitUsd": 15,
+        "monthlyYi": 10.204,
+        "modelId": "claude-haiku-5-5",
+        "price": {
+          "le100K": {
+            "input": 0.1,
+            "output": 0.5,
+            "cachedRead": 0.01,
+            "cacheWrite": 0.125
+          },
+          "gt100K": {
+            "input": 0.5,
+            "output": 2.5,
+            "cachedRead": 0.05,
+            "cacheWrite": 0.625
+          }
+        },
+        "requestsPerMonth": 19230
+      }
+    ],
+    "delisted": [
+      "grok-4.6",
+      "kimi-k2.6",
+      "minimax-m2.7",
+      "deepseek-v4-flash",
+      "deepseek-v4-flash-vision-exp"
+    ],
+    "freeLimitedNotAdopted": [
+      "minimax-m3.1-flash-free",
+      "longcat-2.5-preview-free",
+      "beam-free"
+    ],
+    "limitedTimeNotAdopted": {
+      "step-5-preview": "4x $15->$60, no end date",
+      "gemini-4-argon-contributor": "2x $30->$60, no end date"
+    },
+    "unchanged": "All other Go rows match the adopted per-model limits and three-part prices."
+  },
+  "commandCodeGoat": {
+    "sharedPoolUsd": 70,
+    "sharedPoolQuote": "5-hour limit - $14 of usage; Weekly limit - $35 of usage; Monthly limit - $70 of usage",
+    "marketingNote": "Plan page says 'Your $10 buys $80 of credits - an 8x multiplier'; that is the largest per-model allowance, not the shared pool, which stays $70.",
+    "changes": [
+      {
+        "model": "deepseek-v4.1-flash",
+        "creditsUsd": {
+          "old": 60,
+          "new": 80
+        },
+        "effectiveUsd": 70,
+        "monthlyYi": {
+          "old": 62.112,
+          "new": 72.464
+        },
+        "creditDeal": {
+          "was": 80,
+          "now": 100,
+          "starts": "2026-10-20T01:00:00Z",
+          "expires": "2026-10-21T00:59:59Z",
+          "adopted": false,
+          "reason": "24-hour temporary boost"
+        }
+      },
+      {
+        "model": "glm-5.3-flash",
+        "creditsUsd": {
+          "old": 40,
+          "new": 80
+        },
+        "effectiveUsd": 70,
+        "monthlyYi": {
+          "old": 11.315,
+          "new": 19.802
+        },
+        "creditDeal": {
+          "was": 80,
+          "now": 100,
+          "term": "through Oct 17th",
+          "adopted": false,
+          "reason": "ended; $80 is the standing tier (budgetSteps 100 at 2026-10-14T12:30Z, back to 80 at 2026-10-17T12:30Z)"
+        }
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "creditsUsd": {
+          "old": 70,
+          "new": 20
+        },
+        "monthlyYi": {
+          "old": 0.921,
+          "new": 0.263
+        }
+      },
+      {
+        "model": "claude-sonnet-5.5",
+        "cachedRead": {
+          "old": 0.2,
+          "new": 0.1
+        },
+        "creditsUsd": 10,
+        "monthlyYi": {
+          "old": 0.34,
+          "new": 0.508
+        }
+      },
+      {
+        "model": "claude-haiku-5.5",
+        "added": true,
+        "creditsUsd": 20,
+        "price": {
+          "input": 0.1,
+          "output": 0.5,
+          "cachedRead": 0.01,
+          "cacheWrite": 0.125
+        },
+        "monthlyYi": 13.605
+      }
+    ],
+    "newResearchOnly": [
+      {
+        "name": "Qwen 3.8 Max Prime",
+        "creditsUsd": 20,
+        "input": 4,
+        "output": 12,
+        "cachedRead": 0.5,
+        "cacheWrite": 5
+      },
+      {
+        "name": "Muse Spark Open",
+        "creditsUsd": 20,
+        "input": 1.25,
+        "output": 4.25,
+        "cachedRead": 0.15
+      },
+      {
+        "name": "Nemotron 3.5 Super VL",
+        "creditsUsd": 20,
+        "input": 0.2,
+        "output": 0.5,
+        "cachedRead": 0.04
+      },
+      {
+        "name": "Mistral Large 4",
+        "creditsUsd": 40,
+        "creditDeal": "was $20, now $40 through Oct 20th (budgetSteps to $20 at 2026-10-21T00:00Z)",
+        "input": 1.36,
+        "output": 4.18,
+        "cachedRead": 0.14
+      },
+      {
+        "name": "Jev 1.14.0",
+        "creditsUsd": 20,
+        "input": 0.042,
+        "output": 0,
+        "cachedRead": 0
+      },
+      {
+        "name": "MiniMax M3.1 Flash",
+        "creditsUsd": 20,
+        "input": 0.15,
+        "output": 0.6,
+        "cachedRead": 0.015,
+        "note": "see goat-minimax-m31-flash-round1-2026-10-20.json"
+      }
+    ],
+    "unchanged": "All other GOAT rows (Every model, New models, Older models tables) match the adopted credits and three-part prices."
+  },
+  "standardTokenMix": {
+    "cached": 0.97,
+    "input": 0.025,
+    "output": 0.005
+  },
+  "confidence": "medium",
+  "basis": "official"
+}
