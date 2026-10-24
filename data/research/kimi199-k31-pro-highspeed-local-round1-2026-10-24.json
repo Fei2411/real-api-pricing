@@ -1,0 +1,251 @@
+{
+  "collectedAt": "2026-10-24",
+  "collectionMethod": "Contributor's own Kimi Code CLI session on a legacy Kimi membership CNY 199 (Allegretto) account, model alias kimi-code/k3.1-pro-highspeed with thinking effort high, provider managed:kimi-code (direct Kimi Code OAuth, no gateway or proxy). Token counts were summed offline from the client's local session event log (one usage record per LLM request, fields inputOther / output / inputCacheRead / inputCacheCreation) across the main agent and five sub-agents. The membership dashboard was captured after the run (plan header, monthly pool, 5-hour and 7-day Code usage with reset times). An earlier capture taken while the run was still in progress is not used because its time was not recorded. No capture exists from before the run, so the start-of-window value is inferred from local client logs and the 5h/7d ratio, not observed. The contributor confirms this was the only Kimi Code session that day. Official model-page wording was read on 2026-10-24. Research-only — no adopted row generated and no adopted value changed.",
+  "sources": [
+    "Contributor local Kimi Code CLI session log and one post-run membership dashboard capture (private originals; aggregates and a redacted screenshot only, see PUBLICATION.md)",
+    "https://www.kimi.com/code/docs/kimi-code/models",
+    "data/research/goat-kimi-k31-pro-round1-2026-10-24.json (third-party catalog three-part price for Kimi K3.1 Pro, cross-reference only)"
+  ],
+  "scope": "One Kimi Code session of about 22 minutes: a multi-agent MR-drafting task on a Rust repository (plan mode, two explore sub-agents, two coder sub-agents, one more explore sub-agent, Postgres-backed acceptance test run). Consumption sample for the model identifier k3.1-pro-highspeed on the legacy CNY 199 tier. One post-run dashboard reading gives a weekly back-calculation; the pre-run 0% is inferred, so grade it medium at most under CONVENTIONS.md §3.",
+  "adoptionStatus": "research-only; not adopted. adopted.csv has no kimi_allegretto_cn × kimi-k3.1-pro or × kimi-k3.1-pro-highspeed row; DECISIONS.md still says HighSpeed has no adoptable value. This file supplies a candidate weekly/monthly back-calculation for kimi-k3.1-pro-highspeed on the legacy CNY 199 tier; whether to add a row (and at which confidence) is left to the maintainer.",
+  "target": {
+    "plan": "Kimi 会员 199 / Allegretto (CN, legacy plan)",
+    "planIdCandidate": "kimi_allegretto_cn",
+    "model": "k3.1-pro-highspeed (K3.1 Pro Highspeed)",
+    "servedModelCandidate": "kimi-k3.1-pro-highspeed",
+    "thinkingEffort": "high",
+    "client": "Kimi Code CLI, multi-agent (main + 5 sub-agents, all bound to the same model alias and effort)",
+    "requiredEvidenceForAllowance": "Same account, same model, total tokens plus a 7-day or monthly dashboard percentage at the start and end of the window. End reading captured; start reading inferred (see dashboardAfterRun)."
+  },
+  "observed": {
+    "windowUtc": {
+      "firstRequest": "2026-10-24T13:04:02Z",
+      "lastRequest": "2026-10-24T13:25:58Z",
+      "approxDurationMinutes": 22
+    },
+    "windowBeijing": "2026-10-24 21:04 → 21:26 UTC+8",
+    "llmRequests": 152,
+    "tokens": {
+      "inputUncached": 666126,
+      "inputCacheRead": 15206144,
+      "inputCacheCreation": 0,
+      "output": 88467,
+      "total": 15960737
+    },
+    "tokenShares": {
+      "inputUncached": 0.0417,
+      "inputCacheRead": 0.9527,
+      "output": 0.0055,
+      "note": "Lower cache share than the repository standard workload (97 / 2.5 / 0.5) because each of the five sub-agents starts a fresh context and the main agent's 94 requests re-read a 100k+ token context. Output share 0.55% is in line with the standard 0.5%."
+    },
+    "contextPerRequest": {
+      "maxTokens": 168660,
+      "medianTokens": 104563,
+      "requestsOver256k": 0,
+      "note": "No request exceeded the 262,144-token boundary, so this sample does not exercise the 1M-context entitlement."
+    },
+    "perAgent": [
+      {
+        "agent": "main",
+        "profile": "agent",
+        "requests": 94,
+        "inputUncached": 161611,
+        "inputCacheRead": 11470336,
+        "output": 35544
+      },
+      {
+        "agent": "sub-1",
+        "profile": "explore",
+        "requests": 8,
+        "inputUncached": 139842,
+        "inputCacheRead": 507648,
+        "output": 13807
+      },
+      {
+        "agent": "sub-2",
+        "profile": "explore",
+        "requests": 9,
+        "inputUncached": 131495,
+        "inputCacheRead": 600064,
+        "output": 12682
+      },
+      {
+        "agent": "sub-3",
+        "profile": "coder",
+        "requests": 17,
+        "inputUncached": 75776,
+        "inputCacheRead": 1161728,
+        "output": 7979
+      },
+      {
+        "agent": "sub-4",
+        "profile": "coder",
+        "requests": 14,
+        "inputUncached": 82963,
+        "inputCacheRead": 951808,
+        "output": 11902
+      },
+      {
+        "agent": "sub-5",
+        "profile": "explore",
+        "requests": 10,
+        "inputUncached": 74439,
+        "inputCacheRead": 514560,
+        "output": 6553
+      }
+    ],
+    "cacheCreationNote": "The client log reports inputCacheCreation = 0 on every request. Kimi's API bills cache writes separately for the K3 series, so either the Kimi Code channel does not expose cache-write counts to the client or they are folded into other fields. Treat the uncached-input figure as 'not cache-hit input', not as a verified cache-write count.",
+    "rateLimit": {
+      "http429Count": 1,
+      "at": "2026-10-24T13:19:05Z",
+      "message": "429 The engine is currently overloaded, please try again later",
+      "note": "Capacity overload, not a quota exhaustion message; the client retried after ~0.5 s and the turn completed. No quota-limit message appeared in the session."
+    },
+    "dashboardQuotaPercent": {
+      "fiveHourCodePercent": 81.64,
+      "sevenDayCodePercent": 16.33,
+      "monthlyTotalPercent": 20.68
+    },
+    "dashboardQuotaNote": "Captured once after the run, see dashboardAfterRun."
+  },
+  "officialModelPage": {
+    "source": "https://www.kimi.com/code/docs/kimi-code/models",
+    "readAt": "2026-10-24",
+    "k3.1-pro-highspeed": {
+      "displayName": "K3.1 Pro Highspeed",
+      "speed": "high-speed, about 2–3× the standard version",
+      "consumptionMultiplier": 2,
+      "consumptionQuote": "高速版（约 2–3 倍速，2 倍消耗）; 消耗约为普速版两倍",
+      "tiers": "Pro and above (new plans) / Allegretto and above (legacy plans)",
+      "contextWindow": "up to 1,048,576 for higher tiers"
+    },
+    "k3.1-pro": {
+      "displayName": "K3.1 Pro",
+      "consumptionMultiplier": 1,
+      "tiers": "Plus and above / Moderato and above; 1M context needs Pro and above / Allegretto and above"
+    },
+    "consistencyWithThisRun": "The legacy CNY 199 Allegretto account could call k3.1-pro-highspeed for the whole session, matching the page's 'Allegretto and above' entitlement.",
+    "implicationIfAdopted": "If the maintainer later adopts a kimi_allegretto_cn × kimi-k3.1-pro allowance, the highspeed variant's raw-token allowance should be derived as one half of it (official 2× credit consumption), the same way the official k3 (1M) = 2 × k3-256k and K2.7 Code Highspeed = 3× multipliers are handled, rather than measured separately."
+  },
+  "crossReferenceOnly": {
+    "kimiK31ProThirdPartyThreePartPriceUsd": {
+      "inputPerMTok": 2.0,
+      "outputPerMTok": 10.0,
+      "cachedReadPerMTok": 0.2,
+      "source": "data/research/goat-kimi-k31-pro-round1-2026-10-24.json (Command Code GOAT catalog, 2026-10-24)",
+      "note": "Not Moonshot's official API price. The official pricing page (platform.kimi.com/docs/pricing/chat) renders its tables client-side and was not captured on 2026-10-24. Recorded only so a future list-worth conversion of this sample has a documented candidate price; no list-worth is computed here."
+    },
+    "workloadNormalizedEstimate": {
+      "listWorthUsd": 5.258,
+      "listWorthFormula": "0.666126 MTok × $2 + 15.206144 MTok × $0.20 + 0.088467 MTok × $10, using the third-party catalog price above",
+      "standardWorkloadBlendUsdPerMTok": 0.294,
+      "standardWorkloadBlendFormula": "0.97 × $0.20 + 0.025 × $2 + 0.005 × $10 (CONVENTIONS.md standard workload 97 / 2.5 / 0.5)",
+      "normalizationFactor": 1.1206,
+      "weeklyStandardWorkloadTokensHighspeed": 109521535,
+      "monthlyStandardWorkloadYiK31ProEquivalent": 10.952,
+      "vsAdoptedK3": -0.245,
+      "note": "Shows how much of the gap to the adopted K3 row is explained by this run's lower cache share. Not an adoptable value: the price is a third-party catalog price, not Moonshot's official list, and the adopted K3 row itself is raw."
+    }
+  },
+  "calculation": {
+    "inputs": {
+      "totalTokensThisRun": 15960737,
+      "sevenDayPercentAfter": 16.33,
+      "sevenDayPercentBeforeInferred": 0,
+      "fiveHourPercentAfter": 81.64,
+      "creditMultiplierHighspeed": 2,
+      "kimiMonthlyToWeeklyRatio": 5
+    },
+    "weeklyRawTokensHighspeed": {
+      "point": 97738745,
+      "roundingRange": [
+        97708828,
+        97768680
+      ],
+      "formula": "total ÷ 16.33%"
+    },
+    "weeklyRawTokensFromFiveHour": {
+      "point": 97750717,
+      "fiveHourPool": 19550143,
+      "roundingRange": [
+        97744730,
+        97756704
+      ],
+      "formula": "total ÷ 81.64% × 5; agrees with the 7-day figure to 0.01%"
+    },
+    "monthlyRawTokensHighspeed": {
+      "point": 488693723,
+      "yi": 4.887,
+      "formula": "weekly × 5 (Kimi monthly pool = 5 weekly pools, kimi-adoption-round6-2026-09-08.json)"
+    },
+    "k31ProStandardEquivalent": {
+      "weeklyTokens": 195477489,
+      "monthlyTokens": 977387446,
+      "monthlyYi": 9.774,
+      "formula": "raw highspeed tokens × 2 (official: highspeed consumes 2× credits of k3.1-pro); derived, not a k3.1-pro measurement"
+    },
+    "comparison": {
+      "adoptedKimi199K3MonthlyYi": 14.51,
+      "adoptedBasis": "raw tokens, K3-256K-dominated mixed sample with 97.5% cache share, 2026-07-25~26",
+      "k31ProEquivalentVsAdoptedK3": -0.326,
+      "note": "4.89亿 raw highspeed tokens per month is a different credit rate from the adopted K3 figure and must not be read as a capacity drop. The 2× standard-equivalent 9.77亿 is about one third below the adopted K3 row; part of that gap is this run's lower cache share (95.3% vs 97.5%), see crossReferenceOnly.workloadNormalizedEstimate. Which K3 variant k3.1-pro's credit rate corresponds to (k3-256k or k3 1M, officially 2× apart) is not stated by the vendor."
+    },
+    "notWorkloadNormalized": true,
+    "note": "Headline figures are raw client totals (cache read + uncached input + output), the same basis as the repository's existing Kimi rows. The workload-normalized estimate below uses a third-party catalog price and is cross-reference only."
+  },
+  "whatWouldUpgradeThisSample": [
+    "A dashboard capture taken immediately before a session on the same account, and one immediately after with its time noted, so both readings are observed instead of inferred.",
+    "A longer or repeated k3.1-pro-highspeed-only window (more than one 5-hour block) to satisfy the multi-block requirement in magpie-local-tokyo-round1-2026-10-21.md's rubric.",
+    "The same run with k3.1-pro (standard speed) to check the official 2× consumption ratio against dashboard deltas.",
+    "Whether the Kimi Code channel reports cache-write tokens anywhere, so the input split can be reconciled with Moonshot's K3-series cache-write billing."
+  ],
+  "confidence": "medium candidate (dashboard back-calculation, exact client token sum, 16.33pp drop, 152 calls, contributor-confirmed single session that day; but a single 5-hour block and an inferred rather than observed 0% start reading) — maintainer to grade",
+  "basis": "local_client_log + post_run_dashboard + official_docs",
+  "redaction": "Session identifiers, prompts, repository paths and account identifiers are omitted. The screenshot shows the plan name, renewal date, and usage bars with percentages and reset times; no name, avatar, e-mail or account ID.",
+  "dashboardAfterRun": {
+    "screenshot": "data/research/evidence/kimi199-k31-pro-highspeed-dashboard-2026-10-24.png",
+    "capturedBeijing": "2026-10-24 evening, after the last request at 21:26; exact minute not recorded",
+    "planHeader": {
+      "planName": "Allegretto",
+      "creditsReset": "monthly",
+      "nextAutoRenewal": "2026-11-14",
+      "note": "Legacy plan name on the subscription page; confirms the account is on the CNY 199 Allegretto tier rather than a new Plus/Pro tier."
+    },
+    "monthlyUsage": {
+      "totalPercent": 20.68,
+      "resetsBeijing": "2026-11-14 00:04",
+      "segments": {
+        "kimiChatPercentFromBar": 13.4,
+        "codePercentFromBar": 7.3,
+        "measurement": "bar pixel widths 197 px and 107 px of a 1472 px track; sum 20.65 vs displayed 20.68"
+      },
+      "note": "The monthly pool is shared between Kimi chat and Kimi Code. The Code segment also contains k3-256k usage from 2026-10-22 (14.45M raw tokens in local logs) and is not used for any back-calculation."
+    },
+    "fiveHourUsage": {
+      "label": "Code",
+      "percent": 81.64,
+      "resetsBeijing": "10-25 00:04"
+    },
+    "sevenDayUsage": {
+      "label": "Code",
+      "percent": 16.33,
+      "resetsBeijing": "10-30 00:04"
+    },
+    "windowAnchoring": "All three windows reset at 00:04, the same minute as the subscription renewal. This matches the official wording that Kimi Code allowances refresh every 7 days counted from the subscription day, i.e. fixed tiles rather than windows rolling from first use. The current 7-day tile therefore opened 2026-10-23 00:04 and excludes the 2026-10-22 k3-256k usage.",
+    "fiveHourWindowNote": "'Resets 10-25 00:04' with a first request at 21:04 means the 5-hour slot did not open at the first request; how Kimi tiles 5-hour slots inside the day is not determinable from the client side. The 5h/7d ratio shows the slot contains exactly this run's consumption.",
+    "preRunReading": {
+      "observed": false,
+      "inferredPercent": 0,
+      "basis": [
+        "Local Kimi Code client logs across all workspaces show no LLM request between 2026-10-22 10:53 UTC+8 (k3-256k) and the start of this run at 2026-10-24 21:04, and none after 21:26 that day; the 7-day tile opened 2026-10-23 00:04, so no local direct usage other than this run falls inside it.",
+        "5-hour 81.64% ÷ 7-day 16.33% = 4.999, i.e. the two windows carry the same consumption to within display rounding; if the 7-day tile held material usage outside the 5-hour slot the ratio would exceed 5. Consistent with the forum rule that one 5-hour pool equals 20% of the weekly pool (kimi199-round5-swe17-2026-09-05.json).",
+        "Contributor statement: this was the only Kimi Code session of the day."
+      ]
+    },
+    "attributionCaveats": [
+      "The contributor's machine also runs a local Magpie gateway app whose catalog lists third-party Kimi endpoints; it does not hold this membership's credentials and is not covered by the log scan.",
+      "Other devices or the Kimi chat app could draw on the same monthly pool; the 5-hour and 7-day bars show a 'Code' series only, which is what is read here.",
+      "Display rounding to two decimals is included in the ranges below."
+    ]
+  }
+}
