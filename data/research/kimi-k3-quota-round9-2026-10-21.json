@@ -1,0 +1,87 @@
+{
+  "collectedAt": "2026-10-21",
+  "sourceType": "dashboard_ratio_sampling",
+  "scopeNote": "Kimi 国内 699 档（Allegro）K3 周/月池实测：同一账号两台设备（macOS + Windows）分钟级额度比率采样 × 跨设备本地用量日志，在不跨 reset 的时间段上配对 Δtoken/Δ比率 外推池大小。仅提交证据与推算，不改采用值，请维护者裁定。",
+  "method": {
+    "sampling": "额度比率来自两个采集器的 /usages 快照日志（HUD 缓存变点采样 + Windows 常驻分钟级轮询），2026-09-17~2026-10-21 共 13,372 条 ratio 样本；用量侧为两台设备 CLI 会话的逐请求 token 事实（input/output/cacheRead/cacheWrite 四分量，kimi-code/k3* 与 kimi-for-coding 与 deepseek 子代理池模型分组）。",
+    "intervalPairing": "同一池（resetAt 归并 5 分钟桶，两台采集器观测同一池相差 1 秒）且比率单调（容忍 ≤0.5% 服务端抖动）的连续段；周区间要求 Δ≥5pp，5h 窗口要求起始比率 ≤15% 且 Δ≥15pp；绝不跨 reset；v2 绝对值格式样本（used/limit）不与 v3 比率样本交叉差分。",
+    "worthConversion": "段内 token 按模型公开列表价折 list-worth（K3 ¥20/100/2 per Mtok input/output/cacheRead，缓存写按 input 价；K2.7 Code ¥6.5/27/1.3；DeepSeek 峰谷已按北京时间工作日 9-12/14-18 处理）；周 worth × 5（Kimi 月池=周池×5）→ 月 worth ÷ 标准负载混合价 = 月 token。",
+    "blendPrice": "K3 标准负载混合价 $0.441/Mtok（0.97×$0.3 + 0.025×$3 + 0.005×$15，input $3 / output $15 / cacheRead $0.3 为 Moonshot 公开列表价）。"
+  },
+  "structureFinding": {
+    "claim": "Kimi 的 5h 池与周池计量同一额度单位，周池 = 5 × 5h 池（精确）。",
+    "evidence": "全部 46 个不跨周 reset 的干净 5h 块，5hΔ/周Δ 比值 4.98–5.03，中位 5.00。",
+    "note": "这是与「月池 = 周池 × 5」正交的另一层 5：月池 = 25 × 5h 池。即 699 档实测 5h 池 ≈ 100M 主线 token。"
+  },
+  "items": [
+    {
+      "planId": "kimi_allegro_cn",
+      "model": "kimi-k3",
+      "evidenceType": "dashboard_ratio_interval_pairing",
+      "source": "local_dual_device_sampling_2026-09-17_2026-10-21",
+      "observed": {
+        "weeklyIntervals": [
+          { "span": "2026-09-17 22:09 ~ 09-23 02:20 (+08)", "deltaFraction": 0.569, "mainTokens": 269000000, "mainWorthCny": 774.4, "weeklyPoolWorthCny": 1361 },
+          { "span": "2026-09-23 19:46 ~ 09-29 02:04 (+08)", "deltaFraction": 0.071, "mainTokens": 35400000, "mainWorthCny": 111.5, "weeklyPoolWorthCny": 1575, "note": "全主线模型、无子代理，最干净样本" },
+          { "span": "2026-10-03 22:04 ~ 10-10 15:38 (+08)", "deltaFraction": 0.706, "mainTokens": 341100000, "mainWorthCny": 930.5, "weeklyPoolWorthCny": 1317 },
+          { "span": "2026-10-10 23:09 ~ 10-17 15:47 (+08)", "deltaFraction": 0.897, "mainTokens": 560700000, "mainWorthCny": 1582.3, "weeklyPoolWorthCny": 1765 },
+          { "span": "2026-10-18 22:40 ~ 10-21 19:51 (+08)", "deltaFraction": 0.83, "mainTokens": 469900000, "mainWorthCny": 1393.9, "weeklyPoolWorthCny": 1678, "note": "该周尚未 reset（10-24），为部分周区间" }
+        ],
+        "pureK3FiveHourWindows": [
+          { "span": "2026-09-23 00:04 ~ 02:20 (+08)", "deltaFraction": 0.316, "k3Tokens": 33900000, "fiveHPoolK3Tokens": 107000000 },
+          { "span": "2026-10-07 12:03 ~ 15:52 (+08)", "deltaFraction": 0.298, "k3Tokens": 32500000, "fiveHPoolK3Tokens": 109000000 },
+          { "span": "2026-10-21 09:52 ~ 14:52 (+08)", "deltaFraction": 0.288, "k3Tokens": 19800000, "fiveHPoolK3Tokens": 69000000 }
+        ]
+      },
+      "calculation": {
+        "weeklyPoolWorthCnyMedian": 1575,
+        "weeklyPoolWorthCnyRange": [1317, 1765],
+        "monthlyWorthUsd": "1575 / 6.7787 × 5 = 1161.7",
+        "monthlyTokensK3Yi": "1161.7 ÷ 0.441 = 2634M ≈ 26.3 亿（区间 22.0–29.5 亿）",
+        "rawCrossCheck": "近纯 K3 周（9/23 起）35.4M ÷ 7.1% ≈ 周池 500M raw token × 5 = 25.0 亿/月，与 worth 折算互洽",
+        "fiveHPool": "纯 K3 5h 窗口 ≈ 69–109M token；× 5 = 周池，与周区间独立自洽",
+        "formula": "段主线 list-worth ÷ 段占周额度 → 周 worth × 5 → 月 worth ÷ K3 标准负载混合价"
+      },
+      "confidence": "high",
+      "confidenceBasis": "面板比率反推 + 分钟级双采集器密度 + 全 token 分项；各周区间推算值离散度 ±15%"
+    }
+  ],
+  "adoptionCalculation": {
+    "proposedMonthlyYi699K3": 26.3,
+    "proposedRealUsdPerMtok699": 0.03758546,
+    "dataDate": "2026-09-17~2026-10-21",
+    "note": "仅陈述 699 档实测：中位锚 26.3 亿，区间 22.0–29.5 亿。现行 699 档 43.53 亿是由 199 锚按官方 60/20 派生的值、无独立实测；本测量是该档首个带 token 分项的密度采样证据。是否采用及是否联动其他档位由维护者裁定，本文件不作跨档反推。"
+  },
+  "consistencyChecks": [
+    {
+      "with": "V2EX 纯 K2.7 样本跟帖的 worth 估算（2026-08-20，199 档面板）：sillydaddy 按 API 标价折算 ¥18.6 ÷ 0.76% ≈ ¥2500/月",
+      "result": "若官方 60/20 档位倍率成立，本测量折算到 199 档为 ¥2625/月，与该估算相差约 +5%",
+      "verdict": "条件性旁证：仅作为「本 699 档测量量级合理」的交叉参考，不构成对 199 档采用值的主张。"
+    },
+    {
+      "with": "linux.do 699 档混合大样本（2026-07-21，1.42B token / 月 28.3%，K2.7 约 85.6% 混 K3）",
+      "result": "按列表价折 worth 约 ¥0.9 万/月量级（估算），与本测量 ¥7875/月相差约 15%",
+      "verdict": "同档独立账号的量级互洽。该样本因模型混合扣减权重未知未被采用，worth 口径下与本测量同量级。"
+    },
+    {
+      "with": "linux.do/Rorysky 二手转述「100% 五小时 = 20% 周额度」",
+      "result": "本测量 46 个干净 5h 块直接证实：5hΔ/周Δ = 4.98–5.03，中位 5.00",
+      "verdict": "把二手转述升级为密度采样下的精确结构事实（周池 = 5 × 5h 池）。"
+    }
+  ],
+  "tensions": [
+    {
+      "with": "现行 699 档采用 43.53 亿",
+      "magnitude": "本测量 26.3 亿为其 0.6 倍",
+      "note": "现行值是 199 档锚 × 官方 60/20 的派生值，699 档此前无直接实测；两者关系（倍率准确性、7 月锚口径、池是否随时间调整）请维护者裁定，本证据仅约束 699 档。"
+    }
+  ],
+  "caveats": [
+    "DeepSeek 子代理池模型（deepseek-v4.1-flash/-max 等别名）疑似折扣计费：其占比高的窗口表观池系统性偏大，故主锚只用 kimi-code/k3* + kimi-for-coding 的 worth，子代理成本另列不入锚。",
+    "快照差分配对是经验估计，非账单、非服务端精确记账。",
+    "比率分辨率 1e-4；区间端点存在 ±1 分钟级对齐误差，短窗口占比更高。",
+    "样本覆盖同一账号的两台设备；若该账号存在未被本地日志覆盖的客户端消耗，池推算会偏大。"
+  ],
+  "privacy": "仅含 token 合计、列表价折算与额度比率；无会话内容、无路径、无凭证、无账户标识。",
+  "roundingNote": "建议值取 5 个周区间中位锚 26.3 亿并注明区间 22.0–29.5 亿；raw 口径（未折算）为 25.0 亿/月，留作对照。"
+}
