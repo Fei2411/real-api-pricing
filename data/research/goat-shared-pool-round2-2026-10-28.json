@@ -1,0 +1,242 @@
+{
+  "collectedAt": "2026-10-28",
+  "collectionMethod": "Manual capture of the official Command Code pages (English) around 10:40 Beijing time on 2026-10-28 (about 02:40Z): the public pricing page, the GOAT plan page and the pricing-limits resource page, read as published, and compared against the 2026-10-27 capture recorded in data/research/goat-shared-pool-round1-2026-10-27.json. The pricing-page GOAT/Pro credit wording (plan card, comparison table, per-plan detail blocks and the 'Which plan is right for you?' section), the plan-page FAQ heading and usage-limit block, the pricing-limits plan table and the embedded RSC payload (budgetUsd / rates / budgetSteps per model) were checked. Research-only — no adopted row generated, no adopted value changed, no script changed.",
+  "sources": [
+    "https://commandcode.ai/pricing",
+    "https://commandcode.ai/docs/plans/goat",
+    "https://commandcode.ai/docs/resources/pricing-limits"
+  ],
+  "scope": "Command Code GOAT official pages only. One topic changed on 2026-10-28: the public pricing page caught up with the docs pages and now advertises the GOAT plan with the same 'Up to $100' credits wording (and Pro with 'Up to $110'), so the inconsistency recorded on 2026-10-27 is gone. No per-model allowance changed (all 59 GOAT models keep the same budgetUsd / rates / budgetSteps in the embedded RSC payload), no model was added to or removed from the GOAT plan, no price changed, no leaderboard/score data touched, no OpenCode Go rows touched, no adopted.csv row.",
+  "previousCapture": {
+    "capturedAt": "2026-10-27",
+    "file": "data/research/goat-shared-pool-round1-2026-10-27.json",
+    "note": "Previous capture of the same three pages on 2026-10-27, recorded in data/research/goat-shared-pool-round1-2026-10-27.json. That file recorded only the pricing page's flat '$70' monthly credits and the resulting inconsistency; the fuller per-block breakdown of the 2026-10-27 pricing page below is transcribed from the same 2026-10-27 capture, so the before/after pairs are page-for-page comparable.",
+    "baselineValues": {
+      "pricingPage": {
+        "goatCardPrice": "$10/month + processing fee",
+        "goatCardCredits": "$80",
+        "comparisonTableMonthlyCredits": {
+          "goat": "$70",
+          "pro": "$80",
+          "go": "$10",
+          "max10x": "$150",
+          "max20x": "$300"
+        },
+        "detailBlocksMonthlyCredits": {
+          "goat": "$70",
+          "pro": "$80"
+        },
+        "whichPlanIsRightForYou": {
+          "goat": "$80 of usage on 29+ models",
+          "pro": "up to $80 of usage on per-model allowances"
+        },
+        "inconsistencyWithDocs": true
+      },
+      "planPage": {
+        "faqHeading": "How is 10x possible?",
+        "usageLimits": {
+          "per5Hours": "up to $20",
+          "perWeek": "up to $50",
+          "perMonth": "up to $100"
+        }
+      },
+      "pricingLimitsPlanTable": {
+        "goat": {
+          "monthlyCredits": "Up to $100",
+          "per5Hours": "Up to $20",
+          "perWeek": "Up to $50"
+        },
+        "pro": {
+          "monthlyCredits": "Up to $110",
+          "per5Hours": "Up to $22",
+          "perWeek": "Up to $55"
+        }
+      },
+      "perModelRscBudgetUsd": "unchanged for all 59 GOAT models"
+    }
+  },
+  "adoptionStatus": "research-only; not adopted; the 'Up to $100' wording now shown on the pricing page is not adopted as a new shared-pool value — scripts/build_adopted.py still uses COMMAND_CODE_GOAT_SHARED_USD = 70 with effective = min(shared pool, per-model allowance), and whether the shared pool itself is now $100 is left to maintainer review",
+  "observed": {
+    "pricingPage": {
+      "url": "https://commandcode.ai/pricing",
+      "changed": true,
+      "goatCard": {
+        "price": {
+          "before": "$10/month + processing fee",
+          "after": "$10/month + processing fee"
+        },
+        "credits": {
+          "before": "$80",
+          "after": "Up to $100 in credits included"
+        }
+      },
+      "comparisonTableMonthlyCredits": {
+        "goat": {
+          "before": "$70",
+          "after": "Up to $100"
+        },
+        "pro": {
+          "before": "$80",
+          "after": "Up to $110"
+        },
+        "go": {
+          "before": "$10",
+          "after": "$10"
+        },
+        "max10x": {
+          "before": "$150",
+          "after": "$150"
+        },
+        "max20x": {
+          "before": "$300",
+          "after": "$300"
+        }
+      },
+      "detailBlocksMonthlyCredits": {
+        "goat": {
+          "before": "$70",
+          "after": "Up to $100"
+        },
+        "pro": {
+          "before": "$80",
+          "after": "Up to $110"
+        }
+      },
+      "whichPlanIsRightForYou": {
+        "goat": {
+          "before": "$80 of usage on 29+ models",
+          "after": "up to $100 of usage on 29+ models"
+        },
+        "pro": {
+          "before": "up to $80 of usage on per-model allowances",
+          "after": "up to $110 of usage on per-model allowances"
+        }
+      },
+      "inconsistency": {
+        "before": true,
+        "after": false,
+        "note": "On 2026-10-27 the pricing page still advertised the GOAT plan with flat dollar credits ($70 in the comparison table, $80 on the GOAT card) while the docs pages already read 'Up to $100', so the two sources disagreed. As of 2026-10-28 all three official pages use the 'up to $100' wording for GOAT and no page contradicts another."
+      }
+    },
+    "planPage": {
+      "url": "https://commandcode.ai/docs/plans/goat",
+      "changed": false,
+      "faqHeading": {
+        "before": "How is 10x possible?",
+        "after": "How is 10x possible?"
+      },
+      "usageLimits": {
+        "before": {
+          "per5Hours": "up to $20",
+          "perWeek": "up to $50",
+          "perMonth": "up to $100"
+        },
+        "after": {
+          "per5Hours": "up to $20",
+          "perWeek": "up to $50",
+          "perMonth": "up to $100"
+        }
+      },
+      "note": "The visible text is identical to the 2026-10-27 capture: the FAQ heading is still 'How is 10x possible?' and the usage limits are still rendered as 'up to $20' / 'up to $50' / 'up to $100'. Nothing on the plan page changed on 2026-10-28."
+    },
+    "pricingLimitsPage": {
+      "url": "https://commandcode.ai/docs/resources/pricing-limits",
+      "changed": false,
+      "allowancesChanged": false,
+      "planTable": {
+        "goat": {
+          "monthlyCredits": "Up to $100",
+          "per5Hours": "Up to $20",
+          "perWeek": "Up to $50"
+        },
+        "pro": {
+          "planPrice": "$20/mo",
+          "monthlyCredits": "Up to $110",
+          "per5Hours": "Up to $22",
+          "perWeek": "Up to $55"
+        }
+      },
+      "note": "The plan table is unchanged from the 2026-10-27 capture and no allowance moved. The only text difference on the page is in the privacy FAQ (see otherObservations), which is unrelated to any credit, allowance or price figure.",
+      "proTrackedInRepo": false,
+      "proNote": "Context only. The Pro plan is not tracked in this repo (no command_code_goat × Pro row in adopted.csv), so no Pro value is proposed for adoption."
+    },
+    "rscPayload": {
+      "source": "embedded RSC payload on https://commandcode.ai/docs/plans/goat",
+      "modelCount": 59,
+      "perModelBudgetUsdChanged": false,
+      "ratesChanged": false,
+      "budgetStepsChanged": false,
+      "note": "All 59 GOAT models keep exactly the budgetUsd, rates and budgetSteps recorded on 2026-10-27. The 2026-10-28 change is confined to the marketing wording on the public pricing page, not to the per-model allowances.",
+      "highestAllowances": [
+        {
+          "model": "Ling 3.1 Flash",
+          "budgetUsd": 100
+        },
+        {
+          "model": "DeepSeek V4.1 Flash (latest)",
+          "budgetUsd": 80
+        },
+        {
+          "model": "GLM-5.3 Flash",
+          "budgetUsd": 80
+        }
+      ],
+      "highestAllowancesNote": "The top of the allowance list is unchanged: Ling 3.1 Flash stays at $100 and no model exceeds it, so the '$100' wording did not come from a new per-model allowance."
+    }
+  },
+  "otherObservations": [
+    {
+      "topic": "Privacy FAQ wording on the pricing-limits page",
+      "change": "The 'Command Code never trains on your code' phrasing was dropped from the privacy FAQ.",
+      "before": "Command Code never trains on your code",
+      "after": "wording removed (no replacement phrase recorded)",
+      "relatedToAllowances": false,
+      "note": "Unrelated to any credit, allowance or price figure; recorded as a wording observation only. No adopted value is affected and no number was computed from it."
+    }
+  ],
+  "interpretation": {
+    "summary": "The public pricing page caught up with the docs: as of 2026-10-28 the GOAT plan is advertised as 'Up to $100' monthly credits on the card, in the comparison table, in the GOAT detail block and in the 'Which plan is right for you?' section (Pro likewise 'Up to $110'), while the plan page and the pricing-limits page and all 59 per-model allowances stayed exactly as they were on 2026-10-27.",
+    "resolvedInconsistency": {
+      "statement": "The inconsistency recorded on 2026-10-27 in goat-shared-pool-round1-2026-10-27.json — the pricing page still showing a flat $70 while the docs pages already read 'Up to $100' — is eliminated. All three official pages now use the same 'up to $100' wording.",
+      "basis": "Pricing page card, comparison table, detail block and 'Which plan is right for you?' section all changed to 'up to $100' on 2026-10-28; the plan page and pricing-limits page were already at 'up to $100' and did not move."
+    },
+    "ambiguity": {
+      "statement": "The 'up to' phrasing is still ambiguous. It may only describe the maximum amount reachable under the plan (i.e. the shared pool is still $70 and a model may use up to its own allowance within it), or it may mean the shared pool cap itself is now $100. The wording change on the marketing page does not settle this.",
+      "supportingFacts": [
+        "All 59 GOAT models keep their previous budgetUsd, and the highest is still Ling 3.1 Flash at $100, so no per-model allowance was raised to match a new $100 pool.",
+        "The plan page and the pricing-limits page allowances are unchanged ('up to $20' / 'up to $50' / 'up to $100'), so no allowance table moved on 2026-10-28.",
+        "The same rewrite was applied to the Pro plan ($80 -> 'Up to $110'), which suggests a marketing-wide wording change rather than a GOAT-specific pool change.",
+        "The pricing page previously carried two different flat values ($80 on the GOAT card, $70 in the comparison table), so its wording had not been a reliable source for a single pool figure in the first place."
+      ]
+    },
+    "repoPipeline": {
+      "file": "scripts/build_adopted.py",
+      "constant": "COMMAND_CODE_GOAT_SHARED_USD = 70",
+      "formula": "effective_usage = min(COMMAND_CODE_GOAT_SHARED_USD, per-model allowance)",
+      "commentOnFile": "Command Code GOAT: shared monthly pool $70 + per-model monthly allowance; effective=min(70, allowance).",
+      "note": "The pipeline still reads a flat $70 shared pool and is not changed by this capture. Under the unchanged per-model allowances, a $100 pool would only bear on models whose allowance currently exceeds $70 (Ling 3.1 Flash at $100, DeepSeek V4.1 Flash (latest) at $80, GLM-5.3 Flash at $80); models at or below $70 would be unaffected. No such change is made here."
+    },
+    "notComputed": "This file changes no adopted value, no shared-pool constant and no script, and computes no monthly token numbers. Whether the 'up to $100' wording should move the shared pool from $70 to $100 (or whether it remains a per-model cap description) is left to the maintainer."
+  },
+  "unchangedScope": [
+    "No per-model allowance changed: all 59 GOAT models keep the same budgetUsd, rates and budgetSteps in the embedded RSC payload.",
+    "No GOAT model was added to or removed from the plan (model count stays at 59).",
+    "No three-part price changed for any GOAT model.",
+    "The GOAT plan page is unchanged (FAQ heading 'How is 10x possible?', usage limits 'up to $20' / 'up to $50' / 'up to $100').",
+    "The pricing-limits plan table is unchanged for GOAT and Pro; no allowance moved.",
+    "No leaderboard or score data touched.",
+    "No OpenCode Go rows touched.",
+    "No other channel's rows touched.",
+    "No adopted.csv row touched; scripts/build_adopted.py still reads COMMAND_CODE_GOAT_SHARED_USD = 70."
+  ],
+  "computationNote": "No monthlyYi, no blended per-MTok price and no adopted value are computed in this file; all dollar figures are transcribed as published on the official pages.",
+  "relatedFiles": [
+    "goat-shared-pool-round1-2026-10-27.json",
+    "goat-ling31-flash-round2-2026-10-16.json",
+    "goat-kimi-k31-pro-round1-2026-10-24.json",
+    "goat-ornith-15-122b-round1-2026-10-21.json",
+    "code-subscriptions-round1-2026-09-06.json"
+  ],
+  "confidence": "medium — the three pages are official and are now mutually consistent on the 'up to $100' wording, but the 'up to' phrasing still leaves open whether the shared pool itself changed, so no value is adopted from it",
+  "basis": "official"
+}
