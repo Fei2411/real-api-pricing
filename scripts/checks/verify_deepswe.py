@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-archive = json.loads((ROOT / "data/research/scores-deepswe-1.1-2026-09-12.json").read_text(encoding="utf-8"))
+archive = json.loads((ROOT / "data/research/scores-deepswe-1.1-2026-10-13.json").read_text(encoding="utf-8"))
 assert archive["taskCount"] == 113
 assert len(archive["scores"]) == 70
 assert len({s["secondary"]["config"] for s in archive["scores"]}) == 70
@@ -30,6 +30,7 @@ assert {c["agent_harness"] for c in deep
 astra = [c for c in deep if c["model"] == "gpt-6-astra"]
 assert {c["reasoning_effort"] for c in astra} == {"low", "medium", "high", "xhigh", "max"}
 assert max(astra, key=lambda c: c["score"])["reasoning_effort"] == "xhigh"
+assert abs(next(c for c in astra if c["reasoning_effort"] == "xhigh")["mean_cost_usd_per_task"] - 4.429117203539823) < 1e-9
 vendor = [c for c in deep if c["model"] == "deepseek-v4.1-flash"]
 assert sorted(c["score"] for c in vendor) == [74.2, 77.0]
 assert all(c["score_is_self_reported"] and c["agent_harness"] == "mini-SWE" for c in vendor)

@@ -3236,7 +3236,7 @@ z
    </g>
   </g>
   <g id="text_12">
-   <!-- DeepSWE v1.1 | Pass@1 % | 2026-09-03 -->
+   <!-- DeepSWE v1.1 | Pass@1 % | 2026-09-22 -->
    <g style="fill: #505a64" transform="translate(558.439062 54) scale(0.1 -0.1)">
     <defs>
      <path id="NotoSansCJKsc-Regular-57" d="M 1338 0 
@@ -3334,25 +3334,6 @@ C 2720 774 2368 378 1914 378
 C 1338 378 986 851 909 1741 
 z
 " transform="scale(0.015625)"/>
-     <path id="NotoSansCJKsc-Regular-f6b4" d="M 1683 -83 
-C 2522 -83 3194 403 3194 1216 
-C 3194 1843 2752 2246 2202 2381 
-L 2202 2406 
-C 2694 2586 3034 2938 3034 3494 
-C 3034 4224 2458 4646 1664 4646 
-C 1126 4646 710 4403 358 4077 
-L 672 3706 
-C 941 3981 1267 4173 1645 4173 
-C 2138 4173 2438 3891 2438 3450 
-C 2438 2970 2112 2598 1139 2598 
-L 1139 2144 
-C 2227 2144 2598 1786 2598 1242 
-C 2598 723 2208 403 1645 403 
-C 1114 403 762 659 486 941 
-L 186 563 
-C 493 224 954 -83 1683 -83 
-z
-" transform="scale(0.015625)"/>
     </defs>
     <use xlink:href="#NotoSansCJKsc-Regular-25"/>
     <use xlink:href="#NotoSansCJKsc-Regular-46" transform="translate(68.796875 0)"/>
@@ -3388,8 +3369,8 @@ z
     <use xlink:href="#NotoSansCJKsc-Regular-f6b1" transform="translate(1534.515625 0)"/>
     <use xlink:href="#NotoSansCJKsc-Regular-f6ba" transform="translate(1590.015625 0)"/>
     <use xlink:href="#NotoSansCJKsc-Regular-e" transform="translate(1645.515625 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-f6b1" transform="translate(1680.21875 0)"/>
-    <use xlink:href="#NotoSansCJKsc-Regular-f6b4" transform="translate(1735.71875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-f6b3" transform="translate(1680.21875 0)"/>
+    <use xlink:href="#NotoSansCJKsc-Regular-f6b3" transform="translate(1735.71875 0)"/>
    </g>
   </g>
   <g id="text_13">

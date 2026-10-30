@@ -1623,6 +1623,18 @@
       "en": "List price cached 0.02/in 0.2/out 1.2 × project standard workload 97.0%/2.50%/0.50%"
     },
     {
+      "zh": "AA 自家 harness 独立实测的 Terminal-Bench 4.0（models 榜载荷 terminalBench40 字段，fraction×100）；与 tbench.ai 官方榜分开计分。",
+      "en": "AA's own-harness independent measurement of Terminal-Bench 4.0 (the terminalBench40 field in the models-board payload, fraction×100); scored separately from the official tbench.ai board."
+    },
+    {
+      "zh": "厂商自报，非 tbench.ai 官方榜运行。Cognition 博客 Coding benchmark results 表 Terminal-Bench 4 列 27.3%。同表 Astra/Sol/Grok 4.6 与官方榜一致，Fable 5.1 55.8 与官方榜 57.88 不一致。无 CI、无成本/token 数据。见 devin-swe2-round1-2026-09-12.json。",
+      "en": "Vendor self-report, not an official tbench.ai leaderboard run. The Cognition blog's Coding benchmark results table lists Terminal-Bench 4 at 27.3%. The same table's Astra/Sol/Grok 4.6 agree with the official leaderboard; Fable 5.1's 55.8 does not match the official 57.88. No CI, no cost/token data. See devin-swe2-round1-2026-09-12.json."
+    },
+    {
+      "zh": "厂商自报，非 tbench.ai 官方榜运行。HF 模型卡 Terminal-Bench 4.0 列 42.3。",
+      "en": "Vendor self-report, not an official tbench.ai leaderboard run. The HF model card lists Terminal-Bench 4.0 at 42.3."
+    },
+    {
       "zh": "官方模型卡（MIT）第 3 节 Evaluation Results 表 DeepSWE v1.1 行：Pro 71.9 / Flash 67.9 / V2.5 Pro 19.0。同一模型的 DeepSWE 数字有三个互相矛盾的口径，按只记录不择一的规矩全部登记：①模型卡 71.9（本档采用，与 DeepSeek V4.1 Flash 自报同为模型卡口径）；②官方发布页 mimo.mi.com/docs/en-US/news/latest/v2-6 记 RL 曲线 58.4→72.6；③第三方 orcarouter 读小米 Live 面板终点 72.57（面板图注 mini-swe-agent, avg@3）。差异来自 checkpoint 选取、取整与 avg@k，②③未采用。官方榜无 MiMo 行。",
       "en": "The official model card (MIT), section 3 Evaluation Results table, DeepSWE v1.1 row: Pro 71.9 / Flash 67.9 / V2.5 Pro 19.0. The same model has three mutually contradictory DeepSWE figures; per the record-all-choose-none rule all three are registered: ①the model card 71.9 (adopted for this tier — the same model-card basis as DeepSeek V4.1 Flash's self-report); ②the official release page mimo.mi.com/docs/en-US/news/latest/v2-6 records an RL curve 58.4→72.6; ③the third-party orcarouter read the Xiaomi Live panel endpoint 72.57 (panel captioned mini-swe-agent, avg@3). The differences come from checkpoint selection, rounding and avg@k; ② and ③ were not adopted. The official board has no MiMo row."
     },
@@ -1637,18 +1649,6 @@
     {
       "zh": "xAI 发布页（2026-09-21）基准表 DeepSWE v1.1 行 71.0%*，星注 high effort。同表 Grok 4.6 High 65.2 与官方榜 mini-swe-agent - grok-4-6 (high) 65.188 差 0.012，据此判定同 harness 同口径。官方榜无 grok-4.7 行，该模型此前在 DeepSWE 榜缺位。同表 Terminal-Bench 4.0 自报 38.0% 不采用——该榜已有官方行 Grok Build - Grok 4.7 (xhigh) 37.6%，官方读数优先于厂商自报；同表 Grok 4.6 TB4 20.3 与官方榜 Grok Build - Grok 4.6 (high) 20.3 完全一致，进一步佐证两表同源。",
       "en": "The xAI release page (2026-09-21) benchmark table's DeepSWE v1.1 row shows 71.0%*, footnoted as high effort. The same table's Grok 4.6 High 65.2 differs from the official board's mini-swe-agent - grok-4-6 (high) 65.188 by 0.012 — judged same harness, same basis. The official board has no grok-4.7 row; the model was previously absent from the DeepSWE board. The same table's self-reported Terminal-Bench 4.0 38.0% is not adopted — the board already has the official row Grok Build - Grok 4.7 (xhigh) 37.6%, and official readings take precedence over vendor self-reports; the same table's Grok 4.6 TB4 20.3 matches the official board's Grok Build - Grok 4.6 (high) 20.3 exactly, further corroborating that the two tables share a source."
-    },
-    {
-      "zh": "AA 自家 harness 独立实测的 Terminal-Bench 4.0（models 榜载荷 terminalBench40 字段，fraction×100）；与 tbench.ai 官方榜分开计分。",
-      "en": "AA's own-harness independent measurement of Terminal-Bench 4.0 (the terminalBench40 field in the models-board payload, fraction×100); scored separately from the official tbench.ai board."
-    },
-    {
-      "zh": "厂商自报，非 tbench.ai 官方榜运行。Cognition 博客 Coding benchmark results 表 Terminal-Bench 4 列 27.3%。同表 Astra/Sol/Grok 4.6 与官方榜一致，Fable 5.1 55.8 与官方榜 57.88 不一致。无 CI、无成本/token 数据。见 devin-swe2-round1-2026-09-12.json。",
-      "en": "Vendor self-report, not an official tbench.ai leaderboard run. The Cognition blog's Coding benchmark results table lists Terminal-Bench 4 at 27.3%. The same table's Astra/Sol/Grok 4.6 agree with the official leaderboard; Fable 5.1's 55.8 does not match the official 57.88. No CI, no cost/token data. See devin-swe2-round1-2026-09-12.json."
-    },
-    {
-      "zh": "厂商自报，非 tbench.ai 官方榜运行。HF 模型卡 Terminal-Bench 4.0 列 42.3。",
-      "en": "Vendor self-report, not an official tbench.ai leaderboard run. The HF model card lists Terminal-Bench 4.0 at 42.3."
     },
     {
       "zh": "AA 内嵌载荷标记 intelligenceIndexIsEstimated=true；按估计值保留，不作完整实测处理。",
