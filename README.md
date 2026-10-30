@@ -117,7 +117,7 @@ The same 66 tasks run by Artificial Analysis on its own harness (snapshot 2026-0
 
 ![DeepSWE v1.1](charts/en/pareto/pareto-deepswe-1-1.svg)
 
-Pass@1 on 113 tasks, official rows run on mini-swe-agent (snapshot 2026-09-03). Vendor-reported scores are added as supplements and labelled [self-reported].
+Pass@1 on 113 tasks, official rows run on mini-swe-agent (snapshot 2026-09-22). Vendor-reported scores are added as supplements and labelled [self-reported].
 
 ## Real price and monthly allowance, all plans
 

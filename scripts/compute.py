@@ -50,6 +50,8 @@ SCORE_FILES = (
     "scores-code-arena-round3-2026-10-20.json",
     "scores-agent-arena-round3-2026-10-20.json",
     "scores-deepswe-selfreport-1017-2026-10-20.json",
+    "scores-deepswe-1.1-2026-10-13.json",
+    "scores-deepswe-selfreport-carry-2026-10-30.json",
 )
 LIST_PRICE_FILES = (
     "list-prices-2026-09.json",

@@ -109,7 +109,7 @@ Stanford、Harbor 和 Laude Institute 维护的 66 题官方榜（快照 2026-09
 
 ![DeepSWE v1.1](charts/zh/pareto/帕累托_DeepSWE榜.svg)
 
-113 题的 Pass@1，官方行统一用 mini-swe-agent 跑（快照 2026-09-03）。厂商自报分作为补充收录，标 [self-reported]。
+113 题的 Pass@1，官方行统一用 mini-swe-agent 跑（快照 2026-09-22）。厂商自报分作为补充收录，标 [self-reported]。
 
 ## 全部套餐的单价与月额度
 
