@@ -1,0 +1,154 @@
+{
+  "recordedAt": "2026-10-29",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 157,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-10-29 X 扫描：ChatGPT Pro200 20x→10x（Oct 30）、官方 API credits、Plus Codex 5h 燃烧与 Day23 重置。截图不入库。",
+  "items": [
+    {
+      "id": "x-austinzhoujp-plus-10min-5h-zero",
+      "confidence": "High",
+      "planOrModel": "ChatGPT Plus / Codex",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/austinzhoujp/status/2115609835677081771",
+        "account": "austinzhoujp",
+        "createdAt": "2026-10-29T01:01:05.000Z"
+      },
+      "observed": {
+        "claim": "约 10 分钟打满 5h 配额",
+        "fastMode": false,
+        "fiveHourLeftPct": 0,
+        "hasScreenshot": true
+      },
+      "note": "原帖：https://x.com/austinzhoujp/status/2115609835677081771",
+      "gaps": [
+        "无绝对 token",
+        "未标明模型档"
+      ]
+    },
+    {
+      "id": "x-OpenAIDevs-api-credits-pro-business",
+      "confidence": "Medium",
+      "planOrModel": "ChatGPT Pro / Business · API credits",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/OpenAIDevs/status/2115583698074755078",
+        "account": "OpenAIDevs",
+        "createdAt": "2026-10-28T23:17:13.000Z"
+      },
+      "observed": {
+        "proCreditsUsdPerMonthByTier": [
+          100,
+          200,
+          500
+        ],
+        "business": {
+          "standardSeatUsd": 20,
+          "premiumSeatUsd": 100,
+          "workspaceCapUsd": 500
+        },
+        "note": "不增加 ChatGPT/Codex 订阅池（社区交叉）",
+        "hasScreenshot": false
+      },
+      "relatedSources": [
+        {
+          "url": "https://x.com/OpenAIDevs/status/2115583721994944972",
+          "account": "OpenAIDevs"
+        },
+        {
+          "url": "https://x.com/linxiaobei888/status/2115605121019322441",
+          "account": "linxiaobei888"
+        },
+        {
+          "url": "https://x.com/GKev1n/status/2115608200208875953",
+          "account": "GKev1n",
+          "note": "Pro200 首期领到约 $130（按账单结算）"
+        }
+      ],
+      "note": "官方线程。主帖：https://x.com/OpenAIDevs/status/2115583698074755078",
+      "gaps": [
+        "与 Codex 订阅池分桶；不可直接换算周限 token"
+      ]
+    },
+    {
+      "id": "x-JustinNgien-pro200-20x-to-10x-oct30",
+      "confidence": "Medium",
+      "planOrModel": "ChatGPT Pro 200（grandfathered）/ Codex Work",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/JustinNgien/status/2115608353162629631",
+        "account": "JustinNgien",
+        "createdAt": "2026-10-29T00:55:12.000Z"
+      },
+      "observed": {
+        "effectiveDate": "2026-10-30",
+        "codexWorkMultiplier": "20x → 10x Plus",
+        "apiValueCutPct": 50,
+        "gpt6ProChatPerWeek": "200 → 100",
+        "priceUsd": 200,
+        "hasScreenshot": false
+      },
+      "relatedSources": [
+        {
+          "url": "https://x.com/junghoonshin/status/2115611371710906611",
+          "account": "junghoonshin"
+        },
+        {
+          "url": "https://x.com/grok/status/2115604301519159493",
+          "account": "grok"
+        }
+      ],
+      "note": "政策交叉源，入库前宜核官方帮助页。",
+      "gaps": [
+        "非一手控制台截图",
+        "需官方 help 文案核对"
+      ]
+    },
+    {
+      "id": "x-NiuOnAI-codex-day23-plus-reset",
+      "confidence": "Medium",
+      "planOrModel": "ChatGPT Plus / Codex Day 23",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/NiuOnAI/status/2115520910157557884",
+        "account": "NiuOnAI",
+        "createdAt": "2026-10-28T19:07:44.000Z"
+      },
+      "observed": {
+        "event": "Codex Day 23 全局用量重置",
+        "for": "Plus",
+        "localNote": "凌晨 0:29 MT 到账",
+        "hasScreenshot": false
+      },
+      "note": "原帖：https://x.com/NiuOnAI/status/2115520910157557884",
+      "gaps": [
+        "无个人百分比截图"
+      ]
+    },
+    {
+      "id": "x-ImLukeF-codex-share-of-26p6b",
+      "confidence": "High",
+      "planOrModel": "Codex（ImLukeF 月汇总中的 Codex 分项）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ImLukeF/status/2115595439697481986",
+        "account": "ImLukeF",
+        "createdAt": "2026-10-29T00:03:53.000Z"
+      },
+      "observed": {
+        "codexTokens30d": "11.70B",
+        "totalWithClaude": "26.6B",
+        "hasScreenshot": true
+      },
+      "note": "与 Claude 证据文件交叉同一帖。",
+      "gaps": [
+        "无配额百分比"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-10-29.json",
+    "codex-pro200-weekly-x-2026-10-28.json"
+  ]
+}

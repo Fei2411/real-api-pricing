@@ -1,0 +1,345 @@
+{
+  "scannedAt": "2026-10-29",
+  "window": {
+    "start": "2026-10-27T01:00:00Z",
+    "end": "2026-10-29T01:10:00Z"
+  },
+  "method": "Grok Bot built-in public X search_posts_all (namespace x); NOT user X plugin / Platform API quota",
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "snapshotDateShown": "2026-10-27",
+    "note": "README Snapshot 注释与昨日一致为 2026-10-27；SPA 壳 HTML 无独立日期字段，以仓库 README <!-- stat:snapshot --> 为准"
+  },
+  "queries": [
+    "Kimi Code 用量 OR 配额 OR 打满 OR 百分比 lang:zh",
+    "Kimi (token OR 用量 OR 配额) (Code OR 编程 OR 订阅)",
+    "Cursor (用量 OR 配额 OR \"rate limit\" OR usage) (Pro OR Ultra OR Business)",
+    "(Claude Code OR Anthropic) (usage OR quota OR limit OR 用量) (Pro OR Max OR Team)",
+    "(Codex OR OpenAI) (coding OR code) (usage OR quota OR tokens OR 用量)",
+    "(DeepSeek OR GLM OR MiniMax OR Devin) (用量 OR 配额 OR pricing OR 套餐 OR quota OR usage)",
+    "Kimi (199 OR \"K3.1\" OR Highspeed OR \"kimi-code\" OR \"Kimi Code\")",
+    "has:images (Kimi OR Cursor OR Claude) (用量 OR usage OR quota OR 控制台 OR 配额)",
+    "\"rate limit\" (Cursor OR Claude OR Codex)",
+    "(OpenCode OR Windsurf OR Copilot) (usage OR quota OR 调价 OR 用量 OR pricing)",
+    "(Kimi OR 月之暗面 OR Moonshot) (返还 OR 限流 OR 额度 OR Code会员 OR \"Kimi Code\" OR 打满)",
+    "(Claude OR \"Claude Code\") (\"weekly\" OR \"5-hour\" OR \"5h\" OR Max) (\"%\" OR percent OR limit OR usage) has:images",
+    "Cursor (Ultra OR Pro) (\"100%\" OR \"usage\" OR tokens OR \"rate limit\" OR 打满 OR 用完)",
+    "(Codex OR \"ChatGPT Pro\" OR \"ChatGPT Plus\") (\"rate limit\" OR \"weekly\" OR \"5-hour\" OR tokens OR \"%\") (usage OR limit OR quota)",
+    "(OpenAI OR ChatGPT OR Codex) (\"API credit\" OR \"API credits\" OR \"$100\" OR \"$200\" OR \"$500\" OR 额度) (Pro OR Business OR 订阅)",
+    "from:MUG_chen",
+    "from:jbdamask",
+    "from:ImLukeF",
+    "from:OpenAIDevs (credit OR credits OR Pro OR Business)",
+    "from:enzyme_dev OR from:austinzhoujp OR from:hemang__joshi OR from:lagger1068"
+  ],
+  "counts": {
+    "high": 6,
+    "medium": 12,
+    "discardedLowApprox": 8,
+    "searches_run": 20,
+    "unique_posts_approx": 280
+  },
+  "relatedIssues": [
+    155,
+    156,
+    157,
+    158
+  ],
+  "relatedPriorIssues": [
+    148,
+    149,
+    150,
+    151,
+    144
+  ],
+  "retained": [
+    {
+      "url": "https://x.com/MUG_chen/status/2115604208854671591",
+      "account": "MUG_chen",
+      "planOrModel": "Kimi Coding Plan 699 RMB / ~$100 · k3.1-pro",
+      "tokens": "6,251,660 (k3.1-pro); session Total 37,923,361 / 154 requests",
+      "percent": "6.25MTok ≈ 5h 窗 10% → 推算 5h≈60M、月≈1B",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "具体 token + 5h 配额百分比 + 控制台截图 + 价位，可还原 5h/月池。",
+      "vendor": "Kimi / Moonshot",
+      "text_excerpt": "已经懒得吐槽KIMI这家公司的额度限制了。6.25MToken能占用5h的10%，算下来5h只有60M；一个月算下来只有1b。100刀给这么点。",
+      "created_at": "2026-10-29T00:38:44.000Z"
+    },
+    {
+      "url": "https://x.com/MUG_chen/status/2115347271269392672",
+      "account": "MUG_chen",
+      "planOrModel": "Kimi Coding Plan 699 RMB (~$100) · K3.1 Pro",
+      "tokens": "100M tokens on K3.1 Pro",
+      "percent": "月额度 10% → 推算月池 ≈1B",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "绝对 token + 月配额百分比 + 截图；与同账号 5h 推算一致。",
+      "vendor": "Kimi / Moonshot",
+      "text_excerpt": "Don't subscribe to KIMI's subscription plans… 699 RMB (~$100) tier. After using 100 million tokens on K3.1 Pro, it already consumed 10% of the monthly quota.",
+      "created_at": "2026-10-28T07:37:45.000Z"
+    },
+    {
+      "url": "https://x.com/MUG_chen/status/2115094523068240274",
+      "account": "MUG_chen",
+      "planOrModel": "Kimi Coding Plan 199 档",
+      "tokens": "33M Token（16:00–20:00）",
+      "percent": "5h 限额耗光",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "199 档绝对 token + 打满 5h；可与 699 档对照。",
+      "vendor": "Kimi / Moonshot",
+      "text_excerpt": "购买了新的199档位套餐，用了总计33M Token，随后耗光了我的5h限额。",
+      "created_at": "2026-10-27T14:53:25.000Z"
+    },
+    {
+      "url": "https://x.com/jbdamask/status/2115515191039545712",
+      "account": "jbdamask",
+      "planOrModel": "Claude Max 20x",
+      "tokens": "Cache reads 2,449M/$490；writes 27M/$136；rebuilds 35M/$176；out+in 1.5M/$29；Total 2,512.5M / $831 API-eq",
+      "percent": "周限 36% in <20h → 约 55h 打满一周",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "周限百分比 + 分项 token/API 美元表截图 + Max 20x 档名。",
+      "vendor": "Anthropic / Claude",
+      "text_excerpt": "Last week my agent team burned 36% of my Max 20x weekly limit in less than 20 hours.",
+      "created_at": "2026-10-28T18:45:00.000Z"
+    },
+    {
+      "url": "https://x.com/ImLukeF/status/2115595439697481986",
+      "account": "ImLukeF",
+      "planOrModel": "Claude Code + Codex（月用量汇总）",
+      "tokens": "30d 共 26.6B：Claude Code 14.79B / Codex 11.70B / Claude API 142.5M / GPT API 22.3M；~98% cached",
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "绝对 token 分产品拆分 + 缓存占比截图；缺订阅档配额百分比。",
+      "vendor": "Anthropic + OpenAI",
+      "text_excerpt": "Checked my token usage for the month, and it's 26.6 billion…",
+      "created_at": "2026-10-29T00:03:53.000Z"
+    },
+    {
+      "url": "https://x.com/austinzhoujp/status/2115609835677081771",
+      "account": "austinzhoujp",
+      "planOrModel": "ChatGPT Plus / Codex",
+      "tokens": null,
+      "percent": "约 10 分钟打满 5h 配额（未开 fast）；截图 5h 0% left",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "Plus 档 Codex 5h 窗燃烧速率 + 控制台截图；缺绝对 token。",
+      "vendor": "OpenAI / Codex",
+      "text_excerpt": "10分钟消耗完5小时配额，没有开fast， plus用户真不配用codex",
+      "created_at": "2026-10-29T01:01:05.000Z"
+    },
+    {
+      "url": "https://x.com/Abdulrahmanpz/status/2115604542079557915",
+      "account": "Abdulrahmanpz",
+      "planOrModel": "Claude Pro",
+      "tokens": null,
+      "percent": "截图约 session 58% / week 92%（2 天前周用量）",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "有套餐名+百分比截图，无绝对 token。",
+      "vendor": "Anthropic / Claude",
+      "text_excerpt": "They really have nerfed claude pro usage.",
+      "created_at": "2026-10-29T00:40:03.000Z"
+    },
+    {
+      "url": "https://x.com/thesayemdev/status/2115601364395200885",
+      "account": "thesayemdev",
+      "planOrModel": "Claude Pro",
+      "tokens": null,
+      "percent": "weekly 100%；session 15% paused；reset Friday 1:00 AM GMT+6",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "控制台周限打满截图；无 token。",
+      "vendor": "Anthropic / Claude",
+      "text_excerpt": "100% weekly limit reached.",
+      "created_at": "2026-10-29T00:27:25.000Z"
+    },
+    {
+      "url": "https://x.com/hemang__joshi/status/2115485546961420649",
+      "account": "hemang__joshi",
+      "planOrModel": "Claude Pro $20",
+      "tokens": null,
+      "percent": "5h 15% / weekly 9%",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "Pro $20 + 双百分比截图；无 token。",
+      "vendor": "Anthropic / Claude",
+      "text_excerpt": "15% of my 5-hour limit, yet my weekly usage is already at 9%.",
+      "created_at": "2026-10-28T16:47:12.000Z"
+    },
+    {
+      "url": "https://x.com/lagger1068/status/2115495262689075486",
+      "account": "lagger1068",
+      "planOrModel": "Claude Max 20x",
+      "tokens": null,
+      "percent": "5h 5% 且 weekly 5% 同时",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "Max 20x UI 截图；5h 与周限同步 5% 比例异常。",
+      "vendor": "Anthropic / Claude",
+      "text_excerpt": "already at 5% weekly after just 5% of my 5-hour limit",
+      "created_at": "2026-10-28T17:25:49.000Z"
+    },
+    {
+      "url": "https://x.com/akokoi1/status/2115594593945403508",
+      "account": "akokoi1",
+      "planOrModel": "Claude Max 5X $125 → Factory $100",
+      "tokens": null,
+      "percent": "周额度约 20–40%",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "具名档价 + 周用量区间 + 转 Factory；无绝对 token。",
+      "vendor": "Anthropic / Claude + Factory",
+      "text_excerpt": "Claude Max 5X，$125，每周约周额度 20-40%… 订了 $100 Factory。",
+      "created_at": "2026-10-29T00:00:31.000Z"
+    },
+    {
+      "url": "https://x.com/OpenAIDevs/status/2115583698074755078",
+      "account": "OpenAIDevs",
+      "planOrModel": "ChatGPT Pro / Business · API credits",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "官方 API 额度：Pro $100/$200/$500；Business 席位池封顶 $500。",
+      "vendor": "OpenAI",
+      "text_excerpt": "eligible ChatGPT Pro and Business subscribers can claim up to $500 per month in API credits",
+      "created_at": "2026-10-28T23:17:13.000Z",
+      "relatedUrls": [
+        "https://x.com/OpenAIDevs/status/2115583721994944972",
+        "https://x.com/linxiaobei888/status/2115605121019322441",
+        "https://x.com/snowy_smile_/status/2115608790104203426",
+        "https://x.com/GKev1n/status/2115608200208875953"
+      ]
+    },
+    {
+      "url": "https://x.com/JustinNgien/status/2115608353162629631",
+      "account": "JustinNgien",
+      "planOrModel": "ChatGPT Pro 200（grandfathered）/ Codex Work",
+      "tokens": null,
+      "percent": "20x → 10x Plus（Oct 30）；API value cut 50%；GPT-6 Pro chat 200→100/week",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "可交叉验证的 Pro200 配额腰斩政策；Grok/junghoonshin 旁证。",
+      "vendor": "OpenAI / Codex",
+      "text_excerpt": "Current Pro 200 is at 20x, which will fall to 10x",
+      "created_at": "2026-10-29T00:55:12.000Z",
+      "relatedUrls": [
+        "https://x.com/junghoonshin/status/2115611371710906611",
+        "https://x.com/grok/status/2115604301519159493"
+      ]
+    },
+    {
+      "url": "https://x.com/SeedOilAwarenes/status/2115583444495528413",
+      "account": "SeedOilAwarenes",
+      "planOrModel": "The X Subscription Ultra（含 Cursor）",
+      "tokens": null,
+      "percent": "Ultra 76% → 96%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "Ultra 共享池百分比跳跃；旁证 #150。",
+      "vendor": "xAI The X Subscription + Cursor",
+      "text_excerpt": "ultra usage went from 76% to 96%",
+      "created_at": "2026-10-28T23:16:13.000Z",
+      "priorIssue": 150
+    },
+    {
+      "url": "https://x.com/Ryker8356332/status/2115591688706253081",
+      "account": "Ryker8356332",
+      "planOrModel": "Cursor Ultra $200",
+      "tokens": null,
+      "percent": "already out of tokens",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "Ultra $200 打尽叙述；缺截图与绝对 token。",
+      "vendor": "Cursor",
+      "text_excerpt": "spent $200 on Cursor Ultra and I’m already out of tokens",
+      "created_at": "2026-10-28T23:48:59.000Z",
+      "priorIssue": 150
+    },
+    {
+      "url": "https://x.com/NiuOnAI/status/2115520910157557884",
+      "account": "NiuOnAI",
+      "planOrModel": "ChatGPT Plus / Codex Day 23",
+      "tokens": null,
+      "percent": "Codex Day 23 全局用量重置已到账（Plus）",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "可交叉验证的 Plus Codex 全局重置日信号。",
+      "vendor": "OpenAI / Codex",
+      "text_excerpt": "Codex Day 23 全局用量重置：今天凌晨 0:29（MT）已经到账，Plus",
+      "created_at": "2026-10-28T19:07:44.000Z"
+    },
+    {
+      "url": "https://x.com/ImLukeF/status/2115417469636735354",
+      "account": "ImLukeF",
+      "planOrModel": "Grok Bot / The X Subscription",
+      "tokens": null,
+      "percent": "2–3 天用掉约 75%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "Bot 用量百分比燃烧；旁证 Ultra/共享池。",
+      "vendor": "xAI Grok Bot",
+      "text_excerpt": "used 75% of my usage in like 2-3 days",
+      "created_at": "2026-10-28T12:16:41.000Z",
+      "priorIssue": 150
+    },
+    {
+      "url": "https://x.com/enzyme_dev/status/2115600563945848951",
+      "account": "enzyme_dev",
+      "planOrModel": "Kimi Code 模型价目 UI",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "Kimi Code 控制台模型价/用量成本 UI 截图；缺个人配额百分比。",
+      "vendor": "Kimi / Moonshot",
+      "text_excerpt": "kimi code里的几个模型都很贵啊… 缺少一个flash model",
+      "created_at": "2026-10-29T00:24:15.000Z"
+    }
+  ],
+  "discardedExamples": [
+    {
+      "url": "https://x.com/zinnasly/status/2115611558160277706",
+      "why": "印尼区 Claude 账号倒卖营销，无实测计量"
+    },
+    {
+      "url": "https://x.com/HaamThelord/status/2115551543936381321",
+      "why": "「TRIPles usage」推广垃圾，无硬数字"
+    },
+    {
+      "url": "https://x.com/web_t5/status/2115570235088445445",
+      "why": "卖 key 广告"
+    },
+    {
+      "url": "https://x.com/jonny20221208/status/2115600628793872808",
+      "why": "阿里云百炼羊毛，非目标厂商订阅配额"
+    },
+    {
+      "url": "https://x.com/xulijian1994/status/2115579732951748756",
+      "why": "Sakura 免费请求羊毛，无订阅计量"
+    },
+    {
+      "url": "https://x.com/mdp_sec/status/2115566779992863050",
+      "why": "夸张月 API $100k 叙述，无控制台/拆分"
+    },
+    {
+      "url": "https://x.com/BIGBULLapp/status/2115581831739318685",
+      "why": "自推账号切换工具，无用量数字"
+    },
+    {
+      "url": "https://x.com/EntrepreneursAI/status/2115549301879308719",
+      "why": "Duet 产品介绍，无个人计量"
+    }
+  ],
+  "actionable_leads": [
+    "Kimi Coding 699/$100：5h≈60M、月≈1B（MUG_chen 双源）",
+    "Claude Max 20x：<20h 烧 36% 周限 + 2.5B token/$831 表（jbdamask）",
+    "跨栈 26.6B/30d（ImLukeF）",
+    "Codex Plus：~10min 打满 5h（austinzhoujp）",
+    "ChatGPT Pro200：Oct30 20x→10x + 官方 API credits $100/200/500"
+  ]
+}

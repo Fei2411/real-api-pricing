@@ -1,0 +1,182 @@
+{
+  "recordedAt": "2026-10-29",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 156,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-10-29 X 扫描 Claude Pro/Max 周限与 5h 窗新信号；含跨栈 26.6B 旁证。截图不入库。",
+  "items": [
+    {
+      "id": "x-jbdamask-max20x-36pct-2512m",
+      "confidence": "High",
+      "planOrModel": "Claude Max 20x",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/jbdamask/status/2115515191039545712",
+        "account": "jbdamask",
+        "createdAt": "2026-10-28T18:45:00.000Z"
+      },
+      "observed": {
+        "weeklyUsedPct": 36,
+        "elapsedHours": "<20",
+        "impliedFullWeekHours": 55,
+        "tokenTable": {
+          "cacheReadsM": 2449,
+          "cacheReadsUsd": 490,
+          "cacheWritesNewM": 27,
+          "cacheWritesNewUsd": 136,
+          "cacheRebuildsM": 35,
+          "cacheRebuildsUsd": 176,
+          "outputAndInputM": 1.5,
+          "outputAndInputUsd": 29,
+          "totalM": 2512.5,
+          "totalApiUsd": 831
+        },
+        "hasScreenshot": true
+      },
+      "note": "分项 token/$ 表截图未入库。原帖：https://x.com/jbdamask/status/2115515191039545712",
+      "gaps": [
+        "token 表时间窗与「上周」周限百分比是否同一窗需核对"
+      ]
+    },
+    {
+      "id": "x-ImLukeF-26p6b-30d-claude-codex",
+      "confidence": "High",
+      "planOrModel": "Claude Code + Codex（月用量汇总）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ImLukeF/status/2115595439697481986",
+        "account": "ImLukeF",
+        "createdAt": "2026-10-29T00:03:53.000Z"
+      },
+      "observed": {
+        "window": "29 Sep – 29 Oct (30d)",
+        "tokensTotal": "26.6B",
+        "breakdown": {
+          "claudeCode": "14.79B",
+          "codex": "11.70B",
+          "claudeApi": "142.5M",
+          "gptApi": "22.3M"
+        },
+        "cachedContextPctApprox": 98,
+        "hasScreenshot": true
+      },
+      "note": "自绘/仪表盘图未入库。原帖：https://x.com/ImLukeF/status/2115595439697481986",
+      "gaps": [
+        "无订阅档名与配额百分比",
+        "非官方控制台原页"
+      ]
+    },
+    {
+      "id": "x-Abdulrahmanpz-pro-58-92",
+      "confidence": "Medium",
+      "planOrModel": "Claude Pro",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/Abdulrahmanpz/status/2115604542079557915",
+        "account": "Abdulrahmanpz",
+        "createdAt": "2026-10-29T00:40:03.000Z"
+      },
+      "observed": {
+        "sessionUsedPctApprox": 58,
+        "weeklyUsedPctApprox": 92,
+        "when": "screenshot from ~2 days earlier",
+        "hasScreenshot": true
+      },
+      "note": "原帖：https://x.com/Abdulrahmanpz/status/2115604542079557915",
+      "gaps": [
+        "无绝对 token",
+        "百分比由截图读数"
+      ]
+    },
+    {
+      "id": "x-thesayemdev-pro-weekly-100",
+      "confidence": "Medium",
+      "planOrModel": "Claude Pro",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/thesayemdev/status/2115601364395200885",
+        "account": "thesayemdev",
+        "createdAt": "2026-10-29T00:27:25.000Z"
+      },
+      "observed": {
+        "weeklyUsedPct": 100,
+        "sessionUsedPct": 15,
+        "sessionPaused": true,
+        "reset": "Friday 1:00 AM GMT+6",
+        "hasScreenshot": true
+      },
+      "note": "原帖：https://x.com/thesayemdev/status/2115601364395200885",
+      "gaps": [
+        "无 token"
+      ]
+    },
+    {
+      "id": "x-hemang__joshi-pro20-15-9",
+      "confidence": "Medium",
+      "planOrModel": "Claude Pro $20",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/hemang__joshi/status/2115485546961420649",
+        "account": "hemang__joshi",
+        "createdAt": "2026-10-28T16:47:12.000Z"
+      },
+      "observed": {
+        "fiveHourUsedPct": 15,
+        "weeklyUsedPct": 9,
+        "hasScreenshot": true
+      },
+      "note": "原帖：https://x.com/hemang__joshi/status/2115485546961420649",
+      "gaps": [
+        "无 token"
+      ]
+    },
+    {
+      "id": "x-lagger1068-max20x-5-5",
+      "confidence": "Medium",
+      "planOrModel": "Claude Max 20x",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/lagger1068/status/2115495262689075486",
+        "account": "lagger1068",
+        "createdAt": "2026-10-28T17:25:49.000Z"
+      },
+      "observed": {
+        "fiveHourUsedPct": 5,
+        "weeklyUsedPct": 5,
+        "ui": "Plan usage limits · Max (20x)",
+        "hasScreenshot": true
+      },
+      "note": "原帖：https://x.com/lagger1068/status/2115495262689075486",
+      "gaps": [
+        "5h 与周限同为 5% 比例异常，可能截图时机特殊",
+        "无 token"
+      ]
+    },
+    {
+      "id": "x-akokoi1-max5x-20-40-to-factory",
+      "confidence": "Medium",
+      "planOrModel": "Claude Max 5X $125 → Factory $100",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/akokoi1/status/2115594593945403508",
+        "account": "akokoi1",
+        "createdAt": "2026-10-29T00:00:31.000Z"
+      },
+      "observed": {
+        "weeklyUsedPctRange": "20–40",
+        "claudePriceUsd": 125,
+        "factoryPriceUsd": 100,
+        "hasScreenshot": true
+      },
+      "note": "原帖：https://x.com/akokoi1/status/2115594593945403508",
+      "gaps": [
+        "无绝对 token",
+        "Factory 额度为自测意图尚未出数"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-10-29.json",
+    "claude-usage-x-signals-2026-10-28.json"
+  ]
+}
