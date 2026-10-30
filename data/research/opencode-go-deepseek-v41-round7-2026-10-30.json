@@ -1,0 +1,55 @@
+{
+  "collectedAt": "2026-10-30",
+  "checkedAtUtc": "2026-10-30T16:52:33Z",
+  "scope": "OpenCode Go DeepSeek V4.1 Flash monthly usage limits; research only.",
+  "source": "https://opencode.ai/v2/docs/console/go/",
+  "previousEvidence": "data/research/opencode-go-teams-round1-2026-10-30.json",
+  "previous": {
+    "goUsd": 80,
+    "goPlusUsd": 160,
+    "goTeamsUsd": 85,
+    "note": "Previous Go and Go Plus limits from the October 20 catalog; Teams $85 recorded earlier on October 30."
+  },
+  "observed": {
+    "model": "deepseek-v4.1-flash",
+    "monthlyLimitUsd": {
+      "go": 100,
+      "goPlus": 200,
+      "goTeamsPerMember": 105
+    },
+    "tokenPricesUsdPerMillion": {
+      "offPeak": {
+        "input": 0.15,
+        "output": 0.6,
+        "cachedRead": 0.003
+      },
+      "peak": {
+        "input": 0.3,
+        "output": 1.2,
+        "cachedRead": 0.006
+      }
+    },
+    "estimatedRequests": {
+      "go": {
+        "fiveHour": 43330,
+        "week": 108330,
+        "month": 216670
+      },
+      "goPlus": {
+        "fiveHour": 86670,
+        "week": 216670,
+        "month": 433330
+      },
+      "goTeams": {
+        "fiveHour": 45500,
+        "week": 113750,
+        "month": 227500
+      }
+    },
+    "windowRule": "Per-model windows: 5-hour 20%, weekly 50%, monthly 100% of the monthly limit.",
+    "promotionNote": "The DeepSeek rows in the documentation showed no limited-time label or expiry at collection. Absence of a label does not establish permanence.",
+    "scopeNote": "Go Teams is $20 per member, with each member receiving their own limits; Go Plus and Go Teams do not currently have adopted rows in this repository."
+  },
+  "adoptionStatus": "research-only; no adopted data or charts changed",
+  "followUp": "Recheck the source and any promotion terms before deciding whether to update the adopted Go value; do not treat request estimates as the allowance formula."
+}
