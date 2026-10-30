@@ -711,6 +711,7 @@ OPENCODE_GO_MODELS = (
     ("glm-5.3", 15, 0.26, 1.4, 4.4, "官网单档"),
     ("glm-5.2", 60, 0.26, 1.4, 4.4, "官网单档"),
     ("kimi-k3", 15, 0.3, 3.0, 15.0, "官网单档"),
+    ("kimi-k3.1-pro", 15, 0.2, 2.0, 10.0, "Official $15 per-model limit; cache write $2/MTok excluded from standard workload"),
     ("kimi-k2.7-code", 60, 0.19, 0.95, 4.0, "官网单档"),
     ("longcat-2.0", 60, 0.006, 0.3, 1.2, "官网单档"),
     ("mimo-v2.5", 60, 0.0028, 0.14, 0.28, "官网单档"),
@@ -718,6 +719,7 @@ OPENCODE_GO_MODELS = (
     ("mimo-v2.6-flash", 60, 0.0028, 0.14, 0.28, "官网单档；Usage $60"),
     ("mimo-v2.6-pro", 15, 0.003625, 0.435, 0.87, "官网单档；Usage $15；与 v2.5-pro 同 Usage 档"),
     ("minimax-m3", 60, 0.06, 0.3, 1.2, "官网单档"),
+    ("minimax-m3.1-flash", 20, 0.015, 0.15, 0.60, "Official $20 per-model limit; distinct from the previously adopted preview model"),
     ("muse-spark-1.3-contributor", 60, 0.002, 0.1, 0.2, "官网单档"),
     ("muse-spark-1.2-contributor", 60, 0.002, 0.1, 0.2, "官网单档"),
     ("qwen3.8-max", 15, 0.25, 2.0, 6.0, "官网单档"),
@@ -747,6 +749,19 @@ OPENCODE_GO_DEEPSEEK_SOURCE = (
     "opencode-go-deepseek-round7-2026-09-30.json"
 )
 OPENCODE_GO_NOTES = {
+    "kimi-k3.1-pro": (
+        "51 million monthly tokens: $15 per-model limit divided by the standard-workload "
+        "price $0.294/MTok, rounded to 0.510 hundred million tokens. This standard workload "
+        "excludes cache writes; the provider lists cache writes at $2/MTok, so actual usage "
+        "can be lower. Per-model allowances cannot be added. "
+        "Evidence: opencode-go-kimi-k31-pro-round1-2026-10-24.json"
+    ),
+    "minimax-m3.1-flash": (
+        "939 million monthly tokens: $20 per-model limit divided by the standard-workload "
+        "price $0.0213/MTok, rounded to 9.390 hundred million tokens. This paid model is "
+        "kept distinct from the previously adopted preview model. Per-model allowances "
+        "cannot be added. Evidence: opencode-go-minimax-m31-flash-round1-2026-10-23.json"
+    ),
     "deepseek-v4.1-flash": (
         "8.2816B to 10.352B monthly tokens: $100 per-model monthly limit divided by "
         "the standard-workload blended off-peak price $0.00966/MTok. Official peak prices "
@@ -768,6 +783,8 @@ def opencode_go_rows() -> list[tuple]:
         source = OPENCODE_GO_DEEPSEEK_SOURCE if model.startswith("deepseek-") else OPENCODE_GO_DEFAULT_SOURCE
         if model == "deepseek-v4.1-flash":
             source = "https://opencode.ai/v2/docs/console/go/; opencode-go-deepseek-v41-round7-2026-10-30.json"
+        elif model in {"kimi-k3.1-pro", "minimax-m3.1-flash"}:
+            source = "https://opencode.ai/v2/docs/console/go/"
         note = OPENCODE_GO_NOTES.get(
             model,
             f"{change}：模型月Usage ${usage:g} ÷ 统一标准负载加权价；{variant_note}。"
@@ -1375,6 +1392,8 @@ EXCLUDED_SUBSCRIPTIONS = {
 # derived=由锚点按倍率/档间比例派生，沿用锚点日期，data_date_from 记锚点。
 DATA_DATES = {
     ("opencode_go", "deepseek-v4.1-flash"): ("2026-10-30", "official"),
+    ("opencode_go", "kimi-k3.1-pro"): ("2026-10-30", "official"),
+    ("opencode_go", "minimax-m3.1-flash"): ("2026-10-30", "official"),
     ("minimax_m_plan_go_cn", "minimax-m3.1-flash-preview"): ("2026-10-01", "sample"),
     ("chatgpt_plus", "gpt-5.6-sol"): ("2026-07-30", "sample"),
     ("chatgpt_pro_20x", "gpt-5.6-sol"): ("2026-06-10~2026-09-06", "sample"),

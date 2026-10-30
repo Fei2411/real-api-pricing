@@ -236,6 +236,14 @@ test("OpenCode Go DeepSeek V4.1 Flash uses the $100 per-model limit", () => {
   assert.equal(p.monthly_yi, 103.52);
   assert.equal(p.real_usd_per_mtok, 0.00096599691);
 });
+test("OpenCode Go includes paid Kimi and MiniMax models at standard workload", () => {
+  const kimi = data.points.find((p) => p.id === "opencode_go::kimi-k3.1-pro")!;
+  const minimax = data.points.find((p) => p.id === "opencode_go::minimax-m3.1-flash")!;
+  assert.equal(kimi.monthly_yi, 0.51);
+  assert.equal(minimax.monthly_yi, 9.39);
+  assert.equal(kimi.real_usd_per_mtok, 0.19607843);
+  assert.equal(minimax.real_usd_per_mtok, 0.010649627);
+});
 test("Command Code GOAT DeepSeek V4.1 Flash uses $80 credits capped by the $70 shared pool", () => {
   const p = data.points.find((p) => p.id === "command_code_goat::deepseek-v4.1-flash")!;
   // min($70 pool, $80 allowance) ÷ off-peak (97/2.5/0.5 × $0.003/$0.15/$0.60 = $0.00966/MTok).

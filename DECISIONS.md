@@ -7,6 +7,7 @@
 
 - Adopt the official Go per-model monthly allowance of $100, up from $80. At the existing standard workload and off-peak prices, $0.00966/MTok gives 103.520 亿 tokens/month (previously 82.816 亿). Peak token prices are twice off-peak, so actual usage varies. The official table and landing page show no limited-time label on this row; recheck when the catalog changes.
 - Evidence: `data/research/opencode-go-deepseek-v41-round7-2026-10-30.json`. Go Plus and Teams remain research-only.
+- Adopt OpenCode Go Kimi K3.1 Pro at 0.510 亿/month ($15 ÷ $0.294/MTok) and MiniMax M3.1 Flash at 9.390 亿/month ($20 ÷ $0.0213/MTok), using the current table and standard workload. The Kimi calculation excludes cache writes, which are priced at $2/MTok; actual use may be lower. MiniMax GA and preview remain separate model IDs. Earlier evidence: `opencode-go-kimi-k31-pro-round1-2026-10-24.json`, `opencode-go-minimax-m31-flash-round1-2026-10-23.json`.
 
 ## 2026-10-27 · Kimi 会员 199（Allegretto）k3 换基 14.51 → 19.46 亿（维护者实测）
 
