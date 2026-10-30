@@ -1,0 +1,116 @@
+{
+  "recordedAt": "2026-10-28",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 150,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-10-28 每日 X 公开搜索保留的 Cursor Pro 月限与 The X Subscription 共享池信号。截图不入库，证据只链原帖 URL。~349M/月是帖内推算，本文件不另算。",
+  "items": [
+    {
+      "id": "x-shownotover-cursor-pro-27m-7pct",
+      "confidence": "High",
+      "planOrModel": "Pro $20/mo / Grok 4.7 fast",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/shownotover/status/2115142779525595566",
+        "account": "shownotover",
+        "createdAt": "2026-10-27T18:05:10.000Z"
+      },
+      "observed": {
+        "tokens": "27M",
+        "work": "1.3h",
+        "monthlyLimitPct": 7,
+        "authorMonthlyExtrapolation": "~349M tokens/month",
+        "apiCreditsUsd": 75,
+        "hasScreenshot": true
+      },
+      "note": "附图未入库。原帖：https://x.com/shownotover/status/2115142779525595566",
+      "gaps": [
+        "单次测试推算，不是跑满月池",
+        "~349M/月是作者从 27M≈7% 推出的数字，本记录不另算替代值"
+      ]
+    },
+    {
+      "id": "x-Skarly-ultra-100-one-day",
+      "confidence": "Medium",
+      "planOrModel": "Ultra（共享池，含 Cursor）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/Skarly/status/2115246210441486722",
+        "account": "Skarly",
+        "createdAt": "2026-10-28T00:56:10.000Z"
+      },
+      "observed": {
+        "usedPct": 100,
+        "window": "1 day",
+        "cause": "mostly due to cursor usage",
+        "ui": "Ultra 100% used",
+        "hasScreenshot": true
+      },
+      "note": "用量条截图未入库。原帖：https://x.com/Skarly/status/2115246210441486722",
+      "gaps": [
+        "X/Cursor 共享 Ultra 池，不是 Cursor Pro 独立月池",
+        "无绝对 token"
+      ]
+    },
+    {
+      "id": "x-nima_owji-x-subscription-price-table",
+      "confidence": "Medium",
+      "planOrModel": "The X Subscription 各档",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/nima_owji/status/2115150789886828672",
+        "account": "nima_owji",
+        "createdAt": "2026-10-27T18:37:00.000Z"
+      },
+      "observed": {
+        "pricesUsd": {
+          "Free": 0,
+          "Plus": 8,
+          "Premium": 30,
+          "Super": 100,
+          "Ultra": 200
+        },
+        "premiumIncludes": "原 SuperGrok + Cursor Pro + X Premium+ 价值",
+        "sharedPool": "Grok / Bot / Cursor",
+        "hasScreenshot": true
+      },
+      "note": "价目表截图未入库，需与官方页交叉。原帖：https://x.com/nima_owji/status/2115150789886828672",
+      "gaps": [
+        "捆绑价目，不是 Cursor 官方独立价",
+        "未给出各档 token 配额"
+      ]
+    },
+    {
+      "id": "x-sosolab13-cursor-pro-20-overage-and-api-bill",
+      "confidence": "Medium",
+      "planOrModel": "Cursor Pro $20；Anthropic API PAYG / Opus 5.5",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/sosolab13/status/2115225056431276532",
+        "account": "sosolab13",
+        "createdAt": "2026-10-27T23:32:07.000Z"
+      },
+      "observed": {
+        "opus55OfficialCheaperPctClaim": 40,
+        "anthropicApiBillUsd": {
+          "from": 143,
+          "to": 237,
+          "changePct": 65
+        },
+        "spendOnOpus55Pct": 62,
+        "cursorProUsd": 20,
+        "cursorBehavior": "重度必超再买加速包",
+        "hasScreenshot": false
+      },
+      "note": "个人月账单，无截图。原帖：https://x.com/sosolab13/status/2115225056431276532",
+      "gaps": [
+        "API/混合栈账单，不是 Cursor 月配额百分比",
+        "无 token"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-10-28.json",
+    "cursor-adoption-round7-2026-09-06.json"
+  ]
+}
