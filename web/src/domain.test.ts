@@ -1034,10 +1034,12 @@ test("Real prices keep full precision for ordering; summaries stay short, detail
   const s = { ...defaultState(), view: "price" as const, sort: "price", direction: "asc" as const };
   const ordered = tableRows(rowsFor(data, s), s).map((r) => r.point.real_usd_per_mtok);
   ordered.forEach((v, i) => i && assert.ok(v >= ordered[i - 1], "ascending by exact price"));
-  const plus = data.points.find((p) => p.id === "chatgpt_plus::gpt-5.6-luna")!;
-  const pro5 = data.points.find((p) => p.id === "chatgpt_pro_5x::gpt-5.6-luna")!;
-  assert.equal(price(plus.real_usd_per_mtok), price(pro5.real_usd_per_mtok));
-  assert.notEqual(plus.real_usd_per_mtok, pro5.real_usd_per_mtok);
+  // Since the $100 Pro tier moved to 10x Plus (2026-10-30), its per-token price
+  // matches the 20x tier's ($0.0014/MTok) instead of Plus's ($0.0028/MTok).
+  const pro10 = data.points.find((p) => p.id === "chatgpt_pro_10x::gpt-5.6-luna")!;
+  const pro20 = data.points.find((p) => p.id === "chatgpt_pro_20x::gpt-5.6-luna")!;
+  assert.equal(price(pro10.real_usd_per_mtok), price(pro20.real_usd_per_mtok));
+  assert.notEqual(pro10.real_usd_per_mtok, pro20.real_usd_per_mtok);
 });
 test("Ranking bars sit on a fixed decade-aligned log axis, independent of filters", () => {
   for (const view of ["allowance", "price"] as const) {
