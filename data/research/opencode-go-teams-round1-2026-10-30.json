@@ -1,0 +1,389 @@
+{
+  "collectedAt": "2026-10-30",
+  "collectionMethod": "Manual capture of the official OpenCode Go docs page and landing page (English) around 10:30 Beijing time / 02:30Z on 2026-10-30, compared against the 2026-10-29 capture of the same pages. The official plan table, the per-model Monthly limit, the usage-window rule, the official 'Estimated requests' table and the landing-page plan cards were read as published. Research-only — no adopted row generated, no adopted value changed, no script changed.",
+  "sources": [
+    "https://opencode.ai/docs/go/",
+    "https://opencode.ai/go"
+  ],
+  "scope": "OpenCode Go official price and plan pages only. On 2026-10-30 a third monthly plan, 'Go Teams', was published next to the existing Go and Go Plus plans, with its own per-model price table, its own per-model Monthly limit and its own official request estimates; the docs price table for MiniMax M3 was also split into two context bands (≤ 512K tokens / > 512K tokens). The Go and Go Plus per-model limits and prices are otherwise unchanged. No leaderboard/score data, no Command Code GOAT change (cross-channel note only), no shared-pool change, no adopted.csv row, no computed allowance in this file.",
+  "adoptionStatus": "research-only; not adopted; no plan_id exists for Go Teams (nor Go Plus); creating an opencode_go_teams data point ($20/member/month, per-model monthly limit = Go + $5) is left to maintainer review, following the Go Plus precedent in DECISIONS.md",
+  "previous": {
+    "capturedAt": "2026-10-29",
+    "plansPublished": [
+      "Go",
+      "Go Plus"
+    ],
+    "planTableIntro": "OpenCode Go gives you reliable access to popular open coding models, with two monthly plans:",
+    "planTableRows": [
+      {
+        "planName": "Go",
+        "priceUsdPerMonth": 10,
+        "rowAsPublished": "Go | $10/month | Lower-cost access to the models below"
+      },
+      {
+        "planName": "Go Plus",
+        "priceUsdPerMonth": 40,
+        "rowAsPublished": "Go Plus | $40/month | Higher usage limits across the models below"
+      }
+    ],
+    "singleMemberRestriction": {
+      "quote": "A workspace with a Go subscription cannot invite members.",
+      "statusOn2026-10-30": "removed"
+    },
+    "tokenPricingRule": "Token pricing is the same for Go and Go Plus.",
+    "usageWindowRule": "Each model has the following usage limits: 5-hour — 20% of the monthly limit; weekly — 50%; and monthly — 100%.",
+    "minimaxM3PriceTier": {
+      "rowAsPublished": "MiniMax M3 | $0.30 | $1.20 | $0.06 | -",
+      "inputPerMTokUsd": 0.3,
+      "outputPerMTokUsd": 1.2,
+      "cachedReadPerMTokUsd": 0.06,
+      "cachedWritePerMTokUsd": null,
+      "cachedWriteNote": "No cache-write price listed in the official table (page shows '-').",
+      "monthlyLimitUsd": {
+        "go": 60,
+        "goPlus": 180
+      },
+      "note": "One single price band for MiniMax M3 on 2026-10-29. The '≤ 512K tokens' band published on 2026-10-30 carries exactly this three-part price and these monthly limits; the '> 512K tokens' band is new."
+    },
+    "landingPage": {
+      "planCardsPublished": [
+        "Go",
+        "Go Plus"
+      ],
+      "individualsTeamsToggle": false,
+      "note": "The landing page had no Individuals / Teams toggle and no Go Teams card, and the FAQ line ended at 'Go Plus costs $40/month with higher limits.'"
+    }
+  },
+  "observed": {
+    "goTeams": {
+      "planName": "Go Teams",
+      "priceUsdPerMemberPerMonth": 20,
+      "planTableRowAsPublished": "Go Teams | $20/member/month | Every member gets their own limits, $5/month higher than Go on every model",
+      "planTableIntro": "OpenCode Go gives you reliable access to popular open coding models, with three monthly plans:",
+      "billingNote": "Charged per member, per month; the workspace is billed as one. A member who joins mid-period is charged $20 and gets a full monthly allowance. Service accounts are not covered by Go Teams.",
+      "eligibilityQuote": "Go and Go Plus are for workspaces with a single member, such as the Personal workspace created when you sign up. Either can upgrade to Go Teams at any time, with the unused part of the month’s allowance credited. Go Teams covers every member of a workspace with several members, at $20 per member per month. A member who joins mid-period is charged $20 and gets a full monthly allowance. Service accounts are not covered by Go Teams.",
+      "upgradeQuote": "Either can upgrade to Go Teams at any time, with the unused part of the month’s allowance credited.",
+      "extraUsageDefault": "Go Teams starts with Extra Usage on, and you can turn it off or on again on the Go page.",
+      "tokenPricingRule": "Token pricing is the same for Go, Go Plus, and Go Teams.",
+      "usageWindowRule": "Each model has the following usage limits: 5-hour — 20% of the monthly limit; weekly — 50%; and monthly — 100%.",
+      "priceTableNote": "The Go Teams price table repeats the same per-model token prices as the Go and Go Plus tables; only the Monthly limit column differs. Row as published, for example: 'GLM-5.3-Flash | $0.15 | $0.50 | $0.03 | - | $65'.",
+      "landingPageBullets": [
+        "Go Teams $20 per member per month",
+        "Every member gets their own Go limits",
+        "Generous monthly limits for each model",
+        "One bill for the whole workspace",
+        "Extra usage with per-member budgets",
+        "Model privacy and region controls"
+      ],
+      "landingPageNote": "The landing page now carries an Individuals / Teams toggle; the Teams card shows 'Go Teams', '$20', 'per member', 'per month' and a 'Subscribe to Go Teams' button.",
+      "faqQuote": "Go Teams costs $20/member/month with limits for every member.",
+      "monthlyLimitUsd": {
+        "GLM-5.3-Flash": 65,
+        "GLM-5.3": 20,
+        "GLM-5.2": 65,
+        "Kimi K3.1 Pro": 20,
+        "Kimi K3": 20,
+        "Kimi K2.7 Code": 65,
+        "LongCat-2.0": 65,
+        "Step 5 Preview": 20,
+        "Beam Free": "Unlimited (limited time)",
+        "Iceman Contributor Free": "Unlimited (limited time)",
+        "MiMo-V2.6-Flash": 65,
+        "MiMo-V2.6-Pro": 20,
+        "MiMo-V2.5": 65,
+        "MiMo-V2.5-Pro": 20,
+        "MiniMax M3.1 Flash": 25,
+        "MiniMax M3 (≤ 512K tokens)": 65,
+        "MiniMax M3 (> 512K tokens)": 65,
+        "Muse Spark 1.3 Contributor": 65,
+        "Muse Spark 1.2 Contributor": 65,
+        "Qwen3.8 Max": 20,
+        "Qwen3.8 Flash": 35,
+        "Qwen3.7 Plus (≤ 256K tokens)": 65,
+        "Qwen3.7 Plus (> 256K tokens)": 65,
+        "DeepSeek V4.1 Flash (Off-Peak)": 85,
+        "DeepSeek V4.1 Flash (Peak)": 85,
+        "DeepSeek V4 Pro (Off-Peak)": 20,
+        "DeepSeek V4 Pro (Peak)": 20,
+        "Hy4 preview": 35,
+        "Hy3": 65,
+        "Grok 4.7 (≤ 200K tokens)": 20,
+        "Grok 4.7 (> 200K tokens)": 20,
+        "GPT 6 Luna (≤ 272K tokens)": 20,
+        "GPT 6 Luna (> 272K tokens)": 20,
+        "GPT 5.6 Luna (≤ 272K tokens)": 20,
+        "GPT 5.6 Luna (> 272K tokens)": 20,
+        "Claude Haiku 5.5 (≤ 100K tokens)": 20,
+        "Claude Haiku 5.5 (> 100K tokens)": 20,
+        "Gemini 4 Argon (50% off)": 35
+      },
+      "monthlyLimitNote": "Official 'Monthly limit' column of the Go Teams table on 2026-10-30, transcribed row by row as published. The two free limited-time rows carry 'Unlimited (limited time)' rather than a dollar amount.",
+      "officialRequestEstimates": {
+        "note": "Official 'Estimated requests' Go Teams group on 2026-10-30 (Requests per 5 hours / Requests per week / Requests per month), transcribed per model row as published. Cross-check evidence only; never used as an allowance main value.",
+        "scaleRule": "The tables below estimate request counts based on typical Go usage patterns. Go | Plus and Go Teams estimates scale with each model’s higher usage limit.",
+        "requestShapeNote": "The estimates use the following token counts per request; actual usage varies. | Grok 4.7 — 390 input, 32,500 cached, 120 output tokens per request | GLM-5.3-Flash — 1,000 input, 55,000 cached, 200 output tokens per request",
+        "GLM-5.3-Flash": {
+          "per5h": 6847,
+          "perWeek": 17110,
+          "perMonth": 34210
+        },
+        "GLM-5.3": {
+          "per5h": 293,
+          "perWeek": 720,
+          "perMonth": 1440
+        },
+        "GLM-5.2": {
+          "per5h": 953,
+          "perWeek": 2330,
+          "perMonth": 4660
+        },
+        "Kimi K3.1 Pro": {
+          "per5h": 196,
+          "perWeek": 491,
+          "perMonth": 980
+        },
+        "Kimi K3": {
+          "per5h": 147,
+          "perWeek": 333,
+          "perMonth": 653
+        },
+        "Kimi K2.7 Code": {
+          "per5h": 1462,
+          "perWeek": 3660,
+          "perMonth": 7310
+        },
+        "LongCat-2.0": {
+          "per5h": 12350,
+          "perWeek": 30980,
+          "perMonth": 61970
+        },
+        "Step 5 Preview": {
+          "per5h": 573,
+          "perWeek": 1430,
+          "perMonth": 2840
+        },
+        "Beam Free": {
+          "per5h": "Unlimited",
+          "perWeek": "Unlimited",
+          "perMonth": "Unlimited"
+        },
+        "Iceman Contributor Free": {
+          "per5h": "Unlimited",
+          "perWeek": "Unlimited",
+          "perMonth": "Unlimited"
+        },
+        "MiMo-V2.6-Flash": {
+          "per5h": 32608,
+          "perWeek": 81470,
+          "perMonth": 162930
+        },
+        "MiMo-V2.6-Pro": {
+          "per5h": 4333,
+          "perWeek": 10870,
+          "perMonth": 21730
+        },
+        "MiMo-V2.5": {
+          "per5h": 32608,
+          "perWeek": 81470,
+          "perMonth": 162930
+        },
+        "MiMo-V2.5-Pro": {
+          "per5h": 4333,
+          "perWeek": 10870,
+          "perMonth": 21730
+        },
+        "MiniMax M3.1 Flash": {
+          "per5h": 4850,
+          "perWeek": 12110,
+          "perMonth": 24230
+        },
+        "MiniMax M3": {
+          "per5h": 3467,
+          "perWeek": 8670,
+          "perMonth": 17330
+        },
+        "Muse Spark 1.3 Contributor": {
+          "per5h": 49075,
+          "perWeek": 122740,
+          "perMonth": 245480
+        },
+        "Muse Spark 1.2 Contributor": {
+          "per5h": 49075,
+          "perWeek": 122740,
+          "perMonth": 245480
+        },
+        "Qwen3.8 Max": {
+          "per5h": 213,
+          "perWeek": 530,
+          "perMonth": 1080
+        },
+        "Qwen3.8 Flash": {
+          "per5h": 6300,
+          "perWeek": 15750,
+          "perMonth": 31500
+        },
+        "Qwen3.7 Plus": {
+          "per5h": 4658,
+          "perWeek": 11700,
+          "perMonth": 23400
+        },
+        "DeepSeek V4.1 Flash": {
+          "per5h": 36837,
+          "perWeek": 92080,
+          "perMonth": 184160
+        },
+        "DeepSeek V4 Pro": {
+          "per5h": 1400,
+          "perWeek": 3470,
+          "perMonth": 6930
+        },
+        "Hy4 preview": {
+          "per5h": 1575,
+          "perWeek": 3940,
+          "perMonth": 7900
+        },
+        "Hy3": {
+          "per5h": 4658,
+          "perWeek": 11650,
+          "perMonth": 23290
+        },
+        "Grok 4.7": {
+          "per5h": 225,
+          "perWeek": 564,
+          "perMonth": 1130
+        },
+        "GPT 6 Luna": {
+          "per5h": 5640,
+          "perWeek": 14080,
+          "perMonth": 28170
+        },
+        "GPT 5.6 Luna": {
+          "per5h": 2733,
+          "perWeek": 6800,
+          "perMonth": 13670
+        },
+        "Claude Haiku 5.5": {
+          "per5h": 5133,
+          "perWeek": 12830,
+          "perMonth": 25640
+        },
+        "Gemini 4 Argon": {
+          "per5h": 513,
+          "perWeek": 1260,
+          "perMonth": 2470
+        }
+      }
+    },
+    "minimaxM3PriceTiers": {
+      "statusChange": "On 2026-10-30 the single 'MiniMax M3' row of the official OpenCode Go price table was split into two context bands: 'MiniMax M3 (≤ 512K tokens)' and 'MiniMax M3 (> 512K tokens)'. The ≤ 512K band carries the same three-part price and the same monthly limits as the previous single row.",
+      "priceScope": "The two bands are published identically in the Go, Go Plus and Go Teams tables.",
+      "rows": [
+        {
+          "band": "≤ 512K tokens",
+          "rowAsPublished": "MiniMax M3 (≤ 512K tokens) | $0.30 | $1.20 | $0.06 | - | $65",
+          "inputPerMTokUsd": 0.3,
+          "outputPerMTokUsd": 1.2,
+          "cachedReadPerMTokUsd": 0.06,
+          "cachedWritePerMTokUsd": null,
+          "cachedWriteNote": "No cache-write price listed in the official table (page shows '-').",
+          "monthlyLimitUsd": {
+            "go": 60,
+            "goPlus": 180,
+            "goTeams": 65
+          },
+          "sameAsPreviousSingleRow": true
+        },
+        {
+          "band": "> 512K tokens",
+          "rowAsPublished": "MiniMax M3 (> 512K tokens) | $0.60 | $2.40 | $0.12 | - | $65",
+          "inputPerMTokUsd": 0.6,
+          "outputPerMTokUsd": 2.4,
+          "cachedReadPerMTokUsd": 0.12,
+          "cachedWritePerMTokUsd": null,
+          "cachedWriteNote": "No cache-write price listed in the official table (page shows '-').",
+          "monthlyLimitUsd": {
+            "go": 60,
+            "goPlus": 180,
+            "goTeams": 65
+          },
+          "sameAsPreviousSingleRow": false
+        }
+      ],
+      "requestEstimates": {
+        "note": "The official 'Estimated requests' table lists MiniMax M3 as a single row (not split by band).",
+        "goTeams": {
+          "per5h": 3467,
+          "perWeek": 8670,
+          "perMonth": 17330
+        }
+      },
+      "adoptedImpact": "The repo's existing opencode_go × minimax-m3 adopted row (8.368 亿 tokens/month, $60 monthly limit, $0.30 / $1.20 / $0.06) is priced from the ≤ 512K band under the project standard workload and is therefore unaffected by this split. No adopted value was modified by this capture."
+    }
+  },
+  "otherObservations": [
+    {
+      "topic": "Third monthly plan published",
+      "observation": "The docs plan table now lists three plans — Go $10/month, Go Plus $40/month and Go Teams $20/member/month — and the intro sentence reads 'OpenCode Go gives you reliable access to popular open coding models, with three monthly plans:'.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Single-member restriction removed",
+      "observation": "The sentence 'A workspace with a Go subscription cannot invite members.' is gone. It is replaced by the note that 'Go and Go Plus are for workspaces with a single member, such as the Personal workspace created when you sign up. Either can upgrade to Go Teams at any time, with the unused part of the month’s allowance credited.'",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Subscribe sentence mentions Go Teams",
+      "observation": "The 'How it works' step now reads 'Sign in to the OpenCode Console, subscribe to Go, Go Plus, or Go Teams, add your billing details, and copy your API key.'",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Token pricing sentence covers Go Teams",
+      "observation": "The usage-limits section now reads 'Token pricing is the same for Go, Go Plus, and Go Teams.'",
+      "note": "Recorded only; the per-model token prices themselves are unchanged."
+    },
+    {
+      "topic": "Extra Usage default for Go Teams",
+      "observation": "The 'Usage beyond limits' section now states 'Go Teams starts with Extra Usage on, and you can turn it off or on again on the Go page.'",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Landing page Individuals / Teams toggle",
+      "observation": "The landing page gained an Individuals / Teams toggle and a third plan card 'Go Teams — $20 per member per month' with the bullets 'Every member gets their own Go limits', 'Generous monthly limits for each model', 'One bill for the whole workspace', 'Extra usage with per-member budgets', 'Model privacy and region controls', plus a 'Subscribe to Go Teams' button.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Landing page FAQ line",
+      "observation": "The FAQ comparison bullet now reads 'Go Teams costs $20/member/month with limits for every member.' and the closing answer ends '... Go Plus costs $40/month with higher limits. Go Teams costs $20/member/month with limits for every member.'",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Go Teams per-model Monthly limit pattern",
+      "observation": "Every Go Teams row in the official table sits $5 above the corresponding Go row (for example GLM-5.3-Flash $65, GLM-5.3 $20, MiniMax M3.1 Flash $25, Qwen3.8 Flash $35, DeepSeek V4.1 Flash $85, Gemini 4 Argon $35), as announced by the plan table text 'Every member gets their own limits, $5/month higher than Go on every model'.",
+      "note": "The $5-above-Go relation is quoted from the official plan table wording; no derived or blended value was computed here."
+    },
+    {
+      "topic": "MiniMax M3 price band split",
+      "observation": "The MiniMax M3 row was split into 'MiniMax M3 (≤ 512K tokens)' at $0.30 / $1.20 / $0.06 and 'MiniMax M3 (> 512K tokens)' at $0.60 / $2.40 / $0.12; the monthly limits stay Go $60 / Go Plus $180 / Go Teams $65.",
+      "note": "Recorded only. The repo's opencode_go × minimax-m3 adopted row (8.368 亿, $60) uses the ≤ 512K band price under the standard workload and is unchanged; the scripts/build_adopted.py OPENCODE_GO_MODELS note for this model still reads '官网单档' (single band), and updating that note is left to maintainer review — no script was touched by this capture."
+    },
+    {
+      "topic": "Go Plus tier still has no plan_id",
+      "observation": "Go Plus ($40/month) still has no plan_id in the repo, and Go Teams ($20/member/month) has none either.",
+      "note": "Same precedent as the 2026-10-01 full-catalog re-verification decision in DECISIONS.md ('未采：Go Plus $40 新套餐（还没有 plan_id）'). Recorded only; no adopted row added."
+    },
+    {
+      "topic": "Other model rows unchanged",
+      "observation": "The Go and Go Plus per-model prices, Monthly limits and the usage-window rule (5-hour — 20% of the monthly limit; weekly — 50%; monthly — 100%) are unchanged; no other model row moved on 2026-10-30.",
+      "note": "Recorded only; no adopted value changed."
+    }
+  ],
+  "computationNote": "No monthlyYi, no blended per-MTok price, no derived per-model Go Teams allowance and no adopted value are computed in this file; all numbers are transcribed as published on the official pages.",
+  "relatedFiles": [
+    "opencode-go-gemini4-argon-round2-2026-10-25.json",
+    "opencode-go-kimi-k31-pro-round1-2026-10-24.json",
+    "opencode-go-minimax-m31-flash-round1-2026-10-23.json",
+    "opencode-go-step5-preview-round1-2026-10-16.json"
+  ],
+  "confidence": "medium",
+  "basis": "official"
+}
