@@ -619,10 +619,6 @@
       "en": "https://opencode.ai/docs/go/ official per-model Usage and three-part pricing; opencode-go-deepseek-round7-2026-09-30.json"
     },
     {
-      "zh": "62.112→82.816亿：模型月Usage $80 ÷ 统一标准负载加权价（2026-10-20 官网 Monthly limit $60→$80，共享月池$60已从文档移除，每模型月额度单独计）；官网闲时 cached/input/output=$0.003/$0.15/$0.60，高峰2×。估算请求173,330/月。官网 Model ID 为 deepseek-v4.1-flash。官方请求数仅作交叉检查，不作为额度主值；同套餐各模型额度不可相加",
-      "en": "6.2112B→8.2816B: model monthly Usage $80 ÷ project standard-workload weighted price (2026-10-20 official Monthly limit $60→$80; the $60 shared monthly pool has been removed from the docs, so each model's monthly limit counts on its own); official off-peak cached/input/output=$0.003/$0.15/$0.60, peak 2×. Estimated 173,330 requests/month. The official Model ID is deepseek-v4.1-flash. The official request counts serve only as a cross-check and are not the primary allowance figure; allowances of different models in the same plan are not additive"
-    },
-    {
       "zh": "旧4.318亿（请求估算）→3.142亿：模型月Usage $15 ÷ 统一标准负载加权价；Off-Peak；Peak 额度为其一半，保留在 research variants；OpenCode 价表未改。官方请求数仅作交叉检查，不再作为额度主值；同套餐各模型额度不可相加",
       "en": "Old: 431.8M (request estimate)→314.2M: model monthly Usage $15 ÷ project standard-workload weighted price; Off-Peak; the Peak allowance is half, kept in research variants; OpenCode's price list unchanged. The official request counts serve only as a cross-check and are no longer the primary allowance figure; allowances of different models in the same plan are not additive"
     },

@@ -13,8 +13,8 @@ No.  Plan                                   Monthly fee             Served model
 3    Step Plan Pro (¥199)                   CNY 199                 Step 3.7 Flash                17.1766             0.00171   medium
 4    OpenCode Go                            USD 10                  Muse Spark 1.3 Contributor    11.0294             0.00091   medium
 5    OpenCode Go                            USD 10                  Muse Spark 1.2 Contributor    11.0294             0.00091   medium
-6    ChatGPT Plus                           USD 20                  GPT-6 Luna                    9.203               0.00217   high
-7    OpenCode Go                            USD 10                  DeepSeek V4.1 Flash           8.2816              0.00121   medium
+6    OpenCode Go                            USD 10                  DeepSeek V4.1 Flash           10.352              0.00097   medium
+7    ChatGPT Plus                           USD 20                  GPT-6 Luna                    9.203               0.00217   high
 8    OpenCode Go                            USD 10                  MiMo V2.5                     7.8782              0.00127   medium
 9    OpenCode Go                            USD 10                  MiMo V2.6 Flash               7.8782              0.00127   medium
 10   GLM Coding Pro (v2 ¥149) Off-peak      CNY 149                 GLM 5.3 Flash                 7.492               0.00293   high

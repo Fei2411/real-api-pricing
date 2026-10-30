@@ -1,7 +1,7 @@
 {
   "collectedAt": "2026-10-30",
   "checkedAtUtc": "2026-10-30T16:52:33Z",
-  "scope": "OpenCode Go DeepSeek V4.1 Flash monthly usage limits; research only.",
+  "scope": "OpenCode Go DeepSeek V4.1 Flash monthly usage limits.",
   "source": "https://opencode.ai/v2/docs/console/go/",
   "previousEvidence": "data/research/opencode-go-teams-round1-2026-10-30.json",
   "previous": {
@@ -50,6 +50,17 @@
     "promotionNote": "The DeepSeek rows in the documentation showed no limited-time label or expiry at collection. Absence of a label does not establish permanence.",
     "scopeNote": "Go Teams is $20 per member, with each member receiving their own limits; Go Plus and Go Teams do not currently have adopted rows in this repository."
   },
-  "adoptionStatus": "research-only; no adopted data or charts changed",
-  "followUp": "Recheck the source and any promotion terms before deciding whether to update the adopted Go value; do not treat request estimates as the allowance formula."
+  "adoptionStatus": "Go $100 monthly limit adopted; Go Plus and Go Teams remain research only.",
+  "followUp": "Recheck the source when the catalog changes; request estimates are cross-checks and not the allowance formula.",
+  "calculation": {
+    "standardWorkload": {
+      "cachedRead": 0.97,
+      "input": 0.025,
+      "output": 0.005
+    },
+    "offPeakBlendedUsdPerMillion": 0.00966,
+    "monthlyYi": 103.52,
+    "officialRequestCrossCheckUsd": 99.971538,
+    "note": "216,670 requests at 410 input, 71,300 cached-read, 310 output tokens per request, using off-peak prices; estimates are rounded by the provider."
+  }
 }

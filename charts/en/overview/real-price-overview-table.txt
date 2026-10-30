@@ -14,8 +14,8 @@ No.  Plan                                   Monthly fee             Served model
 5    Step Plan Pro (¥199)                   CNY 199                 Step 3.5 Flash                34.632              0.00085   medium
 6    OpenCode Go                            USD 10                  Muse Spark 1.3 Contributor    11.0294             0.00091   medium
 7    OpenCode Go                            USD 10                  Muse Spark 1.2 Contributor    11.0294             0.00091   medium
-8    Step Plan Max (¥699)                   CNY 699                 Step 3.7 Flash                85.883              0.0012    medium
-9    OpenCode Go                            USD 10                  DeepSeek V4.1 Flash           8.2816              0.00121   medium
+8    OpenCode Go                            USD 10                  DeepSeek V4.1 Flash           10.352              0.00097   medium
+9    Step Plan Max (¥699)                   CNY 699                 Step 3.7 Flash                85.883              0.0012    medium
 10   OpenCode Go                            USD 10                  MiMo V2.5                     7.8782              0.00127   medium
 11   OpenCode Go                            USD 10                  MiMo V2.6 Flash               7.8782              0.00127   medium
 12   Command Code GOAT                      USD 10                  DeepSeek V4.1 Flash           7.2464              0.00138   medium
