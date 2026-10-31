@@ -61,7 +61,10 @@
 <text x="720.000" y="775.000" font-size="13" fill="#5D655E" text-anchor="middle" font-weight="400" >Real price · USD per million tokens</text>
 <text x="1338.000" y="775.000" font-size="12" fill="#737B74" text-anchor="end" font-weight="400" >Cheaper →</text>
 <path id="frontier" d="M120.000,271.985 L905.440,271.985 L994.569,286.630 L1099.331,383.537 L1287.589,398.690 L1338.000,398.690" fill="none" stroke="#303630" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.032467532" data-score="46.9727" data-x="676.063" data-y="366.828" transform="translate(676.063 366.828)"><title>GPT 5.6 Sol · Plus / GPT 5.6 Sol · Pro 5x · $0.03247/MTok · 46.9727 · mediumGPT-5.6 Sol (max) · Exact served-model reference; quota-measurement effort is unverified. / GPT-5.6 Sol (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.032467532" data-score="46.9727" data-x="676.063" data-y="366.828" transform="translate(676.063 366.828)"><title>GPT 5.6 Sol · Plus · $0.03247/MTok · 46.9727 · mediumGPT-5.6 Sol (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.016233766" data-score="46.9727" data-x="765.193" data-y="366.828" transform="translate(765.193 366.828)"><title>GPT 5.6 Sol · Pro 10x · $0.01623/MTok · 46.9727 · mediumGPT-5.6 Sol (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.015501473" data-score="46.9727" data-x="771.128" data-y="366.828" transform="translate(771.128 366.828)"><title>GPT 5.6 Sol · Pro 20x · $0.0155/MTok · 46.9727 · highGPT-5.6 Sol (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
@@ -70,7 +73,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0028336639" data-score="37.3244" data-x="989.644" data-y="452.753" transform="translate(989.644 452.753)"><title>GPT 5.6 Luna · Plus · $0.00283/MTok · 37.3244 · highGPT-5.6 Luna (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0028335836" data-score="37.3244" data-x="989.648" data-y="452.753" transform="translate(989.648 452.753)"><title>GPT 5.6 Luna · Pro 5x · $0.00283/MTok · 37.3244 · mediumGPT-5.6 Luna (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0014168119" data-score="37.3244" data-x="1078.775" data-y="452.753" transform="translate(1078.775 452.753)"><title>GPT 5.6 Luna · Pro 10x · $0.00142/MTok · 37.3244 · mediumGPT-5.6 Luna (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0014168019" data-score="37.3244" data-x="1078.776" data-y="452.753" transform="translate(1078.776 452.753)"><title>GPT 5.6 Luna · Pro 20x · $0.00142/MTok · 37.3244 · mediumGPT-5.6 Luna (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
@@ -744,10 +747,10 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.041963911" data-score="38.3556" data-x="643.072" data-y="443.569" transform="translate(643.072 443.569)"><title>GPT 5.5 · Plus · $0.04196/MTok · 38.3556 · mediumGPT-5.5 (xhigh) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.016785846" data-score="42.0829" data-x="760.892" data-y="410.375" transform="translate(760.892 410.375)"><title>GPT 5.6 Terra · Pro 5x · $0.01679/MTok · 42.0829 · mediumGPT-5.6 Terra (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0083929935" data-score="42.0829" data-x="850.021" data-y="410.375" transform="translate(850.021 410.375)"><title>GPT 5.6 Terra · Pro 10x · $0.00839/MTok · 42.0829 · mediumGPT-5.6 Terra (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.041965672" data-score="38.3556" data-x="643.066" data-y="443.569" transform="translate(643.066 443.569)"><title>GPT 5.5 · Pro 5x · $0.04197/MTok · 38.3556 · mediumGPT-5.5 (xhigh) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.020982396" data-score="38.3556" data-x="732.199" data-y="443.569" transform="translate(732.199 443.569)"><title>GPT 5.5 · Pro 10x · $0.02098/MTok · 38.3556 · mediumGPT-5.5 (xhigh) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0080143617" data-score="42.0829" data-x="855.957" data-y="410.375" transform="translate(855.957 410.375)"><title>GPT 5.6 Terra · Pro 20x · $0.00801/MTok · 42.0829 · mediumGPT-5.6 Terra (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
@@ -797,7 +800,7 @@
 <rect x="-11" y="-11" width="22" height="22" rx="6" fill="#FFF" stroke="#CC5A2E" stroke-width="1.35"/>
 <circle r="4" fill="#CC5A2E"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.10989011" data-score="52.6737" data-x="519.285" data-y="316.057" transform="translate(519.285 316.057)"><title>GPT-6 Astra · Pro 5x · $0.10989/MTok · 52.6737 · lowGPT-6 Astra (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.054945055" data-score="52.6737" data-x="608.414" data-y="316.057" transform="translate(608.414 316.057)"><title>GPT-6 Astra · Pro 10x · $0.05495/MTok · 52.6737 · lowGPT-6 Astra (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.025849813" data-score="38.8121" data-x="705.373" data-y="439.504" transform="translate(705.373 439.504)"><title>Grok 4.5 · Cursor Ultra · $0.02585/MTok · 38.8121 · mediumGrok 4.5 (high) · Exact served-model reference; quota-measurement effort is unverified.</title>
@@ -1010,7 +1013,7 @@
 <path d="M400.91999999999996 849l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>
 <text x="414.920" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Metered API</text>
 <text x="56.000" y="898.000" font-size="12" fill="#727B72" text-anchor="start" font-weight="400" >Default month = 4 weeks; Kimi pool = 5×, Droid = 2× weekly · Dollar/credit: 97% cache / 2.5% input / 0.5% output · Direct totals unchanged</text>
-<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >274 subscription positions / 20 API positions / 4 frontier positions</text>
+<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >275 subscription positions / 20 API positions / 4 frontier positions</text>
 <text x="56.000" y="922.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Claude Max: permanent allowance estimate from Sep 14; Pro: historical Opus 4.8 measurement. Y uses the top archived variant per model.</text>
 <text x="56.000" y="943.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Subscriptions and metered APIs share one frontier; line segments are visual guides, not purchasable plans.</text>
 <text x="1384.000" y="943.000" font-size="11" fill="#929A90" text-anchor="end" font-weight="400" >artificialanalysis.ai/leaderboards/models</text>

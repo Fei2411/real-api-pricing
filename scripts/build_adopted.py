@@ -1079,14 +1079,14 @@ def mimo_rows() -> list[tuple]:
 
 # ---- 订阅：(plan_id, plan_name, price, currency, served_model, monthly_yi, confidence, source, decision_note)
 SUBS = [
-    # OpenAI —— Sol 为 Terra/5.5 基准；Luna 改用 Plus 维护者面板实测，Pro 档按官方 5x/20x 推算
+    # OpenAI —— Sol 为 Terra/5.5 基准；Luna 改用 Plus 维护者面板实测，Pro 档按官方 10x/20x 推算（$100 档 2026-10-30 起由 5x 提为 10x）
     ("chatgpt_plus", "ChatGPT Plus", 20, "USD", "gpt-5.6-sol", 6.16, "medium", "awesome-coding-plan 2026-07-30 实测", "未折算：样本无 token 分项（2026-07-30 实测只给 total），保留 raw"),
-    ("chatgpt_pro_5x", "ChatGPT Pro 5x", 100, "USD", "gpt-5.6-sol", 30.8, "medium", "Plus × 官方 5x", "flat.json 写 38.9 与官方 5x 不符，改 30.8"),
+    ("chatgpt_pro_10x", "ChatGPT Pro 10x", 100, "USD", "gpt-5.6-sol", 61.6, "medium", "Plus × 官方 10x；chatgpt-pro-10x-round1-2026-10-30.json", "30.8→61.6亿：官方 $100 档倍率 5x→10x（2026-10-30 复核），Plus Sol 6.16×10；$200 档 20x 与 Pro 20x 各行不变；旧链 flat.json 写 38.9 与官方 5x 不符改 30.8，现随档位翻倍"),
     ("chatgpt_pro_20x", "ChatGPT Pro 20x", 200, "USD", "gpt-5.6-sol", CHATGPT_PRO20X_SOL_MONTHLY_YI, "high", "五源实测加权：Observatory 143.6×3 + 《财经》109×3 + 网关 139.5×2 + 健康周 131.2×2 + imon139 120×1；chatgpt-quotas-round5 / caijing-2026-08 / chatgpt-pro20x-gateway-measurement-2026-09-06", f"裁定 123.2（Plus×20 派生）→{CHATGPT_PRO20X_SOL_MONTHLY_YI:g} 亿加权值：权重沿用 Astra round14 惯例，派生值不入权仅对照；网关段间 108~154 亿、含两段 Astra 降权不剔除；健康周 7.87 亿=24%→131 亿；《财经》受控打满 109 亿为最低端；imon139 同帖口述「~30 亿/周」；文章 200 亿作废；未折算：五源加权、多数来源无 token 分项，保留 raw"),
     ("chatgpt_plus", "ChatGPT Plus", 20, "USD", "gpt-5.6-luna", chatgpt_luna_monthly_yi(), "high", "维护者Plus面板：112,666,769 total tokens = 周额度约6%；chatgpt-luna-adoption-round6-2026-09-08.json；workload-conversion-round1-2026-09-30.json", f"75.11→{chatgpt_luna_monthly_yi():g}亿（2026-09-30 裁定带分项实测统一折算）：段 worth ${worth_usd(CHATGPT_PLUS_LUNA_SEGMENT, GPT56_LUNA_LIST):.4f}（cache 109.36M×$0.02＋入2.94M×$0.2＋出0.37M×$1.2）÷6%×4周＝${worth_usd(CHATGPT_PLUS_LUNA_SEGMENT, GPT56_LUNA_LIST)/0.06*4:.2f} ÷标准档混合价${blended(*GPT56_LUNA_LIST):.4f}/MTok；raw 口径 {chatgpt_luna_raw_monthly_yi():g} 留作对照。以下为原采用决策——旧120.12亿（Sol基准×统一credits价比19.5）→75.11亿：112,666,769÷6%×4周（原 raw 口径）；6%若为整数四舍五入，折算口径范围约65.2~77.0亿/月（raw 口径 69.33~81.94）；实测token构成为cache read 97.06%、普通输入2.61%、输出0.33%"),
-    ("chatgpt_pro_5x", "ChatGPT Pro 5x", 100, "USD", "gpt-5.6-luna", chatgpt_luna_monthly_yi(5), "medium", "Plus Luna实测×官方5x；chatgpt-luna-adoption-round6-2026-09-08.json", "旧600.6亿→375.56亿→352.91亿：Plus Luna实测×官方5x（2026-09-30 折算口径 75.11→70.58 随动）；非Pro 5x账号独立实测"),
+    ("chatgpt_pro_10x", "ChatGPT Pro 10x", 100, "USD", "gpt-5.6-luna", chatgpt_luna_monthly_yi(10), "medium", "Plus Luna实测×官方10x；chatgpt-luna-adoption-round6-2026-09-08.json；chatgpt-pro-10x-round1-2026-10-30.json", "352.91→705.81亿：官方 $100 档倍率 5x→10x（2026-10-30），Plus Luna实测×10（2026-09-30 折算口径 70.58 随动）；非Pro 10x账号独立实测；更早旧链 600.6→375.56→352.91 为 5x 时期值"),
     ("chatgpt_pro_20x", "ChatGPT Pro 20x", 200, "USD", "gpt-5.6-luna", chatgpt_luna_monthly_yi(20), "medium", "Plus Luna实测×官方20x；GitHub #8社区美元等效旁证；chatgpt-luna-adoption-round6-2026-09-08.json", "旧2402.4亿→1502.22亿→1411.63亿：Plus Luna实测×官方20x（2026-09-30 折算口径 75.11→70.58 随动）；按截图实际token组成折公开API价，约$1073/周，与社区‘Luna x20不到$1200、Sol x20约$2000’同量级。美元等效仅作池比旁证，不直接换token"),
-    # Astra —— 维护者Plus账号2026-09-11晚周窗26pt打满直测；Pro20x按round13同框簇挂点（8亿簇5条独立来源），5x按Sol档间4×派生
+    # Astra —— 维护者Plus账号2026-09-11晚周窗26pt打满直测；Pro20x按round13同框簇挂点（8亿簇5条独立来源），$100档按Sol档间比例派生（2026-10-30 起为 10x）
     ("chatgpt_plus", "ChatGPT Plus", 20, "USD", "gpt-6-astra", chatgpt_astra_monthly_yi(), "high", "维护者Plus面板：10,336,745 tokens(input+cache_read) = 周窗剩余26pt；chatgpt-astra-adoption-round7-2026-09-11.json", "新增1.59亿：10,336,745÷26%×4周；本次抽取未含output（Luna同法占0.33%，影响<1%）；26pt为取整读数差，范围约1.53~1.65亿；Plus定价页写明Astra为limited档（可加credits），直测的是实际消耗速率不受影响；round8发现Observatory现测Astra≈4.1×Sol，round7旧权重2×互证口径存疑，本值不依赖权重模型；round13新增Plus同框32~75M/周散布于1.28~3.0亿/月，与1.59亿同量级不改值；Pro20x已按round13挂点；未折算：抽取只含 input＋cache_read，缺 output 分项"),
     # GPT-6 Sol（9/22 新发）—— 维护者Plus账号2026-09-24本机Codex当日增量直测；只挂Plus，Pro 5x/20x不派生（裁定）
     ("chatgpt_plus", "ChatGPT Plus", 20, "USD", "gpt-6-sol", chatgpt_sol6_monthly_yi(), "high", "维护者本机Codex实测：当日增量gpt-6-sol total 15,716,975 tokens（input 693,878/output 46,713含reasoning 14,925/cache_read 14,976,384，hit 95.57%）= 周额度约6%；chatgpt-gpt6sol-plus-round1-2026-09-24.json；workload-conversion-round1-2026-09-30.json", f"10.48→{chatgpt_sol6_monthly_yi():g}亿（2026-09-30 裁定带分项实测统一折算）：段 worth ${worth_usd(CHATGPT_PLUS_SOL6_SEGMENT, GPT6_SOL_LIST):.4f}（cache 14.98M×$0.2＋入0.69M×$2＋出0.05M×$10）÷6%×4周＝${worth_usd(CHATGPT_PLUS_SOL6_SEGMENT, GPT6_SOL_LIST)/0.06*4:.2f} ÷标准档混合价${blended(*GPT6_SOL_LIST):.3f}/MTok；raw 口径 {chatgpt_sol6_raw_monthly_yi():g} 留作对照。以下为原采用决策——新增{chatgpt_sol6_raw_monthly_yi():g}亿：15,716,975÷6%×4周（原 raw 口径）；6%为口述取整，5.5~6.5%折算口径对应10.15~12.00亿（raw 口径9.67~11.43）；$2/$10与AA页标价一致，cached 0.1×推定未见官方页；昨日77.8M无周%检查点不参与；Pro 5x/20x不派生（裁定只挂Plus）；榜分见scores-gpt6sol-round1-2026-09-24.json"),
@@ -1260,8 +1260,8 @@ DERIVED = [
     # OpenAI：Terra/5.5仍按三段credits与项目统一标准负载从Sol换算；Luna已有独立实测，不再从Sol派生
     *[(pid, "gpt-5.6-sol", model, blended(10, 100, 500) / blended(*rates), "medium",
        f"https://learn.chatgpt.com/docs/pricing 三段credits（cache/input/output）Sol=10/100/500，对比{rates}；旧倍率{old_ratio}、旧月额度{sol_yi * old_ratio:g}亿作废；保留Sol基准，按项目统一标准负载重算；见audit-round4-2026-09-05.json",
-       pid != "chatgpt_pro_5x" and model != "gpt-5.6-terra")
-      for pid, sol_yi in (("chatgpt_plus", 6.16), ("chatgpt_pro_5x", 30.8), ("chatgpt_pro_20x", CHATGPT_PRO20X_SOL_MONTHLY_YI))
+       pid != "chatgpt_pro_10x" and model != "gpt-5.6-terra")
+      for pid, sol_yi in (("chatgpt_plus", 6.16), ("chatgpt_pro_10x", 61.6), ("chatgpt_pro_20x", CHATGPT_PRO20X_SOL_MONTHLY_YI))
       for model, rates, old_ratio in (("gpt-5.6-terra", (5, 50, 300), 2),
                                       ("gpt-5.5", (12.5, 125, 750), 0.8))],
     # Anthropic：Sonnet 5 标价 = Opus 的 0.4 → ×2.5；Opus 4.8 与 Opus 5 同价 → ×1；Fable 订阅内权重统一 6.5×（Reddit x5 档 4.25 系 typed meter 软读数、与确认 2× 周池比矛盾，不采），且最多占周额度 50%
@@ -1286,8 +1286,8 @@ DERIVED = [
     ("claude_max_20x", "claude-opus-5.5", "claude-haiku-5.5", RATIO_HAIKU55, "low", f"新增{CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_HAIKU55:.2f}亿：20x Opus5.5 采用值 {CLAUDE_OPUS55_MAX20X_MONTHLY_YI:g}亿 × 混合价比 {RATIO_HAIKU55:.4f}（Haiku5.5 90/10 分段混合），同 Pro 口径派生非实测；外推幅度大，若池权重偏离价格比须重推；不采：纯 ≤100K {CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_HAIKU55_LE100K:.2f}亿、50/50 {CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_HAIKU55_5050:.2f}亿；claude-haiku55-round1-2026-10-08.json", True),
     ("claude_max_5x", "claude-opus-5.5", "claude-sonnet-5.5", RATIO_SONNET55, "low", f"新增{claude_max5x_opus55_monthly_yi()*RATIO_SONNET55:.2f}亿：5x Opus5.5 直测锚 {claude_max5x_opus55_monthly_yi():g}亿 × 混合价比 {RATIO_SONNET55:g}，同 Pro 口径派生非实测；2026-10-08 裁定锚同套餐直测行，不用 20x÷2（得 {CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_SONNET55/CLAUDE_WEEKLY_20X_TO_5X:.2f}亿，不采）；claude-haiku55-round1-2026-10-08.json", False),
     ("claude_max_5x", "claude-opus-5.5", "claude-haiku-5.5", RATIO_HAIKU55, "low", f"新增{claude_max5x_opus55_monthly_yi()*RATIO_HAIKU55:.2f}亿：5x Opus5.5 直测锚 {claude_max5x_opus55_monthly_yi():g}亿 × 混合价比 {RATIO_HAIKU55:.4f}（Haiku5.5 90/10 分段混合），同 Pro 口径派生非实测；2026-10-08 裁定锚同套餐直测行，不用 20x÷2；不采：纯 ≤100K {claude_max5x_opus55_monthly_yi()*RATIO_HAIKU55_LE100K:.2f}亿、50/50 {claude_max5x_opus55_monthly_yi()*RATIO_HAIKU55_5050:.2f}亿；claude-haiku55-round1-2026-10-08.json", False),
-    # Astra Pro5x：沿用 Sol 档间 4× 关系由 20x 采用值派生；prolite 同框 2.31亿/周≈9.2亿/月量级接近（多代理高负载偏大，不直接采）
-    ("chatgpt_pro_5x", "gpt-5.6-sol", "gpt-6-astra", CHATGPT_PRO20X_ASTRA_MONTHLY_YI / CHATGPT_PRO20X_SOL_MONTHLY_YI, "low", f"{CHATGPT_PRO20X_ASTRA_MONTHLY_YI/4:g}→{30.8*CHATGPT_PRO20X_ASTRA_MONTHLY_YI/CHATGPT_PRO20X_SOL_MONTHLY_YI:g}亿：{CHATGPT_PRO20X_ASTRA_MONTHLY_YI:g}×30.8/{CHATGPT_PRO20X_SOL_MONTHLY_YI:g}（沿用Sol 20x→5x档间比例，基准随Sol 20x加权值联动{CHATGPT_PRO20X_SOL_MONTHLY_YI/30.8:.2f}×）；round12 codex#45085 prolite同框2.31亿/周≈9.2亿/月量级接近但为多代理Astra High放大样本，不直接采；chatgpt-astra-sameframe-round13-2026-09-20.json", False),
+    # Astra Pro $100 档：沿用 Sol 档间比例由 20x 采用值派生（2026-10-30 起档位 5x→10x，比例 4×→2×）；prolite 同框 2.31亿/周≈9.2亿/月量级接近（多代理高负载偏大，不直接采）
+    ("chatgpt_pro_10x", "gpt-5.6-sol", "gpt-6-astra", CHATGPT_PRO20X_ASTRA_MONTHLY_YI / CHATGPT_PRO20X_SOL_MONTHLY_YI, "low", f"9.10→{61.6*CHATGPT_PRO20X_ASTRA_MONTHLY_YI/CHATGPT_PRO20X_SOL_MONTHLY_YI:g}亿：{CHATGPT_PRO20X_ASTRA_MONTHLY_YI:g}×61.6/{CHATGPT_PRO20X_SOL_MONTHLY_YI:g}（沿用Sol 20x→10x档间比例，2026-10-30 起 $100 档 5x→10x、比例4×→2×，基准随Sol 20x加权值联动{CHATGPT_PRO20X_SOL_MONTHLY_YI/61.6:.2f}×）；round12 codex#45085 prolite同框2.31亿/周≈9.2亿/月量级接近但为多代理Astra High放大样本，不直接采；chatgpt-astra-sameframe-round13-2026-09-20.json；chatgpt-pro-10x-round1-2026-10-30.json", False),
     # Pro 档 Fable 5/5.1 套餐内不可用（走 usage credits，官方 high），不挂点
     # Cursor：池按 compute cost 计（官方），Composer 2.5 标价 $0.5/$0.2/$2.5；Grok 4.5 与 4.6 同价
     ("cursor_ultra", "grok-4.6", "composer-2.5", RATIO_COMPOSER, "medium", f"旧80亿基准→77.37亿×统一标准负载倍率{RATIO_COMPOSER:.6f}；随round8标准中间值联动，非Composer实测；见cursor-adoption-round8-2026-09-06.json", True),
@@ -1433,8 +1433,12 @@ DATA_DATES = {
     ("anthropic_sonnet55_api", "claude-sonnet-5.5"): ("2026-10-08", "official"),
     ("anthropic_haiku55_api", "claude-haiku-5.5"): ("2026-10-08", "official"),
     # 派生行里锚点不止一个、不能简单沿用 DERIVED 基准行的，显式给日期与锚点
-    ("chatgpt_pro_5x", "gpt-6-astra"): ("2026-07-30~2026-09-21", "derived",
-                                        "ChatGPT Plus · gpt-5.6-sol；ChatGPT Pro 20x · gpt-6-astra、gpt-5.6-sol"),
+    ("chatgpt_pro_10x", "gpt-5.6-sol"): ("2026-07-30~2026-10-30", "derived",
+                                        "ChatGPT Plus · gpt-5.6-sol；官方 $100 档倍率 5x→10x 复核 2026-10-30"),
+    ("chatgpt_pro_10x", "gpt-5.6-luna"): ("2026-09-08~2026-10-30", "derived",
+                                         "ChatGPT Plus · gpt-5.6-luna；官方 $100 档倍率 5x→10x 复核 2026-10-30"),
+    ("chatgpt_pro_10x", "gpt-6-astra"): ("2026-07-30~2026-10-30", "derived",
+                                        "ChatGPT Plus · gpt-5.6-sol；ChatGPT Pro 20x · gpt-6-astra、gpt-5.6-sol；官方 $100 档倍率 5x→10x 复核 2026-10-30"),
     ("claude_max_5x", "claude-fable-5.1"): ("2026-08~2026-09-05", "derived",
                                            "Claude Max 20x (9/14+) · claude-opus-5、claude-fable-5.1"),
 }
@@ -1445,8 +1449,6 @@ DATA_DATE_INHERIT = {
     ("minimax_m_plan_explore_cn_annual", "minimax-m3.1-flash-preview"): ("minimax_m_plan_go_cn", "minimax-m3.1-flash-preview"),
     ("minimax_m_plan_build_cn", "minimax-m3.1-flash-preview"): ("minimax_m_plan_go_cn", "minimax-m3.1-flash-preview"),
     ("minimax_m_plan_build_cn_annual", "minimax-m3.1-flash-preview"): ("minimax_m_plan_go_cn", "minimax-m3.1-flash-preview"),
-    ("chatgpt_pro_5x", "gpt-5.6-sol"): ("chatgpt_plus", "gpt-5.6-sol"),
-    ("chatgpt_pro_5x", "gpt-5.6-luna"): ("chatgpt_plus", "gpt-5.6-luna"),
     ("chatgpt_pro_20x", "gpt-5.6-luna"): ("chatgpt_plus", "gpt-5.6-luna"),
     ("supergrok_plus", "grok-4.6"): ("supergrok", "grok-4.6"),
     ("supergrok_heavy", "grok-4.6"): ("supergrok", "grok-4.6"),
@@ -1527,7 +1529,7 @@ def workload_of(pid: str, billing: str, model: str = "") -> str:
     if (pid, model) == ("devin_max", "gpt-6-astra"):
         return "standard"
     if (pid == "chatgpt_plus" and model in ("gpt-6-sol", "gpt-6-luna", "gpt-6.1-sol", "gpt-5.6-luna")) \
-            or (pid in ("chatgpt_pro_5x", "chatgpt_pro_20x") and model == "gpt-5.6-luna"):
+            or (pid in ("chatgpt_pro_10x", "chatgpt_pro_20x") and model == "gpt-5.6-luna"):
         return "standard"
     if pid.startswith(("opencode_", "command_code_", "ollama_", "glm_coding_", "mimo_token_")):
         return "standard"

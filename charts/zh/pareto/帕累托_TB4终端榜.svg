@@ -67,7 +67,10 @@
 <text x="720.000" y="775.000" font-size="13" fill="#5D655E" text-anchor="middle" font-weight="400" >真实单价 · 美元 / 百万 token</text>
 <text x="1338.000" y="775.000" font-size="12" fill="#737B74" text-anchor="end" font-weight="400" >越右越便宜 →</text>
 <path id="frontier" d="M120.000,250.497 L997.937,250.497 L1097.563,275.154 L1214.662,434.007 L1316.000,556.076 L1338.000,556.076" fill="none" stroke="#303630" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.032467532" data-score="37.27" data-x="741.548" data-y="474.941" transform="translate(741.548 474.941)"><title>GPT 5.6 Sol · Plus / GPT 5.6 Sol · Pro 5x · $0.03247/MTok · 37.27 · mediumCodex - GPT-5.6 Sol (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel. / Codex - GPT-5.6 Sol (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.032467532" data-score="37.27" data-x="741.548" data-y="474.941" transform="translate(741.548 474.941)"><title>GPT 5.6 Sol · Plus · $0.03247/MTok · 37.27 · mediumCodex - GPT-5.6 Sol (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.016233766" data-score="37.27" data-x="841.174" data-y="474.941" transform="translate(841.174 474.941)"><title>GPT 5.6 Sol · Pro 10x · $0.01623/MTok · 37.27 · mediumCodex - GPT-5.6 Sol (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.015501473" data-score="37.27" data-x="847.808" data-y="474.941" transform="translate(847.808 474.941)"><title>GPT 5.6 Sol · Pro 20x · $0.0155/MTok · 37.27 · highCodex - GPT-5.6 Sol (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
@@ -76,7 +79,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0028336639" data-score="17.27" data-x="1092.057" data-y="637.699" transform="translate(1092.057 637.699)"><title>GPT 5.6 Luna · Plus · $0.00283/MTok · 17.27 · highCodex - GPT-5.6 Luna (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0028335836" data-score="17.27" data-x="1092.061" data-y="637.699" transform="translate(1092.061 637.699)"><title>GPT 5.6 Luna · Pro 5x · $0.00283/MTok · 17.27 · mediumCodex - GPT-5.6 Luna (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0014168119" data-score="17.27" data-x="1191.685" data-y="637.699" transform="translate(1191.685 637.699)"><title>GPT 5.6 Luna · Pro 10x · $0.00142/MTok · 17.27 · mediumCodex - GPT-5.6 Luna (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0014168019" data-score="17.27" data-x="1191.686" data-y="637.699" transform="translate(1191.686 637.699)"><title>GPT 5.6 Luna · Pro 20x · $0.00142/MTok · 17.27 · mediumCodex - GPT-5.6 Luna (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
@@ -360,7 +363,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.016785564" data-score="21.52" data-x="836.369" data-y="603.113" transform="translate(836.369 603.113)"><title>GPT 5.6 Terra · Plus · $0.01679/MTok · 21.52 · mediumCodex - GPT-5.6 Terra (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.016785846" data-score="21.52" data-x="836.367" data-y="603.113" transform="translate(836.367 603.113)"><title>GPT 5.6 Terra · Pro 5x · $0.01679/MTok · 21.52 · mediumCodex - GPT-5.6 Terra (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0083929935" data-score="21.52" data-x="935.992" data-y="603.113" transform="translate(935.992 603.113)"><title>GPT 5.6 Terra · Pro 10x · $0.00839/MTok · 21.52 · mediumCodex - GPT-5.6 Terra (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0080143617" data-score="21.52" data-x="942.626" data-y="603.113" transform="translate(942.626 603.113)"><title>GPT 5.6 Terra · Pro 20x · $0.00801/MTok · 21.52 · mediumCodex - GPT-5.6 Terra (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
@@ -397,7 +400,7 @@
 <rect x="-11" y="-11" width="22" height="22" rx="6" fill="#FFF" stroke="#CC5A2E" stroke-width="1.35"/>
 <circle r="4" fill="#CC5A2E"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.10989011" data-score="58.18" data-x="566.307" data-y="304.777" transform="translate(566.307 304.777)"><title>GPT-6 Astra · Pro 5x · $0.10989/MTok · 58.18 · lowCodex - GPT-6 Astra (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.054945055" data-score="58.18" data-x="665.933" data-y="304.777" transform="translate(665.933 304.777)"><title>GPT-6 Astra · Pro 10x · $0.05495/MTok · 58.18 · lowCodex - GPT-6 Astra (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.025849813" data-score="12.42" data-x="774.309" data-y="677.168" transform="translate(774.309 677.168)"><title>Grok 4.5 · Cursor Ultra · $0.02585/MTok · 12.42 · mediumGrok Build - Grok 4.5 (high) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
@@ -556,7 +559,7 @@
 <path d="M1266.76 825l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>
 <text x="1280.760" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >按量 API</text>
 <text x="56.000" y="874.000" font-size="12" fill="#727B72" text-anchor="start" font-weight="400" >默认月=4周；Kimi月池=周池×5，Droid月=周×2 · 美元/credits换算：缓存97% / 输入2.5% / 输出0.5% · 直接total实测不重算</text>
-<text x="1384.000" y="874.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >131 个订阅位置 / 13 个 API 位置 / 4 个前沿位置</text>
+<text x="1384.000" y="874.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >132 个订阅位置 / 13 个 API 位置 / 4 个前沿位置</text>
 <text x="56.000" y="898.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >最高存档配置参考；标注harness与effort。产品/额度实测配置未对齐，不代表各渠道的实测成绩。</text>
 <text x="56.000" y="919.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >≈$0 为 SWE-2 促销价：Devin Pro/Max/Teams 至 2026-10-31 不计额度，非永久口径；TB4 分数为 Cognition 自报。</text>
 <text x="56.000" y="940.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >订阅与按量API共同参与前沿；连线中间不代表可购套餐。完整出处与假设见项目核对报告。</text>

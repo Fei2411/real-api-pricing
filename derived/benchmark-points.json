@@ -441,7 +441,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:c95dc5141f32b497",
     "variant": "GPT-5.6 Sol (max)",
@@ -462,7 +462,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:467034ea7730fe43",
     "variant": "GPT-5.6 Sol (xhigh)",
@@ -483,7 +483,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:5b0f75c30f0ab19b",
     "variant": "GPT-5.6 Sol (high)",
@@ -504,7 +504,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:64efdbd82ca66394",
     "variant": "GPT-5.6 Sol (medium)",
@@ -525,7 +525,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:d1b16dee33968223",
     "variant": "GPT-5.6 Sol (low)",
@@ -546,7 +546,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:15f1554828f5b0dc",
     "variant": "GPT-5.6 Sol (non-reasoning) [AA estimate]",
@@ -567,7 +567,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "terminal_bench_4",
     "configuration_id": "terminal_bench_4:60db029f9a2489d1",
     "variant": "Codex - GPT-5.6 Sol (max)",
@@ -588,7 +588,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:7ac4c013fed0b565",
     "variant": "Artificial Analysis - GPT-5.6 Sol (max)",
@@ -609,7 +609,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:f850c291e94d4eee",
     "variant": "Artificial Analysis - GPT-5.6 Sol (xhigh)",
@@ -630,7 +630,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:f0f6b217be9a4963",
     "variant": "Artificial Analysis - GPT-5.6 Sol (high)",
@@ -651,7 +651,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:de8c4cd8b48f6964",
     "variant": "Artificial Analysis - GPT-5.6 Sol (medium)",
@@ -672,7 +672,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:a5ddeab611927928",
     "variant": "Artificial Analysis - GPT-5.6 Sol (low)",
@@ -693,7 +693,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "arena_code",
     "configuration_id": "arena_code:db3c9ce49fea5eee",
     "variant": "GPT-5.6 Sol (xHigh, Codex Harness)",
@@ -714,7 +714,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "arena_agent_mode",
     "configuration_id": "arena_agent_mode:277df63afb39717c",
     "variant": "GPT-5.6 Sol (xHigh)",
@@ -735,7 +735,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "aa_coding_agent_index",
     "configuration_id": "aa_coding_agent_index:538ede13f4f0982c",
     "variant": "Codex - GPT-5.6 Sol (max)",
@@ -756,7 +756,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "open_design_arena",
     "configuration_id": "open_design_arena:048a6b75c77d30fe",
     "variant": "GPT-5.6 Sol",
@@ -777,7 +777,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:b7fe36ffe2e53058",
     "variant": "mini-swe-agent - gpt-5-6-sol (max)",
@@ -798,7 +798,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:20ba110314745668",
     "variant": "mini-swe-agent - gpt-5-6-sol (xhigh)",
@@ -819,7 +819,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:b9f6b563ece4cecf",
     "variant": "mini-swe-agent - gpt-5-6-sol (high)",
@@ -840,7 +840,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:d0270ad29cebc03b",
     "variant": "mini-swe-agent - gpt-5-6-sol (medium)",
@@ -861,7 +861,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-sol",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:eed6875ca51165fd",
     "variant": "mini-swe-agent - gpt-5-6-sol (low)",
@@ -1764,7 +1764,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:6477a68e40370653",
     "variant": "GPT-5.6 Luna (max)",
@@ -1785,7 +1785,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:cbccf58a680025ea",
     "variant": "GPT-5.6 Luna (xhigh)",
@@ -1806,7 +1806,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:384978b43afdd8f4",
     "variant": "GPT-5.6 Luna (high)",
@@ -1827,7 +1827,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:60904975d230578f",
     "variant": "GPT-5.6 Luna (medium)",
@@ -1848,7 +1848,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:5a5591e8d01f6bcc",
     "variant": "GPT-5.6 Luna (low)",
@@ -1869,7 +1869,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:ee543e6460c00da2",
     "variant": "GPT-5.6 Luna (non-reasoning)",
@@ -1890,7 +1890,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "terminal_bench_4",
     "configuration_id": "terminal_bench_4:c58e6d4fb11d442d",
     "variant": "Codex - GPT-5.6 Luna (max)",
@@ -1911,7 +1911,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:9c11404866580c5d",
     "variant": "Artificial Analysis - GPT-5.6 Luna (max)",
@@ -1932,7 +1932,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:79ab9eec86d38bba",
     "variant": "Artificial Analysis - GPT-5.6 Luna (xhigh)",
@@ -1953,7 +1953,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:f7293c3aff3fb8b9",
     "variant": "Artificial Analysis - GPT-5.6 Luna (high)",
@@ -1974,7 +1974,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:a734c5ed959dfebb",
     "variant": "Artificial Analysis - GPT-5.6 Luna (non-reasoning)",
@@ -1995,7 +1995,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:1837d1adb8970232",
     "variant": "Artificial Analysis - GPT-5.6 Luna (medium)",
@@ -2016,7 +2016,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:2f7e69749a01454b",
     "variant": "Artificial Analysis - GPT-5.6 Luna (low)",
@@ -2037,7 +2037,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "arena_code",
     "configuration_id": "arena_code:e2538f1688499c2f",
     "variant": "GPT-5.6 Luna (xHigh, Codex Harness)",
@@ -2058,7 +2058,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "arena_agent_mode",
     "configuration_id": "arena_agent_mode:1dbde04b0eaf6a96",
     "variant": "GPT-5.6 Luna (xHigh)",
@@ -2079,7 +2079,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "aa_coding_agent_index",
     "configuration_id": "aa_coding_agent_index:cdca4b328af5e088",
     "variant": "Codex - GPT-5.6 Luna (max)",
@@ -2100,7 +2100,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:7ad5b83041495e4d",
     "variant": "mini-swe-agent - gpt-5-6-luna (max)",
@@ -2121,7 +2121,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:7a41329b22a4d1b1",
     "variant": "mini-swe-agent - gpt-5-6-luna (xhigh)",
@@ -2142,7 +2142,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:47d55f64ef31558b",
     "variant": "mini-swe-agent - gpt-5-6-luna (high)",
@@ -2163,7 +2163,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:ec094e2327a62e03",
     "variant": "mini-swe-agent - gpt-5-6-luna (medium)",
@@ -2184,7 +2184,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-luna",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:16412a120b9a4722",
     "variant": "mini-swe-agent - gpt-5-6-luna (low)",
@@ -41349,7 +41349,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:caaac19d5e8e542f",
     "variant": "GPT-5.6 Terra (max)",
@@ -41370,7 +41370,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:660875fc06b206b1",
     "variant": "GPT-5.6 Terra (xhigh)",
@@ -41391,7 +41391,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:7d5413682aa8f8af",
     "variant": "GPT-5.6 Terra (high)",
@@ -41412,7 +41412,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:32f3726769b48fd3",
     "variant": "GPT-5.6 Terra (medium)",
@@ -41433,7 +41433,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:fcef5db6f44a9168",
     "variant": "GPT-5.6 Terra (low)",
@@ -41454,7 +41454,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:d3febc87f28b66bc",
     "variant": "GPT-5.6 Terra (non-reasoning)",
@@ -41475,7 +41475,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "terminal_bench_4",
     "configuration_id": "terminal_bench_4:b20bf28695ab6222",
     "variant": "Codex - GPT-5.6 Terra (max)",
@@ -41496,7 +41496,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:4ce13a3cd68939ad",
     "variant": "Artificial Analysis - GPT-5.6 Terra (max)",
@@ -41517,7 +41517,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:653b68c5fe321a32",
     "variant": "Artificial Analysis - GPT-5.6 Terra (xhigh)",
@@ -41538,7 +41538,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:8239d3088594c526",
     "variant": "Artificial Analysis - GPT-5.6 Terra (high)",
@@ -41559,7 +41559,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:b68acd500c6b4161",
     "variant": "Artificial Analysis - GPT-5.6 Terra (low)",
@@ -41580,7 +41580,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:9dda7394ba62eb25",
     "variant": "Artificial Analysis - GPT-5.6 Terra (medium)",
@@ -41601,7 +41601,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:2aa44c238da36b9a",
     "variant": "Artificial Analysis - GPT-5.6 Terra (non-reasoning)",
@@ -41622,7 +41622,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "arena_code",
     "configuration_id": "arena_code:02c72750a81e5732",
     "variant": "GPT-5.6 Terra (xHigh, Codex Harness)",
@@ -41643,7 +41643,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "arena_agent_mode",
     "configuration_id": "arena_agent_mode:760079a760ef35bc",
     "variant": "GPT-5.6 Terra (xHigh)",
@@ -41664,7 +41664,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:1e9b21c2004faec1",
     "variant": "mini-swe-agent - gpt-5-6-terra (max)",
@@ -41685,7 +41685,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:277b6c07f6ca3318",
     "variant": "mini-swe-agent - gpt-5-6-terra (xhigh)",
@@ -41706,7 +41706,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:31c29b4c94cf77ae",
     "variant": "mini-swe-agent - gpt-5-6-terra (high)",
@@ -41727,7 +41727,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:900c8577e3bc443d",
     "variant": "mini-swe-agent - gpt-5-6-terra (medium)",
@@ -41748,7 +41748,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
+    "point_id": "chatgpt_pro_10x::gpt-5.6-terra",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:329cf994aaf09cfd",
     "variant": "mini-swe-agent - gpt-5-6-terra (low)",
@@ -41769,7 +41769,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:c4bfcb80a46cebef",
     "variant": "GPT-5.5 (xhigh)",
@@ -41790,7 +41790,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:6fd00cd9ccb51b99",
     "variant": "GPT-5.5 (high)",
@@ -41811,7 +41811,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:22a192a88d4be69a",
     "variant": "GPT-5.5 (medium)",
@@ -41832,7 +41832,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:c3e9b37ac894d3d3",
     "variant": "GPT-5.5 (low) [AA estimate]",
@@ -41853,7 +41853,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:e75792c6ebb8bb80",
     "variant": "GPT-5.5 (non-reasoning) [AA estimate]",
@@ -41874,7 +41874,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:b426d7104b617616",
     "variant": "Artificial Analysis - GPT-5.5 (xhigh)",
@@ -41895,7 +41895,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:7bff670f3c107bb6",
     "variant": "Artificial Analysis - GPT-5.5 (high)",
@@ -41916,7 +41916,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:52b22206889b7f5e",
     "variant": "Artificial Analysis - GPT-5.5 (medium)",
@@ -41937,7 +41937,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "arena_code",
     "configuration_id": "arena_code:5af65425092d9018",
     "variant": "GPT-5.5 (xHigh, Codex Harness)",
@@ -41958,7 +41958,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "arena_code",
     "configuration_id": "arena_code:27bb4ec3bb50aac5",
     "variant": "GPT-5.5 (High, Codex Harness)",
@@ -41979,7 +41979,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "arena_code",
     "configuration_id": "arena_code:7b92cd9fac1b52f8",
     "variant": "GPT-5.5 (Codex Harness)",
@@ -42000,7 +42000,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "arena_agent_mode",
     "configuration_id": "arena_agent_mode:12a21bd8d45ebe97",
     "variant": "GPT-5.5 (xHigh)",
@@ -42021,7 +42021,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "arena_agent_mode",
     "configuration_id": "arena_agent_mode:5d4bf69714c08bac",
     "variant": "GPT-5.5",
@@ -42042,7 +42042,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:6d1742654e70dc7d",
     "variant": "mini-swe-agent - gpt-5-5 (xhigh)",
@@ -42063,7 +42063,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:8fa6331c80979ca8",
     "variant": "mini-swe-agent - gpt-5-5 (high)",
@@ -42084,7 +42084,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:f4c657e2ffa66931",
     "variant": "mini-swe-agent - gpt-5-5 (medium)",
@@ -42105,7 +42105,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-5.5",
+    "point_id": "chatgpt_pro_10x::gpt-5.5",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:94c61fbd52e4cefa",
     "variant": "mini-swe-agent - gpt-5-5 (low)",
@@ -47313,7 +47313,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:9b1da82a91856d8d",
     "variant": "GPT-6 Astra (max)",
@@ -47334,7 +47334,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:7070b585da6e3a29",
     "variant": "GPT-6 Astra (xhigh)",
@@ -47355,7 +47355,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:7c09034755a992fc",
     "variant": "GPT-6 Astra (high)",
@@ -47376,7 +47376,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:3cf95b4f1be42e0f",
     "variant": "GPT-6 Astra (medium)",
@@ -47397,7 +47397,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "aa_intelligence_index",
     "configuration_id": "aa_intelligence_index:6858c62f40a2b8a3",
     "variant": "GPT-6 Astra (low)",
@@ -47418,7 +47418,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "terminal_bench_4",
     "configuration_id": "terminal_bench_4:2b4c0c92f4ec0d16",
     "variant": "Codex - GPT-6 Astra (max)",
@@ -47439,7 +47439,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "terminal_bench_4",
     "configuration_id": "terminal_bench_4:3b9a5fe52eb138fa",
     "variant": "Codex - GPT-6 Astra (xhigh)",
@@ -47460,7 +47460,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "terminal_bench_4",
     "configuration_id": "terminal_bench_4:45f88bc97bdff5ad",
     "variant": "Codex - GPT-6 Astra (high)",
@@ -47481,7 +47481,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "terminal_bench_4",
     "configuration_id": "terminal_bench_4:5784b06ce7122435",
     "variant": "Codex - GPT-6 Astra (medium)",
@@ -47502,7 +47502,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "terminal_bench_4",
     "configuration_id": "terminal_bench_4:b35ad430c78b1571",
     "variant": "Codex - GPT-6 Astra (low)",
@@ -47523,7 +47523,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:700453154be041cb",
     "variant": "Artificial Analysis - GPT-6 Astra (xhigh)",
@@ -47544,7 +47544,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:e44812025afd889c",
     "variant": "Artificial Analysis - GPT-6 Astra (max)",
@@ -47565,7 +47565,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:12ee7971061ca0e0",
     "variant": "Artificial Analysis - GPT-6 Astra (high)",
@@ -47586,7 +47586,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:0634c4abcbad70cc",
     "variant": "Artificial Analysis - GPT-6 Astra (medium)",
@@ -47607,7 +47607,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "aa_terminal_bench_4",
     "configuration_id": "aa_terminal_bench_4:4785a3610e775817",
     "variant": "Artificial Analysis - GPT-6 Astra (low)",
@@ -47628,7 +47628,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "arena_code",
     "configuration_id": "arena_code:89f1162f20227cc3",
     "variant": "GPT-6 Astra (Max)",
@@ -47649,7 +47649,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "arena_agent_mode",
     "configuration_id": "arena_agent_mode:6d6f42d54040342f",
     "variant": "GPT-6 Astra (Max)",
@@ -47670,7 +47670,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "aa_coding_agent_index",
     "configuration_id": "aa_coding_agent_index:6ee94ff7d755eeee",
     "variant": "Codex - GPT-6 Astra (max)",
@@ -47691,7 +47691,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "aa_coding_agent_index",
     "configuration_id": "aa_coding_agent_index:c64a6ebb32778718",
     "variant": "Devin Fusion CLI - GPT-6 Astra XHigh + SWE-2 Medium",
@@ -47712,7 +47712,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "open_design_arena",
     "configuration_id": "open_design_arena:eab6a68a5b32527b",
     "variant": "GPT-6 Astra",
@@ -47733,7 +47733,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:aa4ad931eff45be4",
     "variant": "mini-swe-agent - gpt-6-astra (xhigh)",
@@ -47754,7 +47754,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:e8101649c60ecba8",
     "variant": "mini-swe-agent - gpt-6-astra (high)",
@@ -47775,7 +47775,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:b30a594ec5f66ce7",
     "variant": "mini-swe-agent - gpt-6-astra (max)",
@@ -47796,7 +47796,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:a5c5cd4b12673627",
     "variant": "mini-swe-agent - gpt-6-astra (medium)",
@@ -47817,7 +47817,7 @@
     "quota_effort_matched": null
   },
   {
-    "point_id": "chatgpt_pro_5x::gpt-6-astra",
+    "point_id": "chatgpt_pro_10x::gpt-6-astra",
     "board": "deepswe_1_1",
     "configuration_id": "deepswe_1_1:2d2b1fb9f6df06a3",
     "variant": "mini-swe-agent - gpt-6-astra (low)",
