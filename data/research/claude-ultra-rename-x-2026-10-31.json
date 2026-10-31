@@ -1,0 +1,108 @@
+{
+  "recordedAt": "2026-10-31",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 170,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-10-31：Claude Max→Ultra 官方改名与 verified 取消 5h；Help/定价页确认周倍率。截图不入库。",
+  "items": [
+    {
+      "id": "x-claudeai-max-ultra-rename",
+      "confidence": "High",
+      "planOrModel": "Claude Max $100 / Ultra $200（原 Max 5x / Max 20x）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/claudeai/status/2116220869479428500",
+        "account": "claudeai",
+        "createdAt": "2026-10-30T17:29:07.000Z"
+      },
+      "observed": {
+        "rename": {
+          "max5x": "Max",
+          "max20x": "Ultra"
+        },
+        "priceUsd": {
+          "Max": 100,
+          "Ultra": 200
+        },
+        "fiveHourLimit": "removed for verified Ultra; temporary for unverified newer accounts",
+        "weeklyLimits": "unchanged per official post",
+        "hasScreenshot": true
+      },
+      "note": "官方全文。原帖：https://x.com/claudeai/status/2116220869479428500",
+      "gaps": [
+        "周限绝对 token 仍未官方公开"
+      ]
+    },
+    {
+      "id": "help-ultra-plan-10x",
+      "confidence": "High",
+      "planOrModel": "Claude Ultra",
+      "source": {
+        "type": "official_help",
+        "url": "https://support.claude.com/en/articles/17728952-what-is-the-ultra-plan",
+        "account": "Anthropic Help Center"
+      },
+      "observed": {
+        "weeklyVsPro": "10x",
+        "fiveHourLimitVerified": false,
+        "priceUsd": 200,
+        "apiCreditsUsdPerMonth": 200,
+        "hasScreenshot": false
+      },
+      "relatedSources": [
+        {
+          "url": "https://claude.com/pricing",
+          "note": "对照表：Max 5h&week=5×Pro；Ultra week=10×Pro，无5h(verified)；API credits Max$100 Ultra$200"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+        }
+      ],
+      "note": "与站点既有周池口径（20x≈2×5x）一致；需更新档名标签。",
+      "gaps": [
+        "无绝对 token 表"
+      ]
+    },
+    {
+      "id": "x-itsbrandond-email-20x-means-5h",
+      "confidence": "Medium",
+      "planOrModel": "Claude Ultra（原 Max 20x）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/itsbrandond/status/2116307849718403564",
+        "account": "itsbrandond",
+        "createdAt": "2026-10-30T23:14:45.000Z"
+      },
+      "observed": {
+        "claim": "max 20x referred to 5-hour limit not overall weekly usage",
+        "hasScreenshot": true
+      },
+      "note": "邮件截图未入库。",
+      "gaps": [
+        "非官方数字源"
+      ]
+    },
+    {
+      "id": "x-jis-cn-help-screenshots",
+      "confidence": "Medium",
+      "planOrModel": "Claude Max / Ultra",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/jis544539251207/status/2116324731154555101",
+        "account": "jis544539251207",
+        "createdAt": "2026-10-31T00:21:49.000Z"
+      },
+      "observed": {
+        "hasScreenshot": true,
+        "claim": "中文整理官方帮助验证步骤"
+      },
+      "note": "多图帮助页截图未入库。",
+      "gaps": [
+        "转述"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-10-31.json"
+  ]
+}
