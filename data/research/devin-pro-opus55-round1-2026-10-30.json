@@ -1,0 +1,189 @@
+{
+  "collectedAt": "2026-10-30",
+  "subject": "Devin Pro $20 — first contributor usage sample (daily + weekly quota, Claude Opus 5.5 medium effort, Devin CLI), with a single-turn calibration run",
+  "scopeNote": "Contributor-reported Devin Pro plan. Two segments were measured on the same account within one week: the main 5-turn working session (weekly bar 15% -> 41%) and a one-turn calibration run minutes later (41% -> 47%). The calibration run resolves what the panel percentages are actually metered on. Research-only so far: no adopted row and no script change in this commit; an adoption proposal is appended at the end for maintainer review.",
+  "adoptionStatus": "research-only; not adopted; adoptionProposal included for maintainer review (no adopted row, no script change in this commit)",
+  "source": {
+    "type": "user_panel_reading",
+    "panel": "Devin CLI /usage (Daily / Weekly percentage bars) and /session-stats (agent messages, input / output / cached input, tokens by model)",
+    "checkpoints": [
+      "start: Daily 8% / Weekly 15%, message 'No quota consumed yet in this session'",
+      "after session: Daily 60% / Weekly 41%",
+      "after one calibration turn: Daily 72% / Weekly 47%"
+    ],
+    "supersededRecall": "An earlier contributor recollection of 'daily 0%, weekly 13%' is superseded by the captured 8%/15% start reading and is not used in any calculation.",
+    "redaction": "No account identifier, e-mail or local path is retained. Session IDs are omitted. Percentages and token counts only."
+  },
+  "plan": {
+    "planId": "devin_pro",
+    "planName": "Devin Pro",
+    "priceUsd": 20,
+    "priceSource": "https://devin.ai/pricing Pro $20/month; contributor states the purchased plan is Devin Pro at $20",
+    "servedModel": "claude-opus-5.5",
+    "effort": "medium",
+    "existingAdoptedRows": "data/adopted.csv currently has only one devin_pro row: x swe-2, unmetered promotional point (promo_until 2026-10-31). No paid Devin Pro allowance point exists, and the devin_max notes state that the Pro $20 tier has no data and is not derived."
+  },
+  "rawObservations": {
+    "quotaCheckpoints": {
+      "start": { "dailyUsedPct": 8, "weeklyUsedPct": 15, "dailyResetsIn": "21h 9m", "weeklyResetsAt": "2026-11-01 11:00 (UTC+3)" },
+      "afterSession": { "dailyUsedPct": 60, "weeklyUsedPct": 41, "dailyResetsIn": "20h 12m", "weeklyResetsAt": "2026-11-01 11:00 (UTC+3)" },
+      "afterCalibrationTurn": { "dailyUsedPct": 72, "weeklyUsedPct": 47, "dailyResetsIn": "18h 11m", "weeklyResetsAt": "2026-11-01 11:00 (UTC+3)" },
+      "dailyDeltaPp": { "session": 52, "calibrationTurn": 12 },
+      "weeklyDeltaPp": { "session": 26, "calibrationTurn": 6 },
+      "readings": "integer percentages as rendered by the panel; all three checkpoints captured, none recalled"
+    },
+    "sessionCounters": {
+      "before": {
+        "agentMessages": 68,
+        "inputTokens": 771681,
+        "outputTokens": 88312,
+        "cachedInputTokens": 14554147,
+        "totalTokens": 15414140,
+        "usageLine": "5 turns, 113 tool calls, 1 file, 15 commands, 'Tokens 1.3M in / 6.6k out (~270k per turn)'",
+        "note": "a /usage refresh immediately before the calibration turn timed out ('Timed out fetching account usage'), so the pre-turn percentages come from the 60%/41% checkpoint above; the /session-stats counters were unchanged, confirming nothing was consumed in between"
+      },
+      "afterCalibrationTurn": {
+        "agentMessages": 69,
+        "inputTokens": 1148012,
+        "outputTokens": 88318,
+        "cachedInputTokens": 14567514,
+        "totalTokens": 15803844,
+        "usageLine": "6 turns, 113 tool calls, 1 file, 15 commands, 'Tokens 1.7M in / 6.6k out (~290k per turn)'"
+      },
+      "calibrationDelta": {
+        "agentMessages": 1,
+        "inputTokens": 376331,
+        "outputTokens": 6,
+        "cachedInputTokens": 13367,
+        "totalTokens": 389704,
+        "turn": "one trivial user turn ('say ok'), answered with one word",
+        "interpretation": "the 376k fresh input is the whole context re-sent as uncached input because the pause (timeouts, copying, reading) exceeded the provider cache TTL; the turn is therefore a deliberate cache-miss probe, not a typical turn",
+        "contributorConfirmation": "the contributor confirms the session already carried a large context and had been idle for a long time before the probe, so the cache was cold by construction rather than by accident. This makes the segment a worst-case cost probe (cold full-context resend) and the correct reading is 'this is what one cold resend costs', not 'this is a normal turn'"
+      },
+      "note": "two different CLI session ids appear during the run; the counters are cumulative across the resumed session and reconcile with the panel's 'Total 16M tokens' line"
+    }
+  },
+  "meterResolution": {
+    "finding": "Devin's /usage token line is not the billed volume; /session-stats is.",
+    "evidence": "After the calibration turn /usage reports '1.7M in' while /session-stats reports input 1,148,012 + cached input 14,567,514 = 15.72M input tokens (total 15.80M with output), a factor of about 9.3x. The /usage figure tracks the per-turn prompt total (turns x ~280k) and omits the per-agent-message cache reads that dominate the real input volume (68 agent messages against 5 user turns).",
+    "consequence": "Any conversion built on /usage's 'M in' understates the allowance by roughly an order of magnitude. The earlier 1.3M reading is therefore not the segment volume, and the 12x variant conflict is resolved in favour of the /session-stats block.",
+    "whatItDoesNotResolve": "whether the bars are linear in token worth or in some agent-compute unit. The calibration turn gives a direct test of proportionality, see proportionalityTest."
+  },
+  "proportionalityTest": {
+    "design": "one trivial turn with known token deltas between two captured percentage checkpoints",
+    "observed": "389,704 tokens (dominated by 376k fresh input) moved Daily by 12pp and Weekly by 6pp",
+    "result": "the two segments give list-worth per weekly percentage point within 19% of each other ($0.2986/pp over 26pp for the session vs $0.2514/pp over 6pp for the calibration turn), so the bars behave like a linear token-worth meter rather than an opaque compute unit",
+    "cacheReadBilledCheck": "if cache reads were not billed, the session segment would price at $0.1867/pp against $0.2514/pp for the fresh-input-dominated turn, a 35% gap; with cache reads billed at $0.20/MTok the gap is 19%. The near-agreement supports Devin charging cache reads as well, consistent with the worth-based reconciliation used for the adopted Devin Max rows",
+    "caveat": "6pp is a small segment and integer percentages carry +/-0.5pp, i.e. about +/-8% on the calibration estimate"
+  },
+  "contextMeasurement": {
+    "observed": {
+      "systemPrompt": 72700,
+      "tools": 16100,
+      "messages": 300800,
+      "total": 389700,
+      "windowAsDisplayed": 262000,
+      "fillPctAsDisplayed": 149,
+      "windowDuringSession": 1000000
+    },
+    "exactMatch": "the calibration turn's input delta was 389,698 tokens (376,331 fresh + 13,367 cached + 6 output) against a /context total of 389.7k — the turn re-sent the entire context exactly once, with the cache cold, which confirms the cache-miss interpretation rather than a partially cached turn",
+    "implicationForCost": "a cold full-context resend costs 389.7k x $4 = $1.56 of list-worth, while the same context warm costs 389.7k x $0.2 = $0.078, a 20x difference. Cache hit rate, not work performed, therefore dominates quota burn on this plan",
+    "implicationForRawTotals": "because tokens per percentage point depend on cache hit rate, the raw token pool is not a stable quantity: the session segment implies 0.59M raw tokens/pp and the calibration segment 0.065M raw tokens/pp, a 9x spread. This is the direct argument for the CONVENTIONS 2026-09-30 worth normalisation and against reporting a raw Devin Pro allowance",
+    "compactionConcern": "none occurred. The contributor clarifies that the session ran with a 1M-token window, that /context was read only after switching to a model whose limit is 262k, and that the history was carried over without a word being sent to the new model. The 149% is therefore a display artefact of the model switch (old history against the new model's denominator), not an overflow, and no compaction or summarisation took place",
+    "freshInputExplanation": "with no compaction, the session's 771,681 fresh input tokens come from repeated cache-cold resends rather than from summarisation: two cold resends of a ~390k context already account for roughly 780k tokens, so almost all fresh input is idle-gap cache expiry — the same mechanism confirmed by the calibration probe",
+    "doNotUseAsAdoptedValue": "389.7k is a context size, not an allowance; it must not be divided into the adopted monthly figure to produce a 'turns per month' claim, because the adopted figure is worth-normalised while a turn's literal token cost varies 20x with cache state"
+  },
+  "structuralObservation": {
+    "dailyToWeeklyPoolRatio": 0.5,
+    "formula": "daily pool / weekly pool = weeklyDeltaPp / dailyDeltaPp = 52/26 = 12/6 = 2",
+    "interpretation": "both segments independently put the daily pool at exactly half the weekly pool, so the Devin Pro daily cap can be exhausted twice inside one week and the weekly bar remains the binding constraint for a monthly figure (month = 4 weeks)",
+    "caveat": "assumes both bars are linear in the same meter and moved only because of these sessions",
+    "note": "the adopted Devin Max rows record 'Max is a weekly pool with no daily cap'; a daily bar on Pro is a plan-structure difference worth recording separately. It does not change the monthly conversion."
+  },
+  "calculation": {
+    "method": "CONVENTIONS.md section 2 for samples with a token split: segment list-worth / segment share -> weekly worth x 4 weeks -> / Anthropic-profile blended price ($0.419/MTok) -> monthly tokens.",
+    "listPricesUsdPerMtok": { "cached": 0.2, "cacheWrite5m": 5, "input": 4, "output": 20, "anthropicBlended": 0.419 },
+    "segments": {
+      "session": {
+        "weeklyPp": 26,
+        "tokens": { "input": 771681, "cachedInput": 14554147, "output": 88312, "total": 15414140 },
+        "worthUsd": 7.7638,
+        "worthFormula": "14.554147M x $0.2 + 0.771681M x $4 + 0.088312M x $20 = $7.7638",
+        "worthPerPp": 0.29861,
+        "monthlyWorthUsd": 119.44,
+        "monthlyYi": 2.85
+      },
+      "calibrationTurn": {
+        "weeklyPp": 6,
+        "tokens": { "input": 376331, "cachedInput": 13367, "output": 6, "total": 389704 },
+        "worthUsd": 1.50812,
+        "worthFormula": "0.376331M x $4 + 0.013367M x $0.2 + 0.000006M x $20 = $1.5081",
+        "worthPerPp": 0.25135,
+        "monthlyWorthUsd": 100.54,
+        "monthlyYi": 2.4
+      },
+      "mergedByPercentagePoints": {
+        "weeklyPp": 32,
+        "worthUsd": 9.2719,
+        "worthPerPp": 0.28975,
+        "weeklyWorthUsd": 28.975,
+        "monthlyWorthUsd": 115.9,
+        "monthlyTokens": 276610000,
+        "monthlyYi": 2.766,
+        "realUsdPerMtok": 0.0723,
+        "formula": "($7.7638 + $1.5081) / 32pp = $0.28975/pp -> week $28.975 -> month $115.90 / $0.419 per MTok = 276.6M tokens/month -> $20 / 276.6M = $0.0723/MTok",
+        "adoptedShape": "2.77 亿/month, medium"
+      }
+    },
+    "rawComparison": {
+      "mergedRawMonthlyYi": 1.98,
+      "realUsdPerMtok": 0.1012,
+      "formula": "(15,414,140 + 389,704) / 32pp x 4 weeks = 197,548,050 tokens/month",
+      "status": "not adopted: the sessions are cache-read heavy (14.57M cached vs 1.15M fresh) and the standard-mix conversion of a cache-heavy sample is what CONVENTIONS 2026-09-30 replaced with worth normalisation; kept as a cross-check, it is 28% below the worth figure"
+    },
+    "externalSanityChecks": {
+      "markupVsListPrice": "the merged figure implies Devin selling about $115.9 of monthly list-worth for $20, i.e. 5.8x; the adopted Devin Max x Opus 5.5 row implies about $2,803/month for $200, i.e. 14x. Pro is therefore ~2.4x worse per dollar than Max, the expected direction for an entry tier",
+      "vsClaudePro": "Claude Pro $20 x Opus 5.5 is adopted at 30.54 亿 ($0.0065/MTok), so Devin Pro is about 11x worse per dollar than the first-party subscription of the same model, which matches an agent platform carrying its own orchestration",
+      "rounding": "26pp and 6pp with +/-0.5pp edges move the merged value by about +/-5%"
+    }
+  },
+  "adoptionProposal": {
+    "row": "('devin_pro', 'Devin Pro', 20, 'USD', 'claude-opus-5.5', devin_pro_opus55_monthly_yi(), 'medium', <source>, <note>)",
+    "monthlyYi": 2.766,
+    "realUsdPerMtok": 0.0723,
+    "confidence": "medium",
+    "confidenceRationale": "panel-level reading with a token split on both segments and two internally consistent estimates (19% apart); downgraded from high for a single account, n=1 week, integer percentages and a 6pp calibration segment",
+    "dataDate": ["2026-10-30", "sample"],
+    "alternativeIfCalibrationExcluded": {
+      "monthlyYi": 2.85,
+      "source": "session segment only (26pp)",
+      "reason": "kept as the alternative because the calibration segment is a confirmed cold-cache worst case; adopted shape prefers the pp-merge for precedent, but 2.40-2.85 is the honest range of this single week"
+    },
+    "workload": "anthropic (needs devin_pro added to the workload_of Anthropic branch beside devin_max::claude-opus-5.5)",
+    "chartTier": "main (devin_pro is already in MAIN_PLANS)",
+    "notDerived": "Do not derive Pro rows for other models or from the Max tier: the observed Pro/Max worth ratio (2.4x per dollar) is not an official multiplier."
+  },
+  "confidence": "medium",
+  "whatIsNeeded": [
+    "A second clean week (or a full-window run) to test reproducibility and to lift confidence toward high.",
+    "Cache-write reporting: /session-stats has no cache-write line; if Devin bills writes separately the worth figure is understated by roughly 2% at the observed input volume.",
+    "Confirm 'Output tokens' includes reasoning, and that no parallel session or other model consumed quota inside either segment.",
+    "Acknowledge the daily bar as a plan-structure feature in DECISIONS.md when the row is adopted."
+  ],
+  "caveats": [
+    "n=1 account, n=1 week, two segments from the same continuous session.",
+    "The adopted-shape figure 2.77 亿 is a worth-normalised equivalent at the Anthropic profile, not the literal token volume the account will see; the raw-implied totals of the two segments differ by 9x precisely because cache hit rate varies.",
+    "The 149% context fill is a model-switch artefact (1M-window history displayed against a 262k-window model) and must not be cited as evidence of compaction or of an exceeded window; no compaction occurred.",
+    "Percentages are integer readings; the 6pp calibration segment carries about +/-8%.",
+    "The calibration turn is a cache-miss probe (context re-sent uncached) and is not a typical turn; it is used only as a proportionality and per-pp cross-check, and merging it by percentage points follows the Google / SuperGrok / Claude Pro precedent.",
+    "Cache write is not reported by the panel; treated as part of fresh input at $4 rather than $5 per MTok, a ~2% understatement of segment worth.",
+    "The Devin Pro x swe-2 promotional row expires 2026-10-31; this sample is about the paid quota, not the promotion.",
+    "No benchmark score is involved; the point would carry scores only where claude-opus-5.5 already has adopted board rows."
+  ],
+  "relatedFiles": [
+    "devin-opus55-round1-2026-09-23.json",
+    "devin-usage-round4-2026-09-14.json",
+    "anthropic-token-mix-round1-2026-09-24.json",
+    "workload-conversion-round1-2026-09-30.json"
+  ]
+}
