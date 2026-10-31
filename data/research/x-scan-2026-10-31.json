@@ -1,0 +1,266 @@
+{
+  "scannedAt": "2026-10-31",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "window": {
+    "start": "2026-10-29T01:00:00Z",
+    "end": "2026-10-31T01:10:00Z"
+  },
+  "method": "Grok Bot built-in public X search_posts_all (namespace x); NOT user X plugin / Platform API quota",
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "snapshotDateShown": "2026-10-27",
+    "note": "WebFetch 首页 Snapshot=2026-10-27；今日 2026-10-31，已滞后约 4 天。未改 production。"
+  },
+  "queries": [
+    "(Kimi OR \"Kimi Code\" OR moonshot) (用量 OR 配额 OR 打满 OR 百分比 OR usage OR quota OR \"%\")",
+    "(Claude OR Anthropic OR \"Claude Code\" OR \"Claude Pro\" OR \"Claude Max\") (usage OR quota OR limit OR tokens OR \"%\") (Pro OR Max OR Team) has:images",
+    "(Cursor OR \"Cursor Pro\" OR \"Cursor Ultra\" OR \"Cursor Pro+\") (usage OR quota OR tokens OR limit OR 用量 OR 配额 OR 打满)",
+    "(Codex OR \"OpenAI Codex\" OR ChatGPT OR \"ChatGPT Plus\" OR \"ChatGPT Pro\") (usage OR quota OR tokens OR limit OR 用量 OR 配额)",
+    "(DeepSeek OR \"DeepSeek Pro\" OR 深度求索) (用量 OR 配额 OR 打满 OR usage OR quota OR tokens OR 套餐 OR 调价)",
+    "(GLM OR \"智谱\" OR Zhipu OR \"GLM Coding\") (用量 OR 配额 OR 套餐 OR 促销 OR usage OR quota OR pricing)",
+    "(MiniMax OR \"海螺\" OR \"M Plan\" OR minimax) (用量 OR 配额 OR 套餐 OR 促销 OR usage OR quota OR pricing OR plan)",
+    "(Devin OR \"Devin AI\" OR Cognition) (usage OR quota OR tokens OR limit OR promo OR pricing OR Pro)",
+    "(OpenCode OR \"Command Code\" OR \"Droid\" OR Windsurf OR \"Claude Code\") (用量 OR 配额 OR usage OR quota OR tokens OR \"%\" OR 打满) has:images",
+    "(Kimi OR Cursor OR Claude OR Codex OR GLM OR MiniMax) (打满 OR 额度 OR \"用完了\" OR \"100%\" OR \"限流\") (token OR tokens OR MTok)",
+    "(\"price change\" OR 调价 OR 涨价 OR 降价 OR \"new pricing\" OR \"rate limit\" OR \"weekly limit\") (Claude OR Cursor OR Kimi OR Codex OR DeepSeek OR MiniMax OR GLM)",
+    "(Pro OR Max OR Ultra OR Plus) (tokens OR cache) (usage OR \"%\" OR percent OR 百分比) (Claude OR Cursor OR Kimi OR Codex) has:images",
+    "(\"Claude Ultra\" OR \"Max 20x\" OR \"5-hour limit\") (verified OR weekly OR Ultra OR Max)",
+    "(\"OpenCode\" OR \"Operation Cheepseek\" OR \"Command Code\") (DeepSeek OR Flash OR \"$100\" OR Go OR Goat)",
+    "(from:claudeai) (Ultra OR Max OR limit OR usage OR weekly)",
+    "from:opencode (Cheepseek OR Flash OR \"$100\" OR Go OR usage)",
+    "opencode (\"Phase 4\" OR Cheepseek OR \"$100 of usage\" OR \"DeepSeek V4.1 Flash\")",
+    "(OpenAI OR ChatGPT OR Codex) (doubled OR \"won't cut\" OR \"usage limits\") (Pro OR \"Pro 200\" OR Business)"
+  ],
+  "counts": {
+    "high": 3,
+    "medium": 9,
+    "discardedLowApprox": 40,
+    "searches_run": 18,
+    "unique_posts_approx": 253
+  },
+  "relatedIssues": [
+    170,
+    171,
+    172
+  ],
+  "relatedPriorIssues": [
+    161,
+    156,
+    158,
+    150,
+    157,
+    163
+  ],
+  "retained": [
+    {
+      "url": "https://x.com/claudeai/status/2116220869479428500",
+      "account": "claudeai",
+      "planOrModel": "Claude Max 5x→Max $100; Max 20x→Ultra $200",
+      "tokens": null,
+      "percent": "官方：verified Ultra 取消 5h；周限不变；定价页 Ultra=10×Pro / Max=5×Pro 每周",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "官方账号全文 + 定价/Help Center 交叉；档名与 5h 机制变更。",
+      "vendor": "Anthropic / Claude",
+      "text_excerpt": "We’re renaming our Max plans: Max 5x → Max; Max 20x → Ultra… removing the 5-hour limit for verified Ultra accounts… Weekly limits remain unchanged.",
+      "created_at": "2026-10-30T17:29:07.000Z",
+      "relatedUrls": [
+        "https://support.claude.com/en/articles/17728952-what-is-the-ultra-plan",
+        "https://claude.com/pricing",
+        "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+      ]
+    },
+    {
+      "url": "https://x.com/opencode/status/2116209960673800474",
+      "account": "opencode",
+      "planOrModel": "OpenCode · DeepSeek V4.1 Flash · Cheepseek Phase 4",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "High",
+      "why": "官方声明 $100 of usage for DeepSeek V4.1 Flash。",
+      "vendor": "OpenCode",
+      "text_excerpt": "Operation Cheepseek Phase 4: $100 of usage for DeepSeek V4.1 Flash",
+      "created_at": "2026-10-30T16:45:46.000Z"
+    },
+    {
+      "url": "https://support.claude.com/en/articles/17728952-what-is-the-ultra-plan",
+      "account": "Anthropic Help Center",
+      "planOrModel": "Claude Ultra / Max",
+      "tokens": null,
+      "percent": "Ultra weekly = 10× Pro；Max weekly = 5× Pro；verified Ultra 无 5h",
+      "hasScreenshot": false,
+      "confidence": "High",
+      "why": "官方帮助页明确周倍率与 5h 规则；与本扫描同主题核验。",
+      "vendor": "Anthropic / Claude",
+      "text_excerpt": "Ultra includes 10 times the Pro plan’s usage every week and has no five-hour limit, for verified accounts.",
+      "created_at": "2026-10-31"
+    },
+    {
+      "url": "https://x.com/aidenyangcn/status/2116317873698402720",
+      "account": "aidenyangcn",
+      "planOrModel": "OpenCode Go $10/mo · DeepSeek V4.1 Flash $100",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "Go 订阅价 + Flash 额度抬升路径截图；缺绝对 token。",
+      "vendor": "OpenCode",
+      "text_excerpt": "$10/月的 Go 订阅，提供了$100的DeepSeek V4.1 Flash 用量 $30→$60→$80→现在 $100",
+      "created_at": "2026-10-30T23:54:35.000Z"
+    },
+    {
+      "url": "https://x.com/0GuoJiH/status/2116309741047845310",
+      "account": "0GuoJiH",
+      "planOrModel": "OpenCode Go · Cheepseek Phase 4",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "阶段时间线交叉官方 $100。",
+      "vendor": "OpenCode",
+      "text_excerpt": "Operation Cheepseek 第四阶段，DeepSeek V4.1 Flash，$100 用量",
+      "created_at": "2026-10-30T23:22:16.000Z"
+    },
+    {
+      "url": "https://x.com/aidenyangcn/status/2116319642792976771",
+      "account": "aidenyangcn",
+      "planOrModel": "OpenCode Go vs CommandCode Goat · $10/$100",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "两家同价 $100 DeepSeek 用量对照截图。",
+      "vendor": "OpenCode + Command Code",
+      "text_excerpt": "同样 $10/月、$100 用量，OpenCode Go 和 CommandCode Goat 你们选哪个？",
+      "created_at": "2026-10-31T00:01:36.000Z"
+    },
+    {
+      "url": "https://x.com/Fei2411/status/2116331629992165689",
+      "account": "Fei2411",
+      "planOrModel": "OpenCode / Command Code · DeepSeek $100",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "维护者观察：两家同时 $100；完整权重+限速说明。",
+      "vendor": "OpenCode + Command Code",
+      "text_excerpt": "OpenCode 和 Command Code 几乎同时将他们订阅的 DeepSeek 额度设为了 $100",
+      "created_at": "2026-10-31T00:49:14.000Z"
+    },
+    {
+      "url": "https://x.com/itsbrandond/status/2116307849718403564",
+      "account": "itsbrandond",
+      "planOrModel": "Claude Ultra（原 Max 20x）",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "官方邮件截图；澄清 20x 指 5h 非周总量。",
+      "vendor": "Anthropic / Claude",
+      "text_excerpt": "“max 20x” was referring to the 5 hour limit and not a 20x in overall usage",
+      "created_at": "2026-10-30T23:14:45.000Z"
+    },
+    {
+      "url": "https://x.com/sam4112mp/status/2116272965771756029",
+      "account": "sam4112mp",
+      "planOrModel": "Cursor Cloud Agent",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "Support：单次长 Cloud Agent session 可产生数千 model requests。",
+      "vendor": "Cursor",
+      "text_excerpt": "ONE long Cloud Agent session can generate thousands of separate model requests",
+      "created_at": "2026-10-30T20:56:08.000Z",
+      "priorIssue": 150
+    },
+    {
+      "url": "https://x.com/JBOY83062526/status/2116313524553285913",
+      "account": "JBOY83062526",
+      "planOrModel": "Cursor + Grok 4.7",
+      "tokens": null,
+      "percent": "约 10% of limit（含昨日）",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "百分比+截图；缺档名与绝对 token。",
+      "vendor": "Cursor / xAI Grok",
+      "text_excerpt": "I’ve been using Grok 4.7 a ton… only used about 10% of my limit",
+      "created_at": "2026-10-30T23:37:18.000Z",
+      "priorIssue": 150
+    },
+    {
+      "url": "https://x.com/zwb44/status/2116330315539001739",
+      "account": "zwb44",
+      "planOrModel": "Codex Pro $100 vs Claude Max $100",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "定性对照截图；旁证 Pro 翻倍后体感（链 #161）。",
+      "vendor": "OpenAI Codex + Anthropic",
+      "text_excerpt": "codex pro 100 now gives more usage than claude max 100",
+      "created_at": "2026-10-31T00:44:01.000Z",
+      "priorIssue": 161
+    },
+    {
+      "url": "https://x.com/utpalsinghdev/status/2116324028407533637",
+      "account": "utpalsinghdev",
+      "planOrModel": "ChatGPT Plus / Codex · GPT-6.1 Sol LOW",
+      "tokens": null,
+      "percent": "15min/4 messages → 5h 60% + weekly 10%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "Plus 燃烧速率口述硬百分比；无截图。",
+      "vendor": "OpenAI / Codex",
+      "text_excerpt": "On my $20 Plus plan I burnt through 60% of my 5 hour limit nd 10% of weekly limit… in just 15 mins and 4 messages",
+      "created_at": "2026-10-31T00:19:00.000Z",
+      "priorIssue": 161
+    }
+  ],
+  "discardedExamples": [
+    {
+      "url": "https://x.com/marketides/status/2116333425712042056",
+      "why": "万圣节梗图，无个人计量"
+    },
+    {
+      "url": "https://x.com/apikey_official/status/2116326788410319341",
+      "why": "Claude Max 供应商招募广告"
+    },
+    {
+      "url": "https://x.com/danmcspirit/status/2116330162002534732",
+      "why": "App 下载量估计，非订阅配额"
+    },
+    {
+      "url": "https://x.com/mspd4100/status/2116327973825786257",
+      "why": "智谱 ZCode 周末羊毛，非订阅打满计量"
+    },
+    {
+      "url": "https://x.com/xulijian1994/status/2116332997721117168",
+      "why": "蚂蚁 Ling Flash 免费羊毛"
+    },
+    {
+      "url": "https://x.com/noah_z_zhang/status/2116318316969263256",
+      "why": "Devin UNLIMITED 口号无数字"
+    },
+    {
+      "url": "https://x.com/jerryjliu0/status/2116288817938497574",
+      "why": "产品发布，非订阅配额"
+    },
+    {
+      "url": "https://x.com/AIMoshHq/status/2116288411124339129",
+      "why": "Kimi 3D Make 功能介绍，无硬配额数"
+    }
+  ],
+  "actionable_leads": [
+    "Claude：官方 Max→Ultra 改名；verified Ultra 无 5h；周限 Ultra=10×Pro / Max=5×Pro（#170）",
+    "OpenCode Cheepseek Phase4 + Command Code：$100 DeepSeek V4.1 Flash（#171）",
+    "Cursor Cloud Agent 多请求计费 + Grok ~10%（#172）",
+    "OpenAI Pro 翻倍跟进帖归入既有 #161，不新开 issue"
+  ],
+  "notes": [
+    "未改 #159 / #152 draft。",
+    "OpenAI Pro 100/200/500 翻倍主证据已在 #161；本日仅保留旁证。",
+    "站点 Snapshot 仍 2026-10-27（滞后 4 天）。"
+  ]
+}

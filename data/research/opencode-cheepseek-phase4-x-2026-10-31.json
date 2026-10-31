@@ -1,0 +1,120 @@
+{
+  "recordedAt": "2026-10-31",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 171,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "OpenCode Cheepseek Phase 4 $100 DeepSeek V4.1 Flash；Command Code Goat 对称社区信号。截图不入库。",
+  "items": [
+    {
+      "id": "x-opencode-cheepseek-phase4",
+      "confidence": "High",
+      "planOrModel": "OpenCode · DeepSeek V4.1 Flash",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/opencode/status/2116209960673800474",
+        "account": "opencode",
+        "createdAt": "2026-10-30T16:45:46.000Z"
+      },
+      "observed": {
+        "usageWorthUsd": 100,
+        "model": "DeepSeek V4.1 Flash",
+        "campaign": "Operation Cheepseek Phase 4",
+        "hasScreenshot": false
+      },
+      "note": "官方一句话声明。",
+      "gaps": [
+        "未写明绑定 Go $10 档；未写促销截止日；无 token 绝对值"
+      ]
+    },
+    {
+      "id": "x-aidenyangcn-go-100",
+      "confidence": "Medium",
+      "planOrModel": "OpenCode Go $10/mo",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/aidenyangcn/status/2116317873698402720",
+        "account": "aidenyangcn",
+        "createdAt": "2026-10-30T23:54:35.000Z"
+      },
+      "observed": {
+        "planPriceUsd": 10,
+        "flashUsageWorthUsd": 100,
+        "pathUsd": [
+          30,
+          60,
+          80,
+          100
+        ],
+        "hasScreenshot": true
+      },
+      "note": "原帖：https://x.com/aidenyangcn/status/2116317873698402720",
+      "gaps": [
+        "缺控制台绝对 token"
+      ]
+    },
+    {
+      "id": "x-0GuoJiH-timeline",
+      "confidence": "Medium",
+      "planOrModel": "OpenCode Go · Cheepseek",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/0GuoJiH/status/2116309741047845310",
+        "account": "0GuoJiH",
+        "createdAt": "2026-10-30T23:22:16.000Z"
+      },
+      "observed": {
+        "flashUsageWorthUsd": 100,
+        "timelineNote": "Sep $15→$60; Oct12 $80; Oct15 free 200K ctx; Phase4 $100",
+        "hasScreenshot": true
+      },
+      "note": "时间线交叉。",
+      "gaps": [
+        "社区汇总"
+      ]
+    },
+    {
+      "id": "x-aidenyangcn-go-vs-goat",
+      "confidence": "Medium",
+      "planOrModel": "OpenCode Go vs CommandCode Goat $10/$100",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/aidenyangcn/status/2116319642792976771",
+        "account": "aidenyangcn",
+        "createdAt": "2026-10-31T00:01:36.000Z"
+      },
+      "observed": {
+        "planPriceUsd": 10,
+        "usageWorthUsd": 100,
+        "hasScreenshot": true
+      },
+      "note": "双产品对照截图。",
+      "gaps": [
+        "无实测燃烧"
+      ]
+    },
+    {
+      "id": "x-Fei2411-both-100",
+      "confidence": "Medium",
+      "planOrModel": "OpenCode / Command Code · DeepSeek $100",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/Fei2411/status/2116331629992165689",
+        "account": "Fei2411",
+        "createdAt": "2026-10-31T00:49:14.000Z"
+      },
+      "observed": {
+        "usageWorthUsd": 100,
+        "fullWeights": true,
+        "mayThrottle": true,
+        "hasScreenshot": true
+      },
+      "note": "维护者公开观察。",
+      "gaps": [
+        "未给个人用量百分比"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-10-31.json"
+  ]
+}
