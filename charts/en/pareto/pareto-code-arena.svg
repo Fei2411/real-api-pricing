@@ -64,7 +64,7 @@
 <text x="66.000" y="469.000" font-size="12" fill="#697169" text-anchor="middle" font-weight="400" transform="rotate(-90 66 469.0)">Arena Score</text>
 <text x="720.000" y="775.000" font-size="13" fill="#5D655E" text-anchor="middle" font-weight="400" >Real price · USD per million tokens</text>
 <text x="1338.000" y="775.000" font-size="12" fill="#737B74" text-anchor="end" font-weight="400" >Cheaper →</text>
-<path id="frontier" d="M120.000,280.200 L905.440,280.200 L994.569,309.419 L1099.331,387.337 L1287.589,445.775 L1338.000,445.775" fill="none" stroke="#303630" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="frontier" d="M120.000,280.200 L905.440,280.200 L994.569,309.419 L1128.025,387.337 L1287.589,445.775 L1338.000,445.775" fill="none" stroke="#303630" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.032467532" data-score="1616" data-x="676.063" data-y="423.298" transform="translate(676.063 423.298)"><title>GPT 5.6 Sol · Plus / GPT 5.6 Sol · Pro 5x · $0.03247/MTok · 1616 · mediumGPT-5.6 Sol (xHigh, Codex Harness) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel. / GPT-5.6 Sol (xHigh, Codex Harness) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
@@ -387,7 +387,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.21505376" data-score="1672" data-x="432.951" data-y="381.343" transform="translate(432.951 381.343)"><title>Qwen3.8 Max · OpenCode Go · $0.21505/MTok · 1672 · mediumQwen3.8-Max · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0F766E" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="true" data-price="0.0012074961" data-score="1664" data-x="1099.331" data-y="387.337" transform="translate(1099.331 387.337)"><title>DeepSeek V4.1 Flash · OpenCode Go · $0.00121/MTok · 1664 · mediumDeepSeek-V4.1-Flash-20261017 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="true" data-price="0.00096599691" data-score="1664" data-x="1128.025" data-y="387.337" transform="translate(1128.025 387.337)"><title>DeepSeek V4.1 Flash · OpenCode Go · $0.00097/MTok · 1664 · mediumDeepSeek-V4.1-Flash-20261017 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-11" y="-11" width="22" height="22" rx="6" fill="#FFF" stroke="#0F766E" stroke-width="1.35"/>
 <circle r="4" fill="#0F766E"/>
 </g>
@@ -913,10 +913,10 @@
 <text x="986.569" y="369.419" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00273</text>
 </g>
 <g class="front-label" data-model="deepseek-v4.1-flash">
-<path d="M1094.484,373.141Q1094.484,346.337 1085.331,346.337" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="1091.331" y="327.337" font-size="16" fill="#343C34" text-anchor="start" font-weight="400" class="label-name">DeepSeek V4.1 Flash · max</text>
-<text x="1091.331" y="347.337" font-size="11.5" fill="#8B9487" text-anchor="start" font-weight="400" >OpenCode Go</text>
-<text x="1091.331" y="367.337" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.00121</text>
+<path d="M1123.177,373.141Q1123.177,346.337 1114.025,346.337" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="1120.025" y="327.337" font-size="16" fill="#343C34" text-anchor="start" font-weight="400" class="label-name">DeepSeek V4.1 Flash · max</text>
+<text x="1120.025" y="347.337" font-size="11.5" fill="#8B9487" text-anchor="start" font-weight="400" >OpenCode Go</text>
+<text x="1120.025" y="367.337" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.00097</text>
 </g>
 <g class="front-label" data-model="claude-haiku-5.5">
 <path d="M1283.468,460.197Q1283.468,452.775 1285.589,452.775" stroke="#C4CDC3" stroke-width=".8" fill="none"/>

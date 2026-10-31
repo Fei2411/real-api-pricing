@@ -60,7 +60,7 @@
 <text x="66.000" y="469.000" font-size="12" fill="#697169" text-anchor="middle" font-weight="400" transform="rotate(-90 66 469.0)">Intelligence Index</text>
 <text x="720.000" y="775.000" font-size="13" fill="#5D655E" text-anchor="middle" font-weight="400" >Real price · USD per million tokens</text>
 <text x="1338.000" y="775.000" font-size="12" fill="#737B74" text-anchor="end" font-weight="400" >Cheaper →</text>
-<path id="frontier" d="M120.000,271.985 L905.440,271.985 L994.569,286.630 L1099.331,383.537 L1287.589,398.690 L1338.000,398.690" fill="none" stroke="#303630" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="frontier" d="M120.000,271.985 L905.440,271.985 L994.569,286.630 L1128.025,383.537 L1287.589,398.690 L1338.000,398.690" fill="none" stroke="#303630" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.032467532" data-score="46.9727" data-x="676.063" data-y="366.828" transform="translate(676.063 366.828)"><title>GPT 5.6 Sol · Plus / GPT 5.6 Sol · Pro 5x · $0.03247/MTok · 46.9727 · mediumGPT-5.6 Sol (max) · Exact served-model reference; quota-measurement effort is unverified. / GPT-5.6 Sol (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
@@ -395,7 +395,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0094670075" data-score="25.1622" data-x="834.537" data-y="561.065" transform="translate(834.537 561.065)"><title>Qwen3.7 Plus · OpenCode Go · $0.00947/MTok · 25.1622 · mediumQwen3.7 Plus · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0F766E" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="true" data-price="0.0012074961" data-score="45.0965" data-x="1099.331" data-y="383.537" transform="translate(1099.331 383.537)"><title>DeepSeek V4.1 Flash · OpenCode Go · $0.00121/MTok · 45.0965 · mediumDeepSeek V4.1 Flash 1017 (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<g class="point" data-billing="subscription" data-frontier="true" data-price="0.00096599691" data-score="45.0965" data-x="1128.025" data-y="383.537" transform="translate(1128.025 383.537)"><title>DeepSeek V4.1 Flash · OpenCode Go · $0.00097/MTok · 45.0965 · mediumDeepSeek V4.1 Flash 1017 (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-11" y="-11" width="22" height="22" rx="6" fill="#FFF" stroke="#0F766E" stroke-width="1.35"/>
 <circle r="4" fill="#0F766E"/>
 </g>
@@ -960,10 +960,10 @@
 <text x="1018.569" y="286.630" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.00273</text>
 </g>
 <g class="front-label" data-model="deepseek-v4.1-flash">
-<path d="M1111.078,392.865Q1111.078,410.537 1133.331,410.537" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="1139.331" y="423.537" font-size="16" fill="#343C34" text-anchor="middle" font-weight="400" class="label-name">DeepSeek V4.1 Flash · max</text>
-<text x="1139.331" y="443.537" font-size="11.5" fill="#8B9487" text-anchor="middle" font-weight="400" >OpenCode Go</text>
-<text x="1139.331" y="463.537" font-size="14" fill="#566150" text-anchor="middle" font-weight="400" class="number">$0.00121</text>
+<path d="M1133.949,397.317Q1133.949,490.537 1174.025,490.537" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="1168.025" y="503.537" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">DeepSeek V4.1 Flash · max</text>
+<text x="1168.025" y="523.537" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >OpenCode Go</text>
+<text x="1168.025" y="543.537" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00097</text>
 </g>
 <g class="front-label" data-model="claude-haiku-5.5">
 <path d="M1282.741,384.495Q1282.741,357.690 1273.589,357.690" stroke="#C4CDC3" stroke-width=".8" fill="none"/>

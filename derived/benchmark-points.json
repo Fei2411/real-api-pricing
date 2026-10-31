@@ -338,7 +338,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b7fe36ffe2e53058",
+    "configuration_id": "deepswe_1_1:8f6dd29d5b4d3866",
     "variant": "mini-swe-agent - gpt-5-6-sol (max)",
     "score": 72.66666666666667,
     "score_is_estimated": null,
@@ -359,7 +359,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:20ba110314745668",
+    "configuration_id": "deepswe_1_1:95cd844a325ecfbf",
     "variant": "mini-swe-agent - gpt-5-6-sol (xhigh)",
     "score": 70.73170731707317,
     "score_is_estimated": null,
@@ -380,7 +380,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b9f6b563ece4cecf",
+    "configuration_id": "deepswe_1_1:ff5b6dab64e65a3b",
     "variant": "mini-swe-agent - gpt-5-6-sol (high)",
     "score": 69.40133037694012,
     "score_is_estimated": null,
@@ -401,7 +401,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:d0270ad29cebc03b",
+    "configuration_id": "deepswe_1_1:c0a8e6363efc6003",
     "variant": "mini-swe-agent - gpt-5-6-sol (medium)",
     "score": 61.06194690265486,
     "score_is_estimated": null,
@@ -422,7 +422,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:eed6875ca51165fd",
+    "configuration_id": "deepswe_1_1:1545ad95006e5f09",
     "variant": "mini-swe-agent - gpt-5-6-sol (low)",
     "score": 45.35398230088495,
     "score_is_estimated": null,
@@ -779,7 +779,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b7fe36ffe2e53058",
+    "configuration_id": "deepswe_1_1:8f6dd29d5b4d3866",
     "variant": "mini-swe-agent - gpt-5-6-sol (max)",
     "score": 72.66666666666667,
     "score_is_estimated": null,
@@ -800,7 +800,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:20ba110314745668",
+    "configuration_id": "deepswe_1_1:95cd844a325ecfbf",
     "variant": "mini-swe-agent - gpt-5-6-sol (xhigh)",
     "score": 70.73170731707317,
     "score_is_estimated": null,
@@ -821,7 +821,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b9f6b563ece4cecf",
+    "configuration_id": "deepswe_1_1:ff5b6dab64e65a3b",
     "variant": "mini-swe-agent - gpt-5-6-sol (high)",
     "score": 69.40133037694012,
     "score_is_estimated": null,
@@ -842,7 +842,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:d0270ad29cebc03b",
+    "configuration_id": "deepswe_1_1:c0a8e6363efc6003",
     "variant": "mini-swe-agent - gpt-5-6-sol (medium)",
     "score": 61.06194690265486,
     "score_is_estimated": null,
@@ -863,7 +863,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:eed6875ca51165fd",
+    "configuration_id": "deepswe_1_1:1545ad95006e5f09",
     "variant": "mini-swe-agent - gpt-5-6-sol (low)",
     "score": 45.35398230088495,
     "score_is_estimated": null,
@@ -1220,7 +1220,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b7fe36ffe2e53058",
+    "configuration_id": "deepswe_1_1:8f6dd29d5b4d3866",
     "variant": "mini-swe-agent - gpt-5-6-sol (max)",
     "score": 72.66666666666667,
     "score_is_estimated": null,
@@ -1241,7 +1241,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:20ba110314745668",
+    "configuration_id": "deepswe_1_1:95cd844a325ecfbf",
     "variant": "mini-swe-agent - gpt-5-6-sol (xhigh)",
     "score": 70.73170731707317,
     "score_is_estimated": null,
@@ -1262,7 +1262,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b9f6b563ece4cecf",
+    "configuration_id": "deepswe_1_1:ff5b6dab64e65a3b",
     "variant": "mini-swe-agent - gpt-5-6-sol (high)",
     "score": 69.40133037694012,
     "score_is_estimated": null,
@@ -1283,7 +1283,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:d0270ad29cebc03b",
+    "configuration_id": "deepswe_1_1:c0a8e6363efc6003",
     "variant": "mini-swe-agent - gpt-5-6-sol (medium)",
     "score": 61.06194690265486,
     "score_is_estimated": null,
@@ -1304,7 +1304,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:eed6875ca51165fd",
+    "configuration_id": "deepswe_1_1:1545ad95006e5f09",
     "variant": "mini-swe-agent - gpt-5-6-sol (low)",
     "score": 45.35398230088495,
     "score_is_estimated": null,
@@ -1661,7 +1661,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7ad5b83041495e4d",
+    "configuration_id": "deepswe_1_1:db831f8e3a872146",
     "variant": "mini-swe-agent - gpt-5-6-luna (max)",
     "score": 67.1875,
     "score_is_estimated": null,
@@ -1682,7 +1682,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7a41329b22a4d1b1",
+    "configuration_id": "deepswe_1_1:c4af79d0ede4ceb6",
     "variant": "mini-swe-agent - gpt-5-6-luna (xhigh)",
     "score": 56.85840707964602,
     "score_is_estimated": null,
@@ -1703,7 +1703,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:47d55f64ef31558b",
+    "configuration_id": "deepswe_1_1:bb2bedb6e81b4700",
     "variant": "mini-swe-agent - gpt-5-6-luna (high)",
     "score": 44.24778761061947,
     "score_is_estimated": null,
@@ -1724,7 +1724,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ec094e2327a62e03",
+    "configuration_id": "deepswe_1_1:5d5da4597f3b6851",
     "variant": "mini-swe-agent - gpt-5-6-luna (medium)",
     "score": 11.283185840707963,
     "score_is_estimated": null,
@@ -1745,7 +1745,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:16412a120b9a4722",
+    "configuration_id": "deepswe_1_1:13234dfaf9d50b29",
     "variant": "mini-swe-agent - gpt-5-6-luna (low)",
     "score": 1.5486725663716814,
     "score_is_estimated": null,
@@ -2102,7 +2102,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7ad5b83041495e4d",
+    "configuration_id": "deepswe_1_1:db831f8e3a872146",
     "variant": "mini-swe-agent - gpt-5-6-luna (max)",
     "score": 67.1875,
     "score_is_estimated": null,
@@ -2123,7 +2123,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7a41329b22a4d1b1",
+    "configuration_id": "deepswe_1_1:c4af79d0ede4ceb6",
     "variant": "mini-swe-agent - gpt-5-6-luna (xhigh)",
     "score": 56.85840707964602,
     "score_is_estimated": null,
@@ -2144,7 +2144,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:47d55f64ef31558b",
+    "configuration_id": "deepswe_1_1:bb2bedb6e81b4700",
     "variant": "mini-swe-agent - gpt-5-6-luna (high)",
     "score": 44.24778761061947,
     "score_is_estimated": null,
@@ -2165,7 +2165,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ec094e2327a62e03",
+    "configuration_id": "deepswe_1_1:5d5da4597f3b6851",
     "variant": "mini-swe-agent - gpt-5-6-luna (medium)",
     "score": 11.283185840707963,
     "score_is_estimated": null,
@@ -2186,7 +2186,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:16412a120b9a4722",
+    "configuration_id": "deepswe_1_1:13234dfaf9d50b29",
     "variant": "mini-swe-agent - gpt-5-6-luna (low)",
     "score": 1.5486725663716814,
     "score_is_estimated": null,
@@ -2543,7 +2543,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7ad5b83041495e4d",
+    "configuration_id": "deepswe_1_1:db831f8e3a872146",
     "variant": "mini-swe-agent - gpt-5-6-luna (max)",
     "score": 67.1875,
     "score_is_estimated": null,
@@ -2564,7 +2564,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7a41329b22a4d1b1",
+    "configuration_id": "deepswe_1_1:c4af79d0ede4ceb6",
     "variant": "mini-swe-agent - gpt-5-6-luna (xhigh)",
     "score": 56.85840707964602,
     "score_is_estimated": null,
@@ -2585,7 +2585,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:47d55f64ef31558b",
+    "configuration_id": "deepswe_1_1:bb2bedb6e81b4700",
     "variant": "mini-swe-agent - gpt-5-6-luna (high)",
     "score": 44.24778761061947,
     "score_is_estimated": null,
@@ -2606,7 +2606,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ec094e2327a62e03",
+    "configuration_id": "deepswe_1_1:5d5da4597f3b6851",
     "variant": "mini-swe-agent - gpt-5-6-luna (medium)",
     "score": 11.283185840707963,
     "score_is_estimated": null,
@@ -2627,7 +2627,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:16412a120b9a4722",
+    "configuration_id": "deepswe_1_1:13234dfaf9d50b29",
     "variant": "mini-swe-agent - gpt-5-6-luna (low)",
     "score": 1.5486725663716814,
     "score_is_estimated": null,
@@ -3068,7 +3068,7 @@
   {
     "point_id": "chatgpt_plus::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aa4ad931eff45be4",
+    "configuration_id": "deepswe_1_1:c1435bb651542af7",
     "variant": "mini-swe-agent - gpt-6-astra (xhigh)",
     "score": 74.11504424778761,
     "score_is_estimated": null,
@@ -3078,8 +3078,8 @@
     "service_mode": null,
     "score_low": 71.24964807371246,
     "score_high": 76.98044042186275,
-    "mean_cost_usd_per_task": 6.52377356460177,
-    "median_cost_usd_per_task": 5.6717151,
+    "mean_cost_usd_per_task": 4.429117203539823,
+    "median_cost_usd_per_task": 3.8406789999999997,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -3089,7 +3089,7 @@
   {
     "point_id": "chatgpt_plus::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e8101649c60ecba8",
+    "configuration_id": "deepswe_1_1:f88d3f34974c9162",
     "variant": "mini-swe-agent - gpt-6-astra (high)",
     "score": 73.23008849557522,
     "score_is_estimated": null,
@@ -3099,8 +3099,8 @@
     "service_mode": null,
     "score_low": 69.80659243770221,
     "score_high": 76.65358455344823,
-    "mean_cost_usd_per_task": 5.723721956194691,
-    "median_cost_usd_per_task": 4.9622669,
+    "mean_cost_usd_per_task": 3.9237237909292038,
+    "median_cost_usd_per_task": 3.454243,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -3110,7 +3110,7 @@
   {
     "point_id": "chatgpt_plus::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b30a594ec5f66ce7",
+    "configuration_id": "deepswe_1_1:ea6a1930729fc3eb",
     "variant": "mini-swe-agent - gpt-6-astra (max)",
     "score": 73.23008849557522,
     "score_is_estimated": null,
@@ -3120,8 +3120,8 @@
     "service_mode": null,
     "score_low": 72.39976873936956,
     "score_high": 74.06040825178087,
-    "mean_cost_usd_per_task": 12.369032401327434,
-    "median_cost_usd_per_task": 11.036936,
+    "mean_cost_usd_per_task": 7.497827996681416,
+    "median_cost_usd_per_task": 6.712564,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -3131,7 +3131,7 @@
   {
     "point_id": "chatgpt_plus::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a5c5cd4b12673627",
+    "configuration_id": "deepswe_1_1:6621e4ed58c72ea5",
     "variant": "mini-swe-agent - gpt-6-astra (medium)",
     "score": 72.78761061946902,
     "score_is_estimated": null,
@@ -3141,8 +3141,8 @@
     "service_mode": null,
     "score_low": 70.19796153763716,
     "score_high": 75.37725970130089,
-    "mean_cost_usd_per_task": 4.379527705752213,
-    "median_cost_usd_per_task": 3.7133415999999997,
+    "mean_cost_usd_per_task": 3.0754742975663714,
+    "median_cost_usd_per_task": 2.6204002500000003,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -3152,7 +3152,7 @@
   {
     "point_id": "chatgpt_plus::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2d2b1fb9f6df06a3",
+    "configuration_id": "deepswe_1_1:05e50e2a49b9beb5",
     "variant": "mini-swe-agent - gpt-6-astra (low)",
     "score": 67.03539823008849,
     "score_is_estimated": null,
@@ -3162,8 +3162,8 @@
     "service_mode": null,
     "score_low": 65.73453717840262,
     "score_high": 68.33625928177437,
-    "mean_cost_usd_per_task": 2.188762706637168,
-    "median_cost_usd_per_task": 1.7209886,
+    "mean_cost_usd_per_task": 1.595223439159292,
+    "median_cost_usd_per_task": 1.26315875,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -4748,7 +4748,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aa4ad931eff45be4",
+    "configuration_id": "deepswe_1_1:c1435bb651542af7",
     "variant": "mini-swe-agent - gpt-6-astra (xhigh)",
     "score": 74.11504424778761,
     "score_is_estimated": null,
@@ -4758,8 +4758,8 @@
     "service_mode": null,
     "score_low": 71.24964807371246,
     "score_high": 76.98044042186275,
-    "mean_cost_usd_per_task": 6.52377356460177,
-    "median_cost_usd_per_task": 5.6717151,
+    "mean_cost_usd_per_task": 4.429117203539823,
+    "median_cost_usd_per_task": 3.8406789999999997,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -4769,7 +4769,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e8101649c60ecba8",
+    "configuration_id": "deepswe_1_1:f88d3f34974c9162",
     "variant": "mini-swe-agent - gpt-6-astra (high)",
     "score": 73.23008849557522,
     "score_is_estimated": null,
@@ -4779,8 +4779,8 @@
     "service_mode": null,
     "score_low": 69.80659243770221,
     "score_high": 76.65358455344823,
-    "mean_cost_usd_per_task": 5.723721956194691,
-    "median_cost_usd_per_task": 4.9622669,
+    "mean_cost_usd_per_task": 3.9237237909292038,
+    "median_cost_usd_per_task": 3.454243,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -4790,7 +4790,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b30a594ec5f66ce7",
+    "configuration_id": "deepswe_1_1:ea6a1930729fc3eb",
     "variant": "mini-swe-agent - gpt-6-astra (max)",
     "score": 73.23008849557522,
     "score_is_estimated": null,
@@ -4800,8 +4800,8 @@
     "service_mode": null,
     "score_low": 72.39976873936956,
     "score_high": 74.06040825178087,
-    "mean_cost_usd_per_task": 12.369032401327434,
-    "median_cost_usd_per_task": 11.036936,
+    "mean_cost_usd_per_task": 7.497827996681416,
+    "median_cost_usd_per_task": 6.712564,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -4811,7 +4811,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a5c5cd4b12673627",
+    "configuration_id": "deepswe_1_1:6621e4ed58c72ea5",
     "variant": "mini-swe-agent - gpt-6-astra (medium)",
     "score": 72.78761061946902,
     "score_is_estimated": null,
@@ -4821,8 +4821,8 @@
     "service_mode": null,
     "score_low": 70.19796153763716,
     "score_high": 75.37725970130089,
-    "mean_cost_usd_per_task": 4.379527705752213,
-    "median_cost_usd_per_task": 3.7133415999999997,
+    "mean_cost_usd_per_task": 3.0754742975663714,
+    "median_cost_usd_per_task": 2.6204002500000003,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -4832,7 +4832,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2d2b1fb9f6df06a3",
+    "configuration_id": "deepswe_1_1:05e50e2a49b9beb5",
     "variant": "mini-swe-agent - gpt-6-astra (low)",
     "score": 67.03539823008849,
     "score_is_estimated": null,
@@ -4842,8 +4842,8 @@
     "service_mode": null,
     "score_low": 65.73453717840262,
     "score_high": 68.33625928177437,
-    "mean_cost_usd_per_task": 2.188762706637168,
-    "median_cost_usd_per_task": 1.7209886,
+    "mean_cost_usd_per_task": 1.595223439159292,
+    "median_cost_usd_per_task": 1.26315875,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -5273,7 +5273,7 @@
   {
     "point_id": "devin_max::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aa4ad931eff45be4",
+    "configuration_id": "deepswe_1_1:c1435bb651542af7",
     "variant": "mini-swe-agent - gpt-6-astra (xhigh)",
     "score": 74.11504424778761,
     "score_is_estimated": null,
@@ -5283,8 +5283,8 @@
     "service_mode": null,
     "score_low": 71.24964807371246,
     "score_high": 76.98044042186275,
-    "mean_cost_usd_per_task": 6.52377356460177,
-    "median_cost_usd_per_task": 5.6717151,
+    "mean_cost_usd_per_task": 4.429117203539823,
+    "median_cost_usd_per_task": 3.8406789999999997,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -5294,7 +5294,7 @@
   {
     "point_id": "devin_max::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e8101649c60ecba8",
+    "configuration_id": "deepswe_1_1:f88d3f34974c9162",
     "variant": "mini-swe-agent - gpt-6-astra (high)",
     "score": 73.23008849557522,
     "score_is_estimated": null,
@@ -5304,8 +5304,8 @@
     "service_mode": null,
     "score_low": 69.80659243770221,
     "score_high": 76.65358455344823,
-    "mean_cost_usd_per_task": 5.723721956194691,
-    "median_cost_usd_per_task": 4.9622669,
+    "mean_cost_usd_per_task": 3.9237237909292038,
+    "median_cost_usd_per_task": 3.454243,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -5315,7 +5315,7 @@
   {
     "point_id": "devin_max::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b30a594ec5f66ce7",
+    "configuration_id": "deepswe_1_1:ea6a1930729fc3eb",
     "variant": "mini-swe-agent - gpt-6-astra (max)",
     "score": 73.23008849557522,
     "score_is_estimated": null,
@@ -5325,8 +5325,8 @@
     "service_mode": null,
     "score_low": 72.39976873936956,
     "score_high": 74.06040825178087,
-    "mean_cost_usd_per_task": 12.369032401327434,
-    "median_cost_usd_per_task": 11.036936,
+    "mean_cost_usd_per_task": 7.497827996681416,
+    "median_cost_usd_per_task": 6.712564,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -5336,7 +5336,7 @@
   {
     "point_id": "devin_max::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a5c5cd4b12673627",
+    "configuration_id": "deepswe_1_1:6621e4ed58c72ea5",
     "variant": "mini-swe-agent - gpt-6-astra (medium)",
     "score": 72.78761061946902,
     "score_is_estimated": null,
@@ -5346,8 +5346,8 @@
     "service_mode": null,
     "score_low": 70.19796153763716,
     "score_high": 75.37725970130089,
-    "mean_cost_usd_per_task": 4.379527705752213,
-    "median_cost_usd_per_task": 3.7133415999999997,
+    "mean_cost_usd_per_task": 3.0754742975663714,
+    "median_cost_usd_per_task": 2.6204002500000003,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -5357,7 +5357,7 @@
   {
     "point_id": "devin_max::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2d2b1fb9f6df06a3",
+    "configuration_id": "deepswe_1_1:05e50e2a49b9beb5",
     "variant": "mini-swe-agent - gpt-6-astra (low)",
     "score": 67.03539823008849,
     "score_is_estimated": null,
@@ -5367,8 +5367,8 @@
     "service_mode": null,
     "score_low": 65.73453717840262,
     "score_high": 68.33625928177437,
-    "mean_cost_usd_per_task": 2.188762706637168,
-    "median_cost_usd_per_task": 1.7209886,
+    "mean_cost_usd_per_task": 1.595223439159292,
+    "median_cost_usd_per_task": 1.26315875,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -6491,7 +6491,7 @@
   {
     "point_id": "google_ai_pro_us::gemini-3.8-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a4e0e06e8292b616",
+    "configuration_id": "deepswe_1_1:a90e288031deb966",
     "variant": "mini-swe-agent - gemini-3-8-flash (high)",
     "score": 73.8255033557047,
     "score_is_estimated": null,
@@ -6512,7 +6512,7 @@
   {
     "point_id": "google_ai_pro_us::gemini-3.8-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9fafa3956afdc304",
+    "configuration_id": "deepswe_1_1:0361f833fd4cf748",
     "variant": "mini-swe-agent - gemini-3-8-flash (medium)",
     "score": 71.01769911504425,
     "score_is_estimated": null,
@@ -6596,7 +6596,7 @@
   {
     "point_id": "google_ai_pro_us::gemini-3.6-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e1743e5569cb8648",
+    "configuration_id": "deepswe_1_1:659768103818c4a1",
     "variant": "mini-swe-agent - gemini-3-6-flash (high)",
     "score": 46.68141592920354,
     "score_is_estimated": null,
@@ -6848,7 +6848,7 @@
   {
     "point_id": "google_ai_ultra_5x_us::gemini-3.8-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a4e0e06e8292b616",
+    "configuration_id": "deepswe_1_1:a90e288031deb966",
     "variant": "mini-swe-agent - gemini-3-8-flash (high)",
     "score": 73.8255033557047,
     "score_is_estimated": null,
@@ -6869,7 +6869,7 @@
   {
     "point_id": "google_ai_ultra_5x_us::gemini-3.8-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9fafa3956afdc304",
+    "configuration_id": "deepswe_1_1:0361f833fd4cf748",
     "variant": "mini-swe-agent - gemini-3-8-flash (medium)",
     "score": 71.01769911504425,
     "score_is_estimated": null,
@@ -7121,7 +7121,7 @@
   {
     "point_id": "google_ai_ultra_20x_us::gemini-3.8-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a4e0e06e8292b616",
+    "configuration_id": "deepswe_1_1:a90e288031deb966",
     "variant": "mini-swe-agent - gemini-3-8-flash (high)",
     "score": 73.8255033557047,
     "score_is_estimated": null,
@@ -7142,7 +7142,7 @@
   {
     "point_id": "google_ai_ultra_20x_us::gemini-3.8-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9fafa3956afdc304",
+    "configuration_id": "deepswe_1_1:0361f833fd4cf748",
     "variant": "mini-swe-agent - gemini-3-8-flash (medium)",
     "score": 71.01769911504425,
     "score_is_estimated": null,
@@ -7562,7 +7562,7 @@
   {
     "point_id": "claude_pro::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:f029cafdaf0a4ee3",
+    "configuration_id": "deepswe_1_1:57bad30e2ebce507",
     "variant": "mini-swe-agent - claude-opus-5 (max)",
     "score": 73.64864864864865,
     "score_is_estimated": null,
@@ -7583,7 +7583,7 @@
   {
     "point_id": "claude_pro::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:853cb17f0e600556",
+    "configuration_id": "deepswe_1_1:05c1f57edbd2df6d",
     "variant": "mini-swe-agent - claude-opus-5 (xhigh)",
     "score": 73.15436241610739,
     "score_is_estimated": null,
@@ -7604,7 +7604,7 @@
   {
     "point_id": "claude_pro::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e252d58fa6da2ebe",
+    "configuration_id": "deepswe_1_1:a44b965729d03fc7",
     "variant": "mini-swe-agent - claude-opus-5 (high)",
     "score": 72.82850779510022,
     "score_is_estimated": null,
@@ -7625,7 +7625,7 @@
   {
     "point_id": "claude_pro::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:df5db3bddc1856ee",
+    "configuration_id": "deepswe_1_1:5865024d4260d4e1",
     "variant": "mini-swe-agent - claude-opus-5 (medium)",
     "score": 68.90380313199105,
     "score_is_estimated": null,
@@ -7646,7 +7646,7 @@
   {
     "point_id": "claude_pro::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3353f4eaaecc0e42",
+    "configuration_id": "deepswe_1_1:0eef366eb7d57159",
     "variant": "mini-swe-agent - claude-opus-5 (low)",
     "score": 58.12917594654788,
     "score_is_estimated": null,
@@ -8066,7 +8066,7 @@
   {
     "point_id": "claude_max_20x::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:f029cafdaf0a4ee3",
+    "configuration_id": "deepswe_1_1:57bad30e2ebce507",
     "variant": "mini-swe-agent - claude-opus-5 (max)",
     "score": 73.64864864864865,
     "score_is_estimated": null,
@@ -8087,7 +8087,7 @@
   {
     "point_id": "claude_max_20x::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:853cb17f0e600556",
+    "configuration_id": "deepswe_1_1:05c1f57edbd2df6d",
     "variant": "mini-swe-agent - claude-opus-5 (xhigh)",
     "score": 73.15436241610739,
     "score_is_estimated": null,
@@ -8108,7 +8108,7 @@
   {
     "point_id": "claude_max_20x::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e252d58fa6da2ebe",
+    "configuration_id": "deepswe_1_1:a44b965729d03fc7",
     "variant": "mini-swe-agent - claude-opus-5 (high)",
     "score": 72.82850779510022,
     "score_is_estimated": null,
@@ -8129,7 +8129,7 @@
   {
     "point_id": "claude_max_20x::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:df5db3bddc1856ee",
+    "configuration_id": "deepswe_1_1:5865024d4260d4e1",
     "variant": "mini-swe-agent - claude-opus-5 (medium)",
     "score": 68.90380313199105,
     "score_is_estimated": null,
@@ -8150,7 +8150,7 @@
   {
     "point_id": "claude_max_20x::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3353f4eaaecc0e42",
+    "configuration_id": "deepswe_1_1:0eef366eb7d57159",
     "variant": "mini-swe-agent - claude-opus-5 (low)",
     "score": 58.12917594654788,
     "score_is_estimated": null,
@@ -8570,7 +8570,7 @@
   {
     "point_id": "claude_max_5x::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:f029cafdaf0a4ee3",
+    "configuration_id": "deepswe_1_1:57bad30e2ebce507",
     "variant": "mini-swe-agent - claude-opus-5 (max)",
     "score": 73.64864864864865,
     "score_is_estimated": null,
@@ -8591,7 +8591,7 @@
   {
     "point_id": "claude_max_5x::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:853cb17f0e600556",
+    "configuration_id": "deepswe_1_1:05c1f57edbd2df6d",
     "variant": "mini-swe-agent - claude-opus-5 (xhigh)",
     "score": 73.15436241610739,
     "score_is_estimated": null,
@@ -8612,7 +8612,7 @@
   {
     "point_id": "claude_max_5x::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e252d58fa6da2ebe",
+    "configuration_id": "deepswe_1_1:a44b965729d03fc7",
     "variant": "mini-swe-agent - claude-opus-5 (high)",
     "score": 72.82850779510022,
     "score_is_estimated": null,
@@ -8633,7 +8633,7 @@
   {
     "point_id": "claude_max_5x::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:df5db3bddc1856ee",
+    "configuration_id": "deepswe_1_1:5865024d4260d4e1",
     "variant": "mini-swe-agent - claude-opus-5 (medium)",
     "score": 68.90380313199105,
     "score_is_estimated": null,
@@ -8654,7 +8654,7 @@
   {
     "point_id": "claude_max_5x::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3353f4eaaecc0e42",
+    "configuration_id": "deepswe_1_1:0eef366eb7d57159",
     "variant": "mini-swe-agent - claude-opus-5 (low)",
     "score": 58.12917594654788,
     "score_is_estimated": null,
@@ -10523,7 +10523,7 @@
   {
     "point_id": "supergrok::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9517554a020a7af3",
+    "configuration_id": "deepswe_1_1:2c55025470da1adf",
     "variant": "mini-swe-agent - grok-4-6 (medium)",
     "score": 67.47787610619469,
     "score_is_estimated": null,
@@ -10544,7 +10544,7 @@
   {
     "point_id": "supergrok::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:017a7f4c8bf6ada0",
+    "configuration_id": "deepswe_1_1:f3bcbfbca58889a9",
     "variant": "mini-swe-agent - grok-4-6 (xhigh)",
     "score": 66.74057649667405,
     "score_is_estimated": null,
@@ -10565,7 +10565,7 @@
   {
     "point_id": "supergrok::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6c1cc54c4677acba",
+    "configuration_id": "deepswe_1_1:4e590db9adbe56bc",
     "variant": "mini-swe-agent - grok-4-6 (high)",
     "score": 65.18847006651885,
     "score_is_estimated": null,
@@ -10586,7 +10586,7 @@
   {
     "point_id": "supergrok::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:baca3e04439efe09",
+    "configuration_id": "deepswe_1_1:ead8e43990a2050c",
     "variant": "mini-swe-agent - grok-4-6 (low)",
     "score": 41.648106904231625,
     "score_is_estimated": null,
@@ -10859,7 +10859,7 @@
   {
     "point_id": "supergrok_plus::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9517554a020a7af3",
+    "configuration_id": "deepswe_1_1:2c55025470da1adf",
     "variant": "mini-swe-agent - grok-4-6 (medium)",
     "score": 67.47787610619469,
     "score_is_estimated": null,
@@ -10880,7 +10880,7 @@
   {
     "point_id": "supergrok_plus::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:017a7f4c8bf6ada0",
+    "configuration_id": "deepswe_1_1:f3bcbfbca58889a9",
     "variant": "mini-swe-agent - grok-4-6 (xhigh)",
     "score": 66.74057649667405,
     "score_is_estimated": null,
@@ -10901,7 +10901,7 @@
   {
     "point_id": "supergrok_plus::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6c1cc54c4677acba",
+    "configuration_id": "deepswe_1_1:4e590db9adbe56bc",
     "variant": "mini-swe-agent - grok-4-6 (high)",
     "score": 65.18847006651885,
     "score_is_estimated": null,
@@ -10922,7 +10922,7 @@
   {
     "point_id": "supergrok_plus::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:baca3e04439efe09",
+    "configuration_id": "deepswe_1_1:ead8e43990a2050c",
     "variant": "mini-swe-agent - grok-4-6 (low)",
     "score": 41.648106904231625,
     "score_is_estimated": null,
@@ -11195,7 +11195,7 @@
   {
     "point_id": "supergrok_heavy::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9517554a020a7af3",
+    "configuration_id": "deepswe_1_1:2c55025470da1adf",
     "variant": "mini-swe-agent - grok-4-6 (medium)",
     "score": 67.47787610619469,
     "score_is_estimated": null,
@@ -11216,7 +11216,7 @@
   {
     "point_id": "supergrok_heavy::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:017a7f4c8bf6ada0",
+    "configuration_id": "deepswe_1_1:f3bcbfbca58889a9",
     "variant": "mini-swe-agent - grok-4-6 (xhigh)",
     "score": 66.74057649667405,
     "score_is_estimated": null,
@@ -11237,7 +11237,7 @@
   {
     "point_id": "supergrok_heavy::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6c1cc54c4677acba",
+    "configuration_id": "deepswe_1_1:4e590db9adbe56bc",
     "variant": "mini-swe-agent - grok-4-6 (high)",
     "score": 65.18847006651885,
     "score_is_estimated": null,
@@ -11258,7 +11258,7 @@
   {
     "point_id": "supergrok_heavy::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:baca3e04439efe09",
+    "configuration_id": "deepswe_1_1:ead8e43990a2050c",
     "variant": "mini-swe-agent - grok-4-6 (low)",
     "score": 41.648106904231625,
     "score_is_estimated": null,
@@ -11531,7 +11531,7 @@
   {
     "point_id": "supergrok_lite::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9517554a020a7af3",
+    "configuration_id": "deepswe_1_1:2c55025470da1adf",
     "variant": "mini-swe-agent - grok-4-6 (medium)",
     "score": 67.47787610619469,
     "score_is_estimated": null,
@@ -11552,7 +11552,7 @@
   {
     "point_id": "supergrok_lite::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:017a7f4c8bf6ada0",
+    "configuration_id": "deepswe_1_1:f3bcbfbca58889a9",
     "variant": "mini-swe-agent - grok-4-6 (xhigh)",
     "score": 66.74057649667405,
     "score_is_estimated": null,
@@ -11573,7 +11573,7 @@
   {
     "point_id": "supergrok_lite::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6c1cc54c4677acba",
+    "configuration_id": "deepswe_1_1:4e590db9adbe56bc",
     "variant": "mini-swe-agent - grok-4-6 (high)",
     "score": 65.18847006651885,
     "score_is_estimated": null,
@@ -11594,7 +11594,7 @@
   {
     "point_id": "supergrok_lite::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:baca3e04439efe09",
+    "configuration_id": "deepswe_1_1:ead8e43990a2050c",
     "variant": "mini-swe-agent - grok-4-6 (low)",
     "score": 41.648106904231625,
     "score_is_estimated": null,
@@ -11804,7 +11804,7 @@
   {
     "point_id": "supergrok::grok-4.7",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:1d433900eaa0bee0",
+    "configuration_id": "deepswe_1_1:788f9a1335a23a70",
     "variant": "mini-swe-agent - grok-4-7 (high) [vendor self-report]",
     "score": 71.0,
     "score_is_estimated": null,
@@ -12014,7 +12014,7 @@
   {
     "point_id": "supergrok_plus::grok-4.7",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:1d433900eaa0bee0",
+    "configuration_id": "deepswe_1_1:788f9a1335a23a70",
     "variant": "mini-swe-agent - grok-4-7 (high) [vendor self-report]",
     "score": 71.0,
     "score_is_estimated": null,
@@ -12224,7 +12224,7 @@
   {
     "point_id": "supergrok_heavy::grok-4.7",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:1d433900eaa0bee0",
+    "configuration_id": "deepswe_1_1:788f9a1335a23a70",
     "variant": "mini-swe-agent - grok-4-7 (high) [vendor self-report]",
     "score": 71.0,
     "score_is_estimated": null,
@@ -12497,7 +12497,7 @@
   {
     "point_id": "cursor_ultra::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9517554a020a7af3",
+    "configuration_id": "deepswe_1_1:2c55025470da1adf",
     "variant": "mini-swe-agent - grok-4-6 (medium)",
     "score": 67.47787610619469,
     "score_is_estimated": null,
@@ -12518,7 +12518,7 @@
   {
     "point_id": "cursor_ultra::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:017a7f4c8bf6ada0",
+    "configuration_id": "deepswe_1_1:f3bcbfbca58889a9",
     "variant": "mini-swe-agent - grok-4-6 (xhigh)",
     "score": 66.74057649667405,
     "score_is_estimated": null,
@@ -12539,7 +12539,7 @@
   {
     "point_id": "cursor_ultra::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6c1cc54c4677acba",
+    "configuration_id": "deepswe_1_1:4e590db9adbe56bc",
     "variant": "mini-swe-agent - grok-4-6 (high)",
     "score": 65.18847006651885,
     "score_is_estimated": null,
@@ -12560,7 +12560,7 @@
   {
     "point_id": "cursor_ultra::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:baca3e04439efe09",
+    "configuration_id": "deepswe_1_1:ead8e43990a2050c",
     "variant": "mini-swe-agent - grok-4-6 (low)",
     "score": 41.648106904231625,
     "score_is_estimated": null,
@@ -12833,7 +12833,7 @@
   {
     "point_id": "cursor_ultra_fast::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9517554a020a7af3",
+    "configuration_id": "deepswe_1_1:2c55025470da1adf",
     "variant": "mini-swe-agent - grok-4-6 (medium)",
     "score": 67.47787610619469,
     "score_is_estimated": null,
@@ -12854,7 +12854,7 @@
   {
     "point_id": "cursor_ultra_fast::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:017a7f4c8bf6ada0",
+    "configuration_id": "deepswe_1_1:f3bcbfbca58889a9",
     "variant": "mini-swe-agent - grok-4-6 (xhigh)",
     "score": 66.74057649667405,
     "score_is_estimated": null,
@@ -12875,7 +12875,7 @@
   {
     "point_id": "cursor_ultra_fast::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6c1cc54c4677acba",
+    "configuration_id": "deepswe_1_1:4e590db9adbe56bc",
     "variant": "mini-swe-agent - grok-4-6 (high)",
     "score": 65.18847006651885,
     "score_is_estimated": null,
@@ -12896,7 +12896,7 @@
   {
     "point_id": "cursor_ultra_fast::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:baca3e04439efe09",
+    "configuration_id": "deepswe_1_1:ead8e43990a2050c",
     "variant": "mini-swe-agent - grok-4-6 (low)",
     "score": 41.648106904231625,
     "score_is_estimated": null,
@@ -13169,7 +13169,7 @@
   {
     "point_id": "cursor_pro::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9517554a020a7af3",
+    "configuration_id": "deepswe_1_1:2c55025470da1adf",
     "variant": "mini-swe-agent - grok-4-6 (medium)",
     "score": 67.47787610619469,
     "score_is_estimated": null,
@@ -13190,7 +13190,7 @@
   {
     "point_id": "cursor_pro::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:017a7f4c8bf6ada0",
+    "configuration_id": "deepswe_1_1:f3bcbfbca58889a9",
     "variant": "mini-swe-agent - grok-4-6 (xhigh)",
     "score": 66.74057649667405,
     "score_is_estimated": null,
@@ -13211,7 +13211,7 @@
   {
     "point_id": "cursor_pro::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6c1cc54c4677acba",
+    "configuration_id": "deepswe_1_1:4e590db9adbe56bc",
     "variant": "mini-swe-agent - grok-4-6 (high)",
     "score": 65.18847006651885,
     "score_is_estimated": null,
@@ -13232,7 +13232,7 @@
   {
     "point_id": "cursor_pro::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:baca3e04439efe09",
+    "configuration_id": "deepswe_1_1:ead8e43990a2050c",
     "variant": "mini-swe-agent - grok-4-6 (low)",
     "score": 41.648106904231625,
     "score_is_estimated": null,
@@ -13505,7 +13505,7 @@
   {
     "point_id": "cursor_pro_plus::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9517554a020a7af3",
+    "configuration_id": "deepswe_1_1:2c55025470da1adf",
     "variant": "mini-swe-agent - grok-4-6 (medium)",
     "score": 67.47787610619469,
     "score_is_estimated": null,
@@ -13526,7 +13526,7 @@
   {
     "point_id": "cursor_pro_plus::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:017a7f4c8bf6ada0",
+    "configuration_id": "deepswe_1_1:f3bcbfbca58889a9",
     "variant": "mini-swe-agent - grok-4-6 (xhigh)",
     "score": 66.74057649667405,
     "score_is_estimated": null,
@@ -13547,7 +13547,7 @@
   {
     "point_id": "cursor_pro_plus::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6c1cc54c4677acba",
+    "configuration_id": "deepswe_1_1:4e590db9adbe56bc",
     "variant": "mini-swe-agent - grok-4-6 (high)",
     "score": 65.18847006651885,
     "score_is_estimated": null,
@@ -13568,7 +13568,7 @@
   {
     "point_id": "cursor_pro_plus::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:baca3e04439efe09",
+    "configuration_id": "deepswe_1_1:ead8e43990a2050c",
     "variant": "mini-swe-agent - grok-4-6 (low)",
     "score": 41.648106904231625,
     "score_is_estimated": null,
@@ -14051,7 +14051,7 @@
   {
     "point_id": "kimi_allegretto_cn::kimi-k3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aefa4afd042df82c",
+    "configuration_id": "deepswe_1_1:bddffd26d19005fe",
     "variant": "mini-swe-agent - kimi-k3 (max)",
     "score": 68.51441241685144,
     "score_is_estimated": null,
@@ -14240,7 +14240,7 @@
   {
     "point_id": "kimi_moderato_cn::kimi-k3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aefa4afd042df82c",
+    "configuration_id": "deepswe_1_1:bddffd26d19005fe",
     "variant": "mini-swe-agent - kimi-k3 (max)",
     "score": 68.51441241685144,
     "score_is_estimated": null,
@@ -14429,7 +14429,7 @@
   {
     "point_id": "kimi_allegro_cn::kimi-k3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aefa4afd042df82c",
+    "configuration_id": "deepswe_1_1:bddffd26d19005fe",
     "variant": "mini-swe-agent - kimi-k3 (max)",
     "score": 68.51441241685144,
     "score_is_estimated": null,
@@ -14513,7 +14513,7 @@
   {
     "point_id": "kimi_allegretto_cn::kimi-k2.7-code",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c25e237262636381",
+    "configuration_id": "deepswe_1_1:f3195a66fa6eb3b4",
     "variant": "mini-swe-agent - kimi-k2-7-code (None)",
     "score": 30.53097345132743,
     "score_is_estimated": null,
@@ -14597,7 +14597,7 @@
   {
     "point_id": "kimi_moderato_cn::kimi-k2.7-code",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c25e237262636381",
+    "configuration_id": "deepswe_1_1:f3195a66fa6eb3b4",
     "variant": "mini-swe-agent - kimi-k2-7-code (None)",
     "score": 30.53097345132743,
     "score_is_estimated": null,
@@ -14681,7 +14681,7 @@
   {
     "point_id": "kimi_andante_cn::kimi-k2.7-code",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c25e237262636381",
+    "configuration_id": "deepswe_1_1:f3195a66fa6eb3b4",
     "variant": "mini-swe-agent - kimi-k2-7-code (None)",
     "score": 30.53097345132743,
     "score_is_estimated": null,
@@ -14765,7 +14765,7 @@
   {
     "point_id": "kimi_allegro_cn::kimi-k2.7-code",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c25e237262636381",
+    "configuration_id": "deepswe_1_1:f3195a66fa6eb3b4",
     "variant": "mini-swe-agent - kimi-k2-7-code (None)",
     "score": 30.53097345132743,
     "score_is_estimated": null,
@@ -14954,7 +14954,7 @@
   {
     "point_id": "kimi_plus_cn::kimi-k3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aefa4afd042df82c",
+    "configuration_id": "deepswe_1_1:bddffd26d19005fe",
     "variant": "mini-swe-agent - kimi-k3 (max)",
     "score": 68.51441241685144,
     "score_is_estimated": null,
@@ -15143,7 +15143,7 @@
   {
     "point_id": "kimi_pro_cn::kimi-k3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aefa4afd042df82c",
+    "configuration_id": "deepswe_1_1:bddffd26d19005fe",
     "variant": "mini-swe-agent - kimi-k3 (max)",
     "score": 68.51441241685144,
     "score_is_estimated": null,
@@ -15332,7 +15332,7 @@
   {
     "point_id": "kimi_max_cn::kimi-k3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aefa4afd042df82c",
+    "configuration_id": "deepswe_1_1:bddffd26d19005fe",
     "variant": "mini-swe-agent - kimi-k3 (max)",
     "score": 68.51441241685144,
     "score_is_estimated": null,
@@ -15521,7 +15521,7 @@
   {
     "point_id": "kimi_ultra_cn::kimi-k3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aefa4afd042df82c",
+    "configuration_id": "deepswe_1_1:bddffd26d19005fe",
     "variant": "mini-swe-agent - kimi-k3 (max)",
     "score": 68.51441241685144,
     "score_is_estimated": null,
@@ -15605,7 +15605,7 @@
   {
     "point_id": "kimi_plus_cn::kimi-k2.7-code",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c25e237262636381",
+    "configuration_id": "deepswe_1_1:f3195a66fa6eb3b4",
     "variant": "mini-swe-agent - kimi-k2-7-code (None)",
     "score": 30.53097345132743,
     "score_is_estimated": null,
@@ -15689,7 +15689,7 @@
   {
     "point_id": "kimi_pro_cn::kimi-k2.7-code",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c25e237262636381",
+    "configuration_id": "deepswe_1_1:f3195a66fa6eb3b4",
     "variant": "mini-swe-agent - kimi-k2-7-code (None)",
     "score": 30.53097345132743,
     "score_is_estimated": null,
@@ -15773,7 +15773,7 @@
   {
     "point_id": "kimi_max_cn::kimi-k2.7-code",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c25e237262636381",
+    "configuration_id": "deepswe_1_1:f3195a66fa6eb3b4",
     "variant": "mini-swe-agent - kimi-k2-7-code (None)",
     "score": 30.53097345132743,
     "score_is_estimated": null,
@@ -15857,7 +15857,7 @@
   {
     "point_id": "kimi_ultra_cn::kimi-k2.7-code",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c25e237262636381",
+    "configuration_id": "deepswe_1_1:f3195a66fa6eb3b4",
     "variant": "mini-swe-agent - kimi-k2-7-code (None)",
     "score": 30.53097345132743,
     "score_is_estimated": null,
@@ -16046,7 +16046,7 @@
   {
     "point_id": "glm_coding_lite_cn_new_peak::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -16235,7 +16235,7 @@
   {
     "point_id": "glm_coding_lite_cn_new_mid::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -16424,7 +16424,7 @@
   {
     "point_id": "glm_coding_lite_cn_new_offpeak::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -16550,7 +16550,7 @@
   {
     "point_id": "glm_coding_lite_cn_new_peak::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -16676,7 +16676,7 @@
   {
     "point_id": "glm_coding_lite_cn_new_mid::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -16802,7 +16802,7 @@
   {
     "point_id": "glm_coding_lite_cn_new_offpeak::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -16991,7 +16991,7 @@
   {
     "point_id": "glm_coding_lite_cn_old_peak::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -17180,7 +17180,7 @@
   {
     "point_id": "glm_coding_lite_cn_old_mid::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -17369,7 +17369,7 @@
   {
     "point_id": "glm_coding_lite_cn_old_offpeak::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -17495,7 +17495,7 @@
   {
     "point_id": "glm_coding_lite_cn_old_peak::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -17621,7 +17621,7 @@
   {
     "point_id": "glm_coding_lite_cn_old_mid::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -17747,7 +17747,7 @@
   {
     "point_id": "glm_coding_lite_cn_old_offpeak::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -17936,7 +17936,7 @@
   {
     "point_id": "glm_coding_pro_cn_new_peak::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -18125,7 +18125,7 @@
   {
     "point_id": "glm_coding_pro_cn_new_mid::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -18314,7 +18314,7 @@
   {
     "point_id": "glm_coding_pro_cn_new_offpeak::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -18440,7 +18440,7 @@
   {
     "point_id": "glm_coding_pro_cn_new_peak::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -18566,7 +18566,7 @@
   {
     "point_id": "glm_coding_pro_cn_new_mid::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -18692,7 +18692,7 @@
   {
     "point_id": "glm_coding_pro_cn_new_offpeak::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -18881,7 +18881,7 @@
   {
     "point_id": "glm_coding_pro_cn_old_peak::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -19070,7 +19070,7 @@
   {
     "point_id": "glm_coding_pro_cn_old_mid::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -19259,7 +19259,7 @@
   {
     "point_id": "glm_coding_pro_cn_old_offpeak::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -19385,7 +19385,7 @@
   {
     "point_id": "glm_coding_pro_cn_old_peak::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -19511,7 +19511,7 @@
   {
     "point_id": "glm_coding_pro_cn_old_mid::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -19637,7 +19637,7 @@
   {
     "point_id": "glm_coding_pro_cn_old_offpeak::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -19826,7 +19826,7 @@
   {
     "point_id": "glm_coding_max_cn_new_peak::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -20015,7 +20015,7 @@
   {
     "point_id": "glm_coding_max_cn_new_mid::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -20204,7 +20204,7 @@
   {
     "point_id": "glm_coding_max_cn_new_offpeak::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -20330,7 +20330,7 @@
   {
     "point_id": "glm_coding_max_cn_new_peak::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -20456,7 +20456,7 @@
   {
     "point_id": "glm_coding_max_cn_new_mid::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -20582,7 +20582,7 @@
   {
     "point_id": "glm_coding_max_cn_new_offpeak::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -20771,7 +20771,7 @@
   {
     "point_id": "glm_coding_max_cn_old_peak::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -20960,7 +20960,7 @@
   {
     "point_id": "glm_coding_max_cn_old_mid::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -21149,7 +21149,7 @@
   {
     "point_id": "glm_coding_max_cn_old_offpeak::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -21275,7 +21275,7 @@
   {
     "point_id": "glm_coding_max_cn_old_peak::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -21401,7 +21401,7 @@
   {
     "point_id": "glm_coding_max_cn_old_mid::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -21527,7 +21527,7 @@
   {
     "point_id": "glm_coding_max_cn_old_offpeak::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -22367,7 +22367,7 @@
   {
     "point_id": "opencode_go::grok-4.7",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:1d433900eaa0bee0",
+    "configuration_id": "deepswe_1_1:788f9a1335a23a70",
     "variant": "mini-swe-agent - grok-4-7 (high) [vendor self-report]",
     "score": 71.0,
     "score_is_estimated": null,
@@ -22724,7 +22724,7 @@
   {
     "point_id": "opencode_go::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7ad5b83041495e4d",
+    "configuration_id": "deepswe_1_1:db831f8e3a872146",
     "variant": "mini-swe-agent - gpt-5-6-luna (max)",
     "score": 67.1875,
     "score_is_estimated": null,
@@ -22745,7 +22745,7 @@
   {
     "point_id": "opencode_go::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7a41329b22a4d1b1",
+    "configuration_id": "deepswe_1_1:c4af79d0ede4ceb6",
     "variant": "mini-swe-agent - gpt-5-6-luna (xhigh)",
     "score": 56.85840707964602,
     "score_is_estimated": null,
@@ -22766,7 +22766,7 @@
   {
     "point_id": "opencode_go::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:47d55f64ef31558b",
+    "configuration_id": "deepswe_1_1:bb2bedb6e81b4700",
     "variant": "mini-swe-agent - gpt-5-6-luna (high)",
     "score": 44.24778761061947,
     "score_is_estimated": null,
@@ -22787,7 +22787,7 @@
   {
     "point_id": "opencode_go::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ec094e2327a62e03",
+    "configuration_id": "deepswe_1_1:5d5da4597f3b6851",
     "variant": "mini-swe-agent - gpt-5-6-luna (medium)",
     "score": 11.283185840707963,
     "score_is_estimated": null,
@@ -22808,7 +22808,7 @@
   {
     "point_id": "opencode_go::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:16412a120b9a4722",
+    "configuration_id": "deepswe_1_1:13234dfaf9d50b29",
     "variant": "mini-swe-agent - gpt-5-6-luna (low)",
     "score": 1.5486725663716814,
     "score_is_estimated": null,
@@ -23585,7 +23585,7 @@
   {
     "point_id": "opencode_go::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -23774,7 +23774,7 @@
   {
     "point_id": "opencode_go::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -23900,7 +23900,7 @@
   {
     "point_id": "opencode_go::glm-5.2",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3c0de09601f2c8a8",
+    "configuration_id": "deepswe_1_1:36b42aac9a399fff",
     "variant": "mini-swe-agent - glm-5-2 (max)",
     "score": 43.77777777777778,
     "score_is_estimated": null,
@@ -23921,7 +23921,7 @@
   {
     "point_id": "opencode_go::glm-5.2",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:71a3c9c8333b9bfd",
+    "configuration_id": "deepswe_1_1:0f339b253a8c2aa3",
     "variant": "mini-swe-agent - glm-5-2 (high)",
     "score": 36.283185840707965,
     "score_is_estimated": null,
@@ -24110,7 +24110,7 @@
   {
     "point_id": "opencode_go::kimi-k3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aefa4afd042df82c",
+    "configuration_id": "deepswe_1_1:bddffd26d19005fe",
     "variant": "mini-swe-agent - kimi-k3 (max)",
     "score": 68.51441241685144,
     "score_is_estimated": null,
@@ -24194,7 +24194,7 @@
   {
     "point_id": "opencode_go::kimi-k2.7-code",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c25e237262636381",
+    "configuration_id": "deepswe_1_1:f3195a66fa6eb3b4",
     "variant": "mini-swe-agent - kimi-k2-7-code (None)",
     "score": 30.53097345132743,
     "score_is_estimated": null,
@@ -24425,7 +24425,7 @@
   {
     "point_id": "opencode_go::mimo-v2.5-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:8fa241178a2088a2",
+    "configuration_id": "deepswe_1_1:76bd13a416f0fc6b",
     "variant": "mini-swe-agent - mimo-v2-5-pro [vendor self-report]",
     "score": 19.0,
     "score_is_estimated": null,
@@ -24551,7 +24551,7 @@
   {
     "point_id": "opencode_go::mimo-v2.6-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c2b10fcdefbd0221",
+    "configuration_id": "deepswe_1_1:c0a2f77965ab2df0",
     "variant": "mini-swe-agent - mimo-v2-6-flash [vendor self-report]",
     "score": 67.9,
     "score_is_estimated": null,
@@ -24656,7 +24656,7 @@
   {
     "point_id": "opencode_go::mimo-v2.6-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9454d8de1c52f2fc",
+    "configuration_id": "deepswe_1_1:8810a3e1800bf0e3",
     "variant": "mini-swe-agent - mimo-v2-6-pro [vendor self-report]",
     "score": 71.9,
     "score_is_estimated": null,
@@ -24887,7 +24887,7 @@
   {
     "point_id": "opencode_go::qwen3.8-max",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:f20515f2e81cba89",
+    "configuration_id": "deepswe_1_1:1a9972736d6e7745",
     "variant": "mini-swe-agent - qwen3-8-max (xhigh)",
     "score": 57.46102449888642,
     "score_is_estimated": null,
@@ -25244,7 +25244,7 @@
   {
     "point_id": "opencode_go::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3d9b43ea1f40d6be",
+    "configuration_id": "deepswe_1_1:29265969373f2039",
     "variant": "mini-SWE - DeepSeek V4.1 Flash (max) [vendor self-report]",
     "score": 74.2,
     "score_is_estimated": null,
@@ -25265,7 +25265,7 @@
   {
     "point_id": "opencode_go::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ca4a68f3cc7cc04f",
+    "configuration_id": "deepswe_1_1:dd70f44743c035da",
     "variant": "mini-SWE - DeepSeek V4.1 Flash 1017 (max) [vendor self-report]",
     "score": 77.0,
     "score_is_estimated": null,
@@ -25559,7 +25559,7 @@
   {
     "point_id": "opencode_go::deepseek-v4-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b317c65fa31ed642",
+    "configuration_id": "deepswe_1_1:507c36076a51471e",
     "variant": "mini-swe-agent - deepseek-v4-pro (max)",
     "score": 62.83185840707964,
     "score_is_estimated": null,
@@ -26147,7 +26147,7 @@
   {
     "point_id": "command_code_goat::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b7fe36ffe2e53058",
+    "configuration_id": "deepswe_1_1:8f6dd29d5b4d3866",
     "variant": "mini-swe-agent - gpt-5-6-sol (max)",
     "score": 72.66666666666667,
     "score_is_estimated": null,
@@ -26168,7 +26168,7 @@
   {
     "point_id": "command_code_goat::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:20ba110314745668",
+    "configuration_id": "deepswe_1_1:95cd844a325ecfbf",
     "variant": "mini-swe-agent - gpt-5-6-sol (xhigh)",
     "score": 70.73170731707317,
     "score_is_estimated": null,
@@ -26189,7 +26189,7 @@
   {
     "point_id": "command_code_goat::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b9f6b563ece4cecf",
+    "configuration_id": "deepswe_1_1:ff5b6dab64e65a3b",
     "variant": "mini-swe-agent - gpt-5-6-sol (high)",
     "score": 69.40133037694012,
     "score_is_estimated": null,
@@ -26210,7 +26210,7 @@
   {
     "point_id": "command_code_goat::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:d0270ad29cebc03b",
+    "configuration_id": "deepswe_1_1:c0a8e6363efc6003",
     "variant": "mini-swe-agent - gpt-5-6-sol (medium)",
     "score": 61.06194690265486,
     "score_is_estimated": null,
@@ -26231,7 +26231,7 @@
   {
     "point_id": "command_code_goat::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:eed6875ca51165fd",
+    "configuration_id": "deepswe_1_1:1545ad95006e5f09",
     "variant": "mini-swe-agent - gpt-5-6-sol (low)",
     "score": 45.35398230088495,
     "score_is_estimated": null,
@@ -26357,7 +26357,7 @@
   {
     "point_id": "command_code_goat::glm-5.2",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3c0de09601f2c8a8",
+    "configuration_id": "deepswe_1_1:36b42aac9a399fff",
     "variant": "mini-swe-agent - glm-5-2 (max)",
     "score": 43.77777777777778,
     "score_is_estimated": null,
@@ -26378,7 +26378,7 @@
   {
     "point_id": "command_code_goat::glm-5.2",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:71a3c9c8333b9bfd",
+    "configuration_id": "deepswe_1_1:0f339b253a8c2aa3",
     "variant": "mini-swe-agent - glm-5-2 (high)",
     "score": 36.283185840707965,
     "score_is_estimated": null,
@@ -26966,7 +26966,7 @@
   {
     "point_id": "command_code_goat::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3d9b43ea1f40d6be",
+    "configuration_id": "deepswe_1_1:29265969373f2039",
     "variant": "mini-SWE - DeepSeek V4.1 Flash (max) [vendor self-report]",
     "score": 74.2,
     "score_is_estimated": null,
@@ -26987,7 +26987,7 @@
   {
     "point_id": "command_code_goat::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ca4a68f3cc7cc04f",
+    "configuration_id": "deepswe_1_1:dd70f44743c035da",
     "variant": "mini-SWE - DeepSeek V4.1 Flash 1017 (max) [vendor self-report]",
     "score": 77.0,
     "score_is_estimated": null,
@@ -27071,7 +27071,7 @@
   {
     "point_id": "command_code_goat::kimi-k2.7-code",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c25e237262636381",
+    "configuration_id": "deepswe_1_1:f3195a66fa6eb3b4",
     "variant": "mini-swe-agent - kimi-k2-7-code (None)",
     "score": 30.53097345132743,
     "score_is_estimated": null,
@@ -27302,7 +27302,7 @@
   {
     "point_id": "command_code_goat::deepseek-v4-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c0668bd778ebe124",
+    "configuration_id": "deepswe_1_1:c987861ad52f0899",
     "variant": "mini-swe-agent - deepseek-v4-flash (max)",
     "score": 53.31858407079646,
     "score_is_estimated": null,
@@ -27512,7 +27512,7 @@
   {
     "point_id": "command_code_goat::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -27764,7 +27764,7 @@
   {
     "point_id": "command_code_goat::gemini-3.8-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a4e0e06e8292b616",
+    "configuration_id": "deepswe_1_1:a90e288031deb966",
     "variant": "mini-swe-agent - gemini-3-8-flash (high)",
     "score": 73.8255033557047,
     "score_is_estimated": null,
@@ -27785,7 +27785,7 @@
   {
     "point_id": "command_code_goat::gemini-3.8-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9fafa3956afdc304",
+    "configuration_id": "deepswe_1_1:0361f833fd4cf748",
     "variant": "mini-swe-agent - gemini-3-8-flash (medium)",
     "score": 71.01769911504425,
     "score_is_estimated": null,
@@ -28331,7 +28331,7 @@
   {
     "point_id": "command_code_goat::deepseek-v4-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b317c65fa31ed642",
+    "configuration_id": "deepswe_1_1:507c36076a51471e",
     "variant": "mini-swe-agent - deepseek-v4-pro (max)",
     "score": 62.83185840707964,
     "score_is_estimated": null,
@@ -28688,7 +28688,7 @@
   {
     "point_id": "command_code_goat::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7ad5b83041495e4d",
+    "configuration_id": "deepswe_1_1:db831f8e3a872146",
     "variant": "mini-swe-agent - gpt-5-6-luna (max)",
     "score": 67.1875,
     "score_is_estimated": null,
@@ -28709,7 +28709,7 @@
   {
     "point_id": "command_code_goat::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7a41329b22a4d1b1",
+    "configuration_id": "deepswe_1_1:c4af79d0ede4ceb6",
     "variant": "mini-swe-agent - gpt-5-6-luna (xhigh)",
     "score": 56.85840707964602,
     "score_is_estimated": null,
@@ -28730,7 +28730,7 @@
   {
     "point_id": "command_code_goat::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:47d55f64ef31558b",
+    "configuration_id": "deepswe_1_1:bb2bedb6e81b4700",
     "variant": "mini-swe-agent - gpt-5-6-luna (high)",
     "score": 44.24778761061947,
     "score_is_estimated": null,
@@ -28751,7 +28751,7 @@
   {
     "point_id": "command_code_goat::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ec094e2327a62e03",
+    "configuration_id": "deepswe_1_1:5d5da4597f3b6851",
     "variant": "mini-swe-agent - gpt-5-6-luna (medium)",
     "score": 11.283185840707963,
     "score_is_estimated": null,
@@ -28772,7 +28772,7 @@
   {
     "point_id": "command_code_goat::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:16412a120b9a4722",
+    "configuration_id": "deepswe_1_1:13234dfaf9d50b29",
     "variant": "mini-swe-agent - gpt-5-6-luna (low)",
     "score": 1.5486725663716814,
     "score_is_estimated": null,
@@ -28919,7 +28919,7 @@
   {
     "point_id": "command_code_goat::qwen3.8-max",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:f20515f2e81cba89",
+    "configuration_id": "deepswe_1_1:1a9972736d6e7745",
     "variant": "mini-swe-agent - qwen3-8-max (xhigh)",
     "score": 57.46102449888642,
     "score_is_estimated": null,
@@ -29045,7 +29045,7 @@
   {
     "point_id": "command_code_goat::mimo-v2.5-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:8fa241178a2088a2",
+    "configuration_id": "deepswe_1_1:76bd13a416f0fc6b",
     "variant": "mini-swe-agent - mimo-v2-5-pro [vendor self-report]",
     "score": 19.0,
     "score_is_estimated": null,
@@ -29255,7 +29255,7 @@
   {
     "point_id": "command_code_goat::grok-4.7",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:1d433900eaa0bee0",
+    "configuration_id": "deepswe_1_1:788f9a1335a23a70",
     "variant": "mini-swe-agent - grok-4-7 (high) [vendor self-report]",
     "score": 71.0,
     "score_is_estimated": null,
@@ -30053,7 +30053,7 @@
   {
     "point_id": "command_code_goat::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -30389,7 +30389,7 @@
   {
     "point_id": "command_code_goat::muse-spark-1.2",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c181f2262d3e9d70",
+    "configuration_id": "deepswe_1_1:dc5714ce6e1faf0e",
     "variant": "mini-swe-agent - muse-spark-1-2 (xhigh)",
     "score": 54.86725663716814,
     "score_is_estimated": null,
@@ -30578,7 +30578,7 @@
   {
     "point_id": "command_code_goat::kimi-k3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aefa4afd042df82c",
+    "configuration_id": "deepswe_1_1:bddffd26d19005fe",
     "variant": "mini-swe-agent - kimi-k3 (max)",
     "score": 68.51441241685144,
     "score_is_estimated": null,
@@ -30683,7 +30683,7 @@
   {
     "point_id": "command_code_goat::grok-4.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:70b6e868fcb9cd80",
+    "configuration_id": "deepswe_1_1:eb56874976537214",
     "variant": "mini-swe-agent - grok-4-5 (high)",
     "score": 53.76106194690266,
     "score_is_estimated": null,
@@ -30956,7 +30956,7 @@
   {
     "point_id": "command_code_goat::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9517554a020a7af3",
+    "configuration_id": "deepswe_1_1:2c55025470da1adf",
     "variant": "mini-swe-agent - grok-4-6 (medium)",
     "score": 67.47787610619469,
     "score_is_estimated": null,
@@ -30977,7 +30977,7 @@
   {
     "point_id": "command_code_goat::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:017a7f4c8bf6ada0",
+    "configuration_id": "deepswe_1_1:f3bcbfbca58889a9",
     "variant": "mini-swe-agent - grok-4-6 (xhigh)",
     "score": 66.74057649667405,
     "score_is_estimated": null,
@@ -30998,7 +30998,7 @@
   {
     "point_id": "command_code_goat::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6c1cc54c4677acba",
+    "configuration_id": "deepswe_1_1:4e590db9adbe56bc",
     "variant": "mini-swe-agent - grok-4-6 (high)",
     "score": 65.18847006651885,
     "score_is_estimated": null,
@@ -31019,7 +31019,7 @@
   {
     "point_id": "command_code_goat::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:baca3e04439efe09",
+    "configuration_id": "deepswe_1_1:ead8e43990a2050c",
     "variant": "mini-swe-agent - grok-4-6 (low)",
     "score": 41.648106904231625,
     "score_is_estimated": null,
@@ -31124,7 +31124,7 @@
   {
     "point_id": "command_code_goat::mimo-v2.6-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9454d8de1c52f2fc",
+    "configuration_id": "deepswe_1_1:8810a3e1800bf0e3",
     "variant": "mini-swe-agent - mimo-v2-6-pro [vendor self-report]",
     "score": 71.9,
     "score_is_estimated": null,
@@ -31250,7 +31250,7 @@
   {
     "point_id": "command_code_goat::mimo-v2.6-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c2b10fcdefbd0221",
+    "configuration_id": "deepswe_1_1:c0a2f77965ab2df0",
     "variant": "mini-swe-agent - mimo-v2-6-flash [vendor self-report]",
     "score": 67.9,
     "score_is_estimated": null,
@@ -31418,7 +31418,7 @@
   {
     "point_id": "command_code_goat::gemini-3.7-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e9d8d5305f3c7552",
+    "configuration_id": "deepswe_1_1:4bb4be423b2ade44",
     "variant": "mini-swe-agent - gemini-3-7-flash (medium)",
     "score": 65.48672566371681,
     "score_is_estimated": null,
@@ -31439,7 +31439,7 @@
   {
     "point_id": "command_code_goat::gemini-3.7-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a62d7ab2cd07619d",
+    "configuration_id": "deepswe_1_1:b72d4c4f8c3bcf11",
     "variant": "mini-swe-agent - gemini-3-7-flash (high)",
     "score": 65.2654867256637,
     "score_is_estimated": null,
@@ -31460,7 +31460,7 @@
   {
     "point_id": "command_code_goat::gemini-3.7-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c3c0d085a762f3d1",
+    "configuration_id": "deepswe_1_1:591261de02c2022f",
     "variant": "mini-swe-agent - gemini-3-7-flash (low)",
     "score": 53.76106194690266,
     "score_is_estimated": null,
@@ -33287,7 +33287,7 @@
   {
     "point_id": "ollama_pro::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3d9b43ea1f40d6be",
+    "configuration_id": "deepswe_1_1:29265969373f2039",
     "variant": "mini-SWE - DeepSeek V4.1 Flash (max) [vendor self-report]",
     "score": 74.2,
     "score_is_estimated": null,
@@ -33308,7 +33308,7 @@
   {
     "point_id": "ollama_pro::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ca4a68f3cc7cc04f",
+    "configuration_id": "deepswe_1_1:dd70f44743c035da",
     "variant": "mini-SWE - DeepSeek V4.1 Flash 1017 (max) [vendor self-report]",
     "score": 77.0,
     "score_is_estimated": null,
@@ -33539,7 +33539,7 @@
   {
     "point_id": "ollama_pro::deepseek-v4-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c0668bd778ebe124",
+    "configuration_id": "deepswe_1_1:c987861ad52f0899",
     "variant": "mini-swe-agent - deepseek-v4-flash (max)",
     "score": 53.31858407079646,
     "score_is_estimated": null,
@@ -33833,7 +33833,7 @@
   {
     "point_id": "ollama_pro::deepseek-v4-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b317c65fa31ed642",
+    "configuration_id": "deepswe_1_1:507c36076a51471e",
     "variant": "mini-swe-agent - deepseek-v4-pro (max)",
     "score": 62.83185840707964,
     "score_is_estimated": null,
@@ -34022,7 +34022,7 @@
   {
     "point_id": "ollama_pro::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -34148,7 +34148,7 @@
   {
     "point_id": "ollama_pro::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -34274,7 +34274,7 @@
   {
     "point_id": "ollama_pro::glm-5.2",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3c0de09601f2c8a8",
+    "configuration_id": "deepswe_1_1:36b42aac9a399fff",
     "variant": "mini-swe-agent - glm-5-2 (max)",
     "score": 43.77777777777778,
     "score_is_estimated": null,
@@ -34295,7 +34295,7 @@
   {
     "point_id": "ollama_pro::glm-5.2",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:71a3c9c8333b9bfd",
+    "configuration_id": "deepswe_1_1:0f339b253a8c2aa3",
     "variant": "mini-swe-agent - glm-5-2 (high)",
     "score": 36.283185840707965,
     "score_is_estimated": null,
@@ -34568,7 +34568,7 @@
   {
     "point_id": "ollama_pro::kimi-k3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aefa4afd042df82c",
+    "configuration_id": "deepswe_1_1:bddffd26d19005fe",
     "variant": "mini-swe-agent - kimi-k3 (max)",
     "score": 68.51441241685144,
     "score_is_estimated": null,
@@ -34652,7 +34652,7 @@
   {
     "point_id": "ollama_pro::kimi-k2.7-code",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c25e237262636381",
+    "configuration_id": "deepswe_1_1:f3195a66fa6eb3b4",
     "variant": "mini-swe-agent - kimi-k2-7-code (None)",
     "score": 30.53097345132743,
     "score_is_estimated": null,
@@ -35093,7 +35093,7 @@
   {
     "point_id": "ollama_max::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3d9b43ea1f40d6be",
+    "configuration_id": "deepswe_1_1:29265969373f2039",
     "variant": "mini-SWE - DeepSeek V4.1 Flash (max) [vendor self-report]",
     "score": 74.2,
     "score_is_estimated": null,
@@ -35114,7 +35114,7 @@
   {
     "point_id": "ollama_max::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ca4a68f3cc7cc04f",
+    "configuration_id": "deepswe_1_1:dd70f44743c035da",
     "variant": "mini-SWE - DeepSeek V4.1 Flash 1017 (max) [vendor self-report]",
     "score": 77.0,
     "score_is_estimated": null,
@@ -35345,7 +35345,7 @@
   {
     "point_id": "ollama_max::deepseek-v4-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c0668bd778ebe124",
+    "configuration_id": "deepswe_1_1:c987861ad52f0899",
     "variant": "mini-swe-agent - deepseek-v4-flash (max)",
     "score": 53.31858407079646,
     "score_is_estimated": null,
@@ -35639,7 +35639,7 @@
   {
     "point_id": "ollama_max::deepseek-v4-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b317c65fa31ed642",
+    "configuration_id": "deepswe_1_1:507c36076a51471e",
     "variant": "mini-swe-agent - deepseek-v4-pro (max)",
     "score": 62.83185840707964,
     "score_is_estimated": null,
@@ -35828,7 +35828,7 @@
   {
     "point_id": "ollama_max::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -35954,7 +35954,7 @@
   {
     "point_id": "ollama_max::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -36080,7 +36080,7 @@
   {
     "point_id": "ollama_max::glm-5.2",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3c0de09601f2c8a8",
+    "configuration_id": "deepswe_1_1:36b42aac9a399fff",
     "variant": "mini-swe-agent - glm-5-2 (max)",
     "score": 43.77777777777778,
     "score_is_estimated": null,
@@ -36101,7 +36101,7 @@
   {
     "point_id": "ollama_max::glm-5.2",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:71a3c9c8333b9bfd",
+    "configuration_id": "deepswe_1_1:0f339b253a8c2aa3",
     "variant": "mini-swe-agent - glm-5-2 (high)",
     "score": 36.283185840707965,
     "score_is_estimated": null,
@@ -36374,7 +36374,7 @@
   {
     "point_id": "ollama_max::kimi-k3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aefa4afd042df82c",
+    "configuration_id": "deepswe_1_1:bddffd26d19005fe",
     "variant": "mini-swe-agent - kimi-k3 (max)",
     "score": 68.51441241685144,
     "score_is_estimated": null,
@@ -36458,7 +36458,7 @@
   {
     "point_id": "ollama_max::kimi-k2.7-code",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c25e237262636381",
+    "configuration_id": "deepswe_1_1:f3195a66fa6eb3b4",
     "variant": "mini-swe-agent - kimi-k2-7-code (None)",
     "score": 30.53097345132743,
     "score_is_estimated": null,
@@ -37298,7 +37298,7 @@
   {
     "point_id": "mimo_token_lite_day::mimo-v2.6-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9454d8de1c52f2fc",
+    "configuration_id": "deepswe_1_1:8810a3e1800bf0e3",
     "variant": "mini-swe-agent - mimo-v2-6-pro [vendor self-report]",
     "score": 71.9,
     "score_is_estimated": null,
@@ -37403,7 +37403,7 @@
   {
     "point_id": "mimo_token_lite_night::mimo-v2.6-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9454d8de1c52f2fc",
+    "configuration_id": "deepswe_1_1:8810a3e1800bf0e3",
     "variant": "mini-swe-agent - mimo-v2-6-pro [vendor self-report]",
     "score": 71.9,
     "score_is_estimated": null,
@@ -37529,7 +37529,7 @@
   {
     "point_id": "mimo_token_lite_day::mimo-v2.6-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c2b10fcdefbd0221",
+    "configuration_id": "deepswe_1_1:c0a2f77965ab2df0",
     "variant": "mini-swe-agent - mimo-v2-6-flash [vendor self-report]",
     "score": 67.9,
     "score_is_estimated": null,
@@ -37655,7 +37655,7 @@
   {
     "point_id": "mimo_token_lite_night::mimo-v2.6-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c2b10fcdefbd0221",
+    "configuration_id": "deepswe_1_1:c0a2f77965ab2df0",
     "variant": "mini-swe-agent - mimo-v2-6-flash [vendor self-report]",
     "score": 67.9,
     "score_is_estimated": null,
@@ -37781,7 +37781,7 @@
   {
     "point_id": "mimo_token_lite_day::mimo-v2.5-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:8fa241178a2088a2",
+    "configuration_id": "deepswe_1_1:76bd13a416f0fc6b",
     "variant": "mini-swe-agent - mimo-v2-5-pro [vendor self-report]",
     "score": 19.0,
     "score_is_estimated": null,
@@ -37907,7 +37907,7 @@
   {
     "point_id": "mimo_token_lite_night::mimo-v2.5-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:8fa241178a2088a2",
+    "configuration_id": "deepswe_1_1:76bd13a416f0fc6b",
     "variant": "mini-swe-agent - mimo-v2-5-pro [vendor self-report]",
     "score": 19.0,
     "score_is_estimated": null,
@@ -38138,7 +38138,7 @@
   {
     "point_id": "mimo_token_standard_day::mimo-v2.6-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9454d8de1c52f2fc",
+    "configuration_id": "deepswe_1_1:8810a3e1800bf0e3",
     "variant": "mini-swe-agent - mimo-v2-6-pro [vendor self-report]",
     "score": 71.9,
     "score_is_estimated": null,
@@ -38243,7 +38243,7 @@
   {
     "point_id": "mimo_token_standard_night::mimo-v2.6-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9454d8de1c52f2fc",
+    "configuration_id": "deepswe_1_1:8810a3e1800bf0e3",
     "variant": "mini-swe-agent - mimo-v2-6-pro [vendor self-report]",
     "score": 71.9,
     "score_is_estimated": null,
@@ -38369,7 +38369,7 @@
   {
     "point_id": "mimo_token_standard_day::mimo-v2.6-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c2b10fcdefbd0221",
+    "configuration_id": "deepswe_1_1:c0a2f77965ab2df0",
     "variant": "mini-swe-agent - mimo-v2-6-flash [vendor self-report]",
     "score": 67.9,
     "score_is_estimated": null,
@@ -38495,7 +38495,7 @@
   {
     "point_id": "mimo_token_standard_night::mimo-v2.6-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c2b10fcdefbd0221",
+    "configuration_id": "deepswe_1_1:c0a2f77965ab2df0",
     "variant": "mini-swe-agent - mimo-v2-6-flash [vendor self-report]",
     "score": 67.9,
     "score_is_estimated": null,
@@ -38621,7 +38621,7 @@
   {
     "point_id": "mimo_token_standard_day::mimo-v2.5-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:8fa241178a2088a2",
+    "configuration_id": "deepswe_1_1:76bd13a416f0fc6b",
     "variant": "mini-swe-agent - mimo-v2-5-pro [vendor self-report]",
     "score": 19.0,
     "score_is_estimated": null,
@@ -38747,7 +38747,7 @@
   {
     "point_id": "mimo_token_standard_night::mimo-v2.5-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:8fa241178a2088a2",
+    "configuration_id": "deepswe_1_1:76bd13a416f0fc6b",
     "variant": "mini-swe-agent - mimo-v2-5-pro [vendor self-report]",
     "score": 19.0,
     "score_is_estimated": null,
@@ -38978,7 +38978,7 @@
   {
     "point_id": "mimo_token_pro_day::mimo-v2.6-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9454d8de1c52f2fc",
+    "configuration_id": "deepswe_1_1:8810a3e1800bf0e3",
     "variant": "mini-swe-agent - mimo-v2-6-pro [vendor self-report]",
     "score": 71.9,
     "score_is_estimated": null,
@@ -39083,7 +39083,7 @@
   {
     "point_id": "mimo_token_pro_night::mimo-v2.6-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9454d8de1c52f2fc",
+    "configuration_id": "deepswe_1_1:8810a3e1800bf0e3",
     "variant": "mini-swe-agent - mimo-v2-6-pro [vendor self-report]",
     "score": 71.9,
     "score_is_estimated": null,
@@ -39209,7 +39209,7 @@
   {
     "point_id": "mimo_token_pro_day::mimo-v2.6-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c2b10fcdefbd0221",
+    "configuration_id": "deepswe_1_1:c0a2f77965ab2df0",
     "variant": "mini-swe-agent - mimo-v2-6-flash [vendor self-report]",
     "score": 67.9,
     "score_is_estimated": null,
@@ -39335,7 +39335,7 @@
   {
     "point_id": "mimo_token_pro_night::mimo-v2.6-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c2b10fcdefbd0221",
+    "configuration_id": "deepswe_1_1:c0a2f77965ab2df0",
     "variant": "mini-swe-agent - mimo-v2-6-flash [vendor self-report]",
     "score": 67.9,
     "score_is_estimated": null,
@@ -39461,7 +39461,7 @@
   {
     "point_id": "mimo_token_pro_day::mimo-v2.5-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:8fa241178a2088a2",
+    "configuration_id": "deepswe_1_1:76bd13a416f0fc6b",
     "variant": "mini-swe-agent - mimo-v2-5-pro [vendor self-report]",
     "score": 19.0,
     "score_is_estimated": null,
@@ -39587,7 +39587,7 @@
   {
     "point_id": "mimo_token_pro_night::mimo-v2.5-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:8fa241178a2088a2",
+    "configuration_id": "deepswe_1_1:76bd13a416f0fc6b",
     "variant": "mini-swe-agent - mimo-v2-5-pro [vendor self-report]",
     "score": 19.0,
     "score_is_estimated": null,
@@ -39818,7 +39818,7 @@
   {
     "point_id": "mimo_token_max_day::mimo-v2.6-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9454d8de1c52f2fc",
+    "configuration_id": "deepswe_1_1:8810a3e1800bf0e3",
     "variant": "mini-swe-agent - mimo-v2-6-pro [vendor self-report]",
     "score": 71.9,
     "score_is_estimated": null,
@@ -39923,7 +39923,7 @@
   {
     "point_id": "mimo_token_max_night::mimo-v2.6-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9454d8de1c52f2fc",
+    "configuration_id": "deepswe_1_1:8810a3e1800bf0e3",
     "variant": "mini-swe-agent - mimo-v2-6-pro [vendor self-report]",
     "score": 71.9,
     "score_is_estimated": null,
@@ -40049,7 +40049,7 @@
   {
     "point_id": "mimo_token_max_day::mimo-v2.6-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c2b10fcdefbd0221",
+    "configuration_id": "deepswe_1_1:c0a2f77965ab2df0",
     "variant": "mini-swe-agent - mimo-v2-6-flash [vendor self-report]",
     "score": 67.9,
     "score_is_estimated": null,
@@ -40175,7 +40175,7 @@
   {
     "point_id": "mimo_token_max_night::mimo-v2.6-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c2b10fcdefbd0221",
+    "configuration_id": "deepswe_1_1:c0a2f77965ab2df0",
     "variant": "mini-swe-agent - mimo-v2-6-flash [vendor self-report]",
     "score": 67.9,
     "score_is_estimated": null,
@@ -40301,7 +40301,7 @@
   {
     "point_id": "mimo_token_max_day::mimo-v2.5-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:8fa241178a2088a2",
+    "configuration_id": "deepswe_1_1:76bd13a416f0fc6b",
     "variant": "mini-swe-agent - mimo-v2-5-pro [vendor self-report]",
     "score": 19.0,
     "score_is_estimated": null,
@@ -40427,7 +40427,7 @@
   {
     "point_id": "mimo_token_max_night::mimo-v2.5-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:8fa241178a2088a2",
+    "configuration_id": "deepswe_1_1:76bd13a416f0fc6b",
     "variant": "mini-swe-agent - mimo-v2-5-pro [vendor self-report]",
     "score": 19.0,
     "score_is_estimated": null,
@@ -40889,7 +40889,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:1e9b21c2004faec1",
+    "configuration_id": "deepswe_1_1:fcbbdd674e114a3d",
     "variant": "mini-swe-agent - gpt-5-6-terra (max)",
     "score": 69.62305986696231,
     "score_is_estimated": null,
@@ -40910,7 +40910,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:277b6c07f6ca3318",
+    "configuration_id": "deepswe_1_1:600a6b831b9c1e6b",
     "variant": "mini-swe-agent - gpt-5-6-terra (xhigh)",
     "score": 60.17699115044248,
     "score_is_estimated": null,
@@ -40931,7 +40931,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:31c29b4c94cf77ae",
+    "configuration_id": "deepswe_1_1:5a4e182529aab074",
     "variant": "mini-swe-agent - gpt-5-6-terra (high)",
     "score": 53.76106194690266,
     "score_is_estimated": null,
@@ -40952,7 +40952,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:900c8577e3bc443d",
+    "configuration_id": "deepswe_1_1:039e2fb33c449dfb",
     "variant": "mini-swe-agent - gpt-5-6-terra (medium)",
     "score": 35.11111111111111,
     "score_is_estimated": null,
@@ -40973,7 +40973,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:329cf994aaf09cfd",
+    "configuration_id": "deepswe_1_1:2ba4307fe3099841",
     "variant": "mini-swe-agent - gpt-5-6-terra (low)",
     "score": 24.053452115812917,
     "score_is_estimated": null,
@@ -41267,7 +41267,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6d1742654e70dc7d",
+    "configuration_id": "deepswe_1_1:20f55153fb6c5b52",
     "variant": "mini-swe-agent - gpt-5-5 (xhigh)",
     "score": 67.03539823008849,
     "score_is_estimated": null,
@@ -41288,7 +41288,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:8fa6331c80979ca8",
+    "configuration_id": "deepswe_1_1:b39ddd5db41a8b49",
     "variant": "mini-swe-agent - gpt-5-5 (high)",
     "score": 64.38053097345133,
     "score_is_estimated": null,
@@ -41309,7 +41309,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:f4c657e2ffa66931",
+    "configuration_id": "deepswe_1_1:599a0091f14798be",
     "variant": "mini-swe-agent - gpt-5-5 (medium)",
     "score": 53.98230088495575,
     "score_is_estimated": null,
@@ -41330,7 +41330,7 @@
   {
     "point_id": "chatgpt_plus::gpt-5.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:94c61fbd52e4cefa",
+    "configuration_id": "deepswe_1_1:8f64422cb347e1e9",
     "variant": "mini-swe-agent - gpt-5-5 (low)",
     "score": 26.991150442477874,
     "score_is_estimated": null,
@@ -41666,7 +41666,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:1e9b21c2004faec1",
+    "configuration_id": "deepswe_1_1:fcbbdd674e114a3d",
     "variant": "mini-swe-agent - gpt-5-6-terra (max)",
     "score": 69.62305986696231,
     "score_is_estimated": null,
@@ -41687,7 +41687,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:277b6c07f6ca3318",
+    "configuration_id": "deepswe_1_1:600a6b831b9c1e6b",
     "variant": "mini-swe-agent - gpt-5-6-terra (xhigh)",
     "score": 60.17699115044248,
     "score_is_estimated": null,
@@ -41708,7 +41708,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:31c29b4c94cf77ae",
+    "configuration_id": "deepswe_1_1:5a4e182529aab074",
     "variant": "mini-swe-agent - gpt-5-6-terra (high)",
     "score": 53.76106194690266,
     "score_is_estimated": null,
@@ -41729,7 +41729,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:900c8577e3bc443d",
+    "configuration_id": "deepswe_1_1:039e2fb33c449dfb",
     "variant": "mini-swe-agent - gpt-5-6-terra (medium)",
     "score": 35.11111111111111,
     "score_is_estimated": null,
@@ -41750,7 +41750,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:329cf994aaf09cfd",
+    "configuration_id": "deepswe_1_1:2ba4307fe3099841",
     "variant": "mini-swe-agent - gpt-5-6-terra (low)",
     "score": 24.053452115812917,
     "score_is_estimated": null,
@@ -42044,7 +42044,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6d1742654e70dc7d",
+    "configuration_id": "deepswe_1_1:20f55153fb6c5b52",
     "variant": "mini-swe-agent - gpt-5-5 (xhigh)",
     "score": 67.03539823008849,
     "score_is_estimated": null,
@@ -42065,7 +42065,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:8fa6331c80979ca8",
+    "configuration_id": "deepswe_1_1:b39ddd5db41a8b49",
     "variant": "mini-swe-agent - gpt-5-5 (high)",
     "score": 64.38053097345133,
     "score_is_estimated": null,
@@ -42086,7 +42086,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:f4c657e2ffa66931",
+    "configuration_id": "deepswe_1_1:599a0091f14798be",
     "variant": "mini-swe-agent - gpt-5-5 (medium)",
     "score": 53.98230088495575,
     "score_is_estimated": null,
@@ -42107,7 +42107,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-5.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:94c61fbd52e4cefa",
+    "configuration_id": "deepswe_1_1:8f64422cb347e1e9",
     "variant": "mini-swe-agent - gpt-5-5 (low)",
     "score": 26.991150442477874,
     "score_is_estimated": null,
@@ -42443,7 +42443,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:1e9b21c2004faec1",
+    "configuration_id": "deepswe_1_1:fcbbdd674e114a3d",
     "variant": "mini-swe-agent - gpt-5-6-terra (max)",
     "score": 69.62305986696231,
     "score_is_estimated": null,
@@ -42464,7 +42464,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:277b6c07f6ca3318",
+    "configuration_id": "deepswe_1_1:600a6b831b9c1e6b",
     "variant": "mini-swe-agent - gpt-5-6-terra (xhigh)",
     "score": 60.17699115044248,
     "score_is_estimated": null,
@@ -42485,7 +42485,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:31c29b4c94cf77ae",
+    "configuration_id": "deepswe_1_1:5a4e182529aab074",
     "variant": "mini-swe-agent - gpt-5-6-terra (high)",
     "score": 53.76106194690266,
     "score_is_estimated": null,
@@ -42506,7 +42506,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:900c8577e3bc443d",
+    "configuration_id": "deepswe_1_1:039e2fb33c449dfb",
     "variant": "mini-swe-agent - gpt-5-6-terra (medium)",
     "score": 35.11111111111111,
     "score_is_estimated": null,
@@ -42527,7 +42527,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:329cf994aaf09cfd",
+    "configuration_id": "deepswe_1_1:2ba4307fe3099841",
     "variant": "mini-swe-agent - gpt-5-6-terra (low)",
     "score": 24.053452115812917,
     "score_is_estimated": null,
@@ -42821,7 +42821,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6d1742654e70dc7d",
+    "configuration_id": "deepswe_1_1:20f55153fb6c5b52",
     "variant": "mini-swe-agent - gpt-5-5 (xhigh)",
     "score": 67.03539823008849,
     "score_is_estimated": null,
@@ -42842,7 +42842,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:8fa6331c80979ca8",
+    "configuration_id": "deepswe_1_1:b39ddd5db41a8b49",
     "variant": "mini-swe-agent - gpt-5-5 (high)",
     "score": 64.38053097345133,
     "score_is_estimated": null,
@@ -42863,7 +42863,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:f4c657e2ffa66931",
+    "configuration_id": "deepswe_1_1:599a0091f14798be",
     "variant": "mini-swe-agent - gpt-5-5 (medium)",
     "score": 53.98230088495575,
     "score_is_estimated": null,
@@ -42884,7 +42884,7 @@
   {
     "point_id": "chatgpt_pro_20x::gpt-5.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:94c61fbd52e4cefa",
+    "configuration_id": "deepswe_1_1:8f64422cb347e1e9",
     "variant": "mini-swe-agent - gpt-5-5 (low)",
     "score": 26.991150442477874,
     "score_is_estimated": null,
@@ -43199,7 +43199,7 @@
   {
     "point_id": "claude_pro::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:17f1ccadd79e3f73",
+    "configuration_id": "deepswe_1_1:5277ea7e42957390",
     "variant": "mini-swe-agent - claude-sonnet-5 (max)",
     "score": 53.84615384615385,
     "score_is_estimated": null,
@@ -43220,7 +43220,7 @@
   {
     "point_id": "claude_pro::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6a089e055d07f388",
+    "configuration_id": "deepswe_1_1:931eae93e2aa8746",
     "variant": "mini-swe-agent - claude-sonnet-5 (xhigh)",
     "score": 49.667405764966745,
     "score_is_estimated": null,
@@ -43241,7 +43241,7 @@
   {
     "point_id": "claude_pro::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e833a890e9fc6ef0",
+    "configuration_id": "deepswe_1_1:1cf2c5ff313a114e",
     "variant": "mini-swe-agent - claude-sonnet-5 (high)",
     "score": 48.23008849557522,
     "score_is_estimated": null,
@@ -43262,7 +43262,7 @@
   {
     "point_id": "claude_pro::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3cee9c2890b172bc",
+    "configuration_id": "deepswe_1_1:da79afd68903d6d7",
     "variant": "mini-swe-agent - claude-sonnet-5 (medium)",
     "score": 39.77777777777778,
     "score_is_estimated": null,
@@ -43283,7 +43283,7 @@
   {
     "point_id": "claude_pro::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:4b4fac04da320c00",
+    "configuration_id": "deepswe_1_1:1378959e9832d1e1",
     "variant": "mini-swe-agent - claude-sonnet-5 (low)",
     "score": 30.51224944320713,
     "score_is_estimated": null,
@@ -43409,7 +43409,7 @@
   {
     "point_id": "claude_pro::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:03fa5cc9c1b4bc14",
+    "configuration_id": "deepswe_1_1:afe9c015b86bc421",
     "variant": "mini-swe-agent - claude-opus-4-8 (max)",
     "score": 58.97435897435898,
     "score_is_estimated": null,
@@ -43430,7 +43430,7 @@
   {
     "point_id": "claude_pro::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9ba29daf22e9a1ae",
+    "configuration_id": "deepswe_1_1:2402ae6e1f09ec10",
     "variant": "mini-swe-agent - claude-opus-4-8 (xhigh)",
     "score": 54.36241610738255,
     "score_is_estimated": null,
@@ -43451,7 +43451,7 @@
   {
     "point_id": "claude_pro::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2b59cc2e16364e15",
+    "configuration_id": "deepswe_1_1:493be0fce679b954",
     "variant": "mini-swe-agent - claude-opus-4-8 (high)",
     "score": 51.76991150442478,
     "score_is_estimated": null,
@@ -43472,7 +43472,7 @@
   {
     "point_id": "claude_pro::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7d16a6959bd957f6",
+    "configuration_id": "deepswe_1_1:8bf7364061796101",
     "variant": "mini-swe-agent - claude-opus-4-8 (medium)",
     "score": 48.67256637168141,
     "score_is_estimated": null,
@@ -43493,7 +43493,7 @@
   {
     "point_id": "claude_pro::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:39deebcf76251bec",
+    "configuration_id": "deepswe_1_1:ab709972deffa0f3",
     "variant": "mini-swe-agent - claude-opus-4-8 (low)",
     "score": 40.79822616407982,
     "score_is_estimated": null,
@@ -43808,7 +43808,7 @@
   {
     "point_id": "claude_max_20x::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:17f1ccadd79e3f73",
+    "configuration_id": "deepswe_1_1:5277ea7e42957390",
     "variant": "mini-swe-agent - claude-sonnet-5 (max)",
     "score": 53.84615384615385,
     "score_is_estimated": null,
@@ -43829,7 +43829,7 @@
   {
     "point_id": "claude_max_20x::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6a089e055d07f388",
+    "configuration_id": "deepswe_1_1:931eae93e2aa8746",
     "variant": "mini-swe-agent - claude-sonnet-5 (xhigh)",
     "score": 49.667405764966745,
     "score_is_estimated": null,
@@ -43850,7 +43850,7 @@
   {
     "point_id": "claude_max_20x::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e833a890e9fc6ef0",
+    "configuration_id": "deepswe_1_1:1cf2c5ff313a114e",
     "variant": "mini-swe-agent - claude-sonnet-5 (high)",
     "score": 48.23008849557522,
     "score_is_estimated": null,
@@ -43871,7 +43871,7 @@
   {
     "point_id": "claude_max_20x::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3cee9c2890b172bc",
+    "configuration_id": "deepswe_1_1:da79afd68903d6d7",
     "variant": "mini-swe-agent - claude-sonnet-5 (medium)",
     "score": 39.77777777777778,
     "score_is_estimated": null,
@@ -43892,7 +43892,7 @@
   {
     "point_id": "claude_max_20x::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:4b4fac04da320c00",
+    "configuration_id": "deepswe_1_1:1378959e9832d1e1",
     "variant": "mini-swe-agent - claude-sonnet-5 (low)",
     "score": 30.51224944320713,
     "score_is_estimated": null,
@@ -44018,7 +44018,7 @@
   {
     "point_id": "claude_max_20x::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:03fa5cc9c1b4bc14",
+    "configuration_id": "deepswe_1_1:afe9c015b86bc421",
     "variant": "mini-swe-agent - claude-opus-4-8 (max)",
     "score": 58.97435897435898,
     "score_is_estimated": null,
@@ -44039,7 +44039,7 @@
   {
     "point_id": "claude_max_20x::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9ba29daf22e9a1ae",
+    "configuration_id": "deepswe_1_1:2402ae6e1f09ec10",
     "variant": "mini-swe-agent - claude-opus-4-8 (xhigh)",
     "score": 54.36241610738255,
     "score_is_estimated": null,
@@ -44060,7 +44060,7 @@
   {
     "point_id": "claude_max_20x::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2b59cc2e16364e15",
+    "configuration_id": "deepswe_1_1:493be0fce679b954",
     "variant": "mini-swe-agent - claude-opus-4-8 (high)",
     "score": 51.76991150442478,
     "score_is_estimated": null,
@@ -44081,7 +44081,7 @@
   {
     "point_id": "claude_max_20x::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7d16a6959bd957f6",
+    "configuration_id": "deepswe_1_1:8bf7364061796101",
     "variant": "mini-swe-agent - claude-opus-4-8 (medium)",
     "score": 48.67256637168141,
     "score_is_estimated": null,
@@ -44102,7 +44102,7 @@
   {
     "point_id": "claude_max_20x::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:39deebcf76251bec",
+    "configuration_id": "deepswe_1_1:ab709972deffa0f3",
     "variant": "mini-swe-agent - claude-opus-4-8 (low)",
     "score": 40.79822616407982,
     "score_is_estimated": null,
@@ -44228,7 +44228,7 @@
   {
     "point_id": "claude_max_20x::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:60791be82ce959e0",
+    "configuration_id": "deepswe_1_1:84f07a6a8071bb2e",
     "variant": "mini-swe-agent - claude-fable-5 (xhigh)",
     "score": 69.91150442477876,
     "score_is_estimated": null,
@@ -44249,7 +44249,7 @@
   {
     "point_id": "claude_max_20x::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e5e5c5b317b1f68a",
+    "configuration_id": "deepswe_1_1:84b2503c83a0f325",
     "variant": "mini-swe-agent - claude-fable-5 (max)",
     "score": 69.72477064220183,
     "score_is_estimated": null,
@@ -44270,7 +44270,7 @@
   {
     "point_id": "claude_max_20x::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:42fd11a99a8570ba",
+    "configuration_id": "deepswe_1_1:ca538462fa00698a",
     "variant": "mini-swe-agent - claude-fable-5 (high)",
     "score": 68.6046511627907,
     "score_is_estimated": null,
@@ -44291,7 +44291,7 @@
   {
     "point_id": "claude_max_20x::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a1709ab0b129e07e",
+    "configuration_id": "deepswe_1_1:61c6d82c14738840",
     "variant": "mini-swe-agent - claude-fable-5 (medium)",
     "score": 65.36697247706422,
     "score_is_estimated": null,
@@ -44312,7 +44312,7 @@
   {
     "point_id": "claude_max_20x::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:53874601b1d3b3da",
+    "configuration_id": "deepswe_1_1:956f815d4fc381c4",
     "variant": "mini-swe-agent - claude-fable-5 (low)",
     "score": 59.58429561200924,
     "score_is_estimated": null,
@@ -44627,7 +44627,7 @@
   {
     "point_id": "claude_max_5x::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:17f1ccadd79e3f73",
+    "configuration_id": "deepswe_1_1:5277ea7e42957390",
     "variant": "mini-swe-agent - claude-sonnet-5 (max)",
     "score": 53.84615384615385,
     "score_is_estimated": null,
@@ -44648,7 +44648,7 @@
   {
     "point_id": "claude_max_5x::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6a089e055d07f388",
+    "configuration_id": "deepswe_1_1:931eae93e2aa8746",
     "variant": "mini-swe-agent - claude-sonnet-5 (xhigh)",
     "score": 49.667405764966745,
     "score_is_estimated": null,
@@ -44669,7 +44669,7 @@
   {
     "point_id": "claude_max_5x::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e833a890e9fc6ef0",
+    "configuration_id": "deepswe_1_1:1cf2c5ff313a114e",
     "variant": "mini-swe-agent - claude-sonnet-5 (high)",
     "score": 48.23008849557522,
     "score_is_estimated": null,
@@ -44690,7 +44690,7 @@
   {
     "point_id": "claude_max_5x::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3cee9c2890b172bc",
+    "configuration_id": "deepswe_1_1:da79afd68903d6d7",
     "variant": "mini-swe-agent - claude-sonnet-5 (medium)",
     "score": 39.77777777777778,
     "score_is_estimated": null,
@@ -44711,7 +44711,7 @@
   {
     "point_id": "claude_max_5x::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:4b4fac04da320c00",
+    "configuration_id": "deepswe_1_1:1378959e9832d1e1",
     "variant": "mini-swe-agent - claude-sonnet-5 (low)",
     "score": 30.51224944320713,
     "score_is_estimated": null,
@@ -44837,7 +44837,7 @@
   {
     "point_id": "claude_max_5x::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:60791be82ce959e0",
+    "configuration_id": "deepswe_1_1:84f07a6a8071bb2e",
     "variant": "mini-swe-agent - claude-fable-5 (xhigh)",
     "score": 69.91150442477876,
     "score_is_estimated": null,
@@ -44858,7 +44858,7 @@
   {
     "point_id": "claude_max_5x::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e5e5c5b317b1f68a",
+    "configuration_id": "deepswe_1_1:84b2503c83a0f325",
     "variant": "mini-swe-agent - claude-fable-5 (max)",
     "score": 69.72477064220183,
     "score_is_estimated": null,
@@ -44879,7 +44879,7 @@
   {
     "point_id": "claude_max_5x::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:42fd11a99a8570ba",
+    "configuration_id": "deepswe_1_1:ca538462fa00698a",
     "variant": "mini-swe-agent - claude-fable-5 (high)",
     "score": 68.6046511627907,
     "score_is_estimated": null,
@@ -44900,7 +44900,7 @@
   {
     "point_id": "claude_max_5x::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a1709ab0b129e07e",
+    "configuration_id": "deepswe_1_1:61c6d82c14738840",
     "variant": "mini-swe-agent - claude-fable-5 (medium)",
     "score": 65.36697247706422,
     "score_is_estimated": null,
@@ -44921,7 +44921,7 @@
   {
     "point_id": "claude_max_5x::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:53874601b1d3b3da",
+    "configuration_id": "deepswe_1_1:956f815d4fc381c4",
     "variant": "mini-swe-agent - claude-fable-5 (low)",
     "score": 59.58429561200924,
     "score_is_estimated": null,
@@ -47735,7 +47735,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aa4ad931eff45be4",
+    "configuration_id": "deepswe_1_1:c1435bb651542af7",
     "variant": "mini-swe-agent - gpt-6-astra (xhigh)",
     "score": 74.11504424778761,
     "score_is_estimated": null,
@@ -47745,8 +47745,8 @@
     "service_mode": null,
     "score_low": 71.24964807371246,
     "score_high": 76.98044042186275,
-    "mean_cost_usd_per_task": 6.52377356460177,
-    "median_cost_usd_per_task": 5.6717151,
+    "mean_cost_usd_per_task": 4.429117203539823,
+    "median_cost_usd_per_task": 3.8406789999999997,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -47756,7 +47756,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e8101649c60ecba8",
+    "configuration_id": "deepswe_1_1:f88d3f34974c9162",
     "variant": "mini-swe-agent - gpt-6-astra (high)",
     "score": 73.23008849557522,
     "score_is_estimated": null,
@@ -47766,8 +47766,8 @@
     "service_mode": null,
     "score_low": 69.80659243770221,
     "score_high": 76.65358455344823,
-    "mean_cost_usd_per_task": 5.723721956194691,
-    "median_cost_usd_per_task": 4.9622669,
+    "mean_cost_usd_per_task": 3.9237237909292038,
+    "median_cost_usd_per_task": 3.454243,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -47777,7 +47777,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b30a594ec5f66ce7",
+    "configuration_id": "deepswe_1_1:ea6a1930729fc3eb",
     "variant": "mini-swe-agent - gpt-6-astra (max)",
     "score": 73.23008849557522,
     "score_is_estimated": null,
@@ -47787,8 +47787,8 @@
     "service_mode": null,
     "score_low": 72.39976873936956,
     "score_high": 74.06040825178087,
-    "mean_cost_usd_per_task": 12.369032401327434,
-    "median_cost_usd_per_task": 11.036936,
+    "mean_cost_usd_per_task": 7.497827996681416,
+    "median_cost_usd_per_task": 6.712564,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -47798,7 +47798,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a5c5cd4b12673627",
+    "configuration_id": "deepswe_1_1:6621e4ed58c72ea5",
     "variant": "mini-swe-agent - gpt-6-astra (medium)",
     "score": 72.78761061946902,
     "score_is_estimated": null,
@@ -47808,8 +47808,8 @@
     "service_mode": null,
     "score_low": 70.19796153763716,
     "score_high": 75.37725970130089,
-    "mean_cost_usd_per_task": 4.379527705752213,
-    "median_cost_usd_per_task": 3.7133415999999997,
+    "mean_cost_usd_per_task": 3.0754742975663714,
+    "median_cost_usd_per_task": 2.6204002500000003,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -47819,7 +47819,7 @@
   {
     "point_id": "chatgpt_pro_5x::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2d2b1fb9f6df06a3",
+    "configuration_id": "deepswe_1_1:05e50e2a49b9beb5",
     "variant": "mini-swe-agent - gpt-6-astra (low)",
     "score": 67.03539823008849,
     "score_is_estimated": null,
@@ -47829,8 +47829,8 @@
     "service_mode": null,
     "score_low": 65.73453717840262,
     "score_high": 68.33625928177437,
-    "mean_cost_usd_per_task": 2.188762706637168,
-    "median_cost_usd_per_task": 1.7209886,
+    "mean_cost_usd_per_task": 1.595223439159292,
+    "median_cost_usd_per_task": 1.26315875,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -47924,7 +47924,7 @@
   {
     "point_id": "cursor_ultra::grok-4.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:70b6e868fcb9cd80",
+    "configuration_id": "deepswe_1_1:eb56874976537214",
     "variant": "mini-swe-agent - grok-4-5 (high)",
     "score": 53.76106194690266,
     "score_is_estimated": null,
@@ -48029,7 +48029,7 @@
   {
     "point_id": "supergrok_heavy::grok-4.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:70b6e868fcb9cd80",
+    "configuration_id": "deepswe_1_1:eb56874976537214",
     "variant": "mini-swe-agent - grok-4-5 (high)",
     "score": 53.76106194690266,
     "score_is_estimated": null,
@@ -48134,7 +48134,7 @@
   {
     "point_id": "supergrok::grok-4.5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:70b6e868fcb9cd80",
+    "configuration_id": "deepswe_1_1:eb56874976537214",
     "variant": "mini-swe-agent - grok-4-5 (high)",
     "score": 53.76106194690266,
     "score_is_estimated": null,
@@ -48680,7 +48680,7 @@
   {
     "point_id": "droid_max::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:60791be82ce959e0",
+    "configuration_id": "deepswe_1_1:84f07a6a8071bb2e",
     "variant": "mini-swe-agent - claude-fable-5 (xhigh)",
     "score": 69.91150442477876,
     "score_is_estimated": null,
@@ -48701,7 +48701,7 @@
   {
     "point_id": "droid_max::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e5e5c5b317b1f68a",
+    "configuration_id": "deepswe_1_1:84b2503c83a0f325",
     "variant": "mini-swe-agent - claude-fable-5 (max)",
     "score": 69.72477064220183,
     "score_is_estimated": null,
@@ -48722,7 +48722,7 @@
   {
     "point_id": "droid_max::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:42fd11a99a8570ba",
+    "configuration_id": "deepswe_1_1:ca538462fa00698a",
     "variant": "mini-swe-agent - claude-fable-5 (high)",
     "score": 68.6046511627907,
     "score_is_estimated": null,
@@ -48743,7 +48743,7 @@
   {
     "point_id": "droid_max::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a1709ab0b129e07e",
+    "configuration_id": "deepswe_1_1:61c6d82c14738840",
     "variant": "mini-swe-agent - claude-fable-5 (medium)",
     "score": 65.36697247706422,
     "score_is_estimated": null,
@@ -48764,7 +48764,7 @@
   {
     "point_id": "droid_max::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:53874601b1d3b3da",
+    "configuration_id": "deepswe_1_1:956f815d4fc381c4",
     "variant": "mini-swe-agent - claude-fable-5 (low)",
     "score": 59.58429561200924,
     "score_is_estimated": null,
@@ -49184,7 +49184,7 @@
   {
     "point_id": "droid_max::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:f029cafdaf0a4ee3",
+    "configuration_id": "deepswe_1_1:57bad30e2ebce507",
     "variant": "mini-swe-agent - claude-opus-5 (max)",
     "score": 73.64864864864865,
     "score_is_estimated": null,
@@ -49205,7 +49205,7 @@
   {
     "point_id": "droid_max::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:853cb17f0e600556",
+    "configuration_id": "deepswe_1_1:05c1f57edbd2df6d",
     "variant": "mini-swe-agent - claude-opus-5 (xhigh)",
     "score": 73.15436241610739,
     "score_is_estimated": null,
@@ -49226,7 +49226,7 @@
   {
     "point_id": "droid_max::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e252d58fa6da2ebe",
+    "configuration_id": "deepswe_1_1:a44b965729d03fc7",
     "variant": "mini-swe-agent - claude-opus-5 (high)",
     "score": 72.82850779510022,
     "score_is_estimated": null,
@@ -49247,7 +49247,7 @@
   {
     "point_id": "droid_max::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:df5db3bddc1856ee",
+    "configuration_id": "deepswe_1_1:5865024d4260d4e1",
     "variant": "mini-swe-agent - claude-opus-5 (medium)",
     "score": 68.90380313199105,
     "score_is_estimated": null,
@@ -49268,7 +49268,7 @@
   {
     "point_id": "droid_max::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3353f4eaaecc0e42",
+    "configuration_id": "deepswe_1_1:0eef366eb7d57159",
     "variant": "mini-swe-agent - claude-opus-5 (low)",
     "score": 58.12917594654788,
     "score_is_estimated": null,
@@ -49394,7 +49394,7 @@
   {
     "point_id": "droid_max::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:03fa5cc9c1b4bc14",
+    "configuration_id": "deepswe_1_1:afe9c015b86bc421",
     "variant": "mini-swe-agent - claude-opus-4-8 (max)",
     "score": 58.97435897435898,
     "score_is_estimated": null,
@@ -49415,7 +49415,7 @@
   {
     "point_id": "droid_max::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9ba29daf22e9a1ae",
+    "configuration_id": "deepswe_1_1:2402ae6e1f09ec10",
     "variant": "mini-swe-agent - claude-opus-4-8 (xhigh)",
     "score": 54.36241610738255,
     "score_is_estimated": null,
@@ -49436,7 +49436,7 @@
   {
     "point_id": "droid_max::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2b59cc2e16364e15",
+    "configuration_id": "deepswe_1_1:493be0fce679b954",
     "variant": "mini-swe-agent - claude-opus-4-8 (high)",
     "score": 51.76991150442478,
     "score_is_estimated": null,
@@ -49457,7 +49457,7 @@
   {
     "point_id": "droid_max::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7d16a6959bd957f6",
+    "configuration_id": "deepswe_1_1:8bf7364061796101",
     "variant": "mini-swe-agent - claude-opus-4-8 (medium)",
     "score": 48.67256637168141,
     "score_is_estimated": null,
@@ -49478,7 +49478,7 @@
   {
     "point_id": "droid_max::claude-opus-4.8",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:39deebcf76251bec",
+    "configuration_id": "deepswe_1_1:ab709972deffa0f3",
     "variant": "mini-swe-agent - claude-opus-4-8 (low)",
     "score": 40.79822616407982,
     "score_is_estimated": null,
@@ -50318,7 +50318,7 @@
   {
     "point_id": "droid_max::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aa4ad931eff45be4",
+    "configuration_id": "deepswe_1_1:c1435bb651542af7",
     "variant": "mini-swe-agent - gpt-6-astra (xhigh)",
     "score": 74.11504424778761,
     "score_is_estimated": null,
@@ -50328,8 +50328,8 @@
     "service_mode": null,
     "score_low": 71.24964807371246,
     "score_high": 76.98044042186275,
-    "mean_cost_usd_per_task": 6.52377356460177,
-    "median_cost_usd_per_task": 5.6717151,
+    "mean_cost_usd_per_task": 4.429117203539823,
+    "median_cost_usd_per_task": 3.8406789999999997,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -50339,7 +50339,7 @@
   {
     "point_id": "droid_max::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e8101649c60ecba8",
+    "configuration_id": "deepswe_1_1:f88d3f34974c9162",
     "variant": "mini-swe-agent - gpt-6-astra (high)",
     "score": 73.23008849557522,
     "score_is_estimated": null,
@@ -50349,8 +50349,8 @@
     "service_mode": null,
     "score_low": 69.80659243770221,
     "score_high": 76.65358455344823,
-    "mean_cost_usd_per_task": 5.723721956194691,
-    "median_cost_usd_per_task": 4.9622669,
+    "mean_cost_usd_per_task": 3.9237237909292038,
+    "median_cost_usd_per_task": 3.454243,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -50360,7 +50360,7 @@
   {
     "point_id": "droid_max::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b30a594ec5f66ce7",
+    "configuration_id": "deepswe_1_1:ea6a1930729fc3eb",
     "variant": "mini-swe-agent - gpt-6-astra (max)",
     "score": 73.23008849557522,
     "score_is_estimated": null,
@@ -50370,8 +50370,8 @@
     "service_mode": null,
     "score_low": 72.39976873936956,
     "score_high": 74.06040825178087,
-    "mean_cost_usd_per_task": 12.369032401327434,
-    "median_cost_usd_per_task": 11.036936,
+    "mean_cost_usd_per_task": 7.497827996681416,
+    "median_cost_usd_per_task": 6.712564,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -50381,7 +50381,7 @@
   {
     "point_id": "droid_max::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a5c5cd4b12673627",
+    "configuration_id": "deepswe_1_1:6621e4ed58c72ea5",
     "variant": "mini-swe-agent - gpt-6-astra (medium)",
     "score": 72.78761061946902,
     "score_is_estimated": null,
@@ -50391,8 +50391,8 @@
     "service_mode": null,
     "score_low": 70.19796153763716,
     "score_high": 75.37725970130089,
-    "mean_cost_usd_per_task": 4.379527705752213,
-    "median_cost_usd_per_task": 3.7133415999999997,
+    "mean_cost_usd_per_task": 3.0754742975663714,
+    "median_cost_usd_per_task": 2.6204002500000003,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -50402,7 +50402,7 @@
   {
     "point_id": "droid_max::gpt-6-astra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2d2b1fb9f6df06a3",
+    "configuration_id": "deepswe_1_1:05e50e2a49b9beb5",
     "variant": "mini-swe-agent - gpt-6-astra (low)",
     "score": 67.03539823008849,
     "score_is_estimated": null,
@@ -50412,8 +50412,8 @@
     "service_mode": null,
     "score_low": 65.73453717840262,
     "score_high": 68.33625928177437,
-    "mean_cost_usd_per_task": 2.188762706637168,
-    "median_cost_usd_per_task": 1.7209886,
+    "mean_cost_usd_per_task": 1.595223439159292,
+    "median_cost_usd_per_task": 1.26315875,
     "source": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
     "mapping_kind": "agent_configuration_reference",
     "mapping_confidence": "low",
@@ -51515,7 +51515,7 @@
   {
     "point_id": "droid_max::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b7fe36ffe2e53058",
+    "configuration_id": "deepswe_1_1:8f6dd29d5b4d3866",
     "variant": "mini-swe-agent - gpt-5-6-sol (max)",
     "score": 72.66666666666667,
     "score_is_estimated": null,
@@ -51536,7 +51536,7 @@
   {
     "point_id": "droid_max::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:20ba110314745668",
+    "configuration_id": "deepswe_1_1:95cd844a325ecfbf",
     "variant": "mini-swe-agent - gpt-5-6-sol (xhigh)",
     "score": 70.73170731707317,
     "score_is_estimated": null,
@@ -51557,7 +51557,7 @@
   {
     "point_id": "droid_max::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b9f6b563ece4cecf",
+    "configuration_id": "deepswe_1_1:ff5b6dab64e65a3b",
     "variant": "mini-swe-agent - gpt-5-6-sol (high)",
     "score": 69.40133037694012,
     "score_is_estimated": null,
@@ -51578,7 +51578,7 @@
   {
     "point_id": "droid_max::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:d0270ad29cebc03b",
+    "configuration_id": "deepswe_1_1:c0a8e6363efc6003",
     "variant": "mini-swe-agent - gpt-5-6-sol (medium)",
     "score": 61.06194690265486,
     "score_is_estimated": null,
@@ -51599,7 +51599,7 @@
   {
     "point_id": "droid_max::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:eed6875ca51165fd",
+    "configuration_id": "deepswe_1_1:1545ad95006e5f09",
     "variant": "mini-swe-agent - gpt-5-6-sol (low)",
     "score": 45.35398230088495,
     "score_is_estimated": null,
@@ -51935,7 +51935,7 @@
   {
     "point_id": "droid_max::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:1e9b21c2004faec1",
+    "configuration_id": "deepswe_1_1:fcbbdd674e114a3d",
     "variant": "mini-swe-agent - gpt-5-6-terra (max)",
     "score": 69.62305986696231,
     "score_is_estimated": null,
@@ -51956,7 +51956,7 @@
   {
     "point_id": "droid_max::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:277b6c07f6ca3318",
+    "configuration_id": "deepswe_1_1:600a6b831b9c1e6b",
     "variant": "mini-swe-agent - gpt-5-6-terra (xhigh)",
     "score": 60.17699115044248,
     "score_is_estimated": null,
@@ -51977,7 +51977,7 @@
   {
     "point_id": "droid_max::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:31c29b4c94cf77ae",
+    "configuration_id": "deepswe_1_1:5a4e182529aab074",
     "variant": "mini-swe-agent - gpt-5-6-terra (high)",
     "score": 53.76106194690266,
     "score_is_estimated": null,
@@ -51998,7 +51998,7 @@
   {
     "point_id": "droid_max::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:900c8577e3bc443d",
+    "configuration_id": "deepswe_1_1:039e2fb33c449dfb",
     "variant": "mini-swe-agent - gpt-5-6-terra (medium)",
     "score": 35.11111111111111,
     "score_is_estimated": null,
@@ -52019,7 +52019,7 @@
   {
     "point_id": "droid_max::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:329cf994aaf09cfd",
+    "configuration_id": "deepswe_1_1:2ba4307fe3099841",
     "variant": "mini-swe-agent - gpt-5-6-terra (low)",
     "score": 24.053452115812917,
     "score_is_estimated": null,
@@ -52376,7 +52376,7 @@
   {
     "point_id": "droid_max::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7ad5b83041495e4d",
+    "configuration_id": "deepswe_1_1:db831f8e3a872146",
     "variant": "mini-swe-agent - gpt-5-6-luna (max)",
     "score": 67.1875,
     "score_is_estimated": null,
@@ -52397,7 +52397,7 @@
   {
     "point_id": "droid_max::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7a41329b22a4d1b1",
+    "configuration_id": "deepswe_1_1:c4af79d0ede4ceb6",
     "variant": "mini-swe-agent - gpt-5-6-luna (xhigh)",
     "score": 56.85840707964602,
     "score_is_estimated": null,
@@ -52418,7 +52418,7 @@
   {
     "point_id": "droid_max::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:47d55f64ef31558b",
+    "configuration_id": "deepswe_1_1:bb2bedb6e81b4700",
     "variant": "mini-swe-agent - gpt-5-6-luna (high)",
     "score": 44.24778761061947,
     "score_is_estimated": null,
@@ -52439,7 +52439,7 @@
   {
     "point_id": "droid_max::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ec094e2327a62e03",
+    "configuration_id": "deepswe_1_1:5d5da4597f3b6851",
     "variant": "mini-swe-agent - gpt-5-6-luna (medium)",
     "score": 11.283185840707963,
     "score_is_estimated": null,
@@ -52460,7 +52460,7 @@
   {
     "point_id": "droid_max::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:16412a120b9a4722",
+    "configuration_id": "deepswe_1_1:13234dfaf9d50b29",
     "variant": "mini-swe-agent - gpt-5-6-luna (low)",
     "score": 1.5486725663716814,
     "score_is_estimated": null,
@@ -52712,7 +52712,7 @@
   {
     "point_id": "droid_max::gemini-3.8-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a4e0e06e8292b616",
+    "configuration_id": "deepswe_1_1:a90e288031deb966",
     "variant": "mini-swe-agent - gemini-3-8-flash (high)",
     "score": 73.8255033557047,
     "score_is_estimated": null,
@@ -52733,7 +52733,7 @@
   {
     "point_id": "droid_max::gemini-3.8-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9fafa3956afdc304",
+    "configuration_id": "deepswe_1_1:0361f833fd4cf748",
     "variant": "mini-swe-agent - gemini-3-8-flash (medium)",
     "score": 71.01769911504425,
     "score_is_estimated": null,
@@ -52901,7 +52901,7 @@
   {
     "point_id": "droid_max::gemini-3.7-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e9d8d5305f3c7552",
+    "configuration_id": "deepswe_1_1:4bb4be423b2ade44",
     "variant": "mini-swe-agent - gemini-3-7-flash (medium)",
     "score": 65.48672566371681,
     "score_is_estimated": null,
@@ -52922,7 +52922,7 @@
   {
     "point_id": "droid_max::gemini-3.7-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a62d7ab2cd07619d",
+    "configuration_id": "deepswe_1_1:b72d4c4f8c3bcf11",
     "variant": "mini-swe-agent - gemini-3-7-flash (high)",
     "score": 65.2654867256637,
     "score_is_estimated": null,
@@ -52943,7 +52943,7 @@
   {
     "point_id": "droid_max::gemini-3.7-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c3c0d085a762f3d1",
+    "configuration_id": "deepswe_1_1:591261de02c2022f",
     "variant": "mini-swe-agent - gemini-3-7-flash (low)",
     "score": 53.76106194690266,
     "score_is_estimated": null,
@@ -53153,7 +53153,7 @@
   {
     "point_id": "droid_max::grok-4.7",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:1d433900eaa0bee0",
+    "configuration_id": "deepswe_1_1:788f9a1335a23a70",
     "variant": "mini-swe-agent - grok-4-7 (high) [vendor self-report]",
     "score": 71.0,
     "score_is_estimated": null,
@@ -53426,7 +53426,7 @@
   {
     "point_id": "droid_max::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9517554a020a7af3",
+    "configuration_id": "deepswe_1_1:2c55025470da1adf",
     "variant": "mini-swe-agent - grok-4-6 (medium)",
     "score": 67.47787610619469,
     "score_is_estimated": null,
@@ -53447,7 +53447,7 @@
   {
     "point_id": "droid_max::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:017a7f4c8bf6ada0",
+    "configuration_id": "deepswe_1_1:f3bcbfbca58889a9",
     "variant": "mini-swe-agent - grok-4-6 (xhigh)",
     "score": 66.74057649667405,
     "score_is_estimated": null,
@@ -53468,7 +53468,7 @@
   {
     "point_id": "droid_max::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6c1cc54c4677acba",
+    "configuration_id": "deepswe_1_1:4e590db9adbe56bc",
     "variant": "mini-swe-agent - grok-4-6 (high)",
     "score": 65.18847006651885,
     "score_is_estimated": null,
@@ -53489,7 +53489,7 @@
   {
     "point_id": "droid_max::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:baca3e04439efe09",
+    "configuration_id": "deepswe_1_1:ead8e43990a2050c",
     "variant": "mini-swe-agent - grok-4-6 (low)",
     "score": 41.648106904231625,
     "score_is_estimated": null,
@@ -53783,7 +53783,7 @@
   {
     "point_id": "droid_max::glm-5.3-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:2bf6b5cf8d0df775",
+    "configuration_id": "deepswe_1_1:a5f727b5567c3d1e",
     "variant": "mini-swe-agent - glm-5-3-flash (max)",
     "score": 63.39285714285714,
     "score_is_estimated": null,
@@ -53972,7 +53972,7 @@
   {
     "point_id": "droid_max::glm-5.3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:dac434c8397694b1",
+    "configuration_id": "deepswe_1_1:898188da21bc1ea9",
     "variant": "mini-swe-agent - glm-5-3 (max)",
     "score": 68.95787139689578,
     "score_is_estimated": null,
@@ -54098,7 +54098,7 @@
   {
     "point_id": "droid_max::glm-5.2",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3c0de09601f2c8a8",
+    "configuration_id": "deepswe_1_1:36b42aac9a399fff",
     "variant": "mini-swe-agent - glm-5-2 (max)",
     "score": 43.77777777777778,
     "score_is_estimated": null,
@@ -54119,7 +54119,7 @@
   {
     "point_id": "droid_max::glm-5.2",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:71a3c9c8333b9bfd",
+    "configuration_id": "deepswe_1_1:0f339b253a8c2aa3",
     "variant": "mini-swe-agent - glm-5-2 (high)",
     "score": 36.283185840707965,
     "score_is_estimated": null,
@@ -54308,7 +54308,7 @@
   {
     "point_id": "droid_max::kimi-k3",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:aefa4afd042df82c",
+    "configuration_id": "deepswe_1_1:bddffd26d19005fe",
     "variant": "mini-swe-agent - kimi-k3 (max)",
     "score": 68.51441241685144,
     "score_is_estimated": null,
@@ -54455,7 +54455,7 @@
   {
     "point_id": "droid_max::qwen3.8-max",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:f20515f2e81cba89",
+    "configuration_id": "deepswe_1_1:1a9972736d6e7745",
     "variant": "mini-swe-agent - qwen3-8-max (xhigh)",
     "score": 57.46102449888642,
     "score_is_estimated": null,
@@ -54812,7 +54812,7 @@
   {
     "point_id": "droid_max::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3d9b43ea1f40d6be",
+    "configuration_id": "deepswe_1_1:29265969373f2039",
     "variant": "mini-SWE - DeepSeek V4.1 Flash (max) [vendor self-report]",
     "score": 74.2,
     "score_is_estimated": null,
@@ -54833,7 +54833,7 @@
   {
     "point_id": "droid_max::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ca4a68f3cc7cc04f",
+    "configuration_id": "deepswe_1_1:dd70f44743c035da",
     "variant": "mini-SWE - DeepSeek V4.1 Flash 1017 (max) [vendor self-report]",
     "score": 77.0,
     "score_is_estimated": null,
@@ -55358,7 +55358,7 @@
   {
     "point_id": "deepseek_v41_flash_offpeak::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3d9b43ea1f40d6be",
+    "configuration_id": "deepswe_1_1:29265969373f2039",
     "variant": "mini-SWE - DeepSeek V4.1 Flash (max) [vendor self-report]",
     "score": 74.2,
     "score_is_estimated": null,
@@ -55379,7 +55379,7 @@
   {
     "point_id": "deepseek_v41_flash_offpeak::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ca4a68f3cc7cc04f",
+    "configuration_id": "deepswe_1_1:dd70f44743c035da",
     "variant": "mini-SWE - DeepSeek V4.1 Flash 1017 (max) [vendor self-report]",
     "score": 77.0,
     "score_is_estimated": null,
@@ -55673,7 +55673,7 @@
   {
     "point_id": "deepseek_v41_flash_peak::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3d9b43ea1f40d6be",
+    "configuration_id": "deepswe_1_1:29265969373f2039",
     "variant": "mini-SWE - DeepSeek V4.1 Flash (max) [vendor self-report]",
     "score": 74.2,
     "score_is_estimated": null,
@@ -55694,7 +55694,7 @@
   {
     "point_id": "deepseek_v41_flash_peak::deepseek-v4.1-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ca4a68f3cc7cc04f",
+    "configuration_id": "deepswe_1_1:dd70f44743c035da",
     "variant": "mini-SWE - DeepSeek V4.1 Flash 1017 (max) [vendor self-report]",
     "score": 77.0,
     "score_is_estimated": null,
@@ -55925,7 +55925,7 @@
   {
     "point_id": "deepseek_v4_flash_offpeak::deepseek-v4-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c0668bd778ebe124",
+    "configuration_id": "deepswe_1_1:c987861ad52f0899",
     "variant": "mini-swe-agent - deepseek-v4-flash (max)",
     "score": 53.31858407079646,
     "score_is_estimated": null,
@@ -56156,7 +56156,7 @@
   {
     "point_id": "deepseek_v4_flash_peak::deepseek-v4-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c0668bd778ebe124",
+    "configuration_id": "deepswe_1_1:c987861ad52f0899",
     "variant": "mini-swe-agent - deepseek-v4-flash (max)",
     "score": 53.31858407079646,
     "score_is_estimated": null,
@@ -56450,7 +56450,7 @@
   {
     "point_id": "deepseek_v4_pro_offpeak::deepseek-v4-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b317c65fa31ed642",
+    "configuration_id": "deepswe_1_1:507c36076a51471e",
     "variant": "mini-swe-agent - deepseek-v4-pro (max)",
     "score": 62.83185840707964,
     "score_is_estimated": null,
@@ -56744,7 +56744,7 @@
   {
     "point_id": "deepseek_v4_pro_peak::deepseek-v4-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b317c65fa31ed642",
+    "configuration_id": "deepswe_1_1:507c36076a51471e",
     "variant": "mini-swe-agent - deepseek-v4-pro (max)",
     "score": 62.83185840707964,
     "score_is_estimated": null,
@@ -57101,7 +57101,7 @@
   {
     "point_id": "openai_sol_api::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b7fe36ffe2e53058",
+    "configuration_id": "deepswe_1_1:8f6dd29d5b4d3866",
     "variant": "mini-swe-agent - gpt-5-6-sol (max)",
     "score": 72.66666666666667,
     "score_is_estimated": null,
@@ -57122,7 +57122,7 @@
   {
     "point_id": "openai_sol_api::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:20ba110314745668",
+    "configuration_id": "deepswe_1_1:95cd844a325ecfbf",
     "variant": "mini-swe-agent - gpt-5-6-sol (xhigh)",
     "score": 70.73170731707317,
     "score_is_estimated": null,
@@ -57143,7 +57143,7 @@
   {
     "point_id": "openai_sol_api::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:b9f6b563ece4cecf",
+    "configuration_id": "deepswe_1_1:ff5b6dab64e65a3b",
     "variant": "mini-swe-agent - gpt-5-6-sol (high)",
     "score": 69.40133037694012,
     "score_is_estimated": null,
@@ -57164,7 +57164,7 @@
   {
     "point_id": "openai_sol_api::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:d0270ad29cebc03b",
+    "configuration_id": "deepswe_1_1:c0a8e6363efc6003",
     "variant": "mini-swe-agent - gpt-5-6-sol (medium)",
     "score": 61.06194690265486,
     "score_is_estimated": null,
@@ -57185,7 +57185,7 @@
   {
     "point_id": "openai_sol_api::gpt-5.6-sol",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:eed6875ca51165fd",
+    "configuration_id": "deepswe_1_1:1545ad95006e5f09",
     "variant": "mini-swe-agent - gpt-5-6-sol (low)",
     "score": 45.35398230088495,
     "score_is_estimated": null,
@@ -57458,7 +57458,7 @@
   {
     "point_id": "xai_grok46_api::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9517554a020a7af3",
+    "configuration_id": "deepswe_1_1:2c55025470da1adf",
     "variant": "mini-swe-agent - grok-4-6 (medium)",
     "score": 67.47787610619469,
     "score_is_estimated": null,
@@ -57479,7 +57479,7 @@
   {
     "point_id": "xai_grok46_api::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:017a7f4c8bf6ada0",
+    "configuration_id": "deepswe_1_1:f3bcbfbca58889a9",
     "variant": "mini-swe-agent - grok-4-6 (xhigh)",
     "score": 66.74057649667405,
     "score_is_estimated": null,
@@ -57500,7 +57500,7 @@
   {
     "point_id": "xai_grok46_api::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6c1cc54c4677acba",
+    "configuration_id": "deepswe_1_1:4e590db9adbe56bc",
     "variant": "mini-swe-agent - grok-4-6 (high)",
     "score": 65.18847006651885,
     "score_is_estimated": null,
@@ -57521,7 +57521,7 @@
   {
     "point_id": "xai_grok46_api::grok-4.6",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:baca3e04439efe09",
+    "configuration_id": "deepswe_1_1:ead8e43990a2050c",
     "variant": "mini-swe-agent - grok-4-6 (low)",
     "score": 41.648106904231625,
     "score_is_estimated": null,
@@ -57731,7 +57731,7 @@
   {
     "point_id": "xai_grok47_api::grok-4.7",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:1d433900eaa0bee0",
+    "configuration_id": "deepswe_1_1:788f9a1335a23a70",
     "variant": "mini-swe-agent - grok-4-7 (high) [vendor self-report]",
     "score": 71.0,
     "score_is_estimated": null,
@@ -57836,7 +57836,7 @@
   {
     "point_id": "mimo_v26_pro_api::mimo-v2.6-pro",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:9454d8de1c52f2fc",
+    "configuration_id": "deepswe_1_1:8810a3e1800bf0e3",
     "variant": "mini-swe-agent - mimo-v2-6-pro [vendor self-report]",
     "score": 71.9,
     "score_is_estimated": null,
@@ -57962,7 +57962,7 @@
   {
     "point_id": "mimo_v26_flash_api::mimo-v2.6-flash",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:c2b10fcdefbd0221",
+    "configuration_id": "deepswe_1_1:c0a2f77965ab2df0",
     "variant": "mini-swe-agent - mimo-v2-6-flash [vendor self-report]",
     "score": 67.9,
     "score_is_estimated": null,
@@ -58382,7 +58382,7 @@
   {
     "point_id": "anthropic_opus5_api::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:f029cafdaf0a4ee3",
+    "configuration_id": "deepswe_1_1:57bad30e2ebce507",
     "variant": "mini-swe-agent - claude-opus-5 (max)",
     "score": 73.64864864864865,
     "score_is_estimated": null,
@@ -58403,7 +58403,7 @@
   {
     "point_id": "anthropic_opus5_api::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:853cb17f0e600556",
+    "configuration_id": "deepswe_1_1:05c1f57edbd2df6d",
     "variant": "mini-swe-agent - claude-opus-5 (xhigh)",
     "score": 73.15436241610739,
     "score_is_estimated": null,
@@ -58424,7 +58424,7 @@
   {
     "point_id": "anthropic_opus5_api::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e252d58fa6da2ebe",
+    "configuration_id": "deepswe_1_1:a44b965729d03fc7",
     "variant": "mini-swe-agent - claude-opus-5 (high)",
     "score": 72.82850779510022,
     "score_is_estimated": null,
@@ -58445,7 +58445,7 @@
   {
     "point_id": "anthropic_opus5_api::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:df5db3bddc1856ee",
+    "configuration_id": "deepswe_1_1:5865024d4260d4e1",
     "variant": "mini-swe-agent - claude-opus-5 (medium)",
     "score": 68.90380313199105,
     "score_is_estimated": null,
@@ -58466,7 +58466,7 @@
   {
     "point_id": "anthropic_opus5_api::claude-opus-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3353f4eaaecc0e42",
+    "configuration_id": "deepswe_1_1:0eef366eb7d57159",
     "variant": "mini-swe-agent - claude-opus-5 (low)",
     "score": 58.12917594654788,
     "score_is_estimated": null,
@@ -58781,7 +58781,7 @@
   {
     "point_id": "anthropic_sonnet5_api::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:17f1ccadd79e3f73",
+    "configuration_id": "deepswe_1_1:5277ea7e42957390",
     "variant": "mini-swe-agent - claude-sonnet-5 (max)",
     "score": 53.84615384615385,
     "score_is_estimated": null,
@@ -58802,7 +58802,7 @@
   {
     "point_id": "anthropic_sonnet5_api::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:6a089e055d07f388",
+    "configuration_id": "deepswe_1_1:931eae93e2aa8746",
     "variant": "mini-swe-agent - claude-sonnet-5 (xhigh)",
     "score": 49.667405764966745,
     "score_is_estimated": null,
@@ -58823,7 +58823,7 @@
   {
     "point_id": "anthropic_sonnet5_api::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e833a890e9fc6ef0",
+    "configuration_id": "deepswe_1_1:1cf2c5ff313a114e",
     "variant": "mini-swe-agent - claude-sonnet-5 (high)",
     "score": 48.23008849557522,
     "score_is_estimated": null,
@@ -58844,7 +58844,7 @@
   {
     "point_id": "anthropic_sonnet5_api::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:3cee9c2890b172bc",
+    "configuration_id": "deepswe_1_1:da79afd68903d6d7",
     "variant": "mini-swe-agent - claude-sonnet-5 (medium)",
     "score": 39.77777777777778,
     "score_is_estimated": null,
@@ -58865,7 +58865,7 @@
   {
     "point_id": "anthropic_sonnet5_api::claude-sonnet-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:4b4fac04da320c00",
+    "configuration_id": "deepswe_1_1:1378959e9832d1e1",
     "variant": "mini-swe-agent - claude-sonnet-5 (low)",
     "score": 30.51224944320713,
     "score_is_estimated": null,
@@ -58991,7 +58991,7 @@
   {
     "point_id": "anthropic_fable5_api::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:60791be82ce959e0",
+    "configuration_id": "deepswe_1_1:84f07a6a8071bb2e",
     "variant": "mini-swe-agent - claude-fable-5 (xhigh)",
     "score": 69.91150442477876,
     "score_is_estimated": null,
@@ -59012,7 +59012,7 @@
   {
     "point_id": "anthropic_fable5_api::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:e5e5c5b317b1f68a",
+    "configuration_id": "deepswe_1_1:84b2503c83a0f325",
     "variant": "mini-swe-agent - claude-fable-5 (max)",
     "score": 69.72477064220183,
     "score_is_estimated": null,
@@ -59033,7 +59033,7 @@
   {
     "point_id": "anthropic_fable5_api::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:42fd11a99a8570ba",
+    "configuration_id": "deepswe_1_1:ca538462fa00698a",
     "variant": "mini-swe-agent - claude-fable-5 (high)",
     "score": 68.6046511627907,
     "score_is_estimated": null,
@@ -59054,7 +59054,7 @@
   {
     "point_id": "anthropic_fable5_api::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:a1709ab0b129e07e",
+    "configuration_id": "deepswe_1_1:61c6d82c14738840",
     "variant": "mini-swe-agent - claude-fable-5 (medium)",
     "score": 65.36697247706422,
     "score_is_estimated": null,
@@ -59075,7 +59075,7 @@
   {
     "point_id": "anthropic_fable5_api::claude-fable-5",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:53874601b1d3b3da",
+    "configuration_id": "deepswe_1_1:956f815d4fc381c4",
     "variant": "mini-swe-agent - claude-fable-5 (low)",
     "score": 59.58429561200924,
     "score_is_estimated": null,
@@ -60776,7 +60776,7 @@
   {
     "point_id": "openai_terra_api::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:1e9b21c2004faec1",
+    "configuration_id": "deepswe_1_1:fcbbdd674e114a3d",
     "variant": "mini-swe-agent - gpt-5-6-terra (max)",
     "score": 69.62305986696231,
     "score_is_estimated": null,
@@ -60797,7 +60797,7 @@
   {
     "point_id": "openai_terra_api::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:277b6c07f6ca3318",
+    "configuration_id": "deepswe_1_1:600a6b831b9c1e6b",
     "variant": "mini-swe-agent - gpt-5-6-terra (xhigh)",
     "score": 60.17699115044248,
     "score_is_estimated": null,
@@ -60818,7 +60818,7 @@
   {
     "point_id": "openai_terra_api::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:31c29b4c94cf77ae",
+    "configuration_id": "deepswe_1_1:5a4e182529aab074",
     "variant": "mini-swe-agent - gpt-5-6-terra (high)",
     "score": 53.76106194690266,
     "score_is_estimated": null,
@@ -60839,7 +60839,7 @@
   {
     "point_id": "openai_terra_api::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:900c8577e3bc443d",
+    "configuration_id": "deepswe_1_1:039e2fb33c449dfb",
     "variant": "mini-swe-agent - gpt-5-6-terra (medium)",
     "score": 35.11111111111111,
     "score_is_estimated": null,
@@ -60860,7 +60860,7 @@
   {
     "point_id": "openai_terra_api::gpt-5.6-terra",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:329cf994aaf09cfd",
+    "configuration_id": "deepswe_1_1:2ba4307fe3099841",
     "variant": "mini-swe-agent - gpt-5-6-terra (low)",
     "score": 24.053452115812917,
     "score_is_estimated": null,
@@ -61217,7 +61217,7 @@
   {
     "point_id": "openai_luna_api::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7ad5b83041495e4d",
+    "configuration_id": "deepswe_1_1:db831f8e3a872146",
     "variant": "mini-swe-agent - gpt-5-6-luna (max)",
     "score": 67.1875,
     "score_is_estimated": null,
@@ -61238,7 +61238,7 @@
   {
     "point_id": "openai_luna_api::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:7a41329b22a4d1b1",
+    "configuration_id": "deepswe_1_1:c4af79d0ede4ceb6",
     "variant": "mini-swe-agent - gpt-5-6-luna (xhigh)",
     "score": 56.85840707964602,
     "score_is_estimated": null,
@@ -61259,7 +61259,7 @@
   {
     "point_id": "openai_luna_api::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:47d55f64ef31558b",
+    "configuration_id": "deepswe_1_1:bb2bedb6e81b4700",
     "variant": "mini-swe-agent - gpt-5-6-luna (high)",
     "score": 44.24778761061947,
     "score_is_estimated": null,
@@ -61280,7 +61280,7 @@
   {
     "point_id": "openai_luna_api::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:ec094e2327a62e03",
+    "configuration_id": "deepswe_1_1:5d5da4597f3b6851",
     "variant": "mini-swe-agent - gpt-5-6-luna (medium)",
     "score": 11.283185840707963,
     "score_is_estimated": null,
@@ -61301,7 +61301,7 @@
   {
     "point_id": "openai_luna_api::gpt-5.6-luna",
     "board": "deepswe_1_1",
-    "configuration_id": "deepswe_1_1:16412a120b9a4722",
+    "configuration_id": "deepswe_1_1:13234dfaf9d50b29",
     "variant": "mini-swe-agent - gpt-5-6-luna (low)",
     "score": 1.5486725663716814,
     "score_is_estimated": null,

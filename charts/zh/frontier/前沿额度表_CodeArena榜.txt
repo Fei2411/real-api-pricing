@@ -12,4 +12,4 @@ Code Arena | WebDev Overall | Arena Score | 2026-10-19
 1     Claude Max 5x (9/14+)  USD 100  Claude Haiku 5.5     3580.49     0.00028  low     1586         Claude Haiku 5.5 (High)             —        high      agent_configuration_reference
 2     Claude Max 5x (9/14+)  USD 100  Claude Sonnet 5.5    366.68      0.00273  low     1768         Claude Sonnet 5.5 (xHigh)           —        xhigh     agent_configuration_reference
 3     Claude Max 5x (9/14+)  USD 100  Claude Opus 5.5      183.34      0.00545  medium  1807         Claude Opus 5.5 (Max)               —        max       agent_configuration_reference
-4     OpenCode Go            USD 10   DeepSeek V4.1 Flash  82.816      0.00121  medium  1664         DeepSeek-V4.1-Flash-20261017 (Max)  —        max       agent_configuration_reference
+4     OpenCode Go            USD 10   DeepSeek V4.1 Flash  103.52      0.00097  medium  1664         DeepSeek-V4.1-Flash-20261017 (Max)  —        max       agent_configuration_reference
