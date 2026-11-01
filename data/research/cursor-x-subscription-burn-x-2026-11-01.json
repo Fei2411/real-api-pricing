@@ -1,0 +1,116 @@
+{
+  "recordedAt": "2026-11-01",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 179,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-01：Cursor / X Subscription Premium·Super·Ultra 燃烧百分比与档位倍率旁证。截图不入库。",
+  "items": [
+    {
+      "id": "x-dankzheng-legacy-90pct",
+      "confidence": "Medium",
+      "planOrModel": "Cursor $20 + X $8 legacy（未 unify）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/dankzheng/status/2116515073233760573",
+        "account": "dankzheng",
+        "createdAt": "2026-10-31T12:58:11.000Z"
+      },
+      "observed": {
+        "thirdPartyMonthlyUsedPct": 90,
+        "window": "半天小项目",
+        "claimNew30Usd": "第三方无订阅量、按 API 计费",
+        "hasScreenshot": false
+      },
+      "note": "口述百分比。原帖：https://x.com/dankzheng/status/2116515073233760573",
+      "gaps": [
+        "无截图",
+        "无 token 分项"
+      ]
+    },
+    {
+      "id": "x-jarodgabriel-premium-super",
+      "confidence": "Medium",
+      "planOrModel": "X Subscription Premium $30 → Super $100",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/JarodGabriel/status/2116667777469841651",
+        "account": "JarodGabriel",
+        "createdAt": "2026-10-31T23:04:58.000Z"
+      },
+      "observed": {
+        "premiumLightWeekPctOf5DayWindow": 30,
+        "premiumAfter30MinPortfolioPct": 75,
+        "daysLeftThen": 3,
+        "superAfterUpgradePct": 13,
+        "claim": "Premium won't cut it for Cursor coding",
+        "hasScreenshot": true
+      },
+      "note": "截图未入库。",
+      "gaps": [
+        "无绝对 token"
+      ]
+    },
+    {
+      "id": "x-emilio-ultra-40pct",
+      "confidence": "Medium",
+      "planOrModel": "Cursor Ultra",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/EmilioSchwaiger/status/2116672167232393232",
+        "account": "EmilioSchwaiger",
+        "createdAt": "2026-10-31T23:22:25.000Z"
+      },
+      "observed": {
+        "estimatedWeeklyUsagePct": 40,
+        "hasScreenshot": true
+      },
+      "note": "估测语气（I think this was about 40%）。"
+    },
+    {
+      "id": "x-rae-premium-5pct-prompt",
+      "confidence": "Medium",
+      "planOrModel": "Grok Bot Premium",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/rae1101x/status/2116663149177065663",
+        "account": "rae1101x",
+        "createdAt": "2026-10-31T22:46:35.000Z"
+      },
+      "observed": {
+        "singlePromptBurnPct": 5,
+        "hasScreenshot": false
+      }
+    },
+    {
+      "id": "x-grok-official-tier-multipliers",
+      "confidence": "Medium",
+      "planOrModel": "The X Subscription",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/grok/status/2116559949417341388",
+        "account": "grok",
+        "createdAt": "2026-10-31T15:56:30.000Z"
+      },
+      "observed": {
+        "plusUsd": 8,
+        "premiumUsd": 30,
+        "premiumMultiplier": 4,
+        "superUsd": 100,
+        "superMultiplier": 15,
+        "ultraUsd": 200,
+        "ultraMultiplier": 50,
+        "pricingPage": "https://x.ai/pricing",
+        "hasScreenshot": false
+      },
+      "note": "官方账号回复口述；需与定价页交叉。"
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-01.json"
+  ],
+  "relatedPriorIssues": [
+    172,
+    150,
+    158
+  ]
+}

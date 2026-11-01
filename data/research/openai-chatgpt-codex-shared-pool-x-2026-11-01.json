@@ -1,0 +1,109 @@
+{
+  "recordedAt": "2026-11-01",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 178,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-01：OpenAI 帮助页确认 12 月起 Plus/Pro/Business 的 ChatGPT 与 Codex 共用 token 额度；Instant 不计。截图不入库。",
+  "items": [
+    {
+      "id": "help-chatgpt-codex-shared-pool-dec",
+      "confidence": "High",
+      "planOrModel": "ChatGPT + Codex · Plus / Pro / Business",
+      "source": {
+        "type": "official_help",
+        "url": "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+        "account": "OpenAI Help Center"
+      },
+      "observed": {
+        "effective": "December 2026",
+        "sharedAcross": [
+          "ChatGPT",
+          "Codex"
+        ],
+        "metering": "tokens",
+        "instantChatExcluded": true,
+        "onCap": [
+          "wait reset",
+          "upgrade",
+          "buy credits"
+        ],
+        "ui": "Settings → Usage combined remaining + reset",
+        "absoluteTokensPublished": false,
+        "hasScreenshot": false
+      },
+      "note": "官方原文。与 #161 Pro 倍率翻倍、#157 API credits 不同主题。",
+      "gaps": [
+        "无各档绝对 token 表"
+      ]
+    },
+    {
+      "id": "x-codexupdate-shared-pool",
+      "confidence": "High",
+      "planOrModel": "ChatGPT + Codex shared pool",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/CodexUpdate/status/2116620807929799050",
+        "account": "CodexUpdate",
+        "createdAt": "2026-10-31T19:58:20.000Z"
+      },
+      "observed": {
+        "hasScreenshot": false,
+        "linksOfficialHelp": true
+      },
+      "note": "逐条转写帮助页。原帖：https://x.com/CodexUpdate/status/2116620807929799050"
+    },
+    {
+      "id": "x-tokengremlin-help-screenshot",
+      "confidence": "High",
+      "planOrModel": "ChatGPT + Codex shared pool",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/TokenGremlin/status/2116609772396920937",
+        "account": "TokenGremlin",
+        "createdAt": "2026-10-31T19:14:29.000Z"
+      },
+      "observed": {
+        "hasScreenshot": true
+      },
+      "note": "帮助页截图未入库。"
+    },
+    {
+      "id": "x-rohanpaul-work-merge-context",
+      "confidence": "Medium",
+      "planOrModel": "ChatGPT Work → main ChatGPT",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/rohanpaul_ai/status/2116628912860282918",
+        "account": "rohanpaul_ai",
+        "createdAt": "2026-10-31T20:30:32.000Z"
+      },
+      "observed": {
+        "claim": "Work already shared Codex limits; ordinary chats were separate message meters; after switch priced by tokens",
+        "hasScreenshot": true
+      },
+      "note": "截图未入库。"
+    },
+    {
+      "id": "x-tonyklose-cn-summary",
+      "confidence": "Medium",
+      "planOrModel": "Plus/Pro/Business",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/tonyklose1984/status/2116695489639010636",
+        "account": "tonyklose1984",
+        "createdAt": "2026-11-01T00:55:05.000Z"
+      },
+      "observed": {
+        "hasScreenshot": true
+      },
+      "note": "中文转述；链官方帮助。"
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-01.json"
+  ],
+  "relatedPriorIssues": [
+    161,
+    157
+  ]
+}
