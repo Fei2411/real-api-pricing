@@ -1,0 +1,95 @@
+{
+  "collectedAt": "2026-10-31",
+  "scopeNote": "Devin Pro $20 在 Devin CLI 上跑 Claude Fable 5.1 (High) 的 token + 周额度百分比同框样本。维护者本机 /usage 与 /session-stats 双检查点，紧接同一账号的 Muse Wonder 段、处于同一周窗（起点 70% 即上一段终点）。Fable 5.1 官方标价已在库，按 Anthropic 档折算。",
+  "items": [
+    {
+      "planId": "devin_pro",
+      "planName": "Devin Pro",
+      "priceUsd": 20,
+      "priceSource": "https://docs.devin.ai/admin/billing/self-serve（Pro $20/month；Max $200/month）；https://devin.ai/pricing",
+      "model": "claude-fable-5.1",
+      "panelModelName": "Claude Fable 5.1 High",
+      "evidenceType": "maintainer_panel_double_checkpoint",
+      "banner": {
+        "text": "Pro · 30% remaining (resets in 14h 55m)",
+        "note": "30% remaining = 100% − Weekly 70%，与 /usage 一致。"
+      },
+      "session": {
+        "id": "9c1c2eb3-18c8-41a4-aefa-ccf2557a2b9c",
+        "agentMessages": 43,
+        "turns": 5,
+        "toolCalls": 38,
+        "files": 11,
+        "commands": 18,
+        "tokens": {"input": 154966, "output": 16322, "cache_read": 4295480},
+        "totalTokens": 4466768,
+        "tokensByModel": {
+          "Claude Fable 5.1 High": {"tokens": 4500000, "share": 0.98},
+          "Unknown model": {"tokens": 103000, "share": 0.02}
+        },
+        "observedMix": {"cacheRead": 0.96165, "input": 0.03469, "output": 0.00365}
+      },
+      "checkpoints": [
+        {
+          "label": "start",
+          "dailyPct": 47,
+          "weeklyPct": 70,
+          "dailyResetsIn": "14h 54m",
+          "weeklyResets": "Nov 1, 11:00 AM (UTC+3)",
+          "sessionNote": "No turns completed yet in this session; model set to Claude Fable 5.1."
+        },
+        {
+          "label": "end",
+          "dailyPct": 72,
+          "weeklyPct": 83,
+          "dailyResetsIn": "14h 39m",
+          "weeklyResets": "Nov 1, 11:00 AM (UTC+3)",
+          "sessionNote": "This session 5 turns / 38 tool calls / 11 files / 18 commands"
+        }
+      ],
+      "delta": {"dailyPp": 25, "weeklyPp": 13},
+      "windows": {
+        "adopted": "weekly",
+        "dailyTimesSevenVsWeekly": 3.64,
+        "note": "Daily 25pp 反推用；日池 ×7 = 周池 ×3.64，与前三段（Sonnet 3.23、Haiku 3.50、Muse 3.50）同结构，周池绑定。"
+      },
+      "prices": {
+        "model": "claude-fable-5.1",
+        "cachedPerMtok": 0.25,
+        "inputPerMtok": 10.0,
+        "outputPerMtok": 50.0,
+        "cacheWrite5mPerMtok": 12.5,
+        "source": "platform.claude.com pricing（Fable 5.1：in $10 / out $50 / cache读 $0.25 = 0.025×input / 5m 写 $12.5）；claude-fable51-round1-2026-09-13.json；ANTHROPIC_CACHE_WRITE_5M",
+        "note": "非缓存输入按 Anthropic 档 5 分钟写价 $12.5 计。"
+      },
+      "calculation": {
+        "segmentWorthUsd": 3.827045,
+        "segmentWorthFormula": "cache读 4,295,480×$0.25 + 非缓存输入 154,966×$12.5 + 输出 16,322×$50，÷1e6",
+        "weeklyPoolWorthUsd": 29.4388,
+        "monthlyListWorthUsd": 117.7552,
+        "monthlyFormula": "段 worth ÷13% ×4周",
+        "blendedAnthropicPerMtok": 0.805,
+        "monthlyTokens": 146000000,
+        "monthlyYi": 1.46,
+        "realUsdPerMtok": 0.1369863,
+        "rawMonthlyYi": 1.37,
+        "rawMonthlyNote": "4,466,768 ÷13% ×4周 = 137,439,015 raw",
+        "roundingIntervalYi": [1.41, 1.52],
+        "roundingNote": "13pp 整数读数 ±0.5pp 对应约 1.41~1.52 亿"
+      },
+      "crossCheck": {
+        "poolWorthVsSonnetUsdPerWeek": {"fable": 29.44, "sonnet": 33.73, "haiku": 31.45},
+        "ratioDerivedFromSonnetYi": 1.68,
+        "ratioFormula": "devin_pro::claude-sonnet-5.5 采用值 6.44 亿 × Anthropic 档混合价比 0.2095/0.805",
+        "note": "本段池 worth $29.44/周略低于 Sonnet/Haiku 的 $31.45~33.73；若段内 Unknown 103k（2%）计费，Fable 实占 pp 更少、池更大，本值为保守下限。"
+      },
+      "confidence": "medium（13pp 信号、单会话、98% 单模型；但段内含 2% Unknown，且池 worth 比前两段低约 10%）",
+      "decision": "采用 devin_pro × claude-fable-5.1 = 1.46 亿/月 medium（Anthropic 档）。周窗 70%→83%（13pp）；段 worth $3.8270 ÷13%×4周 = $117.76 ÷ $0.805/MTok。raw 口径 1.37 亿留作对照。"
+    }
+  ],
+  "notFound": [
+    "Unknown model（103k, 2%）的具体模型与计费权重",
+    "Devin Pro 官方公布的 Daily/Weekly 池绝对额度",
+    "Fable 5.1 在 Devin 额度中的扣费倍率"
+  ]
+}

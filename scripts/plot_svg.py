@@ -149,7 +149,7 @@ def label_lines(p, language, board=None):
 FULL_TIER_LABEL_OFFSETS = {
     ("deepseek-v4.1-flash", "aa_intelligence_index"): (40, 40, "middle"),
     ("claude-haiku-5.5", "aa_intelligence_index"): (-8, -60, "middle"),
-    ("deepseek-v4.1-flash", "aa_terminal_bench_4"): (-32, -20, "end"),
+    ("deepseek-v4.1-flash", "aa_terminal_bench_4"): (-22, -20, "end"),
     ("claude-haiku-5.5", "aa_terminal_bench_4"): (-8, 40, "end"),
     ("claude-sonnet-5.5", "arena_agent_mode"): (-8, 20, "end"),
     ("deepseek-v4.1-flash", "arena_agent_mode"): (40, 60, "middle"),
@@ -157,7 +157,7 @@ FULL_TIER_LABEL_OFFSETS = {
     ("claude-sonnet-5.5", "arena_code"): (-8, 20, "end"),
     ("deepseek-v4.1-flash", "arena_code"): (-8, -60, "start"),
     ("claude-haiku-5.5", "arena_code"): (-8, 20, "end"),
-    ("claude-opus-5.5", "terminal_bench_4"): (16, 40, "end"),
+    ("claude-opus-5.5", "terminal_bench_4"): (40, 40, "end"),
     ("claude-sonnet-5.5", "terminal_bench_4"): (40, -40, "middle"),
     ("deepseek-v4.1-flash", "terminal_bench_4"): (-32, -20, "end"),
     ("mimo-v2.6-flash", "open_design_arena"): (-8, -140, "end"),
