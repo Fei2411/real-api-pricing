@@ -1,0 +1,101 @@
+{
+  "recordedAt": "2026-11-02",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 180,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-02：OpenCode Go / Command Code GOAT / 渠道额度对照与异常燃烧。不新开 issue，归入 #180。截图不入库。",
+  "items": [
+    {
+      "id": "x-leo-four-channel-table",
+      "confidence": "Medium",
+      "planOrModel": "Ollama Pro / GOAT / OpenCode Go / OpenDesign Go · DS V4.1 Flash",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/leo114119/status/2117054576985596061",
+        "account": "leo114119",
+        "createdAt": "2026-11-02T00:41:58.000Z"
+      },
+      "observed": {
+        "ollamaPro": {
+          "usdPerMonth": 20,
+          "quotaUsd": 60
+        },
+        "commandCodeGoat": {
+          "usdPerMonth": 10,
+          "flashMonthlyQuotaUsd": 100
+        },
+        "opencodeGo": {
+          "usdPerMonth": 10,
+          "flashMonthlyQuotaUsd": 100
+        },
+        "opendesignGo": {
+          "usdPerMonth": 10,
+          "firstMonthUsd": 8,
+          "sharedQuotaMaxUsd": 120
+        },
+        "caveat": "额度按各平台标价计算，不等于同样数量的 token",
+        "hasScreenshot": true
+      },
+      "note": "二手对照图；需与官网交叉。"
+    },
+    {
+      "id": "x-pellorao-error-loop-81m",
+      "confidence": "Medium",
+      "planOrModel": "OpenCode Go · deepseek-v4.1-flash",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/Pellorao/status/2117058764650267038",
+        "account": "Pellorao",
+        "createdAt": "2026-11-02T00:58:37.000Z"
+      },
+      "observed": {
+        "interval": "54m 36s",
+        "requests": 1299,
+        "inputTokensM": 81.89,
+        "anomalyRequestSharePct": 82.6,
+        "hasScreenshot": true
+      },
+      "note": "异常错误循环计量，非正常配额上限；仍说明 Flash 可在短窗消耗大量 token。"
+    },
+    {
+      "id": "x-fishraposo-goat-25pct",
+      "confidence": "Medium",
+      "planOrModel": "Command Code GOAT · DeepSeek Flash",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/FishRaposo/status/2117057041982169534",
+        "account": "FishRaposo",
+        "createdAt": "2026-11-02T00:51:00.000Z"
+      },
+      "observed": {
+        "weeklyQuotaUsedPct": 25,
+        "resetsInDays": 2,
+        "hasScreenshot": false
+      }
+    },
+    {
+      "id": "x-wnerich-devin-30min",
+      "confidence": "Medium",
+      "planOrModel": "Devin Pro",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/wnerich/status/2117055897633480748",
+        "account": "wnerich",
+        "createdAt": "2026-11-02T00:47:00.000Z"
+      },
+      "observed": {
+        "exhaustedInMinutes": 30,
+        "triedExtraUsd": 30,
+        "hasScreenshot": false
+      },
+      "note": "Devin 旁证，非 OpenCode；暂挂本文件便于日批检索。"
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-02.json"
+  ],
+  "relatedPriorIssues": [
+    180,
+    171
+  ]
+}
