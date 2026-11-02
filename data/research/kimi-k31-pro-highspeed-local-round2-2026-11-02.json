@@ -1,16 +1,16 @@
 {
   "collectedAt": "2026-11-02T22:50:00+08:00",
-  "collectionMethod": "Contributor's own Kimi Code CLI session, model alias kimi-code/k3.1-pro-highspeed, thinking effort high, on the same local Kimi Code installation as kimi199-k31-pro-highspeed-local-round1-2026-10-24.json. Token counts were summed offline from the client's local session event log (one usage.record per LLM request; fields inputOther / output / inputCacheRead / inputCacheCreation). The usage panel was captured after the run. The panel does not name the plan. No pre-run capture exists. The contributor states that both bars were 0% before this session; the local log supports that for the 5-hour window and contradicts it for the weekly window. Research-only — no adopted row generated and no adopted value changed.",
+  "collectionMethod": "Contributor's own Kimi Code CLI session, model alias kimi-code/k3.1-pro-highspeed, thinking effort high, on the same local Kimi Code installation as kimi199-k31-pro-highspeed-local-round1-2026-10-24.json. Token counts were summed offline from the client's local session event log (one usage.record per LLM request; fields inputOther / output / inputCacheRead / inputCacheCreation). The usage panel was captured after the run. The panel does not print the plan name. On 2026-11-02 the contributor confirmed this is the same legacy Kimi membership, CNY 199 per month (Allegretto), as the 2026-10-24 sample. No pre-run capture exists. The contributor states that both bars were 0% before this session; the local log supports that for the 5-hour window and contradicts it for the weekly window. Research-only — no adopted row generated and no adopted value changed.",
   "sources": [
     "Contributor local Kimi Code CLI session log and one post-run usage-panel capture (private originals; aggregates and a redacted screenshot only, see PUBLICATION.md)",
-    "data/research/kimi199-k31-pro-highspeed-local-round1-2026-10-24.json (same local client, 2026-10-24; plan name and the 5-hour = 1/5 of weekly relationship are taken from there and are not re-proven by this panel)"
+    "data/research/kimi199-k31-pro-highspeed-local-round1-2026-10-24.json (same legacy CNY 199 plan, confirmed by the contributor on 2026-11-02; the 5-hour pool = 1/5 of the weekly pool is taken from that sample and is not re-measured from two-decimal bars here)"
   ],
   "scope": "One Kimi Code session of about 79 minutes on a single main agent. Consumption sample for k3.1-pro-highspeed. The 5-hour bar is an integer 30% and the local log shows no other request inside that 5-hour window. The weekly bar is an integer 8% and is not this session alone.",
   "adoptionStatus": "research-only; not adopted. adopted.csv still has no kimi_allegretto_cn × kimi-k3.1-pro-highspeed row. DECISIONS.md still says HighSpeed has no adoptable value. This file is a second 5-hour back-calculation and a weekly cross-check. Whether to add a row, and at which confidence, is left to the maintainer.",
   "target": {
-    "plan": "Not shown on this panel. The 2026-10-24 capture on this same local client identified legacy Kimi membership CNY 199 / Allegretto. This file does not re-read the plan name.",
+    "plan": "Legacy Kimi membership, CNY 199 per month (Allegretto)",
     "planIdCandidate": "kimi_allegretto_cn",
-    "planIdBasis": "Continuity with the 2026-10-24 sample on the same local client, plus a weekly-reset prefix consistent with that sample's 00:04 tile. Not observed on this screenshot.",
+    "planIdBasis": "Contributor confirmation on 2026-11-02: this sample is the same legacy CNY 199 membership as kimi199-k31-pro-highspeed-local-round1-2026-10-24.json (merged evidence PR 138). This usage panel does not print the plan name. The visible weekly-reset prefix is consistent with that sample's 00:04 tile.",
     "model": "k3.1-pro-highspeed (K3.1 Pro Highspeed)",
     "servedModelCandidate": "kimi-k3.1-pro-highspeed",
     "modelAlias": "kimi-code/k3.1-pro-highspeed",
@@ -166,10 +166,10 @@
   "whatWouldUpgradeThisSample": [
     "A panel capture taken immediately before the session, with tenths or hundredths rather than integers.",
     "A weekly window that contains only this model and no earlier local sessions, so the weekly bar is a same-session delta.",
-    "The plan name and the full weekly reset string on the same capture.",
+    "The plan name and the full weekly reset string printed on the same capture. The tier itself is already a contributor confirmation, not a guess.",
     "A paired k3.1-pro (standard speed) run to check the official 2× consumption ratio."
   ],
-  "confidence": "low candidate for a second 5-hour back-calculation: exact client token sum, integer 30%, no other local request in that 5-hour window, but no pre-run screenshot and a coarser percent than the 2026-10-24 hundredths. The weekly 8% agrees only after the earlier local usage is added, and the plan name is not on this panel. Maintainer to grade. Not adopted.",
+  "confidence": "low candidate for a second 5-hour back-calculation on legacy CNY 199 × k3.1-pro-highspeed: the plan is the contributor's confirmation, the same membership as the 2026-10-24 sample. The allowance reading is an exact client token sum against an integer 30%, with no other local request in that 5-hour window, no pre-run screenshot, and a coarser percent than the 2026-10-24 hundredths. The weekly 8% agrees only after the earlier local usage is added. Maintainer to grade. Not adopted.",
   "basis": "local_client_log + post_run_usage_panel",
   "redaction": "Session identifiers, prompts, workspace names, repository paths and account identifiers are omitted. Earlier usage is described only as other workspaces on the same local client. The screenshot shows the usage panel: an empty session widget, a 0 / 1M context line, and the 5-hour and weekly bars with percentages and relative reset times. It shows no name, avatar, e-mail or account ID. JPEG metadata was removed before commit."
 }
