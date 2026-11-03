@@ -1,0 +1,219 @@
+{
+  "collectedAt": "2026-11-02",
+  "subject": "SuperGrok Heavy 老 $300/月套餐（投稿人称 Ultra）× Grok 4.7 high fast — Amp 用量与周额度 1%→6% 实测",
+  "scopeNote": "仅录入投稿者本机面板与 Amp 明细证据，供维护者裁定。本文件不修改 scripts/build_adopted.py、data/adopted.csv 或任何现有采用值。老套餐与当前 SuperGrok Heavy 派生行是否可直接比较、是否采用，均留待复核。",
+  "adoptionStatus": "research-only; not adopted",
+  "plan": {
+    "planId": "supergrok_heavy",
+    "name": "SuperGrok Heavy（投稿人称老的 $300/月 Ultra 套餐；两张额度截图均显示 SuperGrok Heavy）",
+    "priceUsdPerMonth": 300,
+    "region": "International（grok.com）",
+    "quotaType": "weekly",
+    "servedModel": "grok-4.7",
+    "configuration": "high fast",
+    "client": "Amp"
+  },
+  "source": {
+    "type": "contributor_panel_screenshots_and_amp_usage_details",
+    "providedBy": "匿名投稿者本机截图（2026-11-02）",
+    "contributorConfirmation": "段内只用 grok-4.7 high fast，通过 Amp 使用；详细列表为该模型全部 84 次请求。",
+    "artifacts": [
+      "grok.com 周额度起点截图：SuperGrok Heavy 1%，Grok Build 1%",
+      "grok.com 周额度终点截图：SuperGrok Heavy 6%，Grok Build 6%",
+      "Amp By Model 汇总及连续请求明细截图 9 张"
+    ],
+    "redaction": "公开记录不保留账号邮箱、本地路径、会话内容或原始截图；仅保留聚合用量、请求时间、百分比与脱敏后的分组合计。"
+  },
+  "rawObservations": {
+    "quota": {
+      "startUsedPct": 1,
+      "endUsedPct": 6,
+      "deltaPercentagePoints": 5,
+      "panelRows": "总额与 Grok Build 在两个检查点分别为 1%/1% 和 6%/6%",
+      "weeklyResetAtBothCheckpoints": "2026-11-08 23:58（面板显示时区未记录）",
+      "readingPrecision": "整数百分比"
+    },
+    "ampSummary": {
+      "model": "xai/grok-4.7",
+      "displayName": "Grok 4.7",
+      "requests": 84,
+      "inputTokensIncludingCacheRead": 14098616,
+      "outputTokens": 48639,
+      "ampCostUsd": 0,
+      "estimatedListPriceUsd": 23.02,
+      "firstRequestAt": "2026-11-02 21:00:32.445",
+      "lastRequestAt": "2026-11-02 21:21:15.882",
+      "timezone": "not shown"
+    },
+    "tokenSplitFromAll84Rows": {
+      "freshInput": 257592,
+      "cacheRead": 13841024,
+      "totalInput": 14098616,
+      "output": 48639,
+      "total": 14147255,
+      "cacheHitOverInput": 0.9817292704,
+      "fieldSemantics": "逐行求和证实 Amp 的 Input 汇总 = 普通输入 + cache read；input 已包含缓存读取。",
+      "cacheWrite": "Amp 明细无独立字段；若存在缓存写入，只能包含在 freshInput 中，不能另行拆分。",
+      "outputIncludesReasoning": "not shown"
+    },
+    "screenshotGroups": [
+      {
+        "id": "amp-detail-1",
+        "requestTimeRange": "21:00:32.445–21:01:40.185",
+        "requests": 8,
+        "freshInput": 60954,
+        "cacheRead": 246016,
+        "totalInput": 306970,
+        "output": 3450,
+        "total": 310420,
+        "displayedEstListPriceRowSumUsd": 0.53
+      },
+      {
+        "id": "amp-detail-2",
+        "requestTimeRange": "21:01:45.602–21:03:31.727",
+        "requests": 11,
+        "freshInput": 57652,
+        "cacheRead": 984192,
+        "totalInput": 1041844,
+        "output": 3367,
+        "total": 1045211,
+        "displayedEstListPriceRowSumUsd": 1.25
+      },
+      {
+        "id": "amp-detail-3",
+        "requestTimeRange": "21:03:53.634–21:05:45.769",
+        "requests": 11,
+        "freshInput": 51130,
+        "cacheRead": 1598976,
+        "totalInput": 1650106,
+        "output": 9019,
+        "total": 1659125,
+        "displayedEstListPriceRowSumUsd": 1.92
+      },
+      {
+        "id": "amp-detail-4",
+        "requestTimeRange": "21:06:40.158–21:09:19.062",
+        "requests": 10,
+        "freshInput": 20151,
+        "cacheRead": 1779584,
+        "totalInput": 1799735,
+        "output": 7908,
+        "total": 1807643,
+        "displayedEstListPriceRowSumUsd": 1.98
+      },
+      {
+        "id": "amp-detail-5",
+        "requestTimeRange": "21:10:14.399–21:12:10.819",
+        "requests": 11,
+        "freshInput": 12469,
+        "cacheRead": 2134784,
+        "totalInput": 2147253,
+        "output": 3711,
+        "total": 2150964,
+        "displayedEstListPriceRowSumUsd": 2.23
+      },
+      {
+        "id": "amp-detail-6",
+        "requestTimeRange": "21:12:14.773–21:13:25.792",
+        "requests": 11,
+        "freshInput": 12675,
+        "cacheRead": 2026112,
+        "totalInput": 2038787,
+        "output": 4201,
+        "total": 2042988,
+        "displayedEstListPriceRowSumUsd": 4.23
+      },
+      {
+        "id": "amp-detail-7",
+        "requestTimeRange": "21:13:33.177–21:16:09.952",
+        "requests": 10,
+        "freshInput": 18400,
+        "cacheRead": 2208000,
+        "totalInput": 2226400,
+        "output": 7950,
+        "total": 2234350,
+        "displayedEstListPriceRowSumUsd": 4.76
+      },
+      {
+        "id": "amp-detail-8",
+        "requestTimeRange": "21:16:14.254–21:19:33.792",
+        "requests": 10,
+        "freshInput": 16055,
+        "cacheRead": 2374272,
+        "totalInput": 2390327,
+        "output": 7087,
+        "total": 2397414,
+        "displayedEstListPriceRowSumUsd": 5.06
+      },
+      {
+        "id": "amp-detail-9",
+        "requestTimeRange": "21:20:55.101–21:21:15.882",
+        "requests": 2,
+        "freshInput": 8106,
+        "cacheRead": 489088,
+        "totalInput": 497194,
+        "output": 1946,
+        "total": 499140,
+        "displayedEstListPriceRowSumUsd": 1.09,
+        "note": "该截图顶部重复上一张的 21:19:33.792 行；求和时只计两个新请求，避免重复。"
+      }
+    ]
+  },
+  "consistencyChecks": {
+    "requestCount": "8+11+11+10+11+11+10+10+2 = 84，与 Amp 汇总一致。",
+    "input": "各组 freshInput + cacheRead 合计 14,098,616，与 Amp Input 汇总逐 token 一致。",
+    "output": "各组 output 合计 48,639，与 Amp Output 汇总逐 token 一致。",
+    "total": "14,098,616 input + 48,639 output = 14,147,255 tokens。",
+    "listPriceDisplayRounding": "84 行已四舍五入到美分的 Est. List Price 相加为 $23.05，与未取整明细汇总后显示的 $23.02 相差 $0.03；计算采用 Amp 汇总 $23.02，不把逐行显示值之和当作精确值。",
+    "priceTierObservation": "Agent 行估价与 Fast 倍率、约 200K 后长上下文档倍率的方向一致；两条 Thread Title 行未表现同样的 Fast 倍率。本次未重新核验官方价目，因此保留 Amp 的估价口径，不用统一普通档价目替代。"
+  },
+  "maintainerReviewCalculations": {
+    "status": "candidate calculations only; no adopted value changed",
+    "rawTotalAlternative": {
+      "weeklyTokensAt5Pp": 282945100,
+      "monthlyTokensX4W": 1131780400,
+      "monthlyYi": 11.317804,
+      "note": "raw total ÷ 5% × 4 周；按现行口径，有完整 input/cache/output 分项的样本应优先做 list-worth 归一，raw 仅作对照。"
+    },
+    "ampWorthNormalizedAlternative": {
+      "segmentWorthUsd": 23.02,
+      "weeklyWorthUsdAt5Pp": 460.4,
+      "monthlyWorthUsdX4W": 1841.6,
+      "standardBlendUsdPerMTok": 0.565,
+      "monthlyTokens": 3259469026.55,
+      "monthlyYi": 32.59469027,
+      "formula": "$23.02 ÷ 5% × 4 周 ÷ $0.565/MTok = 32.5947 亿标准负载等效 token/月。",
+      "priceBasis": "worth 使用 Amp 的 Est. List Price 汇总；它是第三方估价而非 grok.com 账单，Fast 与长上下文档位是否完全被面板按同额扣减仍需维护者裁定。"
+    },
+    "integerPercentageSensitivity": {
+      "assumption": "起点和终点均按最近整数显示，真实段增量在 4–6 个百分点之间，且段内无其他消耗。",
+      "worthNormalizedMonthlyYiRange": [27.162242, 40.743363],
+      "rawMonthlyYiRange": [9.431503, 14.147255]
+    },
+    "ordinaryBasePriceSensitivityNotUsed": {
+      "pricesUsdPerMTok": { "cacheRead": 0.5, "freshInput": 2, "output": 6 },
+      "worthUsd": 7.72753,
+      "note": "把全部请求强行按仓库 2026-09-22 存档的 Grok 4.7 普通 ≤200K 档计价会得到 $7.72753；该值忽略本次 high fast 与长上下文请求，不能取代 Amp $23.02，也不作为采用候选。"
+    }
+  },
+  "existingAdoptionCrossCheck": {
+    "currentRow": "supergrok_heavy::grok-4.7 = 57.2 亿/月，medium，standard",
+    "currentBasis": "现有 Heavy 行不是 Heavy 独立实测，而是 SuperGrok $30 档 round2 实测按面板 $250/$25 派生。",
+    "difference": "本样本 Amp-worth 候选 32.59 亿低于现有派生值 57.2 亿；raw 对照为 11.32 亿。配置（high fast vs 既有 xhigh）、老套餐身份、Amp 估价与面板扣减口径均不同，不在证据录入阶段直接替换。"
+  },
+  "confidence": "high for the transcribed panel readings and aggregate token split; no adoption confidence assigned",
+  "caveats": [
+    "单账号、单周窗口、约 21 分钟的短段样本。",
+    "周额度只显示整数百分比，5 个百分点增量的反推对取整较敏感。",
+    "段内没有其他模型或其他客户端消耗来自投稿者确认；面板只显示总额与 Grok Build 两行，未提供逐请求扣减日志。",
+    "Amp 的 Est. List Price 是第三方估算，不是 grok.com 官方账单；Fast、长上下文和 Thread Title 请求的具体计价倍率未在本次重新联网核验。",
+    "缓存写入无独立字段，output 是否包含 reasoning 未显示。",
+    "请求时间与周重置时间的时区均未截入，不自行推断。",
+    "本证据只描述投稿者所称老 $300/月 Ultra（面板 SuperGrok Heavy）账号，不外推当前新售套餐。"
+  ],
+  "relatedFiles": [
+    "supergrok-grok47-round2-2026-09-22.json",
+    "workload-conversion-round1-2026-09-30.json",
+    "list-prices-mimo-v26-grok47-round1-2026-09-22.json"
+  ]
+}
