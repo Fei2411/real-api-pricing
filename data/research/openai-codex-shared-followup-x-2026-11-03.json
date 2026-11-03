@@ -1,0 +1,55 @@
+{
+  "recordedAt": "2026-11-03",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 178,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "Codex 5h 燃烧与 ChatGPT↔Codex 12月共用池传播。不新开；归入 #178。",
+  "items": [
+    {
+      "id": "x-gm-codex-5h-40pct",
+      "confidence": "Medium",
+      "planOrModel": "Codex 5h window",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/gm826480381/status/2117421829010960430",
+        "account": "gm826480381",
+        "createdAt": "2026-11-03T01:01:18.000Z"
+      },
+      "observed": {
+        "minutes": 20,
+        "fiveHourUsagePct": 40,
+        "hasScreenshot": false
+      }
+    },
+    {
+      "id": "x-ericzhou-dec-shared",
+      "confidence": "Medium",
+      "planOrModel": "ChatGPT ↔ Codex shared pool from Dec",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/EricZhouY/status/2117418984161337830",
+        "account": "EricZhouY",
+        "createdAt": "2026-11-03T00:50:00.000Z"
+      },
+      "observed": {
+        "plans": [
+          "Plus",
+          "Pro",
+          "Business"
+        ],
+        "metering": "tokens",
+        "instantChatExcluded": true,
+        "hasScreenshot": false
+      },
+      "note": "政策传播；官方帮助页已在 #178。"
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-03.json"
+  ],
+  "relatedPriorIssues": [
+    178,
+    161,
+    157
+  ]
+}

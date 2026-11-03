@@ -1,0 +1,183 @@
+{
+  "recordedAt": "2026-11-03",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 179,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-03：Grok Bot / X Subscription 周池疑似腰斩（Cursor token CSV）与 Premium Included 截图。截图不入库。不新开 issue，归入 #179。",
+  "items": [
+    {
+      "id": "x-mashiro-15b-to-7b",
+      "confidence": "High",
+      "planOrModel": "Grok Bot weekly（CSV）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/Mashiro_0619/status/2117149742031601943",
+        "account": "Mashiro_0619",
+        "createdAt": "2026-11-02T07:00:07.000Z"
+      },
+      "observed": {
+        "weeklyPoolTokensBefore": "~1.5e9",
+        "weeklyPoolTokensAfter": "~7e8+",
+        "usageJumpPct": {
+          "from": 60,
+          "to": 100
+        },
+        "hasScreenshot": false
+      },
+      "note": "自称 Cursor 后台 token csv。"
+    },
+    {
+      "id": "x-gakchen-proplus-per-pct",
+      "confidence": "High",
+      "planOrModel": "Legacy Cursor Pro+ · Grok Bot only",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/GakChen/status/2116853541142929711",
+        "account": "GakChen",
+        "createdAt": "2026-11-01T11:23:08.000Z"
+      },
+      "observed": {
+        "tokensPer1PctBefore": 6900000,
+        "tokensPer1PctAfter": 3700000,
+        "impliedCutPct": 47,
+        "hasScreenshot": false
+      },
+      "note": "同 workload；事故前后一致。"
+    },
+    {
+      "id": "x-dailin-super-csv-images",
+      "confidence": "High",
+      "planOrModel": "Super",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/DaiLin67911/status/2116905728980218299",
+        "account": "DaiLin67911",
+        "createdAt": "2026-11-01T14:50:30.000Z"
+      },
+      "observed": {
+        "lastWeekTokens": 750000000,
+        "lastWeekUsagePctLt": 30,
+        "thisWeekOneDayTokens": 93500000,
+        "thisWeekOneDayPct": 18,
+        "peakDaysTokens": [
+          129000000,
+          143000000,
+          188000000
+        ],
+        "hasScreenshot": true
+      },
+      "note": "多图；可反推周池。"
+    },
+    {
+      "id": "x-pursuit-premium-377m",
+      "confidence": "High",
+      "planOrModel": "Premium",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/pursuit66666/status/2116740196578598921",
+        "account": "pursuit66666",
+        "createdAt": "2026-11-01T03:52:44.000Z"
+      },
+      "observed": {
+        "includedWeeklyTokens": 377700000,
+        "burnedInDays": "~3+",
+        "hasScreenshot": true
+      }
+    },
+    {
+      "id": "x-wen-spock-7b-vs-15b",
+      "confidence": "High",
+      "planOrModel": "Grok Bot",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/wen_spock/status/2116817332106584539",
+        "account": "wen_spock",
+        "createdAt": "2026-11-01T08:59:15.000Z"
+      },
+      "observed": {
+        "usageJumpPct": {
+          "from": 39,
+          "to": 83
+        },
+        "thisWeekTokensApprox": 700000000,
+        "lastWeekTokensTo100PctApprox": 1500000000,
+        "hasScreenshot": false
+      }
+    },
+    {
+      "id": "x-prism-secondhand",
+      "confidence": "Medium",
+      "planOrModel": "Grok Bot",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/PrismChemAI/status/2117421510721978534",
+        "account": "PrismChemAI",
+        "createdAt": "2026-11-03T01:00:02.000Z"
+      },
+      "observed": {
+        "claim": "二手 15亿→7亿多",
+        "hasScreenshot": false
+      }
+    },
+    {
+      "id": "x-reshared1-with-image",
+      "confidence": "Medium",
+      "planOrModel": "Grok Bot",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/reshared1/status/2117180764207169928",
+        "account": "reshared1",
+        "createdAt": "2026-11-02T09:03:24.000Z"
+      },
+      "observed": {
+        "weeklyPoolTokensBefore": "~1.5e9",
+        "weeklyPoolTokensAfter": "~7e8+",
+        "hasScreenshot": true
+      }
+    },
+    {
+      "id": "x-teancums-24pct-2days",
+      "confidence": "Medium",
+      "planOrModel": "Grok Bot",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/TeancumsRaiders/status/2117416382992408636",
+        "account": "TeancumsRaiders",
+        "createdAt": "2026-11-03T00:39:40.000Z"
+      },
+      "observed": {
+        "usagePct": 24,
+        "daysLeftInWeek": 2,
+        "hasScreenshot": false
+      }
+    },
+    {
+      "id": "x-grok-official-multipliers",
+      "confidence": "Medium",
+      "planOrModel": "Premium/Super/Ultra shared weekly pool",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/grok/status/2117415770577657929",
+        "account": "grok",
+        "createdAt": "2026-11-03T00:37:14.000Z"
+      },
+      "observed": {
+        "premiumMultiplier": 4,
+        "superMultiplier": 15,
+        "ultraMultiplier": 50,
+        "hasScreenshot": false
+      },
+      "note": "官方回复；与 #179 既有倍率一致。"
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-03.json"
+  ],
+  "relatedPriorIssues": [
+    179,
+    172,
+    150,
+    158,
+    162
+  ]
+}
