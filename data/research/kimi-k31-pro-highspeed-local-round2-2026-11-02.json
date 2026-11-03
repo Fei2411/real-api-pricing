@@ -1,0 +1,175 @@
+{
+  "collectedAt": "2026-11-02T22:50:00+08:00",
+  "collectionMethod": "Contributor's own Kimi Code CLI session, model alias kimi-code/k3.1-pro-highspeed, thinking effort high, on the same local Kimi Code installation as kimi199-k31-pro-highspeed-local-round1-2026-10-24.json. Token counts were summed offline from the client's local session event log (one usage.record per LLM request; fields inputOther / output / inputCacheRead / inputCacheCreation). The usage panel was captured after the run. The panel does not print the plan name. On 2026-11-02 the contributor confirmed this is the same legacy Kimi membership, CNY 199 per month (Allegretto), as the 2026-10-24 sample. No pre-run capture exists. The contributor states that both bars were 0% before this session; the local log supports that for the 5-hour window and contradicts it for the weekly window. Research-only — no adopted row generated and no adopted value changed.",
+  "sources": [
+    "Contributor local Kimi Code CLI session log and one post-run usage-panel capture (private originals; aggregates and a redacted screenshot only, see PUBLICATION.md)",
+    "data/research/kimi199-k31-pro-highspeed-local-round1-2026-10-24.json (same legacy CNY 199 plan, confirmed by the contributor on 2026-11-02; the 5-hour pool = 1/5 of the weekly pool is taken from that sample and is not re-measured from two-decimal bars here)"
+  ],
+  "scope": "One Kimi Code session of about 79 minutes on a single main agent. Consumption sample for k3.1-pro-highspeed. The 5-hour bar is an integer 30% and the local log shows no other request inside that 5-hour window. The weekly bar is an integer 8% and is not this session alone.",
+  "adoptionStatus": "research-only; not adopted. adopted.csv still has no kimi_allegretto_cn × kimi-k3.1-pro-highspeed row. DECISIONS.md still says HighSpeed has no adoptable value. This file is a second 5-hour back-calculation and a weekly cross-check. Whether to add a row, and at which confidence, is left to the maintainer.",
+  "target": {
+    "plan": "Legacy Kimi membership, CNY 199 per month (Allegretto)",
+    "planIdCandidate": "kimi_allegretto_cn",
+    "planIdBasis": "Contributor confirmation on 2026-11-02: this sample is the same legacy CNY 199 membership as kimi199-k31-pro-highspeed-local-round1-2026-10-24.json (merged evidence PR 138). This usage panel does not print the plan name. The visible weekly-reset prefix is consistent with that sample's 00:04 tile.",
+    "model": "k3.1-pro-highspeed (K3.1 Pro Highspeed)",
+    "servedModelCandidate": "kimi-k3.1-pro-highspeed",
+    "modelAlias": "kimi-code/k3.1-pro-highspeed",
+    "thinkingEffort": "high",
+    "client": "Kimi Code CLI, main agent only, no sub-agents",
+    "protocolProviderLabel": "The client tags requests with provider 'openai'. That is Kimi Code's OpenAI-compatible adapter name, not an OpenAI account.",
+    "requiredEvidenceForAllowance": "Same account, same model, total tokens plus a 5-hour or 7-day percentage at the start and end of the window. End readings are the integers on the panel. The 5-hour start of 0% is supported by the local log and is not a screenshot. The weekly start of 0% is the contributor's statement and is contradicted by the local log."
+  },
+  "observed": {
+    "windowUtc": {
+      "firstRequest": "2026-11-02T13:29:17Z",
+      "lastRequest": "2026-11-02T14:47:48Z",
+      "approxDurationMinutes": 78.5
+    },
+    "windowBeijing": "2026-11-02 21:29:17 → 22:47:48 UTC+8",
+    "llmRequests": 46,
+    "agents": "main only",
+    "tokens": {
+      "inputUncached": 272177,
+      "inputCacheRead": 4869632,
+      "inputCacheCreation": 0,
+      "output": 29211,
+      "total": 5171020
+    },
+    "tokenShares": {
+      "inputUncached": 0.0526,
+      "inputCacheRead": 0.9417,
+      "output": 0.0056,
+      "note": "Cache share is below the repository standard workload (97 / 2.5 / 0.5) and slightly below the 2026-10-24 run (95.27% cache read). Output share 0.56% is in line with the standard 0.5%."
+    },
+    "contextPerRequest": {
+      "minTokens": 19480,
+      "medianTokens": 123194,
+      "maxTokens": 157467,
+      "requestsOver256k": 0,
+      "note": "No request exceeded the 262,144-token boundary, so this sample does not exercise the 1M-context entitlement. The panel's context line reads 0 / 1M because that widget was empty at capture; it is not this run's context."
+    },
+    "cacheCreationNote": "inputCacheCreation is 0 on every request, the same as the 2026-10-24 sample. Treat inputUncached as not-cache-hit input, not as a verified cache-write count.",
+    "panelSessionWidget": {
+      "sessionUsage": "No token usage recorded yet.",
+      "contextWindow": "0% (0 / 1M)",
+      "note": "Captured about two minutes after the last logged request. The widget does not match the log (46 requests, 5,171,020 tokens, median context 123,194). Plan percentages below are the quota evidence. Token totals come from the log, not from this widget."
+    }
+  },
+  "panelAfterRun": {
+    "screenshot": "data/research/evidence/kimi-k31-pro-highspeed-usage-panel-2026-11-02.jpg",
+    "capturedBeijing": "2026-11-02 22:50 UTC+8",
+    "captureTimeBasis": "The contributor stated the hand-off time as now. The image has no clock. Absolute times derived from 'resets in …' are only as precise as that statement.",
+    "fiveHourUsage": {
+      "label": "5h limit",
+      "percent": 30,
+      "percentPrecision": "integer, as rendered; unlike the 2026-10-24 dashboard this panel does not show hundredths",
+      "resetsIn": "16m",
+      "impliedEndBeijing": "2026-11-02 23:06",
+      "impliedStartIfFiveHoursBeijing": "2026-11-02 18:06"
+    },
+    "weeklyUsage": {
+      "label": "Weekly limit",
+      "percent": 8,
+      "percentPrecision": "integer, as rendered",
+      "resetsInVisible": "3d 1",
+      "resetsInNote": "The rest of the string is cut off at the panel edge. It is not read as a specific hour or minute."
+    },
+    "windowAnchoring": "A reset at 2026-11-06 00:04, the next 00:04 boundary after the 2026-10-24 sample's 7-day tile (that tile reset 2026-10-30 00:04), would read '3d 1h' at 22:50. That matches the visible prefix '3d 1' and is not itself on the screenshot. Every completion of '3d 1…' still puts the 2026-10-30 23:07 burst and the 2026-11-02 15:11 burst inside the weekly tile, and leaves the 2026-10-29 afternoon burst in the previous tile.",
+    "preRunReading": {
+      "observed": false,
+      "contributorStatement": {
+        "fiveHourPercent": 0,
+        "weeklyPercent": 0,
+        "basis": "The contributor states they had not used this quota before this session. There is no pre-run screenshot."
+      },
+      "localLog": {
+        "fiveHourWindow": "No other usage.record on this client between the implied window open (about 18:06 UTC+8) and this session, and none after it before the stated capture time. This session's 46 requests all fall inside 21:29–22:47. A few minutes of uncertainty in the capture clock does not pull the 15:11 burst into a 5-hour window that still had about 16 minutes left at 22:50.",
+        "weeklyWindow": "23 earlier k3.1-pro-highspeed requests on this same client, in other workspaces: 20 requests from 2026-10-30 23:07 to 23:21 and 3 requests at 2026-11-02 15:11. Combined 1,977,824 raw tokens (inputUncached 122,441, inputCacheRead 1,846,272, inputCacheCreation 0, output 9,111). All of them are outside the current 5-hour window and inside the weekly tile that opened 2026-10-30 00:04.",
+        "previousTileExcluded": "16 k3.1-pro-highspeed requests on 2026-10-29 14:30–17:49, 640,151 raw tokens, fall before 2026-10-30 00:04 and are not part of this weekly numerator."
+      },
+      "resolution": "The 5-hour start of 0% is log-supported and is not a screenshot. The weekly start of 0% is recorded as the contributor's statement and is not used. The weekly 8% is this session plus the earlier in-week local usage."
+    }
+  },
+  "calculation": {
+    "inputs": {
+      "totalTokensThisSession": 5171020,
+      "fiveHourPercentAfter": 30,
+      "fiveHourPercentBefore": 0,
+      "fiveHourBeforeBasis": "local log, not a screenshot",
+      "weeklyPercentAfter": 8,
+      "weeklyPercentBeforeNotUsed": 0,
+      "earlierInWeekTokens": 1977824,
+      "kimiFiveHourPoolsPerWeek": 5,
+      "kimiWeeklyPoolsPerMonth": 5
+    },
+    "fiveHourRawTokensHighspeed": {
+      "point": 17236733,
+      "roundingRange": [
+        16954164,
+        17528881
+      ],
+      "formula": "5,171,020 / 30%. The range treats the integer as round-to-nearest, so the true share is in [29.5%, 30.5%).",
+      "attribution": "This session only. The local log has no other request in the 5-hour window."
+    },
+    "weeklyRawTokensFromFiveHour": {
+      "point": 86183667,
+      "roundingRange": [
+        84770820,
+        87644407
+      ],
+      "formula": "5-hour pool × 5, the relationship measured on 2026-10-24 (81.64% / 16.33% = 5.00) and the forum rule that one 5-hour pool is 20% of the weekly pool. Not re-measured as a ratio of two-decimal bars this time."
+    },
+    "weeklyCrossCheck": {
+      "thisSessionShareOfWeeklyPercent": 6.0,
+      "earlierInWeekShareOfWeeklyPercent": 2.295,
+      "predictedWeeklyPercent": 8.295,
+      "displayedWeeklyPercent": 8,
+      "formula": "5,171,020 / weekly pool = 6.00%; 1,977,824 / weekly pool = 2.295%; sum 8.295%, which an integer panel renders as 8%.",
+      "previousTileWouldNotFit": "Adding the excluded 2026-10-29 tokens (640,151) predicts 9.04%, which would not render as 8%.",
+      "note": "This is why the contributor's weekly 0% is not the baseline. Dividing this session alone by 8% would call the weekly pool 64,637,750 and would assign the earlier usage's share to this session."
+    },
+    "monthlyRawTokensHighspeed": {
+      "point": 430918333,
+      "yi": 4.309,
+      "roundingRangeYi": [
+        4.239,
+        4.382
+      ],
+      "formula": "weekly × 5 (Kimi monthly pool = 5 weekly pools, kimi-adoption-round6-2026-09-08.json)"
+    },
+    "k31ProStandardEquivalent": {
+      "weeklyTokens": 172367334,
+      "monthlyTokens": 861836666,
+      "monthlyYi": 8.618,
+      "formula": "raw highspeed tokens × 2 (official: highspeed consumes 2× credits of k3.1-pro). Derived, not a k3.1-pro measurement. The multiplier is the one recorded on 2026-10-24; this run did not re-read the model page."
+    },
+    "comparisonToRound1": {
+      "round1FiveHourPool": 19550143,
+      "round1MonthlyYiRawHighspeed": 4.887,
+      "thisFiveHourPoolVsRound1": -0.118,
+      "thisMonthlyYiVsRound1": -0.118,
+      "note": "The 2026-10-24 5-hour pool is 15,960,737 / 81.64%. This integer 30% reading is about 12% lower. Part of the raw gap is this run's lower cache share. See crossReferenceOnly. A second sample with an integer percent does not replace the 2026-10-24 figure."
+    },
+    "notWorkloadNormalized": true,
+    "note": "Headline figures are raw client totals (cache read + uncached input + output), the same basis as the repository's existing Kimi rows."
+  },
+  "crossReferenceOnly": {
+    "priceSource": "Same third-party catalog prices cited in kimi199-k31-pro-highspeed-local-round1-2026-10-24.json (input $2 / cached read $0.20 / output $10 per million tokens). Not Moonshot's official list. No list-worth is proposed for adoption.",
+    "thisSessionListWorthUsd": 1.8104,
+    "listWorthFormula": "0.272177 MTok × $2 + 4.869632 MTok × $0.20 + 0.029211 MTok × $10",
+    "fiveHourWorthPoolUsd": 6.0346,
+    "round1FiveHourWorthPoolUsd": 6.4405,
+    "worthGapVsRound1": -0.063,
+    "worthBasedWeeklyCrossCheckPercent": 8.34,
+    "note": "Under these prices the week's local worth is 8.34% of the 5-hour worth pool × 5, which the integer panel also renders as 8%. Raw tokens predict 8.295%. Both fit the displayed 8%, so this sample does not tell a raw-token meter from a worth meter."
+  },
+  "whatWouldUpgradeThisSample": [
+    "A panel capture taken immediately before the session, with tenths or hundredths rather than integers.",
+    "A weekly window that contains only this model and no earlier local sessions, so the weekly bar is a same-session delta.",
+    "The plan name and the full weekly reset string printed on the same capture. The tier itself is already a contributor confirmation, not a guess.",
+    "A paired k3.1-pro (standard speed) run to check the official 2× consumption ratio."
+  ],
+  "confidence": "low candidate for a second 5-hour back-calculation on legacy CNY 199 × k3.1-pro-highspeed: the plan is the contributor's confirmation, the same membership as the 2026-10-24 sample. The allowance reading is an exact client token sum against an integer 30%, with no other local request in that 5-hour window, no pre-run screenshot, and a coarser percent than the 2026-10-24 hundredths. The weekly 8% agrees only after the earlier local usage is added. Maintainer to grade. Not adopted.",
+  "basis": "local_client_log + post_run_usage_panel",
+  "redaction": "Session identifiers, prompts, workspace names, repository paths and account identifiers are omitted. Earlier usage is described only as other workspaces on the same local client. The screenshot shows the usage panel: an empty session widget, a 0 / 1M context line, and the 5-hour and weekly bars with percentages and relative reset times. It shows no name, avatar, e-mail or account ID. JPEG metadata was removed before commit."
+}
