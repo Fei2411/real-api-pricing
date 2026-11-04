@@ -1,0 +1,226 @@
+{
+  "scannedAt": "2026-11-04",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "window": {
+    "start": "2026-11-03T01:03:00Z",
+    "end": "2026-11-04T01:10:00Z"
+  },
+  "method": "Grok Bot built-in public X search_posts_all (namespace x); NOT user X plugin / Platform API quota",
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "snapshotDateShown": "2026-10-27",
+    "note": "WebFetch 首页 Snapshot=2026-10-27；扫描日 2026-11-04（Asia/Shanghai 日批），已滞后约 8 天。未改 production。"
+  },
+  "queries": [
+    "(Cursor OR \"Grok Bot\" OR \"X Subscription\") (额度 OR quota OR weekly OR token OR CSV OR 周额 OR 亿 OR million OR pct OR percent) (lang:zh OR lang:en) -is:retweet",
+    "has:images (用量 OR usage OR quota OR 额度) (Kimi OR Cursor OR Claude OR Codex OR \"Grok Bot\" OR Gemini) -is:retweet",
+    "(\"2亿\" OR \"2 亿\" OR \"200M\" OR \"200 million\" OR 腰斩 OR CSV) (Grok OR Cursor OR Bot OR 额度 OR token) -is:retweet",
+    "(Claude OR Anthropic) (Pro OR Max OR Ultra) (额度 OR quota OR weekly OR 周额 OR token OR pct OR percent) (lang:en OR lang:zh) -is:retweet",
+    "(Codex OR ChatGPT) (banked OR 额度 OR quota OR 5h OR token OR pct) (lang:en OR lang:zh) -is:retweet",
+    "(\"Google AI\" OR Gemini OR \"AI Ultra\" OR \"Ultra Lite\") (token OR 额度 OR 配额 OR quota OR pct OR percent OR 百分比 OR ₺ OR 土区) (lang:en OR lang:zh) -is:retweet",
+    "(GLM OR MiniMax OR DeepSeek OR OpenCode OR Devin OR \"Kimi Code\") (额度 OR quota OR token OR 周额 OR 月额 OR percent OR pct OR Coding Plan) (lang:zh OR lang:en) -is:retweet",
+    "(Ultra OR Premium OR Super) (Grok OR Cursor OR Bot) (50x OR 4x OR 15x OR \"tokens per\" OR 1pct OR \"1%\") -is:retweet",
+    "(Revolut OR GLM OR 智谱) (Coding Plan OR 118 OR 538 OR 1078 OR B200 OR token) (lang:zh OR lang:en) -is:retweet"
+  ],
+  "counts": {
+    "high": 2,
+    "medium": 8,
+    "discardedLowApprox": 60,
+    "searches_run": 12,
+    "unique_posts_approx": 200
+  },
+  "relatedIssues": [
+    189
+  ],
+  "relatedPriorIssues": [
+    179,
+    186,
+    178,
+    170,
+    182,
+    162,
+    158,
+    172
+  ],
+  "retained": [
+    {
+      "url": "https://x.com/honorbyte/status/2117770259763474585",
+      "account": "honorbyte",
+      "planOrModel": "Ultra $200 · Grok Bot",
+      "tokens": "自称 spent 500M tokens（约 200M/日）",
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "High",
+      "why": "绝对 token + 计划价位；与 @grok 官方回复成对。链 #189。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T00:05:50.000Z",
+      "relatedIssue": 189
+    },
+    {
+      "url": "https://x.com/grok/status/2117770477158453495",
+      "account": "grok",
+      "planOrModel": "Ultra · flat weekly pool 50× Plus",
+      "tokens": "官方：Grok 4.7 API $2 in / $6 out → 500M ≈ $1k–$3k；确认 Ultra 周池 50× Plus",
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "High",
+      "why": "官方账号确认倍率与补贴叙事；可校准 Ultra 绝对池量级。链 #189。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T00:06:42.000Z",
+      "relatedIssue": 189
+    },
+    {
+      "url": "https://x.com/d_j_harman/status/2117784855400661097",
+      "account": "d_j_harman",
+      "planOrModel": "Grok Bot 合并前 / Comb / Nov1 后",
+      "tokens": "tokens per 1%：Oct 1.69→2.93M；Comb1 3.08M；本周 1.68M（约 −45%）",
+      "percent": "每 1% 对应绝对 token（整池≈100×）",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "自建柱状图硬数；独立校准周池腰斩。截图 https://pbs.twimg.com/media/HWPiFL7aEAAVyhB.jpg。链 #189。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T01:03:50.000Z",
+      "relatedIssue": 189
+    },
+    {
+      "url": "https://x.com/TuanAnhCLS/status/2117776091247223023",
+      "account": "TuanAnhCLS",
+      "planOrModel": "Ultra",
+      "tokens": null,
+      "percent": "82% used · Weekly included · Resets Nov 7",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "面板 % + 重置日截图；自称不到 3 天用完。截图 https://pbs.twimg.com/media/HWPaIR1bkAAvkiq.jpg",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T00:29:01.000Z",
+      "relatedIssue": 189
+    },
+    {
+      "url": "https://x.com/Claudeanxy/status/2117777506124419285",
+      "account": "Claudeanxy",
+      "planOrModel": "Grok Bot",
+      "tokens": null,
+      "percent": "58%（7天后重置）→ 82%（6天后重置）≈一天 ~24pp",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "双截图燃烧速度旁证；无绝对 token。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T00:34:38.000Z",
+      "relatedIssue": 189
+    },
+    {
+      "url": "https://x.com/BaobaoBus_2022/status/2117777091655835831",
+      "account": "BaobaoBus_2022",
+      "planOrModel": "Premium ~$30 统一账户",
+      "tokens": "口述一周 2 亿 token，共享 Grok+Bot+Cursor",
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "绝对口述；同日另帖「30刀一周才2亿」。与 ~2M/1% 量级可交叉。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T00:32:59.000Z",
+      "relatedIssue": 189
+    },
+    {
+      "url": "https://x.com/KalinJunYAI/status/2117778169961050410",
+      "account": "KalinJunYAI",
+      "planOrModel": "Grok Bot",
+      "tokens": null,
+      "percent": "两句话 ≈ 1%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "硬百分比燃烧口述；缺绝对 token/截图。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T00:37:16.000Z",
+      "relatedIssue": 189
+    },
+    {
+      "url": "https://x.com/DUNQU1/status/2117781384555335892",
+      "account": "DUNQU1",
+      "planOrModel": "$60 订阅",
+      "tokens": null,
+      "percent": "整周额度约 1 小时打完",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "时间窗燃烧；档位与绝对 token 未写清。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T00:50:03.000Z",
+      "relatedIssue": 189
+    },
+    {
+      "url": "https://x.com/sklyarov/status/2117725403104076082",
+      "account": "sklyarov",
+      "planOrModel": "Claude Code 5h 窗",
+      "tokens": "转述：约 $1.37 API 用量后撞 5h 限",
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "二手 HN/社区硬数；产品点子帖。链 #170/#156。",
+      "vendor": "Anthropic",
+      "created_at": "2026-11-03T21:07:36.000Z",
+      "relatedPriorIssue": 170
+    },
+    {
+      "url": "https://x.com/vokie123/status/2117755484690428006",
+      "account": "vokie123",
+      "planOrModel": "智谱 GLM Coding Plan 个人版",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "正价 118 / 538 / 1078 元/月 + 双11体验卡 0.11；链官方 pricing。非用量实测。",
+      "vendor": "GLM",
+      "pricesCNY": [
+        118,
+        538,
+        1078
+      ],
+      "created_at": "2026-11-03T23:07:08.000Z"
+    },
+    {
+      "url": "https://x.com/zg0820/status/2117770907297235194",
+      "account": "zg0820",
+      "planOrModel": "Gemini Ultra 20x 土区",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "土区 ₺2949≈¥426/月 vs 美区 Ultra ~$200；纠正「410美元」误读。区域价旁证。链 #186/#23。",
+      "vendor": "Google",
+      "created_at": "2026-11-04T00:08:25.000Z",
+      "relatedPriorIssue": 186
+    },
+    {
+      "url": "https://x.com/EdwinCh43136084/status/2117784032222044520",
+      "account": "EdwinCh43136084",
+      "planOrModel": "Gemini 新用户 $300 赠金 · Argon",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "称 300 刀赠金≈一周 Argon 用量；促销/赠金旁证，非订阅周池。",
+      "vendor": "Google",
+      "created_at": "2026-11-04T01:00:34.000Z"
+    }
+  ],
+  "discardedExamples": [
+    {
+      "why": "Low 无数字吐槽/营销",
+      "note": "大量「额度砍了」无计量；Memoh/B.AI/FLOP 推广；GrokBotATS 体育；像素墙玩笑"
+    },
+    {
+      "why": "跟进旧议题无新硬数",
+      "note": "Claude Ultra 改名叙事续 #170；Codex Dec 共享池续 #178；Jeree Claude Pro~$155 API 续昨日 Gojosh9n"
+    },
+    {
+      "why": "UI 变化无配额数字",
+      "note": "edenyanglawyer Codex 剩余用量环形图标；缺绝对数"
+    }
+  ],
+  "notes": [
+    "昨日 draft #187 窗口截止 2026-11-03T01:03Z；本扫 start 对齐其后。",
+    "站点 Snapshot 仍 2026-10-27，滞后约 8 天。",
+    "禁止合并/部署；research-only。",
+    "新开 issue #189。"
+  ]
+}
