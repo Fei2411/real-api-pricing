@@ -1,0 +1,112 @@
+{
+  "title": "Cursor/X Ultra absolute token calibration from X (2026-11-04)",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "collectedAt": "2026-11-04",
+  "window": {
+    "start": "2026-11-03T01:03:00Z",
+    "end": "2026-11-04T01:10:00Z"
+  },
+  "vendor": "Cursor / X Subscription",
+  "relatedIssue": 189,
+  "summary": "Ultra $200 user claims ~500M tokens (~200M/day); official @grok confirms Ultra weekly pool = 50× Plus and API-rate subsidy math ($2/$6 Grok 4.7 → 500M ≈ $1k–$3k). Independent tokens-per-1% chart shows Comb peak 3.08M/1% → post–Nov1 1.68M/1% (~−45%). Panel % screenshots (Ultra 82%, 58%→82% day burn) corroborate tightness. Premium oral 2亿/week aligns with ~2M/1% scale.",
+  "signals": [
+    {
+      "id": "honorbyte-ultra-500m",
+      "confidence": "high",
+      "url": "https://x.com/honorbyte/status/2117770259763474585",
+      "account": "honorbyte",
+      "plan": "Ultra $200/mo",
+      "claim": "spent 500M tokens on grokbot, around 200M a day",
+      "hasScreenshot": false
+    },
+    {
+      "id": "grok-official-50x-subsidy",
+      "confidence": "high",
+      "url": "https://x.com/grok/status/2117770477158453495",
+      "account": "grok",
+      "plan": "Ultra flat weekly pool (50x Plus)",
+      "claim": "API rates $2 input / $6 output per MTok Grok 4.7; 500M tokens runs $1k–$3k; at 200M tokens/day subscription heavily subsidized",
+      "hasScreenshot": false,
+      "officialAccount": true
+    },
+    {
+      "id": "djharman-tokens-per-1pct-chart",
+      "confidence": "high",
+      "url": "https://x.com/d_j_harman/status/2117784855400661097",
+      "account": "d_j_harman",
+      "media": "https://pbs.twimg.com/media/HWPiFL7aEAAVyhB.jpg",
+      "chartTitle": "Tokens per 1% of the weekly meter",
+      "seriesMTokPer1pct": {
+        "Oct4-9_premerge": 1.69,
+        "Oct9-16_premerge": 2.34,
+        "Oct16-23_premerge": 2.59,
+        "Oct23-25_premerge": 2.93,
+        "Comb1": 3.08,
+        "ThisWeek_after_Nov1": 1.68
+      },
+      "impliedWeeklyPoolMTokApprox": {
+        "Comb1": 308,
+        "ThisWeek": 168
+      },
+      "note": "Implied full weekly pool ≈ 100 × tokens-per-1%. Plan tier of chart author not labeled Ultra vs Super; treat as relative shrink evidence."
+    },
+    {
+      "id": "tuananhcls-ultra-82pct",
+      "confidence": "medium",
+      "url": "https://x.com/TuanAnhCLS/status/2117776091247223023",
+      "account": "TuanAnhCLS",
+      "media": "https://pbs.twimg.com/media/HWPaIR1bkAAvkiq.jpg",
+      "plan": "Ultra",
+      "percent": 82,
+      "reset": "Weekly included usage · Resets Nov 7",
+      "claim": "cannot make it through 3 days; canceling before next billing"
+    },
+    {
+      "id": "claudeanxy-day-burn-screenshots",
+      "confidence": "medium",
+      "url": "https://x.com/Claudeanxy/status/2117777506124419285",
+      "account": "Claudeanxy",
+      "media": [
+        "https://pbs.twimg.com/media/HWPbacKaYAEWo0V.jpg",
+        "https://pbs.twimg.com/media/HWPbacLasAAWpYX.jpg"
+      ],
+      "percentSequence": [
+        {
+          "pct": 58,
+          "resetsInDays": 7
+        },
+        {
+          "pct": 82,
+          "resetsInDays": 6
+        }
+      ],
+      "approxDayBurnPp": 24
+    },
+    {
+      "id": "baobaobus-premium-200m",
+      "confidence": "medium",
+      "urls": [
+        "https://x.com/BaobaoBus_2022/status/2117777091655835831",
+        "https://x.com/BaobaoBus_2022/status/2117779402549584286"
+      ],
+      "account": "BaobaoBus_2022",
+      "plan": "Premium ~$30",
+      "claim": "统一账户一周 2 亿 token，Grok+Bot+Cursor 共享"
+    }
+  ],
+  "relatedIssuesPrior": [
+    179,
+    162,
+    158,
+    172
+  ],
+  "suggestedFiles": [
+    "data/research/cursor-x-ultra-token-calibration-x-2026-11-04.json",
+    "data/research/x-scan-2026-11-04.json"
+  ],
+  "doNotTouch": [
+    "adopted.csv",
+    "production deploy",
+    "merge without maintainer"
+  ]
+}
