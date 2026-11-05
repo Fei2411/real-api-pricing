@@ -1,0 +1,311 @@
+{
+  "scannedAt": "2026-11-02",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "window": {
+    "start": "2026-10-31T00:00:00Z",
+    "end": "2026-11-02T01:09:00Z"
+  },
+  "method": "Grok Bot built-in public X search_posts_all (namespace x); NOT user X plugin / Platform API quota",
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "snapshotDateShown": "2026-10-27",
+    "note": "WebFetch 首页 Snapshot=2026-10-27；扫描日 2026-11-02（Asia/Shanghai 日批标题），已滞后约 6 天。未改 production。"
+  },
+  "queries": [
+    "(Cursor OR \"Cursor Pro\" OR \"Cursor Ultra\") (usage OR quota OR limit OR token OR burn OR 用量 OR 配额 OR 打满) -is:retweet",
+    "(Claude OR \"Claude Code\" OR Anthropic) (usage OR quota OR limit OR tokens OR 用量 OR 配额 OR 打满) (Pro OR Max OR Ultra) -is:retweet",
+    "(Kimi OR Moonshot OR \"Kimi Code\") (用量 OR 配额 OR 打满 OR token OR usage OR quota OR limit OR 套餐 OR 促销) -is:retweet",
+    "(ChatGPT OR Codex) (usage OR quota OR limit OR tokens OR 共用 OR 额度 OR shared) (Plus OR Pro OR Business OR December OR 12月) -is:retweet",
+    "(OpenCode OR Cheepseek OR \"Go Teams\") (Go OR Flash OR usage OR quota OR 额度 OR token OR limit) -is:retweet",
+    "(DeepSeek OR GLM OR MiniMax OR Devin OR Zhipu) (用量 OR 配额 OR pricing OR 调价 OR quota OR usage OR limit OR 套餐) -is:retweet",
+    "(\"X Subscription\" OR SuperGrok OR unified OR Premium OR Ultra) (Cursor OR Grok OR Bot) (usage OR quota OR tokens OR 用量 OR 打满 OR pool) -is:retweet",
+    "(Kimi OR Allegro OR \"K3.1\" OR \"Coding Plan\") (token OR tokens OR 周 OR weekly OR 打满 OR 用量 OR usage OR 额度) -is:retweet",
+    "(Claude OR Ultra OR \"Claude Code\") (Ultra OR Max) (weekly OR 周 OR usage OR 用量) has:images -is:retweet",
+    "(Command Code OR GOAT OR Devin OR OpenDesign) (quota OR usage OR weekly OR 额度 OR Flash) -is:retweet"
+  ],
+  "counts": {
+    "high": 2,
+    "medium": 14,
+    "discardedLowApprox": 50,
+    "searches_run": 10,
+    "unique_posts_approx": 200
+  },
+  "relatedIssues": [
+    182
+  ],
+  "relatedPriorIssues": [
+    179,
+    178,
+    180,
+    170,
+    155,
+    26
+  ],
+  "retained": [
+    {
+      "url": "https://x.com/achaosxyz/status/2117027934175146238",
+      "account": "achaosxyz",
+      "planOrModel": "Kimi Allegro 旧 699 · K3.1 Pro",
+      "tokens": "Input 784.9M / Cache 761.6M (97%) / Output 2.2M / Total 787.1M · 5552 req",
+      "percent": "周额度 99%（约 3h50min 后重置）",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "同帖双图：Allegro 权益卡 + Usage over time 分项；可反推周池≈795M。",
+      "vendor": "Kimi / Moonshot",
+      "text_excerpt": "分享下Kimi K3.1 Pro实测旧版699 Allegro订阅，周额度使用99%，有统计的用量有784M…周额度预估能有800M以上。",
+      "created_at": "2026-11-01T22:56:06.000Z",
+      "relatedIssue": 182,
+      "priorIssue": 155
+    },
+    {
+      "url": "https://x.com/fxnction/status/2117057596389773629",
+      "account": "fxnction",
+      "planOrModel": "Claude Ultra weekly · Codex weekly",
+      "tokens": null,
+      "percent": "Claude Ultra All models 周限 99% used；口述 Codex 周限约 3h 烧完",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "Claude 面板周限 99% 截图；同帖 Codex 燃烧口述。链 #170。",
+      "vendor": "Anthropic / OpenAI",
+      "created_at": "2026-11-02T00:53:00.000Z",
+      "priorIssue": 170
+    },
+    {
+      "url": "https://x.com/takuei0604/status/2117059347889217825",
+      "account": "takuei0604",
+      "planOrModel": "X Subscription · Grok Bot + Cursor 合并池",
+      "tokens": null,
+      "percent": "1% → 94%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "合并前后跳变硬百分比；链 #179。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-02T01:00:56.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/maming266/status/2117060064288854323",
+      "account": "maming266",
+      "planOrModel": "Grok / Grok Bot 合并计量",
+      "tokens": null,
+      "percent": "40% → 100%（猜测新旧分开 vs 叠加）",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "合并计量假说 + 硬百分比跳变。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-02T01:03:47.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/thekurgan1986/status/2117057130918281714",
+      "account": "thekurgan1986",
+      "planOrModel": "Cursor Ultra",
+      "tokens": null,
+      "percent": "夜 60% → 凌晨 100%；另称需保留 40%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "Ultra 硬百分比异常跳变；疑 bug/合并。",
+      "vendor": "Cursor",
+      "created_at": "2026-11-02T00:52:07.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/BryansUploads/status/2117059137376817602",
+      "account": "BryansUploads",
+      "planOrModel": "X Subscription Ultra",
+      "tokens": null,
+      "percent": "本周 3 天到 90%（上周同进度约 6 天）",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "同一 Ultra 燃烧加速对比。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-02T01:00:00.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/WR4NYGov/status/2117054392012865596",
+      "account": "WR4NYGov",
+      "planOrModel": "X / Bot weekly + legacy Cursor Ultra",
+      "tokens": null,
+      "percent": "Weekly usage limit 38%（截图；Resets in 3 days）",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "面板周%截图；策略旁证（Bot 调 Cloud Agent）。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-02T00:41:14.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/CreavaleAI/status/2117040796784562217",
+      "account": "CreavaleAI",
+      "planOrModel": "Grok Bot Premium $30",
+      "tokens": null,
+      "percent": "不到一天烧光",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "Premium 日级打满旁证。",
+      "vendor": "X Subscription",
+      "created_at": "2026-11-01T23:47:13.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/TexasBK321/status/2117052585567772955",
+      "account": "TexasBK321",
+      "planOrModel": "Cursor / Grok Bot $100 档",
+      "tokens": null,
+      "percent": "Cursor 占用量约 85%；打穿 $100/月",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "Cursor 占比硬百分比 + 档位价。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-02T00:34:03.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/Baxti_7/status/2117059146675859567",
+      "account": "Baxti_7",
+      "planOrModel": "Claude Ultra（旧 Max 20x）",
+      "tokens": null,
+      "percent": "澄清 Ultra=每周 10×Pro 非月；截图 Weekly 1% used；去 5h",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "官方周倍率误解澄清 + 面板截图。链 #170。",
+      "vendor": "Anthropic / Claude",
+      "created_at": "2026-11-02T01:00:08.000Z",
+      "priorIssue": 170
+    },
+    {
+      "url": "https://x.com/TuanAnhCLS/status/2117055713927393398",
+      "account": "TuanAnhCLS",
+      "planOrModel": "Claude Ultra",
+      "tokens": null,
+      "percent": "Nov 1 晚 28.2% → 约 12h 后 47.8%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "Ultra 周% 12h 燃烧硬数字。链 #170。",
+      "vendor": "Anthropic / Claude",
+      "created_at": "2026-11-02T00:46:29.000Z",
+      "priorIssue": 170
+    },
+    {
+      "url": "https://x.com/fngly343149/status/2117060067115864108",
+      "account": "fngly343149",
+      "planOrModel": "Codex Banked reset 2/2 · Plus",
+      "tokens": null,
+      "percent": "Redeem 条件：至少一项剩余 <80%；Plus 兑换后 5h+周额回满",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "Banked 2/2 机制硬规则转述；链 #178。",
+      "vendor": "OpenAI / Codex",
+      "created_at": "2026-11-02T01:03:47.000Z",
+      "relatedIssue": 178
+    },
+    {
+      "url": "https://x.com/Pellorao/status/2117058764650267038",
+      "account": "Pellorao",
+      "planOrModel": "OpenCode Go · deepseek-v4.1-flash",
+      "tokens": "54m36s：1299 req / 81.89M input tokens；异常线程 82.6% req",
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "硬 token 表，但是错误循环异常而非正常配额上限；链 #180。",
+      "vendor": "OpenCode",
+      "created_at": "2026-11-02T00:58:37.000Z",
+      "relatedIssue": 180
+    },
+    {
+      "url": "https://x.com/leo114119/status/2117054576985596061",
+      "account": "leo114119",
+      "planOrModel": "Ollama Pro / Command Code GOAT / OpenCode Go / OpenDesign Go · DS V4.1 Flash",
+      "tokens": null,
+      "percent": "月费 vs 额度：$20→$60；GOAT/OpenCode $10→$100 Flash；OpenDesign 最高共享 $120",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "四渠道价目/额度对照图；额度按标价计≠同 token。链 #180。",
+      "vendor": "OpenCode / Command Code",
+      "created_at": "2026-11-02T00:41:58.000Z",
+      "relatedIssue": 180
+    },
+    {
+      "url": "https://x.com/FishRaposo/status/2117057041982169534",
+      "account": "FishRaposo",
+      "planOrModel": "Command Code GOAT · DeepSeek Flash",
+      "tokens": null,
+      "percent": "周配额仍 25%，2 天后重置",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "GOAT 周% 旁证。",
+      "vendor": "Command Code",
+      "created_at": "2026-11-02T00:51:00.000Z",
+      "relatedIssue": 180
+    },
+    {
+      "url": "https://x.com/wnerich/status/2117055897633480748",
+      "account": "wnerich",
+      "planOrModel": "Devin Pro",
+      "tokens": null,
+      "percent": "约 30 分钟耗尽配额；另尝试加购 $30",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "Devin Pro 打满时间硬口述；缺截图/token。",
+      "vendor": "Devin",
+      "created_at": "2026-11-02T00:47:00.000Z"
+    }
+  ],
+  "discardedExamples": [
+    {
+      "url": "https://x.com/hongzixangfx/status/2117040947393647009",
+      "why": "中转站倍率广告，非订阅硬计量"
+    },
+    {
+      "url": "https://x.com/UKFinancial_Ltd/status/2117057138275000714",
+      "why": "加密货币 moonshot，非 Kimi"
+    },
+    {
+      "url": "https://x.com/albalarsens/status/2117047529896636701",
+      "why": "F1 赛车手 Kimi，非模型"
+    },
+    {
+      "url": "https://x.com/hodu382759/status/2117057099444166998",
+      "why": "天猫双十一羊毛吐槽，无数字"
+    },
+    {
+      "url": "https://x.com/mujiinly/status/2117059385684050293",
+      "why": "求购共享账号，非用量证据"
+    },
+    {
+      "url": "https://x.com/dyoradar/status/2117059440763400505",
+      "why": "memecoin 发射指标"
+    },
+    {
+      "url": "https://x.com/iTzTerryEpic/status/2117059457498935451",
+      "why": "电竞赛队 Go Teams，误匹配"
+    },
+    {
+      "url": "https://x.com/yeeunson618/status/2117054256213889527",
+      "why": "应援周边摊位，误匹配 Ultra"
+    },
+    {
+      "url": "https://x.com/RelentlessTRP/status/2117059156813164862",
+      "why": "AOL 类比散文，无硬配额数"
+    },
+    {
+      "url": "https://x.com/xiaomanotes/status/2117059760646443186",
+      "why": "私董会文章，无用量计量"
+    }
+  ],
+  "actionable_leads": [
+    "Kimi Allegro 699 × K3.1 Pro：周 99% + Input 784.9M 分项（#182）；链 #155/#26",
+    "Cursor/X Subscription：Nov1–2 合并池燃烧跳变（归入 #179）",
+    "Claude Ultra：周 99% 打满与 10×/周澄清（归入 #170）",
+    "Codex Banked 2/2 兑换规则（归入 #178）",
+    "OpenCode/GOAT 渠道额度表与异常燃烧（归入 #180）"
+  ],
+  "notes": [
+    "未改 #181 / #173 / #159 / #152 draft 分支。",
+    "站点 Snapshot 仍 2026-10-27（滞后约 6 天）。",
+    "截图不入库，research JSON 只链 X URL。",
+    "全部 adoptionStatus = research-only / not adopted。",
+    "首轮 Kimi 查询曾含非法 % 字符被 API 拒绝，已改写后重跑。"
+  ]
+}

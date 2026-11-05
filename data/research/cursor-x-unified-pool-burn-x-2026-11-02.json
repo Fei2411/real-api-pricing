@@ -1,0 +1,157 @@
+{
+  "recordedAt": "2026-11-02",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 179,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-02：X Subscription / Cursor 合并周池后燃烧跳变与周%旁证。截图不入库。不新开 issue，归入 #179。",
+  "items": [
+    {
+      "id": "x-takuei-1-to-94",
+      "confidence": "Medium",
+      "planOrModel": "Grok Bot + Cursor 合并周池",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/takuei0604/status/2117059347889217825",
+        "account": "takuei0604",
+        "createdAt": "2026-11-02T01:00:56.000Z"
+      },
+      "observed": {
+        "usageJumpPct": {
+          "from": 1,
+          "to": 94
+        },
+        "claim": "Grok Bot 与 Cursor 框合并",
+        "hasScreenshot": false
+      },
+      "note": "日文口述。"
+    },
+    {
+      "id": "x-maming-40-to-100",
+      "confidence": "Medium",
+      "planOrModel": "Grok / Grok Bot",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/maming266/status/2117060064288854323",
+        "account": "maming266",
+        "createdAt": "2026-11-02T01:03:47.000Z"
+      },
+      "observed": {
+        "usageJumpPct": {
+          "from": 40,
+          "to": 100
+        },
+        "hypothesis": "旧分计 vs 新叠加",
+        "hasScreenshot": false
+      }
+    },
+    {
+      "id": "x-kurgan-ultra-60-to-100",
+      "confidence": "Medium",
+      "planOrModel": "Cursor Ultra",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/thekurgan1986/status/2117057130918281714",
+        "account": "thekurgan1986",
+        "createdAt": "2026-11-02T00:52:07.000Z"
+      },
+      "observed": {
+        "nightPct": 60,
+        "1amPct": 100,
+        "neededRemainingPct": 40,
+        "hasScreenshot": false
+      },
+      "note": "同用户另帖称 Ultra 被抽走大量 token。"
+    },
+    {
+      "id": "x-bryan-ultra-90-in-3d",
+      "confidence": "Medium",
+      "planOrModel": "X Subscription Ultra",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/BryansUploads/status/2117059137376817602",
+        "account": "BryansUploads",
+        "createdAt": "2026-11-02T01:00:00.000Z"
+      },
+      "observed": {
+        "thisWeekDaysTo90Pct": 3,
+        "lastWeekDaysTo90Pct": 6,
+        "hasScreenshot": false
+      }
+    },
+    {
+      "id": "x-wr4nygov-weekly-38",
+      "confidence": "Medium",
+      "planOrModel": "Bot / X weekly pool + legacy Cursor Ultra",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/WR4NYGov/status/2117054392012865596",
+        "account": "WR4NYGov",
+        "createdAt": "2026-11-02T00:41:14.000Z"
+      },
+      "observed": {
+        "weeklyUsagePercent": 38,
+        "resetsInDays": 3,
+        "hasScreenshot": true
+      },
+      "note": "截图未入库。"
+    },
+    {
+      "id": "x-creavale-premium-oneday",
+      "confidence": "Medium",
+      "planOrModel": "Grok Bot Premium $30",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/CreavaleAI/status/2117040796784562217",
+        "account": "CreavaleAI",
+        "createdAt": "2026-11-01T23:47:13.000Z"
+      },
+      "observed": {
+        "burnWindow": "<1 day",
+        "hasScreenshot": false
+      }
+    },
+    {
+      "id": "x-texasbk-cursor-85pct",
+      "confidence": "Medium",
+      "planOrModel": "$100/mo plan",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/TexasBK321/status/2117052585567772955",
+        "account": "TexasBK321",
+        "createdAt": "2026-11-02T00:34:03.000Z"
+      },
+      "observed": {
+        "cursorShareOfUsagePct": 85,
+        "blewThroughPlanUsd": 100,
+        "hasScreenshot": false
+      }
+    },
+    {
+      "id": "x-grok-shared-pool-reply",
+      "confidence": "Medium",
+      "planOrModel": "Premium+ / Super / Ultra shared weekly pool",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/grok/status/2117056637277999563",
+        "account": "grok",
+        "createdAt": "2026-11-02T00:50:09.000Z"
+      },
+      "observed": {
+        "superMultiplier": 15,
+        "ultraMultiplier": 50,
+        "ui": "Settings > Usage % + reset",
+        "hasScreenshot": false
+      },
+      "note": "官方账号回复；倍率与昨日 #179 一致。"
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-02.json"
+  ],
+  "relatedPriorIssues": [
+    179,
+    172,
+    150,
+    158
+  ]
+}

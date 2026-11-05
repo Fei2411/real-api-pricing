@@ -1,0 +1,58 @@
+{
+  "recordedAt": "2026-11-02",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 178,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-02：Codex Banked 2/2 兑换规则与 ChatGPT↔Codex 共用池继续传播。不新开 issue，归入 #178。截图不入库。",
+  "items": [
+    {
+      "id": "x-fngly-banked-2of2",
+      "confidence": "Medium",
+      "planOrModel": "Codex Banked reset · Plus",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/fngly343149/status/2117060067115864108",
+        "account": "fngly343149",
+        "createdAt": "2026-11-02T01:03:47.000Z"
+      },
+      "observed": {
+        "bankedProgress": "2/2",
+        "manualRedeem": true,
+        "redeemPaths": [
+          "Desktop Settings→Usage & billing",
+          "CLI /usage → Redeem reset"
+        ],
+        "redeemConditionRemainingLtPct": 80,
+        "plusAfterRedeem": "5h window + weekly restored",
+        "tiboSourceStatus": "2117035794678546764",
+        "hasScreenshot": true
+      },
+      "note": "机制转述卡；非绝对 token 表。"
+    },
+    {
+      "id": "x-restraineddepth-help-echo",
+      "confidence": "Medium",
+      "planOrModel": "Plus/Pro/Business shared pool Dec",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/RestrainedDepth/status/2117059055977980321",
+        "account": "RestrainedDepth",
+        "createdAt": "2026-11-02T00:59:46.000Z"
+      },
+      "observed": {
+        "instantExcluded": true,
+        "absoluteTokensPublished": false,
+        "hasScreenshot": false
+      },
+      "note": "帮助页二次传播；主题已在 #178。"
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-02.json"
+  ],
+  "relatedPriorIssues": [
+    178,
+    161,
+    157
+  ]
+}

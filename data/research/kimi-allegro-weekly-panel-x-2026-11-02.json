@@ -1,0 +1,61 @@
+{
+  "recordedAt": "2026-11-02",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 182,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-02：Kimi 旧版 Allegro（699）× K3.1 Pro 周池面板 High 证据。截图不入库。勿与 Allegretto(199) 样本混档。",
+  "items": [
+    {
+      "id": "x-achaosxyz-allegro-weekly-panel",
+      "confidence": "High",
+      "planOrModel": "Kimi Allegro (legacy CNY 699) · K3.1 Pro",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/achaosxyz/status/2117027934175146238",
+        "account": "achaosxyz",
+        "createdAt": "2026-11-01T22:56:06.000Z"
+      },
+      "observed": {
+        "planNameOnPanel": "Allegro",
+        "modelOnPanel": "K3.1 Pro",
+        "weeklyUsagePercent": 99,
+        "weeklyResetRemainingText": "3h 50min后重置",
+        "rateLimitPercent": 0,
+        "usageOverTime": {
+          "timezone": "Asia/Shanghai",
+          "rangeApprox": "2026-10-26 06:49 → 2026-11-02 06:49",
+          "inputTokensM": 784.9,
+          "cacheTokensM": 761.6,
+          "cachePercent": 97,
+          "outputTokensM": 2.2,
+          "totalTokensM": 787.1,
+          "requests": 5552,
+          "runner": "MAR Agent",
+          "modelBreakdown": "Kimi K3.1 Pro 100%"
+        },
+        "authorWeeklyPoolEstimateM": 800,
+        "backcalcWeeklyPoolM": 795,
+        "backcalcFormula": "787.1 / 0.99",
+        "hasScreenshot": true
+      },
+      "note": "双截图未入库：本周用量 99% 权益卡 + Usage over time。作者称另有对话消耗未计入统计。原帖：https://x.com/achaosxyz/status/2117027934175146238",
+      "gaps": [
+        "未独立核实是否含非 Code 聊天",
+        "单样本；未 workload-normalize",
+        "与 adopted Allegretto/Allegro 行对照需维护者确认"
+      ],
+      "relatedPriorIssues": [
+        155,
+        26
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-02.json"
+  ],
+  "relatedPriorIssues": [
+    155,
+    26,
+    144
+  ]
+}

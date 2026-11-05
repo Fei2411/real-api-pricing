@@ -1,0 +1,84 @@
+{
+  "recordedAt": "2026-11-02",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 170,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-02：Claude Ultra 周限燃烧与「10×每周」澄清旁证。不新开 issue，归入 #170。截图不入库。",
+  "items": [
+    {
+      "id": "x-fxnction-ultra-99",
+      "confidence": "High",
+      "planOrModel": "Claude Ultra weekly · Codex weekly",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/fxnction/status/2117057596389773629",
+        "account": "fxnction",
+        "createdAt": "2026-11-02T00:53:00.000Z"
+      },
+      "observed": {
+        "claudeWeeklyAllModelsPct": 99,
+        "claudeResetText": "Resets Sat 1:00 PM",
+        "codexWeeklyBurnClaim": "~3 hours",
+        "hasScreenshot": true
+      },
+      "note": "Claude 面板截图未入库；Codex 3h 为口述。"
+    },
+    {
+      "id": "x-baxti-10x-weekly-clarify",
+      "confidence": "Medium",
+      "planOrModel": "Claude Ultra (ex Max 20x)",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/Baxti_7/status/2117059146675859567",
+        "account": "Baxti_7",
+        "createdAt": "2026-11-02T01:00:08.000Z"
+      },
+      "observed": {
+        "weeklyMultiplierVsPro": 10,
+        "misreadCorrected": "not 10x monthly",
+        "fiveHourLimitRemoved": true,
+        "panelWeeklyPct": 1,
+        "hasScreenshot": true
+      }
+    },
+    {
+      "id": "x-tuananh-28-to-48",
+      "confidence": "Medium",
+      "planOrModel": "Claude Ultra",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/TuanAnhCLS/status/2117055713927393398",
+        "account": "TuanAnhCLS",
+        "createdAt": "2026-11-02T00:46:29.000Z"
+      },
+      "observed": {
+        "fromPct": 28.2,
+        "toPct": 47.8,
+        "windowHours": 12,
+        "hasScreenshot": false
+      }
+    },
+    {
+      "id": "x-shin-sasaki-help-text",
+      "confidence": "Medium",
+      "planOrModel": "Claude Ultra $200",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/shin_sasaki19/status/2117052529007821310",
+        "account": "shin_sasaki19",
+        "createdAt": "2026-11-02T00:33:50.000Z"
+      },
+      "observed": {
+        "claim": "帮助中心：Ultra=Pro 10× 周用量；认证账号无 5h 限",
+        "hasScreenshot": false
+      }
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-02.json"
+  ],
+  "relatedPriorIssues": [
+    170,
+    148
+  ]
+}
