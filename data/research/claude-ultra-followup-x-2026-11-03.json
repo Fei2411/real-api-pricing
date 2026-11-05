@@ -1,0 +1,70 @@
+{
+  "recordedAt": "2026-11-03",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 170,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "Claude Pro/Ultra 周额与改名传播跟进。不新开；归入 #170。",
+  "items": [
+    {
+      "id": "x-gojosh-claude-pro-155-api",
+      "confidence": "Medium",
+      "planOrModel": "Claude Pro $20 vs ChatGPT Plus $20",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/Gojosh9n/status/2117420649975349717",
+        "account": "Gojosh9n",
+        "createdAt": "2026-11-03T00:56:37.000Z"
+      },
+      "observed": {
+        "claudeProWeeklyApiUsdApprox": 155,
+        "chatgptPlusWeeklyApiUsdApprox": 55,
+        "hasScreenshot": false
+      },
+      "note": "二手实测转述；无截图。"
+    },
+    {
+      "id": "x-si-juzi-pro-5h",
+      "confidence": "Medium",
+      "planOrModel": "Claude Pro",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/si_juzi/status/2117406710528938010",
+        "account": "si_juzi",
+        "createdAt": "2026-11-03T00:01:13.000Z"
+      },
+      "observed": {
+        "tokensLt": 100000000,
+        "fiveHourRemainingPct": 30,
+        "hasScreenshot": false
+      }
+    },
+    {
+      "id": "x-pitw-rename-follow",
+      "confidence": "Medium",
+      "planOrModel": "Max→Max / Max20x→Ultra",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/pitw174420/status/2117416241518538790",
+        "account": "pitw174420",
+        "createdAt": "2026-11-03T00:39:06.000Z"
+      },
+      "observed": {
+        "pricesUsd": {
+          "Max": 100,
+          "Ultra": 200
+        },
+        "fiveHourAdjustedForSomeUltra": true,
+        "weeklyLimitRemains": true,
+        "hasScreenshot": false
+      }
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-03.json"
+  ],
+  "relatedPriorIssues": [
+    170,
+    156,
+    148
+  ]
+}

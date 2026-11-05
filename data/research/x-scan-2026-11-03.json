@@ -1,0 +1,303 @@
+{
+  "scannedAt": "2026-11-03",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "window": {
+    "start": "2026-11-01T00:00:00Z",
+    "end": "2026-11-03T01:03:00Z"
+  },
+  "method": "Grok Bot built-in public X search_posts_all (namespace x); NOT user X plugin / Platform API quota",
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "snapshotDateShown": "2026-10-27",
+    "note": "WebFetch 首页 Snapshot=2026-10-27；扫描日 2026-11-03（Asia/Shanghai 日批标题），已滞后约 7 天。未改 production。"
+  },
+  "queries": [
+    "(Cursor OR \"Grok Bot\" OR \"X Subscription\") (token OR 额度 OR 配额 OR quota OR weekly) (lang:en OR lang:zh) -is:retweet",
+    "(\"Google AI\" OR Gemini OR \"AI Ultra\" OR \"Ultra Lite\") (token OR 额度 OR 配额 OR quota OR pct OR percent OR 百分比) (lang:en OR lang:zh) -is:retweet",
+    "(Claude OR Anthropic) (Pro OR Max OR Ultra) (额度 OR quota OR weekly OR 周额 OR token OR pct OR percent) (lang:en OR lang:zh) -is:retweet",
+    "(Codex OR ChatGPT) (banked OR 额度 OR quota OR 5h OR \"rate limit\" OR token) (lang:en OR lang:zh) -is:retweet",
+    "(Cursor) (csv OR CSV OR \"token csv\" OR 腰斩 OR \"7亿\" OR \"15亿\" OR \"1.5B\" OR \"700M\") (Grok OR Bot OR 额度) -is:retweet",
+    "(TeancumsRaiders OR \"Grok Bot\") (pct OR percent OR 百分比 OR \"days left\" OR \"2 days\" OR 剩余) (额度 OR usage OR quota OR weekly) -is:retweet",
+    "(GLM OR MiniMax OR DeepSeek OR OpenCode OR Devin OR \"Kimi Code\") (额度 OR quota OR token OR 周额 OR 月额 OR percent OR pct) (lang:zh OR lang:en) -is:retweet",
+    "from:TeancumsRaiders (Grok OR Bot OR usage OR 额度 OR percent OR pct)",
+    "(Claude OR Codex) (\"155\" OR \"55\" OR \"API\" OR 周额) (Pro OR Plus OR Ultra) (额度 OR quota) -is:retweet",
+    "(Kimi OR \"Kimi Code\" OR moonshot) (额度 OR quota OR 打满 OR token OR 月额 OR percent OR pct OR 百分比) (lang:en OR lang:zh) -is:retweet"
+  ],
+  "counts": {
+    "high": 5,
+    "medium": 10,
+    "discardedLowApprox": 55,
+    "searches_run": 10,
+    "unique_posts_approx": 180
+  },
+  "relatedIssues": [
+    186
+  ],
+  "relatedPriorIssues": [
+    179,
+    178,
+    170,
+    180,
+    182,
+    23
+  ],
+  "retained": [
+    {
+      "url": "https://x.com/Mashiro_0619/status/2117149742031601943",
+      "account": "Mashiro_0619",
+      "planOrModel": "Grok Bot / Cursor CSV（档未写明，叙述周池）",
+      "tokens": "周额度约 15亿 → 7亿多（~50% 砍）",
+      "percent": "前日 60%+ 突然跳到 100%",
+      "hasScreenshot": false,
+      "confidence": "High",
+      "why": "自称 Cursor 后台 token csv 实锤；多帖交叉引用为原信号之一。链 #179。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-02T07:00:07.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/GakChen/status/2116853541142929711",
+      "account": "GakChen",
+      "planOrModel": "Legacy Cursor Pro+ · Grok Bot models only",
+      "tokens": "上周 ~6.9M token / 1% 周限；本周 ~3.7M / 1%",
+      "percent": "约砍 47%（同 workload；事故前后一致）",
+      "hasScreenshot": false,
+      "confidence": "High",
+      "why": "CSV 硬比率；可还原周池变化而非纯显示 bug。链 #179。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-01T11:23:08.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/DaiLin67911/status/2116905728980218299",
+      "account": "DaiLin67911",
+      "planOrModel": "Grok Bot Super",
+      "tokens": "上周合计 7.5亿（峰值日 1.29/1.43/1.88亿）；本周一天 9350万",
+      "percent": "上周 7.5亿 <30%；本周一天 18%",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "绝对 token + 周% + 多图；可反推周池量级变化。链 #179。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-01T14:50:30.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/pursuit66666/status/2116740196578598921",
+      "account": "pursuit66666",
+      "planOrModel": "Premium（后升 Super）",
+      "tokens": "截图 Included ≈ 377.7M token/周",
+      "percent": "三天多打完一周",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "面板 Included 绝对周池截图。链 #179。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-01T03:52:44.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/wen_spock/status/2116817332106584539",
+      "account": "wen_spock",
+      "planOrModel": "Grok Bot",
+      "tokens": "本周约 7亿；上周约 15亿到 100%",
+      "percent": "39% → 83% 跳变",
+      "hasScreenshot": false,
+      "confidence": "High",
+      "why": "用量记录绝对 token + 周% 跳变；与 Mashiro/GakChen 同量级。链 #179。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-01T08:59:15.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/erdonchen/status/2117408767168180646",
+      "account": "erdonchen",
+      "planOrModel": "Google AI Ultra Lite $100",
+      "tokens": "30M token",
+      "percent": "44% 周额度 → 反推周池约 60M+；推 Ultra $200≈3E",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "有绝对 token + 周%；缺截图/分项。新开 #186。",
+      "vendor": "Google",
+      "created_at": "2026-11-03T00:09:24.000Z",
+      "relatedIssue": 186,
+      "priorIssue": 23
+    },
+    {
+      "url": "https://x.com/TeancumsRaiders/status/2117416382992408636",
+      "account": "TeancumsRaiders",
+      "planOrModel": "Grok Bot（小任务；大活 Hermes）",
+      "tokens": null,
+      "percent": "24% with 2 days left",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "硬百分比 + 剩余天数；效率旁证。链 #179。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-03T00:39:40.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/PrismChemAI/status/2117421510721978534",
+      "account": "PrismChemAI",
+      "planOrModel": "Grok Bot 周额度（二手）",
+      "tokens": "转述 15亿→7亿多",
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "二手转述 Mashiro 系 CSV；无自有 csv。链 #179。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-03T01:00:02.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/reshared1/status/2117180764207169928",
+      "account": "reshared1",
+      "planOrModel": "Grok Bot",
+      "tokens": "CSV：15亿→7亿多",
+      "percent": "60%+→100%；腰斩超 50%",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "与 Mashiro 同叙事 + 附图；作交叉旁证。链 #179。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-02T09:03:24.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/grok/status/2117415770577657929",
+      "account": "grok",
+      "planOrModel": "The X Subscription 共享周池",
+      "tokens": null,
+      "percent": "Premium 4× / Super 15× / Ultra 50×（相对 base）",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "官方账号倍率旁证；无绝对 token。链 #179。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-03T00:37:14.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/Gojosh9n/status/2117420649975349717",
+      "account": "Gojosh9n",
+      "planOrModel": "Claude Pro vs ChatGPT Plus 周额 API 美元当量",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "二手：Claude Pro 周≈$155 API；Plus 周≈$55。无截图。链 #170。",
+      "vendor": "Anthropic / OpenAI",
+      "apiDollarEquiv": {
+        "claudeProWeeklyUsd": 155,
+        "chatgptPlusWeeklyUsd": 55
+      },
+      "created_at": "2026-11-03T00:56:37.000Z",
+      "priorIssue": 170
+    },
+    {
+      "url": "https://x.com/gm826480381/status/2117421829010960430",
+      "account": "gm826480381",
+      "planOrModel": "Codex 5h 窗",
+      "tokens": null,
+      "percent": "20 分钟用掉 5h 额度 40%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "口述硬百分比；无截图。链 #178。",
+      "vendor": "OpenAI / Codex",
+      "created_at": "2026-11-03T01:01:18.000Z",
+      "relatedIssue": 178
+    },
+    {
+      "url": "https://x.com/si_juzi/status/2117406710528938010",
+      "account": "si_juzi",
+      "planOrModel": "Claude Pro",
+      "tokens": "有人未满 1亿 token 时 5h 仅剩 30%",
+      "percent": "5h 剩 30%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "token + 5h%；归因上下文过长/5.5。链 #170。",
+      "vendor": "Anthropic / Claude",
+      "created_at": "2026-11-03T00:01:13.000Z",
+      "priorIssue": 170
+    },
+    {
+      "url": "https://x.com/pitw174420/status/2117416241518538790",
+      "account": "pitw174420",
+      "planOrModel": "Claude Max→Max / Max20x→Ultra",
+      "tokens": null,
+      "percent": "Ultra 部分用户 5h 调整；周额度仍在",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "改名与去 5h 传播；归既有 #170，不新开。",
+      "vendor": "Anthropic / Claude",
+      "created_at": "2026-11-03T00:39:06.000Z",
+      "priorIssue": 170
+    },
+    {
+      "url": "https://x.com/EricZhouY/status/2117418984161337830",
+      "account": "EricZhouY",
+      "planOrModel": "ChatGPT ↔ Codex 12月共用池",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "政策转述：Plus/Pro/Business 共用 token 池；Instant chat 不计。链 #178。",
+      "vendor": "OpenAI",
+      "created_at": "2026-11-03T00:50:00.000Z",
+      "relatedIssue": 178
+    }
+  ],
+  "discardedExamples": [
+    {
+      "url": "https://x.com/don_tech1/status/2117421805212463152",
+      "why": "「额度减半」无数字吐槽 → Low"
+    },
+    {
+      "url": "https://x.com/Fuuqius/status/2117421745703731704",
+      "why": "比喻吐槽无计量"
+    },
+    {
+      "url": "https://x.com/blowjobmonster/status/2117421097989902370",
+      "why": "抱怨额度少，无硬数"
+    },
+    {
+      "url": "https://x.com/Dicklong1999/status/2117419990752379033",
+      "why": "套餐价值吐槽，无 token/%"
+    },
+    {
+      "url": "https://x.com/CaribbeanKelp2/status/2117421542372180328",
+      "why": "价格抱怨无计量"
+    },
+    {
+      "url": "https://x.com/KowalPrato4o/status/2117411910450590092",
+      "why": "Revolut 自托管 GLM 成本，非订阅配额上限"
+    },
+    {
+      "url": "https://x.com/dasungta_zhang/status/2117416468904296707",
+      "why": "询问 MiniMax 额度，无实测数"
+    },
+    {
+      "url": "https://x.com/Lovislexus/status/2117421502840942948",
+      "why": "Magpie 工具营销，无硬配额"
+    },
+    {
+      "url": "https://x.com/attriuzen3912/status/2117401292473540967",
+      "why": "候选 Kimi 月额打满类帖：缺可还原计划/分项，未升 Medium"
+    },
+    {
+      "url": "https://x.com/NodeAndNeuron/status/2117421669371273346",
+      "why": "叙事复读 Elon 成本语，无新计量"
+    }
+  ],
+  "actionable_leads": [
+    "Cursor/X Subscription：CSV 实锤周池约腰斩（15亿→7亿 / 6.9M→3.7M per 1%）→ 归入 #179",
+    "Premium Included ≈377.7M/周截图 → #179",
+    "Google AI Ultra Lite $100：30M/44% → 周池≈60M+ → 新开 #186（交叉 #23）",
+    "Claude Pro≈$155 API/周 vs Plus≈$55 → 归入 #170",
+    "Codex 5h 燃烧与 12月共用池传播 → 归入 #178"
+  ],
+  "notes": [
+    "未改 adopted.csv / conventions / DECISIONS；未合并；未部署。",
+    "站点 Snapshot 仍 2026-10-27（滞后约 7 天）。",
+    "截图不入库，research JSON 只链 X URL。",
+    "全部 adoptionStatus = research-only / not adopted。",
+    "查询避免裸 % 字符（改用 pct/percent/百分比）。",
+    "昨日 #183 已收录帖不重复升级；今日重点为 CSV 腰斩与 Google Ultra Lite。"
+  ]
+}

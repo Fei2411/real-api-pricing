@@ -1,0 +1,50 @@
+{
+  "recordedAt": "2026-11-03",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 186,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "Google AI Ultra Lite $100 周池反推。交叉 #23（标价争议）但不合并。截图不入库。",
+  "items": [
+    {
+      "id": "x-erdonchen-ultra-lite-30m-44pct",
+      "confidence": "Medium",
+      "planOrModel": "Google AI Ultra Lite $100",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/erdonchen/status/2117408767168180646",
+        "account": "erdonchen",
+        "createdAt": "2026-11-03T00:09:24.000Z"
+      },
+      "observed": {
+        "tokensUsed": 30000000,
+        "weeklyUsagePct": 44,
+        "impliedWeeklyPoolTokensApprox": 68000000,
+        "extrapolatedUltra200WeeklyTokensApprox": 300000000,
+        "hasScreenshot": false
+      },
+      "note": "作者称 Ultra=$200 为 Pro 20× / Lite 5×；需官方页交叉。"
+    },
+    {
+      "id": "x-erdonchen-google200-vs-claude-pro",
+      "confidence": "Medium",
+      "planOrModel": "Google $200 Opus vs Claude Pro",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/erdonchen/status/2117407635213598887",
+        "account": "erdonchen",
+        "createdAt": "2026-11-03T00:04:54.000Z"
+      },
+      "observed": {
+        "claim": "测试 token 后 $200 Google Opus 额度 ≈ Claude Pro",
+        "hasScreenshot": false
+      }
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-03.json"
+  ],
+  "relatedPriorIssues": [
+    23,
+    186
+  ]
+}
