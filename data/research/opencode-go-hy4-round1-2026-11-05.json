@@ -1,0 +1,165 @@
+{
+  "collectedAt": "2026-11-05",
+  "collectionMethod": "Manual capture of the official OpenCode Go docs page and landing page (English) around 10:37 Beijing time / 02:37Z on 2026-11-05, compared against the 2026-11-04 capture of the same pages. The official per-model pricing tables (Go / Go Plus / Go Teams), the per-model Monthly limit column, the usage-window rule, the official 'Estimated requests' tables, the landing-page Go model table and the privacy table were read as published. Research-only — no adopted row generated, no adopted value changed, no script changed.",
+  "sources": [
+    "https://opencode.ai/docs/go/",
+    "https://opencode.ai/go"
+  ],
+  "scope": "OpenCode Go official price table only. One catalog entry was added on 2026-11-05: the new paid model 'Hy4' (model id hy4). The landing-page banner changed from 'DeepSeek V4.1 Flash gets 4× usage limits for a limited time' to 'Hy4 is now available in Go', the allowance counter moved from 'Allowances for eleven Go models' to 'Allowances for twelve Go models', and the model counter moved from 'View all 30 models' to 'View all 31 models'. The existing 'Hy4 preview' row (model id hy4-preview) stays in the table with unchanged prices and limits. No leaderboard/score data, no Command Code GOAT change (cross-channel note only), no shared-pool figure restated, no adopted.csv row, no computed allowance in this file.",
+  "adoptionStatus": "research-only; not adopted; no opencode_go × hy4 row in adopted.csv yet — adding one requires an OPENCODE_GO_MODELS entry in scripts/build_adopted.py, left to maintainer review",
+  "observed": {
+    "paidModel": {
+      "name": "Hy4",
+      "modelId": "hy4",
+      "vendor": "not stated on page",
+      "category": "not stated on page",
+      "categoryNote": "Vendor and license / open-weight status are not stated on the captured OpenCode Go pages; recorded for context only and not consumed by any adopted value or pipeline step.",
+      "statusChange": "New paid row added to the official OpenCode Go price table on 2026-11-05, with a matching landing-page banner 'Hy4 is now available in Go', the allowance counter moving from eleven to twelve Go models and the model counter moving from 30 to 31.",
+      "endpoint": "https://opencode.ai/inference/go/openai/v1/chat/completions",
+      "sdk": "@ai-sdk/openai-compatible",
+      "threePartPrice": {
+        "inputPerMTokUsd": 0.834,
+        "outputPerMTokUsd": 2.501,
+        "cachedReadPerMTokUsd": 0.042,
+        "cacheWritePerMTokUsd": null,
+        "cacheWriteNote": "Cache-write price not listed in the official table (page shows '-').",
+        "officialQuote": "Hy4 | $0.834 | $2.501 | $0.042 | -"
+      },
+      "priceScope": "Go, Go Plus and Go Teams show the same three-part price.",
+      "monthlyLimitUsd": {
+        "go": 60,
+        "goPlus": 240,
+        "goTeams": 65
+      },
+      "monthlyLimitRowsAsPublished": [
+        "Go table: 'Hy4 | $0.834 | $2.501 | $0.042 | - | $60'",
+        "Go Plus table: 'Hy4 | $0.834 | $2.501 | $0.042 | - | $240'",
+        "Go Teams table: 'Hy4 | $0.834 | $2.501 | $0.042 | - | $65'"
+      ],
+      "monthlyLimitNote": "Column order of the official table is Input | Output | Cached Read | Cached Write | Monthly limit. The official plan-table wording for Go Teams remains 'Every member gets their own limits, $5/month higher than Go on every model', which the published Go Teams $65 against the published Go $60 still satisfies.",
+      "usageWindowRule": "Each model has the following usage limits: 5-hour — 20% of the monthly limit; weekly — 50%; and monthly — 100%.",
+      "officialRequestEstimates": {
+        "note": "Official 'Estimated requests' figures, kept as cross-check evidence only; never used as the allowance main value.",
+        "go": {
+          "per5h": 2710,
+          "perWeek": 6770,
+          "perMonth": 13500
+        },
+        "goPlus": {
+          "per5h": 10840,
+          "perWeek": 27080,
+          "perMonth": 54000
+        },
+        "goTeams": {
+          "per5h": 2936,
+          "perWeek": 7330,
+          "perMonth": 14630
+        },
+        "landingPageGoTable": {
+          "go": {
+            "per5h": 2710,
+            "monthlyLimitUsd": 60
+          },
+          "goPlus": {
+            "per5h": 10840,
+            "monthlyLimitUsd": 240
+          },
+          "note": "The landing-page Go model table lists this row with a 'New' marker."
+        }
+      },
+      "requestShape": {
+        "inputTokens": 830,
+        "cachedReadTokens": 71500,
+        "outputTokens": 295,
+        "pageWording": "Hy4 — 830 input, 71,500 cached, 295 output tokens per request",
+        "note": "Same request shape as the Hy4 preview row and the Hy3 row."
+      },
+      "privacy": {
+        "modelTraining": "Not used",
+        "dataRetention": "0 days"
+      },
+      "landingPageBanner": "Hy4 is now available in Go",
+      "modelCount": {
+        "before": 30,
+        "after": 31,
+        "pageWording": "'View all 30 models' → 'View all 31 models'"
+      },
+      "allowanceModelCount": {
+        "before": 11,
+        "after": 12,
+        "pageWording": "'Allowances for eleven Go models' → 'Allowances for twelve Go models'"
+      }
+    }
+  },
+  "context": {
+    "hy4Preview": {
+      "name": "Hy4 preview",
+      "modelId": "hy4-preview",
+      "status": "Still listed in the official OpenCode Go price table on 2026-11-05, unchanged next to the newly added 'Hy4' row.",
+      "threePartPrice": {
+        "inputPerMTokUsd": 0.834,
+        "outputPerMTokUsd": 2.501,
+        "cachedReadPerMTokUsd": 0.042,
+        "cacheWritePerMTokUsd": null,
+        "cacheWriteNote": "Cache-write price not listed in the official table (page shows '-')."
+      },
+      "monthlyLimitUsd": {
+        "go": 30,
+        "goPlus": 120,
+        "goTeams": 35
+      },
+      "officialRequestEstimates": {
+        "note": "Official 'Estimated requests' figures for the Hy4 preview row, kept as cross-check evidence only; never used as the allowance main value.",
+        "go": {
+          "per5h": 1350,
+          "perWeek": 3380,
+          "perMonth": 6770
+        },
+        "goPlus": {
+          "per5h": 5400,
+          "perWeek": 13520,
+          "perMonth": 27080
+        },
+        "goTeams": {
+          "per5h": 1575,
+          "perWeek": 3940,
+          "perMonth": 7900
+        }
+      },
+      "repoState": "The repo already carries an opencode_go × hy4-preview adopted row (4.049 亿, Go Monthly limit $30, generated from the 'hy4-preview' entry in scripts/build_adopted.py OPENCODE_GO_MODELS) and a command_code_goat × hy4-preview adopted row (2.699 亿). No opencode_go × hy4 row exists. This capture changed neither row.",
+      "note": "Background context only. The new 'Hy4' model id is a distinct entry from 'hy4-preview'; the two rows are priced identically but carry different monthly limits."
+    }
+  },
+  "crossChannelNote": {
+    "commandCodeGoat": {
+      "observation": "Command Code GOAT still lists only Hy4 Preview on 2026-11-05; no Hy4 entry was seen on that channel the same day.",
+      "adopted": false,
+      "reason": "Cross-channel observation only; no GOAT row or GOAT value was changed by this capture."
+    }
+  },
+  "otherObservations": [
+    {
+      "topic": "DeepSeek V4.1 Flash 4× banner withdrawn",
+      "observation": "The 'DeepSeek V4.1 Flash gets 4× usage limits for a limited time' banner has disappeared from the /go landing page, while the docs page still shows the DeepSeek V4.1 Flash Monthly limit as Go $100 (Off-Peak and Peak rows) and the token prices are unchanged.",
+      "note": "Recorded only; the existing opencode_go × deepseek-v4.1-flash adopted row is not changed by this capture."
+    },
+    {
+      "topic": "Other model rows unchanged",
+      "observation": "No other model row moved in the Go, Go Plus or Go Teams price tables on 2026-11-05; every other per-model price and Monthly limit is identical to the 2026-11-04 capture.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Command Code GOAT free model delisting",
+      "observation": "Command Code GOAT delisted the free model Laguna S 2.1 (model id laguna-s-2.1-free) on the same day; the repo does not track that model, and the paid-model allowances on that channel are unchanged.",
+      "note": "Recorded only; no adopted value changed."
+    }
+  ],
+  "computationNote": "No monthlyYi, no blended per-MTok price, no derived allowance and no adopted value are computed in this file; all numbers are transcribed as published on the official pages.",
+  "relatedFiles": [
+    "opencode-go-round5-2026-09-06.json",
+    "opencode-go-teams-round1-2026-10-30.json",
+    "opencode-go-deepseek-round8-2026-10-31.json"
+  ],
+  "confidence": "medium",
+  "basis": "official"
+}
