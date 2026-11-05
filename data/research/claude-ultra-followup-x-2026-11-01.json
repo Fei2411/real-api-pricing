@@ -1,0 +1,68 @@
+{
+  "recordedAt": "2026-11-01",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 170,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-01：Claude Ultra/Max 跟进旁证（周用 94%、verified 去 5h）。不新开 issue，链 #170。截图不入库。",
+  "items": [
+    {
+      "id": "x-frosty575-max-weekly-94",
+      "confidence": "Medium",
+      "planOrModel": "Claude Max",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/frosty575/status/2116659396931699105",
+        "account": "frosty575",
+        "createdAt": "2026-10-31T22:31:40.000Z"
+      },
+      "observed": {
+        "weeklyUsedPct": 94,
+        "resetClaim": "Monday 10 PM",
+        "question": "upgrade Max→Ultra mid-week: does % reset?",
+        "hasScreenshot": true
+      },
+      "note": "面板截图未入库。"
+    },
+    {
+      "id": "x-jordan-ultra-5h-gone-passkey",
+      "confidence": "Medium",
+      "planOrModel": "Claude Ultra verified",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/jordan_ligren/status/2116633699051811127",
+        "account": "jordan_ligren",
+        "createdAt": "2026-10-31T20:49:33.000Z"
+      },
+      "observed": {
+        "fiveHourLimitVisible": false,
+        "after": "passkey setup",
+        "weeklyLimitsStillShown": true,
+        "hasScreenshot": true
+      },
+      "note": "验证 #170；无新绝对 token。"
+    },
+    {
+      "id": "x-jamesmalsawm-max5x-confusion",
+      "confidence": "Low",
+      "planOrModel": "Claude Max 5x $100（非 Ultra）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/JamesMalsawm/status/2116492884954521958",
+        "account": "JamesMalsawm",
+        "createdAt": "2026-10-31T11:30:00.000Z"
+      },
+      "observed": {
+        "claim": "$200 plan still hits limits after 5h removal news",
+        "clarificationBy": "edwinarbus: screenshot shows Max 5x; 5h removed only for $200 Ultra",
+        "hasScreenshot": true
+      },
+      "note": "澄清帖 https://x.com/edwinarbus/status/2116680306510238182；作反例保留。"
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-01.json"
+  ],
+  "relatedPriorIssues": [
+    170
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "recordedAt": "2026-11-01",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 180,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-01：OpenCode Go 额度表滚动窗转述 + 模型燃烧速度二手汇总；交叉 #171 Flash $100。截图不入库。",
+  "items": [
+    {
+      "id": "x-lu-chrisy-go-quota-table",
+      "confidence": "Medium",
+      "planOrModel": "OpenCode Go $10 · DeepSeek V4.1 Flash",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/lu_chrisy84598/status/2116473468673802537",
+        "account": "lu_chrisy84598",
+        "createdAt": "2026-10-31T10:12:51.000Z"
+      },
+      "observed": {
+        "goPriceUsd": 10,
+        "flashMonthlyUsageUsdClaimed": 100,
+        "rollingWindowClaim": {
+          "per5hMaxOfMonthlyPct": 20,
+          "perWeekMaxOfMonthlyPct": 50
+        },
+        "goTeamsUsdPerMember": 20,
+        "contributorModelsTrainOnChats": true,
+        "hasScreenshot": true
+      },
+      "note": "自称对照官网额度表；截图未入库。交叉 #171。",
+      "gaps": [
+        "需官网核验滚动窗比例"
+      ]
+    },
+    {
+      "id": "x-blockinsight-codingplans-burn",
+      "confidence": "Medium",
+      "planOrModel": "OpenCode Go paid models",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/BlockInsight214/status/2116689678950629859",
+        "account": "BlockInsight214",
+        "createdAt": "2026-11-01T00:32:00.000Z"
+      },
+      "observed": {
+        "dataset": "codingplans.dev · 26 models × 4 tasks",
+        "burnMinutesToExhaust5h": {
+          "Kimi K3": 3,
+          "Grok 4.7": 7,
+          "GLM-5.3": 10
+        },
+        "enduranceHoursClaimed": {
+          "MiMo-V2.6-Flash": 62,
+          "Muse Spark 1.3": 28,
+          "DeepSeek V4.1 Flash": 25
+        },
+        "kimiK31Pro": {
+          "officialReqPer5h": 147,
+          "agentLoopAt100kCtx": 119,
+          "agentLoopAt150kCtx": 85
+        },
+        "hasScreenshot": false
+      },
+      "note": "二手汇总；数字按帖文转写未改。"
+    },
+    {
+      "id": "x-qryon-weekly-50pct",
+      "confidence": "Medium",
+      "planOrModel": "OpenCode Go",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/qryon_Vex/status/2116697153867596057",
+        "account": "qryon_Vex",
+        "createdAt": "2026-11-01T01:01:42.000Z"
+      },
+      "observed": {
+        "daysToWeeklyLimit": "3-4",
+        "claimedUsedPct": 50,
+        "doubtsHundredDollarFrame": true,
+        "hasScreenshot": false
+      }
+    },
+    {
+      "id": "x-huagechen-80-to-100",
+      "confidence": "Medium",
+      "planOrModel": "OpenCode Go / Command Code · DeepSeek V4.1 Flash",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/huagechen/status/2116669969442463995",
+        "account": "huagechen",
+        "createdAt": "2026-10-31T23:13:41.000Z"
+      },
+      "observed": {
+        "monthlyUsageUsd": {
+          "from": 80,
+          "to": 100
+        },
+        "subPriceUsd": 10
+      },
+      "note": "复述 #171 / PR #174 主线，不另采。"
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-01.json"
+  ],
+  "relatedPriorIssues": [
+    171
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "scannedAt": "2026-11-01",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "window": {
+    "start": "2026-10-30T01:00:00Z",
+    "end": "2026-11-01T01:07:00Z"
+  },
+  "method": "Grok Bot built-in public X search_posts_all (namespace x); NOT user X plugin / Platform API quota",
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "snapshotDateShown": "2026-10-27",
+    "note": "WebFetch 首页 Snapshot=2026-10-27；扫描日 2026-11-01（Asia/Shanghai 日批标题），已滞后约 5 天。未改 production。"
+  },
+  "queries": [
+    "Kimi Code (用量 OR 配额 OR 打满 OR 百分比 OR token)",
+    "(Claude Code OR Cursor OR Codex) (usage OR quota OR limit OR tokens) (subscription OR Pro OR Max OR Ultra)",
+    "Cursor (用量 OR 配额 OR 打满 OR 限速)",
+    "(DeepSeek OR GLM OR MiniMax OR Devin) (用量 OR 配额 OR pricing OR 调价 OR quota OR usage)",
+    "(ChatGPT OR Codex) (share OR shared OR \"one usage\" OR \"usage limit\" OR 共用 OR 额度) (December OR 12月 OR Plus OR Pro)",
+    "(Claude OR \"Claude Code\" OR Anthropic) (usage OR quota OR limit OR tokens OR 用量 OR 配额 OR 打满) (Pro OR Max OR Ultra) has:images",
+    "(\"X Subscription\" OR Ultra OR Premium OR SuperGrok) (Cursor OR Grok) (usage OR quota OR tokens OR 用量 OR 打满)",
+    "(OpenCode OR Cheepseek OR \"Go Teams\") (Go OR Flash OR \"$100\" OR \"$10\" OR 额度 OR usage)",
+    "(from:CodexUpdate OR from:TokenGremlin) (ChatGPT OR Codex OR limit OR usage)",
+    "(Kimi OR Cursor OR Claude OR Codex OR OpenCode) (打满 OR 额度 OR \"%\" OR percent OR 百分比) (token OR tokens OR weekly)"
+  ],
+  "counts": {
+    "high": 3,
+    "medium": 12,
+    "discardedLowApprox": 45,
+    "searches_run": 10,
+    "unique_posts_approx": 220
+  },
+  "relatedIssues": [
+    178,
+    179,
+    180
+  ],
+  "relatedPriorIssues": [
+    170,
+    171,
+    172,
+    161,
+    157,
+    150,
+    158
+  ],
+  "retained": [
+    {
+      "url": "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+      "account": "OpenAI Help Center",
+      "planOrModel": "ChatGPT + Codex · Plus/Pro/Business",
+      "tokens": null,
+      "percent": "官方：12 月起 ChatGPT 与 Codex 共用 token 额度；Instant 不计",
+      "hasScreenshot": false,
+      "confidence": "High",
+      "why": "官方帮助页政策原文；缺各档绝对 token。",
+      "vendor": "OpenAI",
+      "text_excerpt": "Starting in December, Plus, Pro, and Business plans’ usage allowance will be shared across ChatGPT and Codex… measured in tokens… Instant chat will not draw from your usage.",
+      "created_at": "2026-10-31",
+      "relatedIssue": 178
+    },
+    {
+      "url": "https://x.com/CodexUpdate/status/2116620807929799050",
+      "account": "CodexUpdate",
+      "planOrModel": "ChatGPT + Codex shared pool",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "High",
+      "why": "逐条转写帮助页 + 链官方 URL。",
+      "vendor": "OpenAI",
+      "text_excerpt": "Confirmed: ChatGPT and Codex will share one usage limit from December… Plus, Pro and Business… measured in tokens… Instant chat doesn't count",
+      "created_at": "2026-10-31T19:58:20.000Z",
+      "relatedIssue": 178
+    },
+    {
+      "url": "https://x.com/TokenGremlin/status/2116609772396920937",
+      "account": "TokenGremlin",
+      "planOrModel": "ChatGPT + Codex shared pool",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "帮助页截图传播源。",
+      "vendor": "OpenAI",
+      "text_excerpt": "starting in December, Plus, Pro and Business limits will be shared across ChatGPT and Codex… measured in tokens… Only Instant",
+      "created_at": "2026-10-31T19:14:29.000Z",
+      "relatedIssue": 178
+    },
+    {
+      "url": "https://x.com/rohanpaul_ai/status/2116628912860282918",
+      "account": "rohanpaul_ai",
+      "planOrModel": "ChatGPT Work → ChatGPT + Codex",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "补充 Work 并入与旧 chat 按 message/周对比。",
+      "vendor": "OpenAI",
+      "created_at": "2026-10-31T20:30:32.000Z",
+      "relatedIssue": 178
+    },
+    {
+      "url": "https://x.com/tonyklose1984/status/2116695489639010636",
+      "account": "tonyklose1984",
+      "planOrModel": "Plus/Pro/Business shared pool",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "中文转述 + 帮助链接。",
+      "vendor": "OpenAI",
+      "created_at": "2026-11-01T00:55:05.000Z",
+      "relatedIssue": 178
+    },
+    {
+      "url": "https://x.com/dankzheng/status/2116515073233760573",
+      "account": "dankzheng",
+      "planOrModel": "旧 Cursor $20 + X $8（未 unify）",
+      "tokens": null,
+      "percent": "第三方 AI 月用量半天约 90%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "硬百分比；缺分项与截图。",
+      "vendor": "Cursor / X",
+      "created_at": "2026-10-31T12:58:11.000Z",
+      "relatedIssue": 179,
+      "priorIssue": 150
+    },
+    {
+      "url": "https://x.com/JarodGabriel/status/2116667777469841651",
+      "account": "JarodGabriel",
+      "planOrModel": "X Subscription Premium $30 → Super $100",
+      "tokens": null,
+      "percent": "轻量一周≈5日窗 30%；30min 到 75%；Super≈13%",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "Premium 燃烧硬百分比 + 截图；断言不够 Cursor 编码。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-10-31T23:04:58.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/EmilioSchwaiger/status/2116672167232393232",
+      "account": "EmilioSchwaiger",
+      "planOrModel": "Cursor Ultra",
+      "tokens": null,
+      "percent": "约 40% of Ultra weekly（估）",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "百分比估测 + 截图；缺档内绝对 token。",
+      "vendor": "Cursor",
+      "created_at": "2026-10-31T23:22:25.000Z",
+      "relatedIssue": 179,
+      "priorIssue": 172
+    },
+    {
+      "url": "https://x.com/rae1101x/status/2116663149177065663",
+      "account": "rae1101x",
+      "planOrModel": "Grok Bot Premium",
+      "tokens": null,
+      "percent": "单 prompt ≈5%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "单点燃烧旁证。",
+      "vendor": "Grok Bot / X Subscription",
+      "created_at": "2026-10-31T22:46:35.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/grok/status/2116559949417341388",
+      "account": "grok",
+      "planOrModel": "The X Subscription 价目",
+      "tokens": null,
+      "percent": "Plus $8；Premium $30 4×；Super $100 15×；Ultra $200 50×",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "官方账号档位倍率口述；链 x.ai/pricing。",
+      "vendor": "xAI / Cursor",
+      "created_at": "2026-10-31T15:56:30.000Z",
+      "relatedIssue": 179
+    },
+    {
+      "url": "https://x.com/lu_chrisy84598/status/2116473468673802537",
+      "account": "lu_chrisy84598",
+      "planOrModel": "OpenCode Go $10 · DeepSeek V4.1 Flash",
+      "tokens": null,
+      "percent": "自称官网表：月 $100 Flash；5h≤月 20%；周≤50%；Go Teams $20/人",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "额度表转述 + 滚动窗；交叉 #171。",
+      "vendor": "OpenCode",
+      "created_at": "2026-10-31T10:12:51.000Z",
+      "relatedIssue": 180,
+      "priorIssue": 171
+    },
+    {
+      "url": "https://x.com/BlockInsight214/status/2116689678950629859",
+      "account": "BlockInsight214",
+      "planOrModel": "OpenCode Go 付费模型燃烧",
+      "tokens": null,
+      "percent": "Kimi K3 ~3min 烧完 5h；耐用 DS Flash ~25h；K3.1 Pro 官方 147 req/5h vs agent 100k→119",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "codingplans.dev 二手汇总硬数字；可交叉官网。",
+      "vendor": "OpenCode",
+      "created_at": "2026-11-01T00:32:00.000Z",
+      "relatedIssue": 180
+    },
+    {
+      "url": "https://x.com/qryon_Vex/status/2116697153867596057",
+      "account": "qryon_Vex",
+      "planOrModel": "OpenCode Go",
+      "tokens": null,
+      "percent": "3–4 天触 weekly；自称约 50%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "个人打满旁证；怀疑 $100 框。",
+      "vendor": "OpenCode",
+      "created_at": "2026-11-01T01:01:42.000Z",
+      "relatedIssue": 180
+    },
+    {
+      "url": "https://x.com/frosty575/status/2116659396931699105",
+      "account": "frosty575",
+      "planOrModel": "Claude Max（问升 Ultra）",
+      "tokens": null,
+      "percent": "weekly 94%；重置 Monday 10 PM",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "面板百分比截图；升档是否清零未知。链 #170。",
+      "vendor": "Anthropic / Claude",
+      "created_at": "2026-10-31T22:31:40.000Z",
+      "priorIssue": 170
+    },
+    {
+      "url": "https://x.com/jordan_ligren/status/2116633699051811127",
+      "account": "jordan_ligren",
+      "planOrModel": "Claude Ultra verified",
+      "tokens": null,
+      "percent": "设 passkey 后 5h 条消失，仅见周限",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "验证 #170 Ultra 取消 5h；无新绝对 token。",
+      "vendor": "Anthropic / Claude",
+      "created_at": "2026-10-31T20:49:33.000Z",
+      "priorIssue": 170
+    }
+  ],
+  "discardedExamples": [
+    {
+      "url": "https://x.com/BlockInsight214/status/2116679203617988853",
+      "why": "免费 API 羊毛列表，非订阅打满计量"
+    },
+    {
+      "url": "https://x.com/xxxaarr/status/2116632584041984093",
+      "why": "恶意软件/LLM 情报，非定价配额"
+    },
+    {
+      "url": "https://x.com/HChai40207/status/2116549855166550104",
+      "why": "中转站双十一促销广告"
+    },
+    {
+      "url": "https://x.com/NiuOnAI/status/2116570295742165143",
+      "why": "智谱 ZCode 周末免费羊毛"
+    },
+    {
+      "url": "https://x.com/Crypt_cap/status/2116607756555686217",
+      "why": "B.AI 营销上架 Kimi"
+    },
+    {
+      "url": "https://x.com/justloveabit/status/2116499928507662672",
+      "why": "免费本地网关推广，无订阅硬数"
+    },
+    {
+      "url": "https://x.com/PeiqinH62740/status/2116570418119381014",
+      "why": "Cursor 插件供应链攻击，非配额"
+    },
+    {
+      "url": "https://x.com/0xDrexo/status/2116691961021379065",
+      "why": "免费日额度羊毛"
+    },
+    {
+      "url": "https://x.com/thsottiaux/status/2116692529970311254",
+      "why": "仅 Banked 1/2 两字，无计量数字"
+    },
+    {
+      "url": "https://x.com/gadi_neelesh/status/2116670892575211931",
+      "why": "主观 tier list，无硬配额数"
+    }
+  ],
+  "actionable_leads": [
+    "OpenAI：12 月 ChatGPT↔Codex 共用 token 池（#178）；绝对 token 表未公布",
+    "Cursor/X Subscription：Premium/Super/Ultra 燃烧 %（#179）；链 #172/#150",
+    "OpenCode Go：滚动窗 20%/5h·50%/周 + 模型燃烧速度（#180）；链 #171",
+    "Claude Ultra/Max：94% 周用与 verified 去 5h 旁证归入既有 #170，不新开 issue"
+  ],
+  "notes": [
+    "未改 #173 / #159 / #152 draft 分支。",
+    "站点 Snapshot 仍 2026-10-27（滞后约 5 天）。",
+    "截图不入库，research JSON 只链 X/官方 URL。",
+    "全部 adoptionStatus = research-only / not adopted。"
+  ]
+}
