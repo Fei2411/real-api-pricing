@@ -1,0 +1,164 @@
+{
+  "title": "Cursor/X Premium·Super absolute token calibration from X (2026-11-05)",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "collectedAt": "2026-11-05",
+  "window": {
+    "start": "2026-11-03T01:00:00Z",
+    "end": "2026-11-05T01:25:00Z"
+  },
+  "vendor": "Cursor / X Subscription",
+  "relatedIssue": 192,
+  "summary": "Premium panel: 80.8M tokens at 40% → ~202M weekly pool. Super panel: 330M at ~38% Weekly Super Limit → ~868M; another Super user tracks ~600M this week vs claimed ~1.1B prior weeks (screenshot 10% with 60.1–72.1M). Official @grok restates Premium 4× / Super 15× / Ultra 50× base pool. Cross-check with #189 Ultra 50× + 500M burn cluster.",
+  "derivedEstimates": {
+    "premiumWeeklyPoolMTokApprox": 202,
+    "superWeeklyPoolMTokApproxRange": [
+      600,
+      870
+    ],
+    "officialMultipliersVsBase": {
+      "Premium": 4,
+      "Super": 15,
+      "Ultra": 50
+    },
+    "note": "Estimates are user-meter extrapolations (tokens/%); no input/cache/output split. Do not write into adopted.csv without maintainer review."
+  },
+  "signals": [
+    {
+      "id": "singleton-premium-80p8m-40pct",
+      "confidence": "high",
+      "url": "https://x.com/ThisIsSingleton/status/2118146467965870395",
+      "relatedUrl": "https://x.com/ThisIsSingleton/status/2118145525027602638",
+      "account": "ThisIsSingleton",
+      "plan": "Premium",
+      "tokensM": 80.8,
+      "percent": 40,
+      "reset": "Nov 10",
+      "impliedWeeklyPoolMTok": 202,
+      "media": [
+        "https://pbs.twimg.com/media/HWUqJ-2a8AAksq8.jpg",
+        "https://pbs.twimg.com/media/HWUqok1a8AA7RXA.jpg",
+        "https://pbs.twimg.com/media/HWUqCedbkAI0lBV.jpg"
+      ],
+      "priorWeekScreenshotNote": "Second image shows Oct27–Nov3 Total 386.4M / Included 362.9M / Credit usage $5.13 (comparison, not same-week meter math)."
+    },
+    {
+      "id": "handsomehank-super-330m-38pct",
+      "confidence": "high",
+      "url": "https://x.com/HandsomeHank_/status/2118111527249264965",
+      "account": "HandsomeHank_",
+      "plan": "Super (UI: Weekly Super Limit)",
+      "tokensM": 330,
+      "percent": 38,
+      "reset": "Mon Nov 9 3:39 PM",
+      "breakdownPct": {
+        "Grok Bot": 11,
+        "Cursor": 27
+      },
+      "nov4BreakdownTokens": {
+        "Cursor": 193564446,
+        "Grok Bot": 43916913,
+        "Grok Chat": 144982,
+        "dayTotal": 237626341
+      },
+      "impliedWeeklyPoolMTokApprox": 868,
+      "media": [
+        "https://pbs.twimg.com/media/HWULGwAawAABUOG.jpg",
+        "https://pbs.twimg.com/media/HWULHnQbAAAoVVi.jpg"
+      ]
+    },
+    {
+      "id": "ajyoung-super-1p1b-to-600m",
+      "confidence": "high",
+      "url": "https://x.com/ajyoung1978/status/2118123492335821244",
+      "account": "ajyoung1978",
+      "plan": "Super",
+      "claimOral": "Previous 2 weeks ~1.1B tokens at 100%; now tracking ~600M this week",
+      "currentWindowScreenshot": {
+        "percent": 10,
+        "reset": "Nov 10",
+        "totalTokensM": 72.1,
+        "includedTokensM": 60.1,
+        "creditUsageUsd": 8,
+        "dateFilter": "Nov 3-4"
+      },
+      "impliedWeeklyFromIncludedAt10pctMTok": 601,
+      "media": [
+        "https://pbs.twimg.com/media/HWUWFwhXwAAo7UZ.jpg",
+        "https://pbs.twimg.com/media/HWUWFwjXAAAEIMq.jpg"
+      ]
+    },
+    {
+      "id": "grok-official-4x-15x-50x",
+      "confidence": "high",
+      "url": "https://x.com/grok/status/2118100446149550490",
+      "account": "grok",
+      "officialAccount": true,
+      "claim": "Premium 4x, Super 15x, Ultra 50x the base pool"
+    },
+    {
+      "id": "rubbzha-ultra-data-share-reset",
+      "confidence": "medium",
+      "url": "https://x.com/rubbzha/status/2118143818554114218",
+      "account": "rubbzha",
+      "plan": "Ultra",
+      "percent": 0,
+      "reset": "Nov 6 (pre-reset day before data-share reset)",
+      "media": [
+        "https://pbs.twimg.com/media/HWUogsLbAAAKPgs.jpg"
+      ]
+    },
+    {
+      "id": "lidageai-premium-12pct",
+      "confidence": "medium",
+      "url": "https://x.com/lidageai/status/2118150013696258316",
+      "account": "lidageai",
+      "plan": "Premium $30",
+      "percent": 12
+    },
+    {
+      "id": "nateehall-89pct-reset-offer",
+      "confidence": "medium",
+      "url": "https://x.com/nateehall_/status/2118095159476846835",
+      "account": "nateehall_",
+      "percent": 89,
+      "note": "4 days remaining; data-share/improve reset offer",
+      "media": [
+        "https://pbs.twimg.com/media/HWT8UitXgAAWxnb.jpg"
+      ]
+    },
+    {
+      "id": "ashleybchae-ultra-100pct",
+      "confidence": "medium",
+      "url": "https://x.com/ashleybchae/status/2118092928581267849",
+      "account": "ashleybchae",
+      "plan": "Ultra",
+      "percent": 100,
+      "media": [
+        "https://pbs.twimg.com/media/HWT6R4QbQAA_Pkl.png"
+      ]
+    },
+    {
+      "id": "soareso-day-196m-vs-119m",
+      "confidence": "medium",
+      "url": "https://x.com/soareso/status/2118108276348915992",
+      "account": "soareso",
+      "claim": "One workday: Grok Bot 196M tokens vs OpenBot 119M"
+    }
+  ],
+  "relatedIssuesPrior": [
+    189,
+    179,
+    162,
+    158,
+    172
+  ],
+  "suggestedFiles": [
+    "data/research/cursor-x-premium-super-token-calibration-x-2026-11-05.json",
+    "data/research/x-scan-2026-11-05.json"
+  ],
+  "doNotTouch": [
+    "adopted.csv",
+    "production deploy",
+    "merge without maintainer"
+  ]
+}

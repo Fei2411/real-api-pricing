@@ -1,0 +1,217 @@
+{
+  "scannedAt": "2026-11-05",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "window": {
+    "start": "2026-11-03T01:00:00Z",
+    "end": "2026-11-05T01:25:00Z"
+  },
+  "method": "Grok Bot built-in public X search_posts_all (namespace x); NOT user X plugin / Platform API quota",
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "snapshotDateShown": "2026-10-27",
+    "note": "WebFetch 首页 Snapshot=2026-10-27；扫描日 2026-11-05（Asia/Taipei 日批），已滞后约 9 天。未改 production。"
+  },
+  "queries": [
+    "(Cursor OR \"Grok Bot\" OR \"X Subscription\") (额度 OR quota OR weekly OR token OR CSV OR 周额 OR 亿 OR million OR pct OR percent OR 腰斩) (lang:zh OR lang:en) -is:retweet",
+    "has:images (用量 OR usage OR quota OR 额度) (Kimi OR Cursor OR Claude OR Codex OR \"Grok Bot\" OR Gemini OR Ultra OR Premium) -is:retweet",
+    "(Ultra OR Premium OR Super OR \"Grok Bot\") (50x OR 50× OR \"tokens per\" OR \"1%\" OR 500M OR \"2亿\" OR 200M OR 腰斩) -is:retweet",
+    "(Claude OR Anthropic) (Pro OR Max OR Ultra) (额度 OR quota OR weekly OR 周额 OR token OR pct OR percent OR 打满 OR 5h) (lang:en OR lang:zh) -is:retweet",
+    "(\"Grok Bot\" OR Ultra OR Premium) (million OR 亿 OR tokens OR usage OR quota OR 额度) (lang:en OR lang:zh) -is:retweet",
+    "(Codex OR ChatGPT OR \"GPT-6\") (banked OR 额度 OR quota OR token OR weekly OR 周额) (lang:en OR lang:zh) -is:retweet",
+    "(GLM OR MiniMax OR DeepSeek OR OpenCode OR Devin OR \"Kimi Code\" OR \"Kimi K\") (额度 OR quota OR token OR 周额 OR 月额 OR percent OR pct OR \"Coding Plan\") (lang:zh OR lang:en) -is:retweet",
+    "(\"Weekly Super Limit\" OR Super) (Grok OR Cursor OR Bot) (token OR usage OR quota OR 额度 OR million OR M) -is:retweet"
+  ],
+  "counts": {
+    "high": 4,
+    "medium": 8,
+    "discardedLowApprox": 70,
+    "searches_run": 11,
+    "unique_posts_approx": 220
+  },
+  "relatedIssues": [
+    192
+  ],
+  "relatedPriorIssues": [
+    189,
+    179,
+    186,
+    178,
+    170,
+    182,
+    162,
+    158,
+    172
+  ],
+  "retained": [
+    {
+      "url": "https://x.com/ThisIsSingleton/status/2118146467965870395",
+      "account": "ThisIsSingleton",
+      "planOrModel": "Premium · Grok Bot",
+      "tokens": "80.8M Total/Included @ 40% used → 反推周池 ≈202M；另图上周 Total 386.4M / Included 362.9M + $5.13 credit",
+      "percent": "40% used · Weekly included · Resets Nov 10",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "绝对 token + 百分比 + 计划 + 控制台截图。媒体 https://pbs.twimg.com/media/HWUqJ-2a8AAksq8.jpg · https://pbs.twimg.com/media/HWUqok1a8AA7RXA.jpg。链 #192。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-05T01:00:45.000Z",
+      "relatedIssue": 192
+    },
+    {
+      "url": "https://x.com/ThisIsSingleton/status/2118145525027602638",
+      "account": "ThisIsSingleton",
+      "planOrModel": "Premium",
+      "tokens": "复述 80.8M tokens @ 40%",
+      "percent": "40%",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "同作者对 HandsomeHank_ 的回复旁证；截图 https://pbs.twimg.com/media/HWUqCedbkAI0lBV.jpg。链 #192。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-05T00:57:01.000Z",
+      "relatedIssue": 192
+    },
+    {
+      "url": "https://x.com/HandsomeHank_/status/2118111527249264965",
+      "account": "HandsomeHank_",
+      "planOrModel": "Super · Weekly Super Limit",
+      "tokens": "约 330M tokens @ almost 40%/38%；Nov4 Cursor 193,564,446 + Grok Bot 43,916,913 + Grok Chat 144,982",
+      "percent": "38% used · Resets Mon Nov 9；Grok Bot 11% + Cursor 27%",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "面板明确 Weekly Super Limit；token 总表 + 产品拆分截图。反推周池 ≈825–868M。媒体 https://pbs.twimg.com/media/HWULGwAawAABUOG.jpg · https://pbs.twimg.com/media/HWULHnQbAAAoVVi.jpg。链 #192。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T22:41:55.000Z",
+      "relatedIssue": 192
+    },
+    {
+      "url": "https://x.com/ajyoung1978/status/2118123492335821244",
+      "account": "ajyoung1978",
+      "planOrModel": "Super",
+      "tokens": "口述前两周 ~1.1B@100%；本周跟踪 ~600M；截图窗 Total 72.1M / Included 60.1M / Credit $8 @ 10% used",
+      "percent": "10% used · Resets Nov 10（当前窗）",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "Super 绝对量级腰斩旁证；10%×≈60–72M 与 ~600–720M 周池一致。媒体 https://pbs.twimg.com/media/HWUWFwhXwAAo7UZ.jpg · https://pbs.twimg.com/media/HWUWFwjXAAAEIMq.jpg。链 #192。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T23:29:28.000Z",
+      "relatedIssue": 192
+    },
+    {
+      "url": "https://x.com/grok/status/2118100446149550490",
+      "account": "grok",
+      "planOrModel": "Premium 4× / Super 15× / Ultra 50× base pool",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "High",
+      "why": "官方账号再次确认跨档倍率；与 #189 Ultra 50× 一致并可推 Super/Premium。链 #192。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T21:57:53.000Z",
+      "relatedIssue": 192
+    },
+    {
+      "url": "https://x.com/rubbzha/status/2118143818554114218",
+      "account": "rubbzha",
+      "planOrModel": "Ultra",
+      "tokens": null,
+      "percent": "数据分享重置 → 0% used；原周重置 Nov 6",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "Ultra 面板截图 + 一次性 usage reset 机制旁证；无绝对 token。截图 https://pbs.twimg.com/media/HWUogsLbAAAKPgs.jpg",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-05T00:50:14.000Z",
+      "relatedIssue": 192
+    },
+    {
+      "url": "https://x.com/lidageai/status/2118150013696258316",
+      "account": "lidageai",
+      "planOrModel": "Premium $30",
+      "tokens": null,
+      "percent": "周额度 12%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "档位 + 硬百分比；轻量用法燃烧旁证，缺绝对 token/截图。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-05T01:14:51.000Z",
+      "relatedIssue": 192
+    },
+    {
+      "url": "https://x.com/nateehall_/status/2118095159476846835",
+      "account": "nateehall_",
+      "planOrModel": "Grok Bot（档位未标）",
+      "tokens": null,
+      "percent": "89% used · 还剩 4 天；弹出帮助改进可 reset",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "高百分比 + reset 机制截图；档位与绝对 token 缺失。截图 https://pbs.twimg.com/media/HWT8UitXgAAWxnb.jpg",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T21:36:52.000Z",
+      "relatedIssue": 192
+    },
+    {
+      "url": "https://x.com/ashleybchae/status/2118092928581267849",
+      "account": "ashleybchae",
+      "planOrModel": "Ultra",
+      "tokens": null,
+      "percent": "几天内 100%",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "Ultra 打满口述 + 图；无绝对 token。截图 https://pbs.twimg.com/media/HWT6R4QbQAA_Pkl.png",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T21:28:01.000Z",
+      "relatedIssue": 192
+    },
+    {
+      "url": "https://x.com/LimitWatch_/status/2118147552071786520",
+      "account": "LimitWatch_",
+      "planOrModel": "Claude Pro $20 / Max $100 / Ultra $200",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "官方档权益汇总：Max/Ultra 含 $100/$200 月 API credits；另帖 Ultra=10×Pro 周额且验证后无 5h。链 #170。",
+      "vendor": "Anthropic",
+      "created_at": "2026-11-05T01:05:04.000Z",
+      "relatedPriorIssue": 170
+    },
+    {
+      "url": "https://x.com/attentionaslife/status/2118142852412932388",
+      "account": "attentionaslife",
+      "planOrModel": "Google AI Ultra 20x",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "三池拆分旁证（网页对话 vs CLI；CLI 再两额度）。截图 https://pbs.twimg.com/media/HWR_3iQaQAAQTbu.png。链 #186。",
+      "vendor": "Google",
+      "created_at": "2026-11-05T00:46:23.000Z",
+      "relatedPriorIssue": 186
+    },
+    {
+      "url": "https://x.com/yangleiocx3/status/2118146240781386133",
+      "account": "yangleiocx3",
+      "planOrModel": "Google AI Ultra 20x $199.99/mo",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "权益清单：20× Pro、30TB、25k Flow/月、$100 Cloud 等；非用量实测。链 #186。",
+      "vendor": "Google",
+      "created_at": "2026-11-05T00:59:51.000Z",
+      "relatedPriorIssue": 186
+    },
+    {
+      "url": "https://x.com/soareso/status/2118108276348915992",
+      "account": "soareso",
+      "planOrModel": "Grok Bot vs OpenBot（Grok 4.7/4.6）",
+      "tokens": "一日：Grok Bot 196M vs OpenBot 119M",
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "硬绝对 token 对比口述；非完整周池满表。",
+      "vendor": "Cursor / X Subscription",
+      "created_at": "2026-11-04T22:29:00.000Z",
+      "relatedIssue": 192
+    }
+  ],
+  "discardedSummary": "约 70 条 Low：纯吐槽额度秒没/撞墙无数字；订阅号买卖；Claude Code 后台状态栏省额度新闻（官方效率，非用户配额校准）；Kimi K3.1 Pro 权重开源；AMD/OpenRouter 免费额度促销；Apple 内部 AI 预算二手新闻；无关金融/票务噪声。"
+}
