@@ -1,0 +1,228 @@
+{
+  "recordedAt": "2026-11-06",
+  "timezoneNote": "Asia/Shanghai daily batch; window ~2026-11-04T00:00:00Z to 2026-11-06T01:05:00Z",
+  "sourceType": "x_public_scan_grokbot_builtin",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "snapshotShown": "2026-10-27",
+    "lagDaysApprox": 10,
+    "note": "站点 snapshot 仍滞后；本 PR 不部署"
+  },
+  "queries": [
+    "(Kimi OR \"Kimi Code\" OR kimi-code) (用量 OR 配额 OR 打满 OR 百分比 OR \"%\" OR tokens OR quota) -is:retweet",
+    "(Claude OR Cursor OR Codex OR Anthropic) (usage OR quota OR limit OR tokens OR 用量 OR 配额 OR 打满) (plan OR Pro OR Max OR Ultra OR 订阅) -is:retweet",
+    "(DeepSeek OR GLM OR MiniMax OR Devin OR OpenCode OR \"Command Code\") (pricing OR price OR 调价 OR 套餐 OR 促销 OR 配额 OR 用量 OR tokens OR quota) -is:retweet",
+    "(Ultra OR Premium OR Super) (Grok OR Cursor OR \"X Subscription\" OR xAI) (tokens OR \"%\" OR 用量 OR weekly OR limit) (has:images OR 百万 OR M OR B OR billion OR 亿) -is:retweet",
+    "(\"Claude Ultra\" OR \"Claude Max\" OR \"Claude Pro\" OR \"Claude Code\") (weekly OR 周 OR \"%\" OR tokens OR 额度 OR limit OR 打满 OR credits) -is:retweet",
+    "(\"Kimi\" OR \"kimi code\" OR Allegro OR \"月之暗面\") (Allegro OR 199 OR 699 OR \"K3.1\" OR 面板 OR 周池 OR 用量 OR \"%\" OR tokens) (has:images OR 百万 OR M) -is:retweet",
+    "(\"Google AI Ultra\" OR \"AI Ultra\" OR Codex OR \"ChatGPT Pro\" OR \"GLM Coding\" OR MiniMax) (tokens OR quota OR \"%\" OR 额度 OR weekly OR 周 OR credits OR 促销) -is:retweet"
+  ],
+  "counts": {
+    "high": 2,
+    "medium": 7,
+    "discardedLowApprox": 55,
+    "note": "同一话题多帖合并计数；纯吐槽/营销/无关模型开源新闻默认丢弃"
+  },
+  "kept": {
+    "high": [
+      {
+        "id": "x-astroex-ultra-1p5b-96pct-2026-11-06",
+        "confidence": "High",
+        "url": "https://x.com/astroex_/status/2118504698772664385",
+        "account": "astroex_",
+        "createdAt": "2026-11-06T00:44:14Z",
+        "plan": "X Subscription Ultra (50x)",
+        "observed": {
+          "panelTotalTokens": "1.5B",
+          "dateRangeShown": "2026-11-01 to 2026-11-06",
+          "weeklyUltraLimitPct": 96,
+          "resetAt": "2026-11-08T22:57 local (panel text)",
+          "productBreakdownPct": {
+            "Grok Bot": 61,
+            "Cursor": 29,
+            "Chat": 5,
+            "Grok Build": 1
+          },
+          "postOral": "~1.5B tokens; ~60% grok bot; ~30% cursor",
+          "hasScreenshot": true,
+          "screenshotNote": "两张图：Usage tokens/day 堆叠 + Weekly Ultra Limit 96% 条；未入库复制，只链原帖"
+        },
+        "whyRelevant": "同时有绝对 token 与周限百分比，可反推 Ultra 周池约 1.5B/0.96≈1.56B；产品分项齐全",
+        "relatedIssueHint": "new or #189/#192"
+      },
+      {
+        "id": "x-fffhk-premium-wow-382m-to-50p84m-2026-11-05",
+        "confidence": "High",
+        "url": "https://x.com/fffhk201906/status/2118393439909999085",
+        "account": "fffhk201906",
+        "createdAt": "2026-11-05T17:22:08Z",
+        "plan": "X Subscription Premium",
+        "observed": {
+          "week1": {
+            "range": "2026-10-22 to 2026-10-29",
+            "postClaim": "≈98% = 382M tokens",
+            "panelTotalTokens": 382046454,
+            "panelTotalDisplay": "382.05M",
+            "inputExclCache": 769506,
+            "output": 4105703,
+            "cachedInput": 362171533,
+            "cacheWrite": 14999712,
+            "cacheSharePct": 94.8
+          },
+          "week2": {
+            "range": "2026-10-29 to 2026-11-05",
+            "postClaim": "100% = 58.84M tokens; about 6x less",
+            "panelTotalTokens": 50842313,
+            "panelTotalDisplay": "50.84M",
+            "inputExclCache": 241540,
+            "output": 501419,
+            "cachedInput": 48035631,
+            "cacheWrite": 2063723,
+            "cacheSharePct": 94.5,
+            "discrepancyNote": "口述 58.84M vs 截图面板合计 50.84M；两边都记，不自行择一或改数"
+          },
+          "hasScreenshot": true
+        },
+        "whyRelevant": "Premium 周池绝对 token + 百分比口径 + input/cache/output 分项；周间断崖旁证调速后燃烧",
+        "relatedIssueHint": "#192 / #179"
+      }
+    ],
+    "medium": [
+      {
+        "id": "x-hector-ultra-17pct-5h30-2026-11-06",
+        "confidence": "Medium",
+        "url": "https://x.com/HectorVilorio/status/2118501529241928134",
+        "account": "HectorVilorio",
+        "createdAt": "2026-11-06T00:31:39Z",
+        "plan": "Ultra (highest plan)",
+        "observed": {
+          "weeklyUsagePct": 17,
+          "elapsedAfterReset": "about 5.5 hours",
+          "hasScreenshot": false
+        },
+        "gaps": [
+          "无绝对 token",
+          "无截图"
+        ]
+      },
+      {
+        "id": "x-handsomehank-legacy-1p8b-halved-2026-11-05",
+        "confidence": "Medium",
+        "url": "https://x.com/HandsomeHank_/status/2118462744093663426",
+        "account": "HandsomeHank_",
+        "createdAt": "2026-11-05T21:57:31Z",
+        "plan": "legacy X Premium+ & Cursor Pro+",
+        "observed": {
+          "priorWeeklyTokensOral": "about 1.8B",
+          "afterCutOral": "about half for same $100",
+          "hasScreenshot": false
+        },
+        "gaps": [
+          "口述无截图",
+          "无百分比"
+        ]
+      },
+      {
+        "id": "x-fourthandpetty-premium-98pct-2026-11-05",
+        "confidence": "Medium",
+        "url": "https://x.com/FourthandPetty/status/2118380141114245504",
+        "account": "FourthandPetty",
+        "createdAt": "2026-11-05T16:29:17Z",
+        "plan": "Premium",
+        "observed": {
+          "weeklyUsagePct": 98,
+          "resetsIn": "3 days",
+          "hasScreenshot": true
+        },
+        "gaps": [
+          "无绝对 token"
+        ]
+      },
+      {
+        "id": "x-imhaoyi-google-ultra-list-2026-11-05",
+        "confidence": "Medium",
+        "url": "https://x.com/imhaoyi/status/2118340966494999004",
+        "account": "imhaoyi",
+        "createdAt": "2026-11-05T13:53:37Z",
+        "plan": "Google AI Ultra",
+        "observed": {
+          "listPricesUsd": {
+            "5x": 99.99,
+            "20x": 199.99
+          },
+          "cloudCreditsUsdMonthly": {
+            "5x": 40,
+            "20x": 100
+          },
+          "hasScreenshot": true
+        },
+        "gaps": [
+          "价目/权益旁证，非用量硬数"
+        ],
+        "relatedIssueHint": "#23 / #186"
+      },
+      {
+        "id": "x-devin-swe2-flash-promo-2026-11-06",
+        "confidence": "Medium",
+        "url": "https://x.com/knightleijun/status/2118507157583024204",
+        "account": "knightleijun",
+        "createdAt": "2026-11-06T00:54:00Z",
+        "observed": {
+          "claim": "SWE-2 Flash free on Devin Desktop/CLI until 2026-11-30; ~200 tok/s; ~1/5 relative cost vs SWE-2; no API/weights",
+          "corroboration": "https://x.com/Khaled865412521/status/2118493573897130130"
+        },
+        "gaps": [
+          "促销二手传播；站点仍有 SWE-2 Devin Pro promo until 10/31 文案需维护者复核是否过期"
+        ]
+      },
+      {
+        "id": "x-rafke-claude-code-statusline-5pct-2026-11-06",
+        "confidence": "Medium",
+        "url": "https://x.com/rafke_rafke0311/status/2118509365674004611",
+        "account": "rafke_rafke0311",
+        "createdAt": "2026-11-06T01:02:47Z",
+        "observed": {
+          "claimFromClaudeDevsNov4": "status-line refresh ~99% cheaper; whole sessions using background ~5% less of the limit"
+        },
+        "gaps": [
+          "二手解读 ClaudeDevs；非绝对 token 池校准"
+        ]
+      },
+      {
+        "id": "x-dupestack-claude-max-api-credits-2026-11-06",
+        "confidence": "Medium",
+        "url": "https://x.com/DupeStack/status/2118502654863360251",
+        "account": "DupeStack",
+        "createdAt": "2026-11-06T00:36:07Z",
+        "plan": "Claude Max",
+        "observed": {
+          "claim": "Claude Code with 5x Pro usage plus $100/mo API credits"
+        },
+        "gaps": [
+          "口述结构；需与 #170 官方口径交叉"
+        ]
+      }
+    ]
+  },
+  "discardedExamples": [
+    "纯 Kimi K3.1 Pro 开源/权重下载新闻（无订阅用量）",
+    "Inkling/API 标价对比营销",
+    "感觉变卡/额度刺客无硬数吐槽",
+    "学生站/聚合充值广告",
+    "无关加密货币/音乐帖误命中 Allegro"
+  ],
+  "relatedOpenIssues": [
+    192,
+    189,
+    179,
+    170,
+    186,
+    23
+  ],
+  "relatedFiles": [
+    "data/research/x-scan-2026-11-06.json",
+    "data/research/cursor-x-ultra-1p5b-96pct-x-2026-11-06.json",
+    "data/research/cursor-x-premium-wow-panel-x-2026-11-06.json"
+  ]
+}
