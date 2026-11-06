@@ -1,0 +1,55 @@
+{
+  "recordedAt": "2026-10-31",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 172,
+  "relatedPriorIssue": 150,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "Cursor Cloud Agent 计费旁证 + Grok 用量百分比；主共享池议题仍见 #150/#158。截图不入库。",
+  "items": [
+    {
+      "id": "x-sam4112mp-cloud-agent-thousands-requests",
+      "confidence": "Medium",
+      "planOrModel": "Cursor Cloud Agent",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/sam4112mp/status/2116272965771756029",
+        "account": "sam4112mp",
+        "createdAt": "2026-10-30T20:56:08.000Z"
+      },
+      "observed": {
+        "ticket": "T-I53955",
+        "claim": "one long Cloud Agent session can generate thousands of separate model requests",
+        "supportSaidCountedCorrectly": true,
+        "hasScreenshot": true
+      },
+      "note": "原帖：https://x.com/sam4112mp/status/2116272965771756029",
+      "gaps": [
+        "无绝对 token / 无配额百分比"
+      ]
+    },
+    {
+      "id": "x-JBOY-grok47-10pct",
+      "confidence": "Medium",
+      "planOrModel": "Cursor + Grok 4.7",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/JBOY83062526/status/2116313524553285913",
+        "account": "JBOY83062526",
+        "createdAt": "2026-10-30T23:37:18.000Z"
+      },
+      "observed": {
+        "usedPctApprox": 10,
+        "includesYesterday": true,
+        "hasScreenshot": true
+      },
+      "note": "原帖：https://x.com/JBOY83062526/status/2116313524553285913",
+      "gaps": [
+        "档名未明示",
+        "无绝对 token"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-10-31.json"
+  ]
+}
