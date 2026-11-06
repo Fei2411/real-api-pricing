@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
-import { join, resolve } from "node:path";
+import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { after, test } from "node:test";
 import { parse } from "csv-parse/sync";
@@ -162,7 +162,7 @@ test("global data and output options work before and after commands", () => {
     assert.deepEqual(JSON.parse(before.stdout), JSON.parse(after.stdout));
     const body = JSON.parse(before.stdout) as Result<QueryRow>;
     assert.equal(body.meta.source, "file");
-    assert.equal(body.meta.sourcePath, resolve(path));
+    assert.equal(body.meta.sourcePath, realpathSync(path));
     assert.equal(body.meta.total, data.points.length);
     assert.equal(body.meta.returned, 2);
     assert.equal(body.meta.truncated, true);
