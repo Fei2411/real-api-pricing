@@ -1,0 +1,82 @@
+{
+  "recordedAt": "2026-10-29",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 158,
+  "relatedPriorIssue": 150,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-10-29 X 扫描 Cursor / The X Subscription Ultra 共享池旁证；主议题仍见 #150。截图不入库。",
+  "items": [
+    {
+      "id": "x-SeedOilAwarenes-ultra-76-to-96",
+      "confidence": "Medium",
+      "planOrModel": "The X Subscription Ultra（含 Cursor）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/SeedOilAwarenes/status/2115583444495528413",
+        "account": "SeedOilAwarenes",
+        "createdAt": "2026-10-28T23:16:13.000Z"
+      },
+      "observed": {
+        "ultraUsedPctFrom": 76,
+        "ultraUsedPctTo": 96,
+        "driversMentioned": [
+          "cursor",
+          "grok bot"
+        ],
+        "hasScreenshot": false
+      },
+      "note": "旁证 #150。原帖：https://x.com/SeedOilAwarenes/status/2115583444495528413",
+      "gaps": [
+        "无截图",
+        "无绝对 token"
+      ]
+    },
+    {
+      "id": "x-Ryker8356332-ultra-200-out",
+      "confidence": "Medium",
+      "planOrModel": "Cursor Ultra $200",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/Ryker8356332/status/2115591688706253081",
+        "account": "Ryker8356332",
+        "createdAt": "2026-10-28T23:48:59.000Z"
+      },
+      "observed": {
+        "priceUsd": 200,
+        "claim": "already out of tokens",
+        "hasScreenshot": false
+      },
+      "note": "原帖：https://x.com/Ryker8356332/status/2115591688706253081",
+      "gaps": [
+        "无百分比截图",
+        "无 token 表"
+      ]
+    },
+    {
+      "id": "x-ImLukeF-grokbot-75pct-2-3d",
+      "confidence": "Medium",
+      "planOrModel": "Grok Bot / The X Subscription",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ImLukeF/status/2115417469636735354",
+        "account": "ImLukeF",
+        "createdAt": "2026-10-28T12:16:41.000Z"
+      },
+      "observed": {
+        "usedPct": 75,
+        "windowDays": "2–3",
+        "priceConcernUsd": 150,
+        "hasScreenshot": false
+      },
+      "note": "原帖：https://x.com/ImLukeF/status/2115417469636735354",
+      "gaps": [
+        "档名未明示 Ultra",
+        "无截图"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-10-29.json",
+    "cursor-pro-x-subscription-x-2026-10-28.json"
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "recordedAt": "2026-10-29",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 155,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-10-29 X 公开搜索保留的 Kimi Coding Plan（199/699）5h 与月池实测。截图不入库，只链原帖。数字只转写扫描原文。",
+  "items": [
+    {
+      "id": "x-MUG_chen-699-6p25m-10pct-5h",
+      "confidence": "High",
+      "planOrModel": "Kimi Coding Plan 699 RMB / ~$100 · k3.1-pro",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/MUG_chen/status/2115604208854671591",
+        "account": "MUG_chen",
+        "createdAt": "2026-10-29T00:38:44.000Z"
+      },
+      "observed": {
+        "model": "k3.1-pro",
+        "tokensModel": 6251660,
+        "tokensSessionTotal": 37923361,
+        "requests": 154,
+        "fiveHourUsedPct": 10,
+        "impliedFiveHourPoolTok": "≈60M（帖内推算）",
+        "impliedMonthlyPoolTok": "≈1B（帖内推算）",
+        "planPrice": {
+          "amount": 699,
+          "currency": "CNY",
+          "approxUsd": 100
+        },
+        "hasScreenshot": true
+      },
+      "note": "控制台截图未入库。原帖：https://x.com/MUG_chen/status/2115604208854671591",
+      "gaps": [
+        "月池 1B 是帖内由 5h 推算，非官方表",
+        "未给出 input/output/cache 分项"
+      ]
+    },
+    {
+      "id": "x-MUG_chen-699-100m-10pct-monthly",
+      "confidence": "High",
+      "planOrModel": "Kimi Coding Plan 699 RMB (~$100) · K3.1 Pro",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/MUG_chen/status/2115347271269392672",
+        "account": "MUG_chen",
+        "createdAt": "2026-10-28T07:37:45.000Z"
+      },
+      "observed": {
+        "tokensUsed": "100M",
+        "monthlyUsedPct": 10,
+        "impliedMonthlyPoolTok": "≈1B",
+        "hasScreenshot": true
+      },
+      "note": "与同账号 5h 推算一致。原帖：https://x.com/MUG_chen/status/2115347271269392672",
+      "gaps": [
+        "截图未入库",
+        "缺分项 token"
+      ]
+    },
+    {
+      "id": "x-MUG_chen-199-33m-5h-exhausted",
+      "confidence": "High",
+      "planOrModel": "Kimi Coding Plan 199 档",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/MUG_chen/status/2115094523068240274",
+        "account": "MUG_chen",
+        "createdAt": "2026-10-27T14:53:25.000Z"
+      },
+      "observed": {
+        "windowLocal": "16:00–20:00",
+        "tokensUsed": "33M",
+        "fiveHour": "耗光",
+        "hasScreenshot": true
+      },
+      "note": "199 档对照样本。原帖：https://x.com/MUG_chen/status/2115094523068240274",
+      "gaps": [
+        "缺百分比条读数",
+        "缺分项"
+      ]
+    },
+    {
+      "id": "x-enzyme_dev-kimi-code-model-cost-ui",
+      "confidence": "Medium",
+      "planOrModel": "Kimi Code 模型价目 UI",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/enzyme_dev/status/2115600563945848951",
+        "account": "enzyme_dev",
+        "createdAt": "2026-10-29T00:24:15.000Z"
+      },
+      "observed": {
+        "claim": "Kimi Code 内多个模型很贵；缺 flash",
+        "hasScreenshot": true
+      },
+      "note": "UI 截图未入库。原帖：https://x.com/enzyme_dev/status/2115600563945848951",
+      "gaps": [
+        "无个人配额百分比",
+        "无绝对 token 表转写"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-10-29.json",
+    "kimi-k31-pro-api-opencode-go-x-2026-10-28.json",
+    "kimi-k31-pro-apology-x-2026-10-27.json"
+  ]
+}
