@@ -1,0 +1,102 @@
+{
+  "recordedAt": "2026-10-28",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 151,
+  "relatedPriorIssue": 144,
+  "adoptionStatus": "research-only; not adopted; API list price and OpenCode Go entry price are not adopted; the 25% compensation stays the one-time event in #144 and does not rewrite the Kimi monthly pool",
+  "scopeNote": "2026-10-28 X 公开搜索里的 Kimi K3.1 Pro API 价与 OpenCode Go 入口价。补偿条款只作 #144 的交叉源，不改月池。截图不入库。",
+  "items": [
+    {
+      "id": "x-BinHupink-k31-pro-api-2-10-0p20",
+      "confidence": "Medium",
+      "planOrModel": "API（K3.1 Pro） / Kimi K3.1 Pro",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/BinHupink/status/2115248183156559970",
+        "account": "BinHupink",
+        "createdAt": "2026-10-28T01:04:00.000Z"
+      },
+      "observed": {
+        "usdPerMTok": {
+          "input": 2,
+          "output": 10,
+          "cache": 0.2
+        },
+        "vsK3": "较 K3 的 $3/$15 约低 1/3",
+        "context": "全 1M 上下文同价",
+        "hasScreenshot": false
+      },
+      "note": "帖称附官方定价页；本记录只链原帖，未把定价页 URL 写成未给出的地址。原帖：https://x.com/BinHupink/status/2115248183156559970",
+      "gaps": [
+        "二手汇总，入库前需核官方价目页",
+        "无截图"
+      ]
+    },
+    {
+      "id": "x-sujee_dev-opencode-go-10-and-k31-api",
+      "confidence": "Medium",
+      "planOrModel": "OpenCode Go $10/mo；Kimi API / Kimi K3.1 Pro",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/sujee_dev/status/2115221361149071841",
+        "account": "sujee_dev",
+        "createdAt": "2026-10-27T23:17:26.000Z"
+      },
+      "observed": {
+        "openCodeGoFromUsdPerMonth": 10,
+        "kimiApiUsdPerMTok": {
+          "input": 2,
+          "output": 10,
+          "cache": 0.2
+        },
+        "openRouter": "同价",
+        "heavyUse": "OpenCode Go 重度编码可能撞 usage limits",
+        "weightsPublicAround": "Nov 4",
+        "hasScreenshot": false
+      },
+      "note": "无个人计量截图。原帖：https://x.com/sujee_dev/status/2115221361149071841",
+      "gaps": [
+        "入口价与 API 价需与官方页核对",
+        "无个人 token / 配额百分比"
+      ]
+    },
+    {
+      "id": "x-k31-pro-25pct-compensation-crosscheck-144",
+      "confidence": "Medium",
+      "planOrModel": "会员 / Kimi K3.1 Pro",
+      "observed": {
+        "event": "10/26 Kimi 就 K3.1 Pro 上线后限流与不必要/异常额度消耗致歉",
+        "compensation": "有效期内会员返还月度总额 25%（约一周用量）",
+        "ifUnder25Pct": "用量不足 25% 则重置为 0",
+        "windowMentioned": "上线 48h"
+      },
+      "sources": [
+        {
+          "url": "https://x.com/xiaoyunHK/status/2115235945704554852",
+          "account": "xiaoyunHK",
+          "createdAt": "2026-10-28T00:15:23.000Z",
+          "hasScreenshot": true,
+          "note": "线程配图未入库。原帖：https://x.com/xiaoyunHK/status/2115235945704554852"
+        },
+        {
+          "url": "https://x.com/BinHupink/status/2115248214354088023",
+          "account": "BinHupink",
+          "createdAt": "2026-10-28T01:04:08.000Z",
+          "hasScreenshot": false,
+          "note": "附 IT之家/新浪来源的二手汇总。原帖：https://x.com/BinHupink/status/2115248214354088023"
+        }
+      ],
+      "crossRef": "补偿仍见 #144 与 kimi-k31-pro-apology-x-2026-10-27.json；本条只作交叉源，不改月池",
+      "gaps": [
+        "缺个人用量 token 表",
+        "需核对官方致歉原文，不只停留在 X 转述"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-10-28.json",
+    "kimi-k31-pro-apology-x-2026-10-27.json",
+    "opencode-go-kimi-k31-pro-round1-2026-10-24.json",
+    "kimi199-k31-pro-highspeed-local-round1-2026-10-24.json"
+  ]
+}

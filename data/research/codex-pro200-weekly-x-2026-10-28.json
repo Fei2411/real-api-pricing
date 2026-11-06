@@ -1,0 +1,127 @@
+{
+  "recordedAt": "2026-10-28",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 149,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-10-28 每日 X 公开搜索保留的 Codex / ChatGPT Pro $200 周限信号。截图不入库，证据只链原帖 URL。数字只转写扫描日志。",
+  "items": [
+    {
+      "id": "x-RealVovaPutin-pro200-830p4m-13pct-left",
+      "confidence": "High",
+      "planOrModel": "Pro ($200 档，文中 Pro 200)",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/RealVovaPutin/status/2115228770281930789",
+        "account": "RealVovaPutin",
+        "createdAt": "2026-10-27T23:46:52.000Z"
+      },
+      "observed": {
+        "claim": "Barely 1 billion tokens，周限已用掉约 88%",
+        "screenshotDay": "Oct 26",
+        "screenshotTokens": "830.4M",
+        "planLabel": "Pro plan",
+        "weeklyLeftPct": 13,
+        "weeklyUsedPctApprox": 88,
+        "priorCalibration": "2-3B / 2天约 40-60% 周配额",
+        "comparison": "买了 Pro 200，对比 Claude PRO 差距很大",
+        "hasScreenshot": true
+      },
+      "note": "控制台截图未入库。原帖：https://x.com/RealVovaPutin/status/2115228770281930789",
+      "gaps": [
+        "正文写 88% down，截图写 13% left；两处并存，本记录不把 13 改成 12",
+        "「约 1B」是正文口径，截图当日是 830.4M"
+      ]
+    },
+    {
+      "id": "x-abhagsain-pro200-sol-medium-94pct-1p659b",
+      "confidence": "High",
+      "planOrModel": "$200 weekly / Sol Medium",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/abhagsain/status/2115219070865826020",
+        "account": "abhagsain",
+        "createdAt": "2026-10-27T23:08:20.000Z"
+      },
+      "observed": {
+        "claim": "两天用 Sol Medium 烧完 $200 周限",
+        "weeklyUsedPct": 94,
+        "inputTotal": "约 1.659B（698+416+261+196+88 M）",
+        "breakdownInput": [
+          {
+            "label": "Testing",
+            "sharePct": 33.6,
+            "input": "698M"
+          },
+          {
+            "label": "Code review",
+            "sharePct": 26.6,
+            "input": "416M"
+          },
+          {
+            "label": "Plan review",
+            "sharePct": 17.3,
+            "input": "261M"
+          },
+          {
+            "label": "Counselors",
+            "sharePct": 12.4,
+            "input": "196M"
+          },
+          {
+            "label": "Other",
+            "sharePct": 4.1,
+            "input": "88M"
+          }
+        ],
+        "hasScreenshot": true
+      },
+      "note": "自绘/导出条形图未入库。原帖：https://x.com/abhagsain/status/2115219070865826020",
+      "gaps": [
+        "图是自绘/导出，不是官方控制台原页",
+        "1.659B 是扫描日志对分项的合计转写，本文件不另算周池"
+      ]
+    },
+    {
+      "id": "x-Chuck_D_Quypto-168h-window-jumps",
+      "confidence": "Medium",
+      "planOrModel": "pro（日志含 prolite→pro）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/Chuck_D_Quypto/status/2115249280776618177",
+        "account": "Chuck_D_Quypto",
+        "createdAt": "2026-10-28T01:08:22.000Z"
+      },
+      "observed": {
+        "tool": "codex-usage-audit",
+        "window": "168h",
+        "jumps": [
+          "19%→54%/60%",
+          "0%→33%"
+        ],
+        "jumpMagnitudePp": "+33~41pp",
+        "planChanges": [
+          "prolite→pro",
+          "None→pro"
+        ],
+        "hasScreenshot": false
+      },
+      "note": "本地审计日志，无截图。原帖：https://x.com/Chuck_D_Quypto/status/2115249280776618177",
+      "gaps": [
+        "无绝对 token",
+        "时间跨度含扫描窗口外读数"
+      ]
+    }
+  ],
+  "seeAlso": [
+    {
+      "url": "https://x.com/albrxt/status/2115207720563519990",
+      "confidence": "Medium",
+      "why": "ChatGPT Plus $20（不是 Pro $200）：Sol 6.1 med 在 5h 窗里 1h 烧掉周限 16%。全文记在 claude-usage-x-signals-2026-10-28.json。"
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-10-28.json",
+    "claude-usage-x-signals-2026-10-28.json",
+    "chatgpt-pro-community-issue97-2026-10-03.json"
+  ]
+}

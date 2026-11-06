@@ -1,0 +1,234 @@
+{
+  "recordedAt": "2026-10-28",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 148,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-10-28 每日 X 公开搜索保留的 Claude Code / 默认档 / Max 周限与 5h 窗用量。截图不入库，证据只链原帖 URL。数字只转写扫描日志，不另算配额。",
+  "items": [
+    {
+      "id": "x-sammysanchan-opus55-80p5m-to-156p1m",
+      "confidence": "High",
+      "planOrModel": "Claude（Padrão/默认订阅档，UI 显示 Opus 5.5）/ claude-opus-5-5",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/sammysanchan/status/2115218215127208052",
+        "account": "sammysanchan",
+        "createdAt": "2026-10-27T23:04:55.000Z"
+      },
+      "observed": {
+        "priorWindow": {
+          "tokensTotal": "80.5M",
+          "apiWorthUsd": 54,
+          "fiveHourUsedPct": 76,
+          "fiveHourElapsedPct": 53,
+          "weeklyUsedPct": 10
+        },
+        "currentWindow": {
+          "tokensTotal": "156.1M",
+          "apiWorthUsd": 95,
+          "fiveHourUsedPct": 99,
+          "fiveHourTimePct": 68,
+          "weeklyUsedPct": 27,
+          "weeklyTimePct": 11,
+          "breakdown": {
+            "input": "771",
+            "output": "315.9K",
+            "cacheRead": "154.8M",
+            "cacheWrite": "999K"
+          }
+        },
+        "session": {
+          "id": "2fb83120",
+          "tokens": "124.1M",
+          "turns": 256,
+          "apiWorthUsd": 73,
+          "fiveHourQuotaPct": 68
+        },
+        "cacheHitPct": 99,
+        "hasScreenshot": true
+      },
+      "note": "用量分析控制台截图含 in/out/cache 拆分，未复制入库。原帖：https://x.com/sammysanchan/status/2115218215127208052",
+      "gaps": [
+        "套餐写成 UI 默认档（Padrão），不是 Pro/Max 具名档",
+        "input 按原文记为 771，未改单位",
+        "5h 的 68% time 与 session 占 5h 配额 68% 是两件不同的事；周限 11% time 只出现在当前窗"
+      ]
+    },
+    {
+      "id": "x-HimanshuRawal05-weekly-92",
+      "confidence": "Medium",
+      "planOrModel": "All models（周限汇总）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/HimanshuRawal05/status/2115250216593231925",
+        "account": "HimanshuRawal05",
+        "createdAt": "2026-10-28T01:12:05.000Z"
+      },
+      "observed": {
+        "weeklyUsedPct": 92,
+        "when": "周三",
+        "reset": "周六 11:30",
+        "ui": "Weekly limits / All models 92% used",
+        "hasScreenshot": true
+      },
+      "note": "周限控制台截图未入库。原帖：https://x.com/HimanshuRawal05/status/2115250216593231925",
+      "gaps": [
+        "无绝对 token",
+        "无明确套餐名"
+      ]
+    },
+    {
+      "id": "x-emanueledpt-weekly-100-in-24h",
+      "confidence": "Medium",
+      "planOrModel": null,
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/emanueledpt/status/2115245281612587433",
+        "account": "emanueledpt",
+        "createdAt": "2026-10-28T00:52:29.000Z"
+      },
+      "observed": {
+        "claim": "Claude Code 周用量 24h 内用完",
+        "weeklyUsedPct": 100,
+        "window": "24h",
+        "hasScreenshot": true
+      },
+      "note": "附图未入库。原帖：https://x.com/emanueledpt/status/2115245281612587433",
+      "gaps": [
+        "无 token",
+        "无套餐档"
+      ]
+    },
+    {
+      "id": "x-rbartoli-max5x-5h-median-155",
+      "confidence": "Medium",
+      "planOrModel": "Max 5x",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/rbartoli/status/2115218617071476827",
+        "account": "rbartoli",
+        "createdAt": "2026-10-27T23:06:31.000Z"
+      },
+      "observed": {
+        "sixMonthApiEquivalentUsd": 35757,
+        "maxPaidApproxGbp": 700,
+        "fiveHourWindowMedianUsdBeforeLimit": 155,
+        "repeatedContextSharePct": 86,
+        "limitsCutSeen": false,
+        "hasScreenshot": false
+      },
+      "note": "无截图。原帖：https://x.com/rbartoli/status/2115218617071476827",
+      "gaps": [
+        "无 token 与配额百分比",
+        "六个月 $35,757 与 £700 是按 API 价估的个人日志，不是官方价目"
+      ]
+    },
+    {
+      "id": "x-albrxt-pro20-vs-plus20-weekly-burn",
+      "confidence": "Medium",
+      "planOrModel": "Claude Pro $20 / ChatGPT Plus $20 / Opus 5.5 med / Sol 6.1 med",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/albrxt/status/2115207720563519990",
+        "account": "albrxt",
+        "createdAt": "2026-10-27T22:23:13.000Z"
+      },
+      "observed": {
+        "claude": {
+          "plan": "Claude Pro $20",
+          "model": "Opus 5.5 med",
+          "window": "5h",
+          "elapsed": "2h",
+          "weeklyUsedPct": 8
+        },
+        "chatgpt": {
+          "plan": "ChatGPT Plus $20",
+          "model": "Sol 6.1 med",
+          "window": "5h",
+          "elapsed": "1h",
+          "weeklyUsedPct": 16
+        },
+        "hasScreenshot": false
+      },
+      "note": "同价位跨厂商燃烧速率；ChatGPT 一侧同时见 codex 专题的 seeAlso。原帖：https://x.com/albrxt/status/2115207720563519990",
+      "gaps": [
+        "无绝对 token",
+        "无截图"
+      ]
+    },
+    {
+      "id": "x-CatKingAC-semianalysis-max20x-about-20pct",
+      "confidence": "Medium",
+      "planOrModel": "Max 20x",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/CatKingAC/status/2115203580462551394",
+        "account": "CatKingAC",
+        "createdAt": "2026-10-27T22:06:46.000Z"
+      },
+      "observed": {
+        "anthropicStaffClaim": "limits 未变",
+        "semiAnalysisClaim": "部分 Max 20x 账号周额度约少 20%",
+        "weeklyReductionPctApprox": 20,
+        "hasScreenshot": false
+      },
+      "note": "二手转述，非一手控制台。原帖：https://x.com/CatKingAC/status/2115203580462551394",
+      "gaps": [
+        "SemiAnalysis 二手",
+        "与「员工称 limits 未变」并存，未裁定"
+      ]
+    },
+    {
+      "id": "x-SharipovAkhror-duet-reset-through-nov-30",
+      "confidence": "Medium",
+      "planOrModel": "Claude Duet（促销重置）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/SharipovAkhror/status/2115240675864158276",
+        "account": "SharipovAkhror",
+        "createdAt": "2026-10-28T00:34:11.000Z"
+      },
+      "observed": {
+        "reset": "full 5h + weekly",
+        "dayOneVisibility": "部分 day-one 用户约 10/27 才看到 Reset for free",
+        "validThrough": "Nov 30",
+        "regionNote": "非美区无",
+        "hasScreenshot": true
+      },
+      "note": "配额重置 UI 截图未入库。原帖：https://x.com/SharipovAkhror/status/2115240675864158276",
+      "gaps": [
+        "促销/重置，不是稳态周池",
+        "非美区称不可用"
+      ]
+    },
+    {
+      "id": "x-aiwithadb-weekly-nearly-done-opus55-5x",
+      "confidence": "Medium",
+      "planOrModel": "Opus 5.5",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/aiwithadb/status/2115223158898794653",
+        "account": "aiwithadb",
+        "createdAt": "2026-10-27T23:24:34.000Z"
+      },
+      "observed": {
+        "weekly": "nearly done",
+        "drainClaim": "Opus 5.5 消耗约 5x 更快",
+        "hasScreenshot": true
+      },
+      "note": "周限将近耗尽截图未入库。原帖：https://x.com/aiwithadb/status/2115223158898794653",
+      "gaps": [
+        "无绝对 token",
+        "无套餐名",
+        "5x 是相对声称"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "claude-usage-x-signals-2026-10-27.json",
+    "x-scan-2026-10-28.json",
+    "claude-pro-opus55-community-issue124-2026-10-18.json",
+    "claude-max5x-opus55-community-issue98-2026-10-03.json",
+    "claude-max20x-opus55-community-issue96-2026-10-02.json"
+  ]
+}

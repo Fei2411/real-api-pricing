@@ -1,0 +1,357 @@
+{
+  "scannedAt": "2026-10-28",
+  "window": {
+    "start": "2026-10-26T01:00:00Z",
+    "end": "2026-10-28T01:20:00Z"
+  },
+  "method": "Grok Bot built-in public X search_posts_all (namespace x); NOT user X plugin / Platform API quota",
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "snapshotDateShown": "2026-10-27",
+    "note": "站点快照 2026-10-27，与扫描日基本同步（昨日 10-16 滞后已消除）"
+  },
+  "queries": [
+    "Kimi Code 用量 OR 配额 OR 打满 OR 百分比 lang:zh",
+    "Kimi (token OR 用量 OR 配额) (Code OR 编程 OR 订阅)",
+    "Cursor (用量 OR 配额 OR \"rate limit\" OR usage) (Pro OR Ultra OR Business)",
+    "(Claude Code OR Anthropic) (usage OR quota OR limit OR 用量) (Pro OR Max OR Team)",
+    "(Codex OR OpenAI) (coding OR code) (usage OR quota OR tokens OR 用量)",
+    "(DeepSeek OR GLM OR MiniMax OR Devin) (用量 OR 配额 OR pricing OR 套餐 OR quota OR usage)",
+    "Kimi (199 OR \"K3.1\" OR Highspeed OR \"kimi-code\" OR \"Kimi Code\")",
+    "has:images (Kimi OR Cursor OR Claude) (用量 OR usage OR quota OR 控制台 OR 配额)",
+    "\"rate limit\" (Cursor OR Claude OR Codex)",
+    "(OpenCode OR Windsurf OR Copilot) (usage OR quota OR 调价 OR 用量 OR pricing)",
+    "(Kimi OR 月之暗面 OR Moonshot) (返还 OR 限流 OR 额度 OR Code会员 OR \"Kimi Code\" OR 打满)",
+    "(Claude OR \"Claude Code\") (\"weekly\" OR \"5-hour\" OR \"5h\" OR Max) (\"%\" OR percent OR limit OR usage) has:images",
+    "Cursor (Ultra OR Pro) (\"100%\" OR \"usage\" OR tokens OR \"rate limit\" OR 打满 OR 用完)",
+    "(Codex OR \"ChatGPT Pro\" OR \"ChatGPT Plus\") (\"rate limit\" OR \"weekly\" OR \"5-hour\" OR tokens OR \"%\") (usage OR limit OR quota)"
+  ],
+  "counts": {
+    "high": 4,
+    "medium": 16,
+    "discardedLowApprox": 10,
+    "searches_run": 14,
+    "unique_posts_approx": 222
+  },
+  "relatedIssues": [
+    148,
+    149,
+    150,
+    151
+  ],
+  "relatedPriorIssues": [
+    144,
+    145
+  ],
+  "retained": [
+    {
+      "url": "https://x.com/sammysanchan/status/2115218215127208052",
+      "account": "sammysanchan",
+      "planOrModel": "Claude (Padrão/默认订阅档，UI 显示 Opus 5.5) / claude-opus-5-5",
+      "tokens": "156.1M total (in 771 · out 315.9K · cache read 154.8M · cache write 999K); prior window 80.5M",
+      "percent": "5h: 99% (68% time); Weekly: 27% (11% time)",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "同时具备绝对 token（含 input/output/cache）+ 5h/周配额百分比 + 用量分析控制台截图 + 模型档与重置时间，可还原重度 Claude Code 会话消耗。",
+      "vendor": "Anthropic / Claude Code",
+      "text_excerpt": "Claude CLI 两窗对比：5h 76%(53% elapsed)→99%(68% elapsed)；Weekly 10%→27%；tokens 80.5M($54)→156.1M($95)；session 2fb83120 124.1M/256 turns/$73 占 5h 配额 68%；cache hit 99%。截图含 in/out/cache 拆分。",
+      "created_at": "2026-10-27T23:04:55.000Z"
+    },
+    {
+      "url": "https://x.com/RealVovaPutin/status/2115228770281930789",
+      "account": "RealVovaPutin",
+      "planOrModel": "Pro ($200 档，文中 Pro 200)",
+      "tokens": "~1B（单日截图 Oct 26: 830.4M tokens）",
+      "percent": "weekly ~88% used（截图 13% left）",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "控制台截图同时给出日 token 量与周配额剩余百分比，并标明 Pro plan；可交叉验证 $200 档周额度规模。",
+      "vendor": "OpenAI / Codex (ChatGPT Pro)",
+      "text_excerpt": "Barely 1 billion tokens - already 88% down weekly limit. 此前校准期 2-3B/2天约 40-60% 周配额。买了 Pro 200 对比 Claude PRO 差距很大。截图：Oct 26 | 830.4M tokens；Pro plan Weekly limit 13% left。",
+      "created_at": "2026-10-27T23:46:52.000Z"
+    },
+    {
+      "url": "https://x.com/abhagsain/status/2115219070865826020",
+      "account": "abhagsain",
+      "planOrModel": "$200 weekly（文中 $200） / Sol Medium",
+      "tokens": "input 合计约 1.659B（698+416+261+196+88 M）对应 94% 周限",
+      "percent": "94% weekly used（两天烧完 $200 周限）",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "自绘/导出图把周配额百分比与各类 input token 绝对量一一对应，计划价位与模型档清晰，可估 $200 档周 token 池。",
+      "vendor": "OpenAI / Codex",
+      "text_excerpt": "burned my $200 weekly limit in two days with Sol Medium；附图条形图 Fixed: where the Codex weekly limit went (94% used)：Testing 33.6%/698M input、Code review 26.6%/416M、Plan review 17.3%/261M、Counselors 12.4%/196M、Other 4.1%/88M。",
+      "created_at": "2026-10-27T23:08:20.000Z"
+    },
+    {
+      "url": "https://x.com/shownotover/status/2115142779525595566",
+      "account": "shownotover",
+      "planOrModel": "Pro $20/mo / Grok 4.7 fast",
+      "tokens": "27M tokens ≈ 7% monthly → ~349M tokens/month 推算",
+      "percent": "7% of monthly limit",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "具体 token + 对应月配额百分比 + 计划价位与模型，可反推 Cursor Pro 月额度量级（需注意为单次测试推算）。",
+      "vendor": "Cursor",
+      "text_excerpt": "测试 Cursor Pro $20 + Grok 4.7 fast：27M tokens、1.3h work、占 MONTHLY limit 7% → 推算约 349M tokens/月；另有 $75 API credits。附图。",
+      "created_at": "2026-10-27T18:05:10.000Z"
+    },
+    {
+      "url": "https://x.com/HimanshuRawal05/status/2115250216593231925",
+      "account": "HimanshuRawal05",
+      "planOrModel": "All models（周限汇总）",
+      "tokens": null,
+      "percent": "92% weekly（周三，重置周六 11:30）",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "有官方周限控制台百分比与重置时间，但缺绝对 token 与明确套餐名。",
+      "vendor": "Anthropic / Claude",
+      "text_excerpt": "92% of my weekly Claude limit. Gone. It's Wednesday. Reset is Saturday 11:30. 截图 Weekly limits / All models 92% used。",
+      "created_at": "2026-10-28T01:12:05.000Z"
+    },
+    {
+      "url": "https://x.com/emanueledpt/status/2115245281612587433",
+      "account": "emanueledpt",
+      "planOrModel": null,
+      "tokens": null,
+      "percent": "100% weekly in 24h",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "硬数字为「24h 打满周配额」+ 截图，缺 token 与套餐档。",
+      "vendor": "Anthropic / Claude Code",
+      "text_excerpt": "I finished my whole weekly usage in Claude Code in 24h（附图）",
+      "created_at": "2026-10-28T00:52:29.000Z"
+    },
+    {
+      "url": "https://x.com/rbartoli/status/2115218617071476827",
+      "account": "rbartoli",
+      "planOrModel": "Max 5x",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "有计划名与 5h 窗美元中位值、API 等价账单硬数字，可对照 Max 性价比；缺 token/%。",
+      "vendor": "Anthropic / Claude Code",
+      "text_excerpt": "六个月 Claude Code 日志按 API 价估 $35,757，Max 实付约 £700。Max 5x 上 5h 窗触及限额前中位 $155；其中 86% 是重复送上下文。未见限额被砍。",
+      "created_at": "2026-10-27T23:06:31.000Z"
+    },
+    {
+      "url": "https://x.com/xiaoyunHK/status/2115235945704554852",
+      "account": "xiaoyunHK",
+      "planOrModel": "会员（K3.1 Pro 相关） / Kimi K3.1 Pro",
+      "tokens": null,
+      "percent": "返还月度总额 25%（约一周用量）；不足 25% 则重置为 0",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "官方补偿动作有硬百分比，可交叉验证 IT之家/新浪与 @BinHupink 二手汇总；缺个人用量 token 表。",
+      "vendor": "Kimi / Moonshot",
+      "text_excerpt": "10/26 凌晨 Kimi 承认 K3.1 Pro 上线 48h 限流与额度异常消耗，所有会员直接补 25%。线程配图。关联帖：会员群吐槽额度掉太快。",
+      "created_at": "2026-10-28T00:15:23.000Z"
+    },
+    {
+      "url": "https://x.com/BinHupink/status/2115248214354088023",
+      "account": "BinHupink",
+      "planOrModel": "会员 / Kimi K3.1 Pro",
+      "tokens": null,
+      "percent": "返还 25% 月度额度",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "可交叉验证的官方配额补偿条款汇总，含硬百分比与规则细节。",
+      "vendor": "Kimi / Moonshot",
+      "text_excerpt": "10/26 官方就 K3.1 Pro 限流和不必要额度消耗致歉，有效期内会员返还月度总额 25%；用量不足 25% 直接重置为 0。附 IT之家/新浪来源。",
+      "created_at": "2026-10-28T01:04:08.000Z"
+    },
+    {
+      "url": "https://x.com/BinHupink/status/2115248183156559970",
+      "account": "BinHupink",
+      "planOrModel": "API（K3.1 Pro） / Kimi K3.1 Pro",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "官方价目硬数字（含 cache），可更新定价站 API 表；非订阅用量百分比。",
+      "vendor": "Kimi / Moonshot",
+      "text_excerpt": "Kimi K3.1 Pro：$2/M input、$10/M output、cache $0.20；较 K3 的 $3/$15 约低 1/3；全 1M 上下文同价。附官方定价页。",
+      "created_at": "2026-10-28T01:04:00.000Z"
+    },
+    {
+      "url": "https://x.com/albrxt/status/2115207720563519990",
+      "account": "albrxt",
+      "planOrModel": "Claude Pro $20 / ChatGPT Plus $20 / Opus 5.5 med / Sol 6.1 med",
+      "tokens": null,
+      "percent": "Claude: 8% weekly / 2h；ChatGPT: 16% weekly / 1h",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "同价位跨厂商燃烧速率硬百分比对比，缺绝对 token。",
+      "vendor": "Anthropic + OpenAI",
+      "text_excerpt": "Claude Pro $20：Opus 5.5 med 5h 窗 2h 烧掉周限 8%。ChatGPT Plus $20：Sol 6.1 med 5h 窗 1h 烧掉周限 16%。",
+      "created_at": "2026-10-27T22:23:13.000Z"
+    },
+    {
+      "url": "https://x.com/Skarly/status/2115246210441486722",
+      "account": "Skarly",
+      "planOrModel": "Ultra（共享池，含 Cursor）",
+      "tokens": null,
+      "percent": "100% Ultra used in 1 day",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "有套餐名+百分比+用量条截图，但属 X/Cursor 共享 Ultra 池，无绝对 token。",
+      "vendor": "xAI The X Subscription + Cursor",
+      "text_excerpt": "1 天打满 Ultra 计划 100%（mostly due to cursor usage）。截图 UI：Ultra 100% used。询问如何把 coding 分流到 Claude/Codex。",
+      "created_at": "2026-10-28T00:56:10.000Z"
+    },
+    {
+      "url": "https://x.com/CatKingAC/status/2115203580462551394",
+      "account": "CatKingAC",
+      "planOrModel": "Max 20x",
+      "tokens": null,
+      "percent": "~20% weekly 额度减少（SemiAnalysis 二手）",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "可交叉验证的二手硬百分比信号，指向 Max 档隐性收紧；非一手控制台。",
+      "vendor": "Anthropic / Claude",
+      "text_excerpt": "Anthropic 员工称 limits 未变；SemiAnalysis 称部分 Max 20x 账号周额度约少 20%。质疑谁审计 usage bar。",
+      "created_at": "2026-10-27T22:06:46.000Z"
+    },
+    {
+      "url": "https://x.com/BillWatchCA/status/2115223591805415600",
+      "account": "BillWatchCA",
+      "planOrModel": "Pro / Pro+ / Max / Business / Enterprise（用量计费） / GPT-6.1 Terra",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "官方用量计费价目硬数字，可更新 Copilot 模型价。",
+      "vendor": "GitHub Copilot / OpenAI",
+      "text_excerpt": "GPT-6.1 Terra 在 GitHub Copilot usage-based billing：$1/M input、$5/M output，覆盖 Pro/Pro+/Max/Business/Enterprise，逐步 rollout。",
+      "created_at": "2026-10-27T23:26:17.000Z"
+    },
+    {
+      "url": "https://x.com/sosolab13/status/2115225056431276532",
+      "account": "sosolab13",
+      "planOrModel": "Cursor Pro $20；Anthropic API PAYG / Opus 5.5",
+      "tokens": null,
+      "percent": "账单 +65%；62% 花在 Opus 5.5",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "真实月账单美元硬数字 + Cursor Pro 超额度行为，偏 API/混合栈而非单一订阅配额表。",
+      "vendor": "Anthropic API + Cursor",
+      "text_excerpt": "Opus 5.5 官方称便宜 40%，个人 Anthropic API 账单 $143→$237（+65%），62% 花在 Opus 5.5；Cursor Pro $20 重度必超再买加速包。",
+      "created_at": "2026-10-27T23:32:07.000Z"
+    },
+    {
+      "url": "https://x.com/Chuck_D_Quypto/status/2115249280776618177",
+      "account": "Chuck_D_Quypto",
+      "planOrModel": "pro（日志含 prolite→pro）",
+      "tokens": null,
+      "percent": "168h window 多段百分比跳跃（+33~41pp）",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "本地审计日志给出 Codex 周窗百分比与套餐变更，缺绝对 token；时间跨度含窗口外读数需谨慎。",
+      "vendor": "OpenAI / Codex",
+      "text_excerpt": "codex-usage-audit：168h window 多次 19%→54%/60%、0%→33%；含 plan changed prolite→pro / None→pro。",
+      "created_at": "2026-10-28T01:08:22.000Z"
+    },
+    {
+      "url": "https://x.com/SharipovAkhror/status/2115240675864158276",
+      "account": "SharipovAkhror",
+      "planOrModel": "Claude Duet（促销重置）",
+      "tokens": null,
+      "percent": "full 5h + weekly reset",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "配额促销/重置政策硬事实 + UI 截图，属调价/配额动作信号。",
+      "vendor": "Anthropic / Claude",
+      "text_excerpt": "Claude Duet 用户获 full usage reset（5h + weekly）；部分 day-one 用户约 10/27 才看到 Reset for free；有效至 Nov 30；非美区无。附图。",
+      "created_at": "2026-10-28T00:34:11.000Z"
+    },
+    {
+      "url": "https://x.com/sujee_dev/status/2115221361149071841",
+      "account": "sujee_dev",
+      "planOrModel": "OpenCode Go $10/mo；Kimi API / Kimi K3.1 Pro",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "新套餐入口价与 API 价可核对；含「重度会撞限」体验但无个人计量截图。",
+      "vendor": "Kimi + OpenCode",
+      "text_excerpt": "访问 K3.1 Pro：OpenCode Go 起 $10/mo；Kimi CLI/API $2/$10/$0.20 cache；OpenRouter 同价。称 OpenCode Go 重度编码可能撞 usage limits。权重约 Nov 4 公开。",
+      "created_at": "2026-10-27T23:17:26.000Z"
+    },
+    {
+      "url": "https://x.com/aiwithadb/status/2115223158898794653",
+      "account": "aiwithadb",
+      "planOrModel": "Opus 5.5",
+      "tokens": null,
+      "percent": "weekly nearly done；自称消耗约 5x 更快",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "有周限将近耗尽截图 + 相对消耗倍数声称，缺绝对 token 与套餐名。",
+      "vendor": "Anthropic / Claude",
+      "text_excerpt": "Claude weekly usage almost done；Opus 5.5 usage now draining 5x faster（附图）",
+      "created_at": "2026-10-27T23:24:34.000Z"
+    },
+    {
+      "url": "https://x.com/nima_owji/status/2115150789886828672",
+      "account": "nima_owji",
+      "planOrModel": "The X Subscription 各档",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "新捆绑套餐价目表硬数字，直接影响 Cursor 真实到手配额叙事（需与官方页交叉验证）。",
+      "vendor": "xAI / Cursor（捆绑）",
+      "text_excerpt": "The X Subscription：Free $0 / Plus $8 / Premium $30（含原 SuperGrok+Cursor Pro+X Premium+ 价值）/ Super $100 / Ultra $200；Grok/Bot/Cursor 共享用量池。",
+      "created_at": "2026-10-27T18:37:00.000Z"
+    }
+  ],
+  "discardedExamples": [
+    {
+      "url": "https://x.com/shitunote/status/2115224121789559271",
+      "reason": "ZenMux 万圣节盲盒营销，无个人真实用量计量"
+    },
+    {
+      "url": "https://x.com/moorehead_j/status/2115249235750989947",
+      "reason": "股票乖离率教程，关键词误匹配「百分比」"
+    },
+    {
+      "url": "https://x.com/ESPC_Community/status/2115213248777597260",
+      "reason": "会议 Late Bird 票价营销，与 AI 订阅用量无关"
+    },
+    {
+      "url": "https://x.com/ziz_ai/status/2115237653041795320",
+      "reason": "「哪个 agent 干活最多」投票，无数字"
+    },
+    {
+      "url": "https://x.com/AllGr8Things/status/2115182580047737243",
+      "reason": "自称每月打满 Cursor Ultra & Claude Max，无 token/%/截图计量"
+    },
+    {
+      "url": "https://x.com/nexttec6o/status/2115221912645407004",
+      "reason": "Opus API 省钱通用建议帖，非个人配额证据"
+    },
+    {
+      "url": "https://x.com/karlmehta/status/2115222769231331572",
+      "reason": "政府 40% 折扣新闻，非编程订阅真实用量"
+    },
+    {
+      "url": "https://x.com/RealYDT/status/2115243308457087394",
+      "reason": "Luna 活动券 input/cache/output 很全，但是活动奖品券非编程订阅套餐"
+    },
+    {
+      "url": "https://x.com/QuantvmH/status/2115203365231849798",
+      "reason": "自称 weekly 100% 后仍能跑，附图是 agent 作业 UI 非用量控制台"
+    },
+    {
+      "url": "https://x.com/ORACLE_OKLA/status/2115146614507720787",
+      "reason": "平台宣传文案，无计量"
+    }
+  ],
+  "actionable_leads": [
+    "Claude Code：重度会话可在 5h 窗打到 99%，单窗 ~156M tokens（含巨量 cache read）；周限工作日中段常见 90%+；Max 5x 5h 窗 API 等价中位约 $155；Duet 有 5h+weekly 重置促销至 Nov 30",
+    "Codex/$200：两天 Sol Medium 烧到周限 94%，input 合计约 1.66B；Pro 档单日可达 ~0.8–1B tokens 对应 ~88% 周限；168h 窗百分比审计工具在用",
+    "Cursor Pro $20：Grok 4.7 fast 实测 27M tokens≈月限 7%（推算 ~349M/月）；X Subscription Ultra 共享池可 1 天 100%",
+    "Kimi：K3.1 Pro API $2/$10/$0.20；10/26 官方因限流/异常扣费返还会员 25% 月额度——优先做定价站/订阅页更新",
+    "Copilot：GPT-6.1 Terra usage-based $1/$5 per 1M，多档套餐适用"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-10-28",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 145,
+  "adoptionStatus": "research-only; not adopted; verify the Copilot usage-based price page before any metered row; do not open a new issue for this aside",
+  "scopeNote": "旁证：GitHub Copilot 上 GPT-6.1 Terra 的 usage-based 价。链既有 #145，不新开 issue。无截图。",
+  "items": [
+    {
+      "id": "x-BillWatchCA-copilot-gpt61-terra-1-5",
+      "confidence": "Medium",
+      "planOrModel": "Pro / Pro+ / Max / Business / Enterprise（用量计费） / GPT-6.1 Terra",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/BillWatchCA/status/2115223591805415600",
+        "account": "BillWatchCA",
+        "createdAt": "2026-10-27T23:26:17.000Z"
+      },
+      "observed": {
+        "billing": "GitHub Copilot usage-based",
+        "usdPerMTok": {
+          "input": 1,
+          "output": 5
+        },
+        "plans": [
+          "Pro",
+          "Pro+",
+          "Max",
+          "Business",
+          "Enterprise"
+        ],
+        "rollout": "逐步 rollout",
+        "hasScreenshot": false
+      },
+      "note": "无截图。原帖：https://x.com/BillWatchCA/status/2115223591805415600",
+      "gaps": [
+        "二手价目，需核 Copilot 官方用量计费页",
+        "未给出 cache 价"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-10-28.json",
+    "gpt61-terra-and-promos-x-2026-10-27.json"
+  ]
+}
