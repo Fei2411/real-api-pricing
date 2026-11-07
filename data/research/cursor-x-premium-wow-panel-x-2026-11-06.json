@@ -1,0 +1,58 @@
+{
+  "recordedAt": "2026-11-06",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "X Subscription Premium 用量分析面板周对比：绝对 token + 分项 + 帖主百分比口径。截图只链原帖。",
+  "items": [
+    {
+      "id": "x-fffhk-premium-wow-382m-to-50p84m-2026-11-05",
+      "confidence": "High",
+      "planId": "x_subscription_premium",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/fffhk201906/status/2118393439909999085",
+        "account": "fffhk201906",
+        "createdAt": "2026-11-05T17:22:08Z",
+        "replyTo": "https://x.com/venthewise/status/2118307380777955812"
+      },
+      "observed": {
+        "week1_panel": {
+          "range": "22/10/2026–29/10/2026",
+          "totalTokens": 382046454,
+          "usageEvents": 5426,
+          "inputExclCache": 769506,
+          "output": 4105703,
+          "cachedInput": 362171533,
+          "cacheWrite": 14999712,
+          "cacheSharePct": 94.8,
+          "postPctClaim": 98
+        },
+        "week2_panel": {
+          "range": "29/10/2026–05/11/2026",
+          "totalTokens": 50842313,
+          "usageEvents": 834,
+          "inputExclCache": 241540,
+          "output": 501419,
+          "cachedInput": 48035631,
+          "cacheWrite": 2063723,
+          "cacheSharePct": 94.5,
+          "postPctClaim": 100,
+          "postTotalClaim": "58.84M",
+          "panelVsPostNote": "面板合计 50.84M；帖文写 58.84M。两边保留，不改数。"
+        },
+        "postSummary": "About 6x less week-over-week",
+        "hasScreenshot": true
+      },
+      "gaps": [
+        "百分比来自帖文口述，截图为用量分析页而非 Weekly usage limit 条",
+        "week2 口述总量与面板合计不一致",
+        "调速前后可比性需维护者裁定（用量强度是否相同）"
+      ],
+      "relatedIssues": [
+        192,
+        179,
+        189
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "recordedAt": "2026-11-06",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "Cursor/X Subscription Ultra 周限面板：绝对 token + 百分比 + 产品分项。截图只链原帖。",
+  "items": [
+    {
+      "id": "x-astroex-ultra-1p5b-96pct-2026-11-06",
+      "confidence": "High",
+      "planId": "x_subscription_ultra",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/astroex_/status/2118504698772664385",
+        "account": "astroex_",
+        "createdAt": "2026-11-06T00:44:14Z"
+      },
+      "observed": {
+        "panelLabel": "Weekly Ultra Limit",
+        "usagePct": 96,
+        "includedUsageTokens": "1.5B",
+        "creditUsageUsd": 0,
+        "dateRangeShown": "Nov 1 – 6, 2026",
+        "resetText": "Resets November 8, 2026 at 10:57 PM",
+        "breakdownPct": {
+          "Grok Bot": 61,
+          "Cursor": 29,
+          "Chat": 5,
+          "Grok Build": 1
+        },
+        "impliedWeeklyPoolTokensApprox": "1.5B / 0.96 ≈ 1.56B (derived; not official)",
+        "hasScreenshot": true,
+        "screenshotNote": "原帖 2 张图；未入库复制"
+      },
+      "gaps": [
+        "无 input/cache/output 分项",
+        "1.5B 为面板展示缩写，完整整数未在截图可见",
+        "Team 视图（面板 Toggle=Team）是否等同个人周池需维护者裁定"
+      ],
+      "relatedIssues": [
+        189,
+        192,
+        179,
+        162,
+        158
+      ]
+    }
+  ]
+}
