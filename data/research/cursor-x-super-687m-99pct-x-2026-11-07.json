@@ -1,0 +1,42 @@
+{
+  "recordedAt": "2026-11-07",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 192,
+  "relatedComment": "https://github.com/Fei2411/real-api-pricing/issues/192#issuecomment-6700161068",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-07 扫描跟进 #192：Super 687.6M@98-99% 周面板。不另开 issue。",
+  "items": [
+    {
+      "id": "x-ovo3-super-687p6m-99pct",
+      "confidence": "High",
+      "planId": "x_subscription_super",
+      "model": "mixed Grok Bot / Cursor pool",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ovo3ovo3ovo3ovo/status/2118184317604216972",
+        "account": "ovo3ovo3ovo3ovo",
+        "createdAt": "2026-11-05T03:31:09Z"
+      },
+      "observed": {
+        "plan": "Super (upgraded from Premium Nov 3)",
+        "totalTokens": 687600000,
+        "includedTokens": 687600000,
+        "creditUsageUsd": 0,
+        "weeklyIncludedUsedPctApprox": 99,
+        "window": "2026-11-03 to 2026-11-05",
+        "resets": "2026-11-05",
+        "derivedWeeklyPoolApprox": 694545455,
+        "hasScreenshot": true,
+        "screenshotNote": "Usage% + Weekly Included bar + Total/Included 卡；未入库"
+      },
+      "gaps": [
+        "无 input/cache/output 分项",
+        "Team/个人视图未说明"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "cursor-x-premium-super-token-calibration-x-2026-11-05.json",
+    "x-scan-2026-11-07.json"
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "recordedAt": "2026-11-07",
+  "sourceType": "x_public_scan",
+  "tool": "x.search_posts_all (Grok Bot built-in; not user X Platform API)",
+  "window": {
+    "start_time": "2026-11-05T01:00:00Z",
+    "end_note": "scan fire ~2026-11-07T01:09Z UTC / Asia/Shanghai day 2026-11-07"
+  },
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "snapshotDate": "2026-10-27",
+    "lagDaysApprox": 11
+  },
+  "counts": {
+    "High": 2,
+    "Medium": 10,
+    "discardedLowApprox": 120
+  },
+  "issuesCreated": [
+    {
+      "number": 197,
+      "url": "https://github.com/Fei2411/real-api-pricing/issues/197",
+      "grade": "High"
+    },
+    {
+      "number": 198,
+      "url": "https://github.com/Fei2411/real-api-pricing/issues/198",
+      "grade": "Medium"
+    }
+  ],
+  "issueComments": [
+    {
+      "issue": 192,
+      "url": "https://github.com/Fei2411/real-api-pricing/issues/192#issuecomment-6700161068",
+      "note": "Super 687.6M@99% follow-up"
+    }
+  ],
+  "skippedDuplicates": [
+    {
+      "url": "https://x.com/astroex_/status/2118504698772664385",
+      "reason": "already in #195 Ultra 1.5B@96%"
+    },
+    {
+      "theme": "Pro quota doubling policy-only",
+      "reason": "covered by #161; only absolute post-doubling sample opened as #198"
+    }
+  ],
+  "queries": [
+    {
+      "q": "Kimi Code (用量 OR 配额 OR 打满 OR 百分比 OR token) -is:retweet",
+      "kept": 0,
+      "note": "mostly marketing / model release; no new panel"
+    },
+    {
+      "q": "(\"Kimi Code\" OR kimi-code OR Allegro OR Allegretto) (usage OR quota OR tokens OR %) -is:retweet",
+      "error": "invalid query: % character"
+    },
+    {
+      "q": "Claude Code (用量 OR 配额 OR 打满 OR usage OR quota OR tokens OR rate limit) -is:retweet",
+      "kept": "Medium LeoAgentAI Ultra rename; TheEasySale1 217M bug"
+    },
+    {
+      "q": "Cursor (用量 OR 配额 OR usage OR quota OR rate limit OR tokens OR Weekly) (Pro OR Ultra OR Business OR Premium OR Super) -is:retweet",
+      "kept": "Medium srosyballs 5%; official grok 4x/15x/50x restates"
+    },
+    {
+      "q": "(Codex OR OpenAI Codex) (usage OR quota OR tokens OR 用量 OR 配额 OR Weekly OR limit) -is:retweet",
+      "kept": "Medium TodayYueC / sakura / yituihi"
+    },
+    {
+      "q": "(DeepSeek OR GLM OR MiniMax) (Code OR 编程 OR Coding OR Plan) (用量 OR 配额 OR 套餐 OR 调价 OR usage OR quota OR tokens) -is:retweet",
+      "kept": "High/Med Command Code cluster"
+    },
+    {
+      "q": "(Devin OR OpenCode OR Windsurf OR Command Code) (pricing OR 调价 OR 套餐 OR usage OR quota OR credits OR GOAT) -is:retweet",
+      "kept": "High 0xJustshrimp; Med official Ultrafast"
+    },
+    {
+      "q": "(定价 OR 调价 OR 涨价 OR 降价 OR 翻倍 OR doubled OR price change) (Claude OR Cursor OR Kimi OR Codex OR ChatGPT OR Ultra OR Premium) (订阅 OR 套餐 OR plan OR quota) -is:retweet",
+      "kept": "TodayYueC High-candidate→Medium; Pro double corroboration"
+    },
+    {
+      "q": "(Weekly Ultra OR Weekly Super OR Weekly Premium OR Weekly Limit OR Included usage) (tokens OR used OR percent) has:images -is:retweet",
+      "kept": "ovo Super High; u1 Medium%; Zyre 53% Low/Med"
+    },
+    {
+      "q": "(Weekly Ultra OR ...) percent OR % has:images",
+      "error": "invalid query: % character"
+    },
+    {
+      "q": "(Codex OR ChatGPT OR GPT) (翻倍 OR doubled OR 2x OR two times) (配额 OR quota OR usage OR Pro OR Work) -is:retweet",
+      "kept": "LimitHitCom Oct29; SteveGalvisX"
+    },
+    {
+      "q": "(Kimi OR Allegro OR Allegretto OR K3.1) (用量 OR 配额 OR 周 OR Weekly OR tokens OR 打满) (Code OR Coding OR 面板 OR 控制台) -is:retweet",
+      "kept": 0
+    }
+  ],
+  "keptSignals": [
+    {
+      "grade": "High",
+      "handle": "0xJustshrimp",
+      "plan": "Command Code GOAT $10",
+      "numbers": "panel ~2.4B tokens @ ~56% monthly; claim ~3B / 40% rem",
+      "screenshot": "Y",
+      "url": "https://x.com/0xJustshrimp/status/2118389099195412596",
+      "issue": 197
+    },
+    {
+      "grade": "High",
+      "handle": "ovo3ovo3ovo3ovo",
+      "plan": "X Super",
+      "numbers": "687.6M @ ~98-99% weekly → ~694M pool",
+      "screenshot": "Y",
+      "url": "https://x.com/ovo3ovo3ovo3ovo/status/2118184317604216972",
+      "issueComment": 192
+    },
+    {
+      "grade": "Medium",
+      "handle": "TodayYueC",
+      "plan": "ChatGPT Pro$100 Codex + Claude Pro",
+      "numbers": "Codex 908.8M@4% left→~0.95B; Claude 1.04B exhausted Opus5.5",
+      "screenshot": "N (meme GIF)",
+      "url": "https://x.com/TodayYueC/status/2118777995284664576",
+      "issue": 198
+    },
+    {
+      "grade": "Medium",
+      "handle": "CommandCodeAI",
+      "plan": "GOAT $10",
+      "numbers": "Flash-1017 Ultrafast; $20 credits on $10",
+      "screenshot": "N",
+      "url": "https://x.com/CommandCodeAI/status/2118824521314783243",
+      "issue": 197
+    },
+    {
+      "grade": "Medium",
+      "handle": "enryuoe",
+      "plan": "CC vs OpenCode $10",
+      "numbers": "12.8B vs 8B DS Flash",
+      "screenshot": "N",
+      "url": "https://x.com/enryuoe/status/2118845525856256195",
+      "issue": 197
+    },
+    {
+      "grade": "Medium",
+      "handle": "season7_8",
+      "plan": "OpenCode Go / Mistral",
+      "numbers": "$10→$100/~8B; $15→$150",
+      "screenshot": "N",
+      "url": "https://x.com/season7_8/status/2118857176085155961",
+      "issue": 197
+    },
+    {
+      "grade": "Medium",
+      "handle": "LimitHitCom",
+      "plan": "ChatGPT Pro",
+      "numbers": "doubled Oct 29; no 5h on Pro",
+      "screenshot": "N",
+      "url": "https://x.com/LimitHitCom/status/2118822994164515005",
+      "issue": 198
+    },
+    {
+      "grade": "Medium",
+      "handle": "sakurakk730",
+      "plan": "Pro Work/Codex",
+      "numbers": "配额翻倍（无绝对数）",
+      "screenshot": "N",
+      "url": "https://x.com/sakurakk730/status/2118864406108832001",
+      "issue": 198
+    },
+    {
+      "grade": "Medium",
+      "handle": "raghavbuilds_",
+      "plan": "GLM Coding Lite promo",
+      "numbers": "500M free Flash weekend; 150% paid quota; 3M/5M daily trial",
+      "screenshot": "Y",
+      "url": "https://x.com/raghavbuilds_/status/2118673628866953502",
+      "note": "promo; scan-only no new issue"
+    },
+    {
+      "grade": "Medium",
+      "handle": "srosyballs",
+      "plan": "Ultra",
+      "numbers": "reset then 1 prompt → 5% weekly",
+      "screenshot": "N",
+      "url": "https://x.com/srosyballs/status/2118843745198358868",
+      "issueComment": 192
+    },
+    {
+      "grade": "Medium",
+      "handle": "u1",
+      "plan": "Super",
+      "numbers": "48% used, resets in 2 days",
+      "screenshot": "Y",
+      "url": "https://x.com/u1/status/2118863630313963589",
+      "issueComment": 192
+    },
+    {
+      "grade": "Medium",
+      "handle": "LeoAgentAI",
+      "plan": "Claude Ultra rename",
+      "numbers": "20x→10x weekly framing; $200 API credits",
+      "screenshot": "Y (infographic)",
+      "url": "https://x.com/LeoAgentAI/status/2118867563513852402",
+      "note": "secondhand; overlaps #170; scan-only"
+    }
+  ],
+  "discardSummary": [
+    "Kimi/Claude/Cursor 营销、开源网关、模型权重发布、无数字吐槽",
+    "已收录 #195 Ultra 1.5B@96%（astroex_）",
+    "官方 @grok 4×/15×/50× 复述（已在 #189/#192）",
+    "Codex reset 吐槽无硬数（yituihi）",
+    "查询含字面 % 被 X API 拒（2 次）"
+  ],
+  "recommendedPrFiles": [
+    {
+      "path": "data/research/x-scan-2026-11-07.json",
+      "outline": "本扫描总日志（queries + counts + keptSignals）"
+    },
+    {
+      "path": "data/research/command-code-goat-monthly-panel-x-2026-11-07.json",
+      "outline": "issue #197 High/Medium items"
+    },
+    {
+      "path": "data/research/chatgpt-pro100-codex-weekly-x-2026-11-07.json",
+      "outline": "issue #198 Medium items"
+    },
+    {
+      "path": "data/research/cursor-x-super-687m-99pct-x-2026-11-07.json",
+      "outline": "#192 follow-up Super panel"
+    }
+  ],
+  "draftPrTitle": "daily: 2026-11-07 pricing signals",
+  "notes": [
+    "Do NOT merge/deploy without user confirmation",
+    "Do NOT touch adopted.csv",
+    "Yesterday draft PR #196 / issue #195 not duplicated"
+  ]
+}
