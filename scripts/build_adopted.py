@@ -112,8 +112,61 @@ DEVIN_MAX_OPUS55_SEGMENT = {"cache_read": 483_137_835, "cache_create": 40_275_69
 DEVIN_MAX_OPUS55_USED_TOKENS = 525_333_756
 DEVIN_MAX_OPUS55_USED_FRACTION = 0.48
 OPUS55_LIST = (0.2, 4.0, 20.0)  # cached/input/output 官方标价；5 分钟缓存写价见 ANTHROPIC_CACHE_WRITE_5M
+# Haiku 5.5 分段价（platform.claude.com pricing，2026-10-08 核对）：≤100K / >100K（5×）两档 (cached, 写5m, 出)。
+#   90/10 混合口径的理由见下文 RATIO_HAIKU55 注释；因 SUBS 在 import 阶段求值，此处先定义。
+HAIKU55_LE100K = (0.01, 0.125, 0.5)
+HAIKU55_GT100K = (0.05, 0.625, 2.5)
 assert sum(DEVIN_MAX_ASTRA_SEGMENT.values()) == DEVIN_MAX_ASTRA_USED_TOKENS
 assert sum(DEVIN_MAX_OPUS55_SEGMENT.values()) == DEVIN_MAX_OPUS55_USED_TOKENS
+# Devin Pro $20 × Claude Sonnet 5.5 (High) —— 维护者 Devin CLI 两个 /usage 检查点（2026-10-31）：
+#   会话开始 Daily 0% / Weekly 47%，结束 Daily 13% / Weekly 53%；同一 /session-stats 记
+#   in 321,872 / out 41,557 / cache_read 8,035,217 = 8,398,646 tok（8.4M，100% Sonnet 5.5 High）。
+#   采用周窗 6pp（月按通用 4 周）：Daily 13pp 反推日池 64.6M、×7=452M/周 > 周池约 140M，
+#   日上限更宽松，饱和使用时绑定约束是周池，故按周窗入账、Daily 只作一致性旁证。
+#   CLI /session-stats 不单列 cache_create：按 Anthropic 档口径，非缓存输入按 5 分钟写价 $2.5 计；
+#   若按普通输入价 $2.0 计得 5.93 亿（敏感性，不采）。
+DEVIN_PRO_SONNET55_SEGMENT = {"cache_read": 8_035_217, "input": 321_872, "output": 41_557}
+DEVIN_PRO_SONNET55_USED_TOKENS = 8_398_646
+DEVIN_PRO_SONNET55_WEEKLY_FRACTION = 0.06
+SONNET55_LIST = (0.1, 2.0, 10.0)  # cached/input/output 官方标价（降价后）；5 分钟缓存写价 $2.5 见 ANTHROPIC_CACHE_WRITE_5M
+assert sum(DEVIN_PRO_SONNET55_SEGMENT.values()) == DEVIN_PRO_SONNET55_USED_TOKENS
+# Devin Pro $20 × Claude Haiku 5.5 (Max) —— 同一账号 2026-10-31 第二个 /usage 双检查点，紧接 Sonnet 5.5 段：
+#   开始 Daily 13% / Weekly 53%，结束 Daily 17% / Weekly 55%（周 +2pp、日 +4pp）；/session-stats
+#   in 1,076,726 / out 531,852 / cache_read 22,846,818 = 24,455,396 tok（Tokens by model：Haiku 5.5 Max
+#   24M 98%、Compactor (Luna) 57k、Unknown 544k 2%）。Haiku 价格低、2pp 整数读数误差大，故 low；
+#   与 Sonnet 段同一周窗且两段连续，池 worth 可互证（本段 $31.45/周 vs Sonnet $33.73/周）。
+DEVIN_PRO_HAIKU55_SEGMENT = {"cache_read": 22_846_818, "input": 1_076_726, "output": 531_852}
+DEVIN_PRO_HAIKU55_USED_TOKENS = 24_455_396
+DEVIN_PRO_HAIKU55_WEEKLY_FRACTION = 0.02
+assert sum(DEVIN_PRO_HAIKU55_SEGMENT.values()) == DEVIN_PRO_HAIKU55_USED_TOKENS
+# Devin Pro $20 × Muse Wonder (High) —— 同一账号 2026-10-31 第三个 /usage 双检查点，紧接 Haiku 5.5 段：
+#   开始 Daily 17% / Weekly 55%，结束 Daily 47% / Weekly 70%（周 +15pp、日 +30pp）；/session-stats
+#   in 141,745 / out 44,428 / cache_read 7,501,572 = 7,687,745 tok（Tokens by model：Muse Wonder High
+#   7.7M 100%、Unknown 0）。Muse Wonder 尚无已采用 API 标价 → 无法按标价折 worth，本行记 raw total
+#   （workload=measured）；本段实测负载 97.6%/1.8%/0.58% 与标准档 97%/2.5%/0.5% 极接近，两口径差 <2%。
+DEVIN_PRO_MUSE_SEGMENT = {"cache_read": 7_501_572, "input": 141_745, "output": 44_428}
+DEVIN_PRO_MUSE_USED_TOKENS = 7_687_745
+DEVIN_PRO_MUSE_WEEKLY_FRACTION = 0.15
+assert sum(DEVIN_PRO_MUSE_SEGMENT.values()) == DEVIN_PRO_MUSE_USED_TOKENS
+# Devin Pro $20 × Claude Fable 5.1 (High) —— 同一账号 2026-10-31 第四个 /usage 双检查点，紧接 Muse Wonder 段：
+#   开始 Daily 47% / Weekly 70%，结束 Daily 72% / Weekly 83%（周 +13pp、日 +25pp）；/session-stats
+#   in 154,966 / out 16,322 / cache_read 4,295,480 = 4,466,768 tok（Tokens by model：Fable 5.1 High
+#   4.5M 98%、Unknown 103k 2%）。Fable 5.1 官方价：in $10 / out $50 / cache读 $0.25 / 5m写 $12.5
+#   （claude-fable51-round1-2026-09-13.json）；按 Anthropic 档把非缓存输入按 5m 写价计。
+DEVIN_PRO_FABLE51_SEGMENT = {"cache_read": 4_295_480, "input": 154_966, "output": 16_322}
+DEVIN_PRO_FABLE51_USED_TOKENS = 4_466_768
+DEVIN_PRO_FABLE51_WEEKLY_FRACTION = 0.13
+FABLE51_LIST = (0.25, 10.0, 50.0)  # cached/input/output；5m 写价 $12.5 见 ANTHROPIC_CACHE_WRITE_5M
+assert sum(DEVIN_PRO_FABLE51_SEGMENT.values()) == DEVIN_PRO_FABLE51_USED_TOKENS
+# Devin Pro $20 × Claude Opus 5.5 (High) —— 维护者 2026-11-01 新周窗从 0% 起跑的干净样本：
+#   开始 Daily 0% / Weekly 0%（限流已重置），结束 Daily 56% / Weekly 28%；/session-stats
+#   in 849,951 / out 82,888 / cache_read 13,374,805 = 14,307,644 tok（Tokens by model：Opus 5.5 High
+#   15M 100%）。按 Opus 5.5 标价 cached$0.2 / 写5m $5 / in$4 / out$20 折 worth（非缓存输入按写价计）。
+#   28pp 大信号、单模型、零起点无污染 → high；池 worth $30.65/周落在其余四段的 $29.44~33.73 区间中部。
+DEVIN_PRO_OPUS55_SEGMENT = {"cache_read": 13_374_805, "input": 849_951, "output": 82_888}
+DEVIN_PRO_OPUS55_USED_TOKENS = 14_307_644
+DEVIN_PRO_OPUS55_WEEKLY_FRACTION = 0.28
+assert sum(DEVIN_PRO_OPUS55_SEGMENT.values()) == DEVIN_PRO_OPUS55_USED_TOKENS
 # Droid Max × Opus 5.5 —— 维护者 Factory Droid 本机 /limits 周窗（7-day rolling）已用 1%→9% 两段增量直测：
 #   1→5（xhigh）+35,598,616 tok、5→9（high，新会话 47f9711d）+36,567,946 tok，合计 72,166,562 tok ÷ 8pp；
 #   段内 auto 0 增量、glm-5.3-flash +50,317（占 0.14%，Droid Core 免费池不进 Opus 速率）；
@@ -418,6 +471,116 @@ def devin_max_opus55_monthly_yi() -> float:
     # 段 worth ÷48% ×4周 ÷ Anthropic 档混合价 $0.419/MTok（2026-09-24 裁定）
     return round(
         devin_max_opus55_segment_worth_usd() / DEVIN_MAX_OPUS55_USED_FRACTION
+        * MONTH_WEEKS / blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-opus-5.5"], OPUS55_LIST[2]) / 100,
+        2,
+    )
+
+
+def devin_pro_sonnet55_raw_monthly_yi() -> float:
+    # 原始 total 口径（raw token ÷ 段占比 ×4周），入库后留作对照
+    return round(
+        DEVIN_PRO_SONNET55_USED_TOKENS / DEVIN_PRO_SONNET55_WEEKLY_FRACTION
+        * MONTH_WEEKS / YI,
+        2,
+    )
+
+
+def devin_pro_sonnet55_segment_worth_usd(input_price: float | None = None) -> float:
+    # 段 list-worth：CLI 不单列 cache_create，非缓存输入默认按 5 分钟缓存写价 $2.5 计（Anthropic 档口径）
+    s = DEVIN_PRO_SONNET55_SEGMENT
+    inp = ANTHROPIC_CACHE_WRITE_5M["claude-sonnet-5.5"] if input_price is None else input_price
+    return (s["cache_read"] * SONNET55_LIST[0] + s["input"] * inp + s["output"] * SONNET55_LIST[2]) / 1e6
+
+
+def devin_pro_sonnet55_monthly_yi(input_price: float | None = None) -> float:
+    # 段 worth ÷6% ×4周 ÷ Anthropic 档混合价 $0.2095/MTok（同 devin_max×opus-5.5 口径）
+    return round(
+        devin_pro_sonnet55_segment_worth_usd(input_price) / DEVIN_PRO_SONNET55_WEEKLY_FRACTION
+        * MONTH_WEEKS / blended_anthropic(SONNET55_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-sonnet-5.5"], SONNET55_LIST[2]) / 100,
+        2,
+    )
+
+
+def devin_pro_haiku55_raw_monthly_yi() -> float:
+    # 原始 total 口径（raw token ÷ 段占比 ×4周），入库后留作对照
+    return round(
+        DEVIN_PRO_HAIKU55_USED_TOKENS / DEVIN_PRO_HAIKU55_WEEKLY_FRACTION
+        * MONTH_WEEKS / YI,
+        2,
+    )
+
+
+def devin_pro_haiku55_segment_worth_usd() -> float:
+    # 段 list-worth：≤100K 档 (cached, 写5m, 出)；非缓存输入按 Anthropic 档 5 分钟写价计。
+    # >100K 档为统一 5×，对 segment worth 与混合价同比相消，不影响 token 结果。
+    s = DEVIN_PRO_HAIKU55_SEGMENT
+    return (s["cache_read"] * HAIKU55_LE100K[0] + s["input"] * HAIKU55_LE100K[1]
+            + s["output"] * HAIKU55_LE100K[2]) / 1e6
+
+
+def devin_pro_haiku55_monthly_yi() -> float:
+    # 段 worth ÷2% ×4周 ÷ Anthropic 档混合价 $0.015325/MTok
+    return round(
+        devin_pro_haiku55_segment_worth_usd() / DEVIN_PRO_HAIKU55_WEEKLY_FRACTION
+        * MONTH_WEEKS / blended_anthropic(*HAIKU55_LE100K) / 100,
+        2,
+    )
+
+
+def devin_pro_muse_raw_monthly_yi() -> float:
+    # Muse Wonder 无已采用标价，未折算：raw token ÷ 周占比 ×4周（workload=measured）
+    return round(
+        DEVIN_PRO_MUSE_USED_TOKENS / DEVIN_PRO_MUSE_WEEKLY_FRACTION
+        * MONTH_WEEKS / YI,
+        2,
+    )
+
+
+def devin_pro_fable51_raw_monthly_yi() -> float:
+    # 原始 total 口径（raw token ÷ 段占比 ×4周），入库后留作对照
+    return round(
+        DEVIN_PRO_FABLE51_USED_TOKENS / DEVIN_PRO_FABLE51_WEEKLY_FRACTION
+        * MONTH_WEEKS / YI,
+        2,
+    )
+
+
+def devin_pro_fable51_segment_worth_usd() -> float:
+    # 段 list-worth：cached $0.25 / 写5m $12.5 / 出 $50，非缓存输入按 Anthropic 档 5 分钟写价计
+    s = DEVIN_PRO_FABLE51_SEGMENT
+    return (s["cache_read"] * FABLE51_LIST[0] + s["input"] * ANTHROPIC_CACHE_WRITE_5M["claude-fable-5.1"]
+            + s["output"] * FABLE51_LIST[2]) / 1e6
+
+
+def devin_pro_fable51_monthly_yi() -> float:
+    # 段 worth ÷13% ×4周 ÷ Anthropic 档混合价 $0.805/MTok
+    return round(
+        devin_pro_fable51_segment_worth_usd() / DEVIN_PRO_FABLE51_WEEKLY_FRACTION
+        * MONTH_WEEKS / blended_anthropic(FABLE51_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-fable-5.1"], FABLE51_LIST[2]) / 100,
+        2,
+    )
+
+
+def devin_pro_opus55_raw_monthly_yi() -> float:
+    # 原始 total 口径（raw token ÷ 段占比 ×4周），入库后留作对照
+    return round(
+        DEVIN_PRO_OPUS55_USED_TOKENS / DEVIN_PRO_OPUS55_WEEKLY_FRACTION
+        * MONTH_WEEKS / YI,
+        2,
+    )
+
+
+def devin_pro_opus55_segment_worth_usd() -> float:
+    # 段 list-worth：cache $0.2 / 写5m $5 / 出 $20，非缓存输入按 Anthropic 档 5 分钟写价计
+    s = DEVIN_PRO_OPUS55_SEGMENT
+    return (s["cache_read"] * OPUS55_LIST[0] + s["input"] * ANTHROPIC_CACHE_WRITE_5M["claude-opus-5.5"]
+            + s["output"] * OPUS55_LIST[2]) / 1e6
+
+
+def devin_pro_opus55_monthly_yi() -> float:
+    # 段 worth ÷28% ×4周 ÷ Anthropic 档混合价 $0.419/MTok
+    return round(
+        devin_pro_opus55_segment_worth_usd() / DEVIN_PRO_OPUS55_WEEKLY_FRACTION
         * MONTH_WEEKS / blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-opus-5.5"], OPUS55_LIST[2]) / 100,
         2,
     )
@@ -1100,6 +1263,26 @@ SUBS = [
     ("devin_max", "Devin Max", 200, "USD", "gpt-6-astra", devin_max_astra_monthly_yi(), "medium", "维护者Devin Max面板cc usage：本周gpt-6-astra-high total 305,025,580 tokens（calls 667，in 1,998/out 369,918/cache_read 300,944,710/cache_create 3,708,954）= 周额度87pt（剩余100%→13%）；devin-usage-round4-2026-09-14.json；anthropic-token-mix-round1-2026-09-24.json；https://devin.ai/pricing Max $200/月", f"{devin_max_astra_raw_monthly_yi():g}→{devin_max_astra_monthly_yi():g}亿（2026-09-24裁定按统一负载折算）：段 worth ${devin_max_astra_segment_worth_usd():.2f}（cache读300.945M×$1＋写/输入3.711M×$10＋输出0.370M×$50；OpenAI无缓存写费，cache_create按普通输入计）÷87%×4周＝月${devin_max_astra_segment_worth_usd()/0.87*4:.2f} list-worth ÷ 标准负载混合价${blended(1,10,50):.2f}/MTok；面板%取整区间约11.03~11.28亿；原始total口径305,025,580÷87%×4周＝14.02亿留作对照；87pt近满周样本（round2 20pt段的3.76倍）取代旧反推，raw周池406M→350.6M（-13.7%，round2/3留作历史证据）；命中率按含cache_create口径98.78%（与round2段97.84%同量级，极端缓存型负载）；swe-2-max等免费不占额度；折算假设Devin按标价比例扣额度；Pro $20档无数据不派生"),
     # Opus 5.5 —— 同账号同面板双检查点增量法：云端剩余75%→27%段内 Opus5.5 净增525.3M raw
     ("devin_max", "Devin Max", 200, "USD", "claude-opus-5.5", devin_max_opus55_monthly_yi(), "medium", "维护者Devin Max面板cc usage双检查点：云端周额度剩余75%→27%（差48pt）段内 claude-opus-5-5-xhigh +1,142 calls/+512,221,810 tok、claude-opus-5-5-high +118/+13,111,946，合计 +1,260 calls/+525,333,756 tokens；devin-opus55-round1-2026-09-23.json；anthropic-token-mix-round1-2026-09-24.json；https://devin.ai/pricing Max $200/月", f"{devin_max_opus55_raw_monthly_yi():g}→{devin_max_opus55_monthly_yi():g}亿（2026-09-24裁定按统一负载折算）：本段实测负载 cache读91.97%/cache写7.67%/输入0.001%/输出0.365% 偏离标准档；按Opus 5.5标价 cached$0.2/写5m $5/in$4/out$20 折段 worth ${devin_max_opus55_segment_worth_usd():.2f} ÷48%×4周＝月${devin_max_opus55_segment_worth_usd()/0.48*4:.2f} list-worth ÷ Anthropic档混合价${blended_anthropic(0.2,5.0,20.0):.3f}/MTok；面板%取整区间约65.53~68.32亿；cache写按1h $8敏感性77.12亿不采；原始total口径525,333,756÷48%×4周＝43.78亿（取整42.88~44.71）留作对照；裁定48pp全归Opus 5.5（若段内有其他计费模型消耗，Opus实际所占pp更少、周池更大，本值偏保守）；swe-2等免费不占额度；worth对账：恒定池口径Opus5.5按约0.6×标价计（与Astra周池3.12×张力指向共享池模型加权）；仅本行与同面板Astra行折算；effort仅影响速率；Pro $20档无数据不派生"),
+    # Devin Pro ($20) × Sonnet 5.5 —— 维护者 Devin CLI 两个 /usage 检查点直测；首个 Pro 档 token+% 同框样本
+    ("devin_pro", "Devin Pro", 20, "USD", "claude-sonnet-5.5", devin_pro_sonnet55_monthly_yi(), "medium",
+     "维护者 Devin CLI /usage + /session-stats 双检查点（2026-10-31）：会话开始 Daily 0%/Weekly 47%，结束 Daily 13%/Weekly 53%；同一会话 in 321,872/out 41,557/cache_read 8,035,217 = 8,398,646 tok（8.4M，100% claude-sonnet-5.5 High）；devin-sonnet55-round1-2026-10-31.json；https://docs.devin.ai/admin/billing/self-serve Pro $20/月",
+     f"新增{devin_pro_sonnet55_monthly_yi():g}亿（2026-10-31，Anthropic 档；首个 Devin Pro 档 token+% 同框样本）：段 worth ${devin_pro_sonnet55_segment_worth_usd():.4f}（cache读8.035M×$0.1＋非缓存输入0.322M×$2.5＋输出0.042M×$10；CLI 不单列 cache_create，按 Anthropic 档把非缓存输入按 5 分钟写价计）÷6%×{MONTH_WEEKS:g}周＝月${devin_pro_sonnet55_segment_worth_usd()/0.06*4:.2f} list-worth ÷ Anthropic 档混合价${blended_anthropic(SONNET55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-sonnet-5.5'], SONNET55_LIST[2]):.4f}/MTok；周窗 47%→53%（6pp）反推周池约139.98M、月约{devin_pro_sonnet55_raw_monthly_yi():g}亿 raw（原始total口径留作对照）；6pp为整数读数，±0.5pp对应约5.94~7.03亿；Daily 13pp反推日池64.6M、×7=452M/周>周池，日上限更宽松→饱和使用时周池为绑定约束，故按周窗入账、Daily仅作一致性旁证；非缓存输入若按普通输入价$2.0计得{devin_pro_sonnet55_monthly_yi(SONNET55_LIST[1]):g}亿不采；n=1单会话 → medium"),
+    # Devin Pro ($20) × Haiku 5.5 —— 同账号同日第二个 /usage 双检查点，紧接 Sonnet 5.5 段、同一周窗
+    ("devin_pro", "Devin Pro", 20, "USD", "claude-haiku-5.5", devin_pro_haiku55_monthly_yi(), "low",
+     "维护者 Devin CLI /usage + /session-stats 双检查点（2026-10-31，紧接 Sonnet 5.5 段）：开始 Daily 13%/Weekly 53%，结束 Daily 17%/Weekly 55%；同一会话 in 1,076,726/out 531,852/cache_read 22,846,818 = 24,455,396 tok（Tokens by model：Haiku 5.5 Max 24M 98%、Compactor (Luna) 57k、Unknown 544k 2%）；devin-haiku55-round1-2026-10-31.json；https://docs.devin.ai/admin/billing/self-serve Pro $20/月",
+     f"新增{devin_pro_haiku55_monthly_yi():g}亿（2026-10-31，Anthropic 档；Haiku 5.5 首个 token+% 同框样本）：段 worth ${devin_pro_haiku55_segment_worth_usd():.4f}（cache读22.847M×$0.01＋非缓存输入1.077M×$0.125＋输出0.532M×$0.5；≤100K 档价，>100K 统一 5×、对 worth 与混合价同比相消）÷2%×{MONTH_WEEKS:g}周＝月${devin_pro_haiku55_segment_worth_usd()/0.02*4:.2f} list-worth ÷ Anthropic 档混合价${blended_anthropic(*HAIKU55_LE100K):.6f}/MTok；周窗 53%→55%（2pp）反推周池约{devin_pro_haiku55_raw_monthly_yi()/MONTH_WEEKS:g}亿 raw、月约{devin_pro_haiku55_raw_monthly_yi():g}亿 raw（原始total口径留作对照）；2pp为整数读数，±0.5pp对应约{devin_pro_haiku55_monthly_yi()*2/2.5:.2f}~{devin_pro_haiku55_monthly_yi()*2/1.5:.2f}亿；Daily 13%→17%（4pp）反推日 worth 约$15.72、×7=周$110 远大于周池→日上限更宽松、周池绑定（与 Sonnet 段同结构）；同周窗池 worth 互证：本段约 $31.45/周 vs Sonnet 段 $33.73/周（差6.8%），按 Sonnet 锚比例派生约{devin_pro_sonnet55_monthly_yi()*blended_anthropic(SONNET55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-sonnet-5.5'], SONNET55_LIST[2])/blended_anthropic(*HAIKU55_LE100K):.2f}亿，与实测同量级；段内另有 Compactor (Luna) 57k 与 Unknown 544k（2%），若其计费且价高则 Haiku 实占 pp 更少、周池更大，本值偏保守；n=1单会话、2pp 分辨率粗 → low"),
+    # Devin Pro ($20) × Muse Wonder —— 同账号同日第三个 /usage 双检查点，紧接 Haiku 5.5 段、同一周窗
+    ("devin_pro", "Devin Pro", 20, "USD", "muse-wonder", devin_pro_muse_raw_monthly_yi(), "medium",
+     "维护者 Devin CLI /usage + /session-stats 双检查点（2026-10-31，紧接 Haiku 5.5 段）：开始 Daily 17%/Weekly 55%，结束 Daily 47%/Weekly 70%；同一会话 in 141,745/out 44,428/cache_read 7,501,572 = 7,687,745 tok（Tokens by model：Muse Wonder High 7.7M 100%、Unknown 0）；devin-muse-wonder-round1-2026-10-31.json；https://docs.devin.ai/admin/billing/self-serve Pro $20/月",
+     f"新增{devin_pro_muse_raw_monthly_yi():g}亿（2026-10-31，未折算/raw total；Muse Wonder 尚无已采用 API 标价）：7,687,745÷15%×{MONTH_WEEKS:g}周＝{devin_pro_muse_raw_monthly_yi():g}亿 raw、真实单价 $20/{devin_pro_muse_raw_monthly_yi()*100:.0f}M＝${20/(devin_pro_muse_raw_monthly_yi()*1e8)*1e6:.5f}/MTok；周窗 55%→70%（15pp）为三段中最大信号，±0.5pp对应约{devin_pro_muse_raw_monthly_yi()*15/15.5:.2f}~{devin_pro_muse_raw_monthly_yi()*15/14.5:.2f}亿；Daily 17%→47%（30pp）反推日池×7=周池×3.5，与前两段（3.23/3.50）同结构→周池绑定；本段实测负载 cache 97.6%/input 1.8%/output 0.58% 与标准档 97%/2.5%/0.5% 极接近，未折算与折算口径差 <2%；池 worth 互证：按前两段池约$32.6/周反推 Muse 混合价≈$0.64/MTok（仅旁证，不采用）；n=1单会话但15pp信号强 → medium"),
+    # Devin Pro ($20) × Fable 5.1 —— 同账号同日第四个 /usage 双检查点，紧接 Muse Wonder 段、同一周窗
+    ("devin_pro", "Devin Pro", 20, "USD", "claude-fable-5.1", devin_pro_fable51_monthly_yi(), "medium",
+     "维护者 Devin CLI /usage + /session-stats 双检查点（2026-10-31，紧接 Muse Wonder 段）：开始 Daily 47%/Weekly 70%，结束 Daily 72%/Weekly 83%；同一会话 in 154,966/out 16,322/cache_read 4,295,480 = 4,466,768 tok（Tokens by model：Fable 5.1 High 4.5M 98%、Unknown 103k 2%）；devin-fable51-round1-2026-10-31.json；https://docs.devin.ai/admin/billing/self-serve Pro $20/月；https://platform.claude.com/docs/en/about-claude/pricing",
+     f"新增{devin_pro_fable51_monthly_yi():g}亿（2026-10-31，Anthropic 档；Fable 5.1 首个 token+% 同框样本）：段 worth ${devin_pro_fable51_segment_worth_usd():.4f}（cache读4.295M×$0.25＋非缓存输入0.155M×$12.5＋输出0.016M×$50；非缓存输入按 Anthropic 档 5 分钟写价计）÷13%×{MONTH_WEEKS:g}周＝月${devin_pro_fable51_segment_worth_usd()/0.13*4:.2f} list-worth ÷ Anthropic 档混合价${blended_anthropic(FABLE51_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-fable-5.1'], FABLE51_LIST[2]):.3f}/MTok；周窗 70%→83%（13pp）反推周池 worth ${devin_pro_fable51_segment_worth_usd()/0.13:.2f}；raw total 口径 {devin_pro_fable51_raw_monthly_yi():g}亿留作对照；13pp ±0.5 对应约{devin_pro_fable51_monthly_yi()*13/13.5:.2f}~{devin_pro_fable51_monthly_yi()*13/12.5:.2f}亿；Daily 47%→72%（25pp）反推日池×7=周池×3.64，与前几段（3.23/3.50/3.50）同结构→周池绑定；池 worth 互证：本段 $29.44/周 略低于 Sonnet $33.73，若段内 Unknown 103k（2%）计费则 Fable 实占 pp 更少、本值偏保守；按 Sonnet 池反推约{devin_pro_sonnet55_monthly_yi()*blended_anthropic(0.1,2.5,10.0)/blended_anthropic(FABLE51_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-fable-5.1'], FABLE51_LIST[2]):.2f}亿，同量级；n=1单会话 → medium"),
+    # Devin Pro ($20) × Opus 5.5 —— 2026-11-01 新周窗零起点干净样本（Daily/Weekly 均 0% 起）
+    ("devin_pro", "Devin Pro", 20, "USD", "claude-opus-5.5", devin_pro_opus55_monthly_yi(), "high",
+     "维护者 Devin CLI /usage + /session-stats 双检查点（2026-11-01，新周窗）：开始 Daily 0%/Weekly 0%（限流已重置），结束 Daily 56%/Weekly 28%；同一会话 in 849,951/out 82,888/cache_read 13,374,805 = 14,307,644 tok（Tokens by model：Opus 5.5 High 15M 100%）；devin-pro-opus55-round1-2026-11-01.json；https://docs.devin.ai/admin/billing/self-serve Pro $20/月；https://platform.claude.com/docs/en/about-claude/pricing",
+     f"新增{devin_pro_opus55_monthly_yi():g}亿（2026-11-01，Anthropic 档；Devin Pro × Opus 5.5 首个零起点样本）：段 worth ${devin_pro_opus55_segment_worth_usd():.4f}（cache读13.375M×$0.2＋非缓存输入0.850M×$5＋输出0.083M×$20；非缓存输入按 Anthropic 档 5 分钟写价计）÷28%×{MONTH_WEEKS:g}周＝月${devin_pro_opus55_segment_worth_usd()/0.28*4:.2f} list-worth ÷ Anthropic 档混合价${blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2]):.3f}/MTok；周窗 0%→28%（28pp）为项目最大单段信号之一，±0.5pp对应约{devin_pro_opus55_monthly_yi()*28/28.5:.2f}~{devin_pro_opus55_monthly_yi()*28/27.5:.2f}亿；raw total 口径 {devin_pro_opus55_raw_monthly_yi():g}亿留作对照；Daily 0%→56%（56pp）反推日池×7=周池×3.5，与 2026-10-31 四段（3.23/3.50/3.50/3.64）同结构→周池绑定；池 worth 互证：本段 ${devin_pro_opus55_segment_worth_usd()/0.28:.2f}/周，落在其余四段 $29.44~33.73 区间中部；零起点、100% 单模型、28pp → high"),
     # Factory Droid —— 维护者Max账号 /limits 周窗 1%→9% 两段增量直测；月＝2×周（30 天窗绑定）；Pro 另挂社区口述点（low），Plus 不派生
     ("droid_max", "Droid Max", 200, "USD", "claude-opus-5.5", droid_max_opus55_monthly_yi(), "medium", "维护者Factory Droid本机实测：周额度（7-day rolling）已用1%→5%段（xhigh）+35,598,616 tok、5%@08:13→9%@12:40段（high，新会话47f9711d）+36,567,946 tok，合计+72,166,562 tok全为claude-opus-5-5（auto 0增量；glm-5.3-flash +50,317 属Droid Core免费池不计）；合计分拆 in 793,017/out 375,172/cache_create 3,640,056/cache_read 67,311,924/thinking 46,393；droid-opus55-max-round1-2026-09-29.json；https://factory.ai/pricing Max $200/月", f"首个Factory Droid点，按devin_max×opus-5.5同口径折算：1→9合计负载 cache读93.27%/cache写5.04%/输入1.10%/输出0.52%/thinking0.06%（hit 93.82%）偏离标准档；按Opus 5.5标价 cached$0.2/写5m $5/in$4/out$20（thinking 46,393不计费，裁定；与factoryCredits 16,935,482≈worth÷$4×1.6对账一致）折段 worth ${droid_max_opus55_segment_worth_usd():.2f} ÷8%×{DROID_MONTH_WEEKS:g}（Factory 30天窗＝2×7天窗，2026-10-03裁定；原按×4周为50.52亿）＝月${droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS:.2f} list-worth ÷ Anthropic档混合价${blended_anthropic(0.2,5.0,20.0):.3f}/MTok＝{droid_max_opus55_monthly_yi():g}亿；1%/9%为取整读数，Δpp∈[7,9]对应约22.46~28.87亿；cache写按1h $8敏感性26.96亿不采；原始total口径72,166,562÷8%×{DROID_MONTH_WEEKS:g}＝{droid_max_opus55_raw_monthly_yi():g}亿（周池902,082,025 raw）留作对照；factoryCredits 16,935,482≈2.12亿credits/周；两段4pp各8.90M/9.14M tok每pp（差2.7%），effort仅影响速率；Factory另有5h与30天滚动窗，月额度以30天窗（＝2×周池）为绑定约束；Pro $20/Plus $100官方仅写约1/10、1/5 Max用量，不派生"),
     ("droid_pro", "Droid Pro", 20, "USD", "claude-opus-5.5", droid_pro_opus55_monthly_yi(), "low", "X @SnowyWar36965 社区口述（2026-09-28，维护者转交截图）：Droid Pro $20 跑 Claude Opus 5.5 小动画用掉 5h 窗约70%，帖主按等价 API 消耗折算 5h≈$15.4、周≈$45、月≈$160（Max 10x≈$154/$450/$1,600，约合 1.76/5.1/18 亿 token）；droid-pro-opus55-community-round1-2026-09-29.json；https://factory.ai/pricing Pro $20/月", f"帖主周 list-worth ${DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['week']:g}×{DROID_MONTH_WEEKS:g}（Factory 30天窗＝2×7天窗，2026-10-03裁定）＝${DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['week']*DROID_MONTH_WEEKS:g} ÷ Anthropic档混合价${blended_anthropic(0.2,5.0,20.0):.3f}/MTok＝{droid_pro_opus55_monthly_yi():g}亿（同 droid_max×opus-5.5 口径；帖主自带 token 列 18亿/$1,600≈$0.89/MTok 为其自身负载，不采）；帖主月值 ${DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['month']:g}（{DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['month']/blended_anthropic(0.2,5.0,20.0)/100:.2f}亿，原采用值）约为其周值3.56×，与30天窗＝2×周不符，不采；弱点：口述估算、无面板截图与 token 分拆、n=1、5h/周/月换算过程未公开 → low；对照：本机实测 Droid Max 月 worth ${droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS:,.2f} ÷ 官方约10× ＝ Pro 约${droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS/10:.2f}（{droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS/10/blended_anthropic(0.2,5.0,20.0)/100:.2f}亿），帖主值约为其 {DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['week']*DROID_MONTH_WEEKS/(droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS/10):.2f}×"),
@@ -1217,8 +1400,6 @@ RATIO_SONNET55 = blended_anthropic(0.2, 5.0, 20.0) / blended_anthropic(0.1, 2.5,
 # Haiku 5.5 分段价（platform.claude.com pricing，2026-10-08 核对）：≤100K / >100K（5×）两档 (cached, 写5m, 出)。
 #   2026-10-08 裁定按 token 计 90% 落 ≤100K 档、10% 落 >100K 档混合（社区说法「约 90% 请求 <100K」，
 #   请求数占比折到 token 会低估 >100K 档份额，暂作近似）；纯 ≤100K、50/50 两口径留对照
-HAIKU55_LE100K = (0.01, 0.125, 0.5)
-HAIKU55_GT100K = (0.05, 0.625, 2.5)
 HAIKU55_LE100K_SHARE = 0.9
 HAIKU55_BLEND = (HAIKU55_LE100K_SHARE * blended_anthropic(*HAIKU55_LE100K)
                  + (1 - HAIKU55_LE100K_SHARE) * blended_anthropic(*HAIKU55_GT100K))  # 0.021455
@@ -1381,6 +1562,11 @@ DATA_DATES = {
     ("chatgpt_pro_20x", "gpt-6-astra"): ("2026-09-07~2026-09-21", "sample"),
     ("devin_max", "gpt-6-astra"): ("2026-09-14", "sample"),
     ("devin_max", "claude-opus-5.5"): ("2026-09-23", "sample"),
+    ("devin_pro", "claude-sonnet-5.5"): ("2026-10-31", "sample"),
+    ("devin_pro", "claude-haiku-5.5"): ("2026-10-31", "sample"),
+    ("devin_pro", "muse-wonder"): ("2026-10-31", "sample"),
+    ("devin_pro", "claude-fable-5.1"): ("2026-10-31", "sample"),
+    ("devin_pro", "claude-opus-5.5"): ("2026-11-01", "sample"),
     ("droid_max", "claude-opus-5.5"): ("2026-09-29", "sample"),
     ("droid_pro", "claude-opus-5.5"): ("2026-09-28", "sample"),
     ("google_ai_pro_us", "gemini-3.8-flash"): ("2026-09-12~2026-09-27", "sample"),
@@ -1518,7 +1704,9 @@ def workload_of(pid: str, billing: str, model: str = "") -> str:
         return "anthropic" if model in ANTHROPIC_CACHE_WRITE_5M else "standard"
     if pid == "claude_pro" or (pid, model) == ("devin_max", "claude-opus-5.5") or pid.startswith("droid_") \
             or (pid in ("claude_max_20x", "claude_max_5x") and model in ("claude-opus-5.5", "claude-sonnet-5.5", "claude-haiku-5.5")) \
-            or (pid, model) in (("claude_team", "claude-opus-5.5"), ("cursor_ultra", "claude-opus-5.5")):
+            or (pid, model) in (("claude_team", "claude-opus-5.5"), ("cursor_ultra", "claude-opus-5.5"),
+                                ("devin_pro", "claude-sonnet-5.5"), ("devin_pro", "claude-haiku-5.5"),
+                                ("devin_pro", "claude-fable-5.1"), ("devin_pro", "claude-opus-5.5")):
         return "anthropic"
     if pid.startswith(("google_", "stepfun_")):
         return "lowCache"

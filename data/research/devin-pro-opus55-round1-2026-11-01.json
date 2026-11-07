@@ -1,0 +1,94 @@
+{
+  "collectedAt": "2026-11-01",
+  "scopeNote": "Devin Pro $20 在 Devin CLI 上跑 Claude Opus 5.5 (High) 的 token + 周额度百分比同框样本。2026-11-01 新周窗从 0% 起跑（Daily/Weekly 均为零），单模型 100%，无并行用量污染——是本项目 Devin Pro 系列最干净的一段。",
+  "items": [
+    {
+      "planId": "devin_pro",
+      "planName": "Devin Pro",
+      "priceUsd": 20,
+      "priceSource": "https://docs.devin.ai/admin/billing/self-serve（Pro $20/month；Max $200/month）；https://devin.ai/pricing",
+      "model": "claude-opus-5.5",
+      "panelModelName": "Claude Opus 5.5 High",
+      "evidenceType": "maintainer_panel_double_checkpoint_zero_start",
+      "session": {
+        "id": "4658dda0-5108-434a-8b1f-346483354c70",
+        "agentMessages": 61,
+        "turns": 1,
+        "toolCalls": 82,
+        "files": 10,
+        "commands": 48,
+        "tokens": {"input": 849951, "output": 82888, "cache_read": 13374805},
+        "totalTokens": 14307644,
+        "tokensByModel": {
+          "Claude Opus 5.5 High": {"tokens": 15000000, "share": 1.0}
+        },
+        "observedMix": {"cacheRead": 0.93480, "input": 0.05941, "output": 0.00579}
+      },
+      "checkpoints": [
+        {
+          "label": "start",
+          "dailyPct": 0,
+          "weeklyPct": 0,
+          "dailyResetsIn": "quota reset",
+          "weeklyResets": "Nov 8, 11:00 AM (UTC+3)",
+          "sessionNote": "New week window; both bars at zero."
+        },
+        {
+          "label": "end",
+          "dailyPct": 56,
+          "weeklyPct": 28,
+          "dailyResetsIn": "18h 17m",
+          "weeklyResets": "Nov 8, 11:00 AM (UTC+3)",
+          "sessionNote": "This session 1 turn / 82 tool calls / 10 files / 48 commands"
+        }
+      ],
+      "delta": {"dailyPp": 56, "weeklyPp": 28},
+      "windows": {
+        "adopted": "weekly",
+        "dailyTimesSevenVsWeekly": 3.5,
+        "note": "Daily 56pp 反推用；日池 ×7 = 周池 ×3.5，与 2026-10-31 四段（3.23/3.50/3.50/3.64）同结构，周池绑定。"
+      },
+      "prices": {
+        "model": "claude-opus-5.5",
+        "cachedPerMtok": 0.2,
+        "inputPerMtok": 4.0,
+        "outputPerMtok": 20.0,
+        "cacheWrite5mPerMtok": 5.0,
+        "source": "platform.claude.com pricing；OPUS55_LIST；ANTHROPIC_CACHE_WRITE_5M",
+        "note": "非缓存输入按 Anthropic 档 5 分钟写价 $5 计。若按普通输入价 $4 计，月额约 2.64 亿（低约 10%），不采。"
+      },
+      "calculation": {
+        "segmentWorthUsd": 8.582476,
+        "segmentWorthFormula": "cache读 13,374,805×$0.2 + 非缓存输入 849,951×$5 + 输出 82,888×$20，÷1e6",
+        "weeklyPoolWorthUsd": 30.6517,
+        "monthlyListWorthUsd": 122.6068,
+        "monthlyFormula": "段 worth ÷28% ×4周",
+        "blendedAnthropicPerMtok": 0.419,
+        "monthlyTokens": 293000000,
+        "monthlyYi": 2.93,
+        "realUsdPerMtok": 0.068259386,
+        "rawMonthlyYi": 2.04,
+        "rawMonthlyNote": "14,307,644 ÷28% ×4周 = 204,394,914 raw",
+        "roundingIntervalYi": [2.88, 2.98],
+        "roundingNote": "28pp 整数读数 ±0.5pp 对应约 2.88~2.98 亿"
+      },
+      "crossCheck": {
+        "poolWorthUsdPerWeek": {
+          "opus55": 30.65,
+          "sonnet55": 33.73,
+          "haiku55": 31.45,
+          "fable51": 29.44
+        },
+        "ratioDerivedFromSonnetYi": 3.22,
+        "ratioFormula": "devin_pro::claude-sonnet-5.5 采用值 6.44 亿 × Anthropic 档混合价比 0.2095/0.419",
+        "note": "本段池 $30.65/周落在四段 $29.44~33.73 的中部，五段互证。"
+      },
+      "confidence": "high（零起点、100% 单模型、28pp 大信号；池 worth 与其他四段互证）",
+      "decision": "采用 devin_pro × claude-opus-5.5 = 2.93 亿/月 high（Anthropic 档）。周窗 0%→28%（28pp）；段 worth $8.5825 ÷28%×4周 = $122.61 ÷ $0.419/MTok。raw 口径 2.04 亿留作对照。"
+    }
+  ],
+  "notFound": [
+    "Devin Pro 官方公布的 Daily/Weekly 池绝对额度",
+    "Opus 5.5 在 Devin 额度中的扣费倍率"
+  ]
+}
