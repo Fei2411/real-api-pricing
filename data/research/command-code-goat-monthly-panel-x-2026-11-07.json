@@ -1,0 +1,135 @@
+{
+  "recordedAt": "2026-11-07",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 197,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-07 每日 X 公开搜索保留的 Command Code GOAT $10 月用量面板 + Flash-1017 Ultrafast 官方声明。截图仅链原帖，不复制媒体进仓。口述 3B/剩40% 与面板 2.4B/~56% used 矛盾原样保留。",
+  "items": [
+    {
+      "id": "x-0xJustshrimp-cc-goat-2p4b-56pct-monthly",
+      "confidence": "High",
+      "planId": "command_code_goat_10",
+      "model": "mixed (GLM-5.3 Flash dominant + DeepSeek V4.1 Flash + MiMo V2.6 Flash)",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/0xJustshrimp/status/2118389099195412596",
+        "account": "0xJustshrimp",
+        "createdAt": "2026-11-05T17:04:53Z"
+      },
+      "observed": {
+        "planUsdPerMonth": 10,
+        "billingWindow": "2026-10-06 to 2026-11-06",
+        "totalTokensPanelApprox": 2400000000,
+        "totalTokensClaimedApprox": 3000000000,
+        "totalRuns": 14676,
+        "monthlyLimitUsedPctPanelApprox": 56,
+        "monthlyLimitRemainingPctClaimedApprox": 40,
+        "weeklyLimitUsedPctPanelApprox": 71,
+        "threeHourLimitUsedPctPanelApprox": 1,
+        "modelBreakdownPanel": [
+          {
+            "model": "GLM-5.3 Flash",
+            "tokensApprox": 1800000000,
+            "sharePctApprox": 79.1
+          },
+          {
+            "model": "DeepSeek V4.1 Flash",
+            "tokensApprox": 676500000,
+            "sharePctApprox": 14.5
+          },
+          {
+            "model": "MiMo V2.6 Flash",
+            "tokensApprox": 62700000,
+            "sharePctApprox": 5.7
+          }
+        ],
+        "derivedMonthlyPoolIfPanel": "2.4B / 0.56 ≈ 4.3B",
+        "derivedMonthlyPoolIfClaim": "3B / 0.60 ≈ 5.0B",
+        "hasScreenshot": true,
+        "screenshotNote": "原帖 1 张 Usage 面板；未入库复制；口述与面板数字矛盾原样保留"
+      },
+      "gaps": [
+        "无 input/cache/output 分项",
+        "口述 3B/剩40% vs 面板 2.4B/~56% used",
+        "与 #171 $100 Flash worth 口径如何对齐未裁定",
+        "$10 档是否含多模型混用官方规则未核"
+      ]
+    },
+    {
+      "id": "x-CommandCodeAI-flash1017-ultrafast-goat-20credits",
+      "confidence": "Medium",
+      "planId": "command_code_goat_10",
+      "model": "DeepSeek V4.1 Flash 1017 Ultrafast",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/CommandCodeAI/status/2118824521314783243",
+        "account": "CommandCodeAI",
+        "createdAt": "2026-11-06T21:55:06Z"
+      },
+      "observed": {
+        "official": true,
+        "contextWindowTokens": 1000000,
+        "throughputClaimTps": "1000+",
+        "goatCreditsUsd": 20,
+        "goatPriceUsd": 10,
+        "note": "$10/mo GOAT has $20 credits (2x usage); available on GOAT and higher + API",
+        "hasScreenshot": false
+      },
+      "gaps": [
+        "无绝对 token 打满表",
+        "credits→raw token 需标价折算"
+      ]
+    },
+    {
+      "id": "x-enryuoe-cc-12p8b-vs-opencode-8b",
+      "confidence": "Medium",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/enryuoe/status/2118845525856256195",
+        "account": "enryuoe",
+        "createdAt": "2026-11-06T23:18:34Z"
+      },
+      "observed": {
+        "claim": "same $10 only DS V4.1 Flash: Command Code ~12.8B tokens vs OpenCode Go ~8B; better cache hit on CC",
+        "hasScreenshot": false
+      },
+      "gaps": [
+        "纯口述",
+        "无面板",
+        "时间窗/是否打满未知"
+      ]
+    },
+    {
+      "id": "x-season7_8-opencode-go-8b-mistral-150",
+      "confidence": "Medium",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/season7_8/status/2118857176085155961",
+        "account": "season7_8",
+        "createdAt": "2026-11-07T00:04:51Z"
+      },
+      "observed": {
+        "opencodeGoUsd": 10,
+        "opencodeDeepSeekWorthUsd": 100,
+        "opencodeTokensClaim": "easily over 8B",
+        "mistralPlanUsd": 15,
+        "mistralWorthUsd": 150,
+        "mistralModels": [
+          "DeepSeek V4.1 Flash",
+          "GLM 5.3",
+          "GLM 5.3 Flash"
+        ],
+        "hasScreenshot": false
+      },
+      "gaps": [
+        "二手口述",
+        "链 #171/#180"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "opencode-cheepseek-phase4-x-2026-10-31.json",
+    "opencode-go-burn-quota-x-2026-11-01.json",
+    "x-scan-2026-11-07.json"
+  ]
+}

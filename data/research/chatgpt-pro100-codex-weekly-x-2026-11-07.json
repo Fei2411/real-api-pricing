@@ -1,0 +1,98 @@
+{
+  "recordedAt": "2026-11-07",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 198,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-07 扫描：ChatGPT Pro$100（翻倍后）× Codex 周用量绝对 token+% 口述，及同帖 Claude Pro Opus5.5 周打满。附件 GIF 为 meme 非面板，故主证据 Medium。翻倍政策旁证链 #161。",
+  "items": [
+    {
+      "id": "x-TodayYueC-pro100-codex-908m-4pct-left",
+      "confidence": "Medium",
+      "planId": "chatgpt_pro_100",
+      "model": "Astra + Terra (Codex)",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/TodayYueC/status/2118777995284664576",
+        "account": "TodayYueC",
+        "createdAt": "2026-11-06T18:50:13Z"
+      },
+      "observed": {
+        "planUsdPerMonth": 100,
+        "notePlan": "作者称总量翻倍后",
+        "codexTokens": 908757998,
+        "codexApiWorthUsdClaim": 884.65,
+        "weeklyRemainingPctClaim": 4,
+        "weeklyUsedPctImplied": 96,
+        "derivedWeeklyPoolApprox": 946622914,
+        "models": [
+          "Astra",
+          "Terra"
+        ],
+        "hasScreenshot": false,
+        "screenshotNote": "附件为 Cirno Fumo meme GIF，不是用量面板"
+      },
+      "gaps": [
+        "无控制台截图校核",
+        "无 input/cache/output",
+        "API worth 算法未知"
+      ]
+    },
+    {
+      "id": "x-TodayYueC-claude-pro-opus55-1p04b-exhausted",
+      "confidence": "Medium",
+      "planId": "claude_pro",
+      "model": "Claude Opus 5.5",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/TodayYueC/status/2118777995284664576",
+        "account": "TodayYueC",
+        "createdAt": "2026-11-06T18:50:13Z"
+      },
+      "observed": {
+        "planUsdPerMonth": 20,
+        "claudeTokens": 1039794838,
+        "claudeApiWorthUsdClaim": 383.21,
+        "weeklyStatus": "exhausted",
+        "hasScreenshot": false
+      },
+      "gaps": [
+        "同帖；无面板；与 Codex 场景不同不可直接比价采用"
+      ]
+    },
+    {
+      "id": "x-LimitHitCom-pro-doubled-oct29",
+      "confidence": "Medium",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/LimitHitCom/status/2118822994164515005",
+        "account": "LimitHitCom",
+        "createdAt": "2026-11-06T21:49:02Z"
+      },
+      "observed": {
+        "claim": "Pro 100/200/500 drop 5h window, weekly only; doubled Oct 29; Dec ChatGPT+Codex share pool on Plus/Pro/Business",
+        "hasScreenshot": false
+      },
+      "gaps": [
+        "政策旁证；链 #161/#178"
+      ]
+    },
+    {
+      "id": "x-sakurakk730-pro-work-codex-doubled",
+      "confidence": "Medium",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/sakurakk730/status/2118864406108832001",
+        "account": "sakurakk730",
+        "createdAt": "2026-11-07T00:33:35Z"
+      },
+      "observed": {
+        "claim": "Pro 级别 ChatGPT Work 与 Codex 使用配额已直接翻倍",
+        "hasScreenshot": false
+      }
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-07.json",
+    "chatgpt-codex-shared-pool related via issue 178"
+  ]
+}
