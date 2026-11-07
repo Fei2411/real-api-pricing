@@ -1,0 +1,30 @@
+{
+ "collectedAt": "2026-10-30",
+ "collectionMethod": "Contributor re-check of the official ChatGPT Pro tier pages on 2026-10-30: the $100/mo Pro tier's allowance multiplier versus Plus has been raised from 5x to 10x, while the $200/mo tier keeps 20x and both prices are unchanged. Adopted through build_adopted.py; no new measurements this round — all Pro $100 rows stay derived from the existing Plus anchors, only the official multiplier changes.",
+ "sources": [
+  "Contributor report 2026-10-30: GPT 方面 PRO 100 改为 Plus 10 倍，PRO 200 依旧保持 20 倍（投稿人复核官方档位口径）",
+  "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers (tier lineup; previous read 2026-09-01 recorded the $100 tier as ~5x Plus)",
+  "https://learn.chatgpt.com/docs/pricing (per-model 5h local-message ranges; previous read 2026-09-05)"
+ ],
+ "scope": "Official multiplier revision for the ChatGPT Pro $100 tier only: 5x → 10x of Plus. The Pro $200 (20x) tier, Plus/Free/Go anchors, and every measured Plus anchor (Sol 6.16 raw; Luna 70.58 折算口径; Astra 1.59) are unchanged. Pro 20x rows keep their five-source weighted Sol value (129.02) and measured Astra cluster.",
+ "adoptionStatus": "Adopted 2026-10-30. plan id chatgpt_pro_5x renamed chatgpt_pro_10x (\"ChatGPT Pro 10x\", still $100/mo). Sol 30.8 → 61.6 亿 (Plus 6.16 × 10); Luna 352.91 → 705.81 亿 (Plus 70.58 × 10); Terra 59.574 → 119.147 亿 and GPT-5.5 23.829 → 47.659 亿 re-derived from the new Sol base via the unchanged credits mix; Astra 9.10 → 18.20 亿 re-derived from the Pro 20x Astra cluster at the new inter-tier Sol ratio (4× → 2×). Pro 20x rows unchanged. Per-token price of the $100 tier halves: e.g. Luna $0.0028 → $0.0014/MTok, now level with the 20x tier instead of with Plus.",
+ "previousOfficialRead": {
+  "asOf": "2026-09-01",
+  "tiers": {
+   "pro5x": 100,
+   "pro20x": 200
+  },
+  "multiplier": "Pro = Plus 的 5x / 20x",
+  "evidence": "data/chatgpt-pro-claims.json (checkedAt 2026-09-05)"
+ },
+ "revision2026_10_30": {
+  "tiers": {
+   "pro10x": 100,
+   "pro20x": 200
+  },
+  "multiplier": "Pro = Plus 的 10x / 20x",
+  "changed": "pro $100 multiplier 5x → 10x",
+  "unchanged": "pro $200 multiplier stays 20x; prices unchanged"
+ },
+ "notAdopted": "无新增实测：$100 档无独立账号样本，维持由 Plus 锚点 × 官方倍率的派生链（medium/low），待 Pro 10x 账号独立实测后替换。learn.chatgpt.com 各模型 5h 消息区间若随档位同步调整，须另行复核（本轮无新区间数据，officialLocalMessagesPer5h 证据仍为 2026-09-05 读数）。"
+}
