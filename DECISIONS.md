@@ -3,6 +3,12 @@
 本地 `AGENTS.md`（不入库）只放 Agent 工作流程；口径与规则见 [`CONVENTIONS.md`](CONVENTIONS.md)；本文件记录每条采用值的取舍（旧值 → 新值 → 依据 → 未采来源）。
 最权威的表述仍在 `scripts/build_adopted.py` 的 `decision_note` 和 `data/research/` 证据文件里；本文件是按时间的索引摘要。改数只能改 `build_adopted.py`，改完在这里同步记一笔。
 
+## 2026-10-30 · OpenCode Go × DeepSeek V4.1 Flash
+
+- Adopt the official Go per-model monthly allowance of $100, up from $80. At the existing standard workload and off-peak prices, $0.00966/MTok gives 103.520 亿 tokens/month (previously 82.816 亿). Peak token prices are twice off-peak, so actual usage varies. The official table and landing page show no limited-time label on this row; recheck when the catalog changes.
+- Evidence: `data/research/opencode-go-deepseek-v41-round7-2026-10-30.json`. Go Plus and Teams remain research-only.
+- Adopt OpenCode Go Kimi K3.1 Pro at 0.510 亿/month ($15 ÷ $0.294/MTok) and MiniMax M3.1 Flash at 9.390 亿/month ($20 ÷ $0.0213/MTok), using the current table and standard workload. The Kimi calculation excludes cache writes, which are priced at $2/MTok; actual use may be lower. MiniMax GA and preview remain separate model IDs. Earlier evidence: `opencode-go-kimi-k31-pro-round1-2026-10-24.json`, `opencode-go-minimax-m31-flash-round1-2026-10-23.json`.
+
 ## 2026-10-27 · Kimi 会员 199（Allegretto）k3 换基 14.51 → 19.46 亿（维护者实测）
 
 - **采用**：`kimi_allegretto_cn × kimi-k3` = **19.46 亿/月 medium**。维护者 Allegretto（赠送）账号截图：k3.1-pro 单日用量 37,362,656 raw token ↔ 控制台「本月用量 1.92%」直推月池 19.46 亿；同窗「7天用量 9.61%」反推周池 3.89 亿，月/周 = 5.005 与月池=周池×5 吻合，同一笔消耗两口径互证。替换旧基 14.51 亿（2026-07 ccusage 243.74M/84% k3-256k 混合负载反推）——两次样本的模型等效不同（k3.1-pro vs k3-256k 混合），差距是模型换率而非纯池变化。k2.7-code 15.68 亿为独立纯模型面板实测，不随本次换基。

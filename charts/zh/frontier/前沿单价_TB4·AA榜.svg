@@ -1807,8 +1807,8 @@ z
    </g>
    <g id="patch_4">
     <path d="M 453.6 320.636571 
-L 784.763427 320.636571 
-L 784.763427 404.712 
+L 747.344865 320.636571 
+L 747.344865 404.712 
 L 453.6 404.712 
 z
 " clip-path="url(#p6354b7e420)" style="fill: #0f766e"/>
@@ -2134,23 +2134,23 @@ z
    </g>
    <g id="text_8">
     <g id="patch_8">
-     <path d="M 788.730093 374.939286 
-L 875.444468 374.939286 
-L 875.444468 350.409286 
-L 788.730093 350.409286 
+     <path d="M 751.311531 374.939286 
+L 838.025906 374.939286 
+L 838.025906 350.409286 
+L 751.311531 350.409286 
 z
 " style="fill: #ffffff; opacity: 0.72"/>
     </g>
-    <!-- $0.00121  OC [M] -->
-    <g style="fill: #20252b" transform="translate(789.720093 361.079286) scale(0.11 -0.11)">
+    <!-- $0.00097  OC [M] -->
+    <g style="fill: #20252b" transform="translate(752.301531 361.079286) scale(0.11 -0.11)">
      <use xlink:href="#NotoSansCJKsc-Regular-5"/>
      <use xlink:href="#NotoSansCJKsc-Regular-f6b1" transform="translate(55.5 0)"/>
      <use xlink:href="#NotoSansCJKsc-Regular-f" transform="translate(111 0)"/>
      <use xlink:href="#NotoSansCJKsc-Regular-f6b1" transform="translate(138.796875 0)"/>
      <use xlink:href="#NotoSansCJKsc-Regular-f6b1" transform="translate(194.296875 0)"/>
-     <use xlink:href="#NotoSansCJKsc-Regular-f6b2" transform="translate(249.796875 0)"/>
-     <use xlink:href="#NotoSansCJKsc-Regular-f6b3" transform="translate(305.296875 0)"/>
-     <use xlink:href="#NotoSansCJKsc-Regular-f6b2" transform="translate(360.796875 0)"/>
+     <use xlink:href="#NotoSansCJKsc-Regular-f6b1" transform="translate(249.796875 0)"/>
+     <use xlink:href="#NotoSansCJKsc-Regular-f6ba" transform="translate(305.296875 0)"/>
+     <use xlink:href="#NotoSansCJKsc-Regular-f6b8" transform="translate(360.796875 0)"/>
      <use xlink:href="#NotoSansCJKsc-Regular-1" transform="translate(416.296875 0)"/>
      <use xlink:href="#NotoSansCJKsc-Regular-1" transform="translate(438.703125 0)"/>
      <use xlink:href="#NotoSansCJKsc-Regular-30" transform="translate(461.109375 0)"/>
@@ -2161,7 +2161,7 @@ z
      <use xlink:href="#NotoSansCJKsc-Regular-3e" transform="translate(736.515625 0)"/>
     </g>
     <!-- 得分: +33.8384% -->
-    <g style="fill: #20252b" transform="translate(789.720093 372.629286) scale(0.11 -0.11)">
+    <g style="fill: #20252b" transform="translate(752.301531 372.629286) scale(0.11 -0.11)">
      <defs>
       <path id="NotoSansCJKsc-Regular-15" d="M 2176 0 
 L 2726 0 
