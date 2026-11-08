@@ -3,6 +3,17 @@
 本地 `AGENTS.md`（不入库）只放 Agent 工作流程；口径与规则见 [`CONVENTIONS.md`](CONVENTIONS.md)；本文件记录每条采用值的取舍（旧值 → 新值 → 依据 → 未采来源）。
 最权威的表述仍在 `scripts/build_adopted.py` 的 `decision_note` 和 `data/research/` 证据文件里；本文件是按时间的索引摘要。改数只能改 `build_adopted.py`，改完在这里同步记一笔。
 
+## 2026-10-30 · ChatGPT Pro $100 档官方倍率 5x → 10x（$200 档 20x 不变）
+
+- **采用**：官方 $100/mo Pro 档相对 Plus 的额度倍率由 5x 提为 10x（2026-10-30 复核），$200 档维持 20x、价格均不变。plan id `chatgpt_pro_5x` → `chatgpt_pro_10x`（名称 "ChatGPT Pro 10x"），各值仍由 Plus 锚点 × 官方倍率派生：
+  - `gpt-5.6-sol` 30.8→**61.6 亿**（Plus 6.16 × 10，medium）；
+  - `gpt-5.6-luna` 352.91→**705.81 亿**（Plus 70.58 折算口径 × 10，medium）；
+  - `gpt-5.6-terra` 59.574→**119.147 亿**、`gpt-5.5` 23.829→**47.659 亿**（随 Sol 基准按三段 credits 混合价重推，口径不变）；
+  - `gpt-6-astra` 9.10→**18.20 亿**（由 Pro 20x Astra 加权簇 38.12 沿 Sol 档间比例派生，比例由 4× 变 2×，low）。
+- **级联**：$100 档每 token 单价减半（如 Luna $0.0028→$0.0014/MTok），由与 Plus 持平变为与 20x 档持平；Pro 20x、Plus、Go/Free 各行不变。`chatgpt_pro_20x` 各值与 DATA_DATES 均未动。
+- **未采**：无 Pro 10x 账号独立实测，learn.chatgpt.com 各模型 5h 消息区间未随档位复核（仍为 2026-09-05 读数），待补。
+- 证据：`data/research/chatgpt-pro-10x-round1-2026-10-30.json`。
+
 ## 2026-10-27 · Kimi 会员 199（Allegretto）k3 换基 14.51 → 19.46 亿（维护者实测）
 
 - **采用**：`kimi_allegretto_cn × kimi-k3` = **19.46 亿/月 medium**。维护者 Allegretto（赠送）账号截图：k3.1-pro 单日用量 37,362,656 raw token ↔ 控制台「本月用量 1.92%」直推月池 19.46 亿；同窗「7天用量 9.61%」反推周池 3.89 亿，月/周 = 5.005 与月池=周池×5 吻合，同一笔消耗两口径互证。替换旧基 14.51 亿（2026-07 ccusage 243.74M/84% k3-256k 混合负载反推）——两次样本的模型等效不同（k3.1-pro vs k3-256k 混合），差距是模型换率而非纯池变化。k2.7-code 15.68 亿为独立纯模型面板实测，不随本次换基。
