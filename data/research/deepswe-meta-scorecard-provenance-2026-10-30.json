@@ -1,0 +1,41 @@
+{
+  "collectedAt": "2026-10-30",
+  "scope": "DeepSWE v1.1 scores republished in Meta Muse Wonder materials; research only",
+  "sources": [
+    "https://dev.meta.ai/resources/blog/build-with-muse-wonder",
+    "https://research.meta.ai/static/muse-wonder-model-card",
+    "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json"
+  ],
+  "scorecardDate": "2026-10-12",
+  "metric": "Pass@1 percent",
+  "methodology": "Meta says the DeepSWE scores for Wonder, Wonder Full and Opus 5.5 are Datacurve third-party results, while Fable 5.1 is from Anthropic’s system card. The scorecard labels the columns max effort; the xhigh exception in the model card applies to SWE-Marathon, not DeepSWE.",
+  "results": [
+    {
+      "model": "muse-wonder-full",
+      "score": 79.0,
+      "reasoningEffort": "max",
+      "attribution": "Datacurve third-party result, republished by Meta"
+    },
+    {
+      "model": "muse-wonder",
+      "score": 78.8,
+      "reasoningEffort": "max",
+      "attribution": "Datacurve third-party result, republished by Meta"
+    },
+    {
+      "model": "claude-opus-5.5",
+      "score": 74.2,
+      "reasoningEffort": "max",
+      "attribution": "Datacurve third-party result, republished by Meta"
+    },
+    {
+      "model": "claude-fable-5.1",
+      "score": 67.4,
+      "reasoningEffort": "max",
+      "attribution": "Anthropic-reported result, republished by Meta"
+    }
+  ],
+  "comparisonCaveat": "These figures are not rows in the September 22 Datacurve public leaderboard artifact. Do not represent them as official leaderboard configurations or infer harness, sample counts, confidence intervals, or cost without source evidence.",
+  "adoptionStatus": "research-only; no derived scores or charts modified",
+  "followUp": "Verify Anthropic’s primary source and any underlying Datacurve runs before deciding how these results should be displayed alongside official leaderboard and vendor-reported results."
+}
