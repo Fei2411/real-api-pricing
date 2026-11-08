@@ -1,0 +1,40 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "public_x_post_with_console_screenshots (issue #182)",
+  "scope": "旧版 699 Allegro × k3.1-pro 周池直测（单账号），用于替换 kimi_allegro_cn × kimi-k3 的档间倍率派生值；issue #182",
+  "sources": [
+    "https://x.com/achaosxyz/status/2117027934175146238 (@achaosxyz, 2026-11-02)",
+    "本仓库 kimi-allegretto-quota-round2-2026-10-27.json（199 档锚点，raw 口径）",
+    "https://www.kimi.com/pricing（v2 套餐页，2026-10-26 读取，见 kimi-v2-plans-round1-2026-10-26.json）"
+  ],
+  "items": [
+    {
+      "id": "achaosxyz-allegro699-k31pro-weekly-99",
+      "plan": "旧版 Kimi 699 Allegro（v1）",
+      "model": "k3.1-pro",
+      "window": "约 2026-10-26 → 2026-11-02（Asia/Shanghai）",
+      "weeklyPercentUsed": 99.0,
+      "tokens": {
+        "inputInclCache": 784900000,
+        "cacheRead": 761600000,
+        "cacheHitShare": 0.97,
+        "output": 2200000,
+        "total": 787100000,
+        "requests": 5552,
+        "note": "Input 784.9M 含 Cache 读 761.6M（97%），故普通输入 = 784.9 - 761.6 = 23.3M；Total 787.1M = Input + Output"
+      },
+      "usageBar": "周额度 99%（约 3h50min 后重置）",
+      "caveat": "作者称另有对话消耗未计入统计 → 99% 的分母可能包含未计入用量，按本面板推出的周池是下限",
+      "derivation": {
+        "segmentWorthUsd": "读 761.6M×$0.2 ＋ 普通输入 23.3M×$2 ＋ 出 2.2M×$10 = $220.92（k3.1-pro 标价；k3 的 0.3/3/15 恰为 1.5×，折算结果相同）",
+        "normalized": "$220.92 ÷ 99% × 5 周 ÷ 标准负载混合价 $0.294/MTok = 37.95 亿/月（采用）",
+        "raw": "787.1M ÷ 99% × 5 周 = 39.75 亿/月（raw 口径，即旧口径，留作对照）",
+        "ratioVs199": "199 档 19.46 亿（raw）不变；699/199 由官方 60/20 的 3.0× 变为实测 1.95×"
+      },
+      "adopted": "kimi_allegro_cn::kimi-k3 58.38→37.95亿（medium，2026-11-08）",
+      "cascade": "kimi_max_cn::kimi-k3（v2 Max 699 = v1/2）29.19→18.98亿；kimi_ultra_cn::kimi-k3（Ultra = Max×2）58.38→37.95亿"
+    }
+  ],
+  "confidence": "medium（面板级数据 + 分项完整，但单账号 n=1、未计入用量使周池为下限；沿用原行 medium）",
+  "adoptionStatus": "adopted (2026-11-08)"
+}
