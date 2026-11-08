@@ -1,0 +1,200 @@
+{
+  "collectedAt": "2026-10-31",
+  "collectionMethod": "Manual capture of the official OpenCode Go docs page and landing page (English) around 10:30 Beijing time / 02:30Z on 2026-10-31, compared against the 2026-10-30 capture of the same pages. The per-model price tables (Go / Go Plus / Go Teams), the per-model Monthly limit column, the official 'Estimated requests' tables and the landing-page limits table were read as published. The change was additionally cross-checked against the official @opencode X post of 2026-10-30. Research-only — no adopted row generated, no adopted value changed, no script changed.",
+  "sources": [
+    "https://opencode.ai/docs/go/",
+    "https://opencode.ai/go",
+    "https://x.com/opencode/status/2116209960673800474"
+  ],
+  "scope": "OpenCode Go official price and plan pages only, plus the official @opencode X announcement. On 2026-10-31 the per-model Monthly limit of DeepSeek V4.1 Flash (both the Off-Peak and the Peak row) was raised in all three published plan tables — Go $80→$100, Go Plus $160→$200, Go Teams $85→$105 — with the three-part token prices unchanged, and the official 'Estimated requests' rows raised accordingly. The plan prices (Go $10/month, Go Plus $40/month, Go Teams $20/member/month), the usage-window rule and every other model row are unchanged; the only other difference against the 2026-10-30 capture is the wording 'Web Search' → 'Web search'. No leaderboard/score data, no Command Code GOAT change, no shared-pool change, no adopted.csv row, no computed allowance in this file.",
+  "adoptionStatus": "research-only; not adopted; the opencode_go × deepseek-v4.1-flash adopted row is generated from scripts/build_adopted.py OPENCODE_GO_MODELS (still $80); updating it to the new $100 monthly limit is left to maintainer review",
+  "relatedIssue": "https://github.com/Fei2411/real-api-pricing/issues/171",
+  "previous": {
+    "capturedAt": "2026-10-30",
+    "monthlyLimitUsd": {
+      "go": 80,
+      "goPlus": 160,
+      "goTeams": 85
+    },
+    "monthlyLimitRowsAsPublished": [
+      "Go table: 'DeepSeek V4.1 Flash (Off-Peak) | $0.15 | $0.60 | $0.003 | - | $80' and 'DeepSeek V4.1 Flash (Peak) | $0.30 | $1.20 | $0.006 | - | $80'",
+      "Go Plus table: 'DeepSeek V4.1 Flash (Off-Peak) | $0.15 | $0.60 | $0.003 | - | $160' and 'DeepSeek V4.1 Flash (Peak) | $0.30 | $1.20 | $0.006 | - | $160'",
+      "Go Teams table: 'DeepSeek V4.1 Flash (Off-Peak) | $0.15 | $0.60 | $0.003 | - | $85' and 'DeepSeek V4.1 Flash (Peak) | $0.30 | $1.20 | $0.006 | - | $85'"
+    ],
+    "pricesPer1MUsd": {
+      "offPeak": {
+        "input": 0.15,
+        "output": 0.6,
+        "cachedRead": 0.003,
+        "cachedWrite": null
+      },
+      "peak": {
+        "input": 0.3,
+        "output": 1.2,
+        "cachedRead": 0.006,
+        "cachedWrite": null
+      }
+    },
+    "officialRequestEstimates": {
+      "note": "Official 'Estimated requests' rows for DeepSeek V4.1 Flash on 2026-10-30 (Requests per 5 hours / Requests per week / Requests per month), transcribed as published. Cross-check evidence only; never used as an allowance main value.",
+      "go": {
+        "per5h": 34670,
+        "perWeek": 86670,
+        "perMonth": 173330
+      },
+      "goPlus": {
+        "per5h": 69330,
+        "perWeek": 173330,
+        "perMonth": 346670
+      },
+      "goTeams": {
+        "per5h": 36837,
+        "perWeek": 92080,
+        "perMonth": 184160
+      }
+    },
+    "landingPage": {
+      "note": "The /go limits table row for DeepSeek V4.1 Flash on 2026-10-30 read (Go est. requests / 5h, Go Plus est. requests / 5h, Go monthly usage, Go Plus monthly usage):",
+      "rowAsPublished": [
+        "34,670",
+        "69,330",
+        "$80",
+        "$160"
+      ]
+    }
+  },
+  "observed": {
+    "model": "DeepSeek V4.1 Flash",
+    "officialApiId": "deepseek-v4.1-flash",
+    "monthlyLimitUsd": {
+      "before": {
+        "go": 80,
+        "goPlus": 160,
+        "goTeams": 85
+      },
+      "after": {
+        "go": 100,
+        "goPlus": 200,
+        "goTeams": 105
+      }
+    },
+    "monthlyLimitRowsAsPublished": [
+      "Go table: 'DeepSeek V4.1 Flash (Off-Peak) | $0.15 | $0.60 | $0.003 | - | $100' and 'DeepSeek V4.1 Flash (Peak) | $0.30 | $1.20 | $0.006 | - | $100'",
+      "Go Plus table: 'DeepSeek V4.1 Flash (Off-Peak) | $0.15 | $0.60 | $0.003 | - | $200' and 'DeepSeek V4.1 Flash (Peak) | $0.30 | $1.20 | $0.006 | - | $200'",
+      "Go Teams table: 'DeepSeek V4.1 Flash (Off-Peak) | $0.15 | $0.60 | $0.003 | - | $105' and 'DeepSeek V4.1 Flash (Peak) | $0.30 | $1.20 | $0.006 | - | $105'"
+    ],
+    "monthlyLimitNote": "The Monthly limit column of the official price table was raised for the DeepSeek V4.1 Flash Off-Peak row and the Peak row alike, in all three plan tables (Go / Go Plus / Go Teams). Column order of the official table is Input | Output | Cached Read | Cached Write | Monthly limit; no cache-write price is listed for this model (page shows '-'). The official plan-table wording for Go Teams remains 'Every member gets their own limits, $5/month higher than Go on every model', which the published Go Teams $105 against the published Go $100 still satisfies.",
+    "prices": {
+      "status": "unchanged",
+      "offPeak": {
+        "input": 0.15,
+        "output": 0.6,
+        "cachedRead": 0.003,
+        "cachedWrite": null
+      },
+      "peak": {
+        "input": 0.3,
+        "output": 1.2,
+        "cachedRead": 0.006,
+        "cachedWrite": null
+      },
+      "note": "The three-part token price of DeepSeek V4.1 Flash is identical in the Go, Go Plus and Go Teams tables and is unchanged against 2026-10-30. Only the Monthly limit column moved. The peak-hours note is unchanged: 'Peak hours are 01:00-04:00 and 06:00-10:00 UTC, Monday through Friday; all other hours, including weekends, are Off-Peak.'"
+    },
+    "officialRequestEstimates": {
+      "note": "Official 'Estimated requests' rows for DeepSeek V4.1 Flash on 2026-10-31 (Requests per 5 hours / Requests per week / Requests per month), transcribed as published. Cross-check evidence only; never used as an allowance main value.",
+      "before": {
+        "go": {
+          "per5h": 34670,
+          "perWeek": 86670,
+          "perMonth": 173330
+        },
+        "goPlus": {
+          "per5h": 69330,
+          "perWeek": 173330,
+          "perMonth": 346670
+        },
+        "goTeams": {
+          "per5h": 36837,
+          "perWeek": 92080,
+          "perMonth": 184160
+        }
+      },
+      "after": {
+        "go": {
+          "per5h": 43330,
+          "perWeek": 108330,
+          "perMonth": 216670
+        },
+        "goPlus": {
+          "per5h": 86670,
+          "perWeek": 216670,
+          "perMonth": 433330
+        },
+        "goTeams": {
+          "per5h": 45500,
+          "perWeek": 113750,
+          "perMonth": 227500
+        }
+      }
+    },
+    "landingPage": {
+      "note": "The /go limits table row for DeepSeek V4.1 Flash on 2026-10-31 reads (Go est. requests / 5h, Go Plus est. requests / 5h, Go monthly usage, Go Plus monthly usage):",
+      "rowAsPublished": [
+        "43,330",
+        "86,670",
+        "$100",
+        "$200"
+      ],
+      "previousRowAsPublished": [
+        "34,670",
+        "69,330",
+        "$80",
+        "$160"
+      ]
+    },
+    "promoEndMarker": "none on page",
+    "promoEndMarkerNote": "The official docs page and the landing page carry no promo end date and no 'limited time' marker for DeepSeek V4.1 Flash. The only 'limited time' wording on the docs page belongs to other rows (the free limited-time models) and the only dated note is 'The 50% discount applies through November 30, 2026.' for Gemini 4 Argon; neither refers to this model. The landing page separately states 'DeepSeek: ZDR agreement is renewed monthly. The current agreement is valid through October 31, 2026.' — that is a data-retention agreement date, not a usage-promo end marker. Whether the new $100 tier is permanent or a phase of the promotion is therefore not stated on the pages themselves.",
+    "officialAnnouncement": {
+      "account": "@opencode",
+      "postedAt": "2026-10-30T16:45:46Z",
+      "url": "https://x.com/opencode/status/2116209960673800474",
+      "quote": "Operation Cheepseek Phase 4: $100 of usage for DeepSeek V4.1 Flash",
+      "note": "The official post names the $100 usage amount for DeepSeek V4.1 Flash, matching the published Go Monthly limit of $100. It does not state an end date and does not mention the Go Plus / Go Teams amounts, which are page-only observations."
+    }
+  },
+  "otherObservations": [
+    {
+      "topic": "Plan prices unchanged",
+      "observation": "The landing page still shows Go $10 per month, Go Plus $40 per month and Go Teams $20 per member per month, with the same plan bullets and the same 'Go and Go Plus are for workspaces with a single member…' / 'Go Teams costs $20/member/month with limits for every member.' FAQ wording as on 2026-10-30.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Usage-window rule unchanged",
+      "observation": "The usage-limits section still reads 'Each model has the following usage limits: 5-hour — 20% of the monthly limit; weekly — 50%; and monthly — 100%.' and 'Token pricing is the same for Go, Go Plus, and Go Teams.'",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Other model rows unchanged",
+      "observation": "No other model row moved in the Go, Go Plus or Go Teams price tables on 2026-10-31; every per-model price, Monthly limit and request estimate other than the DeepSeek V4.1 Flash rows is identical to the 2026-10-30 capture.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Wording change",
+      "observation": "The docs page now renders the feature heading as 'Web search' where the 2026-10-30 capture had 'Web Search'.",
+      "note": "Purely a capitalisation change of a heading; no pricing meaning. Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Model ID unchanged",
+      "observation": "The official SDK/API table still lists 'DeepSeek V4.1 Flash' with model ID 'deepseek-v4.1-flash' and endpoint 'https://opencode.ai/inference/go/openai/v1/chat/completions'.",
+      "note": "Recorded only; no adopted value changed."
+    }
+  ],
+  "computationNote": "No monthlyYi, no blended per-MTok price, no derived allowance and no adopted value are computed in this file; all numbers are transcribed as published on the official pages and in the official @opencode post. The repo's opencode_go × deepseek-v4.1-flash adopted row remains at the $80 basis (82.816 亿, generated by scripts/build_adopted.py OPENCODE_GO_MODELS) and was not touched by this capture.",
+  "relatedFiles": [
+    "opencode-go-deepseek-round7-2026-09-30.json",
+    "opencode-go-teams-round1-2026-10-30.json",
+    "goat-opencode-catalogs-round4-2026-10-20.json"
+  ],
+  "confidence": "medium",
+  "basis": "official"
+}
