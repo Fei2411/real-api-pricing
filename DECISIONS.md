@@ -3,16 +3,11 @@
 本地 `AGENTS.md`（不入库）只放 Agent 工作流程；口径与规则见 [`CONVENTIONS.md`](CONVENTIONS.md)；本文件记录每条采用值的取舍（旧值 → 新值 → 依据 → 未采来源）。
 最权威的表述仍在 `scripts/build_adopted.py` 的 `decision_note` 和 `data/research/` 证据文件里；本文件是按时间的索引摘要。改数只能改 `build_adopted.py`，改完在这里同步记一笔。
 
-## 2026-10-30 · ChatGPT Pro $100 档官方倍率 5x → 10x（$200 档 20x 不变）
+## 2026-10-30 · OpenCode Go × DeepSeek V4.1 Flash
 
-- **采用**：官方 $100/mo Pro 档相对 Plus 的额度倍率由 5x 提为 10x（2026-10-30 复核），$200 档维持 20x、价格均不变。plan id `chatgpt_pro_5x` → `chatgpt_pro_10x`（名称 "ChatGPT Pro 10x"），各值仍由 Plus 锚点 × 官方倍率派生：
-  - `gpt-5.6-sol` 30.8→**61.6 亿**（Plus 6.16 × 10，medium）；
-  - `gpt-5.6-luna` 352.91→**705.81 亿**（Plus 70.58 折算口径 × 10，medium）；
-  - `gpt-5.6-terra` 59.574→**119.147 亿**、`gpt-5.5` 23.829→**47.659 亿**（随 Sol 基准按三段 credits 混合价重推，口径不变）；
-  - `gpt-6-astra` 9.10→**18.20 亿**（由 Pro 20x Astra 加权簇 38.12 沿 Sol 档间比例派生，比例由 4× 变 2×，low）。
-- **级联**：$100 档每 token 单价减半（如 Luna $0.0028→$0.0014/MTok），由与 Plus 持平变为与 20x 档持平；Pro 20x、Plus、Go/Free 各行不变。`chatgpt_pro_20x` 各值与 DATA_DATES 均未动。
-- **未采**：无 Pro 10x 账号独立实测，learn.chatgpt.com 各模型 5h 消息区间未随档位复核（仍为 2026-09-05 读数），待补。
-- 证据：`data/research/chatgpt-pro-10x-round1-2026-10-30.json`。
+- Adopt the official Go per-model monthly allowance of $100, up from $80. At the existing standard workload and off-peak prices, $0.00966/MTok gives 103.520 亿 tokens/month (previously 82.816 亿). Peak token prices are twice off-peak, so actual usage varies. The official table and landing page show no limited-time label on this row; recheck when the catalog changes.
+- Evidence: `data/research/opencode-go-deepseek-v41-round7-2026-10-30.json`. Go Plus and Teams remain research-only.
+- Adopt OpenCode Go Kimi K3.1 Pro at 0.510 亿/month ($15 ÷ $0.294/MTok) and MiniMax M3.1 Flash at 9.390 亿/month ($20 ÷ $0.0213/MTok), using the current table and standard workload. The Kimi calculation excludes cache writes, which are priced at $2/MTok; actual use may be lower. MiniMax GA and preview remain separate model IDs. Earlier evidence: `opencode-go-kimi-k31-pro-round1-2026-10-24.json`, `opencode-go-minimax-m31-flash-round1-2026-10-23.json`.
 
 ## 2026-10-27 · Kimi 会员 199（Allegretto）k3 换基 14.51 → 19.46 亿（维护者实测）
 
