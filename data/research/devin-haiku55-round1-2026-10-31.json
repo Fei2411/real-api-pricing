@@ -1,0 +1,94 @@
+{
+  "collectedAt": "2026-10-31",
+  "scopeNote": "Devin Pro $20 在 Devin CLI 上跑 Claude Haiku 5.5 (Max) 的 token + 周额度百分比同框样本。维护者本机 /usage 与 /session-stats 双检查点，紧接同一账号的 Sonnet 5.5 段、处于同一周窗（起点 53% 即上一段终点）。用于独立测量 Pro 档在 Haiku 5.5 上的月 token 额度，并与 Sonnet 5.5 段互证池 worth。",
+  "items": [
+    {
+      "planId": "devin_pro",
+      "planName": "Devin Pro",
+      "priceUsd": 20,
+      "priceSource": "https://docs.devin.ai/admin/billing/self-serve（Pro $20/month；Max $200/month）；https://devin.ai/pricing",
+      "model": "claude-haiku-5.5",
+      "panelModelName": "Claude Haiku 5.5 Max",
+      "evidenceType": "maintainer_panel_double_checkpoint",
+      "session": {
+        "id": "14536d73-7aa9-486d-9d75-3534bf4da486",
+        "agentMessages": 65,
+        "turns": 9,
+        "toolCalls": 134,
+        "files": 16,
+        "commands": 62,
+        "tokens": {"input": 1076726, "output": 531852, "cache_read": 22846818},
+        "totalTokens": 24455396,
+        "tokensByModel": {
+          "Claude Haiku 5.5 Max": {"tokens": 24000000, "share": 0.98},
+          "Compactor (Luna)": {"tokens": 57000, "share": 0.002},
+          "Unknown model": {"tokens": 544000, "share": 0.02}
+        }
+      },
+      "checkpoints": [
+        {
+          "label": "start",
+          "dailyPct": 13,
+          "weeklyPct": 53,
+          "dailyResetsIn": "17h 37m",
+          "weeklyResets": "Nov 1, 11:00 AM (UTC+3)",
+          "sessionNote": "No turns completed yet in this session."
+        },
+        {
+          "label": "end",
+          "dailyPct": 17,
+          "weeklyPct": 55,
+          "dailyResetsIn": "16h 13m",
+          "weeklyResets": "Nov 1, 11:00 AM (UTC+3)",
+          "sessionNote": "This session 9 turns / 134 tool calls / 16 files / 62 commands"
+        }
+      ],
+      "delta": {"dailyPp": 4, "weeklyPp": 2},
+      "windows": {
+        "adopted": "weekly",
+        "weeklyPoolWorthUsd": 31.4492,
+        "dailyPoolWorthUsd": 15.7246,
+        "dailyTimesSevenVsWeekly": 3.499,
+        "note": "Daily 4pp 反推日池 worth $15.72、×7=$110.07/周，远大于周池 $31.45；日上限更宽松，饱和使用时周池绑定。该 3.5× 结构与 Sonnet 5.5 段的 3.23× 同量级，互相支持同一池模型。"
+      },
+      "prices": {
+        "model": "claude-haiku-5.5",
+        "tier": "<=100K",
+        "cachedPerMtok": 0.01,
+        "cacheWrite5mPerMtok": 0.125,
+        "outputPerMtok": 0.5,
+        "above100kTierMultiplier": 5,
+        "note": ">100K 档为统一 5×，对 segment worth 与混合价同比生效、相消，不影响 token 结果。非缓存输入按 Anthropic 档 5 分钟写价 $0.125 计。",
+        "source": "platform.claude.com pricing（2026-10-08 核对）；HAIKU55_LE100K / HAIKU55_GT100K"
+      },
+      "calculation": {
+        "segmentWorthUsd": 0.62898493,
+        "segmentWorthFormula": "cache读 22,846,818×$0.01 + 非缓存输入 1,076,726×$0.125 + 输出 531,852×$0.5，÷1e6",
+        "monthlyListWorthUsd": 125.796986,
+        "monthlyFormula": "段 worth ÷2% ×4周",
+        "blendedAnthropicPerMtok": 0.015325,
+        "monthlyTokens": 8209000000,
+        "monthlyYi": 82.09,
+        "realUsdPerMtok": 0.0024363503,
+        "rawMonthlyYi": 48.91,
+        "rawWeeklyYi": 12.23,
+        "rawMonthlyNote": "24,455,396 ÷2% ×4周 = 4,891,079,200 raw",
+        "roundingIntervalYi": [65.67, 109.45],
+        "roundingNote": "2pp 整数读数 ±0.5pp 对应约 65.67~109.45 亿",
+        "crossCheck": {
+          "poolWorthVsSonnet": {"haikuUsdPerWeek": 31.4492, "sonnetUsdPerWeek": 33.73, "gap": "6.8%"},
+          "ratioDerivedFromSonnetYi": 88.04,
+          "ratioFormula": "devin_pro::claude-sonnet-5.5 采用值 6.44 亿 × Anthropic 档混合价比 0.2095/0.015325"
+        }
+      },
+      "confidence": "low（维护者本机面板 + session-stats 直读；但周窗仅 +2pp 整数读数、段内另有 2% 非目标模型、n=1）",
+      "decision": "采用 devin_pro × claude-haiku-5.5 = 82.09 亿/月 low（Anthropic 档）。按周窗 53%→55%（2pp）反推；与 Sonnet 5.5 段同一周窗，池 worth 互证。若段内 Compactor (Luna) / Unknown 也计费且价高，则 Haiku 实占 pp 更少、周池更大，本值为保守下限。"
+    }
+  ],
+  "notFound": [
+    "Unknown model（544k, 2%）的具体模型与计费权重",
+    "Compactor (Luna) 是否从 Devin Pro 额度扣费",
+    "Devin Pro 官方公布的 Daily/Weekly 池绝对额度",
+    "Haiku 5.5 会话中 ≤100K / >100K 档的真实 token 占比"
+  ]
+}

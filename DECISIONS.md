@@ -3,6 +3,37 @@
 本地 `AGENTS.md`（不入库）只放 Agent 工作流程；口径与规则见 [`CONVENTIONS.md`](CONVENTIONS.md)；本文件记录每条采用值的取舍（旧值 → 新值 → 依据 → 未采来源）。
 最权威的表述仍在 `scripts/build_adopted.py` 的 `decision_note` 和 `data/research/` 证据文件里；本文件是按时间的索引摘要。改数只能改 `build_adopted.py`，改完在这里同步记一笔。
 
+## 2026-11-01 · Devin Pro × Claude Opus 5.5 零起点样本 2.93 亿/月
+
+- **采用**：`devin_pro × claude-opus-5.5` = **2.93 亿/月 high**（Anthropic 档）。2026-11-01 新周窗从 0%/0% 起跑：Weekly 0%→28%（28pp）、Daily 0%→56%（56pp）；会话 14,307,644 tok（Opus 5.5 High 100%）。段 worth $8.5825（cache 13.375M×$0.2＋输入 0.850M×$5＋输出 0.083M×$20）÷28%×4 周＝$122.61 ÷ $0.419/MTok；真实单价 $0.0683/MTok。raw 口径 2.04 亿留作对照；28pp ±0.5 对应 2.88~2.98 亿。
+- **互证**：本段池 worth $30.65/周，落在 2026-10-31 四段 $29.44~33.73 区间中部；Daily×7=周池×3.5，与前四段（3.23/3.50/3.50/3.64）同结构。零起点、100% 单模型、28pp → high。
+- **证据**：`data/research/devin-pro-opus55-round1-2026-11-01.json`。
+
+## 2026-10-31 · Devin Pro × Claude Sonnet 5.5 首个采用点 6.44 亿/月
+
+- **背景**：维护者 Devin CLI 两个 `/usage` 检查点（同一会话，间隔约 11 分钟）：开始 Daily 0% / Weekly 47%，结束 Daily 13% / Weekly 53%；`/session-stats` 记 in 321,872 / out 41,557 / cache_read 8,035,217 = 8,398,646 tok，100% claude-sonnet-5.5 High。此前 Pro $20 档只有 SWE-2 促销 ≈$0 行，Max 行注记「Pro $20档无数据不派生」。
+- **采用**：新增 `devin_pro × claude-sonnet-5.5` = **6.44 亿/月 medium**（Anthropic 档）。段 worth $2.0238（读 8.035M×$0.1＋非缓存输入 0.322M×$2.5＋出 0.042M×$10）÷6%×4 周＝$134.92 list-worth ÷ Anthropic 档混合价 $0.2095/MTok；真实单价 $0.0311/MTok。
+- **窗口裁定**：采用周窗 6pp。Daily 13pp 反推日池 64.6M、×7=452M/周 > 周池约 140M，日上限更宽松，饱和使用时周池为绑定约束；Daily 只作一致性旁证。月份按通用 4 周。
+- **敏感性/对照**：raw total 口径 8,398,646÷6%×4 周 = 5.60 亿；6pp ±0.5pp 对应 5.94~7.03 亿；非缓存输入按普通输入价 $2.0 计得 5.93 亿不采。n=1、6pp 为整数读数 → medium。
+- **证据**：`data/research/devin-sonnet55-round1-2026-10-31.json`。
+- **第二点（同日 Haiku 5.5）**：`devin_pro × claude-haiku-5.5` = **82.09 亿/月 low**。同一账号紧接 Sonnet 段、同一周窗：Weekly 53%→55%（2pp）、Daily 13%→17%（4pp）；会话 24,455,396 tok（Haiku 98%、Compactor (Luna) 57k、Unknown 544k 2%）。段 worth $0.6290 ÷2%×4 周＝$125.80 ÷ Anthropic 档混合价 $0.015325/MTok。2pp 为整数读数，±0.5pp 对应 65.67~109.45 亿 → low。互证：本段池 $31.45/周 vs Sonnet 段 $33.73/周（差 6.8%）；按 Sonnet 锚比例派生 88.04 亿，同量级。若段内 Luna/Unknown 计费且价高，Haiku 实占 pp 更少、本值偏保守。
+- **证据（Haiku）**：`data/research/devin-haiku55-round1-2026-10-31.json`。
+- **第三点（同日 Muse Wonder）**：`devin_pro × muse-wonder` = **2.05 亿/月 medium**（raw total，未折算）。同一周窗：Weekly 55%→70%（15pp）、Daily 17%→47%（30pp）；会话 7,687,745 tok（Muse Wonder High 100%）。Muse Wonder 无已采用 API 标价 → 无法按标价折 worth，记 raw；本段负载 97.58%/1.84%/0.58% 与标准档 97%/2.5%/0.5% 极接近，两口径差 <2%。15pp ±0.5 对应 1.98~2.12 亿；Daily×7=周池×3.5，与前两段（3.23/3.50）同结构。池旁证：按 $32.6/周反推混合价≈$0.64/MTok，不采用。
+- **证据（Muse Wonder）**：`data/research/devin-muse-wonder-round1-2026-10-31.json`。
+- **第四点（同日 Fable 5.1）**：`devin_pro × claude-fable-5.1` = **1.46 亿/月 medium**（Anthropic 档）。同一周窗：Weekly 70%→83%（13pp）、Daily 47%→72%（25pp）；会话 4,466,768 tok（Fable 5.1 High 98%、Unknown 103k 2%）。段 worth $3.8270（cache 4.295M×$0.25＋输入 0.155M×$12.5＋输出 0.016M×$50）÷13%×4 周＝$117.76 ÷ $0.805/MTok。raw 口径 1.37 亿留作对照；13pp ±0.5 对应 1.41~1.52 亿。Daily×7=周池×3.64，与前三段（3.23/3.50/3.50）同结构。池 worth 本段 $29.44/周，比 Sonnet $33.73 低约 13%；若 Unknown 计费则 Fable 实占 pp 更少、本值偏保守；按 Sonnet 池反推 1.68 亿，同量级。
+- **证据（Fable 5.1）**：`data/research/devin-fable51-round1-2026-10-31.json`。
+
+## 2026-10-30 · ChatGPT Pro $100 档官方倍率 5x → 10x（$200 档 20x 不变）
+
+- **采用**：官方 $100/mo Pro 档相对 Plus 的额度倍率由 5x 提为 10x（2026-10-30 复核），$200 档维持 20x、价格均不变。plan id `chatgpt_pro_5x` → `chatgpt_pro_10x`（名称 "ChatGPT Pro 10x"），各值仍由 Plus 锚点 × 官方倍率派生：
+  - `gpt-5.6-sol` 30.8→**61.6 亿**（Plus 6.16 × 10，medium）；
+  - `gpt-5.6-luna` 352.91→**705.81 亿**（Plus 70.58 折算口径 × 10，medium）；
+  - `gpt-5.6-terra` 59.574→**119.147 亿**、`gpt-5.5` 23.829→**47.659 亿**（随 Sol 基准按三段 credits 混合价重推，口径不变）；
+  - `gpt-6-astra` 9.10→**18.20 亿**（由 Pro 20x Astra 加权簇 38.12 沿 Sol 档间比例派生，比例由 4× 变 2×，low）。
+- **级联**：$100 档每 token 单价减半（如 Luna $0.0028→$0.0014/MTok），由与 Plus 持平变为与 20x 档持平；Pro 20x、Plus、Go/Free 各行不变。`chatgpt_pro_20x` 各值与 DATA_DATES 均未动。
+- **未采**：无 Pro 10x 账号独立实测，learn.chatgpt.com 各模型 5h 消息区间未随档位复核（仍为 2026-09-05 读数），待补。
+- 证据：`data/research/chatgpt-pro-10x-round1-2026-10-30.json`。
+
 ## 2026-10-30 · OpenCode Go × DeepSeek V4.1 Flash
 
 - Adopt the official Go per-model monthly allowance of $100, up from $80. At the existing standard workload and off-peak prices, $0.00966/MTok gives 103.520 亿 tokens/month (previously 82.816 亿). Peak token prices are twice off-peak, so actual usage varies. The official table and landing page show no limited-time label on this row; recheck when the catalog changes.
