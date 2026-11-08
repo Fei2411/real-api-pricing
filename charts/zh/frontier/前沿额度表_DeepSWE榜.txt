@@ -1,4 +1,4 @@
-DeepSWE v1.1 | Pass@1 % | 2026-09-03
+DeepSWE v1.1 | Pass@1 % | 2026-09-22
 前沿按全量订阅/API（含不计额度的 ≈$0 促销点，与帕累托图一致）的单价与得分筛选，非额度排名；同价同分套餐均保留；缺分模型不参与，估算不确定性未纳入筛选。
 订阅额度总览 · 套餐 × 实际服务模型
 默认月 = 4 周，Kimi独立月池 = 周池×5，Droid 月 = 周×2；饱和使用；全口径 token；按量 API 无月额度
@@ -9,4 +9,4 @@ DeepSWE v1.1 | Pass@1 % | 2026-09-03
 汇率来源：https://www.xinhuanet.com/20260904/4c1ce1cbf39d416997cb9c237d6f5024/c.html
 序号  套餐         价格/月  服务模型             月额度(亿)  $/MTok   置信度  Pass@1 %  得分版本                                              Harness   思考强度  映射
 ----  -----------  -------  -------------------  ----------  -------  ------  --------  ----------------------------------------------------  --------  --------  -----------------------------
-1     OpenCode Go  USD 10   DeepSeek V4.1 Flash  82.816      0.00121  medium  77        mini-SWE - DeepSeek V4.1 Flash 1017 (max) [厂商自报]  mini-SWE  max       agent_configuration_reference
+1     OpenCode Go  USD 10   DeepSeek V4.1 Flash  103.52      0.00097  medium  77        mini-SWE - DeepSeek V4.1 Flash 1017 (max) [厂商自报]  mini-SWE  max       agent_configuration_reference

@@ -1,0 +1,158 @@
+{
+  "collectedAt": "2026-11-07",
+  "collectionMethod": "Manual capture of the official Command Code GOAT plan page and pricing/limits page (English) around 10:32 Beijing time / 02:32Z on 2026-11-07. RSC payload (modelScope and planScope) and the two model tables on the plan page, the pricing-limits wording and the /pricing page were read as published, and the same three pages captured on 2026-11-06 were compared line by line. One new paid model observed, no free variant observed, plus three same-day observations on other GOAT models and on the shared pool wording recorded for context. Research-only — no adopted row generated, no adopted value changed, no script changed.",
+  "sources": [
+    "https://commandcode.ai/docs/plans/goat",
+    "https://commandcode.ai/docs/resources/pricing-limits",
+    "https://commandcode.ai/pricing"
+  ],
+  "scope": "Command Code GOAT official catalog only. One new paid model observed: 'DeepSeek V4.1 Flash Ultrafast' (slug deepseek-v4-1-flash-ultrafast, id deepseek/deepseek-v4.1-flash-ultrafast) in the New models table, vendor DeepSeek, category opensource, blurb 'Accelerated V4.1 Flash', launchedAt 2026-11-06, minPlanName GOAT, 1M context (1048576 tokens), reasoning true, vision true, marked 'not yet scored'. Three-part price $2.40 input / $9.60 output / $0.048 cached read per 1M tokens, no cache-write price listed, and $20 per-model monthly credits on the GOAT plan (RSC budgetUsd 20, no budgetSteps, credits column '$20', the same tier as the other New models rows). The GOAT model counters on the plan page moved 71 -> 72 and 97 -> 98, and the pricing-limits All counter moved 99 -> 100. No free variant observed for this model (no deepseek-v4.1-flash-ultrafast:free). The other previously listed paid GOAT models keep the same budgetUsd / rates / budgetSteps, and the shared-pool wording did not change. No leaderboard/score data, no shared-pool change, no other GOAT row changes, no adopted.csv row.",
+  "previousCapture": {
+    "capturedAt": "2026-11-06",
+    "file": null,
+    "note": "The 2026-11-06 baseline used here is the same-pages re-capture taken on 2026-11-06 for the 2026-11-07 comparison; it is not stored as a separate research file in this repo. The last stored GOAT capture is data/research/goat-ling31-flash-1019-round1-2026-11-04.json.",
+    "lastStoredCaptureFile": "goat-ling31-flash-1019-round1-2026-11-04.json",
+    "baselineValues": {
+      "deepseekV41FlashUltrafast": {
+        "present": false,
+        "paidRowPresent": false,
+        "freeModelId": null,
+        "note": "No 'DeepSeek V4.1 Flash Ultrafast' row of any kind (paid or free) existed in the official GOAT catalog on 2026-11-06."
+      },
+      "deepseekV41FlashLatest": {
+        "rscBudgetUsd": 100,
+        "budgetSteps": null,
+        "rates": {
+          "inputCost": 0.15,
+          "outputCost": 0.60,
+          "cacheReadCost": 0.003
+        }
+      },
+      "goatModelCounters": {
+        "firstCounter": 71,
+        "secondCounter": 97
+      },
+      "pricingLimitsAllCount": 99,
+      "goatSharedPoolWording": {
+        "goat": "Up to $100",
+        "pro": "Up to $110"
+      },
+      "freeModels": [
+        "Glyph Cluster",
+        "Crouton Alpha",
+        "Beam 1.0"
+      ]
+    },
+    "diff": {
+      "modelsAdded": [
+        "DeepSeek V4.1 Flash Ultrafast"
+      ],
+      "modelsRemoved": [],
+      "budgetUsdChanged": false,
+      "ratesChanged": false,
+      "budgetStepsChanged": false,
+      "counterChange": {
+        "planPageFirstCounter": "71 -> 72",
+        "planPageSecondCounter": "97 -> 98",
+        "pricingLimitsAllCount": "99 -> 100"
+      },
+      "note": "Compared with the 2026-11-06 capture of the same pages, the only catalog change is the added paid row 'DeepSeek V4.1 Flash Ultrafast'. Every other paid row keeps the same budgetUsd / rates / budgetSteps, and the free model set is unchanged."
+    }
+  },
+  "adoptionStatus": "research-only; not adopted; no command_code_goat × deepseek-v4.1-flash-ultrafast row in adopted.csv yet — adding one requires a COMMAND_CODE_GOAT_MODELS entry in scripts/build_adopted.py, left to maintainer review",
+  "observed": {
+    "paidModel": {
+      "name": "DeepSeek V4.1 Flash Ultrafast",
+      "slug": "deepseek-v4-1-flash-ultrafast",
+      "modelId": "deepseek/deepseek-v4.1-flash-ultrafast",
+      "idVariants": {
+        "planPageId": "deepseek/deepseek-v4.1-flash-ultrafast",
+        "pricingLimitsId": "deepseek-v4.1-flash-ultrafast"
+      },
+      "vendor": "DeepSeek",
+      "category": "opensource",
+      "blurb": "Accelerated V4.1 Flash",
+      "launchedAt": "2026-11-06",
+      "minPlanName": "GOAT",
+      "contextWindow": 1048576,
+      "reasoning": true,
+      "vision": true,
+      "deal": null,
+      "dealNote": "No deal entry for this model (page shows '$undefined').",
+      "scheduledChange": null,
+      "scheduledChangeNote": "No scheduled change entry for this model.",
+      "timeOfDay": null,
+      "timeOfDayNote": "No time-of-day (peak/off-peak) pricing entry for this model.",
+      "score": "not yet scored",
+      "scoreIndexes": {
+        "intelligenceIndex": null,
+        "codingIndex": null,
+        "note": "Neither the intelligence index nor the coding index is rated on the official page for this model ('not yet scored')."
+      },
+      "threePartPrice": {
+        "inputPerMTokUsd": 2.40,
+        "outputPerMTokUsd": 9.60,
+        "cachedReadPerMTokUsd": 0.048,
+        "cacheWritePerMTokUsd": null,
+        "cacheWriteNote": "Cache-write price not listed in the official table (page shows '$undefined' in the payload and '—' / '-' in the table cell)."
+      },
+      "perModelCreditsUsd": 20,
+      "creditsSource": {
+        "rscBudgetUsd": 20,
+        "budgetSteps": null,
+        "creditDeal": null,
+        "creditsColumnDisplay": "$20",
+        "table": "New models table",
+        "tableNote": "New models default to 2x credits i.e. $20 credits on the $10/mo GOAT plan until better deals are negotiated; this model is on the same $20 tier as the other New models rows."
+      },
+      "pageRequestShape": {
+        "inputTokens": 800,
+        "outputTokens": 200,
+        "cacheReadTokens": 50000
+      },
+      "pageRequestEstimate": {
+        "per5Hours": 641,
+        "perWeek": 1600,
+        "perMonth": 3210
+      },
+      "pricingLimitsPlanBudgetUsd": {
+        "go": 6,
+        "goat": 20,
+        "pro": 30
+      },
+      "pricingLimitsPlanAllowanceUsd": {
+        "go": 6,
+        "goat": 20,
+        "pro": 30
+      }
+    }
+  },
+  "notAdopted": "none — no free variant was observed for 'DeepSeek V4.1 Flash Ultrafast' in the official Command Code GOAT catalog on 2026-11-07 (no deepseek-v4.1-flash-ultrafast:free entry), and no paid row for it is adopted yet.",
+  "otherObservations": [
+    {
+      "model": "DeepSeek V4.1 Flash (latest)",
+      "observation": "Still listed in the official GOAT catalog with RSC budgetUsd 100 and no budgetSteps, and the same three-part price $0.15 / $0.60 / $0.003 (cached / input / output per 1M tokens).",
+      "adopted": false,
+      "reason": "The adopted command_code_goat × deepseek-v4.1-flash row in data/adopted.csv is generated by scripts/build_adopted.py and is left exactly as it is. This file records the observation only; no adopted value changed."
+    },
+    {
+      "model": "GOAT / Pro shared monthly pool wording",
+      "observation": "https://commandcode.ai/pricing still writes GOAT 'Up to $100' and Pro 'Up to $110'; the shared monthly pool script constant (COMMAND_CODE_GOAT_SHARED_USD = 70) is unchanged.",
+      "adopted": false,
+      "reason": "Shared-pool wording did not change between the 2026-11-06 and the 2026-11-07 captures, and scripts/ is out of scope for this file. Any reconciliation of the page wording with the $70 shared pool is left to upstream maintainer review."
+    },
+    {
+      "model": "Free models (Glyph Cluster / Crouton Alpha / Beam 1.0)",
+      "observation": "The free model set on the official pages is unchanged on 2026-11-07: Glyph Cluster, Crouton Alpha and Beam 1.0.",
+      "adopted": false,
+      "reason": "Free GOAT models are not tracked in this repo. Recorded as an observation only; no adopted value affected."
+    }
+  ],
+  "sharedPoolUnchanged": {
+    "commandCodeGoatSharedMonthlyUsd": 70,
+    "note": "Shared monthly pool $70 (script constant COMMAND_CODE_GOAT_SHARED_USD = 70) and every existing GOAT row are unchanged by this observation."
+  },
+  "computationNote": "No monthlyYi, no blended per-MTok price and no adopted value are computed in this file; all numbers are transcribed as published on the official pages.",
+  "confidence": "medium",
+  "basis": "official"
+}

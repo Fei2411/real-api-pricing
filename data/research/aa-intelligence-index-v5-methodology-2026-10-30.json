@@ -1,0 +1,69 @@
+{
+  "collectedAt": "2026-10-30",
+  "scope": "Artificial Analysis Intelligence Index v5 methodology change and current leaderboard, research only",
+  "sources": [
+    "https://artificialanalysis.ai/changelog",
+    "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "https://artificialanalysis.ai/leaderboards/models",
+    "https://artificialanalysis.ai/models/kimi-k3-1-pro",
+    "https://artificialanalysis.ai/articles/kimi-k3-1-pro-launch-benchmarks/"
+  ],
+  "currentRepository": {
+    "version": "4.3",
+    "baseSnapshot": "data/research/scores-aa-round5-2026-10-01.json",
+    "supplement": "data/research/scores-aa-round6-supplement-2026-10-20.json"
+  },
+  "currentProvider": {
+    "version": "5.0",
+    "announcedAt": "2026-10-27",
+    "evaluations": [
+      "AA-Briefcase v1.1",
+      "AutomationBench-AA",
+      "GDP.pdf",
+      "FrontierCode 2.0",
+      "Terminal-Bench 4.0",
+      "Terminal-Bench-Science 0.1",
+      "CritPt v2 hard subset",
+      "AA-Omniscience v1.1",
+      "HLE-Diamond"
+    ],
+    "changes": {
+      "added": [
+        "FrontierCode 2.0",
+        "Terminal-Bench-Science 0.1"
+      ],
+      "upgraded": [
+        "HLE-Diamond",
+        "AA-Omniscience v1.1",
+        "CritPt v2 hard subset"
+      ],
+      "removed": [
+        "GDPval-AA v2",
+        "SciCode",
+        "AA-LCR"
+      ]
+    },
+    "visibleRoundedExamples": [
+      {
+        "model": "Gemini 4 Carbon (high)",
+        "score": 59
+      },
+      {
+        "model": "Claude Opus 5.5 (max with fallback)",
+        "score": 58
+      },
+      {
+        "model": "GPT-6 Astra (max)",
+        "score": 57
+      },
+      {
+        "model": "Kimi K3.1 Pro",
+        "score": 46
+      }
+    ],
+    "examplesNote": "Displayed integers, not a complete dataset or unrounded raw scores. Kimi score from its model page; the others from the models leaderboard."
+  },
+  "comparisonNote": "The October 23 Kimi K3.1 Pro launch article reported an Index score of 55 under the then-current methodology. The current model page shows 46 on v5.0. These are different index versions and should not be compared as a model regression.",
+  "adoptionStatus": "research-only; no score rows or charts changed",
+  "followUp": "A v5 migration needs a version-consistent, sufficiently complete provider snapshot, model/effort mapping and coverage review, and regenerated outputs; do not append selected v5 rows to the v4.3 board."
+}

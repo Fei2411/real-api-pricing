@@ -23,6 +23,23 @@
 - **第四点（同日 Fable 5.1）**：`devin_pro × claude-fable-5.1` = **1.46 亿/月 medium**（Anthropic 档）。同一周窗：Weekly 70%→83%（13pp）、Daily 47%→72%（25pp）；会话 4,466,768 tok（Fable 5.1 High 98%、Unknown 103k 2%）。段 worth $3.8270（cache 4.295M×$0.25＋输入 0.155M×$12.5＋输出 0.016M×$50）÷13%×4 周＝$117.76 ÷ $0.805/MTok。raw 口径 1.37 亿留作对照；13pp ±0.5 对应 1.41~1.52 亿。Daily×7=周池×3.64，与前三段（3.23/3.50/3.50）同结构。池 worth 本段 $29.44/周，比 Sonnet $33.73 低约 13%；若 Unknown 计费则 Fable 实占 pp 更少、本值偏保守；按 Sonnet 池反推 1.68 亿，同量级。
 - **证据（Fable 5.1）**：`data/research/devin-fable51-round1-2026-10-31.json`。
 
+## 2026-10-30 · ChatGPT Pro $100 档官方倍率 5x → 10x（$200 档 20x 不变）
+
+- **采用**：官方 $100/mo Pro 档相对 Plus 的额度倍率由 5x 提为 10x（2026-10-30 复核），$200 档维持 20x、价格均不变。plan id `chatgpt_pro_5x` → `chatgpt_pro_10x`（名称 "ChatGPT Pro 10x"），各值仍由 Plus 锚点 × 官方倍率派生：
+  - `gpt-5.6-sol` 30.8→**61.6 亿**（Plus 6.16 × 10，medium）；
+  - `gpt-5.6-luna` 352.91→**705.81 亿**（Plus 70.58 折算口径 × 10，medium）；
+  - `gpt-5.6-terra` 59.574→**119.147 亿**、`gpt-5.5` 23.829→**47.659 亿**（随 Sol 基准按三段 credits 混合价重推，口径不变）；
+  - `gpt-6-astra` 9.10→**18.20 亿**（由 Pro 20x Astra 加权簇 38.12 沿 Sol 档间比例派生，比例由 4× 变 2×，low）。
+- **级联**：$100 档每 token 单价减半（如 Luna $0.0028→$0.0014/MTok），由与 Plus 持平变为与 20x 档持平；Pro 20x、Plus、Go/Free 各行不变。`chatgpt_pro_20x` 各值与 DATA_DATES 均未动。
+- **未采**：无 Pro 10x 账号独立实测，learn.chatgpt.com 各模型 5h 消息区间未随档位复核（仍为 2026-09-05 读数），待补。
+- 证据：`data/research/chatgpt-pro-10x-round1-2026-10-30.json`。
+
+## 2026-10-30 · OpenCode Go × DeepSeek V4.1 Flash
+
+- Adopt the official Go per-model monthly allowance of $100, up from $80. At the existing standard workload and off-peak prices, $0.00966/MTok gives 103.520 亿 tokens/month (previously 82.816 亿). Peak token prices are twice off-peak, so actual usage varies. The official table and landing page show no limited-time label on this row; recheck when the catalog changes.
+- Evidence: `data/research/opencode-go-deepseek-v41-round7-2026-10-30.json`. Go Plus and Teams remain research-only.
+- Adopt OpenCode Go Kimi K3.1 Pro at 0.510 亿/month ($15 ÷ $0.294/MTok) and MiniMax M3.1 Flash at 9.390 亿/month ($20 ÷ $0.0213/MTok), using the current table and standard workload. The Kimi calculation excludes cache writes, which are priced at $2/MTok; actual use may be lower. MiniMax GA and preview remain separate model IDs. Earlier evidence: `opencode-go-kimi-k31-pro-round1-2026-10-24.json`, `opencode-go-minimax-m31-flash-round1-2026-10-23.json`.
+
 ## 2026-10-27 · Kimi 会员 199（Allegretto）k3 换基 14.51 → 19.46 亿（维护者实测）
 
 - **采用**：`kimi_allegretto_cn × kimi-k3` = **19.46 亿/月 medium**。维护者 Allegretto（赠送）账号截图：k3.1-pro 单日用量 37,362,656 raw token ↔ 控制台「本月用量 1.92%」直推月池 19.46 亿；同窗「7天用量 9.61%」反推周池 3.89 亿，月/周 = 5.005 与月池=周池×5 吻合，同一笔消耗两口径互证。替换旧基 14.51 亿（2026-07 ccusage 243.74M/84% k3-256k 混合负载反推）——两次样本的模型等效不同（k3.1-pro vs k3-256k 混合），差距是模型换率而非纯池变化。k2.7-code 15.68 亿为独立纯模型面板实测，不随本次换基。
