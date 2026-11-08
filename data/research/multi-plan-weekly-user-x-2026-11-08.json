@@ -1,0 +1,130 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_user_supplied",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "用户指定来源。口述、缓存率、作者 API 估值与可用额度分列。research-only，不改 adopted.csv。",
+  "items": [
+    {
+      "id": "x-2119341006382567779",
+      "confidence": "Medium",
+      "planId": "multiple_unspecified",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/UYouximi58156/status/2119341006382567779",
+        "account": "UYouximi58156",
+        "createdAt": "2026-11-08T08:07:26.000Z",
+        "createdAtTaipei": "2026-11-08T16:07:26+08:00",
+        "text": "@Fei2411 我这周给我所有套餐测了额度，kimi老套餐 169一周6.7亿99.1缓，相当于180刀，glm v2 max 380一周12亿，gemini 5xultra 土区280一周12亿。gpt用20x一周50亿sol或者8亿astra。\n只能说所有套餐里别开gpt的plus就对了。"
+      },
+      "observed": {
+        "evidenceKind": "author self-report; no attached screenshot",
+        "hasScreenshot": false,
+        "window": "one week; exact dates unstated",
+        "quotaPct": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "claims": [
+          {
+            "plan": "Kimi old plan",
+            "price": 169,
+            "currency": "unstated",
+            "billingPeriod": "unstated",
+            "cycleUsage": {
+              "window": "one week",
+              "tokens": 670000000
+            },
+            "cacheHitPct": 99.1,
+            "cacheHitPctIsNotQuota": true,
+            "apiWorthUsdClaim": 180,
+            "availableAllowance": null,
+            "quotaPct": null
+          },
+          {
+            "plan": "GLM v2 max",
+            "price": 380,
+            "currency": "unstated",
+            "billingPeriod": "unstated",
+            "cycleUsage": {
+              "window": "one week",
+              "tokens": 1200000000
+            },
+            "apiWorthUsdClaim": null,
+            "availableAllowance": null,
+            "quotaPct": null
+          },
+          {
+            "plan": "Gemini 5x Ultra Turkey region",
+            "price": 280,
+            "currency": "unstated",
+            "billingPeriod": "unstated",
+            "cycleUsage": {
+              "window": "one week",
+              "tokens": 1200000000
+            },
+            "apiWorthUsdClaim": null,
+            "availableAllowance": null,
+            "quotaPct": null
+          },
+          {
+            "plan": "GPT 20x",
+            "model": "sol",
+            "relation": "alternative to the astra claim; 作者用「或者」，两行不可相加",
+            "cycleUsage": {
+              "window": "one week",
+              "tokens": 5000000000
+            },
+            "apiWorthUsdClaim": null,
+            "availableAllowance": null,
+            "quotaPct": null
+          },
+          {
+            "plan": "GPT 20x",
+            "model": "astra",
+            "relation": "alternative to the sol claim; 作者用「或者」，两行不可相加",
+            "cycleUsage": {
+              "window": "one week",
+              "tokens": 800000000
+            },
+            "apiWorthUsdClaim": null,
+            "availableAllowance": null,
+            "quotaPct": null
+          }
+        ]
+      },
+      "upstreamContextNotCounted": {
+        "postId": "2119337499172770002",
+        "counted": false,
+        "tokensClaim": 600000000,
+        "weeklyUsedPctClaim": 72,
+        "cacheHitPctClaim": 99.2,
+        "cacheHitPctIsNotQuota": true,
+        "weeklyWorthUsdClaim": 250,
+        "monthlyWorthUsdClaim": 1000,
+        "scope": "reply in a Claude Pro thread; plan and model are not restated on this parent post; do not attach to the Kimi old-plan claim below",
+        "derivedNotMeasured": {
+          "formula": "600000000 / 0.72",
+          "weeklyTokensAtSameMix": 833333333.3333334,
+          "note": "同 mix 线性外推，不是实测周池，也不挂到 Kimi"
+        },
+        "confidence": "High numeric-pair criterion only; oral, attribution unresolved",
+        "whyNotCounted": "套餐归属不明，只作旁证；不作为已确认 High 的独立新计数，不能拼到本条 Kimi 不升级"
+      },
+      "gaps": [
+        "四套餐都没有与 token 对应的配额百分比，也没有原始日志；169/380/280 的币种和计费周期都没写",
+        "99.1% 是本条缓存率，不是配额比例；上一条 99.2% 同样是缓存率",
+        "6.7 亿 / 99.1% 与上一条 6 亿 / 72% / 99.2% 不可合并成同一套餐",
+        "GPT 20x 的价格和 Sol/Astra 全名没写；「或者」表示两行是替代关系，不能相加",
+        "不按 4 周或 6 周把周用量乘成月额度"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-user-submitted-2026-11-08.json"
+  ],
+  "deduplication": {
+    "result": "new; post id absent on main, on draft #205, and on the other remote research branches checked 2026-11-08",
+    "index": "x-scan-user-submitted-2026-11-08.json"
+  }
+}

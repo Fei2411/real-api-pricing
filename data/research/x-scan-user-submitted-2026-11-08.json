@@ -1,0 +1,190 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_user_submitted",
+  "role": "source index for four user-supplied posts; supplements draft #205 and does not edit that pull request or its branch",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "supplements": {
+    "pullRequest": 205,
+    "url": "https://github.com/Fei2411/real-api-pricing/pull/205",
+    "branch": "daily-2026-11-08-pricing-signals",
+    "head": "226ce8cefd822aba49a65cd2cc2dc88ee79e4c0b",
+    "note": "只关联日批。不修改 #205，不改它的 branch，不重复它的四个文件。"
+  },
+  "counts": {
+    "mediumNewlyAdded": 4,
+    "highCounted": 0,
+    "alreadyPresent": 0,
+    "gapFilled": 0,
+    "upstreamContextNotCounted": 2
+  },
+  "entries": [
+    {
+      "postId": "2119341006382567779",
+      "url": "https://x.com/UYouximi58156/status/2119341006382567779",
+      "account": "UYouximi58156",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "multi-plan-weekly-user-x-2026-11-08.json",
+      "whyMedium": "有具体周 token，没有与之对应的配额百分比；99.1% 是缓存率"
+    },
+    {
+      "postId": "2119284091820642485",
+      "url": "https://x.com/ceciiiax/status/2119284091820642485",
+      "account": "ceciiiax",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "factory-devin-cycle-comparison-x-2026-11-08.json",
+      "whyMedium": "有一个完整账期的 token 和 tokscale 估值，图是作者自制比较，不是配额面板，也没有配额百分比"
+    },
+    {
+      "postId": "2119274129128099962",
+      "url": "https://x.com/2232960089q/status/2119274129128099962",
+      "account": "2232960089q",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "devin-max-weekly-correction-x-2026-11-08.json",
+      "whyMedium": "只有口述的每周 100 美元，没有 token 或配额百分比"
+    },
+    {
+      "postId": "2118805051183706581",
+      "url": "https://x.com/ZShipZuck/status/2118805051183706581",
+      "account": "ZShipZuck",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "claude-factory-devin-allowances-x-2026-11-08.json",
+      "whyMedium": "有美元区间和图上的 4 亿 token 标签，没有可核对的配额百分比或 token 分项"
+    }
+  ],
+  "limits": [
+    "四条主帖都是 Medium。缺的是同一条证据里同时有 token 分项和配额百分比，所以没有截图级 High。",
+    "99.1%、99.2% 和 Fei2411 图上的 99.3% 都是缓存命中率，不是配额比例。",
+    "实际周期用量、API 估值、作者推算、可用额度分开记，不能互相代替。",
+    "Devin Max 每周 $100（并否认 $150）与 $95–155 同时保留；历史读数 $94 不改成 $95。",
+    "不把周用量乘 4 或乘 6，不把不同模型的 token 相加，不把未用完的账期用量写成上限。",
+    "ceciiiax 是两个 $20 订阅的账期用量。ZShipZuck / 2232960089q 谈的是 Devin Max。两边不是同一档。",
+    "上游 6 亿 token = 72% 周池的套餐归属不明，只作旁证，不能拼到本条 Kimi，也不升级成独立 High 计数。"
+  ],
+  "upstreamContextNotCounted": [
+    {
+      "postId": "2119337499172770002",
+      "account": "UYouximi58156",
+      "counted": false,
+      "whereRecorded": "multi-plan-weekly-user-x-2026-11-08.json#upstreamContextNotCounted",
+      "claims": {
+        "tokens": 600000000,
+        "weeklyUsedPct": 72,
+        "cacheHitPct": 99.2,
+        "weeklyWorthUsd": 250,
+        "monthlyWorthUsd": 1000
+      },
+      "limit": "Claude Pro 讨论串里的口述。数字对可以当作 High 线索，但套餐和模型没有在该条重述，不能挂到下一条 Kimi。600000000/0.72 只是同 mix 线性外推。"
+    },
+    {
+      "postId": "2119335203135172722",
+      "account": "Fei2411",
+      "url": "https://x.com/Fei2411/status/2119335203135172722",
+      "counted": false,
+      "idProvenance": "supplied verification note; this commit did not re-fetch the live post",
+      "visualCheck": {
+        "image": "supplied TokenView crop",
+        "windowLabel": "最近 7 天",
+        "agent": "Claude Code",
+        "tokensLabel": "134.4M",
+        "apiWorthUsdLabel": 40.49,
+        "newTokensExcludingCacheReadLabel": "1.3M",
+        "cacheHitPct": 99.3,
+        "cacheReadLabel": "133.1M",
+        "cacheWriteLabel": "924.8K",
+        "outputLabel": "359K",
+        "calls": 508,
+        "quotaPctOnImage": null,
+        "chart": "用量柱落在 11/07，图例为 Claude Opus 5.5；图底部被裁断",
+        "agentChipsAreNotAllowances": [
+          {"label": "Devin", "tokensLabel": "3.5B"},
+          {"label": "Claude Code", "tokensLabel": "134.4M"},
+          {"label": "Antigravity", "tokensLabel": "61.8M"},
+          {"label": "Codex", "tokensLabel": "29.1M"}
+        ]
+      },
+      "alreadyRecordedElsewhere": {
+        "pullRequest": 207,
+        "issue": 206,
+        "branch": "data/claude-pro-5h-sample-2026-11-08",
+        "file": "claude-pro-opus55-maintainer-5h-round1-2026-11-08.json",
+        "note": "未合并的 #207 已把同一张 TokenView 图记成维护者样本，并另记周额度 13%。本索引不重复计数，不把图上没有的 13% 写进来，也不把 7 天视图和「一个 5h 窗口」说成已经对齐。"
+      },
+      "limit": "99.3% 是缓存命中率。图上没有 quota%。筛选条上的 Devin 3.5B 不是 Devin Max 周池。这张图不能与 6 亿 / 72% 或 Kimi 口述拼接。"
+    }
+  ],
+  "conflictsRetained": [
+    {
+      "subject": "Devin Max weekly API-dollar allowance",
+      "a": {"postId": "2119274129128099962", "weeklyWorthUsd": 100, "rejects": 150},
+      "b": {"postId": "2118805051183706581", "weeklyWorthUsdRange": [95, 155], "historyUsd": [310, 222, 94]},
+      "resolution": "none; both kept"
+    }
+  ],
+  "notDuplicated": [
+    "data/research/x-scan-2026-11-08.json",
+    "data/research/kimi-code-plus19-monthly-x-2026-11-08.json",
+    "data/research/cursor-x-included-452m-day-x-2026-11-08.json",
+    "data/research/chatgpt-codex-200-daily-x-2026-11-08.json"
+  ],
+  "deduplication": {
+    "checkedAt": "2026-11-08",
+    "postIds": [
+      "2119341006382567779",
+      "2119284091820642485",
+      "2119274129128099962",
+      "2118805051183706581"
+    ],
+    "main": {
+      "ref": "origin/main",
+      "sha": "588fe5e4069b483e7a49ef01dbaaf4fb10678402",
+      "matches": 0
+    },
+    "pr205": {
+      "ref": "origin/daily-2026-11-08-pricing-signals",
+      "sha": "226ce8cefd822aba49a65cd2cc2dc88ee79e4c0b",
+      "matches": 0
+    },
+    "pr207": {
+      "ref": "origin/data/claude-pro-5h-sample-2026-11-08",
+      "sha": "9b1eb253d0ec957c35adeeed961249f420c405c7",
+      "matchesForTheseFourIds": 0,
+      "note": "同一 TokenView 图已在该分支的维护者样本里，本索引不把那张图再计成第五条"
+    },
+    "otherRemoteBranchesGrep": {
+      "matches": 0,
+      "refs": [
+        "origin/cursor/daily-2026-10-28-pricing-signals-8233",
+        "origin/cursor/daily-2026-10-29-pricing-signals",
+        "origin/cursor/daily-2026-10-31-pricing-signals-f3bf",
+        "origin/cursor/daily-2026-11-01-pricing-signals-037c",
+        "origin/cursor/daily-2026-11-04-pricing-signals-9701",
+        "origin/cursor/daily-2026-11-05-pricing-signals-6968",
+        "origin/cursor/daily-2026-11-06-pricing-signals-fd34",
+        "origin/cursor/daily-2026-11-07-pricing-signals-628d",
+        "origin/daily-2026-11-08-pricing-signals",
+        "origin/daily/2026-11-02-pricing-signals",
+        "origin/daily/2026-11-03-pricing-signals",
+        "origin/data/claude-pro-5h-sample-2026-11-08",
+        "origin/devin/1790347523-gpt6luna-plus-measured",
+        "origin/devin/1790600577-gpt6luna-round2",
+        "origin/devin/1790729339-claude-pro-opus55-ccusage",
+        "origin/devin/1790831306-agent-speedtest",
+        "origin/fix/ranking-bar-global-domain",
+        "origin/main"
+      ]
+    },
+    "action": "add four new research files plus this index; no existing row updated"
+  },
+  "screenshots": {
+    "committed": false,
+    "cite": [
+      "https://x.com/ceciiiax/status/2119284091820642485",
+      "https://x.com/ZShipZuck/status/2118805051183706581",
+      "https://x.com/Fei2411/status/2119335203135172722"
+    ]
+  }
+}
