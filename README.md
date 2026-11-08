@@ -101,7 +101,7 @@ The 0–100 average task score: requirements 30 + design quality 70. OpenDesign'
 
 ![Terminal-Bench 4.0](charts/en/pareto/pareto-terminal-bench-4.svg)
 
-The official 66-task leaderboard hosted by Stanford, Harbor and the Laude Institute (snapshot 2026-09-03), with all <!-- stat:configs_terminal_bench_4 -->38<!-- /stat --> published configurations. Vendor-reported scores for models the official board doesn't list are added and labelled [self-reported], for example SWE-2 · Devin Pro at 27.3% from Cognition's launch post.
+The official 66-task leaderboard hosted by Stanford, Harbor and the Laude Institute (snapshot 2026-10-06), with all <!-- stat:configs_terminal_bench_4 -->38<!-- /stat --> published configurations. Vendor-reported scores for models the official board doesn't list are added and labelled [self-reported], for example SWE-2 · Devin Pro at 27.3% from Cognition's launch post.
 
 ### Terminal-Bench 4.0 (AA)
 
