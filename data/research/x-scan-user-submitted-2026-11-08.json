@@ -1,7 +1,7 @@
 {
   "recordedAt": "2026-11-08",
   "sourceType": "x_user_submitted",
-  "role": "source index for four user-supplied posts; supplements draft #205 and does not edit that pull request or its branch",
+  "role": "source index for four user-supplied posts plus a later reply pass; supplements draft #205 and does not edit that pull request or its branch",
   "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
   "supplements": {
     "pullRequest": 205,
@@ -11,10 +11,14 @@
     "note": "只关联日批。不修改 #205，不改它的 branch，不重复它的四个文件。"
   },
   "counts": {
-    "mediumNewlyAdded": 4,
+    "mediumNewlyAdded": 9,
+    "mediumFromOriginalPosts": 4,
+    "mediumFromRepliesThisRound": 5,
+    "lowDiscarded": 2,
     "highCounted": 0,
     "alreadyPresent": 0,
     "gapFilled": 0,
+    "existingContextReviewedNotCounted": 1,
     "upstreamContextNotCounted": 2
   },
   "entries": [
@@ -62,8 +66,100 @@
     "Devin Max 每周 $100（并否认 $150）与 $95–155 同时保留；历史读数 $94 不改成 $95。",
     "不把周用量乘 4 或乘 6，不把不同模型的 token 相加，不把未用完的账期用量写成上限。",
     "ceciiiax 是两个 $20 订阅的账期用量。ZShipZuck / 2232960089q 谈的是 Devin Max。两边不是同一档。",
-    "上游 6 亿 token = 72% 周池的套餐归属不明，只作旁证，不能拼到本条 Kimi，也不升级成独立 High 计数。"
+    "上游 6 亿 token = 72% 周池的套餐归属仍未确认，只作旁证，不能拼到本条 Kimi，也不升级成独立 High 计数。",
+    "评论区这一轮不是全量。实际看了 11 条根帖上的 309 条去重回复，其中 275 条是他人评论；根帖发现、成本串和 Grok/Codex 串都还有下一页。"
   ],
+  "replySearch": {
+    "complete": false,
+    "windowPacific": ["2026-11-01 00:32 PST", "2026-11-08 00:32 PST"],
+    "rootsDiscovered": 25,
+    "rootsRead": 11,
+    "repliesReviewed": 309,
+    "repliesFromOthers": 275,
+    "selfReplies": 34,
+    "earliestReplyUtc": "2026-11-01T14:52:28.000Z",
+    "latestReplyUtc": "2026-11-08T08:31:09.000Z",
+    "recentPlanThreads": {"replies": 112, "pagedToEmpty": true},
+    "costThreads": {"replies": 100, "nextPageRemains": true},
+    "grokCodexThreads": {"replies": 97, "nextPageRemains": true},
+    "limits": [
+      "根帖发现只取了前 25 条，后面还有下一页",
+      "没有做 to:Fei2411 的全量补充，也没有扫完全部根帖",
+      "搜索可能漏掉未索引、已删除或非公开回复",
+      "同一次检索里另有 8 张 Grok 配额条截图，只看到百分比、没有 token，不收录，也不把 61%→31% 抬成 High"
+    ]
+  },
+  "replyMediumAdded": [
+    {
+      "postId": "2119346974915002623",
+      "url": "https://x.com/niko70129972/status/2119346974915002623",
+      "account": "niko70129972",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "claude-max-7day-multimodel-reply-x-2026-11-08.json",
+      "whyMedium": "7 天图有 2795.9M 和 cached 2608.1M，但是多模型合计；口述约 3B Opus high 不能覆盖整张图，也没有配额百分比"
+    },
+    {
+      "postId": "2119342986589069763",
+      "url": "https://x.com/Riom510/status/2119342986589069763",
+      "account": "Riom510",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "claude-code-unattributed-4p64b-reply-x-2026-11-08.json",
+      "whyMedium": "截图 4.64B、155 sessions、$1472.59；正文是 $1200–1300。日期和套餐都没有，两套美元不取平均"
+    },
+    {
+      "postId": "2119339593174819186",
+      "url": "https://x.com/MartinM91217805/status/2119339593174819186",
+      "account": "MartinM91217805",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "droid-200-magpie-estimate-reply-x-2026-11-08.json",
+      "whyMedium": "Droid $200 档的 5 小时 $80、周 $500、月 $1000 是 Magpie 估算，不是测量"
+    },
+    {
+      "postId": "2119273279601229946",
+      "url": "https://x.com/big_mm_cat/status/2119273279601229946",
+      "account": "big_mm_cat",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "devin-max-500m-weekly-reply-x-2026-11-08.json",
+      "whyMedium": "口述 Devin Max 一周 Opus 5.5 约 500M；没有分项，不能和别人的每周 $100 相除"
+    },
+    {
+      "postId": "2117165895764377605",
+      "url": "https://x.com/tonyklose1984/status/2117165895764377605",
+      "account": "tonyklose1984",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "grok-quota-61-to-31-reply-x-2026-11-08.json",
+      "whyMedium": "口述配额从 61% 降到 31%，没有 token，也不能反推额度池翻倍"
+    }
+  ],
+  "discardedLow": [
+    {
+      "postId": "2119279250499133768",
+      "url": "https://x.com/ZyLee99/status/2119279250499133768",
+      "account": "ZyLee99",
+      "confidence": "Low",
+      "status": "discarded",
+      "reason": "原文只说 Opus 消耗「调高了4.3」，没有单位，不能写成 4.3 倍；没有 token 或配额百分比。按默认规则不收录，不记成有效证据。"
+    },
+    {
+      "postId": "2117520576030056684",
+      "url": "https://x.com/2232960089q/status/2117520576030056684",
+      "account": "2232960089q",
+      "confidence": "Low",
+      "status": "discarded",
+      "reason": "「每 1X」的 100 和 300 没有单位，模型权重也没有 token 或配额百分比校准。按默认规则不收录，不记成额度。"
+    }
+  ],
+  "existingContextReview": {
+    "postId": "2119337499172770002",
+    "status": "already recorded; context updated, not a new row",
+    "file": "claude-600m-72pct-context-followup-2026-11-08.json",
+    "counted": false
+  },
   "upstreamContextNotCounted": [
     {
       "postId": "2119337499172770002",
@@ -77,7 +173,8 @@
         "weeklyWorthUsd": 250,
         "monthlyWorthUsd": 1000
       },
-      "limit": "Claude Pro 讨论串里的口述。数字对可以当作 High 线索，但套餐和模型没有在该条重述，不能挂到下一条 Kimi。600000000/0.72 只是同 mix 线性外推。"
+      "followUpFile": "claude-600m-72pct-context-followup-2026-11-08.json",
+      "limit": "直接回复 Claude Pro/Opus 5.5 根帖 2119335203135172722，但正文仍未写自己的套餐或模型。同作者过滤没有别的确认。上下文倾向 Claude Pro，不能标成已确认。99.2% 是缓存率。数字对只是口述线索，不新计 High，也不能挂到 Kimi。600000000/0.72 只是同 mix 线性外推。"
     },
     {
       "postId": "2119335203135172722",
@@ -177,14 +274,63 @@
         "origin/main"
       ]
     },
-    "action": "add four new research files plus this index; no existing row updated"
+    "action": "first round added four posts plus this index"
+  },
+  "replyDeduplication": {
+    "checkedAt": "2026-11-08",
+    "postIds": [
+      "2119346974915002623",
+      "2119342986589069763",
+      "2119339593174819186",
+      "2119273279601229946",
+      "2117165895764377605"
+    ],
+    "discardedIdsNotRecordedAsEvidence": [
+      "2119279250499133768",
+      "2117520576030056684"
+    ],
+    "main": {
+      "ref": "origin/main",
+      "sha": "588fe5e4069b483e7a49ef01dbaaf4fb10678402",
+      "matches": 0
+    },
+    "pr205": {
+      "ref": "origin/daily-2026-11-08-pricing-signals",
+      "sha": "226ce8cefd822aba49a65cd2cc2dc88ee79e4c0b",
+      "matches": 0
+    },
+    "pr207": {
+      "ref": "origin/data/claude-pro-5h-sample-2026-11-08",
+      "sha": "1ae7596a683743b31c517944adebde43a0e332a8",
+      "matches": 0
+    },
+    "pr209": {
+      "ref": "origin/data/kimi-699-panel-2026-11-08",
+      "sha": "2f7b8d38b740da2abeab8059b4a4ff4e46ea928a",
+      "matches": 0,
+      "note": "开放的采用 PR，研究 JSON 里也没有这五个 id"
+    },
+    "sameAccountDifferentPost": {
+      "account": "tonyklose1984",
+      "otherPostId": "2116695489639010636",
+      "branch": "origin/cursor/daily-2026-11-01-pricing-signals-037c",
+      "note": "另一条 ChatGPT 转述，不是 61%→31%，不补缺、不合并"
+    },
+    "parent600m": {
+      "postId": "2119337499172770002",
+      "alreadyInThisPullRequest": true,
+      "action": "context review only"
+    },
+    "action": "add five Medium reply files; discard two Low; do not add a new High for 600M/72%"
   },
   "screenshots": {
     "committed": false,
     "cite": [
       "https://x.com/ceciiiax/status/2119284091820642485",
       "https://x.com/ZShipZuck/status/2118805051183706581",
-      "https://x.com/Fei2411/status/2119335203135172722"
+      "https://x.com/Fei2411/status/2119335203135172722",
+      "https://x.com/niko70129972/status/2119346974915002623",
+      "https://x.com/Riom510/status/2119342986589069763"
     ]
   }
 }

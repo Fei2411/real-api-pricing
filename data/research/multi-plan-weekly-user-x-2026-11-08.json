@@ -102,14 +102,18 @@
         "cacheHitPctIsNotQuota": true,
         "weeklyWorthUsdClaim": 250,
         "monthlyWorthUsdClaim": 1000,
-        "scope": "reply in a Claude Pro thread; plan and model are not restated on this parent post; do not attach to the Kimi old-plan claim below",
+        "scope": "direct reply to Claude Pro/Opus 5.5 root 2119335203135172722; this comment still does not name its own plan or model; do not attach to the Kimi old-plan claim below",
+        "planConfirmed": false,
+        "contextLean": "Claude Pro",
+        "authorFilter": "同作者过滤只返回这条和本帖 2119341006382567779，下一页为空，没有独立套餐确认",
         "derivedNotMeasured": {
           "formula": "600000000 / 0.72",
           "weeklyTokensAtSameMix": 833333333.3333334,
           "note": "同 mix 线性外推，不是实测周池，也不挂到 Kimi"
         },
-        "confidence": "High numeric-pair criterion only; oral, attribution unresolved",
-        "whyNotCounted": "套餐归属不明，只作旁证；不作为已确认 High 的独立新计数，不能拼到本条 Kimi 不升级"
+        "confidence": "High numeric-pair criterion only; oral, attribution unresolved; not a new counted High",
+        "whyNotCounted": "上下文倾向 Claude Pro，但仍未确认套餐。99.2% 是缓存率。只作旁证，不新计 High，也不能拼到本条 Kimi。复核见 claude-600m-72pct-context-followup-2026-11-08.json",
+        "followUpFile": "claude-600m-72pct-context-followup-2026-11-08.json"
       },
       "gaps": [
         "四套餐都没有与 token 对应的配额百分比，也没有原始日志；169/380/280 的币种和计费周期都没写",
@@ -121,7 +125,8 @@
     }
   ],
   "relatedFiles": [
-    "x-scan-user-submitted-2026-11-08.json"
+    "x-scan-user-submitted-2026-11-08.json",
+    "claude-600m-72pct-context-followup-2026-11-08.json"
   ],
   "deduplication": {
     "result": "new; post id absent on main, on draft #205, and on the other remote research branches checked 2026-11-08",

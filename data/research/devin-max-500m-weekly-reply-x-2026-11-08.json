@@ -1,0 +1,63 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_public_reply_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "评论区口述的每周 token。不与别人的每周美元额度相除。research-only，不改 adopted.csv。",
+  "items": [
+    {
+      "id": "x-2119273279601229946",
+      "confidence": "Medium",
+      "planId": "devin_max_contextual",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/big_mm_cat/status/2119273279601229946",
+        "account": "big_mm_cat",
+        "createdAt": "2026-11-08T03:38:18.000Z",
+        "createdAtPacific": "2026-11-07T19:38:18-08:00",
+        "text": "@Rainnystone @Fei2411 max一周opus5.5能用500m，这还是swe2免费的情况。",
+        "conversationId": "2119244958398046245",
+        "referencedPosts": [
+          {"id": "2119268414690869272", "type": "replied_to"}
+        ]
+      },
+      "observed": {
+        "evidenceKind": "oral weekly token claim; no screenshot",
+        "hasScreenshot": false,
+        "oral": {
+          "plan": "Devin Max",
+          "planNote": "正文只写了 max；Devin 来自同一讨论串的上下文，不是这条正文自己写明的",
+          "model": "Opus 5.5",
+          "weeklyTokensClaim": 500000000,
+          "freeSwe2Claim": true
+        },
+        "cycleUsage": null,
+        "apiPriceEstimateUsd": null,
+        "availableAllowanceUsd": null,
+        "quotaPct": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "doNotCombineWith": {
+          "postId": "2119274129128099962",
+          "weeklyWorthUsdClaim": 100,
+          "reason": "另一个账号的每周美元口述；不能和这 500M 相除，也不能当成同一条测量"
+        }
+      },
+      "gaps": [
+        "只有口述，没有截图，也没有 input / cache / output 分项",
+        "没有写是否已经用完、effort，以及是哪一周",
+        "不与 2232960089q 的每周 $100，或 ZShipZuck 的每周 $95–155，跨账号拼成单价"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-user-submitted-2026-11-08.json",
+    "devin-max-weekly-correction-x-2026-11-08.json",
+    "claude-factory-devin-allowances-x-2026-11-08.json"
+  ],
+  "deduplication": {
+    "result": "new Medium; post id absent on main, #205, #207, #209, and the other remote research branches checked 2026-11-08",
+    "index": "x-scan-user-submitted-2026-11-08.json"
+  }
+}

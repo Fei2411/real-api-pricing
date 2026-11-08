@@ -1,0 +1,71 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_public_reply_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "评论区回复。正文美元区间和截图上的 API 估值分开，套餐不明。research-only，不改 adopted.csv。图片不入库。",
+  "items": [
+    {
+      "id": "x-2119342986589069763",
+      "confidence": "Medium",
+      "planId": "claude_code_plan_unspecified",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/Riom510/status/2119342986589069763",
+        "account": "Riom510",
+        "createdAt": "2026-11-08T08:15:18.000Z",
+        "createdAtPacific": "2026-11-08T00:15:18-08:00",
+        "text": "@Fei2411 1200～1300$左右 https://t.co/LGXad9F6gm",
+        "conversationId": "2119335203135172722",
+        "referencedPosts": [
+          {"id": "2119335203135172722", "type": "replied_to"}
+        ]
+      },
+      "observed": {
+        "evidenceKind": "short oral dollar range plus a Claude Code usage screenshot",
+        "hasScreenshot": true,
+        "screenshotsCommitted": false,
+        "screenshotCite": "https://x.com/Riom510/status/2119342986589069763",
+        "oral": {
+          "dollarRange": [1200, 1300],
+          "note": "正文没有写这是订阅费、月额度还是 API 估值"
+        },
+        "screenshot": {
+          "app": "Claude Code",
+          "sessions": 155,
+          "totalTokensLabel": "4.64B",
+          "apiValueUsd": 1472.59,
+          "dateRange": null,
+          "plan": null,
+          "quotaPct": null
+        },
+        "cycleUsage": {
+          "note": "截图标签，日期范围不明，所以不能当成某一个已确认周期的用量",
+          "totalTokensLabel": "4.64B",
+          "sessions": 155
+        },
+        "apiPriceEstimate": {
+          "note": "截图上的 1472.59 美元；与正文 1200–1300 不是同一个数，不取平均",
+          "usd": 1472.59
+        },
+        "authorOralDollarRange": [1200, 1300],
+        "availableAllowance": null,
+        "quotaPct": null,
+        "plan": null
+      },
+      "gaps": [
+        "正文 $1200–1300 与截图 $1472.59 不一致，两边都保留，不取平均",
+        "图上没有日期、套餐和配额百分比",
+        "这条是在 Claude Pro 根帖下的回复，不能因此认定作者自己也是 Claude Pro",
+        "费用口径没解释，不能当成订阅价格或月额度",
+        "4.64B 按截图标签保留，不另写成一个更精确的整数"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-user-submitted-2026-11-08.json"
+  ],
+  "deduplication": {
+    "result": "new Medium; post id absent on main, #205, #207, #209, and the other remote research branches checked 2026-11-08",
+    "index": "x-scan-user-submitted-2026-11-08.json"
+  }
+}
