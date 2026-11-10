@@ -1,0 +1,176 @@
+{
+  "collectedAt": "2026-11-10",
+  "collectionMethod": "Manual capture of the official Command Code GOAT plan page and pricing/limits page (English) around 10:33 Beijing time / 02:33Z on 2026-11-10. RSC payload (modelScope and planScope) and the model tables on the plan page, the pricing-limits wording and the /pricing page were read as published, and the same three pages captured on 2026-11-09 were compared line by line. One new paid model observed, no free variant observed, plus four same-day observations on the free model list, on a non-GOAT plan model, on the /pricing changelog and on the shared pool wording recorded for context. Research-only — no adopted row generated, no adopted value changed, no script changed.",
+  "sources": [
+    "https://commandcode.ai/docs/plans/goat",
+    "https://commandcode.ai/docs/resources/pricing-limits",
+    "https://commandcode.ai/pricing"
+  ],
+  "scope": "Command Code GOAT official catalog only. One new paid model observed: 'Muse Ember' (slug muse-ember, id meta/muse-ember on the plan page, id muse-ember on the pricing-limits page) in the GOAT model catalog, vendor Meta, category opensource, blurb 'multimodal reasoning for conversational and agentic work', launchedAt 2026-11-08, minPlanName Go, 1M context (1048576 tokens), reasoning true, vision true, marked 'not yet scored'. Three-part price $0.10 input / $0.50 output / $0.004 cached read per 1M tokens, no cache-write price listed, and $20 per-model monthly credits on the GOAT plan (RSC budgetUsd 20, no budgetSteps, credits column '$20'). The RSC payload additionally carries blendedCostPerMTok 0.2 and agentLoopInputPerMTok 0.0328 for this model, transcribed as published. The GOAT 'All plans' model counter on the plan page moved 98 -> 99, and the pricing-limits All counter moved 100 -> 101. No free variant observed for this model (no muse-ember:free). The other previously listed paid GOAT models keep the same budgetUsd / rates / budgetSteps, and the shared-pool wording did not change. No leaderboard/score data, no shared-pool change, no other GOAT row changes, no adopted.csv row.",
+  "previousCapture": {
+    "capturedAt": "2026-11-09",
+    "file": null,
+    "note": "The 2026-11-09 baseline used here is the same-pages re-capture taken on 2026-11-09 for the 2026-11-10 comparison; it is not stored as a separate research file in this repo. The last stored GOAT capture is data/research/goat-dsv41-flash-ultrafast-round1-2026-11-07.json.",
+    "lastStoredCaptureFile": "goat-dsv41-flash-ultrafast-round1-2026-11-07.json",
+    "baselineValues": {
+      "museEmber": {
+        "present": false,
+        "paidRowPresent": false,
+        "freeModelId": null,
+        "note": "No 'Muse Ember' row of any kind (paid or free) existed in the official GOAT catalog on 2026-11-09."
+      },
+      "goatModelCounters": {
+        "planPageAllPlansCount": 98,
+        "pricingLimitsAllCount": 100
+      },
+      "pricingLimitsPlanBudgetUsd": {
+        "go": 6,
+        "goat": 20,
+        "pro": 30
+      },
+      "pricingLimitsPlanAllowanceUsd": {
+        "go": 6,
+        "goat": 20,
+        "pro": 30
+      },
+      "goatSharedPoolWording": {
+        "goat": "Up to $100",
+        "pro": "Up to $110"
+      },
+      "freeModels": {
+        "beam1": {
+          "present": true,
+          "freeModelId": "beam:free",
+          "pricingPageWording": "Free on Beam 1.0"
+        },
+        "note": "Only the Beam 1.0 free entry is tracked in this comparison; the other free GOAT models were not re-checked in this round and are not tracked by this repo."
+      }
+    },
+    "diff": {
+      "modelsAdded": [
+        "Muse Ember"
+      ],
+      "modelsRemoved": [],
+      "budgetUsdChanged": false,
+      "ratesChanged": false,
+      "budgetStepsChanged": false,
+      "counterChange": {
+        "planPageAllPlansCount": "98 -> 99",
+        "pricingLimitsAllCount": "100 -> 101"
+      },
+      "note": "Compared with the 2026-11-09 capture of the same pages, the only paid catalog change is the added paid row 'Muse Ember'. Every other paid row keeps the same budgetUsd / rates / budgetSteps."
+    }
+  },
+  "adoptionStatus": "research-only; not adopted; no command_code_goat × muse-ember row in adopted.csv yet — adding one requires a COMMAND_CODE_GOAT_MODELS entry in scripts/build_adopted.py, left to maintainer review",
+  "observed": {
+    "paidModel": {
+      "name": "Muse Ember",
+      "slug": "muse-ember",
+      "modelId": "meta/muse-ember",
+      "idVariants": {
+        "planPageId": "meta/muse-ember",
+        "pricingLimitsId": "muse-ember"
+      },
+      "vendor": "Meta",
+      "category": "opensource",
+      "blurb": "multimodal reasoning for conversational and agentic work",
+      "launchedAt": "2026-11-08",
+      "minPlanName": "Go",
+      "contextWindow": 1048576,
+      "reasoning": true,
+      "vision": true,
+      "deal": null,
+      "dealNote": "No deal entry for this model (page shows '$undefined').",
+      "scheduledChange": null,
+      "scheduledChangeNote": "No scheduled change entry for this model.",
+      "timeOfDay": null,
+      "timeOfDayNote": "No time-of-day (peak/off-peak) pricing entry for this model.",
+      "score": "not yet scored",
+      "scoreIndexes": {
+        "intelligenceIndex": null,
+        "codingIndex": null,
+        "note": "Neither the intelligence index nor the coding index is rated on the official page for this model ('not yet scored')."
+      },
+      "threePartPrice": {
+        "inputPerMTokUsd": 0.10,
+        "outputPerMTokUsd": 0.50,
+        "cachedReadPerMTokUsd": 0.004,
+        "cacheWritePerMTokUsd": null,
+        "cacheWriteNote": "Cache-write price not listed in the official table (page shows '$undefined' in the payload and '—' / '-' in the table cell)."
+      },
+      "rscExtraCostFields": {
+        "blendedCostPerMTok": 0.2,
+        "agentLoopInputPerMTok": 0.0328,
+        "note": "Additional per-MTok cost fields present in the RSC payload for this model, transcribed as published. No blended price is derived or adopted here."
+      },
+      "perModelCreditsUsd": 20,
+      "creditsSource": {
+        "rscBudgetUsd": 20,
+        "budgetSteps": null,
+        "creditDeal": null,
+        "creditsColumnDisplay": "$20",
+        "table": "GOAT model table",
+        "tableNote": "Per-model monthly credits on the GOAT plan are $20 for this model (RSC budgetUsd 20, no budgetSteps, credits column '$20')."
+      },
+      "pricingLimitsAvailability": {
+        "individualGo": true,
+        "goat": true,
+        "pro": true
+      },
+      "pageRequestShape": {
+        "inputTokens": 800,
+        "outputTokens": 200,
+        "cacheReadTokens": 50000
+      },
+      "pageRequestEstimate": {
+        "per5Hours": 10500,
+        "perWeek": 26300,
+        "perMonth": 52600
+      },
+      "pricingLimitsPlanBudgetUsd": {
+        "go": 6,
+        "goat": 20,
+        "pro": 30
+      },
+      "pricingLimitsPlanAllowanceUsd": {
+        "go": 6,
+        "goat": 20,
+        "pro": 30
+      }
+    }
+  },
+  "notAdopted": "none — no free variant was observed for 'Muse Ember' in the official Command Code GOAT catalog on 2026-11-10 (no muse-ember:free entry), and no paid row for it is adopted yet.",
+  "otherObservations": [
+    {
+      "model": "Beam 1.0 (free, beam:free)",
+      "observation": "The free Beam 1.0 model was taken down from the official catalog, and https://commandcode.ai/pricing no longer carries the 'Free on Beam 1.0' wording.",
+      "adopted": false,
+      "reason": "Free GOAT models are not tracked in this repo. Recorded as an observation only; no adopted value affected."
+    },
+    {
+      "model": "Claude Fable 5.2",
+      "observation": "pricing-limits gained a new Claude Fable 5.2 entry with $8 input / $40 output / $0.20 cached read / $10 cache write per 1M tokens; its availability lists individual-goat = false (Max and above only).",
+      "adopted": false,
+      "reason": "Not part of the GOAT plan, so it is out of scope for the Command Code GOAT catalog and is not tracked here. Recorded as an observation only; no adopted value affected."
+    },
+    {
+      "model": "/pricing changelog 1.88.5",
+      "observation": "The /pricing changelog entry 1.88.5 states that DeepSeek V4.1 Flash becomes the new default model, and that the free Laguna S 2.1 is retired.",
+      "adopted": false,
+      "reason": "Changelog wording only; the existing adopted command_code_goat × deepseek-v4.1-flash row in data/adopted.csv is generated by scripts/build_adopted.py and is left exactly as it is. No adopted value changed."
+    },
+    {
+      "model": "GOAT / Pro shared monthly pool wording",
+      "observation": "https://commandcode.ai/pricing still writes GOAT 'Up to $100' and Pro 'Up to $110'; the shared monthly pool script constant (COMMAND_CODE_GOAT_SHARED_USD = 70) is unchanged.",
+      "adopted": false,
+      "reason": "Shared-pool wording did not change between the 2026-11-09 and the 2026-11-10 captures, and scripts/ is out of scope for this file. Any reconciliation of the page wording with the $70 shared pool is left to upstream maintainer review."
+    }
+  ],
+  "sharedPoolUnchanged": {
+    "commandCodeGoatSharedMonthlyUsd": 70,
+    "note": "Shared monthly pool $70 (script constant COMMAND_CODE_GOAT_SHARED_USD = 70) and every existing GOAT row are unchanged by this observation."
+  },
+  "computationNote": "No monthlyYi, no blended per-MTok price and no adopted value are computed in this file; all numbers are transcribed as published on the official pages.",
+  "confidence": "medium",
+  "basis": "official"
+}
