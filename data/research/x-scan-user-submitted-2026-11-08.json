@@ -332,5 +332,60 @@
       "https://x.com/niko70129972/status/2119346974915002623",
       "https://x.com/Riom510/status/2119342986589069763"
     ]
+  },
+  "supplement20261110": {
+    "recordedAt": "2026-11-10",
+    "note": "不改上面 2026-11-08 的 recordedAt、counts 和当时的去重记录。这是后来补上的一条用户证据。",
+    "counts": {
+      "mediumNewlyAdded": 1,
+      "highCounted": 0,
+      "alreadyPresent": 0,
+      "gapFilled": 0,
+      "echoNotCounted": 1
+    },
+    "entries": [
+      {
+        "postId": "2120065411240874466",
+        "url": "https://x.com/ai_funss/status/2120065411240874466",
+        "account": "ai_funss",
+        "confidence": "Medium",
+        "status": "added",
+        "file": "claude-ultra-monthly-api-worth-x-2026-11-10.json",
+        "whyMedium": "Claude Ultra $200 的自制 API 估值图有具体美元，但没有 tokens，也没有 quota%。不是官方额度面板。"
+      }
+    ],
+    "notCounted": [
+      {
+        "postId": "2120070914281025893",
+        "url": "https://x.com/yuqingjz/status/2120070914281025893",
+        "account": "yuqingjz",
+        "confidenceIfStandalone": "Low",
+        "status": "not counted",
+        "reason": "复述约数「Fable 大概 3000、Opus 能到 1.5 万」，是回声，不是第二条独立样本"
+      }
+    ],
+    "doNotCombineWith": {
+      "pullRequest": 223,
+      "url": "https://github.com/Fei2411/real-api-pricing/pull/223",
+      "otherSample": "ImLukeF Claude Ultra × Fable 5.2，247.1M @ Weekly·Fable 30%",
+      "reason": "另一作者的 token 和配额百分比。不能拿来把本图美元换成 token，也不改 #223 的分支"
+    },
+    "deduplication": {
+      "checkedAt": "2026-11-10",
+      "postId": "2120065411240874466",
+      "matches": 0,
+      "refs": {
+        "origin/main": "2599b7ad743a94b3ab6d4ff8cdb4d8359ee6943c",
+        "pr205": "226ce8cefd822aba49a65cd2cc2dc88ee79e4c0b",
+        "pr207": "1ae7596a683743b31c517944adebde43a0e332a8",
+        "pr209": "2f7b8d38b740da2abeab8059b4a4ff4e46ea928a",
+        "pr216": "66c98dbaa9333a795f3f3ffed191a4c2f08024bd",
+        "pr223": "faf1c9eb46b70fea0b12267cb0b5e5dc4fc23f36",
+        "pr225": "86c5fbbd1376197754887a4a46a294ca90534373",
+        "pr228": "d6c880ce432522001e8ef172f1e925cebfa5db02"
+      }
+    },
+    "screenshotsCommitted": false,
+    "screenshotCite": "https://x.com/ai_funss/status/2120065411240874466"
   }
 }

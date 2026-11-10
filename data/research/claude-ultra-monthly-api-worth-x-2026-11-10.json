@@ -1,0 +1,179 @@
+{
+  "recordedAt": "2026-11-10",
+  "sourceType": "x_user_supplied",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "用户提交 https://x.com/ai_funss/status/2120065411240874466 。Claude Ultra $200 的一个月 API list-price 价值对比。截图精确值优先于正文约数。research-only，不改 adopted.csv。图片不入库。",
+  "relatedOpenResearch": {
+    "pr223": "https://github.com/Fei2411/real-api-pricing/pull/223 是另一份日批，本提交不改它的分支。那边有不同作者的 Claude Ultra × Fable 5.2 样本（ImLukeF 247.1M @ Weekly·Fable 30%）以及 Fable 周上限 50% / API $8/$40 的记录。本 post id 不在那份 diff 里。",
+    "doNotCrossAuthor": "不要用 ImLukeF 的 247.1M/30% 或 Fable $8/$40 把本图美元换成 token 池"
+  },
+  "items": [
+    {
+      "id": "x-ai-funss-claude-ultra-monthly-api-worth",
+      "postId": "2120065411240874466",
+      "confidence": "Medium",
+      "planId": "claude_ultra",
+      "model": "claude-opus-5-5 / claude-fable-5-2 / claude-fable-5-1 (scenario comparison)",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ai_funss/status/2120065411240874466",
+        "account": "ai_funss",
+        "createdAt": "2026-11-10T08:05:57.000Z",
+        "createdAtPacific": "2026-11-10T00:05:57-08:00",
+        "text": "Claude Ultra $200 可以使用的额度\n\n- 只用 Opus 5.5 可以使用 $15000 左右\n- 先用一半 Fable 5.2 ($3000) 额度，再用Opus 5.5 总共可以使用 $10000 左右\n- Fable 5.2 可以使用 $3000 左右\n- Fable 5.1 只能使用 $2000 左右\n\nFable 5.2 比 Fable 5.1 速度快，价格还便宜",
+        "conversationId": "2120065411240874466",
+        "standaloneRoot": true,
+        "replyCountAtFetch": 2
+      },
+      "observed": {
+        "evidenceKind": "author-created infographic of API list-price worth, not an official quota panel or raw usage log",
+        "hasScreenshot": true,
+        "screenshotsCommitted": false,
+        "screenshotCite": "https://x.com/ai_funss/status/2120065411240874466",
+        "oralRoundedUsd": {
+          "note": "正文约数，不覆盖截图上的精确值，也不与截图取平均",
+          "plan": "Claude Ultra $200",
+          "opus55OnlyApprox": 15000,
+          "fable52FirstThenOpus55Approx": 10000,
+          "fable52OnlyApprox": 3000,
+          "fable51OnlyApprox": 2000,
+          "authorNote": "先用一半 Fable 5.2 ($3000) 额度；Fable 5.2 比 Fable 5.1 速度快，价格还便宜"
+        },
+        "authorSubQuotaClaim": {
+          "text": "Fable has its own limit, and it is half of each week",
+          "isQuotaPanelReading": false,
+          "note": "作者对 Fable 子额度的说法。不是配额百分比读数，也不是 cache%。口述「一半」对的是这句，不是 $14,662 的一半；$3,021 不是 $14,662 的 50%"
+        },
+        "screenshot": {
+          "title": "What $200 of Claude Ultra gets you",
+          "header": "ONE MONTH · API LIST PRICES",
+          "subtitlePrinted": "A month of only Opus 5.5 is worth $14,662 at API prices. Fable has its own limit, and it is half of each week. Use Fable 5.2 first and the month is worth $10,353.",
+          "planPrinted": "Claude Ultra ($200 per month)",
+          "accountScopePrinted": "one account",
+          "pricingBasisPrinted": "API list prices",
+          "measurementPrinted": "measured from 1.1M proxied requests, Aug 11 to Nov 9, 2026",
+          "measurementTimezone": "not printed on chart",
+          "monthConventionPrinted": "One month is 30 days, which is 4.3 weekly limits. One week of only Opus 5.5 is worth $3,421.",
+          "monthWorthIsWeeklyScaled": "图把月值写成 30 天、约 4.3 个周上限；Opus-only 的周值 $3,421 乘 30/7 才落到月值 $14,662。这不是五个情景各自独立实测的单月耗尽额度。",
+          "rows": [
+            {
+              "scenario": "Opus 5.5 only",
+              "apiWorthUsd": 14662,
+              "weeklyApiWorthUsdPrinted": 3421,
+              "multipleLabel": "73x the $200",
+              "segments": [
+                {"model": "Opus 5.5", "apiWorthUsd": 14662}
+              ]
+            },
+            {
+              "scenario": "Fable 5.2 first, then Opus 5.5",
+              "apiWorthUsd": 10353,
+              "multipleLabel": "52x the $200",
+              "vsOpusOnlyLabel": "29% less",
+              "vsOpusOnlyLabelIsNotQuotaPct": true,
+              "segments": [
+                {"model": "Fable 5.2", "apiWorthUsd": 3021},
+                {"model": "Opus 5.5", "apiWorthUsd": 7331}
+              ]
+            },
+            {
+              "scenario": "Fable 5.1 first, then Opus 5.5",
+              "apiWorthUsd": 9528,
+              "multipleLabel": "48x the $200",
+              "vsOpusOnlyLabel": "35% less",
+              "vsOpusOnlyLabelIsNotQuotaPct": true,
+              "segments": [
+                {"model": "Fable 5.1", "apiWorthUsd": 2197},
+                {"model": "Opus 5.5", "apiWorthUsd": 7331}
+              ],
+              "oral": null,
+              "note": "这条路径只印在图上，正文没有口述"
+            },
+            {
+              "scenario": "Fable 5.2 only",
+              "apiWorthUsd": 3021,
+              "multipleLabel": "15x the $200",
+              "vsOpusOnlyLabel": "79% less",
+              "vsOpusOnlyLabelIsNotQuotaPct": true,
+              "segments": [
+                {"model": "Fable 5.2", "apiWorthUsd": 3021}
+              ]
+            },
+            {
+              "scenario": "Fable 5.1 only",
+              "apiWorthUsd": 2197,
+              "multipleLabel": "11x the $200",
+              "vsOpusOnlyLabel": "85% less",
+              "vsOpusOnlyLabelIsNotQuotaPct": true,
+              "segments": [
+                {"model": "Fable 5.1", "apiWorthUsd": 2197}
+              ]
+            }
+          ],
+          "tokens": null,
+          "quotaPct": null,
+          "input": null,
+          "cacheRead": null,
+          "cacheWrite": null,
+          "output": null,
+          "listRatesOnChart": null
+        },
+        "chartInternalChecksNotMeasured": {
+          "note": "只核对图上印出来的算术，不是新的测量，也不用于采用",
+          "opusMonthlyOverWeekUses30Over7": "3421 * (30/7) = 14661.43 vs printed monthly 14662",
+          "mixedOpusShareIsHalfOfOpusOnly": "14662 / 2 = 7331, matches both mixed-path Opus segments",
+          "fable52MixedSegmentsVsPrintedTotal": "3021 + 7331 = 10352, while the row total is printed as 10353; both printed labels are kept",
+          "multiples": {
+            "14662/200": 73.31,
+            "10353/200": 51.765,
+            "9528/200": 47.64,
+            "3021/200": 15.105,
+            "2197/200": 10.985
+          }
+        }
+      },
+      "threadContext": {
+        "conversationPagedToEmpty": true,
+        "echoReplyNotCounted": {
+          "url": "https://x.com/yuqingjz/status/2120070914281025893",
+          "account": "yuqingjz",
+          "createdAt": "2026-11-10T08:27:49.000Z",
+          "createdAtPacific": "2026-11-10T00:27:49-08:00",
+          "text": "同样 200 美元 Ultra，Fable 大概 3000 刀 API，Opus 能顶到 1.5 万。",
+          "confidenceIfStandalone": "Low",
+          "counted": false,
+          "disposition": "口述回声，复述约数；不是第二条独立样本"
+        },
+        "otherReplies": "其余回复没有额外的硬数字"
+      },
+      "gaps": [
+        "没有绝对 tokens，也没有对应的 quota%，所以是 Medium，不是 High",
+        "图是作者自制的 API list-price 估值，不是官方额度面板或原始配额读数",
+        "没有 input / cache / output 分项，图上也没有单价",
+        "1.1M proxied requests（Aug 11–Nov 9, 2026）怎样折成一个月，方法没有完整写出；测量日期没有时区",
+        "月值用的是 30 天 / 约 4.3 个周上限，更接近 30/7。不能把五条都说成各自独立实测的单月耗尽额度",
+        "正文约数 15000 / 10000 / 3000 / 2000 不覆盖截图的 14662 / 10353 / 3021 / 2197",
+        "half of each week 是作者的子额度说法，不能当成 quota 百分比",
+        "Fable 5.2 混合行的两段 $3,021 + $7,331 加总是 $10,352，行末印的是 $10,353，两个印出的数都保留",
+        "不与 #223 里另一作者的 247.1M @ 30% 或 $8/$40 拼算"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-user-submitted-2026-11-08.json"
+  ],
+  "deduplication": {
+    "result": "new Medium on 2026-11-10; post id was absent",
+    "checked": {
+      "origin/main": "2599b7ad743a94b3ab6d4ff8cdb4d8359ee6943c",
+      "pr205": "226ce8cefd822aba49a65cd2cc2dc88ee79e4c0b",
+      "pr207": "1ae7596a683743b31c517944adebde43a0e332a8",
+      "pr209": "2f7b8d38b740da2abeab8059b4a4ff4e46ea928a",
+      "pr216": "66c98dbaa9333a795f3f3ffed191a4c2f08024bd",
+      "pr223": "faf1c9eb46b70fea0b12267cb0b5e5dc4fc23f36",
+      "pr225": "86c5fbbd1376197754887a4a46a294ca90534373",
+      "pr228": "d6c880ce432522001e8ef172f1e925cebfa5db02"
+    },
+    "matches": 0
+  }
+}
