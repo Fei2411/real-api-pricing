@@ -50,7 +50,7 @@
 <text x="66.000" y="469.000" font-size="12" fill="#697169" text-anchor="middle" font-weight="400" transform="rotate(-90 66 469.0)">Average task score</text>
 <text x="720.000" y="775.000" font-size="13" fill="#5D655E" text-anchor="middle" font-weight="400" >真实单价 · 美元 / 百万 token</text>
 <text x="1338.000" y="775.000" font-size="12" fill="#737B74" text-anchor="end" font-weight="400" >越右越便宜 →</text>
-<path id="frontier" d="M120.000,331.691 L766.260,331.691 L803.915,334.552 L1108.461,378.891 L1231.230,426.091 L1275.066,458.988 L1338.000,458.988" fill="none" stroke="#303630" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="frontier" d="M120.000,331.691 L754.591,331.691 L803.915,334.552 L1108.461,378.891 L1231.230,426.091 L1275.066,458.988 L1338.000,458.988" fill="none" stroke="#303630" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.032467532" data-score="77.6" data-x="710.839" data-y="510.479" transform="translate(710.839 510.479)"><title>GPT 5.6 Sol · Plus · $0.03247/MTok · 77.6 · mediumGPT-5.6 Sol · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
@@ -70,7 +70,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0021732044" data-score="83.1" data-x="1144.911" data-y="431.812" transform="translate(1144.911 431.812)"><title>GPT-6 Luna · Plus · $0.00217/MTok · 83.1 · highGPT-6 Luna · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="true" data-price="0.022988506" data-score="90.1" data-x="766.260" data-y="331.691" transform="translate(766.260 331.691)"><title>GPT-6.1 Sol · Plus · $0.02299/MTok · 90.1 · highGPT-6.1 Sol · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="true" data-price="0.024721879" data-score="90.1" data-x="754.591" data-y="331.691" transform="translate(754.591 331.691)"><title>GPT-6.1 Sol · Plus · $0.02472/MTok · 90.1 · highGPT-6.1 Sol · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-11" y="-11" width="22" height="22" rx="6" fill="#FFF" stroke="#16A34A" stroke-width="1.35"/>
 <circle r="4" fill="#16A34A"/>
 </g>
@@ -223,7 +223,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.11575414" data-score="80.3" data-x="506.771" data-y="471.861" transform="translate(506.771 471.861)"><title>Claude Fable 5.1 · Max 5x · 9/14+ · $0.11575/MTok · 80.3 · lowClaude Fable 5.1 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#CC5A2E" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0032743942" data-score="86.8" data-x="1079.106" data-y="378.891" transform="translate(1079.106 378.891)"><title>Claude Sonnet 5.5 · Pro · $0.00327/MTok · 86.8 · lowClaude Sonnet 5.5 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0032829941" data-score="86.8" data-x="1078.685" data-y="378.891" transform="translate(1078.685 378.891)"><title>Claude Sonnet 5.5 · Pro · $0.00328/MTok · 86.8 · lowClaude Sonnet 5.5 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#CC5A2E" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0031707781" data-score="86.8" data-x="1084.268" data-y="378.891" transform="translate(1084.268 378.891)"><title>Claude Sonnet 5.5 · Max 20x · 9/14+ · $0.00317/MTok · 86.8 · lowClaude Sonnet 5.5 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
@@ -291,10 +291,10 @@
 <path d="M0 -5.5L5.5 0 0 5.5 -5.5 0Z" fill="white" stroke="#CC5A2E" stroke-width="1.5" opacity=".68"/>
 </g>
 <g class="front-label" data-model="gpt-6.1-sol">
-<path d="M769.110,316.964Q769.110,300.691 772.260,300.691" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="766.260" y="281.691" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">OpenDesign · GPT-6.1 Sol</text>
-<text x="766.260" y="301.691" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Plus</text>
-<text x="766.260" y="321.691" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.02299</text>
+<path d="M757.441,316.964Q757.441,300.691 760.591,300.691" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="754.591" y="281.691" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">OpenDesign · GPT-6.1 Sol</text>
+<text x="754.591" y="301.691" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Plus</text>
+<text x="754.591" y="321.691" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.02472</text>
 </g>
 <g class="front-label" data-model="gpt-6-sol">
 <path d="M800.847,349.234Q800.847,401.552 789.915,401.552" stroke="#C4CDC3" stroke-width=".8" fill="none"/>

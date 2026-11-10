@@ -1,6 +1,6 @@
 {
   "collectedAt": "2026-11-10",
-  "adoptionStatus": "research-only; not adopted; do not change adopted.csv. One new sample does not replace an adopted number. Percentage-point merges below are recorded and not applied.",
+  "adoptionStatus": "Adopted 2026-11-10 in scripts/build_adopted.py by percentage-point weighting. A new sample is merged with the older samples of the same point; it does not replace them. claude_pro × claude-fable-5.2 has no older sample, so its 7 weekly pp are the whole weight and do not replace claude_pro × claude-opus-5.5.",
   "scopeNote": "2026-11-09 本机一轮的三个样本。Claude Pro × Fable 5.2 见 issue #226；ChatGPT Plus × gpt-6.1-sol 周窗见 issue #227；Claude Pro × Opus 5.5 是 issue #206 / PR #207 的同一满 5h 窗（508 次，2026-11-07 22:22–23:38 PT），周份额改按 12.5% 而不是面板整数 13%。截图不入库。",
   "method": "CONVENTIONS.md §2.4：带分项的样本按该模型标价折 list-worth，÷ 段占额度的百分点，再与已有样本按百分点合并。月 = 周 worth × 4。Anthropic 行的 token 分母用 anthropicTokenMix（缓存读 97% / 5 分钟缓存写 2.5% / 输出 0.5%，混合价 $0.419/MTok）。OpenAI 行用 standardTokenMix（97% / 2.5% / 0.5%）。单独一条新样本的外推不替换已采用值。",
   "samples": [
@@ -69,8 +69,8 @@
         "rawMonthYi": 5.573,
         "formula": "段 API 美元 ÷ 占比 ÷ $0.644/MTok；美元池不变。月 = 周 × 4，只作对照"
       },
-      "notMergedBecause": "库内没有第二条 claude-fable-5.2 样本，不能按百分点合并。单段外推 7.818 亿/月不新建采用行，也不替换 claude_pro × claude-opus-5.5。本段每周百分点 $1.2587，采用的 Opus 5.5 是 $3.19865/pp（约 2.54×）；这是 API worth，不是已裁定的订阅内权重。若表不计缓存读，池会变成 700,124 与 4,900,871，不采。",
-      "adoptedRowUntouched": "claude_pro × claude-opus-5.5"
+      "adopted": "claude_pro × claude-fable-5.2 = 7.82 亿/月 medium。周 +7pp 是该点的全部权重。不替换 claude_pro × claude-opus-5.5。50% 周帽不套。",
+      "notUsed": "若表不计缓存读，池会变成 700,124 与 4,900,871。套 50% 周帽为 3.91 亿。都不采。"
     },
     {
       "id": "chatgpt-plus-gpt61sol-week-2026-11-09",
@@ -143,8 +143,7 @@
         "thisStandardLoadMonthOverAdopted": 0.99,
         "notASolSample": "8.604 亿/月与 8.70 亿只差约 1%，但分子混有 codex-auto-review 和 terra，不能当成第二条纯 Sol 百分点并进 31pp。"
       },
-      "notMergedBecause": "已采用的 8.70 亿来自 31 个纯 Sol 百分点。本窗没有 Sol 独占的百分点，不能按百分点加权。单条混合窗不替换 8.70。Pro 5x/20x 不从这条 Plus 样本派生。",
-      "adoptedRowUntouched": "chatgpt_plus × gpt-6.1-sol = 8.70 亿/月（high，standard）"
+      "adopted": "chatgpt_plus × gpt-6.1-sol 8.70→8.09 亿/月。旧段 $13.2824/31pp 与本窗 API $25.77/67pp 按百分点合并。不把旧段换成新窗，也不把 Sol 的 $23.157456 单独除以 67%。Pro 5x/20x 不派生。"
     },
     {
       "id": "claude-pro-opus55-5h-2026-11-07",
@@ -244,8 +243,7 @@
           "note": "写改按 1h $8 的合并。不采用。本文件按仓库的 5 分钟 $5。"
         }
       },
-      "notMergedBecause": "PR #207 已把这同一窗按 13% 提议为 30.39 亿/月，且尚未合并；main 上的采用值仍是两源合并的 30.54。把 13% 改成 12.5% 只动这一条样本的分母。单条样本的外推是 29.35 亿，按百分点并进 #52 与 Reddit 段是 30.46 亿。两条都不替换 30.39，也不改 main 的 30.54。",
-      "adoptedRowUntouched": "claude_pro × claude-opus-5.5；main 30.54 亿/月，PR #207 提议 30.39 亿/月"
+      "adopted": "claude_pro × claude-opus-5.5 30.54→30.46 亿/月。#52 $587.52/183pp、Reddit $40.481924/13.333pp、本窗 $38.424/12.5pp 合并为 $3.19119/pp。round(..., 2) 得 30.46；未舍入是 30.465。本窗单独 29.35 亿不替换旧样本。面板整数 13% 的 30.39 不采。写按 1h $8 的 30.59 不采。Max 20x 仍不并入本窗。"
     }
   ]
 }
