@@ -16,7 +16,7 @@ No.  Plan                                   Monthly fee             Served model
 7    ChatGPT Pro 10x                        USD 100                 GPT 5.6 Luna                  70.581              0.00142   medium
 8    Droid Max                              USD 200                 GLM 5.3 Flash                 67.36               0.00297   medium
 9    Claude Max 20x (9/14+)                 USD 200                 Claude Sonnet 5.5             63.076              0.00317   low
-10   Claude Pro                             USD 20                  Claude Haiku 5.5              59.4861             0.00034   low
+10   Claude Pro                             USD 20                  Claude Haiku 5.5              59.6423             0.00034   low
 11   Google AI Ultra 20x                    USD 199.99              Gemini 3.8 Flash              51.62               0.00387   low
 12   Droid Max                              USD 200                 GPT 5.6 Luna                  50.52               0.00396   medium
 13   Claude Max 20x (9/14+)                 USD 200                 Claude Sonnet 5               39.25               0.0051    medium
@@ -92,7 +92,7 @@ No.  Plan                                   Monthly fee             Served model
 83   Command Code GOAT                      USD 10                  DeepSeek V4 Flash             6.2112              0.00161   medium
 84   Ollama Pro                             USD 20                  DeepSeek V4.1 Flash           6.2112              0.00322   medium
 85   ChatGPT Pro 10x                        USD 100                 GPT 5.6 Sol                   6.16                0.01623   medium
-86   Claude Pro                             USD 20                  Claude Sonnet 5.5             6.092               0.00328   low
+86   Claude Pro                             USD 20                  Claude Sonnet 5.5             6.108               0.00327   low
 87   Kimi Allegro †                         $99 · CN ¥699           Kimi K3                       5.838               0.01696   medium
 88   Kimi Ultra †                           $199 · CN ¥1399         Kimi K3                       5.838               0.03409   medium
 89   GLM Coding Max (v3 ¥1078) Off-peak     CNY 1078                GLM 5.3                       5.769               0.02757   high

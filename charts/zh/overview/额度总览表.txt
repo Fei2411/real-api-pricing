@@ -16,7 +16,7 @@
 7     ChatGPT Pro 10x                     USD 100                 GPT 5.6 Luna                  705.81      0.00142  medium
 8     Droid Max                           USD 200                 GLM 5.3 Flash                 673.6       0.00297  medium
 9     Claude Max 20x (9/14+)              USD 200                 Claude Sonnet 5.5             630.76      0.00317  low
-10    Claude Pro                          USD 20                  Claude Haiku 5.5              594.861     0.00034  low
+10    Claude Pro                          USD 20                  Claude Haiku 5.5              596.423     0.00034  low
 11    Google AI Ultra 20x                 USD 199.99              Gemini 3.8 Flash              516.2       0.00387  low
 12    Droid Max                           USD 200                 GPT 5.6 Luna                  505.2       0.00396  medium
 13    Claude Max 20x (9/14+)              USD 200                 Claude Sonnet 5               392.5       0.0051   medium
@@ -92,7 +92,7 @@
 83    Command Code GOAT                   USD 10                  DeepSeek V4 Flash             62.112      0.00161  medium
 84    Ollama Pro                          USD 20                  DeepSeek V4.1 Flash           62.112      0.00322  medium
 85    ChatGPT Pro 10x                     USD 100                 GPT 5.6 Sol                   61.6        0.01623  medium
-86    Claude Pro                          USD 20                  Claude Sonnet 5.5             60.92       0.00328  low
+86    Claude Pro                          USD 20                  Claude Sonnet 5.5             61.08       0.00327  low
 87    Kimi 会员 699 (v1) †                ¥699（国际 $99）        Kimi K3                       58.38       0.01696  medium
 88    Kimi Ultra 1399 (v2) †              ¥1399（国际 $199）      Kimi K3                       58.38       0.03409  medium
 89    GLM Coding Max (v3 ¥1078) 闲时      CNY 1078                GLM 5.3                       57.69       0.02757  high

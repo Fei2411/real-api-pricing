@@ -1475,6 +1475,9 @@ RATIO_COMPOSER = blended(0.5, 2, 6) / blended(0.2, 0.5, 2.5)   # Grok 4.6 → Co
 RATIO_COMPOSER_FAST = blended(0.5, 2, 6) / blended(0.5, 3, 15)
 RATIO_SONNET = round(blended(0.5, 5, 25) / blended(0.2, 2, 10), 2)       # Opus → Sonnet 5 = 2.5
 # Opus 5.5 → Sonnet 5.5 / Haiku 5.5：5.5 家族统一锚 Pro×Opus5.5 实测池（$1,279.46/月 list-worth，图取整 $1,280）
+# Pro × Sonnet 5.5 / Haiku 5.5 仍按 2026-09-29 的 Opus 锚 30.54 亿做价格比派生。
+# 2026-11-10 把维护者 5h 窗并进 Opus 5.5 后，这两行不跟着改。
+CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI = 30.54
 RATIO_SONNET55 = blended_anthropic(0.2, 5.0, 20.0) / blended_anthropic(0.1, 2.5, 10.0)   # Sonnet 5.5 降价后 = 2.0
 # Haiku 5.5 分段价（platform.claude.com pricing，2026-10-08 核对）：≤100K / >100K（5×）两档 (cached, 写5m, 出)。
 #   2026-10-08 裁定按 token 计 90% 落 ≤100K 档、10% 落 >100K 档混合（社区说法「约 90% 请求 <100K」，
@@ -1541,8 +1544,8 @@ DERIVED = [
     # Sonnet 5.5 / Haiku 5.5（2026-10-08 Haiku 发布日入）：X @1kartikkabadi1 推算图，全部按同套餐 Opus 5.5 锚
     #   × 标价混合价比派生，非实测（池权重=价格比假设，Haiku ~19.5× 外推敏感 → 全档 low）；
     #   Haiku 按 90/10 分段混合（2026-10-08 裁定），纯 ≤100K 与 50/50 留注；5x 锚同套餐 Opus 5.5 直测行（2026-10-08 裁定，不再借 20x÷2）
-    ("claude_pro", "claude-opus-5.5", "claude-sonnet-5.5", RATIO_SONNET55, "low", f"61.08→{claude_pro_opus55_monthly_yi()*RATIO_SONNET55:.2f}亿：Pro Opus5.5 实测锚 {claude_pro_opus55_monthly_yi():g}亿 × 混合价比 {RATIO_SONNET55:g}（Sonnet5.5 降价后 $0.2095 vs Opus5.5 $0.419）；发布价 $0.3065 口径 {claude_pro_opus55_monthly_yi()*blended_anthropic(0.2,5.0,20.0)/blended_anthropic(0.2,2.5,10.0):.2f}亿 留对照；X @1kartikkabadi1 推算图 + 官方价表；claude-haiku55-round1-2026-10-08.json", True),
-    ("claude_pro", "claude-opus-5.5", "claude-haiku-5.5", RATIO_HAIKU55, "low", f"596.42→{claude_pro_opus55_monthly_yi()*RATIO_HAIKU55:.2f}亿：Pro Opus5.5 实测锚 {claude_pro_opus55_monthly_yi():g}亿 × 混合价比 {RATIO_HAIKU55:.4f}（Opus5.5 $0.419 vs Haiku5.5 90/10 分段混合 ${HAIKU55_BLEND:.6f}：≤100K 档 $0.015325 占 90%、>100K 档 $0.076625 占 10%，2026-10-08 裁定按 token 近似 90% 落 ≤100K；社区说法为约 90% 请求 <100K，按请求数折 token 会低估 >100K 份额）；不采：纯 ≤100K 档 {claude_pro_opus55_monthly_yi()*RATIO_HAIKU55_LE100K:.2f}亿、50/50 {claude_pro_opus55_monthly_yi()*RATIO_HAIKU55_5050:.2f}亿；X @1kartikkabadi1 推算图；claude-haiku55-round1-2026-10-08.json", True),
+    ("claude_pro", "claude-opus-5.5", "claude-sonnet-5.5", RATIO_SONNET55, "low", f"新增{CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI*RATIO_SONNET55:.2f}亿：Pro Opus5.5 实测锚 {CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI:g}亿 × 混合价比 {RATIO_SONNET55:g}（Sonnet5.5 降价后 $0.2095 vs Opus5.5 $0.419）；发布价 $0.3065 口径 {CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI*blended_anthropic(0.2,5.0,20.0)/blended_anthropic(0.2,2.5,10.0):.2f}亿 留对照；X @1kartikkabadi1 推算图 + 官方价表；claude-haiku55-round1-2026-10-08.json", True),
+    ("claude_pro", "claude-opus-5.5", "claude-haiku-5.5", RATIO_HAIKU55, "low", f"新增{CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI*RATIO_HAIKU55:.2f}亿：Pro Opus5.5 实测锚 {CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI:g}亿 × 混合价比 {RATIO_HAIKU55:.4f}（Opus5.5 $0.419 vs Haiku5.5 90/10 分段混合 ${HAIKU55_BLEND:.6f}：≤100K 档 $0.015325 占 90%、>100K 档 $0.076625 占 10%，2026-10-08 裁定按 token 近似 90% 落 ≤100K；社区说法为约 90% 请求 <100K，按请求数折 token 会低估 >100K 份额）；不采：纯 ≤100K 档 {CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI*RATIO_HAIKU55_LE100K:.2f}亿、50/50 {CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI*RATIO_HAIKU55_5050:.2f}亿；X @1kartikkabadi1 推算图；claude-haiku55-round1-2026-10-08.json", True),
     ("claude_max_20x", "claude-opus-5.5", "claude-sonnet-5.5", RATIO_SONNET55, "low", f"新增{CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_SONNET55:.2f}亿：20x Opus5.5 采用值 {CLAUDE_OPUS55_MAX20X_MONTHLY_YI:g}亿 × 混合价比 {RATIO_SONNET55:g}，同 Pro 口径派生非实测；claude-haiku55-round1-2026-10-08.json", True),
     ("claude_max_20x", "claude-opus-5.5", "claude-haiku-5.5", RATIO_HAIKU55, "low", f"新增{CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_HAIKU55:.2f}亿：20x Opus5.5 采用值 {CLAUDE_OPUS55_MAX20X_MONTHLY_YI:g}亿 × 混合价比 {RATIO_HAIKU55:.4f}（Haiku5.5 90/10 分段混合），同 Pro 口径派生非实测；外推幅度大，若池权重偏离价格比须重推；不采：纯 ≤100K {CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_HAIKU55_LE100K:.2f}亿、50/50 {CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_HAIKU55_5050:.2f}亿；claude-haiku55-round1-2026-10-08.json", True),
     ("claude_max_5x", "claude-opus-5.5", "claude-sonnet-5.5", RATIO_SONNET55, "low", f"新增{claude_max5x_opus55_monthly_yi()*RATIO_SONNET55:.2f}亿：5x Opus5.5 直测锚 {claude_max5x_opus55_monthly_yi():g}亿 × 混合价比 {RATIO_SONNET55:g}，同 Pro 口径派生非实测；2026-10-08 裁定锚同套餐直测行，不用 20x÷2（得 {CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_SONNET55/CLAUDE_WEEKLY_20X_TO_5X:.2f}亿，不采）；claude-haiku55-round1-2026-10-08.json", False),
@@ -1662,6 +1665,8 @@ DATA_DATES = {
     ("claude_max_5x", "claude-opus-5.5"): ("2026-09-29~2026-10-03", "sample"),
     ("claude_pro", "claude-opus-5.5"): ("2026-09-22~2026-11-07", "sample"),
     ("claude_pro", "claude-fable-5.2"): ("2026-11-09", "sample"),
+    ("claude_pro", "claude-sonnet-5.5"): ("2026-09-22~2026-09-27", "derived", "Claude Pro · claude-opus-5.5"),
+    ("claude_pro", "claude-haiku-5.5"): ("2026-09-22~2026-09-27", "derived", "Claude Pro · claude-opus-5.5"),
     ("claude_team", "claude-opus-5.5"): ("2026-09-30~2026-10-06", "sample"),
     ("supergrok", "grok-4.6"): ("2026-08-23~2026-09-20", "sample"),
     ("supergrok_lite", "grok-4.6"): ("2026-07", "sample"),
@@ -1854,8 +1859,11 @@ def main() -> None:
     derived_base = {}  # (派生行 plan_id, served_model) -> (锚点 plan_id, served_model)，数据日期沿用锚点
     for pid, bmodel, model, ratio, conf, how, main_ in DERIVED:
         b = base[(pid, bmodel)]
-        rows.append(sub_row(pid, b["plan_name"], b["price"], b["currency"], model, b["monthly_yi"] * ratio, conf,
-                            f"由同套餐 {bmodel} {b['monthly_yi']} 亿 × {ratio}", how, "main" if main_ and is_main(pid, bmodel) else "full"))
+        anchor_yi = b["monthly_yi"]
+        if (pid, model) in {("claude_pro", "claude-sonnet-5.5"), ("claude_pro", "claude-haiku-5.5")}:
+            anchor_yi = CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI
+        rows.append(sub_row(pid, b["plan_name"], b["price"], b["currency"], model, anchor_yi * ratio, conf,
+                            f"由同套餐 {bmodel} {anchor_yi} 亿 × {ratio}", how, "main" if main_ and is_main(pid, bmodel) else "full"))
         derived_base[(pid, model)] = (pid, bmodel)
     for pid in ("cursor_ultra", "cursor_pro", "cursor_pro_plus"):
         b = base[(pid, "grok-4.6")]
