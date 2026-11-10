@@ -9,7 +9,7 @@
 ----  ----------------------------------  ----------------------  ----------------------------  ----------  -------  ------
 1     Claude Max 5x (9/14+)               USD 100                 Claude Haiku 5.5              3580.49     0.00028  low
 2     Claude Max 20x (9/14+)              USD 200                 Claude Haiku 5.5              6159.13     0.00032  low
-3     Claude Pro                          USD 20                  Claude Haiku 5.5              596.423     0.00034  low
+3     Claude Pro                          USD 20                  Claude Haiku 5.5              593.494     0.00034  low
 4     Step Plan Max (¥699)                CNY 699                 Step 3.5 Flash                1731.6      0.0006   medium
 5     Step Plan Pro (¥199)                CNY 199                 Step 3.5 Flash                346.32      0.00085  medium
 6     OpenCode Go                         USD 10                  Muse Spark 1.3 Contributor    110.294     0.00091  medium
@@ -41,7 +41,7 @@
 32    OpenCode Go                         USD 10                  LongCat 2.0                   31.056      0.00322  medium
 33    Ollama Pro                          USD 20                  DeepSeek V4.1 Flash           62.112      0.00322  medium
 34    Ollama Max                          USD 100                 DeepSeek V4.1 Flash           310.559     0.00322  medium
-35    Claude Pro                          USD 20                  Claude Sonnet 5.5             61.08       0.00327  low
+35    Claude Pro                          USD 20                  Claude Sonnet 5.5             60.78       0.00329  low
 36    MiniMax M Plan Build (CN)           CNY 469.0               MiniMax M3.1 Flash Preview    191.764     0.00361  low
 37    Command Code GOAT                   USD 10                  Qwen3.7 Flash                 27.701      0.00361  medium
 38    Step Plan Max (¥699)                CNY 699                 Step 5 Preview                283.186     0.00364  medium
@@ -81,7 +81,7 @@
 72    Claude Max 20x (9/14+)              USD 200                 Claude Opus 5.5               315.38      0.00634  medium
 73    MiMo Token Plan Lite 夜间0.8×       ¥39（国际 $6）          MiMo V2.6 Flash               9.42        0.00637  medium
 74    MiMo Token Plan Lite 夜间0.8×       ¥39（国际 $6）          MiMo V2.5                     9.42        0.00637  medium
-75    Claude Pro                          USD 20                  Claude Opus 5.5               30.54       0.00655  high
+75    Claude Pro                          USD 20                  Claude Opus 5.5               30.39       0.00658  high
 76    MiMo Token Plan Max 日间            ¥659（国际 $100）       MiMo V2.6 Flash               150.74      0.00663  medium
 77    MiMo Token Plan Max 日间            ¥659（国际 $100）       MiMo V2.5                     150.74      0.00663  medium
 78    OpenCode Go                         USD 10                  Hy3                           14.87       0.00672  medium
