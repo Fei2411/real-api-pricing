@@ -1,0 +1,117 @@
+{
+  "scannedAt": "2026-11-10",
+  "window": {
+    "start": "2026-11-08T01:00:00Z",
+    "end": "2026-11-10T01:11:00Z"
+  },
+  "method": "Grok Bot built-in public X search_posts_all (namespace x); NOT user X plugin / Platform API quota",
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "snapshotLabel": "2026-11-08",
+    "note": "WebFetch 首页 Snapshot 显示 2026-11-08；相对扫描日滞后约 2 天，已从此前 2026-10-27 标签前移"
+  },
+  "queries": [
+    "(Claude OR Cursor OR Codex OR Anthropic) (usage OR quota OR limit OR tokens OR 用量 OR 配额 OR 打满 OR \"rate limit\" OR \"hit the limit\") (plan OR Pro OR Max OR Ultra OR subscription OR 订阅) -is:retweet",
+    "(DeepSeek OR GLM OR MiniMax OR Devin OR OpenCode OR \"Claude Code\") (定价 OR 调价 OR 套餐 OR 促销 OR pricing OR price OR plan OR 用量 OR 配额 OR tokens) -is:retweet",
+    "(Kimi OR \"Kimi Code\" OR kimicode) (用量 OR 配额 OR 打满 OR 额度 OR token OR 百分比 OR usage OR quota) -is:retweet",
+    "(Cursor OR \"Cursor Ultra\" OR \"Cursor Super\" OR Ultra OR Super) (\"Weekly\" OR weekly OR 周额度 OR 打满 OR tokens OR \"M tokens\" OR \"B tokens\") (usage OR limit OR 用量 OR included) has:images -is:retweet",
+    "(Codex OR \"ChatGPT Pro\" OR \"Pro 200\" OR \"Pro 100\" OR \"Pro 500\" OR ChatGPT) (\"100%\" OR hit OR weekly OR daily OR tokens OR 用量 OR 打满) (usage OR quota OR limit OR 配额) -is:retweet",
+    "(Fable OR Ultra OR \"Claude Ultra\" OR \"Claude Max\") (\"M tokens\" OR \"Million tokens\" OR \"%\" OR 用量 OR 周) (token OR tokens OR usage OR Ultra OR Fable) has:images -is:retweet"
+  ],
+  "counts": {
+    "high": 1,
+    "medium": 3,
+    "discardedLowApprox": 90
+  },
+  "relatedIssues": [219, 220, 221, 222],
+  "retained": [
+    {
+      "url": "https://x.com/ImLukeF/status/2119946202464809414",
+      "account": "ImLukeF",
+      "planOrModel": "Claude Ultra × Fable 5.2 (Claude Code)",
+      "tokens": "247.1M (panel By model); post ~250M",
+      "percent": "Weekly · Fable 30%",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "绝对 token + Fable 周额度% 同帖同屏；反推 Fable 周池≈823.7M",
+      "issue": 219
+    },
+    {
+      "url": "https://x.com/UhrsNix/status/2119960243845366265",
+      "account": "UhrsNix",
+      "planOrModel": "Claude Fable 5.2 API + Pro promo",
+      "tokens": null,
+      "percent": "Pro Fable ≤50% weekly; API $8/$40",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "API 硬标价多源一致 + Pro/Max/Ultra Fable 规则 UI 截图交叉",
+      "issue": 220
+    },
+    {
+      "url": "https://x.com/xiuyuanAI/status/2119936696582340715",
+      "account": "xiuyuanAI",
+      "planOrModel": "Claude Pro/Max/Ultra × Fable 5.2",
+      "tokens": null,
+      "percent": "Fable ≤50% plan limit until Nov 16 (UI tooltip)",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "UI tooltip + 重置卡截图；并入 #220",
+      "issue": 220
+    },
+    {
+      "url": "https://x.com/lechattys/status/2119947111777398965",
+      "account": "lechattys",
+      "planOrModel": "Claude Ultra × Fable",
+      "tokens": null,
+      "percent": "All models 58%; Fable only 93%; parent Fresh week 8%",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "Ultra 面板% + Fable reset；无绝对 token；并入 #220",
+      "issue": 220
+    },
+    {
+      "url": "https://x.com/FerozRiaz79158/status/2119953700475040136",
+      "account": "FerozRiaz79158",
+      "planOrModel": "ChatGPT Pro 500 × Codex/Work",
+      "tokens": null,
+      "percent": "Weekly Codex/Work 100% in 2.5d; Chats 38.9%; Unknown 25.6%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "计划档+燃烧速度+分项%；缺绝对 token；账号极新",
+      "issue": 221
+    },
+    {
+      "url": "https://x.com/Flycap316/status/2119904608784994426",
+      "account": "Flycap316",
+      "planOrModel": "Cursor $60/mo (plan tier TBD)",
+      "tokens": null,
+      "percent": "Weekly 100% in ~6h after Thu reset; later 0% after goodwill; on-demand $10.25/$10",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "价位+%燃烧+on-demand 美元；缺绝对 token",
+      "issue": 222
+    }
+  ],
+  "discardedExamples": [
+    {
+      "url": "https://x.com/GlobalGrails/status/2119957714465919051",
+      "reason": "Low：Premium→Super「两天烧光」口述，无硬 token/%"
+    },
+    {
+      "url": "https://x.com/QcMcleod/status/2119925349840486890",
+      "reason": "Low：Fable 5h 14m38s 打满吐槽，无绝对 token 与计划档"
+    },
+    {
+      "url": "https://x.com/lavienangelrose/status/2119960200929259833",
+      "reason": "Low：账号共享转卖营销"
+    },
+    {
+      "url": "https://x.com/promptabuser/status/2119923296816787862",
+      "reason": "Low：Kimi「crazy amount」无计量"
+    },
+    {
+      "url": "https://x.com/NewsGurus/status/2119907518096998652",
+      "reason": "旁证保留在 #222：Ultra 2% only，无绝对 token，不单开"
+    }
+  ]
+}

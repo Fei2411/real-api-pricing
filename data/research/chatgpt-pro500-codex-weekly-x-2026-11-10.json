@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-11-10",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 221,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "ChatGPT Pro 500：2.5 天打满 Weekly Codex/Work 100%；Chats/Unknown 分项口述。无截图。",
+  "items": [
+    {
+      "id": "x-FerozRiaz79158-pro500-2p5d-100pct",
+      "confidence": "Medium",
+      "planId": "chatgpt_pro_500",
+      "model": "Codex/Work (unspecified)",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/FerozRiaz79158/status/2119953700475040136",
+        "account": "FerozRiaz79158",
+        "createdAt": "2026-11-10T00:42:03Z",
+        "altUrl": "https://x.com/FerozRiaz79158/status/2119950642613543405"
+      },
+      "observed": {
+        "purchaseClaim": "Pro 500 on 6 Nov 2026",
+        "weeklyCodexWork": {"percentUsed": 100, "daysToHit": 2.5},
+        "usagePageBreakdownOral": {"chatsPct": 38.9, "unknownPct": 25.6, "pageSaysChatsExcluded": true},
+        "hasScreenshot": false
+      },
+      "gaps": ["无绝对 token", "账号极新 followers=0", "Chats 是否计入官方口径矛盾"]
+    }
+  ],
+  "relatedFiles": ["x-scan-2026-11-10.json"]
+}
