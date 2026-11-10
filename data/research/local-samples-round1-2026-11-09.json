@@ -143,7 +143,12 @@
         "thisStandardLoadMonthOverAdopted": 0.99,
         "notASolSample": "8.604 亿/月与 8.70 亿只差约 1%，但分子混有 codex-auto-review 和 terra，不能当成第二条纯 Sol 百分点并进 31pp。"
       },
-      "adopted": "chatgpt_plus × gpt-6.1-sol 8.70→8.09 亿/月。旧段 $13.2824/31pp 与本窗 API $25.77/67pp 按百分点合并。不把旧段换成新窗，也不把 Sol 的 $23.157456 单独除以 67%。Pro 5x/20x 不派生。"
+      "adopted": "chatgpt_plus × gpt-6.1-sol 8.70→12.48 亿/月。旧 31pp / 8.70 亿不入权。两条新周读数等权：67% used 整周标准负载 2.151 亿、$38.47；日志 6 点 65%→71% 标准负载 4.08 亿、$73.17。中点周池 3.12 亿、$55.82 ×4 周 = 12.48 亿/月。Pro 5x/20x 不派生。",
+      "newWeekReadings": [
+        {"label": "full week at 67% used", "standardLoadYi": 2.151, "apiUsd": 38.47},
+        {"label": "6 logged points, 65% to 71%", "standardLoadYi": 4.08, "apiUsd": 73.17}
+      ],
+      "midpoint": {"weeklyStandardLoadYi": 3.12, "weeklyApiUsd": 55.82, "monthlyYi": 12.48}
     },
     {
       "id": "claude-pro-opus55-5h-2026-11-07",

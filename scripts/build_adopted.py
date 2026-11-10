@@ -414,16 +414,32 @@ def chatgpt_luna6_raw_monthly_yi() -> float:
     )
 
 
+# 两条新周读数等权。旧 31pp / 8.70 亿不入权。
+# 标准负载亿数是已经给出的周池，不再除以 $0.197。
+CHATGPT_PLUS_SOL61_NEW_WEEKS = (
+    {"standard_load_yi": 2.151, "api_usd": 38.47},  # 整周按 67% used 外推
+    {"standard_load_yi": 4.08, "api_usd": 73.17},   # 日志 6 点，65%→71%
+)
+
+
+def chatgpt_sol61_weekly_standard_load_yi() -> float:
+    vals = [w["standard_load_yi"] for w in CHATGPT_PLUS_SOL61_NEW_WEEKS]
+    return round(sum(vals) / len(vals), 2)
+
+
+def chatgpt_sol61_weekly_api_usd() -> float:
+    vals = [w["api_usd"] for w in CHATGPT_PLUS_SOL61_NEW_WEEKS]
+    return round(sum(vals) / len(vals), 2)
+
+
 def chatgpt_sol61_monthly_yi() -> float:
-    # （2026-09-30 纯 Sol 段 worth + 2026-11-09 共享周条 API worth）÷（31 + 67 个百分点）
-    #   ×100 ×4周 ÷ 标准档 $0.197/MTok。新窗单独不替换旧段。
-    old = worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST)
-    worth_per_pp = (old + CHATGPT_PLUS_SOL61_WEEK_20261109_WORTH_USD) / (
-        CHATGPT_PLUS_SOL61_USED_FRACTION * 100 + CHATGPT_PLUS_SOL61_WEEK_20261109_PP)
-    return round(
-        worth_per_pp * 100 * MONTH_WEEKS / blended(*GPT61_SOL_LIST) * 1e6 / YI,
-        2,
-    )
+    # 周标准负载中点 × 4 周
+    return round(chatgpt_sol61_weekly_standard_load_yi() * MONTH_WEEKS, 2)
+
+
+assert chatgpt_sol61_weekly_standard_load_yi() == 3.12
+assert chatgpt_sol61_weekly_api_usd() == 55.82
+assert chatgpt_sol61_monthly_yi() == 12.48
 
 
 def chatgpt_sol61_raw_monthly_yi() -> float:
@@ -1332,7 +1348,7 @@ SUBS = [
     # GPT-6 Luna（9/22 新发）—— 维护者Plus账号本机Codex新一周周窗直测；round2（97%→91%，effort=max）取代 round1；只挂Plus，Pro 5x/20x不派生（沿Sol裁定）
     ("chatgpt_plus", "ChatGPT Plus", 20, "USD", "gpt-6-luna", chatgpt_luna6_monthly_yi(), "high", "维护者本机Codex实测（effort=max）：新一周窗09-27 22:09 97%→09-28 20:44 91%增量全为gpt-6-luna total 137,648,446 tokens（input 3,129,683/output 757,355含reasoning 471,268/cache_read 133,761,408，hit 97.71%）；chatgpt-gpt6luna-plus-round2-2026-09-28.json", f"91.77→{chatgpt_luna6_monthly_yi():g}亿（2026-09-30 裁定带分项实测统一折算）：段 worth ${worth_usd(CHATGPT_PLUS_LUNA6_SEGMENT, GPT6_LUNA_LIST):.4f}（cache 133.76M×$0.01＋入3.13M×$0.1＋出0.76M×$0.5）÷6%×4周＝${worth_usd(CHATGPT_PLUS_LUNA6_SEGMENT, GPT6_LUNA_LIST)/0.06*4:.2f} ÷标准档混合价${blended(*GPT6_LUNA_LIST):.4f}/MTok；raw 口径 {chatgpt_luna6_raw_monthly_yi():g} 留作对照。以下为原采用决策——44.05→{chatgpt_luna6_raw_monthly_yi():g}亿：137,648,446÷6%×4周（原 raw 口径）；面板整数%读数Δpp5~7折算口径对应78.88~110.44亿（raw 口径78.66~110.12）；本周22.94M tok/pp≈round1合并样本11.01M的2.08×（standard段10.20M的2.25×），两侧取整区间不重叠，判为周池放大或effort计权变化（本周max、round1未记effort，两因果链不可区分）而非噪声；裁定新一周分开记，round1 44.05亿留作对照不合并不平均；段内gpt-5.6-luna累计205,934,189、6sol/astra均未动，6pp全归6-luna；Pro 5x/20x不派生（沿Sol裁定）；榜分沿用scores-gpt6luna-round1-2026-09-26.json"),
     # GPT-6.1 Sol —— 维护者Plus账号本机Codex周窗直测（剩余81%→50%，31pp，round1~round3三段拼合）；只挂Plus，Pro 5x/20x不派生（沿Sol裁定）；暂无榜分
-    ("chatgpt_plus", "ChatGPT Plus", 20, "USD", "gpt-6.1-sol", chatgpt_sol61_monthly_yi(), "high", "维护者本机Codex实测：周窗剩余81%→50%（31pp）整段 gpt-6.1-sol total 55,532,850 tokens（input 2,742,389/cache_read 52,536,064/cache_write 0/output 254,397含reasoning 72,105，hit 95.04%），与 2026-11-09 周窗 67% used 的全部 Plus 模型 API $25.77 按百分点合并；chatgpt-gpt61sol-plus-round1/round2/round3-2026-09-30.json；local-samples-round1-2026-11-09.json；workload-conversion-round1-2026-09-30.json", f"8.70→{chatgpt_sol61_monthly_yi():g}亿（2026-11-10，标准档）：2026-09-30 纯 Sol 段 worth ${worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST):.4f}/31pp 与 2026-11-09 共享周条 API ${CHATGPT_PLUS_SOL61_WEEK_20261109_WORTH_USD:.2f}/67pp 按百分点合并＝${(worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST)+CHATGPT_PLUS_SOL61_WEEK_20261109_WORTH_USD)/(CHATGPT_PLUS_SOL61_USED_FRACTION*100+CHATGPT_PLUS_SOL61_WEEK_20261109_PP):.5f}/pp → 月 ${(worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST)+CHATGPT_PLUS_SOL61_WEEK_20261109_WORTH_USD)/(CHATGPT_PLUS_SOL61_USED_FRACTION*100+CHATGPT_PLUS_SOL61_WEEK_20261109_PP)*100*MONTH_WEEKS:.2f} ÷标准档${blended(*GPT61_SOL_LIST):.3f}/MTok。67pp 是 Plus 周条不是 Sol 独占，分子用整窗 API（Sol $23.157456 在其中），不把旧段换成新窗。不采：新窗单独 $25.77/67%×4周÷$0.197＝7.81亿；误把 Sol $23.157456 除以 67%＝7.02亿。Pro 5x/20x 不派生。证据：local-samples-round1-2026-11-09.json。以下为原决策——7.75→8.7亿（2026-09-30 裁定带分项实测统一折算，并入第三段60%→50%后整体重算）：段 worth ${worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST):.4f}（cache 52.54M×$0.10＋入2.74M×$2＋出0.25M×$10）÷31%×4周＝${worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST)/0.31*4:.2f} ÷标准档混合价${blended(*GPT61_SOL_LIST):.3f}/MTok；GPT-6.1 Sol 官方价 $0.10/$2/$10（learn.chatgpt.com credits 2.5/50/250 ÷25，cached=输入5%，取代先按 6-Sol $0.2 假设的 8.96亿；若仍按 6-Sol 价为 8.14亿留作对照）；raw 口径 {chatgpt_sol61_raw_monthly_yi():g} 留作对照。；疑点（2026-10-01 裁定先记录、按整段 81%→50% 采用）：第三段 60%→50% 每 1% $0.330，比前两段 $0.476/$0.473 低约 30%，10pp 整数读数取整（约 ±10%）不足以解释，原因未明。缓存读价经2026-10-01 确认：GPT-6.1 Sol $0.10、GPT-6 Sol $0.20。原采用决策——新增{chatgpt_sol61_raw_monthly_yi():g}亿：整段55,532,850÷31%×4周（=81%→65%段30,109,568÷16pp + 65%→60%段10,562,908÷5pp + 60%→50%段14,860,374÷10pp，三段边界拼合且分量逐项吻合）；面板整数%读数Δpp30~32折算口径对应8.43~8.99亿；截图标题82%/32pp起始读数经更正为81%；按6.1官方credits档反推周池1,071cr（$42.85），linux.do观察Plus约3,426cr/周与Pro20x同池Sol-worth÷20更接近5.6等价费率下的$119.6/周——订阅内计费率或池口径差异记入不确定性；分段密度（6.1价）：seg1 $0.476/pp、seg2 $0.473/pp、seg3 $0.330/pp；Pro 5x/20x不派生（沿Sol裁定）；暂无榜分，有分后补supplement"),
+    ("chatgpt_plus", "ChatGPT Plus", 20, "USD", "gpt-6.1-sol", chatgpt_sol61_monthly_yi(), "high", "维护者本机 Codex，2026-11-09 周窗两条读数等权中点（旧 31pp 段不入权）：整周 67% used 标准负载 2.151 亿、$38.47；日志 6 点 65%→71% 标准负载 4.08 亿、$73.17；local-samples-round1-2026-11-09.json", f"8.70→{chatgpt_sol61_monthly_yi():g}亿（2026-11-10）：两条新周读数等权中点，旧 31pp / 8.70 亿不入权。整周按 67% used：标准负载 2.151 亿、$38.47；日志 6 点 65%→71%：标准负载 4.08 亿、$73.17。中点周池 {chatgpt_sol61_weekly_standard_load_yi():g} 亿、${chatgpt_sol61_weekly_api_usd():.2f} ×{MONTH_WEEKS:g}周＝{chatgpt_sol61_monthly_yi():g} 亿/月。不采：旧 31pp 与 $25.77/67pp 合并的 8.09 亿。Pro 5x/20x 不派生。证据：local-samples-round1-2026-11-09.json。以下为原决策——7.75→8.7亿（2026-09-30 裁定带分项实测统一折算，并入第三段60%→50%后整体重算）：段 worth ${worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST):.4f}（cache 52.54M×$0.10＋入2.74M×$2＋出0.25M×$10）÷31%×4周＝${worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST)/0.31*4:.2f} ÷标准档混合价${blended(*GPT61_SOL_LIST):.3f}/MTok；GPT-6.1 Sol 官方价 $0.10/$2/$10（learn.chatgpt.com credits 2.5/50/250 ÷25，cached=输入5%，取代先按 6-Sol $0.2 假设的 8.96亿；若仍按 6-Sol 价为 8.14亿留作对照）；raw 口径 {chatgpt_sol61_raw_monthly_yi():g} 留作对照。；疑点（2026-10-01 裁定先记录、按整段 81%→50% 采用）：第三段 60%→50% 每 1% $0.330，比前两段 $0.476/$0.473 低约 30%，10pp 整数读数取整（约 ±10%）不足以解释，原因未明。缓存读价经2026-10-01 确认：GPT-6.1 Sol $0.10、GPT-6 Sol $0.20。原采用决策——新增{chatgpt_sol61_raw_monthly_yi():g}亿：整段55,532,850÷31%×4周（=81%→65%段30,109,568÷16pp + 65%→60%段10,562,908÷5pp + 60%→50%段14,860,374÷10pp，三段边界拼合且分量逐项吻合）；面板整数%读数Δpp30~32折算口径对应8.43~8.99亿；截图标题82%/32pp起始读数经更正为81%；按6.1官方credits档反推周池1,071cr（$42.85），linux.do观察Plus约3,426cr/周与Pro20x同池Sol-worth÷20更接近5.6等价费率下的$119.6/周——订阅内计费率或池口径差异记入不确定性；分段密度（6.1价）：seg1 $0.476/pp、seg2 $0.473/pp、seg3 $0.330/pp；Pro 5x/20x不派生（沿Sol裁定）；暂无榜分，有分后补supplement"),
     # Pro20x Astra —— round12 因三源分歧2.7×暂不挂点；round13 维护者转交的同框批次（g5a/g8）+ sdmat 使 8 亿簇达 5 条独立来源，裁决收敛
     ("chatgpt_pro_20x", "ChatGPT Pro 20x", 200, "USD", "gpt-6-astra", CHATGPT_PRO20X_ASTRA_MONTHLY_YI, "medium", "8条实测源加权：Observatory 8.53、round10截图13.8、round13同框7.52、round14维护者面板10.0、msg7086 8.07、round14图4(2/3周)8.18、图2自述9.25、图3后台10.3亿/周；chatgpt-astra-round12/13/14", f"新增{CHATGPT_PRO20X_ASTRA_MONTHLY_YI:g}亿：周池{CHATGPT_PRO20X_ASTRA_WEEK_YI:g}亿×{MONTH_WEEKS:g}周——实测源按验证等级加权（面板同框/维护者面板/连续序列×3、自述份额×2、社区口述×1），round10的10%与档位经确认由不采改为入权；round14新口径：周池≈$1200~1500 list-worth（Astra），同池Sol $2200~2500，内部计权对Astra惩罚~1.9×；维护者自测≈32亿/月与lichengzhe网关21~23亿按裁定不入权，纯口述与仅下限源不进均值；隐含权重≈{CHATGPT_PRO20X_SOL_MONTHLY_YI/4/CHATGPT_PRO20X_ASTRA_WEEK_YI:.2f}×Sol；同源真实测量仍散布6.8~15.6亿/周，账号间池子可能本就不同，此值为加权中心而非普适常数；未折算：八源加权、多数来源无 token 分项"),
     # Devin —— 维护者Max账号本周87pt近满周段astra单列反推（305M tokens/667 calls）；swe-2-max等免费不占额度，Max官方为周池无日上限
@@ -1644,7 +1660,7 @@ DATA_DATES = {
     ("chatgpt_plus", "gpt-6-astra"): ("2026-09-11", "sample"),
     ("chatgpt_plus", "gpt-6-sol"): ("2026-09-24", "sample"),
     ("chatgpt_plus", "gpt-6-luna"): ("2026-09-27~2026-09-28", "sample"),
-    ("chatgpt_plus", "gpt-6.1-sol"): ("2026-09-30~2026-11-09", "sample"),
+    ("chatgpt_plus", "gpt-6.1-sol"): ("2026-11-09", "sample"),
     ("chatgpt_pro_20x", "gpt-6-astra"): ("2026-09-07~2026-09-21", "sample"),
     ("devin_max", "gpt-6-astra"): ("2026-09-14", "sample"),
     ("devin_max", "claude-opus-5.5"): ("2026-09-23", "sample"),
