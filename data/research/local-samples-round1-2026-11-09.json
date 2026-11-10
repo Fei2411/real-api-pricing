@@ -127,7 +127,8 @@
         "apiUsdUnrounded": 38.46268656716418,
         "standardLoadYi": 2.151,
         "standardLoadMonthYiIfSaturated": 8.604,
-        "standardLoadNote": "2.151 亿是基线对窗口内全部 Plus 模型做周 ÷ 0.67 的标准负载，不是从 Sol 的 $23.16 单独除以 $0.197 得到的。只折 Sol：$23.157456 / $0.197 × 1e6 = 117,550,540（1.176 亿），这是 67% 处的 Sol，不是整周。"
+        "standardLoadNote": "2.151 亿是基线对窗口内全部 Plus 模型做周 ÷ 0.67 的标准负载，不是从 Sol 的 $23.16 单独除以 $0.197 得到的。只折 Sol：$23.157456 / $0.197 × 1e6 = 117,550,540（1.176 亿），这是 67% 处的 Sol，不是整周。",
+        "adoption": "discarded; not an input. The full-week 2.151亿 / $38.47 extrapolation is not averaged into chatgpt_plus × gpt-6.1-sol."
       },
       "falseSolOnlyExtrapolation": {
         "weekWorthUsd": 34.56,
@@ -143,12 +144,13 @@
         "thisStandardLoadMonthOverAdopted": 0.99,
         "notASolSample": "8.604 亿/月与 8.70 亿只差约 1%，但分子混有 codex-auto-review 和 terra，不能当成第二条纯 Sol 百分点并进 31pp。"
       },
-      "adopted": "chatgpt_plus × gpt-6.1-sol 8.70→12.48 亿/月。旧 31pp / 8.70 亿不入权。两条新周读数等权：67% used 整周标准负载 2.151 亿、$38.47；日志 6 点 65%→71% 标准负载 4.08 亿、$73.17。中点周池 3.12 亿、$55.82 ×4 周 = 12.48 亿/月。Pro 5x/20x 不派生。",
+      "adopted": "chatgpt_plus × gpt-6.1-sol 8.70→15.16 亿/月。旧 31pp / 8.70 亿不入权。整周 67% used 外推 2.151 亿 / $38.47 已丢弃，不是输入。只平均两条标准负载周读数：日志 6 点 65%→71% 为 4.08 亿、$73.17；7 点下降为 3.50 亿、$62.71。中点周池 3.79 亿、$67.94 ×4 周 = 15.16 亿/月，$20/15.16亿 token = $0.013192612/MTok。Pro 5x/20x 不派生。",
+      "discardedReading": {"label": "full week at 67% used", "standardLoadYi": 2.151, "apiUsd": 38.47, "reason": "not an input"},
       "newWeekReadings": [
-        {"label": "full week at 67% used", "standardLoadYi": 2.151, "apiUsd": 38.47},
-        {"label": "6 logged points, 65% to 71%", "standardLoadYi": 4.08, "apiUsd": 73.17}
+        {"label": "6 logged points, 65% to 71%", "standardLoadYi": 4.08, "apiUsd": 73.17},
+        {"label": "7-point drop", "standardLoadYi": 3.50, "apiUsd": 62.71}
       ],
-      "midpoint": {"weeklyStandardLoadYi": 3.12, "weeklyApiUsd": 55.82, "monthlyYi": 12.48}
+      "midpoint": {"weeklyStandardLoadYi": 3.79, "weeklyApiUsd": 67.94, "monthlyYi": 15.16, "usdPerMtok": 0.013192612}
     },
     {
       "id": "claude-pro-opus55-5h-2026-11-07",

@@ -63,14 +63,14 @@ No.  Plan                                   Monthly fee             Served model
 53   Ollama Pro                             USD 20                  GLM 5.3 Flash                 1.6973              0.01178   medium
 54   MiniMax M Plan Go (CN)                 CNY 49.0                MiniMax M3.1 Flash Preview    1.598               0.00452   medium
 55   MiniMax M Plan Go (CN Annual)          CNY 40.833333333333336  MiniMax M3.1 Flash Preview    1.598               0.00377   low
-56   OpenCode Go                            USD 10                  Hy3                           1.487               0.00672   medium
-57   OpenCode Go                            USD 10                  Qwen3.8 Flash                 1.3876              0.00721   medium
-58   Command Code GOAT                      USD 10                  GPT-6 Luna                    1.3605              0.00735   medium
-59   Command Code GOAT                      USD 10                  Claude Haiku 5.5              1.3605              0.00735   medium
-60   Ollama Pro                             USD 20                  DeepSeek V4 Pro               1.2568              0.01591   medium
-61   GLM Coding Lite (v3 ¥118) Off-peak     CNY 118                 GLM 5.3 Flash                 1.249               0.01394   high
-62   GLM Coding Lite (v2 ¥49) Off-peak      CNY 49                  GLM 5.3 Flash                 1.249               0.00579   high
-63   ChatGPT Plus                           USD 20                  GPT-6.1 Sol                   1.248               0.01603   high
+56   ChatGPT Plus                           USD 20                  GPT-6.1 Sol                   1.516               0.01319   high
+57   OpenCode Go                            USD 10                  Hy3                           1.487               0.00672   medium
+58   OpenCode Go                            USD 10                  Qwen3.8 Flash                 1.3876              0.00721   medium
+59   Command Code GOAT                      USD 10                  GPT-6 Luna                    1.3605              0.00735   medium
+60   Command Code GOAT                      USD 10                  Claude Haiku 5.5              1.3605              0.00735   medium
+61   Ollama Pro                             USD 20                  DeepSeek V4 Pro               1.2568              0.01591   medium
+62   GLM Coding Lite (v3 ¥118) Off-peak     CNY 118                 GLM 5.3 Flash                 1.249               0.01394   high
+63   GLM Coding Lite (v2 ¥49) Off-peak      CNY 49                  GLM 5.3 Flash                 1.249               0.00579   high
 64   GLM Coding Pro (v2 ¥149) Peak          CNY 149                 GLM 5.3                       1.236               0.01778   high
 65   Cursor Pro (Standard)                  USD 20                  Composer 2.5                  1.2126              0.01649   medium
 66   ChatGPT Plus                           USD 20                  GPT 5.6 Terra                 1.1915              0.01679   medium

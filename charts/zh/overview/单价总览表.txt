@@ -146,27 +146,27 @@
 137   Step Plan Plus (¥99)                CNY 99                  Step 5 Preview                11.327      0.01289  high
 138   MiniMax Token Plan Plus (Global)    USD 22                  MiniMax M3                    17          0.01294  high
 139   MiniMax Token Plan Plus (Global)    USD 22                  MiniMax M2.7                  17          0.01294  medium
-140   MiniMax Token Plan Ultra (Global)   USD 132                 MiniMax M3                    98          0.01347  high
-141   MiMo Token Plan Pro 夜间0.8×        ¥329（国际 $50）        MiMo V2.6 Pro                 36.75       0.01361  medium
-142   MiMo Token Plan Pro 夜间0.8×        ¥329（国际 $50）        MiMo V2.5 Pro                 36.75       0.01361  medium
-143   GLM Coding Lite (v3 ¥118) 闲时      CNY 118                 GLM 5.3 Flash                 12.49       0.01394  high
-144   GLM Coding Pro (v3 ¥538) 中间值     CNY 538                 GLM 5.3 Flash                 56.19       0.01412  high
-145   Droid Max                           USD 200                 Gemini 3.8 Flash              134.72      0.01485  medium
-146   Droid Max                           USD 200                 Gemini 3.7 Flash              134.72      0.01485  medium
-147   MiMo Token Plan Standard 夜间0.8×   ¥99（国际 $16）         MiMo V2.6 Pro                 10.64       0.01504  medium
-148   MiMo Token Plan Standard 夜间0.8×   ¥99（国际 $16）         MiMo V2.5 Pro                 10.64       0.01504  medium
-149   MiMo Token Plan Lite 夜间0.8×       ¥39（国际 $6）          MiMo V2.6 Pro                 3.97        0.01511  medium
-150   MiMo Token Plan Lite 夜间0.8×       ¥39（国际 $6）          MiMo V2.5 Pro                 3.97        0.01511  medium
-151   Command Code GOAT                   USD 10                  GPT 5.6 Luna                  6.579       0.0152   medium
-152   Command Code GOAT                   USD 10                  MiniMax M3                    6.555       0.01526  medium
-153   ChatGPT Pro 20x                     USD 200                 GPT 5.6 Sol                   129.02      0.0155   high
-154   DeepSeek V4 Flash API 闲时          按量计费                DeepSeek V4 Flash             -           0.01559  high
-155   MiMo Token Plan Max 日间            ¥659（国际 $100）       MiMo V2.6 Pro                 63.44       0.01576  medium
-156   MiMo Token Plan Max 日间            ¥659（国际 $100）       MiMo V2.5 Pro                 63.44       0.01576  medium
-157   Ollama Pro                          USD 20                  DeepSeek V4 Pro               12.568      0.01591  medium
-158   Ollama Max                          USD 100                 DeepSeek V4 Pro               62.84       0.01591  medium
-159   GLM Coding Max (v2 ¥469) 中间值     CNY 469                 GLM 5.3                       43.27       0.01599  high
-160   ChatGPT Plus                        USD 20                  GPT-6.1 Sol                   12.48       0.01603  high
+140   ChatGPT Plus                        USD 20                  GPT-6.1 Sol                   15.16       0.01319  high
+141   MiniMax Token Plan Ultra (Global)   USD 132                 MiniMax M3                    98          0.01347  high
+142   MiMo Token Plan Pro 夜间0.8×        ¥329（国际 $50）        MiMo V2.6 Pro                 36.75       0.01361  medium
+143   MiMo Token Plan Pro 夜间0.8×        ¥329（国际 $50）        MiMo V2.5 Pro                 36.75       0.01361  medium
+144   GLM Coding Lite (v3 ¥118) 闲时      CNY 118                 GLM 5.3 Flash                 12.49       0.01394  high
+145   GLM Coding Pro (v3 ¥538) 中间值     CNY 538                 GLM 5.3 Flash                 56.19       0.01412  high
+146   Droid Max                           USD 200                 Gemini 3.8 Flash              134.72      0.01485  medium
+147   Droid Max                           USD 200                 Gemini 3.7 Flash              134.72      0.01485  medium
+148   MiMo Token Plan Standard 夜间0.8×   ¥99（国际 $16）         MiMo V2.6 Pro                 10.64       0.01504  medium
+149   MiMo Token Plan Standard 夜间0.8×   ¥99（国际 $16）         MiMo V2.5 Pro                 10.64       0.01504  medium
+150   MiMo Token Plan Lite 夜间0.8×       ¥39（国际 $6）          MiMo V2.6 Pro                 3.97        0.01511  medium
+151   MiMo Token Plan Lite 夜间0.8×       ¥39（国际 $6）          MiMo V2.5 Pro                 3.97        0.01511  medium
+152   Command Code GOAT                   USD 10                  GPT 5.6 Luna                  6.579       0.0152   medium
+153   Command Code GOAT                   USD 10                  MiniMax M3                    6.555       0.01526  medium
+154   ChatGPT Pro 20x                     USD 200                 GPT 5.6 Sol                   129.02      0.0155   high
+155   DeepSeek V4 Flash API 闲时          按量计费                DeepSeek V4 Flash             -           0.01559  high
+156   MiMo Token Plan Max 日间            ¥659（国际 $100）       MiMo V2.6 Pro                 63.44       0.01576  medium
+157   MiMo Token Plan Max 日间            ¥659（国际 $100）       MiMo V2.5 Pro                 63.44       0.01576  medium
+158   Ollama Pro                          USD 20                  DeepSeek V4 Pro               12.568      0.01591  medium
+159   Ollama Max                          USD 100                 DeepSeek V4 Pro               62.84       0.01591  medium
+160   GLM Coding Max (v2 ¥469) 中间值     CNY 469                 GLM 5.3                       43.27       0.01599  high
 161   ChatGPT Pro 10x                     USD 100                 GPT 5.6 Sol                   61.6        0.01623  medium
 162   Cursor Pro (Standard)               USD 20                  Composer 2.5                  12.126      0.01649  medium
 163   ChatGPT Plus                        USD 20                  GPT 5.6 Terra                 11.915      0.01679  medium

@@ -146,27 +146,27 @@ No.  Plan                                   Monthly fee             Served model
 137  Step Plan Plus (¥99)                   CNY 99                  Step 5 Preview                1.1327              0.01289   high
 138  MiniMax Token Plan Plus (Global)       USD 22                  MiniMax M3                    1.7                 0.01294   high
 139  MiniMax Token Plan Plus (Global)       USD 22                  MiniMax M2.7                  1.7                 0.01294   medium
-140  MiniMax Token Plan Ultra (Global)      USD 132                 MiniMax M3                    9.8                 0.01347   high
-141  MiMo Token Plan Pro (Night 0.8x)       $50 · CN ¥329           MiMo V2.6 Pro                 3.675               0.01361   medium
-142  MiMo Token Plan Pro (Night 0.8x)       $50 · CN ¥329           MiMo V2.5 Pro                 3.675               0.01361   medium
-143  GLM Coding Lite (v3 ¥118) Off-peak     CNY 118                 GLM 5.3 Flash                 1.249               0.01394   high
-144  GLM Coding Pro (v3 ¥538) Midpoint      CNY 538                 GLM 5.3 Flash                 5.619               0.01412   high
-145  Droid Max                              USD 200                 Gemini 3.8 Flash              13.472              0.01485   medium
-146  Droid Max                              USD 200                 Gemini 3.7 Flash              13.472              0.01485   medium
-147  MiMo Token Plan Standard (Night 0.8x)  $16 · CN ¥99            MiMo V2.6 Pro                 1.064               0.01504   medium
-148  MiMo Token Plan Standard (Night 0.8x)  $16 · CN ¥99            MiMo V2.5 Pro                 1.064               0.01504   medium
-149  MiMo Token Plan Lite (Night 0.8x)      $6 · CN ¥39             MiMo V2.6 Pro                 0.397               0.01511   medium
-150  MiMo Token Plan Lite (Night 0.8x)      $6 · CN ¥39             MiMo V2.5 Pro                 0.397               0.01511   medium
-151  Command Code GOAT                      USD 10                  GPT 5.6 Luna                  0.6579              0.0152    medium
-152  Command Code GOAT                      USD 10                  MiniMax M3                    0.6555              0.01526   medium
-153  ChatGPT Pro 20x                        USD 200                 GPT 5.6 Sol                   12.902              0.0155    high
-154  DeepSeek V4 Flash API Off-peak         Pay-as-you-go           DeepSeek V4 Flash             -                   0.01559   high
-155  MiMo Token Plan Max (Day)              $100 · CN ¥659          MiMo V2.6 Pro                 6.344               0.01576   medium
-156  MiMo Token Plan Max (Day)              $100 · CN ¥659          MiMo V2.5 Pro                 6.344               0.01576   medium
-157  Ollama Pro                             USD 20                  DeepSeek V4 Pro               1.2568              0.01591   medium
-158  Ollama Max                             USD 100                 DeepSeek V4 Pro               6.284               0.01591   medium
-159  GLM Coding Max (v2 ¥469) Midpoint      CNY 469                 GLM 5.3                       4.327               0.01599   high
-160  ChatGPT Plus                           USD 20                  GPT-6.1 Sol                   1.248               0.01603   high
+140  ChatGPT Plus                           USD 20                  GPT-6.1 Sol                   1.516               0.01319   high
+141  MiniMax Token Plan Ultra (Global)      USD 132                 MiniMax M3                    9.8                 0.01347   high
+142  MiMo Token Plan Pro (Night 0.8x)       $50 · CN ¥329           MiMo V2.6 Pro                 3.675               0.01361   medium
+143  MiMo Token Plan Pro (Night 0.8x)       $50 · CN ¥329           MiMo V2.5 Pro                 3.675               0.01361   medium
+144  GLM Coding Lite (v3 ¥118) Off-peak     CNY 118                 GLM 5.3 Flash                 1.249               0.01394   high
+145  GLM Coding Pro (v3 ¥538) Midpoint      CNY 538                 GLM 5.3 Flash                 5.619               0.01412   high
+146  Droid Max                              USD 200                 Gemini 3.8 Flash              13.472              0.01485   medium
+147  Droid Max                              USD 200                 Gemini 3.7 Flash              13.472              0.01485   medium
+148  MiMo Token Plan Standard (Night 0.8x)  $16 · CN ¥99            MiMo V2.6 Pro                 1.064               0.01504   medium
+149  MiMo Token Plan Standard (Night 0.8x)  $16 · CN ¥99            MiMo V2.5 Pro                 1.064               0.01504   medium
+150  MiMo Token Plan Lite (Night 0.8x)      $6 · CN ¥39             MiMo V2.6 Pro                 0.397               0.01511   medium
+151  MiMo Token Plan Lite (Night 0.8x)      $6 · CN ¥39             MiMo V2.5 Pro                 0.397               0.01511   medium
+152  Command Code GOAT                      USD 10                  GPT 5.6 Luna                  0.6579              0.0152    medium
+153  Command Code GOAT                      USD 10                  MiniMax M3                    0.6555              0.01526   medium
+154  ChatGPT Pro 20x                        USD 200                 GPT 5.6 Sol                   12.902              0.0155    high
+155  DeepSeek V4 Flash API Off-peak         Pay-as-you-go           DeepSeek V4 Flash             -                   0.01559   high
+156  MiMo Token Plan Max (Day)              $100 · CN ¥659          MiMo V2.6 Pro                 6.344               0.01576   medium
+157  MiMo Token Plan Max (Day)              $100 · CN ¥659          MiMo V2.5 Pro                 6.344               0.01576   medium
+158  Ollama Pro                             USD 20                  DeepSeek V4 Pro               1.2568              0.01591   medium
+159  Ollama Max                             USD 100                 DeepSeek V4 Pro               6.284               0.01591   medium
+160  GLM Coding Max (v2 ¥469) Midpoint      CNY 469                 GLM 5.3                       4.327               0.01599   high
 161  ChatGPT Pro 10x                        USD 100                 GPT 5.6 Sol                   6.16                0.01623   medium
 162  Cursor Pro (Standard)                  USD 20                  Composer 2.5                  1.2126              0.01649   medium
 163  ChatGPT Plus                           USD 20                  GPT 5.6 Terra                 1.1915              0.01679   medium

@@ -88,7 +88,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0021732044" data-score="37.256" data-x="1023.767" data-y="453.362" transform="translate(1023.767 453.362)"><title>GPT-6 Luna · Plus · $0.00217/MTok · 37.256 · highGPT-6 Luna (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.016025641" data-score="51.8333" data-x="766.852" data-y="323.541" transform="translate(766.852 323.541)"><title>GPT-6.1 Sol · Plus · $0.01603/MTok · 51.8333 · highGPT-6.1 Sol (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.013192612" data-score="51.8333" data-x="791.866" data-y="323.541" transform="translate(791.866 323.541)"><title>GPT-6.1 Sol · Plus · $0.01319/MTok · 51.8333 · highGPT-6.1 Sol (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.052465897" data-score="52.6737" data-x="614.351" data-y="316.057" transform="translate(614.351 316.057)"><title>GPT-6 Astra · Pro 20x · $0.05247/MTok · 52.6737 · mediumGPT-6 Astra (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
