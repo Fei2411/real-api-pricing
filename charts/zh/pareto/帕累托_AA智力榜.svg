@@ -88,7 +88,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0021732044" data-score="37.256" data-x="1023.767" data-y="453.362" transform="translate(1023.767 453.362)"><title>GPT-6 Luna · Plus · $0.00217/MTok · 37.256 · highGPT-6 Luna (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.022988506" data-score="51.8333" data-x="720.457" data-y="323.541" transform="translate(720.457 323.541)"><title>GPT-6.1 Sol · Plus · $0.02299/MTok · 51.8333 · highGPT-6.1 Sol (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.013192612" data-score="51.8333" data-x="791.866" data-y="323.541" transform="translate(791.866 323.541)"><title>GPT-6.1 Sol · Plus · $0.01319/MTok · 51.8333 · highGPT-6.1 Sol (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.052465897" data-score="52.6737" data-x="614.351" data-y="316.057" transform="translate(614.351 316.057)"><title>GPT-6 Astra · Pro 20x · $0.05247/MTok · 52.6737 · mediumGPT-6 Astra (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
@@ -146,7 +146,7 @@
 <rect x="-11" y="-11" width="22" height="22" rx="6" fill="#FFF" stroke="#CC5A2E" stroke-width="1.35"/>
 <circle r="4" fill="#CC5A2E"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0065487885" data-score="57.6224" data-x="881.925" data-y="271.985" transform="translate(881.925 271.985)"><title>Claude Opus 5.5 · Pro · $0.00655/MTok · 57.6224 · highClaude Opus 5.5 (max with fallback) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0065659882" data-score="57.6224" data-x="881.588" data-y="271.985" transform="translate(881.588 271.985)"><title>Claude Opus 5.5 · Pro · $0.00657/MTok · 57.6224 · highClaude Opus 5.5 (max with fallback) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#CC5A2E" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0099166997" data-score="57.6224" data-x="828.570" data-y="271.985" transform="translate(828.570 271.985)"><title>Claude Opus 5.5 · Team Premium · $0.00992/MTok · 57.6224 · lowClaude Opus 5.5 (max with fallback) · Exact served-model reference; quota-measurement effort is unverified.</title>
