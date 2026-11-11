@@ -1,0 +1,133 @@
+{
+  "scannedAt": "2026-11-11",
+  "window": {
+    "start": "2026-11-09T00:00:00Z",
+    "end": "2026-11-11T00:50:09Z"
+  },
+  "method": "Grok Bot built-in public X search_posts_all (namespace x); NOT user X plugin / Platform API quota",
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "snapshotLabel": "2026-11-10",
+    "note": "WebFetch 首页 Snapshot 显示 2026-11-10；相对扫描日（11-11 上海）滞后约 1 天，已从昨日所见的 2026-11-08 前移"
+  },
+  "queries": [
+    "Kimi (用量 OR 配额 OR 打满 OR 额度 OR 百分比) -is:retweet",
+    "(\"Kimi Code\" OR \"kimi code\" OR \"Kimi 199\" OR \"Kimi 会员\") (用量 OR 配额 OR 打满 OR 额度 OR token OR tokens) -is:retweet",
+    "(Claude OR Anthropic OR \"Claude Code\") (usage OR quota OR \"rate limit\" OR 用量 OR 配额 OR 打满 OR tokens) -is:retweet",
+    "Cursor (usage OR quota OR \"rate limit\" OR 用量 OR 配额 OR 打满 OR tokens OR requests) (Pro OR Ultra OR Business OR 订阅) -is:retweet",
+    "(Codex OR \"OpenAI Codex\") (usage OR quota OR pricing OR 用量 OR 配额 OR 打满 OR 定价) -is:retweet",
+    "(DeepSeek OR GLM OR MiniMax OR 智谱 OR 通义) (用量 OR 配额 OR 打满 OR 调价 OR 套餐 OR 额度) -is:retweet",
+    "(\"Reset for free\" OR \"full usage reset\" OR \"全额度重置\" OR \"免费全额度\") (Claude OR Anthropic) -is:retweet",
+    "(Cursor) (tokens OR token) (weekly OR 周 OR percent OR 99 OR 100) (Pro OR Ultra OR Pro+) -is:retweet"
+  ],
+  "counts": {
+    "high": 1,
+    "medium": 3,
+    "discardedLowApprox": 100
+  },
+  "relatedIssues": [
+    229,
+    230,
+    231,
+    232
+  ],
+  "retained": [
+    {
+      "url": "https://x.com/garyanderson/status/2120251476840710221",
+      "account": "garyanderson",
+      "planOrModel": "Cursor Pro+ $60/mo",
+      "tokens": "~396M / week included; ~153M one day; ~440M since 2026-10-16",
+      "percent": "weekly meter 99%",
+      "hasScreenshot": false,
+      "confidence": "High",
+      "why": "同帖同时有绝对 token + 周额度% + 计划价位；缺截图与分项绝对值；反推周池≈400M（不采用）",
+      "issue": 229
+    },
+    {
+      "url": "https://x.com/ClaudeDevs/status/2120275296637321476",
+      "account": "ClaudeDevs",
+      "planOrModel": "Claude Pro / Max / Ultra / Team",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "官方一次免费 full reset，all models and limits，截止 2026-12-10 14:00 PT；区别于 #220 的 Fable 重置卡",
+      "issue": 230
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "account": "Google official blog / @GoogleAI / @sundarpichai",
+      "planOrModel": "Gemini 4 Carbon API + Google AI Ultra",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "官方博客与 aistudio 定价页：$2/$10 至 2026-11-30，12/1 起 $4/$20；缓存 $0.10→$0.20；App/Antigravity 仅 Ultra；免费层无 Carbon",
+      "issue": 231,
+      "altUrls": [
+        "https://aistudio.google.com/docs/pricing",
+        "https://x.com/GoogleAI/status/2120187753329791341",
+        "https://x.com/sundarpichai/status/2120185896469496180",
+        "https://x.com/dotey/status/2120191790774960630"
+      ]
+    },
+    {
+      "url": "https://x.com/alibaba_cloud/status/2120016058908025262",
+      "account": "alibaba_cloud",
+      "planOrModel": "Alibaba / Qwen Cloud Token Plan Personal",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "官方 Credits 表与价目：国区 Lite 20k@¥39、Pro 200k@¥312；国际 Lite 20k@$6、Pro 200k@$43；自 2026-11-09 20:00 UTC+8；未折算成 token",
+      "issue": 232,
+      "altUrls": [
+        "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+        "https://www.qwencloud.com/benefits/tokenplan",
+        "https://x.com/ak12kpoot/status/2119961985030774970"
+      ]
+    }
+  ],
+  "discardedExamples": [
+    {
+      "url": "https://x.com/yalemm90/status/2120271963721695447",
+      "reason": "Low：Cursor Ultra「8 小时用掉 40%」口述，无绝对 token，语句不完整"
+    },
+    {
+      "url": "https://x.com/ya_man_Gd77209/status/2120097645473767501",
+      "reason": "Low：Codex Pro100 称周限制将重置、用量「不太掉」，无硬数字"
+    },
+    {
+      "url": "https://x.com/KOF97AI/status/2120317752003215701",
+      "reason": "Low：Google AI Ultra 5X「打满 5h 窗≈每天 14% 周额度」是推算口诀，非面板实测"
+    },
+    {
+      "url": "https://x.com/HiroyukiLawAka/status/2120314311738601892",
+      "reason": "已覆盖：Tibo Pro100=10×/200=20×/500=50× 已在 #215，本次无新重置发生"
+    },
+    {
+      "url": "https://x.com/takao_1991/status/2120201929494270132",
+      "reason": "Low：Kimi「新模型额度用地飞快」，无计量"
+    },
+    {
+      "url": "https://x.com/ZenHeartCL/status/2120288413203259838",
+      "reason": "Low：kimi claw「额度太抠了」，无数字"
+    },
+    {
+      "url": "https://x.com/nextterror/status/2120171023551328718",
+      "reason": "暂不单开：Qoder 每 1000 积分 token 产量表（自设 95% 缓存命中），非原厂订阅池实测；记扫描旁证"
+    },
+    {
+      "url": "https://x.com/divid_lu49394/status/2120301930786509222",
+      "reason": "Low/未核实：称 Cursor 订阅自带 OpenAI 模型 11/12 停服；账号像营销号，未在官方页核到，不收录"
+    },
+    {
+      "url": "https://x.com/tmacmax01/status/2120317058546295009",
+      "reason": "Low：学生福利汇总（Codex $100 积分等），营销向"
+    },
+    {
+      "url": "https://x.com/fastgridtrader/status/2120314770914156748",
+      "reason": "范围外：DeepSeek Flash 日费约 85 CNY，属 API/DS Bot 迁移，不记入本站订阅点"
+    }
+  ]
+}

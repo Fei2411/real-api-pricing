@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-11-11",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 230,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "ClaudeDevs 官方：Pro/Max/Ultra/Team 一次免费全额度重置（all models and limits），截止 2026-12-10 14:00 PT。区别于 #220 的 Fable 重置卡。",
+  "items": [
+    {
+      "id": "x-ClaudeDevs-full-reset-2026-12-10",
+      "confidence": "Medium",
+      "planId": "claude_pro_max_ultra_team",
+      "model": "all models",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ClaudeDevs/status/2120275296637321476",
+        "account": "ClaudeDevs",
+        "createdAt": "2026-11-10T21:59:58Z"
+      },
+      "observed": {
+        "offer": "one free full reset, across all models and limits",
+        "eligiblePlans": [
+          "Pro",
+          "Max",
+          "Ultra",
+          "Team"
+        ],
+        "deadline": "2026-12-10T14:00:00-08:00",
+        "activation": "Settings > Usage, or http://clau.de/reset; must be triggered by the user; expires if unused",
+        "reasonOfficial": "fixed a few small issues that used more limits than intended; Fable resets did little for users who had already hit weekly limits for all models",
+        "hasScreenshot": false,
+        "secondarySources": [
+          "https://x.com/LunaParker888/status/2120318070317273532"
+        ]
+      },
+      "gaps": [
+        "不是面板实测额度",
+        "clau.de/reset 未登录页未显示按钮文案",
+        "一次重置是否同时清 5h 窗与周池，以官帖 all limits 为准，待登录页确认"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-11.json"
+  ]
+}
