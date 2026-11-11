@@ -1,0 +1,760 @@
+{
+  "schema_version": 1,
+  "collected_at": "2026-11-09",
+  "observation_cutoff": "2026-11-08T16:00:00Z",
+  "statistical_window": {
+    "start": "2026-11-01T16:00:00Z",
+    "end": "2026-11-08T16:00:00Z",
+    "end_exclusive": true,
+    "label": "2026-11-02 00:00 inclusive through 2026-11-09 00:00 exclusive, Asia/Shanghai",
+    "timezone": "Asia/Shanghai"
+  },
+  "title": "Anonymous Magpie single-model weekly capacity, round2",
+  "series": {
+    "name": "magpie",
+    "round": 2,
+    "predecessor": "data/research/magpie-local-tokyo-round1-2026-10-21.json",
+    "predecessor_pull_request": "https://github.com/Fei2411/real-api-pricing/pull/130",
+    "naming_note": "The Magpie research series on main has only round1 (local + Tokyo, cutoff 2026-10-21). This file is round2. It is a different question: one subscription account, one model, 100% of the weekly quota, valued at official API rates for the observed cache mix."
+  },
+  "adoption_status": "Research-only, not adopted.",
+  "adoption_reason": "Conditional observational evidence for two anonymous accounts. Devin plan tier is not verified in the logs. Estimates are not summed across accounts and do not replace adopted rows. CONVENTIONS.md section 3 requires maintainer resolution before any adoption.",
+  "reference_repository": {
+    "url": "https://github.com/Fei2411/real-api-pricing",
+    "revision": "2599b7ad743a94b3ab6d4ff8cdb4d8359ee6943c",
+    "conventions": {
+      "updatedAt": "2026-11-08",
+      "project": "真实API定价",
+      "role": "定义当前采用、计算、绘图和公开发布共用的项目口径",
+      "formula": "订阅价 ÷ 用户实际能用到的月 token = 真实混合单价",
+      "usdPerCny": 6.7787,
+      "exchangeRate": {
+        "date": "2026-09-04",
+        "pair": "USD/CNY",
+        "units": "CNY per USD; legacy field usdPerCny stores this direction",
+        "kind": "人民币汇率中间价",
+        "labelZh": "中国外汇交易中心中间价，新华社转载",
+        "labelEn": "CFETS central parity, via Xinhua",
+        "source": "https://www.xinhuanet.com/20260904/4c1ce1cbf39d416997cb9c237d6f5024/c.html",
+        "evidence": "data/research/fx-caijing-round5-2026-09-05.json",
+        "previousRate": 7.2,
+        "note": "2026-09-05为周六，采用最近交易日9月4日中间价；非银行卡实际结算价。100美元=677.87人民币。"
+      },
+      "unmeteredPolicy": "订阅内明确不占额度、无并发上限的模型：真实单价记 0、显示为 ≈$0/MTok（分母无界，趋于 0 而非精确 0），X 轴以专用‘不计额度’刻度位表示、不进对数换算；参与前沿。促销口径必须标截止日并在到期后复核。",
+      "promotions": {
+        "devin_swe2": {
+          "startDate": "2026-09-10",
+          "endDate": "2026-10-31",
+          "labelZh": "SWE-2 促销：Pro/Max/Teams 不计额度",
+          "labelEn": "SWE-2 promo: unmetered on Pro/Max/Teams",
+          "endDateBasis": "2026-09-12 给定；官推仅写 for the next month",
+          "evidence": "data/research/devin-swe2-round1-2026-09-12.json"
+        }
+      },
+      "monthWeeks": 4,
+      "monthWeeksAlt": "30/7 只作灵敏度",
+      "tokenPolicy": "所有 token 一视同仁；美元额度和三段价统一按项目标准负载折算",
+      "standardTokenMix": {
+        "cache": 0.97,
+        "input": 0.025,
+        "output": 0.005,
+        "labelZh": "项目统一标准负载：缓存读取97% / 普通输入2.5% / 输出0.5%",
+        "labelEn": "Project standard workload: 97% cache reads / 2.5% fresh input / 0.5% output",
+        "note": "固定比较口径，不代表任何平台或用户的实际负载；三项合计100%。当前不单列cache write；厂商另收缓存写入费时，换算可能偏高估token。2026-09-23 由 97.5%/2.15%/0.35% 修订为本值：standard-token-mix-round2-2026-09-23.json 14样本审计（输出中位0.51%、输入中位2.79%、剔除网关池化96.89/2.57/0.54），裁定。"
+      },
+      "lowCacheTokenMix": {
+        "cache": 0.85,
+        "input": 0.145,
+        "output": 0.005,
+        "labelZh": "低缓存负载：缓存读取85% / 普通输入14.5% / 输出0.5%",
+        "labelEn": "Low-cache workload: 85% cache reads / 14.5% fresh input / 0.5% output",
+        "note": "2026-09-22 裁定的第二档统一负载，用于实测打不到标准 97% cache 的渠道（当前：Step 全系、Google——Gemini 实测 82.6% 属同族，2026-09-30 裁定其实测样本按标价折 worth 后用本档换算）。锚点：step-5-preview 本机实测 mix 79.0%/20.7%/0.34%（210.17M tokens，stepfun-step5-panel-round5-2026-09-21.json）与 Google AI Pro 实测 82.6%，统一取 85% 档；step5 采用值的 decision_note 内保留 79% 实测口径对照数。非cache部分输出占比 0.5% 跟随标准负载、余量归输入。2026-09-23 随标准档由 85%/14.65%/0.35% 修订（standard-token-mix-round2-2026-09-23.json）。"
+      },
+      "anthropicTokenMix": {
+        "cache": 0.97,
+        "cacheWrite": 0.025,
+        "output": 0.005,
+        "labelZh": "Anthropic 统一负载：缓存读97% / 缓存写2.5% / 输出0.5%",
+        "labelEn": "Anthropic workload: 97% cache reads / 2.5% cache writes / 0.5% output",
+        "note": "Anthropic 单独收缓存写入费，未命中缓存的输入几乎全部走缓存写（Devin 面板 input 0.001%/write 7.67%；MiaAI Claude Code 样本 input 0.14%/write 2.05%），故标准档的普通输入份额对 Anthropic 按 5 分钟缓存写入价计；份额与 standardTokenMix 联动（cacheWrite = standard.input）。2026-09-24 裁定。"
+      },
+      "sourcePriority": [
+        "维护者面板截图反推、受控打满实测、官方绝对token或积分表",
+        "本地日志/ccusage与同窗额度百分比",
+        "确认；若与多个独立来源冲突，必须公开冲突并重新拍板",
+        "官方美元/credits额度与三段价按项目统一标准负载换算",
+        "第三方综述和跨档假设仅作低置信旁证"
+      ]
+    }
+  },
+  "source_files": {
+    "aligned_evidence_csv": {
+      "path": "data/research/magpie-single-model-weekly-round2-2026-11-09-aligned-evidence.csv",
+      "sha256": "6a2aafda4b4a0166cd57aeaf9663eecf0c64197d9f4bdb70f3e001692575de44",
+      "bytes": 29255,
+      "rows": 338,
+      "time_basis": "UTC",
+      "model_ids": "Repository ids. Collector slug claude-opus-5-5 is stored as claude-opus-5.5; gemini-4-argon is unchanged."
+    },
+    "reviewed_inputs_not_committed": {
+      "single-model-weekly-capacity-medium.json": {
+        "sha256": "6cc22eacea2df1517fe39fd6d51a629dc2cb787542d7db3a4f73f79f46c35f77",
+        "bytes": 20953
+      },
+      "single-model-weekly-capacity-aligned-evidence.csv": {
+        "sha256": "94e0cb292000191b8bf688f8b21f76724ab588983035c474dbc73c1f4dce8357",
+        "bytes": 37640
+      },
+      "single-model-weekly-capacity-methodology.md": {
+        "sha256": "7b5cfbec96c6f0f3e9088a2aba5461564fbbcb55f9970d8ac87ccb20a3b8ef27",
+        "bytes": 8209
+      },
+      "single-model-weekly-capacity-privacy-audit.json": {
+        "sha256": "0df03afadf5c4d1ba772bec4297bfd28da34df1b279bd04019bd61208629836f",
+        "bytes": 2311
+      }
+    }
+  },
+  "collection": {
+    "account_identity": "A04 and A06 are anonymous labels for independent repeated measurements, not service account ids and not a pool to be added together. No identity map is exported.",
+    "tool": "Magpie aligned request log with supplied pure-model cluster endpoints",
+    "input_aligned_rows": 407,
+    "rows_in_public_csv": 338,
+    "positive_token_rows_in_reviewed_input": 388,
+    "quota_endpoint_source": "Supplied pure_model_clusters. Raw quota history is not part of this public file.",
+    "deduplication": "Do not collapse equal token vectors: absent request ids, equal values alone do not prove duplication.",
+    "counted_calls": "Positive-token Claude Opus 5.5 calls inside the selected contiguous pure-model intervals. Zero-token rows, including one A04 gemini-4-argon error row, are not capacity samples."
+  },
+  "qualification_policy": {
+    "version": "delta_sample_stability_v1",
+    "high": {
+      "delta_pp": 30,
+      "model_calls": 200,
+      "effective_segments": 4,
+      "weighted_cv": 0.25,
+      "leave_one_out_change": 0.15,
+      "rounding_ratio": 0.1
+    },
+    "medium": {
+      "delta_pp": 10,
+      "model_calls": 30,
+      "effective_segments": 1.5,
+      "weighted_cv": 0.5,
+      "leave_one_out_change": 0.35,
+      "rounding_ratio": 0.25
+    },
+    "gap_fraction_medium_cap": 0.25,
+    "direct_ratio_medium_cap": 0.05,
+    "direct_ratio_low_cap": 0.2,
+    "interpretation": "Local evidence rubric; thresholds are not vendor rules or confidence probabilities"
+  },
+  "methodology": {
+    "equation": "weekly_official_api_equivalent_usd = 100 * sum(sample official API value USD) / sum(delta percentage points)",
+    "unit": "USD per week for one anonymous account using only Claude Opus 5.5 until 100% of the weekly quota, at the observed cache mix",
+    "effective_segments": "(sum(delta_pp))^2 / sum(delta_pp^2), after merging contiguous pure-model runs",
+    "weighted_cv": "sqrt(sum(delta_pp * (run_value_per_100pp / pooled_value_per_100pp - 1)^2) / sum(delta_pp))",
+    "leave_one_out": "Maximum relative change in the pooled estimate after dropping one whole contiguous run. Undefined for a single run, which fails medium.",
+    "rounding": "Conservative 1pp uncertainty per merged run, divided by total delta. The published range is a sensitivity envelope from request-timestamp shifts of +/-120s and +/-300s and each run delta +/-1pp. It is not a statistical confidence interval.",
+    "rounding_sensitivity_is_confidence_interval": false,
+    "token_semantics": "Official Anthropic input_tokens exclude cache reads and cache creation. cache_write_5m and cache_write_1h are parts of cache creation, not charges on top of the creation total. Output includes thinking; do not add reasoning again. Collector-adapter equivalence is assumed, and the alternate maximum-overlap input treatment is inside the sensitivity envelope.",
+    "official_rates_usd_per_million_tokens": {
+      "input": 4,
+      "cache_read": 0.2,
+      "cache_write_5m": 5,
+      "cache_write_1h": 8,
+      "output": 20,
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "cache_semantics_source": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
+    },
+    "not_used": [
+      "Project standardTokenMix 97/2.5/0.5 is not applied.",
+      "Project anthropicTokenMix is not applied.",
+      "No subscription price was used to fit or check the estimate.",
+      "Daily and weekly pools are not added.",
+      "Accounts are not added."
+    ],
+    "scope": "One anonymous subscription account × one model × 100% of the weekly quota, official API equivalent at the observed workload only."
+  },
+  "official_facts": [
+    {
+      "id": "anthropic-opus55-standard-global-api-pricing",
+      "verified_on": "2026-11-09",
+      "verified_on_timezone": "Asia/Shanghai",
+      "urls": [
+        "https://platform.claude.com/docs/en/about-claude/pricing",
+        "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
+      ],
+      "rates_usd_per_million_tokens": {
+        "input": 4,
+        "output": 20,
+        "cache_read": 0.2,
+        "cache_write_5m": 5,
+        "cache_write_1h": 8
+      },
+      "context": "Full 1M context at standard prices. No batch, fast-mode, region, tool or tax premium is assumed."
+    }
+  ],
+  "measurements": [
+    {
+      "account_ref": "A04",
+      "provider": "Devin",
+      "plan": "unknown; tier not recorded",
+      "model": "claude-opus-5.5",
+      "telemetry_model": "claude-opus-5-5",
+      "weekly_official_api_equivalent_usd": 30.36141797468355,
+      "sample_value_usd": 23.985520200000003,
+      "sensitivity_range_usd": [
+        22.869814814814816,
+        31.763053600000003
+      ],
+      "confidence_assessment": {
+        "policy_version": "delta_sample_stability_v1",
+        "base_grade": "medium",
+        "grade": "medium",
+        "scope": "observed_workload_single_model_weekly_api_equivalent",
+        "delta_pp": 79,
+        "model_calls": 124,
+        "segments": 2,
+        "effective_segments": 1.7908177905308464,
+        "weighted_cv": 0.004151932216044925,
+        "leave_one_out_max_relative_change": 0.005927908827388251,
+        "rounding_delta_relative_error": 0.02531645569620253,
+        "rounding_basis": "Conservative sum of 1pp remaining-difference uncertainty per contiguous run / total delta; aggregate-only 1pp ratio also reported.",
+        "aggregate_only_rounding_ratio": 0.012658227848101266,
+        "criteria": {
+          "medium": {
+            "delta": true,
+            "sample_count": true,
+            "effective_segments": true,
+            "stability": true,
+            "leave_one_out": true,
+            "rounding": true
+          }
+        },
+        "is_probability": false
+      },
+      "pr_eligible_capacity": true,
+      "id": "devin-a04-opus55-weekly-2026-11-02",
+      "evidence_grade": "medium",
+      "scope": "conditional_account_single_model_weekly_capacity",
+      "plan_identity": {
+        "basis": "unknown",
+        "vendor_tier_label": null,
+        "note": "No invoice or tier evidence; no plan value used to validate estimate."
+      },
+      "period_start": "2026-11-02T07:37:57Z",
+      "period_end": "2026-11-03T11:10:14Z",
+      "delta_pp": 79,
+      "calls": 124,
+      "normalized": false,
+      "adopted": false,
+      "quota_window": "7 days",
+      "reference_rates_usd_per_MTok": {
+        "input": 4,
+        "cache_read": 0.2,
+        "cache_write_5m": 5,
+        "cache_write_1h": 8,
+        "output": 20
+      },
+      "clusters": [
+        {
+          "id": "A04-claude-opus-5-5-C1",
+          "account_ref": "A04",
+          "model": "claude-opus-5.5",
+          "telemetry_model": "claude-opus-5-5",
+          "window": "7 days",
+          "start": "2026-11-02T07:37:57Z",
+          "end": "2026-11-02T09:47:10Z",
+          "remaining_start": 100,
+          "remaining_end": 47,
+          "delta_pp": 53,
+          "requests": 95,
+          "sample_value_usd": 16.044756800000002,
+          "per_100pp_usd": 30.273126037735853,
+          "lag_cases": [
+            {
+              "lag_seconds": -300,
+              "input_exclusive": false,
+              "requests": 90,
+              "sample_value_usd": 15.489764800000001
+            },
+            {
+              "lag_seconds": -300,
+              "input_exclusive": true,
+              "requests": 90,
+              "sample_value_usd": 15.490676800000001
+            },
+            {
+              "lag_seconds": -120,
+              "input_exclusive": false,
+              "requests": 94,
+              "sample_value_usd": 15.9618742
+            },
+            {
+              "lag_seconds": -120,
+              "input_exclusive": true,
+              "requests": 94,
+              "sample_value_usd": 15.9628262
+            },
+            {
+              "lag_seconds": 0,
+              "input_exclusive": false,
+              "requests": 95,
+              "sample_value_usd": 16.0438048
+            },
+            {
+              "lag_seconds": 0,
+              "input_exclusive": true,
+              "requests": 95,
+              "sample_value_usd": 16.044756800000002
+            },
+            {
+              "lag_seconds": 120,
+              "input_exclusive": false,
+              "requests": 94,
+              "sample_value_usd": 15.8611056
+            },
+            {
+              "lag_seconds": 120,
+              "input_exclusive": true,
+              "requests": 94,
+              "sample_value_usd": 15.862049599999999
+            },
+            {
+              "lag_seconds": 300,
+              "input_exclusive": false,
+              "requests": 93,
+              "sample_value_usd": 15.837464
+            },
+            {
+              "lag_seconds": 300,
+              "input_exclusive": true,
+              "requests": 93,
+              "sample_value_usd": 15.838392
+            }
+          ],
+          "sensitivity_range_usd_per_100pp": [
+            28.684749629629632,
+            30.855301538461543
+          ]
+        },
+        {
+          "id": "A04-claude-opus-5-5-C2",
+          "account_ref": "A04",
+          "model": "claude-opus-5.5",
+          "telemetry_model": "claude-opus-5-5",
+          "window": "7 days",
+          "start": "2026-11-03T10:33:23Z",
+          "end": "2026-11-03T11:10:14Z",
+          "remaining_start": 26,
+          "remaining_end": 0,
+          "delta_pp": 26,
+          "requests": 29,
+          "sample_value_usd": 7.940763400000001,
+          "per_100pp_usd": 30.541397692307694,
+          "lag_cases": [
+            {
+              "lag_seconds": -300,
+              "input_exclusive": false,
+              "requests": 33,
+              "sample_value_usd": 6.17485
+            },
+            {
+              "lag_seconds": -300,
+              "input_exclusive": true,
+              "requests": 33,
+              "sample_value_usd": 6.17513
+            },
+            {
+              "lag_seconds": -120,
+              "input_exclusive": false,
+              "requests": 33,
+              "sample_value_usd": 7.4196328
+            },
+            {
+              "lag_seconds": -120,
+              "input_exclusive": true,
+              "requests": 33,
+              "sample_value_usd": 7.419904799999999
+            },
+            {
+              "lag_seconds": 0,
+              "input_exclusive": false,
+              "requests": 29,
+              "sample_value_usd": 7.9405234
+            },
+            {
+              "lag_seconds": 0,
+              "input_exclusive": true,
+              "requests": 29,
+              "sample_value_usd": 7.940763400000001
+            },
+            {
+              "lag_seconds": 120,
+              "input_exclusive": false,
+              "requests": 27,
+              "sample_value_usd": 7.5996748
+            },
+            {
+              "lag_seconds": 120,
+              "input_exclusive": true,
+              "requests": 27,
+              "sample_value_usd": 7.5998988
+            },
+            {
+              "lag_seconds": 300,
+              "input_exclusive": false,
+              "requests": 25,
+              "sample_value_usd": 6.877433600000001
+            },
+            {
+              "lag_seconds": 300,
+              "input_exclusive": true,
+              "requests": 25,
+              "sample_value_usd": 6.8776416000000005
+            }
+          ],
+          "sensitivity_range_usd_per_100pp": [
+            22.869814814814816,
+            31.763053600000003
+          ]
+        }
+      ],
+      "limitations": [
+        "Only supplied anonymous aligned requests and supplied cluster endpoints were available. Endpoint authenticity, omitted stream activity, cycle markers and anomaly exclusions are not independently authenticated.",
+        "Conditional on recorded requests explaining quota drops; no completed collector-adapter semantic audit.",
+        "Observed cache-heavy workload only; not a workload-independent entitlement or guarantee of future throughput.",
+        "No daily/weekly summing, cross-account pooling, known-plan calibration or automatic adopted-value change."
+      ],
+      "rounding_sensitivity_is_confidence_interval": false,
+      "accounts_are_additive": false,
+      "workload_scope": "observed_cache_mix_only",
+      "normalized_to_project_standard_mix": false
+    },
+    {
+      "account_ref": "A06",
+      "provider": "Devin",
+      "plan": "unknown; tier not recorded",
+      "model": "claude-opus-5.5",
+      "telemetry_model": "claude-opus-5-5",
+      "weekly_official_api_equivalent_usd": 30.726950000000002,
+      "sample_value_usd": 20.894326,
+      "sensitivity_range_usd": [
+        26.826832800000002,
+        33.53404173913044
+      ],
+      "confidence_assessment": {
+        "policy_version": "delta_sample_stability_v1",
+        "base_grade": "medium",
+        "grade": "medium",
+        "scope": "observed_workload_single_model_weekly_api_equivalent",
+        "delta_pp": 68,
+        "model_calls": 171,
+        "segments": 2,
+        "effective_segments": 1.8407643312101911,
+        "weighted_cv": 0.00845079122197273,
+        "leave_one_out_max_relative_change": 0.011442425406144596,
+        "rounding_delta_relative_error": 0.029411764705882353,
+        "rounding_basis": "Conservative sum of 1pp remaining-difference uncertainty per contiguous run / total delta; aggregate-only 1pp ratio also reported.",
+        "aggregate_only_rounding_ratio": 0.014705882352941176,
+        "criteria": {
+          "medium": {
+            "delta": true,
+            "sample_count": true,
+            "effective_segments": true,
+            "stability": true,
+            "leave_one_out": true,
+            "rounding": true
+          }
+        },
+        "is_probability": false
+      },
+      "pr_eligible_capacity": true,
+      "id": "devin-a06-opus55-weekly-2026-11-02",
+      "evidence_grade": "medium",
+      "scope": "conditional_account_single_model_weekly_capacity",
+      "plan_identity": {
+        "basis": "unknown",
+        "vendor_tier_label": null,
+        "note": "No invoice or tier evidence; no plan value used to validate estimate."
+      },
+      "period_start": "2026-11-02T12:40:13Z",
+      "period_end": "2026-11-03T14:56:10Z",
+      "delta_pp": 68,
+      "calls": 171,
+      "normalized": false,
+      "adopted": false,
+      "quota_window": "7 days",
+      "reference_rates_usd_per_MTok": {
+        "input": 4,
+        "cache_read": 0.2,
+        "cache_write_5m": 5,
+        "cache_write_1h": 8,
+        "output": 20
+      },
+      "clusters": [
+        {
+          "id": "A06-claude-opus-5-5-C1",
+          "account_ref": "A06",
+          "model": "claude-opus-5.5",
+          "telemetry_model": "claude-opus-5-5",
+          "window": "7 days",
+          "start": "2026-11-02T12:40:13Z",
+          "end": "2026-11-02T13:50:57Z",
+          "remaining_start": 74,
+          "remaining_end": 50,
+          "delta_pp": 24,
+          "requests": 66,
+          "sample_value_usd": 7.2900862,
+          "per_100pp_usd": 30.37535916666667,
+          "lag_cases": [
+            {
+              "lag_seconds": -300,
+              "input_exclusive": false,
+              "requests": 71,
+              "sample_value_usd": 7.7120856
+            },
+            {
+              "lag_seconds": -300,
+              "input_exclusive": true,
+              "requests": 71,
+              "sample_value_usd": 7.7128296
+            },
+            {
+              "lag_seconds": -120,
+              "input_exclusive": false,
+              "requests": 69,
+              "sample_value_usd": 7.513828
+            },
+            {
+              "lag_seconds": -120,
+              "input_exclusive": true,
+              "requests": 69,
+              "sample_value_usd": 7.514556
+            },
+            {
+              "lag_seconds": 0,
+              "input_exclusive": false,
+              "requests": 66,
+              "sample_value_usd": 7.2893982
+            },
+            {
+              "lag_seconds": 0,
+              "input_exclusive": true,
+              "requests": 66,
+              "sample_value_usd": 7.2900862
+            },
+            {
+              "lag_seconds": 120,
+              "input_exclusive": false,
+              "requests": 63,
+              "sample_value_usd": 7.0552074000000005
+            },
+            {
+              "lag_seconds": 120,
+              "input_exclusive": true,
+              "requests": 63,
+              "sample_value_usd": 7.0558554
+            },
+            {
+              "lag_seconds": 300,
+              "input_exclusive": false,
+              "requests": 60,
+              "sample_value_usd": 6.7067082000000005
+            },
+            {
+              "lag_seconds": 300,
+              "input_exclusive": true,
+              "requests": 60,
+              "sample_value_usd": 6.7073162
+            }
+          ],
+          "sensitivity_range_usd_per_100pp": [
+            26.826832800000002,
+            33.53404173913044
+          ]
+        },
+        {
+          "id": "A06-claude-opus-5-5-C2",
+          "account_ref": "A06",
+          "model": "claude-opus-5.5",
+          "telemetry_model": "claude-opus-5-5",
+          "window": "7 days",
+          "start": "2026-11-03T04:44:26Z",
+          "end": "2026-11-03T14:56:10Z",
+          "remaining_start": 50,
+          "remaining_end": 6,
+          "delta_pp": 44,
+          "requests": 105,
+          "sample_value_usd": 13.6042398,
+          "per_100pp_usd": 30.91872681818182,
+          "lag_cases": [
+            {
+              "lag_seconds": -300,
+              "input_exclusive": false,
+              "requests": 100,
+              "sample_value_usd": 13.012875800000002
+            },
+            {
+              "lag_seconds": -300,
+              "input_exclusive": true,
+              "requests": 100,
+              "sample_value_usd": 13.014891800000001
+            },
+            {
+              "lag_seconds": -120,
+              "input_exclusive": false,
+              "requests": 103,
+              "sample_value_usd": 13.3417784
+            },
+            {
+              "lag_seconds": -120,
+              "input_exclusive": true,
+              "requests": 103,
+              "sample_value_usd": 13.343826400000001
+            },
+            {
+              "lag_seconds": 0,
+              "input_exclusive": false,
+              "requests": 105,
+              "sample_value_usd": 13.602175800000001
+            },
+            {
+              "lag_seconds": 0,
+              "input_exclusive": true,
+              "requests": 105,
+              "sample_value_usd": 13.6042398
+            },
+            {
+              "lag_seconds": 120,
+              "input_exclusive": false,
+              "requests": 106,
+              "sample_value_usd": 13.6914944
+            },
+            {
+              "lag_seconds": 120,
+              "input_exclusive": true,
+              "requests": 106,
+              "sample_value_usd": 13.6935664
+            },
+            {
+              "lag_seconds": 300,
+              "input_exclusive": false,
+              "requests": 106,
+              "sample_value_usd": 13.6914944
+            },
+            {
+              "lag_seconds": 300,
+              "input_exclusive": true,
+              "requests": 106,
+              "sample_value_usd": 13.6935664
+            }
+          ],
+          "sensitivity_range_usd_per_100pp": [
+            28.91750177777778,
+            31.845503255813952
+          ]
+        }
+      ],
+      "limitations": [
+        "Only supplied anonymous aligned requests and supplied cluster endpoints were available. Endpoint authenticity, omitted stream activity, cycle markers and anomaly exclusions are not independently authenticated.",
+        "Conditional on recorded requests explaining quota drops; no completed collector-adapter semantic audit.",
+        "Observed cache-heavy workload only; not a workload-independent entitlement or guarantee of future throughput.",
+        "No daily/weekly summing, cross-account pooling, known-plan calibration or automatic adopted-value change."
+      ],
+      "rounding_sensitivity_is_confidence_interval": false,
+      "accounts_are_additive": false,
+      "workload_scope": "observed_cache_mix_only",
+      "normalized_to_project_standard_mix": false
+    }
+  ],
+  "excluded": [
+    {
+      "account_ref": "A05",
+      "provider": "Devin",
+      "model": "claude-opus-5.5",
+      "grade": "low",
+      "included_in_measurements": false,
+      "reason": "Only one contiguous pure-model interval. effective_segments=1 is below the medium threshold of 1.5, and leave-one-run-out is undefined. Subdividing that one run does not create independent samples.",
+      "recalculated_and_not_submitted_as_capacity": {
+        "weekly_official_api_equivalent_usd": 32.23161,
+        "sensitivity_range_usd": [
+          27.456791764705887,
+          32.889397959183675
+        ],
+        "delta_pp": 50,
+        "model_calls": 69,
+        "segments": 1,
+        "effective_segments": 1.0
+      }
+    },
+    {
+      "account_ref": "A07",
+      "grade": "low",
+      "included_in_measurements": false,
+      "reason": "Low-confidence exclusion only. No calculation is imported."
+    },
+    {
+      "label": "Argon",
+      "model": "gemini-4-argon",
+      "grade": "low",
+      "included_in_measurements": false,
+      "reason": "Low-confidence exclusion only. No Argon weekly capacity is recorded. The aligned CSV keeps one A04 zero-token error row at 2026-11-03T10:29:55Z tagged gemini-4-argon; its official value is 0 and it is outside the Opus 5.5 valuation."
+    },
+    {
+      "label": "Codex Sol",
+      "grade": "low",
+      "included_in_measurements": false,
+      "reason": "Low-confidence exclusion only. No Codex Sol official-equivalent figure is recorded in this round."
+    }
+  ],
+  "duplicate_check": {
+    "status": "no_equivalent_submission",
+    "checked_at": "2026-11-10 Asia/Shanghai",
+    "upstream": "https://github.com/Fei2411/real-api-pricing",
+    "upstream_main": "2599b7ad743a94b3ab6d4ff8cdb4d8359ee6943c",
+    "fork": "https://github.com/klarkxy/real-api-pricing",
+    "fork_main_matches_upstream": true,
+    "open_pull_requests_reviewed": [
+      205,
+      207,
+      208,
+      209,
+      216,
+      223
+    ],
+    "equivalent_open_or_merged_pull_request": null,
+    "distinct_from": [
+      {
+        "pull_request": 130,
+        "state": "merged",
+        "why": "Magpie round1 local + Tokyo evidence, observation cutoff 2026-10-21. Different window and question."
+      },
+      {
+        "pull_request": 217,
+        "state": "merged",
+        "why": "Droid Pro issue #131 Magpie token breakdown (sopping). Different product and source."
+      },
+      {
+        "pull_request": 218,
+        "state": "merged",
+        "why": "Community issue #210 Devin Pro samples for 2026-10-22 and 2026-11-03 (sopping), file data/research/devin-pro-opus55-community-magpie-2026-11-09.json. Another contributor's evidence; request counts, quota deltas and plan label do not match these anonymous A04/A06 intervals."
+      },
+      {
+        "pull_request": 224,
+        "state": "merged",
+        "why": "Command Code GOAT Muse Ember official catalog evidence. Unrelated product."
+      }
+    ],
+    "next_round": 2,
+    "rechecked_on": "2026-11-10",
+    "note": "Reconfirmed 2026-11-10 after fetching upstream. No equivalent A04/A06 single-subscription single-model weekly capacity submission is on main or in open upstream PRs. A leftover fork-only PR exists at https://github.com/klarkxy/real-api-pricing/pull/1 (not opened against Fei2411/real-api-pricing)."
+  },
+  "verification_summary": {
+    "independent_recalculation": "Request-level official-value fields in the reviewed alignment reproduce exactly. Cache-creation total equals the 5-minute plus 1-hour subcounts.",
+    "request_value_field_max_error": 0.0,
+    "cache_creation_total_equals_5m_plus_1h": true,
+    "medium_rule": "Whole contiguous pure-model runs, not sub-bins. A04 and A06 meet medium and miss high (calls below 200 and effective segments below 4).",
+    "limits": "Interval identity, pre-rebound selection and purity beyond the supplied windows are contributor assertions. No invoice, raw quota history or adapter audit is in this public file. The envelope describes the observed cache-heavy workload only."
+  }
+}
