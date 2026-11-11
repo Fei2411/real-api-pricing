@@ -1,0 +1,130 @@
+{
+  "recordedAt": "2026-11-11",
+  "sourceType": "x_user_supplied",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "用户提交 https://x.com/shengtang135754/status/2120389325187891286 。截图是 Gemini 4 Carbon 的 token 分项；周消耗 3% 和 API 美元是口述。6 亿与 $310 是外推，不是打满实测。与 leo114119 的 Qwen 帖分开，不混算。research-only。图片不入库。",
+  "items": [
+    {
+      "id": "x-shengtang135754-gemini4-carbon-5xultra-17926k-3pct",
+      "postId": "2120389325187891286",
+      "confidence": "High",
+      "confidenceNote": "同帖有截图总 tokens 17,926,261，也有口述的周额度消耗 3%。3% 没有出现在截图上，图是作者汇总表，不是厂商周配额条，所以弱于同屏面板。不得把 3% 写成已经在图上看到。",
+      "planId": "google_ai_ultra",
+      "model": "gemini-4-carbon",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/shengtang135754/status/2120389325187891286",
+        "account": "shengtang135754",
+        "createdAt": "2026-11-11T05:33:04.000Z",
+        "createdAtTaipei": "2026-11-11T13:33:04+08:00",
+        "text": "🔥Gemini 4 carbon周额度计算，比4 argon多，carbon完胜！\n\n会员5x ultra ，消耗周3%，使用量含缓存1792万token\n\n推算4 carbon周额度接近6亿，原来4 argon 大概周4亿，明显carbon更多！\n\n折算成API费用，按照当前折扣计算，3%，共计价值9.32美元，周310美元，原来4 argon周大概200美元。carbon量大。😀",
+        "conversationId": "2120389325187891286",
+        "standaloneRoot": true,
+        "replyCountAtFetch": 23,
+        "quoteCountAtFetch": 1
+      },
+      "observed": {
+        "evidenceKind": "author-compiled usage table for the token split; weekly percent and API dollars are oral, not a vendor quota meter",
+        "hasScreenshot": true,
+        "screenshotsCommitted": false,
+        "screenshotCite": "https://x.com/shengtang135754/status/2120389325187891286",
+        "oral": {
+          "planClaim": "会员5x ultra",
+          "modelClaim": "Gemini 4 carbon",
+          "weeklyQuotaUsedPctClaim": 3,
+          "weeklyQuotaUsedPctOnScreenshot": false,
+          "tokensIncludingCacheClaimWan": 1792,
+          "derivedWeeklyTokensClaimApprox": 600000000,
+          "apiWorthUsdClaim": 9.32,
+          "derivedWeeklyApiWorthUsdClaim": 310,
+          "argonWeeklyTokensClaimApprox": 400000000,
+          "argonWeeklyApiWorthUsdClaim": 200,
+          "argonNote": "作者对 4 argon 的回忆，本图没有测 argon，不是本帖实测，也不与其他作者的 argon 样本拼接"
+        },
+        "sameAuthorThreadClarifications": [
+          {
+            "url": "https://x.com/shengtang135754/status/2120445212132843633",
+            "createdAt": "2026-11-11T09:15:09.000Z",
+            "createdAtTaipei": "2026-11-11T17:15:09+08:00",
+            "text": "我是280",
+            "context": "reply to @peanut20020731 asking ultra最便宜要多少",
+            "note": "作者自称 280。币种和地区都没写。他人说土区 5x，作者在已读回复里没有亲口确认，地区不算已确认。"
+          }
+        ],
+        "screenshot": {
+          "title": "1. 今日所有窗口 Gemini 4 Carbon 用量汇总",
+          "activeWindowLabel": "活跃时段（北京时间）",
+          "dateOnChart": "not printed; post is 2026-11-11 and the printed Beijing window 11:12–13:23 immediately precedes the 13:33 Taipei post time",
+          "rows": [
+            {
+              "session": "Learn Website Building From Article (label wrapped/cut in image)",
+              "beijingTime": "11:13–13:23",
+              "calls": 85,
+              "input": 1356323,
+              "cacheRead": 11700106,
+              "outputIncludingThinking": 167817,
+              "freshInputPlusOutput": 1524140,
+              "totalIncludingCache": 13224246
+            },
+            {
+              "session": "colab本地视频生成 (label partly obscured)",
+              "beijingTime": "11:12–13:21",
+              "calls": 43,
+              "input": 1300088,
+              "cacheRead": 3319122,
+              "outputIncludingThinking": 82805,
+              "freshInputPlusOutput": 1382893,
+              "totalIncludingCache": 4702015
+            },
+            {
+              "session": "合计（所有窗口）",
+              "beijingTime": "11:12–13:23",
+              "calls": 128,
+              "input": 2656411,
+              "cacheRead": 15019228,
+              "outputIncludingThinking": 250622,
+              "freshInputPlusOutput": 2907033,
+              "freshInputPlusOutputLabel": "约 290.7 万",
+              "totalIncludingCache": 17926261,
+              "totalIncludingCacheLabel": "约 1,792.6 万"
+            }
+          ],
+          "rowArithmeticChecks": "each row input+output and input+cacheRead+output reconcile; 85+43=128",
+          "quotaPctOnScreenshot": null,
+          "vendorQuotaMeterVisible": false
+        },
+        "derivedNotMeasured": {
+          "note": "按口述 3% 线性外推，不是打满实测，也不改 adopted",
+          "weeklyTokensIfExactly3pct": 597542033.3333334,
+          "formulaTokens": "17926261 / 0.03",
+          "matchesOralApprox600M": true,
+          "weeklyApiWorthIfExactly3pctUsd": 310.6666666666667,
+          "formulaWorth": "9.32 / 0.03",
+          "matchesOral310Rounded": true,
+          "officialIntroRateCheckUsd": {
+            "ratesUsed": "Gemini 4 Carbon intro rates recorded on PR #233: input $2 / cache read $0.10 / output $10 per MTok. That file is an official price note, not this usage sample.",
+            "computedUsd": 9.3209648,
+            "note": "只解释作者写下的 9.32 与截图分项能否对上。不是账单，不采用，也不回推成另一种 mix。"
+          }
+        }
+      },
+      "gaps": [
+        "周消耗 3% 只在正文里，截图没有配额条或百分比",
+        "3% 如果是整数舍入，反推周池会偏；597,542,033 和接近 6 亿都是外推，不是实测周池",
+        "汇总表是作者自制，不是 Google 官方配额面板",
+        "280 的币种和地区没有写明",
+        "4 argon 的周约 4 亿 / $200 是回忆，本图没有测",
+        "不与 leo114119 的 Qwen 样本、其他作者的 Ultra/Argon/Carbon 样本，或官方单价拼成新的采用值"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-user-submitted-2026-11-08.json"
+  ],
+  "deduplication": {
+    "result": "new; this post id was absent",
+    "sameAccountDifferentPosts": "none for shengtang135754",
+    "notTheSameAs": "PR #233 gemini-4-carbon-api-pricing-2026-11-11.json is an official price note, not this usage table",
+    "matches": 0
+  }
+}

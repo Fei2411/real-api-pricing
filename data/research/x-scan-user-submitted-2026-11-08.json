@@ -387,5 +387,71 @@
     },
     "screenshotsCommitted": false,
     "screenshotCite": "https://x.com/ai_funss/status/2120065411240874466"
+  },
+  "supplement20261111": {
+    "recordedAt": "2026-11-11",
+    "note": "不改 2026-11-08 的 recordedAt、counts，也不改 2026-11-10 补充记录。这两条是后来补上的用户证据，彼此不混算。",
+    "counts": {
+      "highNewlyAdded": 2,
+      "alreadyPresent": 0,
+      "gapFilled": 0
+    },
+    "entries": [
+      {
+        "postId": "2120389325187891286",
+        "url": "https://x.com/shengtang135754/status/2120389325187891286",
+        "account": "shengtang135754",
+        "confidence": "High",
+        "confidenceLimit": "tokens 在截图上，周 3% 只在口述里",
+        "status": "added",
+        "file": "gemini4-carbon-5xultra-weekly-x-2026-11-11.json",
+        "whyHigh": "截图合计含缓存 17,926,261，分项为新增输入 2,656,411、缓存读取 15,019,228、输出含思考 250,622。周 3% 是口述。597,542,033 和 $310 是外推，不是打满。"
+      },
+      {
+        "postId": "2120404442512298069",
+        "url": "https://x.com/leo114119/status/2120404442512298069",
+        "account": "leo114119",
+        "confidence": "High",
+        "confidenceLimit": "不能完全排除更早周期用量；88.9% 是缓存率不是 quota",
+        "status": "added",
+        "file": "qwen-token-plan-15631418-2p5pct-x-2026-11-11.json",
+        "whyHigh": "截图总 tokens 15,631,418，另一张图月剩余 97.5%，对应口述 2.5%。625,256,720 是外推。模型只记 qwen，档位与 39 的币种不认定。"
+      }
+    ],
+    "doNotCombineWith": {
+      "pullRequest": 233,
+      "url": "https://github.com/Fei2411/real-api-pricing/pull/233",
+      "reason": "那边的 Gemini 4 Carbon 官方价和 Qwen Token Plan credits 表不是这两条用量样本。不改 #233 的分支，也不用那些表把外推写进 adopted。"
+    },
+    "deduplication": {
+      "checkedAt": "2026-11-11",
+      "postIds": [
+        "2120389325187891286",
+        "2120404442512298069"
+      ],
+      "matches": 0,
+      "sameAccountDifferentPost": {
+        "account": "leo114119",
+        "files": [
+          "claude-team-opus55-round1-2026-10-06.json",
+          "gemini-argon-round1-2026-10-16.json"
+        ],
+        "note": "同一账号更早的别的测量，不是这两枚 post id，不补缺、不合并"
+      },
+      "refs": {
+        "origin/main": "f2a79c39a72b1127f3672ca2b74b0c1743b3460c",
+        "pr205": "226ce8cefd822aba49a65cd2cc2dc88ee79e4c0b",
+        "pr207": "1ae7596a683743b31c517944adebde43a0e332a8",
+        "pr209": "2f7b8d38b740da2abeab8059b4a4ff4e46ea928a",
+        "pr216": "66c98dbaa9333a795f3f3ffed191a4c2f08024bd",
+        "pr223": "faf1c9eb46b70fea0b12267cb0b5e5dc4fc23f36",
+        "pr233": "2df7377045c070660b15530f30d23b9be80f7456"
+      }
+    },
+    "screenshotsCommitted": false,
+    "screenshotCite": [
+      "https://x.com/shengtang135754/status/2120389325187891286",
+      "https://x.com/leo114119/status/2120404442512298069"
+    ]
   }
 }
