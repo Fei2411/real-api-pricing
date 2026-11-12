@@ -1,0 +1,62 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_public_reply_research",
+  "role": "follow-up review of an already recorded parent; not a new counted signal",
+  "adoptionStatus": "research-only; not adopted; existing context follow-up; not a new High; plan not confirmed; do not change adopted.csv without maintainer confirmation",
+  "counted": false,
+  "items": [
+    {
+      "id": "x-2119337499172770002-context-review",
+      "countsAsNewEvidence": false,
+      "confidence": "not counted",
+      "numericPairScreen": "oral tokens plus a stated weekly percent meet a numeric-pair screen only; not screenshot-verified, not a new High row, and not a confirmed Claude Pro measurement",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/UYouximi58156/status/2119337499172770002",
+        "account": "UYouximi58156",
+        "createdAt": "2026-11-08T07:53:29.000Z",
+        "createdAtPacific": "2026-11-07T23:53:29-08:00",
+        "text": "@Fei2411 也没有那么多，我6亿用了72%周额度，99.2缓，一周是精准的250刀额度，一个月1000刀。",
+        "conversationId": "2119335203135172722",
+        "referencedPosts": [
+          {"id": "2119335203135172722", "type": "replied_to"}
+        ]
+      },
+      "observed": {
+        "oral": {
+          "tokens": 600000000,
+          "weeklyQuotaUsedPct": 72,
+          "cacheHitPct": 99.2,
+          "cacheHitPctIsNotQuota": true,
+          "weeklyWorthUsdClaim": 250,
+          "monthlyWorthUsdClaim": 1000
+        },
+        "planAttribution": "Direct reply to Claude Pro/Opus 5.5 root 2119335203135172722, but this comment does not name its own plan or model",
+        "planConfirmed": false,
+        "screenshot": null,
+        "derivedNotMeasured": {
+          "formula": "600000000 / 0.72",
+          "weeklyTokensAtSameMix": 833333333.3333334,
+          "note": "同 mix 线性外推，不是实测周池"
+        }
+      },
+      "review": {
+        "authorFilter": "同作者过滤搜索只返回这条和 2119341006382567779，下一页为空",
+        "independentConfirmation": false,
+        "contextLean": "Claude Pro",
+        "stillUnconfirmed": true
+      },
+      "alreadyRecordedIn": "multi-plan-weekly-user-x-2026-11-08.json#upstreamContextNotCounted",
+      "gaps": [
+        "数字对只说明它是一条口述线索，不是截图级验证，也不新计一条 High",
+        "上下文倾向 Claude Pro，但正文没有复述套餐或模型，不能标成已确认 Claude Pro",
+        "99.2% 是缓存率，不是配额比例",
+        "不能挂到下一条 Kimi 老套餐，也不能和别人的截图拼接"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "multi-plan-weekly-user-x-2026-11-08.json",
+    "x-scan-user-submitted-2026-11-08.json"
+  ]
+}

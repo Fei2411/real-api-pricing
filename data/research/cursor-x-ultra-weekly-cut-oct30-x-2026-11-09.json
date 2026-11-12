@@ -1,0 +1,65 @@
+{
+  "recordedAt": "2026-11-09",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 212,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-09 扫描：Cursor/X Ultra Oct 30 后周池砍幅 before/after。截图只链原帖。",
+  "items": [
+    {
+      "id": "x-ReubenFergusson-ultra-weekly-cut-oct30",
+      "confidence": "High",
+      "planId": "cursor_x_ultra",
+      "model": "unspecified (Grok Bot / shared pool)",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ReubenFergusson/status/2119533100774613456",
+        "account": "ReubenFergusson",
+        "createdAt": "2026-11-08T20:50:44Z"
+      },
+      "observed": {
+        "planNote": "author moved from SuperGrok Heavy to Ultra",
+        "tokensToReachApprox70pctWeekly": {
+          "oct16_22": 1700000000,
+          "oct23_29": 1770000000,
+          "oct30_nov5": 1140000000
+        },
+        "tokensPer1pctWeekly": {
+          "beforeApproxM": [
+            24,
+            27
+          ],
+          "afterApproxM": 16
+        },
+        "impliedFullWeekTokens": {
+          "beforeApproxB": 2.4,
+          "afterApproxB": 1.6
+        },
+        "chartTitle": "My Grok weekly limit: over a third fewer tokens since the 30 Oct reset",
+        "chartSourceClaim": "my grok.com usage dashboard",
+        "hasScreenshot": true
+      },
+      "gaps": [
+        "自绘柱状图非原始面板条",
+        "Heavy→Ultra 是否混档",
+        "无 input/cache/output 分项"
+      ]
+    }
+  ],
+  "followUpsMedium": [
+    {
+      "url": "https://x.com/OddScienceLab/status/2119597690174726465",
+      "note": "Ultra 40+ videos@17% → 1–3 tasks; 49% with 6d left; last week 100% in 6.5d"
+    },
+    {
+      "url": "https://x.com/thecsguy/status/2119598462752935981",
+      "note": "Ultra meter 90% in two days oral"
+    },
+    {
+      "url": "https://x.com/McKeeCreative1/status/2119595848472608900",
+      "note": "SuperGrok Heavy 81% weekly"
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-09.json"
+  ]
+}

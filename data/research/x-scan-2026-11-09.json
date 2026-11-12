@@ -1,0 +1,185 @@
+{
+  "scannedAt": "2026-11-09",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "window": {
+    "start": "2026-11-07T01:00:00Z",
+    "end": "2026-11-09T01:14:00Z"
+  },
+  "method": "Grok Bot built-in public X search_posts_all (namespace x); NOT user X plugin / Platform API quota",
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "conventionsUpdatedAt": "2026-11-08",
+    "note": "data/conventions.json updatedAt=2026-11-08；相对扫描日 2026-11-09 接近同步；昨日 PR#205 记录站点 snapshot 仍标 2026-10-27，需维护者确认线上是否已跟进"
+  },
+  "queries": [
+    "(Kimi OR Claude OR Cursor OR Codex OR DeepSeek OR GLM OR MiniMax OR Devin OR OpenCode) (用量 OR 配额 OR 打满 OR 额度 OR token OR tokens OR quota OR usage OR \"%\") -is:retweet",
+    "(Kimi OR \"Kimi Code\" OR Claude OR Cursor OR \"Claude Pro\" OR \"Claude Max\") (百分比 OR \"%\" OR 控制台 OR session OR Highspeed OR Pro OR Ultra OR Super) (token OR tokens OR 用量 OR 配额 OR limit) -is:retweet",
+    "(\"AI coding\" OR Copilot OR Cursor OR Claude OR Codex OR Windsurf OR Devin) (pricing OR price OR plan OR subscription OR quota OR \"rate limit\" OR tokens OR usage) (raise OR cut OR change OR new OR promo OR discount OR limit OR weekly OR monthly) -is:retweet lang:en",
+    "(调价 OR 涨价 OR 降价 OR 新套餐 OR 促销 OR 限免 OR 打满 OR 周额度 OR 月池) (Claude OR Cursor OR Kimi OR DeepSeek OR Codex OR GLM OR MiniMax OR OpenCode OR 编程) -is:retweet",
+    "(Claude OR Cursor OR Codex OR Kimi OR \"Claude Code\" OR Ultra OR Super OR Max) (\"%\" OR 百分之 OR 周额度 OR weekly OR \"M tokens\" OR \"亿\" OR 打满 OR 面板) (token OR tokens OR usage OR 用量 OR quota) has:images -is:retweet",
+    "(Cursor OR Ultra OR Super OR Premium OR \"X Subscription\") (\"%\" OR percent OR weekly OR tokens OR \"M tokens\" OR limit OR usage) (Cursor OR Grok OR Ultra OR Super) -is:retweet",
+    "(Kimi OR \"Kimi Code\" OR Allegro OR Highspeed OR \"K3.1\") (用量 OR 配额 OR 打满 OR \"%\" OR token OR tokens OR 月池 OR 周) -is:retweet",
+    "(Codex OR ChatGPT OR \"Pro 100\" OR \"Pro 200\" OR Tibo OR Astra OR Sol) (额度 OR quota OR tokens OR \"%\" OR weekly OR usage OR 用量 OR 打满) -is:retweet",
+    "(\"Claude Max\" OR \"Claude Ultra\" OR \"Claude Pro\" OR \"Claude Code\") (\"B tokens\" OR \"亿\" OR \"M tokens\" OR \"%\" OR weekly OR 周额度 OR 打满) (token OR tokens OR usage OR 用量) -is:retweet",
+    "(Devin OR MiniMax OR \"OpenCode\" OR \"GLM Coding\" OR \"Command Code\" OR GOAT) (quota OR usage OR tokens OR 额度 OR 用量 OR \"%\" OR pricing OR plan) -is:retweet"
+  ],
+  "counts": {
+    "high": 2,
+    "medium": 8,
+    "discardedLowApprox": 85
+  },
+  "relatedIssues": [
+    211,
+    212,
+    213,
+    214,
+    215
+  ],
+  "retained": [
+    {
+      "url": "https://x.com/ExTempestShadow/status/2119559337731572032",
+      "account": "ExTempestShadow",
+      "planOrModel": "Claude Max × Claude Code (Opus 5.5 / Sonnet 5.5)",
+      "tokens": "7d: 4.2B / $1439.88；30d cache read ~7.8B + write ~89.7M + out ~22.1M + in ~541K",
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "绝对 token + API-worth + cache 分项 + 模型拆分 + 截图；缺 Max 5x/20x 与周池%",
+      "issue": 211
+    },
+    {
+      "url": "https://x.com/ReubenFergusson/status/2119533100774613456",
+      "account": "ReubenFergusson",
+      "planOrModel": "Cursor/X Ultra (ex SuperGrok Heavy)",
+      "tokens": "~70% 周限: 1.70B/1.77B → 1.14B；满周 ~2.4B → ~1.6B；1% ~24–27M → ~16M",
+      "percent": "~70% anchor",
+      "hasScreenshot": true,
+      "confidence": "High",
+      "why": "before/after 硬数字 + % 锚点；与 #195 1.56B 量级一致",
+      "issue": 212
+    },
+    {
+      "url": "https://x.com/noah_z_zhang/status/2119582708846461219",
+      "account": "noah_z_zhang",
+      "planOrModel": "Devin × SWE-2 Max",
+      "tokens": "input≈71.06M + output 13.72M + cached≈2.934B ≈ 3.02B / session",
+      "percent": null,
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "分项硬数字+截图；缺计划档与配额%",
+      "issue": 213
+    },
+    {
+      "url": "https://x.com/ji_she46383/status/2119582846793007217",
+      "account": "ji_she46383",
+      "planOrModel": "ChatGPT Plus × Codex vs Claude Pro × Claude Code",
+      "tokens": null,
+      "percent": "5h: Codex 20% (356行) vs Claude 3% (423行)，高思考",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "计划档 App Store 确认 + 5h%；无绝对 token",
+      "issue": 214
+    },
+    {
+      "url": "https://x.com/linxiaobei888/status/2119589610099753043",
+      "account": "linxiaobei888",
+      "planOrModel": "ChatGPT/Codex Pro 100/200/500",
+      "tokens": null,
+      "percent": "Pro100=10× / Pro200=20× / Pro500=50× Plus；Pro 无 5h",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "Tibo 倍数口径转述；多源交叉",
+      "issue": 215
+    },
+    {
+      "url": "https://x.com/thecsguy/status/2119598462752935981",
+      "account": "thecsguy",
+      "planOrModel": "OpenAI Pro multipliers + Ultra",
+      "tokens": null,
+      "percent": "Ultra 两天 90%（口述）",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "复述 Tibo 倍数 + Ultra 旁证",
+      "issue": 215
+    },
+    {
+      "url": "https://x.com/OddScienceLab/status/2119597690174726465",
+      "account": "OddScienceLab",
+      "planOrModel": "Ultra",
+      "tokens": null,
+      "percent": "以往 40+ 视频≈17%；现 49% 剩 6 天；上周 6.5 天 100%",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "计划+百分比燃烧旁证；无绝对值",
+      "issue": 212
+    },
+    {
+      "url": "https://x.com/Awanioz/status/2119490553998156241",
+      "account": "Awanioz",
+      "planOrModel": "Codex Pro",
+      "tokens": null,
+      "percent": "Pro 无 5h；Pro100=10× Plus",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "Tibo 澄清转述",
+      "issue": 215
+    },
+    {
+      "url": "https://x.com/b3inside/status/2119598310113919198",
+      "account": "b3inside",
+      "planOrModel": "Pro100 × 6.1-sol",
+      "tokens": null,
+      "percent": "整项目 1%（口述）",
+      "hasScreenshot": true,
+      "confidence": "Medium",
+      "why": "有计划+%；截图为项目 UI 非面板",
+      "issue": 215
+    },
+    {
+      "url": "https://x.com/McKeeCreative1/status/2119595848472608900",
+      "account": "McKeeCreative1",
+      "planOrModel": "SuperGrok Heavy",
+      "tokens": null,
+      "percent": "81% weekly，周三重置",
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "遗留档百分比旁证",
+      "issue": 212
+    }
+  ],
+  "discardedExamples": [
+    {
+      "url": "https://x.com/Joelbrown/status/2119597767056339160",
+      "reason": "Low：Grok Bot 烧得快纯吐槽，无数字"
+    },
+    {
+      "url": "https://x.com/RainG999/status/2119594202799681928",
+      "reason": "Low：Codex 等重置吐槽，无计量"
+    },
+    {
+      "url": "https://x.com/donella45141/status/2119598164093383009",
+      "reason": "丢弃：开源市场份额/API list price，非订阅额度"
+    },
+    {
+      "url": "https://x.com/audn_ai/status/2119594797652758766",
+      "reason": "丢弃：第三方 unlimited 营销 $999"
+    },
+    {
+      "url": "https://x.com/ai_neuralwire/status/2119598397313482963",
+      "reason": "丢弃：Kimi Bedrock 上架新闻，无用量数字"
+    },
+    {
+      "url": "https://x.com/qp2sUr0AFZAn7wx/status/2119592078753886236",
+      "reason": "Low：Command Code GOAT $10→$20 DS 口述贵，无硬计量"
+    },
+    {
+      "url": "https://x.com/VianaAutomation/status/2119549272412832044",
+      "reason": "Low/旁证：Claude Pro 52% vs Grok 44% 口述对比，缺绝对值与截图"
+    },
+    {
+      "url": "https://x.com/im_morganwang/status/2119597812182897009",
+      "reason": "Low/旁证：诉讼 Max 周倍数 3.5×/6× 原告主张，非实测面板"
+    }
+  ],
+  "overlapNote": "昨日 daily PR #205 / issues #202–#204 已覆盖 Kimi Plus19、Cursor 452.3M 日、Codex $200 日热力；本扫描不重复开 issue。"
+}

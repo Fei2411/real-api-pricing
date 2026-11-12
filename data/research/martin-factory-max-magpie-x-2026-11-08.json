@@ -1,0 +1,61 @@
+{
+  "recordedAt": "2026-11-11T19:47:00+08:00",
+  "sourceType": "x_author_timeline_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "timezoneNote": "source timestamps are UTC (Z); createdAtTaipei is converted to Asia/Taipei (UTC+8)",
+  "id": "martin-factory-max-magpie-x-2026-11-08",
+  "items": [
+    {
+      "id": "x-2119341025412182207",
+      "confidence": "Medium",
+      "planId": "factory-max-200",
+      "model": null,
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/MartinM91217805/status/2119341025412182207",
+        "account": "MartinM91217805",
+        "profileUrl": "https://x.com/MartinM91217805",
+        "createdAt": "2026-11-08T08:07:30.000Z",
+        "createdAtTaipei": "2026-11-08 16:07:30 Asia/Taipei",
+        "text": "@ZShipZuck 补充 factory max200 美元，5h 约 80 刀，周限额约 500 刀，月限额 1000 刀。Magpie 估算的窗口额度。\n开两个 100 刀其实更划算一些。月额度比 max 多 30%。错峰使用更划算。",
+        "referenced": "https://x.com/ZShipZuck/status/2119313365478826240"
+      },
+      "observed": {
+        "oral": {
+          "plan": "Factory Max $200",
+          "estimationModel": "Magpie",
+          "fiveHourWorthUsdApprox": 80,
+          "weeklyWorthUsdApprox": 500,
+          "monthlyWorthUsdApprox": 1000,
+          "alsoClaimed": "two $100 plans more cost-effective; monthly quota about 30% more than Max; staggered use better",
+          "thirtyPctBaseUnstated": "30% more than max — comparator (Factory Max vs which Max) not fully explicit"
+        },
+        "screenshot": null,
+        "tokens": null,
+        "quotaPct": null
+      },
+      "gaps": [
+        "作者写明是 Magpie 估算窗口额度，不是官方面板或截图",
+        "与同作者稍早 Droid $200 Magpie（2119339593174819186）数字形状同为 5h $80 / 周 $500 / 月 $1000，可能是同一套估算模板套到不同产品；不要当成两次独立实测，也不要平均",
+        "与 ZShipZuck Factory Max 图 5h~$88 / 7d~$970 / 30d~$1,940 冲突，保留两边",
+        "无 token、无配额百分比"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "alreadyStagedSisterPost": "2119339593174819186 Droid Magpie is already in /workspace/recent-replies-2026-11-08 and #208; this Factory Max reply is a distinct post id",
+        "defaultBranchSearch": "0 hits",
+        "openPrHits": {
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#208": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium oral"
+      }
+    }
+  ],
+  "scopeNote": "Factory Max $200 的 Magpie 口述：5h 约 $80、周约 $500、月 $1000。与 Zuck 实测冲突，也不要和 Droid $200 的同一组数字当成两次独立实测。",
+  "screenshotsCommitted": false,
+  "screenshotStorage": "X 截图不入库。image 文件名只是目视核对时的引用，不是仓库路径。图上字段和原帖 URL 写在本文件。"
+}

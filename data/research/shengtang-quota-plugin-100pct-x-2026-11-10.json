@@ -1,0 +1,94 @@
+{
+  "recordedAt": "2026-11-11T19:47:00+08:00",
+  "sourceType": "x_author_timeline_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "timezoneNote": "source timestamps are UTC (Z); createdAtTaipei is converted to Asia/Taipei (UTC+8)",
+  "id": "shengtang-quota-plugin-100pct-x-2026-11-10",
+  "items": [
+    {
+      "id": "x-2120125855343218958",
+      "confidence": "Medium",
+      "planId": "gemini-ultra-unconfirmed",
+      "model": "claude-in-gemini-and-other-pools",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/shengtang135754/status/2120125855343218958",
+        "account": "shengtang135754",
+        "profileUrl": "https://x.com/shengtang135754",
+        "createdAt": "2026-11-10T12:06:08.000Z",
+        "createdAtTaipei": "2026-11-10 20:06:08 Asia/Taipei",
+        "text": "Gemini里面的claude模型突然额度100%了，更新的我猝不及防啊。\n\n今天晚上大概率要上4 carbon，我今天就在猛用我的4 argon周额度，晚上上新模型，顺手来个重置，就完美了😍"
+      },
+      "observed": {
+        "oral": {
+          "claim": "Claude models inside Gemini suddenly went to 100% quota",
+          "alsoStated": "heavy use of 4 Argon weekly quota today; expecting 4 Carbon launch and a reset that evening"
+        },
+        "screenshot": {
+          "image": "images/shengtang-claude100-1.jpg",
+          "kind": "third-party quota monitor (not official vendor dashboard)",
+          "syncTimeLabel": "同步于 04:03:13",
+          "timezoneUnstated": true,
+          "topCards": [
+            {
+              "pool": "Gemini 5h",
+              "pctLabel": "84%",
+              "countdown": "1h 1m",
+              "resetLabel": "11月10日 05:04"
+            },
+            {
+              "pool": "Argon 周",
+              "pctLabel": "47%",
+              "countdown": "3d 12h"
+            },
+            {
+              "pool": "Claude/GPT",
+              "pctLabel": "100%",
+              "caption": "周池"
+            }
+          ],
+          "claudeGptThirdPartyPool": {
+            "weekly": {
+              "label": "7天周度总额度 (Weekly)",
+              "remainingPct": 100,
+              "usedPct": 0,
+              "countdown": "6天 18小时后重置",
+              "resetLabel": "11月16日 22:16"
+            },
+            "session5h": {
+              "label": "5小时滚动窗口 (Session)",
+              "remainingPct": 100,
+              "usedPct": 0,
+              "countdown": "4小时 55分钟后重置",
+              "resetLabel": "11月10日 08:59"
+            }
+          },
+          "note": "UI prints 剩余 100%（已用 0%）. Oral 100% matches remaining after a sudden refill, not consumption."
+        }
+      },
+      "gaps": [
+        "无 token；100% 是剩余（已用 0%），是重置/回满事件，不能当成消耗样本，也不能反推池子大小",
+        "插件/第三方监控，不是官方账单；时区未印出",
+        "Gemini 5h 84%、Argon 周 47%、Claude/GPT 周剩余 100% 是不同池，不要加总或互相换算",
+        "不可与次日 Carbon 17,926,261 / 口述周 3%（2120389325187891286）拼接",
+        "套餐档位本帖未在图上写明（作者其他帖称 Ultra / 5x ultra，此处不迁移）"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "sisterPostAlreadyStaged": "2120389325187891286 Carbon 3%/17.92M is in /workspace/shengtang-2026-11-11 and now also in #208",
+        "defaultBranchSearch": "0 hits",
+        "openPrHits": {
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#208": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium quota-structure screenshot"
+      }
+    }
+  ],
+  "scopeNote": "第三方插件：Claude/GPT 周剩余 100%（已用 0%）突回满；Gemini 5h 84%；Argon 周 47%。无 token，不能反推池，也不与次日 Carbon 3% 拼接。",
+  "screenshotsCommitted": false,
+  "screenshotStorage": "X 截图不入库。image 文件名只是目视核对时的引用，不是仓库路径。图上字段和原帖 URL 写在本文件。"
+}

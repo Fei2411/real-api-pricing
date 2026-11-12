@@ -1,0 +1,136 @@
+{
+  "recordedAt": "2026-11-11T19:47:00+08:00",
+  "sourceType": "x_author_timeline_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "timezoneNote": "source timestamps are UTC (Z); createdAtTaipei is converted to Asia/Taipei (UTC+8)",
+  "id": "imlukef-2p8b-today-codex29-x-2026-11-09",
+  "items": [
+    {
+      "id": "x-2119770314033008932",
+      "confidence": "Medium",
+      "planId": null,
+      "model": "mixed-claude-code-and-codex",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ImLukeF/status/2119770314033008932",
+        "account": "ImLukeF",
+        "profileUrl": "https://x.com/ImLukeF",
+        "createdAt": "2026-11-09T12:33:20.000Z",
+        "createdAtTaipei": "2026-11-09 20:33:20 Asia/Taipei",
+        "text": "Big day today on the tokens today. Opus 5.5 and GPT-6.1 Sol are amazing, I tell you what."
+      },
+      "observed": {
+        "oral": {
+          "modelsNamed": [
+            "Opus 5.5",
+            "GPT-6.1 Sol"
+          ],
+          "qualitative": "big day on tokens"
+        },
+        "screenshot1": {
+          "image": "images/ImLukeF-bigday-1.jpg",
+          "title": "AI usage",
+          "totalTokensTodayLabel": "2.78B",
+          "totalTokensToday": 2780000000,
+          "wowLast7VsPrior7": "↓ 11% last 7 days vs the 7 before",
+          "codexWeeklyLimitPct": 29,
+          "personalTokens": {
+            "label": "2.71B",
+            "tokens": 2710000000,
+            "subtitle": "Coding tools"
+          },
+          "appTokens": {
+            "label": "68.6M",
+            "tokens": 68600000,
+            "reportedSpendUsd": 45.2
+          },
+          "apiSpendTodayUsd": 45.35,
+          "apiSpendCaption": "Reported · USD",
+          "apiValueUsdApprox": 630.82,
+          "apiValueCaption": "At list prices",
+          "updated": "39s ago"
+        },
+        "screenshot2": {
+          "image": "images/ImLukeF-bigday-2.jpg",
+          "dateLabel": "today (2026-11-09)",
+          "totalTokensTodayLabel": "2.81B",
+          "totalTokensToday": 2810000000,
+          "cacheReadPct": 98.1,
+          "outputTokensLabel": "6.3M",
+          "outputTokens": 6300000,
+          "streak": "51-day streak",
+          "bestDay": "3.98B (Sat, 5 Sept)",
+          "wowLast7VsPrior7": "↓ 11% last 7 days vs the 7 before",
+          "rows": [
+            {
+              "source": "Claude Code",
+              "tokensLabel": "1.32B",
+              "tokens": 1320000000,
+              "sharePct": 46.9
+            },
+            {
+              "source": "Codex",
+              "tokensLabel": "1.42B",
+              "tokens": 1420000000,
+              "sharePct": 50.6
+            },
+            {
+              "source": "OpenCode",
+              "tokens": 0,
+              "sharePct": 0.0
+            },
+            {
+              "source": "Anthropic API",
+              "tokensLabel": "68.5M",
+              "tokens": 68500000,
+              "sharePct": 2.4
+            },
+            {
+              "source": "OpenAI API",
+              "tokensLabel": "41.2K",
+              "tokens": 41200,
+              "sharePct": 0.0
+            },
+            {
+              "source": "OpenRouter",
+              "tokens": 0,
+              "sharePct": 0.0
+            },
+            {
+              "source": "Gemini",
+              "tokensLabel": "24.6K",
+              "tokens": 24600,
+              "sharePct": 0.0
+            }
+          ],
+          "rowSumApprox": "1.32B+1.42B+68.5M+41.2K+24.6K ≈ 2.8085B ≈ 2.81B"
+        }
+      },
+      "gaps": [
+        "两张图总量冲突：2.78B（图1，Personal 2.71B + App 68.6M ≈ 2.7786B）vs 2.81B（图2）。保留两边，不平均。可能是刷新时间或统计口径略有差别",
+        "98.1% 是 cache read，不是配额使用率",
+        "API value ≈ $630.82 是列表价估值；API spend today $45.35 是 reported spend。两者不要混成同一口径，也不要当成订阅账单",
+        "Codex weekly limit 29% 是周窗口；图2 Codex 1.42B 是当日 token。禁止用 1.42B / 0.29 反推 Codex 周池，因为 29% 含本周已用天数，不是今日份额",
+        "2.78B/2.81B 是多产品合计（Claude Code + Codex + API），不能拿总 token 去配 Codex 29%",
+        "套餐档位未在图上标明；口述模型名未在图2产品行里逐条出现",
+        "不可与已收录的 ImLukeF 247.1M @ Weekly·Fable 30%（2119946202464809414，#223）拼接"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "sisterPostAlreadyInOpenPr": "2119946202464809414 High 247.1M @ Fable weekly 30% is in #223; this is a distinct post id",
+        "defaultBranchSearch": "0 hits",
+        "openPrHits": {
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#208": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium dashboard; do not recount 2119946202464809414"
+      }
+    }
+  ],
+  "scopeNote": "2026-11-09 日面板 2.78B 与 2.81B 冲突保留。98.1% 是 cache。禁止用当日 Codex 1.42B ÷ 周 29% 反推，也不可与 247.1M@30% 拼接。",
+  "screenshotsCommitted": false,
+  "screenshotStorage": "X 截图不入库。image 文件名只是目视核对时的引用，不是仓库路径。图上字段和原帖 URL 写在本文件。"
+}

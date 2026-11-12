@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-11-12",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "OddScienceLab 口述 Grok Bot Ultra，设置页 Usage 100%。无 token，不能校准周池。截图含账户邮箱，不转述邮箱，截图不入库。",
+  "items": [
+    {
+      "id": "x-OddScienceLab-grokbot-ultra-100pct-2026-11-12",
+      "confidence": "Medium",
+      "planId": "grok_bot_ultra_oral",
+      "model": "Grok Bot Ultra（作者口述）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/OddScienceLab/status/2120627754798641283",
+        "account": "OddScienceLab",
+        "profileUrl": "https://x.com/OddScienceLab",
+        "createdAt": "2026-11-11T21:20:30.000Z"
+      },
+      "observed": {
+        "screenshot": "Settings Usage 100% at 05:16, timezone Asia/Kuala Lumpur",
+        "oralYesterdayMorning": "46–47%",
+        "oralClaim": "In less than 24 hours, the remaining allowance was completely [text truncated]",
+        "tokens": null,
+        "hasScreenshot": true,
+        "screenshotsCommitted": false,
+        "emailOnScreenshot": "present; not transcribed"
+      },
+      "gaps": [
+        "无绝对 token",
+        "不能校准周池",
+        "前一日 46–47% 是口述"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "cursor-x-ultra-weekly-cut-oct30-x-2026-11-09.json"
+  ]
+}

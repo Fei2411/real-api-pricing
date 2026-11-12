@@ -1,0 +1,92 @@
+{
+  "recordedAt": "2026-11-09",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 211,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-09 扫描：Claude Max × Claude Code 近 7 日 4.2B tokens / API-worth $1439.88，含 30 日 cache 分项。截图只链原帖。",
+  "items": [
+    {
+      "id": "x-ExTempestShadow-claude-max-cc-4p2b-week",
+      "confidence": "High",
+      "planId": "claude_max_unspecified_tier",
+      "model": "Opus 5.5 + Sonnet 5.5 (Claude Code local estimator)",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ExTempestShadow/status/2119559337731572032",
+        "account": "ExTempestShadow",
+        "createdAt": "2026-11-08T22:35:00Z"
+      },
+      "observed": {
+        "planClaim": "Claude Max (first purchase end of October)",
+        "last5h": {
+          "apiWorthUsd": 116.17,
+          "tokensApprox": 257100000,
+          "responses": 565
+        },
+        "today": {
+          "apiWorthUsd": 42.45,
+          "tokensApprox": 74500000,
+          "responses": 281
+        },
+        "last7d": {
+          "apiWorthUsd": 1439.88,
+          "tokensApprox": 4200000000,
+          "responses": 9933
+        },
+        "last30d": {
+          "apiWorthUsd": 2525.95,
+          "tokensApprox": 8000000000,
+          "responses": 18961
+        },
+        "costBreakdown30d": {
+          "cacheReads": {
+            "usd": 1567.55,
+            "pct": 62,
+            "tokensApprox": 7800000000
+          },
+          "cacheWrites": {
+            "usd": 569.84,
+            "pct": 23,
+            "tokensApprox": 89700000
+          },
+          "output": {
+            "usd": 386.41,
+            "pct": 15,
+            "tokensApprox": 22100000
+          },
+          "freshInput": {
+            "usd": 2.14,
+            "pct": 0,
+            "tokensApprox": 541000
+          }
+        },
+        "byModel30d": {
+          "opus_5_5": {
+            "usd": 1957.84,
+            "pct": 78,
+            "tokensApprox": 5900000000,
+            "responses": 14139
+          },
+          "sonnet_5_5": {
+            "usd": 568.11,
+            "pct": 22,
+            "tokensApprox": 2100000000,
+            "responses": 4822
+          }
+        },
+        "hasScreenshot": true,
+        "screenshotNote": "Claude Code local API-price estimator dashboard; not copied into repo"
+      },
+      "gaps": [
+        "Max 5x vs 20x/Ultra 未写明",
+        "无官方周额度百分比",
+        "4.2B 为 7 日合计非打满周池",
+        "面板为本地估算工具"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-09.json",
+    "claude-usage-x-signals-2026-10-27.json"
+  ]
+}

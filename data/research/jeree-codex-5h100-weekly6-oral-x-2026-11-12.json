@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-11-12",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "Jeree 口述 Codex 5h 100% / 周剩余 6%。无截图、无 token、无套餐。只作窗口与周限冲突的弱旁证，不采用。",
+  "items": [
+    {
+      "id": "x-Jeree-codex-5h100-weekly6-oral-2026-11-12",
+      "confidence": "Medium",
+      "confidenceNote": "弱，口述。",
+      "planId": null,
+      "model": "Codex（档位未写）",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/Jeree12408242/status/2120672710833340863",
+        "account": "Jeree12408242",
+        "profileUrl": "https://x.com/Jeree12408242",
+        "createdAt": "2026-11-12T00:19:09.000Z"
+      },
+      "observed": {
+        "fiveHourWindowOral": "100%",
+        "weeklyRemainingOral": "6%",
+        "claim": "跑了一条就停了：已达每周限额。窗口满着，这周已经没得用了。",
+        "tokens": null,
+        "hasScreenshot": false
+      },
+      "gaps": [
+        "无截图",
+        "无 token",
+        "无套餐",
+        "不能上线"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "chatgpt-pro100-codex-weekly-x-2026-11-07.json"
+  ]
+}

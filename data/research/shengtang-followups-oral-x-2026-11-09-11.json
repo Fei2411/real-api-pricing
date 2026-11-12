@@ -1,0 +1,172 @@
+{
+  "recordedAt": "2026-11-11T19:47:00+08:00",
+  "sourceType": "x_author_timeline_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "timezoneNote": "source timestamps are UTC (Z); createdAtTaipei is converted to Asia/Taipei (UTC+8)",
+  "id": "shengtang-followups-oral-x-2026-11-09-11",
+  "items": [
+    {
+      "id": "x-2120426603276800442",
+      "confidence": "Medium",
+      "planId": "gemini-5x-ultra-contextual",
+      "model": "gemini-4-carbon",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/shengtang135754/status/2120426603276800442",
+        "account": "shengtang135754",
+        "profileUrl": "https://x.com/shengtang135754",
+        "createdAt": "2026-11-11T08:01:12.000Z",
+        "createdAtTaipei": "2026-11-11 16:01:12 Asia/Taipei",
+        "text": "📢Gemini 4 carbon操盘制作的短片《步步惊心一念三百年》\n\n听说4 Carbon写脚本写的好，我用了这个模型配合colab做视频，4carbon总控，只消耗周额度2%，效果你们看看怎么样？",
+        "media": "video only; no still quota screenshot extracted"
+      },
+      "observed": {
+        "oral": {
+          "model": "Gemini 4 Carbon as director / 总控",
+          "weeklyQuotaUsedPctThisTask": 2,
+          "tooling": "Colab video"
+        },
+        "screenshot": null,
+        "tokens": null
+      },
+      "gaps": [
+        "2% 是口述、且明确指这次片子/总控消耗，不是面板累计读数；附件是视频，未抽帧",
+        "同日更早的 2120389325187891286（13:33 Asia/Taipei）是累计样本：17,926,261 tokens + 口述周已用 3%。时间顺序是 3% 累计在前、2% 本任务在后。禁止 2%+3%，也不要把 2% 当成更新后的累计周使用率",
+        "无 token 分项与本 2% 对应"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "doNotRecount": "2120389325187891286 already staged",
+        "defaultBranchSearch": "0 hits",
+        "openPrHits": {
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#208": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium oral task-level 2%; not a second counting of the 3% cumulative post"
+      }
+    },
+    {
+      "id": "x-2119736678017568788",
+      "confidence": "Medium",
+      "planId": "gemini-ultra-5x",
+      "model": "opus-5.5-plus-minimax-h3",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/shengtang135754/status/2119736678017568788",
+        "account": "shengtang135754",
+        "profileUrl": "https://x.com/shengtang135754",
+        "createdAt": "2026-11-09T10:19:41.000Z",
+        "createdAtTaipei": "2026-11-09 18:19:41 Asia/Taipei",
+        "text": "新作品，2分钟视频，opus 5.5➕minimax h3，使用Google colab 8.33算力单位。\n\nGemini ultra 5x里面剩余的50%claude周额度，一个视频就全部用完了，这个太少了，一点都不扛用。",
+        "media": "video only; no still quota bar extracted"
+      },
+      "observed": {
+        "oral": {
+          "plan": "Gemini Ultra 5x",
+          "models": [
+            "opus 5.5",
+            "minimax h3"
+          ],
+          "colabComputeUnits": 8.33,
+          "videoLength": "2 minutes",
+          "claim": "the remaining 50% of Claude weekly quota inside Gemini Ultra 5x was fully used up by one video"
+        },
+        "screenshot": null,
+        "tokens": null
+      },
+      "gaps": [
+        "硬数字是「剩余的50% Claude 周额度被一个视频用完」；没有 token，没有官方面板静帧",
+        "8.33 是 Colab 算力单位，不是 token，也不是美元",
+        "不能用 50% 反推 Claude 周池，因为没有对应 token",
+        "与「50%我就二十多刀」（2119745506452930733）不要自动等同或换算"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "defaultBranchSearch": "0 hits",
+        "openPrHits": {
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#208": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium oral"
+      }
+    },
+    {
+      "id": "x-2119773037327495316",
+      "confidence": "Medium",
+      "planId": "gemini-ultra",
+      "model": null,
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/shengtang135754/status/2119773037327495316",
+        "account": "shengtang135754",
+        "profileUrl": "https://x.com/shengtang135754",
+        "createdAt": "2026-11-09T12:44:10.000Z",
+        "createdAtTaipei": "2026-11-09 20:44:10 Asia/Taipei",
+        "text": "@AmitSinRaw 我是ultra 1050单位"
+      },
+      "observed": {
+        "oral": {
+          "plan": "Ultra",
+          "unitsLiteral": 1050,
+          "unitUnspecified": true
+        },
+        "screenshot": null
+      },
+      "gaps": [
+        "单位未定义（算力/积分/额度？）；无 token、无配额百分比、无截图",
+        "不可与 8.33 Colab 单位或「二十多刀」换算"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "defaultBranchSearch": "0 hits",
+        "openPrHits": {
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#208": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium oral with weak unit"
+      }
+    },
+    {
+      "id": "x-2119745506452930733",
+      "confidence": "Low",
+      "planId": null,
+      "model": null,
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/shengtang135754/status/2119745506452930733",
+        "account": "shengtang135754",
+        "profileUrl": "https://x.com/shengtang135754",
+        "createdAt": "2026-11-09T10:54:46.000Z",
+        "createdAtTaipei": "2026-11-09 18:54:46 Asia/Taipei",
+        "text": "@yuqingjz 50%我就二十多刀"
+      },
+      "observed": {
+        "oral": {
+          "literal": "50%我就二十多刀",
+          "dollarsApprox": "twenty-plus",
+          "pct": 50
+        }
+      },
+      "gaps": [
+        "50% 是剩余还是已用、二十多刀是 API 估值还是别的口径，均未说明",
+        "按规则不作为有效额度证据，仅附录以免丢失上下文"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "disposition": "Low; recorded but not counted as a new valid signal"
+      }
+    }
+  ],
+  "scopeNote": "口述本任务 Carbon 周额度 2%、一条视频用完 Ultra 5x 里剩余 50% Claude 周额度、ultra 1050 单位（单位未定义）。「50%我就二十多刀」标 Low。禁止 2%+3%，禁止用百分比反推池。",
+  "screenshotsCommitted": false,
+  "screenshotStorage": "X 截图不入库。image 文件名只是目视核对时的引用，不是仓库路径。图上字段和原帖 URL 写在本文件。"
+}

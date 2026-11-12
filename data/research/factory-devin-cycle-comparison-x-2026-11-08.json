@@ -1,0 +1,119 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_user_supplied",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "用户指定来源。一个完整账期的实际用量、tokscale API 估值、作者倍数和可用额度分列。research-only，不改 adopted.csv。图片只引用原帖，不入库。",
+  "items": [
+    {
+      "id": "x-2119284091820642485",
+      "confidence": "Medium",
+      "planId": "factory_20_and_devin_20",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ceciiiax/status/2119284091820642485",
+        "account": "ceciiiax",
+        "createdAt": "2026-11-08T04:21:16.000Z",
+        "createdAtTaipei": "2026-11-08T12:21:16+08:00",
+        "text": "@superchen3x @Fei2411 我定了factory和devin $20，如果devin不用fusion或swe很容易用完，factory明显更多 （图是我个人的一个月用量比较） https://t.co/yKuSVW7jXd"
+      },
+      "observed": {
+        "evidenceKind": "author-created Token Monitor comparison graphics, not a raw quota dashboard",
+        "hasScreenshot": true,
+        "screenshotsCommitted": false,
+        "screenshotCite": "https://x.com/ceciiiax/status/2119284091820642485",
+        "screenshotCount": 2,
+        "priceUsdEach": 20,
+        "planNote": "作者写的是两个 $20 订阅。Devin 这边没有写成 Max；不要和 $200 Devin Max 的周额度帖合并。",
+        "window": {
+          "factory": "Oct 6–Nov 5, 31-day cycle",
+          "devin": "Oct 4–Nov 3, 31-day cycle",
+          "year": "not printed; 2026 inferred from post"
+        },
+        "tokenDefinition": "input + output + cache read + cache write; the charts do not print those four components separately",
+        "quotaPct": null,
+        "input": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "output": null,
+        "availableAllowance": null,
+        "cycleUsage": {
+          "note": "完整账期里实际用掉的 token，不是打满，也不是月上限",
+          "factory": {
+            "rawTokens": 477500000,
+            "roundedTokensLabel": 478000000
+          },
+          "devin": {
+            "rawTokens": 570400000,
+            "roundedPaidTokensLabel": 182000000,
+            "roundedRawTokensLabel": 570000000
+          }
+        },
+        "apiPriceEstimate": {
+          "note": "tokscale list-price estimate shown on the charts; not an invoice and not a dollar quota",
+          "factoryUsd": 184.6,
+          "devinPaidModelsUsd": 74.4
+        },
+        "authorChartLabels": {
+          "note": "作者图上的比较，不是可用额度",
+          "factoryPaidTokensMultiple": 2.6,
+          "factoryApiPriceValueMultipleOnPaidModels": 2.5,
+          "devinRawTokensDeltaPctLabel": 19,
+          "devinFreeSweSharePctLabel": 68,
+          "factoryOpusApiPriceEstimateUsd": 98,
+          "factoryOpusShareOfApiPriceEstimatePctLabel": 53,
+          "factoryFeeMultipleLabel": 9.2,
+          "devinFeeMultipleLabel": 3.7
+        },
+        "factoryModelRows": [
+          {"model": "gpt-6-luna", "millionTokens": 148.9, "apiPriceValueUsd": 4.02},
+          {"model": "claude-opus-5-5", "millionTokens": 127, "apiPriceValueUsd": 98},
+          {"model": "gpt-6-1-sol", "millionTokens": 113.2, "apiPriceValueUsd": 38},
+          {"model": "glm-5-3", "millionTokens": 54.4, "apiPriceValueUsd": 24},
+          {"model": "kimi-k3", "millionTokens": 19.2, "apiPriceValueUsd": 8.28},
+          {"model": "claude-sonnet-5-5", "millionTokens": 8.8, "apiPriceValueUsd": 7.5},
+          {"model": "magpie/* (5 models)", "millionTokens": 2.7, "apiPriceValueUsd": 2.84},
+          {"model": "Other (4 models)", "millionTokens": 1.9, "apiPriceValueUsd": 0.16},
+          {"model": "grok-4-7", "millionTokens": 1.4, "apiPriceValueUsd": 2.03}
+        ],
+        "devinModelRows": [
+          {"model": "swe-2-max", "millionTokens": 196, "apiPriceValueUsd": null, "billing": "free"},
+          {"model": "swe-2-medium", "millionTokens": 101.2, "apiPriceValueUsd": null, "billing": "free"},
+          {"model": "swe-2-high", "millionTokens": 84.9, "apiPriceValueUsd": null, "billing": "free"},
+          {"model": "gpt-6-1-sol-medium", "millionTokens": 67.3, "apiPriceValueUsd": 17},
+          {"model": "claude-opus-5-5 (med/high/x... truncated)", "millionTokens": 65.8, "apiPriceValueUsd": 39},
+          {"model": "claude-sonnet-5-5 (all effo... truncated)", "millionTokens": 40.7, "apiPriceValueUsd": 14},
+          {"model": "swe-1-6-slow + compactor", "millionTokens": 6.5, "apiPriceValueUsd": null, "billing": "free"},
+          {"model": "Other paid (4 models)", "millionTokens": 3.6, "apiPriceValueUsd": 0.96},
+          {"model": "grok-4-7-medium", "millionTokens": 3.1, "apiPriceValueUsd": 2.33},
+          {"model": "gpt-5-6-sol-low", "millionTokens": 1.3, "apiPriceValueUsd": 1.12}
+        ],
+        "rowUnits": "model, million tokens, USD API-price estimate or free",
+        "derivedFromRowLabels": {
+          "note": "由分项标签相加，不是面板另给的总数",
+          "factoryMillionTokens": 477.5,
+          "factoryApiPriceValueUsd": 184.83,
+          "devinMillionTokens": 570.4,
+          "devinPaidMillionTokens": 181.8,
+          "devinFreeMillionTokens": 388.6,
+          "devinPaidApiPriceValueUsd": 74.41
+        }
+      },
+      "gaps": [
+        "完整账期的实际用量不等于耗尽，不能当成月上限或可用额度",
+        "API-price value 是 tokscale 估值，不是账单，也不是配额美元",
+        "Factory 分项 token 合计 477.5M，与标题舍入 478M 并存；分项美元合计 184.83，与标题 184.60 差在舍入",
+        "Devin 分项合计 570.4M，其中付费 181.8M、免费 388.6M 是分项相加；标题 182M / 570M 和 68% 是舍入标签",
+        "Devin 付费分项美元合计 74.41，标题为 74.40",
+        "没有 token 四分项、缓存率和模型单价版本；图上的 2.5× / 2.6× 只描述这个样本",
+        "这是 $20 订阅的一个账期，不能拿去覆盖 Devin Max 周池"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-user-submitted-2026-11-08.json"
+  ],
+  "deduplication": {
+    "result": "new; post id absent on main, on draft #205, and on the other remote research branches checked 2026-11-08",
+    "index": "x-scan-user-submitted-2026-11-08.json"
+  }
+}

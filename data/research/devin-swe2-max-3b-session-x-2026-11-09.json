@@ -1,0 +1,40 @@
+{
+  "recordedAt": "2026-11-09",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 213,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "Devin SWE-2 Max 单 session ≈3.02B tokens（cache 主导）。截图只链原帖。",
+  "items": [
+    {
+      "id": "x-noah-devin-swe2-max-3b-session",
+      "confidence": "Medium",
+      "planId": "devin_unspecified",
+      "model": "SWE-2 Max",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/noah_z_zhang/status/2119582708846461219",
+        "account": "noah_z_zhang",
+        "createdAt": "2026-11-09T00:07:52Z"
+      },
+      "observed": {
+        "agentMessages": 27442,
+        "inputTokensApprox": 71056952,
+        "outputTokens": 13722046,
+        "cachedInputTokensApprox": 2934166784,
+        "totalTokensApprox": 3018945782,
+        "authorClaim": "3 billion tokens in 1 week in 1 session; rate limited yesterday",
+        "uiContradiction": "header says No turns completed yet in this session",
+        "hasScreenshot": true
+      },
+      "gaps": [
+        "无计划档",
+        "无配额%",
+        "单 session 非订阅池",
+        "sub-agent 未说明"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-09.json"
+  ]
+}

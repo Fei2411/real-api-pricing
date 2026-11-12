@@ -1,0 +1,117 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_user_supplied",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "用户指定来源。信息图上的美元额度、4 亿 token 标签、作者月推算和历史周读数分列。没有与 token 对应的配额百分比。research-only，不改 adopted.csv。图片只引用原帖，不入库。",
+  "items": [
+    {
+      "id": "x-2118805051183706581",
+      "confidence": "Medium",
+      "planId": "claude_factory_devin_comparison",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ZShipZuck/status/2118805051183706581",
+        "account": "ZShipZuck",
+        "createdAt": "2026-11-06T20:37:44.000Z",
+        "createdAtTaipei": "2026-11-07T04:37:44+08:00",
+        "text": "这是我自己测试可用 Claude 渠道的最新额度对比：Claude Pro、Factory Pro、Factory Plus、Devin Max\n\n• Claude Pro ($20)：5h 约 $25 / 周限 $200-260 / 无月限 → 满打满算约 $960/月（~48x）\n• Factory Pro ($20)：5h 约 $32 / 周限 $99 / 30天上限 $198 → 约 $200/月（~10x）\n• Factory Plus ($100)：5h 约 $53 / 周限 $317 / 30天上限 $648 → 约 $650/月（~6.5x）\n• Devin Max ($200)：10月还能跑 $1000/月，11月起大砍到 $95-155/周 → 现在仅 $400-660/月（2-3x）\n\n1. Factory 的缩水：Factory Pro 满负荷两周就会撞上 30 天上限；Plus 号称是 Pro 的 5 倍，实测下来只有 3.3 倍左右（5h 窗口更是只有 1.65 倍）。\n2. Devin Max 暗降：同一个账号连续三周实测，周额度从 10/18 的 $310 → 10/25 的 $222 → 11/01 的 $94，砍了超过一半，我其它 Max 号也同步跳水。\n\n所以最优解还是Claude官方：Claude Pro 虽然 5 小时窗口小（$25），但只要多备几个号轮换，花同样的钱能拿到其它渠道 3～20 倍的真实额度。"
+      },
+      "observed": {
+        "evidenceKind": "author test summary plus infographic; no raw per-request token log",
+        "hasScreenshot": true,
+        "screenshotsCommitted": false,
+        "screenshotCite": "https://x.com/ZShipZuck/status/2118805051183706581",
+        "screenshotCount": 1,
+        "apiRatesUsdPerMillion": {
+          "note": "信息图自带价卡，不是本帖的 token 明细，也不是本仓库采用价",
+          "input": 4,
+          "output": 20,
+          "cacheRead": 0.2,
+          "cacheWrite": 5
+        },
+        "cycleUsage": null,
+        "quotaPct": null,
+        "input": null,
+        "cacheRead": null,
+        "cacheWrite": null,
+        "output": null,
+        "authorStatedAllowances": [
+          {
+            "plan": "Claude Pro",
+            "monthlyPriceUsd": 20,
+            "fiveHourWorthUsd": 25,
+            "weeklyWorthUsdRange": [200, 260],
+            "weeklyTokensLabel": 400000000,
+            "weeklyTokensLabelNote": "图中「4亿 Tokens」文字；没有配额百分比，也没有 input/output/cache 分项",
+            "no30DayLimitClaim": true,
+            "rolling30DayWorthUsd": null
+          },
+          {
+            "plan": "Factory Pro",
+            "monthlyPriceUsd": 20,
+            "fiveHourWorthUsd": 32,
+            "weeklyWorthUsd": 99,
+            "rolling30DayWorthUsd": 198
+          },
+          {
+            "plan": "Factory Plus",
+            "monthlyPriceUsd": 100,
+            "fiveHourWorthUsd": 53,
+            "weeklyWorthUsd": 317,
+            "rolling30DayWorthUsd": 648
+          },
+          {
+            "plan": "Devin Max",
+            "monthlyPriceUsd": 200,
+            "no5HourLimitClaim": true,
+            "weeklyWorthUsdRange": [95, 155],
+            "rolling30DayWorthUsd": null,
+            "priorMonthlyWorthUsdClaim": 1000
+          }
+        ],
+        "authorExtrapolation": {
+          "note": "作者由窗口或周额度外推的月价值和倍数，不是单独的月实测",
+          "claudeProMonthlyWorthUsd": 960,
+          "claudeProMultiple": 48,
+          "factoryProMonthlyWorthUsd": 200,
+          "factoryProMultiple": 10,
+          "factoryPlusMonthlyWorthUsd": 650,
+          "factoryPlusMultiple": 6.5,
+          "devinMaxMonthlyWorthUsdRange": [400, 660],
+          "devinMaxMultipleLabel": "2–3x",
+          "factoryPlusVsProAdvertisedMultiple": 5,
+          "factoryPlusVsProMeasuredMultiple": 3.3,
+          "factoryPlusVsProFiveHourMultiple": 1.65,
+          "infographicOnly": {
+            "claudeProVsFactoryProAtSame20UsdLabel": 4.8,
+            "claudeProVsFactoryPlus100UsdLabel": 1.5,
+            "note": "只出现在信息图页脚，正文没有这两句；是作者用月价值标签做的比较，不是新的实测"
+          }
+        },
+        "devinWeeklyHistoryClaims": [
+          {"date": "10/18", "usd": 310},
+          {"date": "10/25", "usd": 222},
+          {"date": "11/01", "usd": 94}
+        ]
+      },
+      "gaps": [
+        "4 亿 tokens 只是图上的文字，没有对应的配额百分比或 token 分项",
+        "图上 Devin Max 周区间是 $95–155，历史读数 $94 按原精度保留；另一位作者坚持每周 $100 并否认 $150，冲突不覆盖",
+        "Claude 月 $960、Factory 月 $200 / $650、Devin 月 $400–660 是作者外推或「最高可用」标签，不是交出的月度日志；30 天上限 $198 / $648 与月标签 $200 / $650 同时保留",
+        "图题写着对齐额度掉点百分比，图上没有实际百分比",
+        "与既有 Devin Pro 10/30 研究不是同档、同时期；不能用 Max 降额覆盖 Pro 样本",
+        "不能和 ceciiiax 那份 $20 账期的 tokscale 估值当成同一个可用额度"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-user-submitted-2026-11-08.json",
+    "devin-max-weekly-correction-x-2026-11-08.json",
+    "devin-pro-opus55-round1-2026-11-01.json"
+  ],
+  "deduplication": {
+    "result": "new; post id absent on main, on draft #205, and on the other remote research branches checked 2026-11-08",
+    "conflictRetainedWith": "x-2119274129128099962",
+    "index": "x-scan-user-submitted-2026-11-08.json"
+  }
+}

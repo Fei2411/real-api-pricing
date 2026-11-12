@@ -1,0 +1,48 @@
+{
+  "recordedAt": "2026-11-12",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "ImLukeF Claude 重置卡库存：Fable reset ×2 + Weekly reset ×2。只是 #220 / #230 的账户旁证，不是新的 token 实测，也不当新政策。截图不入库。",
+  "items": [
+    {
+      "id": "x-ImLukeF-claude-reset-inventory-2026-11-10",
+      "confidence": "Medium",
+      "planId": null,
+      "model": "Claude reset-card inventory; tier not stated in this post",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ImLukeF/status/2120277303100076234",
+        "account": "ImLukeF",
+        "authorId": "1951414337891082241",
+        "createdAt": "2026-11-10T22:07:56.000Z"
+      },
+      "observed": {
+        "oralText": "I have 4 Claude resets remaining and I used one yesterday.",
+        "fableResetCount": 2,
+        "fableResetNote": "Refills your Fable allowance and gives back what Fable used on your weekly limit. It doesn't reset your whole week.",
+        "fableExpire": "All expire Mar 9, 2027, 6:59 PM GMT+11; two New model reset rows with the same expiry",
+        "weeklyResetCount": 2,
+        "weeklyFirstExpires": "Dec 11, 2026, 9:00 AM GMT+11",
+        "weeklySecondExpires": "Dec 16, 2026, 3:59 PM GMT+11",
+        "inventoryCheck": "4 张 = 2 Fable + 2 Weekly，与口述一致",
+        "tokens": null,
+        "quotaPercent": null,
+        "hasScreenshot": true,
+        "screenshotsCommitted": false,
+        "relatedExisting": [
+          "#220 Fable 重置卡",
+          "#230 官方一次免费全额度重置至 2026-12-10 14:00 PT"
+        ]
+      },
+      "gaps": [
+        "无绝对 token",
+        "本帖未写订阅档位",
+        "不是新政策，不要当成新的额度数字"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "claude-fable52-api-promo-x-2026-11-10.json",
+    "claude-full-reset-official-x-2026-11-11.json"
+  ]
+}

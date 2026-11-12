@@ -1,0 +1,42 @@
+{
+  "recordedAt": "2026-11-08",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "archiveNote": "只归档 #207 的测量证据。文内 derivation.merged3 与 adopted 字段写的是当时按面板整数 13% 做的三源合并 30.39 亿；main 已在 2026-11-10 用同一维护者样本的 12.5pp 合并为 claude_pro × claude-opus-5.5 = 30.46 亿，并写明面板整数 13% 的 30.39 亿不采。本归档不改 30.46，不执行文内「采用」。",
+  "sourceType": "maintainer_local_measurement (TokenView 本机 7 天视图；截图由维护者在对话中提供，原图不入库)",
+  "scope": "Claude Pro $20 × Claude Code 满 5h 会话窗样本，用于 claude_pro × claude-opus-5.5 的百分点加权合并；issue #206",
+  "items": [
+    {
+      "id": "maintainer-tokenview-full5h-134m",
+      "source": "维护者本机 TokenView「外部 Agent 用量」，采样 2026-11-07（更新于 23:37:46；7 天视图，用量单柱落在 11/07），2026-11-08 提供",
+      "plan": "Claude Pro $20",
+      "agent": "Claude Code（Anthropic），508 次调用",
+      "tokens": {
+        "cacheRead": 133100000,
+        "cacheWrite": 924800,
+        "input": 0,
+        "output": 359000,
+        "totalStated": 134400000,
+        "note": "面板为 1 位小数读数（133.1M / 924.8K / 359K）；「新增 Token 1.3M（不含缓存读）」≈ 写+输出，故普通输入 ≈0；totalStated 134.4M 为面板顶栏四舍五入值"
+      },
+      "usageBar": "满 5h 会话窗 = 周额度 13%",
+      "cacheHitRate": 0.993,
+      "contextAvg": 263800,
+      "outputAvg": 707,
+      "tokenViewValuationUsd": 40.49,
+      "modelMix": "Opus 5.5 为主，另有 Haiku 5.5 细条（未拆分）",
+      "derivation": {
+        "segmentWorthUsd": "读 133.1M×$0.2 ＋ 写 0.9248M×$5 ＋ 出 0.359M×$20 = $38.42（本库 Anthropic 档价目）",
+        "alone": "$38.42 ÷ 13% × 4 周 ÷ $0.419/MTok ≈ 28.22 亿/月",
+        "tokenViewPath": "$40.49 ÷ 13% × 4 周 ÷ $0.419/MTok ≈ 29.73 亿/月（TokenView 自身估值口径，不采用）",
+        "merged3": "($587.52+$40.48+$38.42) ÷ (183+13.333+13) = $3.1836/pp → 月 $1,273.4 ÷ $0.419/MTok = 30.39 亿/月（采用）"
+      },
+      "adopted": "claude_pro::claude-opus-5.5 30.54→30.39亿（high，2026-11-08）",
+      "caveats": [
+        "周额度 13% 为整数读数，未记窗口起止百分比；5h 窗是否精确跑到 0% 剩余未记录",
+        "面板数字为 1 位小数，token 有取整误差",
+        "Haiku 5.5 细条未拆；按 Opus 5.5 价目全量计会使 worth 与 token 略高",
+        "TokenView 估值 $40.49 与本库价目重算 $38.42 差 5.4%，原因未核"
+      ]
+    }
+  ]
+}

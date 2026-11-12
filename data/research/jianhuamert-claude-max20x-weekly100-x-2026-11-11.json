@@ -1,0 +1,42 @@
+{
+  "recordedAt": "2026-11-12",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "jianhuamert Claude Max 20x：Weekly 100% used，Fable weekly 93% used，均 Resets in 8h 15m。无 token。2% in reserve 是 UI 文案，不要外推成额外池。截图不入库。",
+  "items": [
+    {
+      "id": "x-jianhuamert-claude-max20x-weekly100-fable93-2026-11-11",
+      "confidence": "Medium",
+      "planId": "claude_max_20x",
+      "model": "Claude Max 20x；截图左上 Max 20x；无模型 token 分项",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/jianhuamert/status/2120603935987642859",
+        "account": "jianhuamert",
+        "profileUrl": "https://x.com/jianhuamert",
+        "createdAt": "2026-11-11T19:45:51.000Z"
+      },
+      "observed": {
+        "planOnScreenshot": "Max 20x",
+        "weekly": "100% used, Resets in 8h 15m",
+        "fableWeekly": "93% used, Resets in 8h 15m",
+        "reserve": "2% in reserve · Lasts until reset",
+        "reserveIsUiCopy": true,
+        "updated": "Updated 3m ago",
+        "tokens": null,
+        "oralText": "评论 Codex/Claude 重置机制，无额外硬 token 数字。",
+        "hasScreenshot": true,
+        "screenshotsCommitted": false
+      },
+      "gaps": [
+        "无绝对 token",
+        "不能上线为额度数字",
+        "不要把 2% in reserve 外推成额外池"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "claude-full-reset-official-x-2026-11-11.json",
+    "claude-fable52-api-promo-x-2026-11-10.json"
+  ]
+}

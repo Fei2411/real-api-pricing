@@ -1,0 +1,50 @@
+{
+  "recordedAt": "2026-11-10",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 219,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-10 扫描：Claude Ultra × Fable 5.2 面板 247.1M @ Weekly·Fable 30%。截图只链原帖。",
+  "items": [
+    {
+      "id": "x-ImLukeF-claude-ultra-fable52-247m-30pct",
+      "confidence": "High",
+      "planId": "claude_ultra",
+      "model": "claude-fable-5-2 (Claude Code)",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ImLukeF/status/2119946202464809414",
+        "account": "ImLukeF",
+        "createdAt": "2026-11-10T00:12:16Z"
+      },
+      "observed": {
+        "planClaim": "Ultra (post text)",
+        "postClaim": "Fable 5.2 30% Ultra usage is roughly 250 Million tokens",
+        "panelByModel": {
+          "totalTokensApprox": 570600000,
+          "totalApiWorthUsdApprox": 102.15,
+          "fable52ClaudeCodeTokens": 247100000,
+          "fable52PriceLabel": "no price"
+        },
+        "quotaMeter": {
+          "label": "Weekly · Fable",
+          "percentUsed": 30,
+          "resetsText": "Resets Sun 5:00 AM"
+        },
+        "derivedResearchOnly": {
+          "fableWeeklyPoolTokensApprox": 823666667,
+          "note": "247.1M / 0.30; if Fable cap = 50% of Ultra weekly then Ultra weekly ~1.65B (aligns with #212/#195 magnitude) — DO NOT adopt without maintainer ruling"
+        },
+        "hasScreenshot": true,
+        "screenshotNote": "Two images on post: By model panel + Weekly·Fable 30% bar; not copied into repo"
+      },
+      "gaps": [
+        "Weekly·Fable 是 Fable 子额度还是整池 Ultra 需裁定",
+        "570.6M 合计未拆 input/cache/output",
+        "Ultra 价位/地区未写明"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-10.json"
+  ]
+}

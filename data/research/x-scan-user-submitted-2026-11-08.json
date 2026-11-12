@@ -1,0 +1,457 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_user_submitted",
+  "role": "source index for four user-supplied posts plus a later reply pass; supplements draft #205 and does not edit that pull request or its branch",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "supplements": {
+    "pullRequest": 205,
+    "url": "https://github.com/Fei2411/real-api-pricing/pull/205",
+    "branch": "daily-2026-11-08-pricing-signals",
+    "head": "226ce8cefd822aba49a65cd2cc2dc88ee79e4c0b",
+    "note": "只关联日批。不修改 #205，不改它的 branch，不重复它的四个文件。"
+  },
+  "counts": {
+    "mediumNewlyAdded": 9,
+    "mediumFromOriginalPosts": 4,
+    "mediumFromRepliesThisRound": 5,
+    "lowDiscarded": 2,
+    "highCounted": 0,
+    "alreadyPresent": 0,
+    "gapFilled": 0,
+    "existingContextReviewedNotCounted": 1,
+    "upstreamContextNotCounted": 2
+  },
+  "entries": [
+    {
+      "postId": "2119341006382567779",
+      "url": "https://x.com/UYouximi58156/status/2119341006382567779",
+      "account": "UYouximi58156",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "multi-plan-weekly-user-x-2026-11-08.json",
+      "whyMedium": "有具体周 token，没有与之对应的配额百分比；99.1% 是缓存率"
+    },
+    {
+      "postId": "2119284091820642485",
+      "url": "https://x.com/ceciiiax/status/2119284091820642485",
+      "account": "ceciiiax",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "factory-devin-cycle-comparison-x-2026-11-08.json",
+      "whyMedium": "有一个完整账期的 token 和 tokscale 估值，图是作者自制比较，不是配额面板，也没有配额百分比"
+    },
+    {
+      "postId": "2119274129128099962",
+      "url": "https://x.com/2232960089q/status/2119274129128099962",
+      "account": "2232960089q",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "devin-max-weekly-correction-x-2026-11-08.json",
+      "whyMedium": "只有口述的每周 100 美元，没有 token 或配额百分比"
+    },
+    {
+      "postId": "2118805051183706581",
+      "url": "https://x.com/ZShipZuck/status/2118805051183706581",
+      "account": "ZShipZuck",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "claude-factory-devin-allowances-x-2026-11-08.json",
+      "whyMedium": "有美元区间和图上的 4 亿 token 标签，没有可核对的配额百分比或 token 分项"
+    }
+  ],
+  "limits": [
+    "四条主帖都是 Medium。缺的是同一条证据里同时有 token 分项和配额百分比，所以没有截图级 High。",
+    "99.1%、99.2% 和 Fei2411 图上的 99.3% 都是缓存命中率，不是配额比例。",
+    "实际周期用量、API 估值、作者推算、可用额度分开记，不能互相代替。",
+    "Devin Max 每周 $100（并否认 $150）与 $95–155 同时保留；历史读数 $94 不改成 $95。",
+    "不把周用量乘 4 或乘 6，不把不同模型的 token 相加，不把未用完的账期用量写成上限。",
+    "ceciiiax 是两个 $20 订阅的账期用量。ZShipZuck / 2232960089q 谈的是 Devin Max。两边不是同一档。",
+    "上游 6 亿 token = 72% 周池的套餐归属仍未确认，只作旁证，不能拼到本条 Kimi，也不升级成独立 High 计数。",
+    "评论区这一轮不是全量。实际看了 11 条根帖上的 309 条去重回复，其中 275 条是他人评论；根帖发现、成本串和 Grok/Codex 串都还有下一页。"
+  ],
+  "replySearch": {
+    "complete": false,
+    "windowPacific": ["2026-11-01 00:32 PST", "2026-11-08 00:32 PST"],
+    "rootsDiscovered": 25,
+    "rootsRead": 11,
+    "repliesReviewed": 309,
+    "repliesFromOthers": 275,
+    "selfReplies": 34,
+    "earliestReplyUtc": "2026-11-01T14:52:28.000Z",
+    "latestReplyUtc": "2026-11-08T08:31:09.000Z",
+    "recentPlanThreads": {"replies": 112, "pagedToEmpty": true},
+    "costThreads": {"replies": 100, "nextPageRemains": true},
+    "grokCodexThreads": {"replies": 97, "nextPageRemains": true},
+    "limits": [
+      "根帖发现只取了前 25 条，后面还有下一页",
+      "没有做 to:Fei2411 的全量补充，也没有扫完全部根帖",
+      "搜索可能漏掉未索引、已删除或非公开回复",
+      "同一次检索里另有 8 张 Grok 配额条截图，只看到百分比、没有 token，不收录，也不把 61%→31% 抬成 High"
+    ]
+  },
+  "replyMediumAdded": [
+    {
+      "postId": "2119346974915002623",
+      "url": "https://x.com/niko70129972/status/2119346974915002623",
+      "account": "niko70129972",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "claude-max-7day-multimodel-reply-x-2026-11-08.json",
+      "whyMedium": "7 天图有 2795.9M 和 cached 2608.1M，但是多模型合计；口述约 3B Opus high 不能覆盖整张图，也没有配额百分比"
+    },
+    {
+      "postId": "2119342986589069763",
+      "url": "https://x.com/Riom510/status/2119342986589069763",
+      "account": "Riom510",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "claude-code-unattributed-4p64b-reply-x-2026-11-08.json",
+      "whyMedium": "截图 4.64B、155 sessions、$1472.59；正文是 $1200–1300。日期和套餐都没有，两套美元不取平均"
+    },
+    {
+      "postId": "2119339593174819186",
+      "url": "https://x.com/MartinM91217805/status/2119339593174819186",
+      "account": "MartinM91217805",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "droid-200-magpie-estimate-reply-x-2026-11-08.json",
+      "whyMedium": "Droid $200 档的 5 小时 $80、周 $500、月 $1000 是 Magpie 估算，不是测量"
+    },
+    {
+      "postId": "2119273279601229946",
+      "url": "https://x.com/big_mm_cat/status/2119273279601229946",
+      "account": "big_mm_cat",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "devin-max-500m-weekly-reply-x-2026-11-08.json",
+      "whyMedium": "口述 Devin Max 一周 Opus 5.5 约 500M；没有分项，不能和别人的每周 $100 相除"
+    },
+    {
+      "postId": "2117165895764377605",
+      "url": "https://x.com/tonyklose1984/status/2117165895764377605",
+      "account": "tonyklose1984",
+      "confidence": "Medium",
+      "status": "added",
+      "file": "grok-quota-61-to-31-reply-x-2026-11-08.json",
+      "whyMedium": "口述配额从 61% 降到 31%，没有 token，也不能反推额度池翻倍"
+    }
+  ],
+  "discardedLow": [
+    {
+      "postId": "2119279250499133768",
+      "url": "https://x.com/ZyLee99/status/2119279250499133768",
+      "account": "ZyLee99",
+      "confidence": "Low",
+      "status": "discarded",
+      "reason": "原文只说 Opus 消耗「调高了4.3」，没有单位，不能写成 4.3 倍；没有 token 或配额百分比。按默认规则不收录，不记成有效证据。"
+    },
+    {
+      "postId": "2117520576030056684",
+      "url": "https://x.com/2232960089q/status/2117520576030056684",
+      "account": "2232960089q",
+      "confidence": "Low",
+      "status": "discarded",
+      "reason": "「每 1X」的 100 和 300 没有单位，模型权重也没有 token 或配额百分比校准。按默认规则不收录，不记成额度。"
+    }
+  ],
+  "existingContextReview": {
+    "postId": "2119337499172770002",
+    "status": "already recorded; context updated, not a new row",
+    "file": "claude-600m-72pct-context-followup-2026-11-08.json",
+    "counted": false
+  },
+  "upstreamContextNotCounted": [
+    {
+      "postId": "2119337499172770002",
+      "account": "UYouximi58156",
+      "counted": false,
+      "whereRecorded": "multi-plan-weekly-user-x-2026-11-08.json#upstreamContextNotCounted",
+      "claims": {
+        "tokens": 600000000,
+        "weeklyUsedPct": 72,
+        "cacheHitPct": 99.2,
+        "weeklyWorthUsd": 250,
+        "monthlyWorthUsd": 1000
+      },
+      "followUpFile": "claude-600m-72pct-context-followup-2026-11-08.json",
+      "limit": "直接回复 Claude Pro/Opus 5.5 根帖 2119335203135172722，但正文仍未写自己的套餐或模型。同作者过滤没有别的确认。上下文倾向 Claude Pro，不能标成已确认。99.2% 是缓存率。数字对只是口述线索，不新计 High，也不能挂到 Kimi。600000000/0.72 只是同 mix 线性外推。"
+    },
+    {
+      "postId": "2119335203135172722",
+      "account": "Fei2411",
+      "url": "https://x.com/Fei2411/status/2119335203135172722",
+      "counted": false,
+      "idProvenance": "supplied verification note; this commit did not re-fetch the live post",
+      "visualCheck": {
+        "image": "supplied TokenView crop",
+        "windowLabel": "最近 7 天",
+        "agent": "Claude Code",
+        "tokensLabel": "134.4M",
+        "apiWorthUsdLabel": 40.49,
+        "newTokensExcludingCacheReadLabel": "1.3M",
+        "cacheHitPct": 99.3,
+        "cacheReadLabel": "133.1M",
+        "cacheWriteLabel": "924.8K",
+        "outputLabel": "359K",
+        "calls": 508,
+        "quotaPctOnImage": null,
+        "chart": "用量柱落在 11/07，图例为 Claude Opus 5.5；图底部被裁断",
+        "agentChipsAreNotAllowances": [
+          {"label": "Devin", "tokensLabel": "3.5B"},
+          {"label": "Claude Code", "tokensLabel": "134.4M"},
+          {"label": "Antigravity", "tokensLabel": "61.8M"},
+          {"label": "Codex", "tokensLabel": "29.1M"}
+        ]
+      },
+      "alreadyRecordedElsewhere": {
+        "pullRequest": 207,
+        "issue": 206,
+        "branch": "data/claude-pro-5h-sample-2026-11-08",
+        "file": "claude-pro-opus55-maintainer-5h-round1-2026-11-08.json",
+        "note": "未合并的 #207 已把同一张 TokenView 图记成维护者样本，并另记周额度 13%。本索引不重复计数，不把图上没有的 13% 写进来，也不把 7 天视图和「一个 5h 窗口」说成已经对齐。"
+      },
+      "limit": "99.3% 是缓存命中率。图上没有 quota%。筛选条上的 Devin 3.5B 不是 Devin Max 周池。这张图不能与 6 亿 / 72% 或 Kimi 口述拼接。"
+    }
+  ],
+  "conflictsRetained": [
+    {
+      "subject": "Devin Max weekly API-dollar allowance",
+      "a": {"postId": "2119274129128099962", "weeklyWorthUsd": 100, "rejects": 150},
+      "b": {"postId": "2118805051183706581", "weeklyWorthUsdRange": [95, 155], "historyUsd": [310, 222, 94]},
+      "resolution": "none; both kept"
+    }
+  ],
+  "notDuplicated": [
+    "data/research/x-scan-2026-11-08.json",
+    "data/research/kimi-code-plus19-monthly-x-2026-11-08.json",
+    "data/research/cursor-x-included-452m-day-x-2026-11-08.json",
+    "data/research/chatgpt-codex-200-daily-x-2026-11-08.json"
+  ],
+  "deduplication": {
+    "checkedAt": "2026-11-08",
+    "postIds": [
+      "2119341006382567779",
+      "2119284091820642485",
+      "2119274129128099962",
+      "2118805051183706581"
+    ],
+    "main": {
+      "ref": "origin/main",
+      "sha": "588fe5e4069b483e7a49ef01dbaaf4fb10678402",
+      "matches": 0
+    },
+    "pr205": {
+      "ref": "origin/daily-2026-11-08-pricing-signals",
+      "sha": "226ce8cefd822aba49a65cd2cc2dc88ee79e4c0b",
+      "matches": 0
+    },
+    "pr207": {
+      "ref": "origin/data/claude-pro-5h-sample-2026-11-08",
+      "sha": "9b1eb253d0ec957c35adeeed961249f420c405c7",
+      "matchesForTheseFourIds": 0,
+      "note": "同一 TokenView 图已在该分支的维护者样本里，本索引不把那张图再计成第五条"
+    },
+    "otherRemoteBranchesGrep": {
+      "matches": 0,
+      "refs": [
+        "origin/cursor/daily-2026-10-28-pricing-signals-8233",
+        "origin/cursor/daily-2026-10-29-pricing-signals",
+        "origin/cursor/daily-2026-10-31-pricing-signals-f3bf",
+        "origin/cursor/daily-2026-11-01-pricing-signals-037c",
+        "origin/cursor/daily-2026-11-04-pricing-signals-9701",
+        "origin/cursor/daily-2026-11-05-pricing-signals-6968",
+        "origin/cursor/daily-2026-11-06-pricing-signals-fd34",
+        "origin/cursor/daily-2026-11-07-pricing-signals-628d",
+        "origin/daily-2026-11-08-pricing-signals",
+        "origin/daily/2026-11-02-pricing-signals",
+        "origin/daily/2026-11-03-pricing-signals",
+        "origin/data/claude-pro-5h-sample-2026-11-08",
+        "origin/devin/1790347523-gpt6luna-plus-measured",
+        "origin/devin/1790600577-gpt6luna-round2",
+        "origin/devin/1790729339-claude-pro-opus55-ccusage",
+        "origin/devin/1790831306-agent-speedtest",
+        "origin/fix/ranking-bar-global-domain",
+        "origin/main"
+      ]
+    },
+    "action": "first round added four posts plus this index"
+  },
+  "replyDeduplication": {
+    "checkedAt": "2026-11-08",
+    "postIds": [
+      "2119346974915002623",
+      "2119342986589069763",
+      "2119339593174819186",
+      "2119273279601229946",
+      "2117165895764377605"
+    ],
+    "discardedIdsNotRecordedAsEvidence": [
+      "2119279250499133768",
+      "2117520576030056684"
+    ],
+    "main": {
+      "ref": "origin/main",
+      "sha": "588fe5e4069b483e7a49ef01dbaaf4fb10678402",
+      "matches": 0
+    },
+    "pr205": {
+      "ref": "origin/daily-2026-11-08-pricing-signals",
+      "sha": "226ce8cefd822aba49a65cd2cc2dc88ee79e4c0b",
+      "matches": 0
+    },
+    "pr207": {
+      "ref": "origin/data/claude-pro-5h-sample-2026-11-08",
+      "sha": "1ae7596a683743b31c517944adebde43a0e332a8",
+      "matches": 0
+    },
+    "pr209": {
+      "ref": "origin/data/kimi-699-panel-2026-11-08",
+      "sha": "2f7b8d38b740da2abeab8059b4a4ff4e46ea928a",
+      "matches": 0,
+      "note": "开放的采用 PR，研究 JSON 里也没有这五个 id"
+    },
+    "sameAccountDifferentPost": {
+      "account": "tonyklose1984",
+      "otherPostId": "2116695489639010636",
+      "branch": "origin/cursor/daily-2026-11-01-pricing-signals-037c",
+      "note": "另一条 ChatGPT 转述，不是 61%→31%，不补缺、不合并"
+    },
+    "parent600m": {
+      "postId": "2119337499172770002",
+      "alreadyInThisPullRequest": true,
+      "action": "context review only"
+    },
+    "action": "add five Medium reply files; discard two Low; do not add a new High for 600M/72%"
+  },
+  "screenshots": {
+    "committed": false,
+    "cite": [
+      "https://x.com/ceciiiax/status/2119284091820642485",
+      "https://x.com/ZShipZuck/status/2118805051183706581",
+      "https://x.com/Fei2411/status/2119335203135172722",
+      "https://x.com/niko70129972/status/2119346974915002623",
+      "https://x.com/Riom510/status/2119342986589069763"
+    ]
+  },
+  "supplement20261110": {
+    "recordedAt": "2026-11-10",
+    "note": "不改上面 2026-11-08 的 recordedAt、counts 和当时的去重记录。这是后来补上的一条用户证据。",
+    "counts": {
+      "mediumNewlyAdded": 1,
+      "highCounted": 0,
+      "alreadyPresent": 0,
+      "gapFilled": 0,
+      "echoNotCounted": 1
+    },
+    "entries": [
+      {
+        "postId": "2120065411240874466",
+        "url": "https://x.com/ai_funss/status/2120065411240874466",
+        "account": "ai_funss",
+        "confidence": "Medium",
+        "status": "added",
+        "file": "claude-ultra-monthly-api-worth-x-2026-11-10.json",
+        "whyMedium": "Claude Ultra $200 的自制 API 估值图有具体美元，但没有 tokens，也没有 quota%。不是官方额度面板。"
+      }
+    ],
+    "notCounted": [
+      {
+        "postId": "2120070914281025893",
+        "url": "https://x.com/yuqingjz/status/2120070914281025893",
+        "account": "yuqingjz",
+        "confidenceIfStandalone": "Low",
+        "status": "not counted",
+        "reason": "复述约数「Fable 大概 3000、Opus 能到 1.5 万」，是回声，不是第二条独立样本"
+      }
+    ],
+    "doNotCombineWith": {
+      "pullRequest": 223,
+      "url": "https://github.com/Fei2411/real-api-pricing/pull/223",
+      "otherSample": "ImLukeF Claude Ultra × Fable 5.2，247.1M @ Weekly·Fable 30%",
+      "reason": "另一作者的 token 和配额百分比。不能拿来把本图美元换成 token，也不改 #223 的分支"
+    },
+    "deduplication": {
+      "checkedAt": "2026-11-10",
+      "postId": "2120065411240874466",
+      "matches": 0,
+      "refs": {
+        "origin/main": "2599b7ad743a94b3ab6d4ff8cdb4d8359ee6943c",
+        "pr205": "226ce8cefd822aba49a65cd2cc2dc88ee79e4c0b",
+        "pr207": "1ae7596a683743b31c517944adebde43a0e332a8",
+        "pr209": "2f7b8d38b740da2abeab8059b4a4ff4e46ea928a",
+        "pr216": "66c98dbaa9333a795f3f3ffed191a4c2f08024bd",
+        "pr223": "faf1c9eb46b70fea0b12267cb0b5e5dc4fc23f36",
+        "pr225": "86c5fbbd1376197754887a4a46a294ca90534373",
+        "pr228": "d6c880ce432522001e8ef172f1e925cebfa5db02"
+      }
+    },
+    "screenshotsCommitted": false,
+    "screenshotCite": "https://x.com/ai_funss/status/2120065411240874466"
+  },
+  "supplement20261111": {
+    "recordedAt": "2026-11-11",
+    "note": "不改 2026-11-08 的 recordedAt、counts，也不改 2026-11-10 补充记录。这两条是后来补上的用户证据，彼此不混算。",
+    "counts": {
+      "highNewlyAdded": 2,
+      "alreadyPresent": 0,
+      "gapFilled": 0
+    },
+    "entries": [
+      {
+        "postId": "2120389325187891286",
+        "url": "https://x.com/shengtang135754/status/2120389325187891286",
+        "account": "shengtang135754",
+        "confidence": "High",
+        "confidenceLimit": "tokens 在截图上，周 3% 只在口述里",
+        "status": "added",
+        "file": "gemini4-carbon-5xultra-weekly-x-2026-11-11.json",
+        "whyHigh": "截图合计含缓存 17,926,261，分项为新增输入 2,656,411、缓存读取 15,019,228、输出含思考 250,622。周 3% 是口述。597,542,033 和 $310 是外推，不是打满。"
+      },
+      {
+        "postId": "2120404442512298069",
+        "url": "https://x.com/leo114119/status/2120404442512298069",
+        "account": "leo114119",
+        "confidence": "High",
+        "confidenceLimit": "不能完全排除更早周期用量；88.9% 是缓存率不是 quota",
+        "status": "added",
+        "file": "qwen-token-plan-15631418-2p5pct-x-2026-11-11.json",
+        "whyHigh": "截图总 tokens 15,631,418，另一张图月剩余 97.5%，对应口述 2.5%。625,256,720 是外推。模型只记 qwen，档位与 39 的币种不认定。"
+      }
+    ],
+    "doNotCombineWith": {
+      "pullRequest": 233,
+      "url": "https://github.com/Fei2411/real-api-pricing/pull/233",
+      "reason": "那边的 Gemini 4 Carbon 官方价和 Qwen Token Plan credits 表不是这两条用量样本。不改 #233 的分支，也不用那些表把外推写进 adopted。"
+    },
+    "deduplication": {
+      "checkedAt": "2026-11-11",
+      "postIds": [
+        "2120389325187891286",
+        "2120404442512298069"
+      ],
+      "matches": 0,
+      "sameAccountDifferentPost": {
+        "account": "leo114119",
+        "files": [
+          "claude-team-opus55-round1-2026-10-06.json",
+          "gemini-argon-round1-2026-10-16.json"
+        ],
+        "note": "同一账号更早的别的测量，不是这两枚 post id，不补缺、不合并"
+      },
+      "refs": {
+        "origin/main": "f2a79c39a72b1127f3672ca2b74b0c1743b3460c",
+        "pr205": "226ce8cefd822aba49a65cd2cc2dc88ee79e4c0b",
+        "pr207": "1ae7596a683743b31c517944adebde43a0e332a8",
+        "pr209": "2f7b8d38b740da2abeab8059b4a4ff4e46ea928a",
+        "pr216": "66c98dbaa9333a795f3f3ffed191a4c2f08024bd",
+        "pr223": "faf1c9eb46b70fea0b12267cb0b5e5dc4fc23f36",
+        "pr233": "2df7377045c070660b15530f30d23b9be80f7456"
+      }
+    },
+    "screenshotsCommitted": false,
+    "screenshotCite": [
+      "https://x.com/shengtang135754/status/2120389325187891286",
+      "https://x.com/leo114119/status/2120404442512298069"
+    ]
+  }
+}

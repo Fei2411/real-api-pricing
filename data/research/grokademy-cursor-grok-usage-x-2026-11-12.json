@@ -1,0 +1,64 @@
+{
+  "recordedAt": "2026-11-12",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "grokademy Cursor+Grok 控制台：周表 78%（重置 17 Nov）与日期筛选 1–11 Nov 的 Total 2.1B 窗口未对齐。禁止当 High 配对，禁止 2.1B÷78% 或 867M÷52%。套餐未写。截图不入库。",
+  "items": [
+    {
+      "id": "x-grokademy-cursor-grok-2_1b-78pct-window-mismatch-2026-11-12",
+      "confidence": "Medium",
+      "confidenceNote": "控制台同时出现 weekly % 与 token 总数，但日期筛选 1–11 Nov 与周表（Resets 17 Nov）未证明是同一窗口，不能当 High 配对。",
+      "planId": null,
+      "model": "Cursor + Grok Bot shared weekly pool; Pro / Super / Ultra / Pro+ not written on any of the three images",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/grokademy/status/2120678577813258442",
+        "account": "grokademy",
+        "profileUrl": "https://x.com/grokademy",
+        "createdAt": "2026-11-12T00:42:27.000Z"
+      },
+      "observed": {
+        "dateFilter": "1–11 Nov 2026",
+        "totalIncluded": "2.1B",
+        "creditUsage": "$0",
+        "additionalUsageThisMonth": "$0.00",
+        "byProductForSelectedDates": {
+          "Grok Bot": "1.3B",
+          "Cursor": "867.1M",
+          "Chat": "12.1M"
+        },
+        "weeklyIncludedUsed": "78%",
+        "productShareOfWeeklyMeter": {
+          "Cursor": "52%",
+          "Grok Bot": "25%",
+          "Chat": "1%"
+        },
+        "weeklyResets": "17 Nov",
+        "weeklyMeterSource": "同一张 Usage 控制台顶部 Weekly included usage 卡",
+        "infographicOvernight": {
+          "source": "作者自制图，标注 Source: Cursor usage dashboard + Francis's overnight readings",
+          "window": "Overnight, 11-12 Nov 2026 (ICT)",
+          "series": "21:24 43.7% → 01:37 77.1%，并画了 75% cap 线",
+          "claimTwoBatches": "2 full code batches built + reviewed (Grok Bot + Cursor cloud agents) ~+10%",
+          "claimOneAgent": "Only job running: 1 Cursor cloud agent editing 1 PR description (~74 min, 0 code changes). +23% (54.0% → 77.1%)",
+          "unverifiedPairing": "信息图把 867M 标成 52% of limit、1.30B 标成 25% of limit。这是未验证的窗口对齐。"
+        },
+        "hasScreenshot": true,
+        "screenshotsCommitted": false
+      },
+      "conflictsToKeep": "作者信息图的 token↔周% 配对与控制台日期筛选可能冲突，原样保留，不平均、不采用。",
+      "gaps": [
+        "套餐档位未写",
+        "2.1B / 867.1M / 1.3B 属于 1–11 Nov 这 11 天的日期筛选",
+        "周表 78% 的重置日是 17 Nov，未证明与 2.1B 是同一窗口",
+        "禁止 2.1B÷78%",
+        "禁止 867M÷52% 或 867.1M÷52%",
+        "禁止把研究里的 High 当成站点 high"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-09.json",
+    "cursor-x-included-452m-day-x-2026-11-08.json"
+  ]
+}

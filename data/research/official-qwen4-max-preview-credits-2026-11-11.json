@@ -1,0 +1,57 @@
+{
+  "recordedAt": "2026-11-12",
+  "sourceType": "official_docs",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "补 #233 已记下的「夜间折扣待对官方」缺口。不改 adopted，不覆盖 aliyun-token-plan-credits-2026-11-11.json 的 Credits 档位表。二手夜间 4% / 96% off 与官方冲突，以官方页为准，不采用 4%。预览有下线日。",
+  "items": [
+    {
+      "id": "official-qwen4-max-preview-credit-benefits-2026-11-11",
+      "confidence": "Medium",
+      "planId": "aliyun_token_plan",
+      "model": "qwen4-max-preview",
+      "source": {
+        "type": "official_docs",
+        "url": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+        "modelPage": "https://help.aliyun.com/zh/model-studio/qwen4-max-preview",
+        "altUrls": [
+          "https://help.aliyun.com/zh/model-studio/token-plan-team-overview",
+          "https://help.aliyun.com/en/model-studio/token-plan-team-overview",
+          "https://x.com/SlavoBB/status/2120533770784657629"
+        ],
+        "recheckedAtArchive": "2026-11-12",
+        "recheckResult": "个人版概述页与模型页在本归档写入时再次打开。概述页写明预览期 2026-11-11 10:00 至 11-25 24:00（UTC+8），Credits 低至 2 折，每晚 22:00-次日 08:00 再享 4 折（即原标准的 0.8 折）；同页 qwen3.8-max / qwen3.8-flash 夜间 4 折，deepseek-v4-pro-0813、deepseek-v4-flash-0731、deepseek-v4.1-flash、deepseek-v4.1-flash-1017 夜间 5 折，decision-model-preview 限时免费。模型页写明仅支持 Token Plan，不支持按量计费，预览期同上。夜间时刻写在同一条官方说明里，概述页该分句本身没有再印 UTC+8。"
+      },
+      "observed": {
+        "previewWindow": "2026-11-11 10:00 至 2026-11-25 24:00（UTC+8）；期间不做变更；预览结束后下线",
+        "access": "仅 Token Plan，不支持按量计费",
+        "modelId": "qwen4-max-preview",
+        "aliasOnPersonalOverview": "qwen4.0-max-preview；两个 ID 均可调用；账单中统一显示为 qwen4.0-max-preview",
+        "previewCredits": "限时活动期间 Credits 消耗低至 2 折（相当于增加 5 倍用量）",
+        "nightStack": "每晚 22:00–次日 08:00 再享 4 折，即原标准的 0.8 折（8% of standard / 92% off）",
+        "otherNightDiscounts": "同时段 qwen3.8-max、qwen3.8-flash 享 4 折；deepseek-v4-pro-0813、deepseek-v4-flash-0731、deepseek-v4.1-flash、deepseek-v4.1-flash-1017 享 5 折",
+        "decisionModel": "decision-model-preview 限时免费，调用不消耗 Credits",
+        "englishTeamPageWordingFromPack": "Credits consumption is as low as 20% of the standard rate (5x usage); calls between 22:00 and 08:00 enjoy an additional 60% off, that is, 8% of the standard rate.",
+        "corroboratingScreenshot": {
+          "url": "https://x.com/SlavoBB/status/2120533770784657629",
+          "postId": "2120533770784657629",
+          "screenshotsCommitted": false,
+          "reads": "QWEN4-MAX-PREVIEW — MAX DISCOUNT: 92% discount (you pay 8% of standard rate) 14:00–00:00 UTC daily; base 80% discount otherwise; full preview period Nov 11 10:00 → Nov 25 24:00 (UTC+8); 80% discount (5x) whole preview active",
+          "alignment": "与官方中文 2 折 + 夜间 0.8 折、英文 20% / 8% 一致。"
+        },
+        "doesNotReplaceCreditsTable": "Lite ¥39/20k、Essential ¥79/45k（新客至 11-30 ¥19.5/¥39.5）、Standard ¥139/80k、Pro ¥312/200k 仍只记在 aliyun-token-plan-credits-2026-11-11.json，本文件不重写该表。"
+      },
+      "conflictsToKeep": "部分二手文章（如 DigIntoAI）写成夜间 4% of standard / 0.4 折 / 96% off。本轮核对的官方页是 0.8 折 / 8%。冲突保留，以官方页为准，不采用 4%。",
+      "gaps": [
+        "不自动改 adopted",
+        "不在此把 Credits 折成 token",
+        "预览期 2026-11-25 24:00（UTC+8）后下线，不能当成长期标价",
+        "SlavoBB 卡写的夜间钟点是 14:00–00:00 UTC，与官方页 22:00–次日 08:00 是同一段 10 小时，不是第二套折扣"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "aliyun-token-plan-credits-2026-11-11.json",
+    "x-scan-2026-11-11.json",
+    "qwen-token-plan-15631418-2p5pct-x-2026-11-11.json"
+  ]
+}

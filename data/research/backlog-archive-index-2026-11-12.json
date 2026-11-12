@@ -1,0 +1,145 @@
+{
+  "recordedAt": "2026-11-12",
+  "kind": "research-archive-index",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "base": {
+    "branch": "main",
+    "sha": "f2a79c39a72b1127f3672ca2b74b0c1743b3460c",
+    "title": "Merge pull request #225"
+  },
+  "scope": "把 #205 #208 #216 #223 #233 的 research 文件、#207 的 Claude Pro 5h 证据、#209 里明确只记录不采用的 3 个文件，以及 2026-11-11 作者扩展和 2026-11-12 早扫描的新证据，收成一份 research-only 归档。没有可直接上线的 adopted 改动。",
+  "doesNotChange": [
+    "data/adopted.csv",
+    "scripts/build_adopted.py",
+    "data/conventions.json updatedAt",
+    "derived/",
+    "charts/",
+    "线上文案"
+  ],
+  "images": "本归档不收入 X 截图。仓库里已有的 data/research/evidence 图是维护者本地面板，不是这批 X 帖。图上字段和原帖 URL 写在对应 JSON。",
+  "kimiCodePlus19FilenameConflict": {
+    "file": "kimi-code-plus19-monthly-x-2026-11-08.json",
+    "kept": "#205",
+    "notKept": "#209 的较短改写",
+    "why": "#205 保留完整 sessions 分项（K2.8 Preview 与 K3 的 input / cache read / output、cache hit、API-worth）、截图说明和 gaps。两边的面板合计相同：raw 约 203,000,000，API-worth $38.57，倍率 2.03。",
+    "pr209UniqueNoteNotAdopted": {
+      "planCrosswalk": "v2 Plus ¥99 / 国际 $19 = kimi_plus_cn，来源 https://www.kimi.com/pricing（#209 记录为 2026-10-26 读取）",
+      "rawMonthlyIf203m": "2.03 亿/月；当时采用的 kimi_plus_cn × kimi-k3 = 1.95 亿，约高 4%",
+      "normalized": "worth $38.57 ÷ k3 标准负载混合价 $0.441/MTok ≈ 87.5M = 0.875 亿/月，比当时现值低约 55%",
+      "whyNotAdopted": "Kimi 全族现用 raw 口径。只把 Plus 一档改成归一会打破族内一致性。是否换口径留给维护者。本归档不改 adopted。"
+    }
+  },
+  "claudeProEvidence": {
+    "file": "claude-pro-opus55-maintainer-5h-round1-2026-11-08.json",
+    "from": "#207；与 #209 上的同名文件一致，只留这一份",
+    "notApplied": "文内按面板整数 13% 写的三源合并 30.39 亿不采。main 已是 12.5pp 合并的 30.46 亿。本归档不改 30.46。"
+  },
+  "from209RecordedOnly": [
+    "goat-monthly-panel-x-2026-11-07.json",
+    "chatgpt-pro100-codex-weekly-x-2026-11-07.json",
+    "kimi-code-plus19-monthly-x-2026-11-08.json"
+  ],
+  "notCopiedFrom209": [
+    "kimi-allegro-weekly-panel-x-2026-11-02.json（这是 #209 把 Kimi 699 改到 37.95 亿的采用证据，本次不带入）",
+    "scripts/build_adopted.py 与 data/adopted.csv 的 Kimi 改动",
+    "#207 的 Claude Pro 采用提交"
+  ],
+  "leoCycle": {
+    "usageFile": "qwen-token-plan-15631418-2p5pct-x-2026-11-11.json",
+    "cycleFile": "leo-token-plan-essential-panel-x-2026-11-11.json",
+    "facts": "个人版 Essential，开始 2026-11-11 10:08:55，到期 2026-12-12 00:00:00，来源 https://x.com/leo114119/status/2120339145755116025",
+    "doNot": "禁止把 15,631,418 / 0.025 写成新的月池。外推数仍留在用量文件的 derivedNotMeasured，标明不采用。"
+  },
+  "qwen4Preview": {
+    "file": "official-qwen4-max-preview-credits-2026-11-11.json",
+    "supplements": "aliyun-token-plan-credits-2026-11-11.json 的夜间折扣缺口",
+    "official": "预览期 2026-11-11 10:00 至 2026-11-25 24:00 UTC+8，仅 Token Plan，不支持按量。Credits 低至 2 折；每晚 22:00–次日 08:00 再享 4 折，即原标准的 0.8 折。同页 qwen3.8-max/flash 夜间 4 折，若干 DeepSeek v4 夜间 5 折，decision-model-preview 限时免费。",
+    "doNot": "不采用二手 4% / 96% off。不覆盖 #233 的 Credits 档位表。不改 adopted。"
+  },
+  "recommendAdoptInThisPr": [],
+  "maintainerMayConsiderLater": [
+    "Gemini 4 Carbon 官方 API 导入价（#233 / #231）：至 2026-11-30 in $2 / out $10 / cache $0.1；2026-12-01 起 $4 / $20 / $0.2。不要把 ai_funss Vertex 卡写成官方导入价。",
+    "阿里云 Token Plan 官方 Credits 表（#233 / #232）：Lite ¥39/20k、Essential ¥79/45k（新客至 11-30 ¥19.5/¥39.5）、Standard ¥139/80k、Pro ¥312/200k。上线前须 credits→token 折算。",
+    "Qwen4-Max-Preview 官方 2 折 + 夜间 0.8 折等，有下线日，以官方页为准。"
+  ],
+  "doNotAdopt": [
+    "所有 ÷配额% 外推池",
+    "ImLukeF 2.78B/2.81B/2.83B 日面板，以及 247.1M@30%；不要据此发明 Claude Ultra 套餐",
+    "grokademy 2.1B 与 78% 的未对齐窗口；禁止 2.1B÷78% 或 867M÷52%",
+    "OddScienceLab / jianhuamert / Jeree 等无 token 或弱口述样本",
+    "Cursor Pro+ 396M@99% 替换现有行",
+    "Zuck Factory Max $970/$1940 与 Martin Magpie $500/$1000 的任何一方",
+    "shengtang 3% 与 2% 外推",
+    "leo 625,256,720 外推月池",
+    "研究文件里的 High 不等于站点 high"
+  ],
+  "supersededOrStillOpen": {
+    "207": "已被 main 30.46 取代。本 PR 合并后可被整合替代，但须用户另次明确许可才关闭。",
+    "209": "仍独立。Kimi 699 37.95 vs 官方 3.0× 待裁定。若要推进必须重定向当前 main，并丢掉过时的 Claude Pro 提交。",
+    "closeOnlyWithLaterPermission": [
+      205,
+      208,
+      216,
+      223,
+      233,
+      207
+    ]
+  },
+  "files": [
+    "2232960089q-api-worth-orals-x-2026-10-30-to-11-11.json",
+    "aifunss-carbon-vertex-skus-x-2026-11-10.json",
+    "aliyun-token-plan-credits-2026-11-11.json",
+    "backlog-archive-index-2026-11-12.json",
+    "chatgpt-codex-200-daily-x-2026-11-08.json",
+    "chatgpt-plus-vs-claude-pro-5h-burn-x-2026-11-09.json",
+    "chatgpt-pro-multipliers-tibo-x-2026-11-09.json",
+    "chatgpt-pro100-codex-weekly-x-2026-11-07.json",
+    "chatgpt-pro500-codex-weekly-x-2026-11-10.json",
+    "claude-600m-72pct-context-followup-2026-11-08.json",
+    "claude-code-unattributed-4p64b-reply-x-2026-11-08.json",
+    "claude-fable52-api-promo-x-2026-11-10.json",
+    "claude-factory-devin-allowances-x-2026-11-08.json",
+    "claude-full-reset-official-x-2026-11-11.json",
+    "claude-max-7day-multimodel-reply-x-2026-11-08.json",
+    "claude-max-cc-4p2b-week-x-2026-11-09.json",
+    "claude-pro-opus55-maintainer-5h-round1-2026-11-08.json",
+    "claude-ultra-fable52-247m-30pct-x-2026-11-10.json",
+    "claude-ultra-monthly-api-worth-x-2026-11-10.json",
+    "cursor-60-sixhour-burn-x-2026-11-10.json",
+    "cursor-proplus-396m-99pct-x-2026-11-11.json",
+    "cursor-x-included-452m-day-x-2026-11-08.json",
+    "cursor-x-ultra-weekly-cut-oct30-x-2026-11-09.json",
+    "devin-max-500m-weekly-reply-x-2026-11-08.json",
+    "devin-max-weekly-correction-x-2026-11-08.json",
+    "devin-swe2-max-3b-session-x-2026-11-09.json",
+    "droid-200-magpie-estimate-reply-x-2026-11-08.json",
+    "factory-devin-cycle-comparison-x-2026-11-08.json",
+    "gemini-4-carbon-api-pricing-2026-11-11.json",
+    "gemini4-carbon-5xultra-weekly-x-2026-11-11.json",
+    "goat-monthly-panel-x-2026-11-07.json",
+    "grok-quota-61-to-31-reply-x-2026-11-08.json",
+    "grokademy-cursor-grok-usage-x-2026-11-12.json",
+    "imlukef-2p8b-today-codex29-x-2026-11-09.json",
+    "imlukef-claude-reset-inventory-x-2026-11-10.json",
+    "imlukef-t3code-2_83b-day-x-2026-11-11.json",
+    "jeree-codex-5h100-weekly6-oral-x-2026-11-12.json",
+    "jianhuamert-claude-max20x-weekly100-x-2026-11-11.json",
+    "kimi-code-plus19-monthly-x-2026-11-08.json",
+    "leo-token-plan-essential-panel-x-2026-11-11.json",
+    "martin-factory-max-magpie-x-2026-11-08.json",
+    "multi-plan-weekly-user-x-2026-11-08.json",
+    "niko-claude-204p9m-day-x-2026-11-10.json",
+    "oddsciencelab-grokbot-ultra-100pct-x-2026-11-12.json",
+    "official-qwen4-max-preview-credits-2026-11-11.json",
+    "qwen-token-plan-15631418-2p5pct-x-2026-11-11.json",
+    "shengtang-followups-oral-x-2026-11-09-11.json",
+    "shengtang-quota-plugin-100pct-x-2026-11-10.json",
+    "x-scan-2026-11-08.json",
+    "x-scan-2026-11-09.json",
+    "x-scan-2026-11-10.json",
+    "x-scan-2026-11-11.json",
+    "x-scan-user-submitted-2026-11-08.json",
+    "zshipzuck-devin-opus-day-oral-x-2026-11-10.json",
+    "zshipzuck-factory-max-x-2026-11-08.json"
+  ]
+}

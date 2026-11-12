@@ -1,0 +1,140 @@
+{
+  "recordedAt": "2026-11-11",
+  "sourceType": "x_user_supplied",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "用户提交 https://x.com/leo114119/status/2120404442512298069 。截图有总 tokens 15,631,418 和月额度剩余 97.5%。6.25 亿是外推。88.9% 是缓存命中率，不是配额。与 shengtang 的 Gemini 帖分开，不混算。research-only。图片不入库。周期起点见同作者 https://x.com/leo114119/status/2120339145755116025（个人版 Essential，开始 2026-11-11 10:08:55，到期 2026-12-12 00:00:00）。该开通面板不是第二条用量，禁止把 15,631,418 / 0.025 写成新的月池。",
+  "items": [
+    {
+      "id": "x-leo114119-qwen-token-plan-essential-15631418-2p5pct",
+      "postId": "2120404442512298069",
+      "confidence": "High",
+      "confidenceNote": "两张截图分别给出总 tokens 15,631,418 和月额度剩余 97.5%，与口述消耗 2.5% 一致。88.9% 是缓存命中率，不是配额百分比。仍不能完全排除更早周期的用量。",
+      "planId": "aliyun_or_qwen_token_plan_tier_uncertain",
+      "model": "qwen",
+      "modelNote": "只确认是 qwen。作者写「用的都是 qwen / 就是 qwen」，面板没有子型号，不写成 Qwen4 Max 或 3.8 Flash。",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/leo114119/status/2120404442512298069",
+        "account": "leo114119",
+        "createdAt": "2026-11-11T06:33:08.000Z",
+        "createdAtTaipei": "2026-11-11T14:33:08+08:00",
+        "text": "Qwen token plan Essential 套餐 额度实测：\n\n测了一个早上，大概测了五个任务，用了15,631,418 的 Token，消耗了 2.5% 的月额度\n\n这样 39 一个月，可以用的 Token数是6.25 亿\n\n和第三方的 Deepseek 套餐，仍然没有什么竞争力\n\n但对比之前的qwen token plan也算是有很大提升了",
+        "conversationId": "2120404442512298069",
+        "standaloneRoot": true,
+        "replyCountAtFetch": 28,
+        "quoteCountAtFetch": 1
+      },
+      "observed": {
+        "evidenceKind": "usage chart plus a monthly remaining bar; 6.25亿 is extrapolated from the screenshot total and the 2.5% oral/remaining reading",
+        "hasScreenshot": true,
+        "screenshotsCommitted": false,
+        "screenshotCite": "https://x.com/leo114119/status/2120404442512298069",
+        "oral": {
+          "planClaim": "Qwen token plan Essential",
+          "priceClaim": 39,
+          "pricePeriod": "一个月",
+          "priceCurrencyUnstated": true,
+          "tasksApprox": 5,
+          "windowClaim": "一个早上",
+          "tokensClaim": 15631418,
+          "monthlyQuotaUsedPctClaim": 2.5,
+          "derivedMonthlyTokensClaimYi": 6.25
+        },
+        "planConflictRetained": {
+          "author": "Essential，39 一个月，币种未写",
+          "officialTableOnPr232": "Lite ¥39、Essential ¥79、新客 Essential 促销 ¥39.5",
+          "resolution": "none; 不改成 Lite，也不把 39 当成已经确认的人民币 Essential 价"
+        },
+        "sameAuthorThreadClarifications": [
+          {
+            "url": "https://x.com/leo114119/status/2120406232561557811",
+            "createdAt": "2026-11-11T06:40:15.000Z",
+            "createdAtTaipei": "2026-11-11T14:40:15+08:00",
+            "text": "用的都是qwen"
+          },
+          {
+            "url": "https://x.com/leo114119/status/2120406405878567185",
+            "createdAt": "2026-11-11T06:40:57.000Z",
+            "createdAtTaipei": "2026-11-11T14:40:57+08:00",
+            "text": "就是qwen"
+          }
+        ],
+        "screenshot": {
+          "image1": {
+            "axisDates": ["11-09", "11-10", "11-11"],
+            "tooltipDate": "11-11",
+            "totalTokens": 15631418,
+            "cacheHitPct": 88.9,
+            "cacheHitPctIsNotQuota": true,
+            "uncachedInput": 1683694,
+            "cachedInput": 13503488,
+            "output": 444236,
+            "splitCheck": "1683694 + 13503488 + 444236 = 15631418",
+            "cacheHitCheck": "13503488 / (13503488 + 1683694) rounds to the printed 88.9%; that is a cache rate, not a quota percent and not a share of the total including output",
+            "priorDayBars": "11-09 and 11-10 have no visible bars in this crop"
+          },
+          "image2": {
+            "title": "模型用量",
+            "lastUpdatedPrinted": "2026-11-11 14:18:59",
+            "lastUpdatedTimezone": "not printed; if UTC+8, about 15 minutes before the 14:33 Taipei post",
+            "meterLabel": "月额度",
+            "remainingPct": 97.5,
+            "impliedUsedPct": 2.5,
+            "resetPrinted": "2026-12-12 00:00:00",
+            "resetTimezone": "not printed",
+            "planNameOnPanel": null,
+            "modelOnPanel": null,
+            "priceOnPanel": null
+          }
+        },
+        "cycleStartPanel": {
+          "evidenceKind": "plan identity and billing cycle for the usage sample above; not a second usage measurement and not a new monthly pool",
+          "sourceUrl": "https://x.com/leo114119/status/2120339145755116025",
+          "account": "leo114119",
+          "createdAt": "2026-11-11T02:13:41.000Z",
+          "edition": "个人版",
+          "planBadge": "Essential 套餐",
+          "status": "生效中",
+          "lastUpdatedPrinted": "2026-11-11 10:12:54",
+          "remainingDaysPrinted": 30,
+          "startTime": "2026-11-11 10:08:55",
+          "endTime": "2026-12-12 00:00:00",
+          "autoRenew": false,
+          "usageTokensNotShownOnThisPanel": true,
+          "screenshotsCommitted": false,
+          "doNot": "禁止把 15,631,418 / 0.025 写成新的月池。本面板没有 token，也不单开 Token Plan 采用行。"
+        },
+        "derivedNotMeasured": {
+          "note": "按 2.5% 线性外推，不是打满实测，也不改 adopted。禁止把该外推写成新的月池或采用行。",
+          "monthlyTokensIfExactly2p5pct": 625256720,
+          "formula": "15631418 / 0.025",
+          "matchesOral6p25yi": true,
+          "roundingNote": "97.5% 剩余可能经过舍入；若实际用量不是正好 2.5%，6.25 亿会移动"
+        }
+      },
+      "gaps": [
+        "面板没有子型号；作者只说用的都是 qwen，不写成确定的 Qwen4 Max 或 3.8 Flash",
+        "作者写 Essential 且 39/月，币种未明。#232 官方国区表是 Lite ¥39、Essential ¥79、新客 Essential 促销 ¥39.5。冲突保留，不擅自改档，也不折成 credits 或美元",
+        "周期起点已由同作者开通面板补上：个人版 Essential，开始 2026-11-11 10:08:55，到期 2026-12-12 00:00:00，来源 https://x.com/leo114119/status/2120339145755116025。这只补已有用量证据的周期，不是第二条用量，也不是新的月池。用量图仍从 11-09 起裁切、前两日没有可见柱，15,631,418 接近本周期已用量，但仍不能把 15,631,418 / 0.025 写成新的月池",
+        "625,256,720 是外推，不是打满实测，不采用",
+        "88.9% 是缓存命中率，不是配额百分比",
+        "不与官方 credits 表、他人夜间折扣，或 shengtang 的 Gemini 样本折算、拼接",
+        "同一账号更早的 Claude Team 和 Gemini Argon 帖是别的测量，不并进这一条"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-user-submitted-2026-11-08.json",
+    "leo-token-plan-essential-panel-x-2026-11-11.json",
+    "aliyun-token-plan-credits-2026-11-11.json"
+  ],
+  "deduplication": {
+    "result": "new post id; not a gap-fill of the older leo114119 records",
+    "sameAccountDifferentPosts": [
+      "data/research/claude-team-opus55-round1-2026-10-06.json",
+      "data/research/gemini-argon-round1-2026-10-16.json"
+    ],
+    "notTheSameAs": "PR #233 aliyun-token-plan-credits-2026-11-11.json is the official credits table, not this usage sample",
+    "matchesForThisPostId": 0
+  }
+}

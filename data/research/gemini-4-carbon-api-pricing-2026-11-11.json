@@ -1,0 +1,60 @@
+{
+  "recordedAt": "2026-11-11",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 231,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv or official-api-prices.json without maintainer confirmation",
+  "scopeNote": "Gemini 4 Carbon 2026-11-10 正式开放。API 导入价已对官方博客与定价页。",
+  "items": [
+    {
+      "id": "official-gemini-4-carbon-api-intro",
+      "confidence": "Medium",
+      "planId": "gemini_api_paid",
+      "model": "gemini-4-carbon",
+      "observed": {
+        "listPricePerMTokThrough2026-11-30": {
+          "inputUsd": 2,
+          "outputUsd": 10,
+          "cacheReadUsd": 0.1,
+          "thinkingBilledAs": "output",
+          "caching": "implicit only"
+        },
+        "listPricePerMTokFrom2026-12-01": {
+          "inputUsd": 4,
+          "outputUsd": 20,
+          "cacheReadUsd": 0.2
+        },
+        "freeTier": false,
+        "sameIntroPriceAsArgon": true,
+        "sources": [
+          "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+          "https://aistudio.google.com/docs/pricing",
+          "https://x.com/GoogleAI/status/2120187753329791341",
+          "https://x.com/sundarpichai/status/2120185896469496180"
+        ]
+      }
+    },
+    {
+      "id": "gemini-app-carbon-ultra-only",
+      "confidence": "Medium",
+      "planId": "google_ai_ultra",
+      "model": "gemini-4-carbon",
+      "observed": {
+        "consumerAccess": "Google AI Ultra only (Gemini App, AI Mode in Search, Antigravity)",
+        "proAccessClaim": "Pro $19.99 cannot select Carbon (secondhand via @dotey; verify Antigravity model table)",
+        "ultraTiersSecondhand": {
+          "5xUsd": 99.99,
+          "20xUsd": 199.99
+        },
+        "subscriptionTokenQuota": "not published",
+        "sources": [
+          "https://x.com/sundarpichai/status/2120185896469496180",
+          "https://x.com/dotey/status/2120191790774960630"
+        ],
+        "hasScreenshot": false
+      }
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-11.json"
+  ]
+}

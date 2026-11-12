@@ -1,0 +1,52 @@
+{
+  "recordedAt": "2026-11-08",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "sourceType": "public_x_post_with_panel_screenshot (issue #197)",
+  "scope": "Command Code GOAT $10 月面板（单账号）。仅记录，不改 adopted：官方面板按 $70 共享 credits / 每模型 allowance 推导，本面板按 token + 月限百分比计量，两套基础不可直接互换。",
+  "sources": [
+    "https://x.com/0xJustshrimp/status/2118389099195412596 (@0xJustshrimp, 2026-11-05T17:04:53Z)",
+    "https://commandcode.ai/docs/plans/goat（官方每模型 allowance 与三段价）"
+  ],
+  "items": [
+    {
+      "id": "goat10-monthly-panel-24b-56pct",
+      "plan": "Command Code GOAT $10",
+      "billingMonth": "Oct 6 – Nov 6",
+      "weeklyPercentUsed": 71,
+      "monthlyPercentUsed": 56,
+      "threeHourPercent": 1,
+      "totalRuns": 14676,
+      "tokens": {
+        "total": 2400000000,
+        "byModel": {
+          "glm-5.3-flash": {
+            "tokens": 1800000000,
+            "share": 0.791
+          },
+          "deepseek-v4.1-flash": {
+            "tokens": 676500000,
+            "share": 0.145
+          },
+          "mimo-v2.6-flash": {
+            "tokens": 62700000,
+            "share": 0.057
+          }
+        },
+        "note": "面板为截图读数，总量 ≈2.4B、分项按面板百分比折算"
+      },
+      "derivation": {
+        "monthlyPoolRaw": "2.4B ÷ 56% ≈ 4.29B tokens/月（该用户 mix 下的共享月池，raw）",
+        "perModelIsUsageNotAllowance": "GLM-5.3 Flash 1.8B ÷ 56% ≈ 3.21B、DeepSeek V4.1 Flash 676.5M ÷ 56% ≈ 1.21B、MiMo V2.6 Flash 62.7M ÷ 56% ≈ 112M —— 是该 mix 下的用量当量，不是各模型的独立 allowance"
+      },
+      "whyNotAdopted": "仓库 GOAT 行按官方 min(共享 $70, 模型 allowance $20~$80) ÷ 标准负载加权价推导；本面板显示的是 token 计量的共享月限，两者分母不同（美元 credits vs token）。按本面板改写会改变全部 60 条 GOAT 行的推导基础，属口径级决定，需维护者裁定。",
+      "value": "仅作量级互证：官方 $70 共享 credits 在标准负载下对应的月 token 数远高于 4.29B（低单价模型），面板读数是单用户真实 mix 下的 token 上限",
+      "adoptionStatus": "research-only / not adopted"
+    }
+  ],
+  "confidence": "high for the panel reading, low for any cross-basis conversion",
+  "related": [
+    "#171",
+    "#180",
+    "goat-opencode-catalogs-round3-2026-09-30.json"
+  ]
+}

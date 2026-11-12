@@ -1,0 +1,46 @@
+{
+  "recordedAt": "2026-11-08",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "sourceType": "public_x_post_oral_plus_heatmap (issue #198)",
+  "scope": "ChatGPT Pro $100（翻倍后）× Codex 周用量口述样本 + Claude Pro $20 周打满旁证。仅记录，不改 adopted：样本是 Astra+Terra 混合模型、无单模型周%，无法映射到单一行。",
+  "sources": [
+    "https://x.com/TodayYueC/status/2118777995284664576 (@TodayYueC, 2026-11-06T18:50:13Z)"
+  ],
+  "items": [
+    {
+      "id": "todayyuec-pro100-codex-908m-96pct",
+      "plan": "ChatGPT Pro $100（2026-10-29 翻倍后）",
+      "agent": "Codex（Astra + Terra 混合）",
+      "tokens": {
+        "total": 908757998,
+        "note": "帖主自述 API worth $884.65"
+      },
+      "weeklyPercent": {
+        "remaining": 4,
+        "used": 96
+      },
+      "derivation": {
+        "weeklyPoolRaw": "908.8M ÷ 96% ≈ 946.6M tokens/周（raw，混合模型）",
+        "monthlyRaw": "×4 周 ≈ 3.79B/月"
+      },
+      "whyNotAdopted": "仓库 chatgpt_pro_10x 各模型行按官方 10x 倍率由 Plus 实测派生（Sol 61.6 亿/月）；本样本是 Astra+Terra 混合、无单模型占比，直接套用会把混合口径塞进单模型行。若要入权需先拆出 Astra 份额，或等单模型面板。",
+      "value": "量级互证：0.95B/周与 Pro 10x 档的量级一致（Sol 行 61.6 亿/月 ≈ 1.54B/周，混合行在 1B/周上下）",
+      "adoptionStatus": "research-only / not adopted"
+    },
+    {
+      "id": "todayyuec-claudepro-weekly-full",
+      "plan": "Claude Pro $20",
+      "agent": "Claude Code（Opus 5.5）",
+      "note": "同帖附 Claude Pro 周打满读数，约 1.04B tokens 打满周额度（raw 口径）",
+      "whyNotRecordedAsAdopted": "raw 口径与仓库 Anthropic 档归一值（30.39 亿/月 normalized、周约 0.76B normalized）不同基础；作为 raw 旁证记录，不替换现值",
+      "adoptionStatus": "corroboration-only"
+    }
+  ],
+  "confidence": "medium（口述 + 热力图单点；无控制台分项）",
+  "related": [
+    "#161",
+    "#198",
+    "#206",
+    "chatgpt-pro-10x-round1-2026-10-30.json"
+  ]
+}
