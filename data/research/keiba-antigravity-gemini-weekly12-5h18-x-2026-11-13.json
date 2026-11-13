@@ -1,0 +1,36 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "keiba-antigravity-gemini-weekly12-5h18-2026-11-13",
+    "grade": "Medium",
+    "postId": "2121044175554789865",
+    "url": "https://x.com/keiba_assistant/status/2121044175554789865",
+    "author": "keiba_assistant",
+    "authorId": "1909720631677272066",
+    "createdAt": "2026-11-13T00:55:13.000Z",
+    "conversationId": "2121042637109313538",
+    "planOrModel": "Antigravity 日文用量面板。截图未写 Pro / Ultra 档位。",
+    "tokens": null,
+    "quotaPercent": {
+      "geminiModelsWeeklyRemaining": "88%（限制 6 日 17 小时后完全恢复）→ 已用 12%，与口述「週: 12%」相符",
+      "geminiModelsFiveHourRemaining": "82%（3 小时 21 分后刷新）→ 已用 18%，与口述「5時間: 18%」相符",
+      "claudeAndGptWeeklyRemaining": "100%",
+      "claudeAndGptFiveHourRemaining": "100%",
+      "gemini4ArgonWeeklyRemaining": "99%（6 日 9 小时后恢复）"
+    },
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/keiba_assistant-quota.jpg"
+    ],
+    "oralText": "かなりトークンを使った印象がある割に Quota もあまり消費してない。毎日(週5)この規模的开发也不会把配额用完。无绝对 token 数。",
+    "alreadyInPrOrMain": false,
+    "recommendation": "暂不采用",
+    "why": "有官方风格用量截图与 5h/周 %，但无 token、套餐未写。口述「用了很多 token」不能补成硬数字。",
+    "evidenceFile": "evidence/keiba-antigravity-gemini-weekly12-5h18-x-2026-11-13.json"
+  }
+}

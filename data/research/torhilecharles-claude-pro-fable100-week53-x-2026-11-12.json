@@ -1,0 +1,35 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "torhilecharles-claude-pro-fable100-week53-2026-11-12",
+    "grade": "Medium",
+    "postId": "2120987730356457768",
+    "url": "https://x.com/TorhileCharles/status/2120987730356457768",
+    "author": "TorhileCharles",
+    "authorId": "1654124639139004422",
+    "createdAt": "2026-11-12T21:10:55.000Z",
+    "planOrModel": "Claude Pro（截图标题 Your usage Pro）",
+    "tokens": null,
+    "quotaPercent": {
+      "currentSession": "21% used, Resets at 10:50 PM",
+      "thisWeek": "53% used, Resets Sunday 6:00 PM",
+      "fable": "100% used, Up to 50% of your weekly limit, Resets Sunday 6:00 PM",
+      "usageCredits": "$0",
+      "limitResets": "No resets right now"
+    },
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/TorhileCharles-claude.jpg"
+    ],
+    "oralText": "When did Claude reset token allocations on weekly basis? For a while paid plan?",
+    "alreadyInPrOrMain": false,
+    "recommendation": "暂不采用",
+    "why": "Pro 档位与 Fable 周 100% / 本周 53% / 当前 session 21% 有截图，但无绝对 token。Fable 文案是「最多占周限额的 50%」，不要外推成额外池。",
+    "evidenceFile": "evidence/torhilecharles-claude-pro-fable100-week53-x-2026-11-12.json"
+  }
+}

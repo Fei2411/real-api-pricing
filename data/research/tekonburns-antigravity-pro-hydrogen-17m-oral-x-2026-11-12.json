@@ -1,0 +1,33 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "tekonburns-antigravity-pro-hydrogen-17m-21pct-oral-2026-11-12",
+    "grade": "Medium",
+    "postId": "2120987668326818003",
+    "url": "https://x.com/TekonBurns/status/2120987668326818003",
+    "author": "TekonBurns",
+    "authorId": "1864897473954877440",
+    "createdAt": "2026-11-12T21:10:40.000Z",
+    "planOrModel": "Antigravity Pro（口述）；对比 Cursor 预付费 credits。",
+    "tokens": {
+      "source": "oral / note_post, no screenshot",
+      "antigravityProSwarm": "17.01M /swarm tokens",
+      "cacheReads": "93.7%",
+      "fiveHourBar": "burned just 21% of the 5-hour bar outside Argon's cap",
+      "cursor": "excluded from included plan usage entirely, billing $1.50 input and $7.50 output per 1M tokens from prepaid credits"
+    },
+    "quotaPercent": {
+      "oralFiveHour": "21% of the 5-hour bar"
+    },
+    "hasScreenshot": false,
+    "alreadyInPrOrMain": false,
+    "recommendation": "暂不采用",
+    "why": "有具体 token 与 5h%，但是纯口述、无截图。cache% 不是配额%。Cursor 侧是官方 API 价计费，不能与订阅 included 池混算。可讨论 Hydrogen 在不同 harness 的计量差异，不能上线校准。",
+    "evidenceFile": "evidence/tekonburns-antigravity-pro-hydrogen-17m-oral-x-2026-11-12.json"
+  }
+}

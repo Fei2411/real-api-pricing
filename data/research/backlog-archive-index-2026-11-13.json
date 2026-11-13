@@ -1,0 +1,101 @@
+{
+  "recordedAt": "2026-11-13",
+  "kind": "research-archive-increment",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "parentIndex": "backlog-archive-index-2026-11-12.json",
+  "pullRequest": 234,
+  "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",
+  "scanEndUtc": "2026-11-13T01:05:53Z",
+  "scope": "2026-11-13 早扫描的 18 条新证据。只追加 data/research/。不改 adopted.csv、scripts/build_adopted.py、data/conventions.json 的 updatedAt、derived/、charts/、线上文案。不 merge、不关闭旧 PR、不 deploy。",
+  "images": "X 截图不入库。图上字段和原帖 URL 写在各 JSON 的 evidence 里。images/ 路径只是扫描包内文件名。",
+  "doesNotChange": [
+    "data/adopted.csv",
+    "scripts/build_adopted.py",
+    "data/conventions.json updatedAt",
+    "derived/",
+    "charts/",
+    "线上文案"
+  ],
+  "doesNotRecount": [
+    "Gemini 4 Carbon / Argon：至 2026-11-30 的 $2 / $10 / $0.1，2026-12-01 起 $4 / $20 / $0.2。本轮再次打开定价页，数字仍是这组，不覆盖 #234。",
+    "阿里云 Token Plan Credits 表",
+    "Qwen4-Max-Preview 2 折 + 夜间 0.8 折"
+  ],
+  "recommendDiscussAdopt": [
+    {
+      "file": "official-gemini4-hydrogen-api-pricing-2026-11-12.json",
+      "item": "Gemini 4 Hydrogen（gemini-4-hydrogen）付费档标准 API 价",
+      "price": "输入 $1.50 / 1M，输出（含 thinking）$7.50 / 1M，隐式缓存输入 $0.075 / 1M。全 1M 统一上下文一口价。不支持显式缓存。免费档限速免费。思考档 low / medium / high（默认）/ xhigh。",
+      "rechecked": "2026-11-13 再次打开定价页、what's-new 与 2026-11-12 官方博客，与上述标准价一致。what's-new 写明隐式缓存 95% 折扣，以及至少 4,096 token 的提示默认走隐式缓存。博客只复述 $1.50 / $7.50，没有再写 $0.075，也没有首发折扣。",
+      "batchFlex": "本次官方 Hydrogen 表未单列 Batch / Flex。页首 Paid 档只有一句通用 Batch API (50% cost reduction)。不把二手 $0.75 / $3.75 写成建议采用价。",
+      "conflictKept": "不采用 Fei2411 https://x.com/Fei2411/status/2120921195587809334 口述的首发 5 折 $0.75 / $3.75 / $0.0375。官方页没有 Hydrogen 首发折扣。$0.75 / $3.75 与 Gemini 3.8 Flash 至 2026-12-31 的促销输入/输出相同；Flash 缓存促销是 $0.075，不是 $0.0375。",
+      "needs": "维护者确认后才可进入官方 API 价表。这是 API 价，不是订阅额度。本 PR 不改 adopted。"
+    },
+    {
+      "file": "official-codex-banked-reset-activated-2026-11-12.json",
+      "item": "Codex banked reset 本轮已激活，以及 Plus vs Pro 恢复范围",
+      "activation": "https://x.com/thsottiaux/status/2120999993079451919（2026-11-12T21:59:39Z）：banked reset has been activated and should land in everyones accounts sometime soon。预告 https://x.com/thsottiaux/status/2120410480204525936（2026-11-11T06:57:08Z）。两条原帖本轮都打开核对过正文。",
+      "help": "https://help.openai.com/en/articles/20001498-how-resets-work-in-codex 。到账不等于额度已回满，须手动兑换：桌面 Settings > Usage & billing，网页 Usage settings，CLI /usage → Redeem reset；手机端没有。所覆盖额度至少一侧剩余低于 80%，否则卡留着。Go 恢复月额度；Plus 与 Business Standard 恢复 5 小时 + 周额度；Pro 100 / 200 / 500 的官方条目只写 weekly allowance，不恢复 5 小时额度。兑换可能改下一次刷新时间，不会永久加大档位池。",
+      "priorCoverage": "main 与 #234 没有这条激活帖，也没有现行帮助中心的 Plus vs Pro 分档。2026-09 的研究文件只记过 Astra 期间的 banked/global reset 和「重置不永久提额」，链接是旧文 how-banked-codex-resets-work。#234 已有 Jeree 前帖口述，不重计。",
+      "notAQuotaRow": "kevinzhu 库存与 Jeree 兑换口述只作旁证，不是新的实测额度行。",
+      "needs": "维护者确认后才可写入产品说明。本 PR 不改 adopted。"
+    }
+  ],
+  "kimiRuleCorroborationNotANewGap": {
+    "file": "seanbuildlog-kimi-5h-table-secondhand-x-2026-11-13.json",
+    "officialPage": "https://www.kimi.com/help/membership/membership-pricing",
+    "recheck": "2026-11-13 打开官方会员页：Plus ¥99 / Pro ¥199 / Max ¥699 / Ultra ¥1,399。新套餐 Plus 及以上 Kimi Code 有滚动 5 小时限额、无周限额；旧套餐保留 5 小时 + 周限额；均受月度共享额度池限制。页上没有 3.48M / 17.4M / 55.7M 等绝对 token。",
+    "siteAlreadyWritesThis": "DECISIONS.md 与 adopted.csv 的 v2 备注已写「取消周限额仅留5h+月池」。本轮只是旁证复核，不是站点尚未写明的新规则，也不改 #209。Kimi 699 与官方 3.0× 仍无新的官方绝对 token 可裁定。",
+    "doNotAdopt": "seanbuildlog / leo 的 3.48M、17.4M、55.7M、34.8M、104.3M，以及 365M / 1169M 口述、13M 轶事。"
+  },
+  "doNotAdopt": [
+    "所有 ÷配额% 外推",
+    "ImLukeF 七日面板 13.18B：有 token、无配额%，禁止与 #223 的 247.1M@30%、11-09 日面板 2.78B/2.81B、#234 的 11-11 日面板 2.83B 拼接或相除",
+    "PatricioTrials 周表 95% 与日期筛选 Sep 1–Nov 12 的 7.7B 未对齐，禁止 7.7B÷95%",
+    "keiba Antigravity 周 12% / 5h 18%：无 token、套餐未写",
+    "StatsWire Google AI Ultra 周剩余 49% / 5h 剩余 95%：无 token",
+    "SolMemetop AI Pro 周 0% / 5h 近满：无 token",
+    "TorhileCharles Claude Pro Fable 周 100% / 本周 53%：无 token",
+    "taylorhbuilds：口述与截图冲突，以截图为准（周剩余 43%、Fable 周剩余 84%），口述 100% 与 2%/小时外推不采用",
+    "BackupBrainy 设置页 Usage 72%：无 token、档位未写清",
+    "kevinzhu Codex 重置库存：旁证，不是新额度行",
+    "Jeree 兑换口述：无图、无 token，不与前帖拼成 High",
+    "zobotics Premium 周 22%：无 token；倍率是作者推算",
+    "xXaia：51M 仅为口述，且与截图分摊冲突（Cursor 26% + Grok Bot 2%），禁止反推",
+    "af3g453f 本地日志 3.72B：大部分是 cache（3.64B cached），API 估值 ≠ 订阅额度",
+    "TekonBurns 口述 17.01M @ 5h 21%：无截图",
+    "RingoS0725 Argon 周剩余 28%：无 token、无套餐",
+    "Fei2411 Hydrogen 首发 5 折口述"
+  ],
+  "relationToOlderPrs": {
+    "234": "本增量追加在 #234，不另开研究 PR。",
+    "231-233": "Carbon 官方导入价、Token Plan Credits、Qwen4 预览折扣仍待维护者确认，本轮不重计、不覆盖。",
+    "223": "ImLukeF 247.1M@30% 与本轮 13.18B 七日面板保持分开。",
+    "207": "仍视为已被 main 的 claude_pro × claude-opus-5.5 = 30.46 代替。不关闭。",
+    "209": "无新的官方绝对 token 表，不改 Kimi 699 vs 官方 3.0× 的待裁定状态，不改 adopted。不关闭。",
+    "closeOnlyWithLaterPermission": [205, 208, 216, 223, 233, 207, 209],
+    "notClosedThisPass": [205, 208, 216, 223, 233, 207, 209, 234]
+  },
+  "files": [
+    "af3g453f-chatgpt-pro-3_72b-oral-full-week-x-2026-11-12.json",
+    "backlog-archive-index-2026-11-13.json",
+    "backupbrainy-x-usage-72pct-x-2026-11-12.json",
+    "imlukef-t3code-7d-13_18b-x-2026-11-12.json",
+    "jeree-codex-banked-reset-redeemed-x-2026-11-13.json",
+    "keiba-antigravity-gemini-weekly12-5h18-x-2026-11-13.json",
+    "kevinzhu-codex-reset-inventory-x-2026-11-13.json",
+    "official-codex-banked-reset-activated-2026-11-12.json",
+    "official-gemini4-hydrogen-api-pricing-2026-11-12.json",
+    "patriciotrials-xsuper-95pct-7_7b-x-2026-11-12.json",
+    "ringos0725-antigravity-argon-28left-x-2026-11-13.json",
+    "seanbuildlog-kimi-5h-table-secondhand-x-2026-11-13.json",
+    "solmemetop-aipro-weekly0-5h99-x-2026-11-13.json",
+    "statswire-ai-ultra-gemini-weekly49left-x-2026-11-12.json",
+    "taylorhbuilds-ultra-screenshot-conflict-x-2026-11-12.json",
+    "tekonburns-antigravity-pro-hydrogen-17m-oral-x-2026-11-12.json",
+    "torhilecharles-claude-pro-fable100-week53-x-2026-11-12.json",
+    "x-scan-2026-11-13.json",
+    "xxaia-weekly28-oral-51m-conflict-x-2026-11-12.json",
+    "zobotics-premium-weekly22-x-2026-11-13.json"
+  ]
+}

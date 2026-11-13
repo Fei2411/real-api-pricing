@@ -1,0 +1,34 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "statswire-ai-ultra-gemini-weekly49left-2026-11-12",
+    "grade": "Medium",
+    "postId": "2120853364389060897",
+    "url": "https://x.com/StatsWire/status/2120853364389060897",
+    "author": "StatsWire",
+    "authorId": "1326885552793247751",
+    "createdAt": "2026-11-12T12:17:00.000Z",
+    "planOrModel": "Google AI Ultra（口述）；截图为 Antigravity，当前模型 Gemini 4 Carbon High。",
+    "tokens": null,
+    "quotaPercent": {
+      "geminiWeeklyLeft": "49%，Resets in 1d 19h",
+      "geminiFiveHourLeft": "95%，Resets in 4h 22m",
+      "claudeAndGptWeeklyLeft": "100%",
+      "claudeAndGptFiveHourLeft": "100%"
+    },
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/StatsWire-gemini-ultra.png"
+    ],
+    "oralText": "自 weekly quota reset 以来大量使用 Carbon High 与 Argon High，本以为配额会掉得更快。",
+    "alreadyInPrOrMain": false,
+    "recommendation": "暂不采用",
+    "why": "套餐口述 + 周%/5h% 截图，无绝对 token，不能校准。Carbon「token-efficient」只是体感。",
+    "evidenceFile": "evidence/statswire-ai-ultra-gemini-weekly49left-x-2026-11-12.json"
+  }
+}

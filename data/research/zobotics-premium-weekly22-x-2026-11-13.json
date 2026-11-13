@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "zobotics-premium-weekly22-after-downgrade-2026-11-13",
+    "grade": "Medium",
+    "postId": "2121038714684211470",
+    "url": "https://x.com/zobotics/status/2121038714684211470",
+    "author": "zobotics",
+    "authorId": "1518637201948647424",
+    "createdAt": "2026-11-13T00:33:31.000Z",
+    "planOrModel": "口述今日 Super→Premium 降档生效。截图为 Usage limits / Grok Bot usage。",
+    "tokens": null,
+    "quotaPercent": {
+      "weeklyUsageUsed": "22%，Resets in 7 days",
+      "grokBotShareOfWeekly": "21% of your weekly limit · Nov 12 – Nov 19",
+      "breakdown": {
+        "You": "11%",
+        "Routines": "2.3%",
+        "Bot-to-Bot": "8.1%"
+      },
+      "note": "The other 1% of your weekly limit went to Cursor and Grok apps"
+    },
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/zobotics-tiers.png"
+    ],
+    "oralText": "Premium→Super is 3.33X cost for 3.75X usage (1.13X relative value); Premium→Ultra is 6.67X cost for 12.5X usage (1.87X relative value). I'll stick with Premium + Codex for now.",
+    "alreadyInPrOrMain": false,
+    "recommendation": "暂不采用",
+    "why": "降档后的周 22% 与 Grok Bot 分摊有截图，但无 token。倍率对比是作者按价档推的相对价值，不是打满实测。",
+    "evidenceFile": "evidence/zobotics-premium-weekly22-x-2026-11-13.json"
+  }
+}

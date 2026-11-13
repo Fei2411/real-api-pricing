@@ -8,6 +8,12 @@
     "title": "Merge pull request #225"
   },
   "scope": "把 #205 #208 #216 #223 #233 的 research 文件、#207 的 Claude Pro 5h 证据、#209 里明确只记录不采用的 3 个文件，以及 2026-11-11 作者扩展和 2026-11-12 早扫描的新证据，收成一份 research-only 归档。没有可直接上线的 adopted 改动。",
+  "laterIncrement": {
+    "date": "2026-11-13",
+    "index": "backlog-archive-index-2026-11-13.json",
+    "scan": "x-scan-2026-11-13.json",
+    "note": "11-13 早扫描追加在同一 PR #234，不另开分支。Carbon/Argon、Token Plan Credits、Qwen4-Max-Preview 折扣不重计。没有可直接上线的 adopted 改动。"
+  },
   "doesNotChange": [
     "data/adopted.csv",
     "scripts/build_adopted.py",

@@ -1,0 +1,60 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用该 token 表；也不因本图改写 #209。官方「新套餐无周限、保留 5h+月池」可作为规则旁证，须维护者确认是否已写入站点。",
+  "evidence": {
+    "id": "seanbuildlog-kimi-5h-table-secondhand-2026-11-13",
+    "grade": "Medium",
+    "gradeNote": "信息图页脚写明「整理自 @leo114119 公开帖」，不是控制台截图，也不是官方文档里的 token 表。",
+    "postId": "2121033134628311540",
+    "url": "https://x.com/seanbuildlog/status/2121033134628311540",
+    "author": "seanbuildlog",
+    "authorId": "2971414029",
+    "createdAt": "2026-11-13T00:11:20.000Z",
+    "planOrModel": "Kimi K3.1 Pro 会员档（Plus/Pro/Max 与旧 Allegretto/Allegro）",
+    "secondhandTable": {
+      "Plus99": "5H 3.48M",
+      "Pro199": "5H 17.4M",
+      "Max699": "5H 55.7M",
+      "oldAllegretto199": "5H 34.8M，称是新 Pro 两倍",
+      "oldAllegro699": "5H 104.3M，对比新 Max 55.7M",
+      "monthlyOral": "365M、1169M（未标明分别对应哪一档）",
+      "anecdote": "199 老套餐上一个审查任务，5 个 subagent 十几分钟，13M token，5 小时额度见底"
+    },
+    "officialCheck": {
+      "page": "https://www.kimi.com/help/membership/membership-pricing",
+      "pricesMatch": "官方确认新套餐 Plus ¥99 / Pro ¥199 / Max ¥699 / Ultra ¥1,399（及年付价）",
+      "rules": "官方：新套餐 Plus 及以上 Kimi Code 有滚动 5 小时限额、无周限额；旧套餐保留 5 小时+周限额；均受月度共享额度池限制。",
+      "tokenNumbers": "本轮核对的官方会员页没有公布 3.48M / 17.4M / 55.7M / 34.8M / 104.3M / 365M / 1169M 这些绝对 token 数。"
+    },
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/seanbuildlog-kimi.jpg"
+    ],
+    "imageNotes": "自制信息图，不是控制台。",
+    "alreadyInPrOrMain": "#209 Kimi 699 与官方 3.0× 冲突仍待裁定；本轮官方页仍未给出可直接裁定该冲突的绝对 token 表。",
+    "recommendation": "暂不采用该 token 表；也不因本图改写 #209。官方「新套餐无周限、保留 5h+月池」可作为规则旁证，须维护者确认是否已写入站点。",
+    "why": "转述 leo 公开帖 + 自制图，不是独立实测，也不是官方数字。13M 烧毁 5h 是二手轶事。价格与「新套餐无周限」可对官方，绝对 5h token 不能当官方值。",
+    "evidenceFile": "evidence/seanbuildlog-kimi-5h-table-secondhand-x-2026-11-13.json"
+  },
+  "recheck": {
+    "recheckedAt": "2026-11-13",
+    "page": "https://www.kimi.com/help/membership/membership-pricing",
+    "pricesOnPage": {
+      "Go": "¥49/月",
+      "Plus": "¥99/月",
+      "Pro": "¥199/月",
+      "Max": "¥699/月",
+      "Ultra": "¥1,399/月"
+    },
+    "rulesQuoted": [
+      "新套餐 Go 不包含 Kimi Code，Plus 及以上可使用，取消周限额，保留滚动 5 小时限额。新老套餐均受月度共享额度池限制。",
+      "新会员套餐（Plus 及以上）的 Kimi Code 有滚动 5 小时用量限额，无周限额；旧套餐保留滚动 5 小时限额和周限额。它们是用量限制，不代表每周只能使用 5 小时，且仅作用于 Kimi Code。月度共享额度用尽也会影响 Kimi Code。"
+    ],
+    "absoluteTokensOnPage": false,
+    "siteAlreadyStatesTheRule": "DECISIONS.md 与 adopted.csv 的 v2 备注已经写了「取消周限额仅留5h+月池」（2026-10-26/27 裁定）。本轮官方页与这条既有规则一致，不是站点尚未写明的新缺口。不采用 seanbuildlog / leo 的 3.48M / 17.4M / 55.7M / 34.8M / 104.3M 等 token 表，也不改 #209。"
+  }
+}

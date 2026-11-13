@@ -1,0 +1,42 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "imlukef-t3code-7d-13_18b-2026-11-12",
+    "grade": "Medium",
+    "postId": "2120865320982495289",
+    "url": "https://x.com/ImLukeF/status/2120865320982495289",
+    "author": "ImLukeF",
+    "authorId": "1951414337891082241",
+    "createdAt": "2026-11-12T13:04:30.000Z",
+    "planOrModel": "T3 Code「By model」面板；Claude Code（Opus 5.5 + Fable 5.2）与 Codex（GPT-6.1 Sol + GPT-6 Astra）。本帖未重述订阅档。",
+    "tokens": {
+      "source": "screenshot",
+      "panelLabel": "oral: the past 7 days usage",
+      "total": "13.18B tokens",
+      "apiValue": "≈ $3,748 API value",
+      "byModel": {
+        "claude-opus-5-5 Claude Code": "6.40B ≈ $1,934",
+        "gpt-6.1-sol Codex": "4.56B ≈ $624",
+        "claude-fable-5-2 Claude Code": "1.85B ≈ $888",
+        "gpt-6-astra Codex": "130.2M ≈ $160"
+      }
+    },
+    "quotaPercent": null,
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/ImLukeF-7d-usage.jpg"
+    ],
+    "oralText": "Fable 5.2 almost replaced 6.1 Sol. This is the past 7 days usage. Fable is nearly not burning as fast as I thought it would although I do have the rests otherwise yeah id be screwed for the week.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "absent (search_code total_count=0); not in #234 file list / patch IDs",
+    "recommendation": "暂不采用",
+    "why": "有硬 token 与分模型 API 估值，但是 7 日面板、无配额%、本帖未确认套餐。$3,748 是 API value，不是订阅额度。禁止与 #223 的 247.1M@30%、11-09 日面板 2.78B/2.81B、11-11 日面板 2.83B 拼接或相加，也不可 ÷ 反推周池。",
+    "conflictsToKeep": "不同窗口的独立样本，不要平均或加总。",
+    "evidenceFile": "evidence/imlukef-t3code-7d-13_18b-x-2026-11-12.json"
+  }
+}

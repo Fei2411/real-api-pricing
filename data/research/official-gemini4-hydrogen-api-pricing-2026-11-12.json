@@ -1,0 +1,76 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "official_docs",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "值得讨论采用进研究归档/官方 API 价表，须维护者确认；不要自动改 adopted，也不要写入 Fei 的 5 折价",
+  "evidence": {
+    "id": "official-gemini4-hydrogen-api-pricing-2026-11-12",
+    "grade": "Medium",
+    "sourceType": "official_docs",
+    "urls": [
+      "https://aistudio.google.com/docs/pricing",
+      "https://aistudio.google.com/docs/whats-new-gemini-4-hydrogen",
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+    ],
+    "author": "Google official docs / DeepMind blog",
+    "createdAt": "2026-11-12",
+    "planOrModel": "Gemini 4 Hydrogen (gemini-4-hydrogen) paid Gemini API / AI Studio; also rolling out to Gemini app, Search, and paid Google AI Pro/Ultra in Antigravity",
+    "officialTerms": {
+      "inputPer1M": "$1.50",
+      "outputPer1MIncludingThinking": "$7.50",
+      "cachedInputPer1M": "$0.075 (implicit caching only, 95% discount; explicit caching not supported)",
+      "context": "flat standard pricing across the full 1M unified context window",
+      "freeTier": "available rate-limited free of charge in AI Studio / Gemini API",
+      "thinkingLevels": "low, medium, high (default), xhigh",
+      "launchDiscount": "Official pricing and blog pages checked this pass do not list a Hydrogen launch/half-off promo. Carbon/Argon remain $2/$10 through 2026-11-30 then $4/$20 (already in #231/#233/#234). Gemini 3.8 Flash is $0.75/$3.75/$0.075 through 2026-12-31, then $1.50/$7.50/$0.15."
+    },
+    "conflictsToKeep": "Fei2411 2120921195587809334 口述 Hydrogen「首发优惠 5 折」折后 $0.75/$3.75/$0.0375。本轮核对的官方定价页与博客只有标准价 $1.50/$7.50/$0.075，没有 5 折。$0.75/$3.75 与 3.8 Flash 现行促销价相同。冲突保留，采用以官方页为准，不采用 Fei 的 5 折价。",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not applicable (new official model row); Carbon/Argon promo already staged in #234",
+    "recommendation": "值得讨论采用进研究归档/官方 API 价表，须维护者确认；不要自动改 adopted，也不要写入 Fei 的 5 折价",
+    "why": "这是官方对 2026-11-12 新模型 Hydrogen 的标准 API 价，三处官方页一致。订阅额度不是 API 价。Carbon 导入促销价不要重计。",
+    "evidenceFile": "evidence/official-gemini4-hydrogen-api-pricing-2026-11-12.json"
+  },
+  "recheck": {
+    "recheckedAt": "2026-11-13",
+    "pagesOpened": [
+      "https://aistudio.google.com/docs/pricing",
+      "https://aistudio.google.com/docs/whats-new-gemini-4-hydrogen",
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+    ],
+    "stillMatchesSuggestedPrice": true,
+    "pricingTablePaidPer1M": {
+      "modelId": "gemini-4-hydrogen",
+      "inputUsd": 1.5,
+      "outputIncludingThinkingUsd": 7.5,
+      "contextCachingUsd": 0.075,
+      "caching": "Implicit caching only (explicit caching is not supported).",
+      "freeTier": "Free of charge",
+      "contextWordingOnPricingPage": "unified 1M-token context window and long-decode generation up to 1M tokens"
+    },
+    "whatsNewPricingSection": {
+      "input": "$1.50 per 1M tokens",
+      "cachedInput": "$0.075 per 1M tokens via implicit caching (95% discount)",
+      "outputIncludingThinking": "$7.50 per 1M tokens",
+      "freeTier": "Free of charge (rate-limited; see rate limits)",
+      "flat": "flat standard pricing on the paid tier across the full 1M context window",
+      "implicitCacheFloor": "Implicit caching runs by default on prompts of at least 4,096 tokens and discounts cached input tokens by 95% on cache hits. Explicit caching (cachedContents / caches.create) is not supported.",
+      "thinkingLevels": "low, medium, high (default), xhigh"
+    },
+    "blog": {
+      "date": "Nov 12, 2026",
+      "priceSentence": "Gemini 4 Hydrogen is priced flat across its entire 1 million-token context window at $1.50 per million input tokens and $7.50 per million output tokens.",
+      "cachePriceRestated": false,
+      "launchDiscount": false,
+      "thinkingLevels": "low, medium, high (default), and a new xhigh tier"
+    },
+    "launchDiscountOnThesePages": false,
+    "batchFlex": "Hydrogen 价格表只有一列 Paid Tier 标准价，没有单独的 Batch 或 Flex 行。页首 Paid 档有一句通用 “Batch API (50% cost reduction)”，没有写成 Hydrogen 的 $0.75 / $3.75。本次官方表未单列。不把二手 Batch/Flex 价写入建议采用价。",
+    "carbonArgonNotRecounted": "同一页 Carbon 与 Argon 仍是至 2026-11-30 的 $2.00 / $10.00 / $0.10，2026-12-01 起 $4.00 / $20.00 / $0.20，且免费档 Not available。不重计、不覆盖 #234。",
+    "flashPromoConflictContext": "Gemini 3.8 Flash 付费档仍是至 2026-12-31 的输入 $0.75、输出（含 thinking）$3.75、context caching $0.075，2027-01-01 起 $1.50 / $7.50 / $0.15。同一行另有存储价：至 2026-12-31 为 $0.50 / 1,000,000 tokens per hour，其后 $1.00。这与 Hydrogen 行无关。Fei 口述的 Hydrogen 输入/输出 $0.75 / $3.75 与这条 Flash 促销相同；其缓存 $0.0375 官方页没有。冲突保留，不采用 Fei 的 5 折。",
+    "notASubscriptionQuota": true,
+    "doNotChangeAdopted": true
+  }
+}

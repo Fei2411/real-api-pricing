@@ -1,0 +1,33 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "taylorhbuilds-ultra-screenshot-oral-conflict-2026-11-12",
+    "grade": "Medium",
+    "postId": "2120934614294298719",
+    "url": "https://x.com/taylorhbuilds/status/2120934614294298719",
+    "author": "taylorhbuilds",
+    "authorId": "1846213442656784384",
+    "createdAt": "2026-11-12T17:39:51.000Z",
+    "planOrModel": "口述 Ultra plan；截图是 Claude 用量卡，未见档位字样。底部另有一块被裁切的 100% left（可能是其他产品）。",
+    "tokens": null,
+    "quotaPercent": {
+      "screenshotWeeklyLeft": "43% left（即已用约 57%），+57% in 6d 8h，Ahead of pace",
+      "screenshotFableWeeklyLeft": "84% left（即已用约 16%），+16% in 6d 8h",
+      "oralConflict": "作者正文写 Fable 100% eats token，并外推「约 4 小时、2 个 orchestrator、Fable medium ≈ 周 Fable 的 2%，即每小时 1% weekly limit」。这与截图 Fable 84% left / 已用 16% 冲突，也不是 100% used。"
+    },
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/taylorhbuilds-fable.jpg"
+    ],
+    "alreadyInPrOrMain": false,
+    "recommendation": "暂不采用",
+    "why": "以截图为准：周剩余 43%、Fable 周剩余 84%。口述 100% 与 2%/小时外推都不要采用。无 token。禁止用口述节奏反推池。",
+    "conflictsToKeep": "口述 Fable 100% / 2% of weekly fable 与截图冲突，原样保留。",
+    "evidenceFile": "evidence/taylorhbuilds-ultra-screenshot-conflict-x-2026-11-12.json"
+  }
+}

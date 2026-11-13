@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用为周池校准或上线数字",
+  "evidence": {
+    "id": "af3g453f-chatgpt-pro-3_72b-oral-full-week-2026-11-12",
+    "grade": "Medium",
+    "gradeNote": "3.72B 来自本地 session-log 面板，不是官方 ChatGPT/Codex Usage 截图；「打满 $200 Pro 周额度」仅为口述。",
+    "postId": "2120860536867033490",
+    "url": "https://x.com/af3g453f/status/2120860536867033490",
+    "author": "af3g453f",
+    "authorId": "1606988966917734406",
+    "createdAt": "2026-11-12T12:45:30.000Z",
+    "planOrModel": "口述 $200 ChatGPT Pro。图为第三方/本地日志：Gateway and session-log calls; local rejections excluded from totals.",
+    "tokens": {
+      "source": "local session-log screenshot, not official quota UI",
+      "total": "3.72B",
+      "input": "75M",
+      "output": "9.8M",
+      "cached": "3.64B",
+      "cacheHitRate": "98% of the prompt",
+      "requests": "20.7K (8 failed, 4 answered on a retry)",
+      "apiEquivalentCost": "≈$741+, 391 calls unpriced"
+    },
+    "quotaPercent": {
+      "oralOnly": "burned through my entire $200 ChatGPT Pro weekly quota in a single day"
+    },
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/af3g453f-chatgpt-pro.png"
+    ],
+    "oralText": "Mostly GPT-6.1 Sol, ~3.72B tokens, roughly $741 in API-equivalent usage. The limits still feel pretty tight.",
+    "alreadyInPrOrMain": false,
+    "recommendation": "暂不采用为周池校准或上线数字",
+    "why": "硬 token 来自本地日志且绝大部分是 cache（3.64B cached vs 75M in / 9.8M out）。官方周配额%不在图上。$741 是 API 估值。即使作者声称打满一周，也不能把 3.72B 当作官方周池，更不能忽略 cache。",
+    "evidenceFile": "evidence/af3g453f-chatgpt-pro-3_72b-oral-full-week-x-2026-11-12.json"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "scannedAt": "2026-11-13T01:05:53Z",
+  "recordedAt": "2026-11-13",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "source": "精简自 2026-11-13 早扫描 scan-status.json。不另开 PR。分页 token 不入库。",
+  "method": "Grok Bot 自带公开 X 读取。官方页用 WebFetch 核对。未写仓库、未开新 PR、未 merge、未部署、未发邮件、未在 X 上互动。",
+  "window": {
+    "keywordStart": "2026-11-11T00:59:00Z",
+    "authorStart": "2026-11-11T11:47:00Z",
+    "end": "2026-11-13T01:05:53Z",
+    "overlap": "相对上轮结束 2026-11-12T00:59:07Z，关键词起点重叠至少 24 小时"
+  },
+  "notExhaustive": [
+    "Claude 关键词 3 页约 37 分钟；Gemini 2 页约 15 分钟；Codex 2 页约 1 小时；Devin 1 页约 55 分钟；Cursor 2 页约 12 小时；Kimi 1 页约 8.5 小时；DeepSeek/GLM/MiniMax 1 页约 1 小时。定向 has:images 2 页从 2026-11-12T04:00Z 扫到截止。均未翻到 2026-11-11T00:59Z。",
+    "上轮旧窗口 start=2026-11-10T00:50:00Z 的 next_token 没有续用，也没有用 end_time=2026-11-12T00:59:07Z 重搜补前半缺口。",
+    "Fei2411 发帖 3 页到 2026-11-11T04:26Z，距 48 小时起点约差 3.5 小时；提及 3 页只到 2026-11-12T05:45Z。7 日窗口未关闭。",
+    "garyanderson 14 日回补本轮已关闭。grokademy 4 页只到 2026-11-08T14:27Z，距 2026-10-30 起点仍差约 9.5 天。",
+    "shengtang / leo / ai_funss 只用合并关键词页。kimmonismus / imranbru99 / lechattys / xiuyuanAI 仍未补 14 日时间线。查询不能带 %。视频未抽帧。",
+    "无 429、无 auth 失败。停止是为了交付整理。"
+  ],
+  "counts": {
+    "newValidHigh": 0,
+    "newValidMedium": 18
+  },
+  "officialPagesRecheckedAtArchive": [
+    "https://aistudio.google.com/docs/pricing",
+    "https://aistudio.google.com/docs/whats-new-gemini-4-hydrogen",
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+    "https://help.openai.com/en/articles/20001498-how-resets-work-in-codex",
+    "https://x.com/thsottiaux/status/2120999993079451919",
+    "https://x.com/thsottiaux/status/2120410480204525936",
+    "https://www.kimi.com/help/membership/membership-pricing"
+  ],
+  "retained": [
+    {
+      "url": "https://aistudio.google.com/docs/pricing",
+      "account": "Google official",
+      "planOrModel": "gemini-4-hydrogen",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "付费档标准价输入 $1.50、输出含 thinking $7.50、隐式缓存 $0.075。免费档限速免费。官方表未单列 Batch/Flex，也没有首发 5 折。建议讨论采用，须维护者确认。不改 adopted。"
+    },
+    {
+      "url": "https://x.com/thsottiaux/status/2120999993079451919",
+      "account": "thsottiaux",
+      "planOrModel": "Codex banked reset",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "why": "本轮 banked reset 已激活。帮助中心：须手动兑换；至少一侧剩余低于 80%；Plus 与 Business Standard 恢复 5h+周；Pro 100/200/500 只恢复周额度。用户库存不是新额度行。",
+      "altUrls": [
+        "https://x.com/thsottiaux/status/2120410480204525936",
+        "https://help.openai.com/en/articles/20001498-how-resets-work-in-codex"
+      ]
+    }
+  ],
+  "notAdoptedMedium": [
+    "https://x.com/ImLukeF/status/2120865320982495289",
+    "https://x.com/PatricioTrials/status/2120977204863709199",
+    "https://x.com/keiba_assistant/status/2121044175554789865",
+    "https://x.com/StatsWire/status/2120853364389060897",
+    "https://x.com/SolMemetop/status/2121041865176912252",
+    "https://x.com/TorhileCharles/status/2120987730356457768",
+    "https://x.com/taylorhbuilds/status/2120934614294298719",
+    "https://x.com/BackupBrainy/status/2120922128497488278",
+    "https://x.com/kevinzhu1990/status/2121035143825789254",
+    "https://x.com/Jeree12408242/status/2121035751588815359",
+    "https://x.com/zobotics/status/2121038714684211470",
+    "https://x.com/xXaia/status/2120806586071269467",
+    "https://x.com/af3g453f/status/2120860536867033490",
+    "https://x.com/TekonBurns/status/2120987668326818003",
+    "https://x.com/RingoS0725/status/2121045049152803292",
+    "https://x.com/seanbuildlog/status/2121033134628311540"
+  ],
+  "index": "backlog-archive-index-2026-11-13.json"
+}
