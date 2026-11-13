@@ -1,0 +1,56 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_public_reply_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "评论区口述。$200 是作者说的订阅费；5 小时 $80、周 $500、月 $1000 是 Magpie 估算，不是测量。research-only，不改 adopted.csv。",
+  "items": [
+    {
+      "id": "x-2119339593174819186",
+      "confidence": "Medium",
+      "planId": "droid_200",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/MartinM91217805/status/2119339593174819186",
+        "account": "MartinM91217805",
+        "createdAt": "2026-11-08T08:01:49.000Z",
+        "createdAtPacific": "2026-11-08T00:01:49-08:00",
+        "text": "@Fei2411 droid 的 200 美元订阅我在用，月额度大概 1000 刀，周额度是月的一半也就是 500 刀，五小时是 80 刀。用 magpie 估算出来的。\n不知道 Devin 的有多少。尤其是 opus5.5。",
+        "conversationId": "2119244958398046245",
+        "referencedPosts": [
+          {"id": "2119244958398046245", "type": "replied_to"}
+        ]
+      },
+      "observed": {
+        "evidenceKind": "author oral Magpie estimate; no screenshot and no token log",
+        "hasScreenshot": false,
+        "subscriptionFeeUsdClaim": 200,
+        "magpieEstimate": {
+          "note": "作者写明用 Magpie 估算，不是 Opus 5.5 的直接测量，也不是可用额度的面板读数",
+          "fiveHourWorthUsdApprox": 80,
+          "weeklyWorthUsdApprox": 500,
+          "monthlyWorthUsdApprox": 1000
+        },
+        "cycleUsageTokens": null,
+        "apiPriceEstimateFromLogs": null,
+        "availableAllowanceMeasured": null,
+        "quotaPct": null,
+        "tokens": null,
+        "devinUnknown": "作者明确说不知道 Devin，尤其是 Opus 5.5；这里不补 Devin 数字"
+      },
+      "gaps": [
+        "5 小时 $80、周 $500、月 $1000 是 Magpie 估算，不能写成实测",
+        "没有日志、配额百分比和 token 分项；不能把 $1000 换算成确定的 token",
+        "这是 Droid $200 档，和 Factory Pro $20 / Factory Plus $100 不是同一档，不套用那些比例",
+        "周额度「是月的一半」是作者自己的换算，不是独立测得的周池"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-user-submitted-2026-11-08.json",
+    "claude-factory-devin-allowances-x-2026-11-08.json"
+  ],
+  "deduplication": {
+    "result": "new Medium; post id absent on main, #205, #207, #209, and the other remote research branches checked 2026-11-08",
+    "index": "x-scan-user-submitted-2026-11-08.json"
+  }
+}

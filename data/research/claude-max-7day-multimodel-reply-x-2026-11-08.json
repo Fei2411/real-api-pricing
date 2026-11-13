@@ -1,0 +1,81 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_public_reply_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "评论区回复。口述的 Opus 5.5 high 与 7 天多模型截图分开。research-only，不改 adopted.csv。图片不入库。",
+  "items": [
+    {
+      "id": "x-2119346974915002623",
+      "confidence": "Medium",
+      "planId": "claude_max_tier_unspecified",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/niko70129972/status/2119346974915002623",
+        "account": "niko70129972",
+        "createdAt": "2026-11-08T08:31:09.000Z",
+        "createdAtPacific": "2026-11-08T00:31:09-08:00",
+        "text": "@Fei2411 max 账号 一周的量，差不多3b 左右Opus5.5 high https://t.co/ztfTpcPsBI",
+        "conversationId": "2119335203135172722",
+        "referencedPosts": [
+          {"id": "2119335203135172722", "type": "replied_to"}
+        ]
+      },
+      "observed": {
+        "evidenceKind": "oral weekly claim plus a 7-day usage chart; chart is not an official quota bar",
+        "hasScreenshot": true,
+        "screenshotsCommitted": false,
+        "screenshotCite": "https://x.com/niko70129972/status/2119346974915002623",
+        "oral": {
+          "plan": "Claude Max (tier unspecified)",
+          "model": "Opus 5.5 high",
+          "weeklyTokensApprox": 3000000000,
+          "note": "「差不多 3b」是口述舍入；high 只出现在正文"
+        },
+        "screenshot": {
+          "rangeSelector": "7 days",
+          "totalTokens": 2795900000,
+          "cachedTokens": 2608100000,
+          "estimatedApiValueUsdApprox": 2552,
+          "chartVisibleDates": "11/2–11/8, no printed year",
+          "legend": [
+            "Claude Opus 5.5",
+            "Claude Sonnet 5.5",
+            "Claude Fable 5.1",
+            "Claude Haiku 5.5",
+            "other"
+          ],
+          "quotaPct": null
+        },
+        "cycleUsage": {
+          "note": "图上的 7 天合计，含多个模型，不是 Opus high 单模型用量",
+          "totalTokens": 2795900000,
+          "cachedTokens": 2608100000
+        },
+        "apiPriceEstimate": {
+          "note": "图上的估算美元，不是可用额度，也不是订阅价格",
+          "usdApprox": 2552
+        },
+        "availableAllowance": null,
+        "quotaPct": null,
+        "input": null,
+        "output": null,
+        "cacheRead": null,
+        "cacheWrite": null
+      },
+      "gaps": [
+        "口述约 3B 是舍入；图上 2795.9M 不是精确 3B，两数同时保留",
+        "图例含 Opus 5.5、Sonnet 5.5、Fable 5.1、Haiku 5.5 和 other，不能把 2795.9M 或 cached 2608.1M 全部归到 Opus high",
+        "high 只在口述里；Max 是 5x、20x 还是 Ultra、价格、有没有打满都没写",
+        "cached 是总量，没有拆成 cache read / cache write，也没有 fresh input 和 output",
+        "没有配额百分比"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-user-submitted-2026-11-08.json"
+  ],
+  "deduplication": {
+    "result": "new Medium; post id absent on main, #205, #207, #209, and the other remote research branches checked 2026-11-08",
+    "index": "x-scan-user-submitted-2026-11-08.json"
+  }
+}
