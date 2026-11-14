@@ -1,0 +1,68 @@
+{
+  "recordedAt": "2026-11-11T19:47:00+08:00",
+  "sourceType": "x_author_timeline_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "timezoneNote": "source timestamps are UTC (Z); createdAtTaipei is converted to Asia/Taipei (UTC+8)",
+  "id": "leo-token-plan-essential-panel-x-2026-11-11",
+  "items": [
+    {
+      "id": "x-2120339145755116025",
+      "confidence": "Medium",
+      "planId": "aliyun-token-plan-personal-essential",
+      "model": "qwen-4-intended",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/leo114119/status/2120339145755116025",
+        "account": "leo114119",
+        "profileUrl": "https://x.com/leo114119",
+        "createdAt": "2026-11-11T02:13:41.000Z",
+        "createdAtTaipei": "2026-11-11 10:13:41 Asia/Taipei",
+        "text": "Qwen token plan 已经开通了，今天好好给大家测一下Qwen 4"
+      },
+      "observed": {
+        "oral": {
+          "plan": "Qwen token plan just opened",
+          "intendedTest": "Qwen 4 today"
+        },
+        "screenshot": {
+          "image": "images/leo-tokenplan-open-1.png",
+          "title": "Token Plan 用量",
+          "edition": "个人版",
+          "planBadge": "Essential 套餐",
+          "status": "生效中",
+          "lastUpdated": "2026-11-11 10:12:54",
+          "remainingDays": 30,
+          "startTime": "2026-11-11 10:08:55",
+          "endTime": "2026-12-12 00:00:00",
+          "autoRenew": false,
+          "timezoneUnstatedButMatchesPostTaipei": true,
+          "usageTokensNotShownOnThisPanel": true
+        }
+      },
+      "gaps": [
+        "本帖是套餐身份/周期截图，没有 token、没有已用百分比，单独不够 High",
+        "它为稍后同日 High 样本 2120404442512298069（15,631,418 tokens，月剩余 97.5%，重置 2026-12-12 00:00:00）提供周期起点：开始 10:08:55，测量约在开通后数小时内。这是支持证据，不是第二条用量样本，不要把面板再算一次用量",
+        "作者后来称 Essential 且「39 一个月」（货币未写）。图已确认 Essential。官方便览（#233/#232）Lite ¥39 / Essential ¥79（促销 Essential ¥39.5）与「39」冲突仍保留，不裁定"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "sisterPostAlreadyStaged": "2120404442512298069 High is in /workspace/shengtang-2026-11-11 and now also in #208",
+        "defaultBranchSearch": "0 hits",
+        "openPrHits": {
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#208": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium plan-identity / cycle-start screenshot; do not recount the later High usage post"
+      }
+    }
+  ],
+  "scopeNote": "只补已有用量证据的周期：个人版 Essential，开始 2026-11-11 10:08:55，到期 2026-12-12 00:00:00。不是新的月池，禁止把 15,631,418 / 0.025 写成月池。",
+  "screenshotsCommitted": false,
+  "screenshotStorage": "X 截图不入库。image 文件名只是目视核对时的引用，不是仓库路径。图上字段和原帖 URL 写在本文件。",
+  "supplements": "qwen-token-plan-15631418-2p5pct-x-2026-11-11.json",
+  "notANewMonthlyPool": true,
+  "doNot": "禁止把 15,631,418 / 0.025 写成新的月池。本文件只有开通周期面板，没有 token，也不单开 Token Plan 采用行。价格「39」与官方 Essential ¥79 / 促销 ¥39.5 的冲突保留。"
+}

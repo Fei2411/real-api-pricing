@@ -1,0 +1,36 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "ringos0725-antigravity-argon-28left-2026-11-13",
+    "grade": "Medium",
+    "postId": "2121045049152803292",
+    "url": "https://x.com/RingoS0725/status/2121045049152803292",
+    "author": "RingoS0725",
+    "authorId": "1600556171030499328",
+    "createdAt": "2026-11-13T00:58:41.000Z",
+    "planOrModel": "Antigravity 用量弹出层，档位未写。图 1 只是 Hydrogen 介绍卡。",
+    "tokens": null,
+    "quotaPercent": {
+      "geminiWeeklyLeft": "100%，Resets in 3d 2h",
+      "geminiFiveHourLeft": "100%",
+      "claudeAndGptWeeklyLeft": "100%",
+      "claudeAndGptFiveHourLeft": "100%",
+      "gemini4ArgonWeeklyLeft": "28%，resets in 3d 1h"
+    },
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/RingoS0725-1.png",
+      "images/RingoS0725-2.png"
+    ],
+    "oralText": "Now tell me which quota I’m burning without making me study the periodic table.",
+    "alreadyInPrOrMain": false,
+    "recommendation": "暂不采用",
+    "why": "弱样本：除 Argon 周剩余 28% 外其余均为 100%，无 token、无套餐。只说明 Argon 有单独周限制。",
+    "evidenceFile": "evidence/ringos0725-antigravity-argon-28left-x-2026-11-13.json"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "recordedAt": "2026-11-14",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "statswire-ultra-weekly20-23left-2026-11-13",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2121253388713169011",
+    "url": "https://x.com/StatsWire/status/2121253388713169011",
+    "relatedPosts": [
+      "2121204679593890000"
+    ],
+    "author": "StatsWire",
+    "authorId": "1326885552793247751",
+    "createdAt": "2026-11-13T14:46:33.000Z",
+    "planOrModel": "Google AI Ultra (oral, and Orchestrator Carbon is visible). Official Antigravity Usage popover.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/StatsWire-ultra-23left.jpg",
+      "images/StatsWire-ultra-20left.jpg"
+    ],
+    "screenshotFields": {
+      "earlierPost_2121204679593890000_2026-11-13T11:33:00Z": {
+        "selected": "Orchestrator (Carbon)",
+        "geminiWeekly": "23% left, Resets in 19h 44m",
+        "gemini5h": "97% left, Resets in 4h 24m",
+        "claudeGptWeekly": "100% left",
+        "claudeGpt5h": "100% left"
+      },
+      "laterPost_2121253388713169011_2026-11-13T14:46:33Z": {
+        "selected": "Gemini 4 Carbon High",
+        "geminiWeekly": "20% left, Resets in 14h 25m",
+        "gemini5h": "100% left",
+        "claudeGptWeekly": "92% left, Resets in 6d 22h",
+        "claudeGpt5h": "84% left, Resets in 3h 2m"
+      }
+    },
+    "oralText": "3 hours ago I thought I was finally going to exhaust my weekly quota for the first time. I had 23% left. Since then I've been hammering Gemini 4 Carbon High. I'm STILL at 20%. Just 3% consumed in 3 hours of heavy usage.",
+    "quotaPercent": "Gemini weekly 23% left then 20% left (screenshots). No tokens on either official UI.",
+    "conflictsToKeep": "Oral says 3 hours; the weekly reset timers moved from 19h 44m to 14h 25m (about 5h 19m). Record both, do not force the oral interval. 5h went 97% left to 100% left, consistent with a 5h refresh between shots. Claude/GPT moved from 100%/100% to 92%/84%, so that later interval was not Carbon-only. This is the same author and same weekly window as yesterday's StatsWire 49% left / 5h 95% left sample (2120853364389060897) — do not add, average, or treat as a new independent pool. Both shots are before the 23:13Z official Gemini reset.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "官方 UI 只有配额剩余百分比、无 token；与上轮同一作者同一周 49% left 样本不可拼接。口述 3 小时与重置倒计时差约 5 小时，以截图时间为准。",
+    "evidenceFile": "evidence/statswire-ultra-weekly20-23left-x-2026-11-13.json"
+  }
+}

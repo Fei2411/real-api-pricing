@@ -1,0 +1,81 @@
+{
+  "recordedAt": "2026-11-11T19:47:00+08:00",
+  "sourceType": "x_author_timeline_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "timezoneNote": "source timestamps are UTC (Z); createdAtTaipei is converted to Asia/Taipei (UTC+8)",
+  "id": "niko-claude-204p9m-day-x-2026-11-10",
+  "items": [
+    {
+      "id": "x-2119995192065609757",
+      "confidence": "Medium",
+      "planId": null,
+      "model": "multi-claude-day-mix",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/niko70129972/status/2119995192065609757",
+        "account": "niko70129972",
+        "profileUrl": "https://x.com/niko70129972",
+        "createdAt": "2026-11-10T03:26:56.000Z",
+        "createdAtTaipei": "2026-11-10 11:26:56 Asia/Taipei",
+        "text": "浅浅用Claude跑了一个中小任务，一共花了2亿TOKEN\n\n体感就是同是跨模块复杂问题，Fable5.2整体完成时间比Opus5.5略快，10%-15%左右\n\n看上去成本会比Opus高，但如果是指完成长时间困难问题上总的消耗，甚至会比Opus5.5Max要低\n\n总感觉A家藏了一手，看OpenAI家推出的6.2模型如何，好就推Fable5.3-5.5"
+      },
+      "observed": {
+        "oral": {
+          "tokensApprox": 200000000,
+          "taskDescription": "中小任务",
+          "qualitative": "Fable 5.2 slightly faster than Opus 5.5 on cross-module tasks (~10-15% time); listed cost looks higher than Opus but total spend on long hard tasks may be lower than Opus 5.5 Max"
+        },
+        "screenshot": {
+          "image": "images/niko-2yi-1.png",
+          "dateLabel": "11月10日 今天",
+          "yearNotPrinted": true,
+          "totalTokensM": 204.9,
+          "totalTokens": 204900000,
+          "totalApiValueUsdApprox": 166,
+          "rows": [
+            {
+              "model": "Claude Opus 5.5",
+              "tokensM": 151.1,
+              "usd": 74.23
+            },
+            {
+              "model": "Claude Fable 5.2",
+              "tokensM": 52.7,
+              "usd": 91.52
+            },
+            {
+              "model": "Claude Sonnet 5.5",
+              "tokensM": 1.1,
+              "usd": 0.65
+            }
+          ],
+          "arithmeticCheck": "151.1+52.7+1.1=204.9M; 74.23+91.52+0.65=166.40 ≈ $166",
+          "quotaPct": null
+        }
+      },
+      "gaps": [
+        "口述2亿是舍入；图是 204.9M，两者相容但不要改写成精确 2.00 亿",
+        "美元是日卡片上的 API 估值，不是配额或账单；无配额百分比、无套餐档位",
+        "多模型合计，不能全归 Opus 或 Fable",
+        "不可与同作者 2026-11-08 周窗口 2795.9M / $2552（2119346974915002623）拼接或相加当作新的周额度",
+        "图上未写年份，帖子日期为 2026-11-10"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "sisterPostAlreadyStaged": "2119346974915002623 weekly Max ~3B / 2795.9M $2552 in recent-replies-2026-11-08 and #208",
+        "defaultBranchSearch": "0 hits",
+        "openPrHits": {
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#208": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium day sample; do not recount the Nov 8 weekly post"
+      }
+    }
+  ],
+  "scopeNote": "日卡片 $166 · 204.9M（Opus 5.5 151.1M $74.23，Fable 5.2 52.7M $91.52，Sonnet 5.5 1.1M $0.65）。无配额%。口述 2 亿是舍入。不要与周样本 2795.9M 相加。",
+  "screenshotsCommitted": false,
+  "screenshotStorage": "X 截图不入库。image 文件名只是目视核对时的引用，不是仓库路径。图上字段和原帖 URL 写在本文件。"
+}

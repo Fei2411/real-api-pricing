@@ -1,0 +1,106 @@
+{
+  "recordedAt": "2026-11-11",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 232,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "阿里云 Token Plan 个人版 2026-11-09 20:00 UTC+8 起加量、Pro 降价。Credits 官方表已核对；不在此折算 token。",
+  "items": [
+    {
+      "id": "official-aliyun-token-plan-personal-2026-11-09",
+      "confidence": "Medium",
+      "planId": "aliyun_token_plan_personal",
+      "model": "multi (Qwen / DeepSeek etc. via credits)",
+      "effectiveFrom": "2026-11-09T20:00:00+08:00",
+      "source": {
+        "type": "official_docs_and_x",
+        "url": "https://x.com/alibaba_cloud/status/2120016058908025262",
+        "account": "alibaba_cloud",
+        "createdAt": "2026-11-10T04:49:51Z",
+        "docs": [
+          "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview",
+          "https://www.alibabacloud.com/help/en/model-studio/token-plan-personal-faq",
+          "https://www.qwencloud.com/benefits/tokenplan"
+        ],
+        "secondary": "https://x.com/ak12kpoot/status/2119961985030774970"
+      },
+      "observed": {
+        "cn": {
+          "lite": {
+            "cnyPerMonth": 39,
+            "creditsPerMonth": 20000,
+            "priorCredits": 11500,
+            "newUserPromoCnyUntil2026-11-30": 19.5
+          },
+          "essential": {
+            "cnyPerMonth": 79,
+            "creditsPerMonth": 45000,
+            "priorCredits": 25500,
+            "newUserPromoCnyUntil2026-11-30": 39.5
+          },
+          "standard": {
+            "cnyPerMonth": 139,
+            "creditsPerMonth": 80000,
+            "priorCredits": 45000
+          },
+          "pro": {
+            "cnyPerMonth": 312,
+            "priorCnyPerMonth": 499,
+            "creditsPerMonth": 200000,
+            "priorCredits": 180000,
+            "priceChangeAppliesNextCycle": true
+          }
+        },
+        "intlFromOfficialPost": {
+          "lite": {
+            "usdPerMonth": 6,
+            "creditsPerMonth": 20000,
+            "creditIncreasePct": 73.9
+          },
+          "essential": {
+            "usdPerMonth": 10,
+            "creditsPerMonth": 45000,
+            "creditIncreasePct": 76.5
+          },
+          "standard": {
+            "usdPerMonth": 18,
+            "creditsPerMonth": 80000,
+            "creditIncreasePct": 77.8
+          },
+          "pro": {
+            "usdPerMonth": 43,
+            "priorUsdPerMonth": 68,
+            "creditsPerMonth": 200000,
+            "creditIncreasePct": 75.7
+          },
+          "firstMonthHalfOff": {
+            "liteUsd": 3,
+            "essentialUsd": 5
+          }
+        },
+        "poolRules": {
+          "period": "subscription month",
+          "weeklyPool": false,
+          "fiveHourWindow": false,
+          "unusedDoesNotRollOver": true,
+          "existingSubscribersQuotaTopUpThisCycle": true,
+          "usageBundle": {
+            "cny": 100,
+            "credits": 20000,
+            "maxHeld": 5
+          }
+        },
+        "hasScreenshot": true,
+        "screenshotNote": "Official @alibaba_cloud image and secondary post; not copied into repo"
+      },
+      "gaps": [
+        "Credits→token 需按 conventions 负载档折算，本文件不采用月 token",
+        "夜间折扣（二手称 22:00–08:00 部分模型 40%/50% 扣减）待对官方计费说明",
+        "上一条缺口由 official-qwen4-max-preview-credits-2026-11-11.json 用官方页补上：qwen4-max-preview 预览期 2 折，夜间再 4 折即原标准 0.8 折；同页 qwen3.8 夜间 4 折、若干 DeepSeek v4 夜间 5 折。本文件的 Credits 档位表不改、不覆盖。二手 4% / 96% off 不采用。"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-11.json",
+    "official-qwen4-max-preview-credits-2026-11-11.json"
+  ]
+}

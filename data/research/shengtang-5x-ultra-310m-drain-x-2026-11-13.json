@@ -1,0 +1,55 @@
+{
+  "recordedAt": "2026-11-14",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "shengtang-5x-ultra-310m-drain-2026-11-13",
+    "grade": "Medium",
+    "sourceType": "author_custom_dashboard_plus_oral_drain",
+    "postId": "2121129295443525695",
+    "url": "https://x.com/shengtang135754/status/2121129295443525695",
+    "author": "shengtang135754",
+    "authorId": "1901144333719683072",
+    "createdAt": "2026-11-13T06:33:27.000Z",
+    "planOrModel": "Antigravity 5x Ultra (oral, and on the custom board title).",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/shengtang-antigravity-ultra.jpg",
+      "images/KOF97AI-antigravity-ultra-1.jpg",
+      "images/KOF97AI-antigravity-ultra-2.jpg",
+      "images/shengtang-quota-empty.jpg"
+    ],
+    "screenshotFields": {
+      "customBoard": {
+        "title": "Antigravity 模型 Token 吞吐量与官方 API 价值全量统计看板",
+        "period": "北京时间 2026-11-06 16:00 至 2026-11-13 14:17; 6 session windows and 35 subagents",
+        "calls": "2,386 LLM + 230 images; Prompt Cache hit 89.8%",
+        "totalTokens": "305,907,228 (new input 30.90M + cache read 272.11M + output 2.90M including thinking 1.03M)",
+        "discountedValue": "$126.81 (¥915.57)",
+        "listValueWithCacheDiscount": "$233.99 (¥1,689.41)",
+        "noCacheEquivalent": "$673.91 (list $1,259.58)",
+        "identicalImageAlsoPostedBy": "KOF97AI 2121227320514199623 (md5 identical to shengtang's board). Count once."
+      },
+      "kofCard": "Designed summary card $126 / 官方额度 / 订阅定价, not an official console.",
+      "claudeGptWidget_2121251804906418581": {
+        "widgetLabel": "Antigravity · Claude & GPT",
+        "clock": "北京时间 22:34:32，11月13日 周五",
+        "fiveHour": "0%",
+        "fiveHourReset": "00:57:49 后重置 · 北京 11/13 23:32",
+        "weekly": "0%",
+        "weeklyReset": "4天 03:57:49 后重置 · 北京 11/18 02:32",
+        "note": "This widget is Claude & GPT, not the Gemini weekly meter. It does not prove Gemini was at 0%."
+      }
+    },
+    "oralText": "基本榨干了我所有的antigravity周额度，5x ultra会员。总token：3.1亿token（含缓存）。价值：按照现在官方折扣，126美元，下个月恢复正价后233美元。说实话有点少，本来预测值应该至少有4亿的……不知道跟11月6号的重置有没有关系。Later: 5x只有3亿，这是实实在在跑出来的. Earlier same day (video, not frame-extracted): 本周antigravity额度仅剩2%。",
+    "conflictsToKeep": "No official Antigravity Usage popover showing Gemini weekly 0% was visually confirmed in this pass (the 2% claim is on a video post; frames were not extracted). The 0% widget is Claude & GPT. DeepSleepSun (2121405591151321519) orally said they ran about 3亿 Carbon in two days and still had 50%+ weekly left, and suspected this panel missed subagent tokens — keep that conflict, do not splice accounts. Cache is 272M of 306M. API value ≠ subscription quota. Period starts 11-06 16:00, after the already-known Nov 6 official reset. KOF97AI and Betaer are echoes, not independent tests.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "3.06 亿来自作者自建看板且含大量缓存，没有经过目视的官方 Gemini 周 0% 控制台与之配对；另一用户口述两天 3 亿 Carbon 仍剩 50%+，冲突原样保留。禁止当 5x Ultra 周池校准。",
+    "evidenceFile": "evidence/shengtang-5x-ultra-310m-drain-x-2026-11-13.json"
+  }
+}

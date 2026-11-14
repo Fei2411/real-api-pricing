@@ -1,0 +1,53 @@
+{
+  "recordedAt": "2026-11-14",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "maanasms-agy-pro-weekly95left-2026-11-13",
+    "grade": "Medium",
+    "sourceType": "official_ui_plus_third_party_tokens",
+    "postId": "2121167272714948715",
+    "url": "https://x.com/maanasms/status/2121167272714948715",
+    "author": "maanasms",
+    "authorId": "1545428061180416000",
+    "createdAt": "2026-11-13T09:04:21.000Z",
+    "planOrModel": "Antigravity Pro (oral). Screenshot 1 is official Usage popover; Carbon is Unavailable; Orchestrator (Argon) selected. Screenshot 2 is a third-party Day token panel.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/maanasms-1.jpg",
+      "images/maanasms-2.jpg"
+    ],
+    "screenshotFields": {
+      "officialUsage": {
+        "geminiWeekly": "95% left, Resets in 2d 18h",
+        "gemini5h": "82% left, Resets in 3h 42m",
+        "claudeGptWeekly": "100% left",
+        "claudeGpt5h": "100% left",
+        "argonWeekly": "78% left, Resets in 2d 18h"
+      },
+      "thirdPartyDayPanel": {
+        "tab": "Day",
+        "totalTokens": "82.8M",
+        "apiValueShown": "≥ $0.67",
+        "split": "OPENCODE 75.71% (2 models), ANTIGRAVITY 24.29% (3 models)",
+        "antigravityCache": "Cache hit rate 87% · 17.4M reused / 19.9M input",
+        "disclaimer": "Exact token usage and prompt-cache hits are parsed from Antigravity session metadata when available. Fallback transcripts without metadata are estimated from text length (~4 chars/token).",
+        "agyModels": {
+          "gemini-flash-worker-agy": "15.3M · 110 requests, Unpriced, 75.9%",
+          "gemini-pro-orchestrator-g1-pro": "3.7M · 47 requests, Unpriced, 18.4%",
+          "gemini-4-hydrogen": "1.1M · 6 requests, $0.67, 5.7% (Input 394.1K, Cached input 743.6K, Cache write 0, Output 676, Reasoning 3.4K)"
+        }
+      }
+    },
+    "oralText": "Antigravity on the Pro plan is weirdly generous right now. ~20M tokens today on Orchestrator (Argon) ... still sitting at: 95% weekly Gemini quota left, 82% of my 5h limit, 78% weekly Argon.",
+    "conflictsToKeep": "Oral ~20M today is roughly the Antigravity slice of the Day panel (15.3+3.7+1.1=20.1M), not the 82.8M all-providers total which is mostly OpenCode. Official UI has percentages and no tokens. Day tokens are a different window from the weekly 95% left bar. Cannot pair 20M (or 82.8M) with 5% weekly used. cache% is not quota%.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "官方弹窗只有剩余百分比；token 来自第三方日面板且含 OpenCode。禁止用 20M 去反推周池。",
+    "evidenceFile": "evidence/maanasms-agy-pro-weekly95left-x-2026-11-13.json"
+  }
+}

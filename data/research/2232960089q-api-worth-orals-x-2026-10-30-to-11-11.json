@@ -1,0 +1,344 @@
+{
+  "recordedAt": "2026-11-11T19:47:00+08:00",
+  "sourceType": "x_author_timeline_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "timezoneNote": "source timestamps are UTC (Z); createdAtTaipei is converted to Asia/Taipei (UTC+8)",
+  "id": "2232960089q-api-worth-orals-x-2026-10-30-to-11-11",
+  "items": [
+    {
+      "id": "x-2119852702687752467",
+      "confidence": "Medium",
+      "planId": "chatgpt-pro-10x",
+      "model": "sol",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/2232960089q/status/2119852702687752467",
+        "account": "2232960089q",
+        "profileUrl": "https://x.com/2232960089q",
+        "createdAt": "2026-11-09T18:00:43.000Z",
+        "createdAtTaipei": "2026-11-10 02:00:43 Asia/Taipei",
+        "text": "@Da7_Tech Sol是绝对足够的，Pro10X＝700美元API每周，Sol的定价是Opus一半，折算过来就相当于1400美元，已经大于 claude MAX的每周约1200美元了，这还不考虑Sol的token效率是Opus两倍以上。\n但是我建议你wait 到确认6.2Sol成色再动手"
+      },
+      "observed": {
+        "oral": {
+          "pro10xWeeklyApiUsd": 700,
+          "derivedIfSolPricedHalfOfOpusUsd": 1400,
+          "comparedToClaudeMaxWeeklyUsdApprox": 1200,
+          "efficiencyClaim": "Sol token efficiency more than 2x Opus"
+        }
+      },
+      "gaps": [
+        "口述，无截图、无 token、无配额百分比",
+        "$1400 和与 Claude Max $1200 的比较是作者用「Sol 定价是 Opus 一半」做的折算，不是第二组实测；效率「两倍以上」也是口述",
+        "不要把 $700 当账单或配额池"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "knownSister": "2119274129128099962 Devin Max $100/week already in #208",
+        "openPrHits": {
+          "#208": false,
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium oral"
+      }
+    },
+    {
+      "id": "x-2120117965362503855",
+      "confidence": "Medium",
+      "planId": "chatgpt-plus-and-50x",
+      "model": null,
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/2232960089q/status/2120117965362503855",
+        "account": "2232960089q",
+        "profileUrl": "https://x.com/2232960089q",
+        "createdAt": "2026-11-10T11:34:47.000Z",
+        "createdAtTaipei": "2026-11-10 19:34:47 Asia/Taipei",
+        "text": "@Fei2411 plus是70美元整几乎，我50X正好是3500美元"
+      },
+      "observed": {
+        "oral": {
+          "plusAlmostUsd": 70,
+          "fiftyXUsd": 3500,
+          "windowUnstatedInThisPost": true
+        }
+      },
+      "gaps": [
+        "未在本帖写窗口（周/月）；结合作者其他帖倾向为 API 周估值，但不能把窗口从别帖迁入后当成已确认",
+        "3500 / 50 = 70，与 Plus 几乎 $70 算术相容，但是否同一窗口/同一标价口径仍是口述",
+        "与 2116257905494381042 Plus「12小时输入测得 $100 / 基本输入标价约 $70」并存，不裁定"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "openPrHits": {
+          "#208": false,
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium oral"
+      }
+    },
+    {
+      "id": "x-2120440111611670948",
+      "confidence": "Medium",
+      "planId": "kimi-legacy-subscription",
+      "model": null,
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/2232960089q/status/2120440111611670948",
+        "account": "2232960089q",
+        "profileUrl": "https://x.com/2232960089q",
+        "createdAt": "2026-11-11T08:54:53.000Z",
+        "createdAtTaipei": "2026-11-11 16:54:53 Asia/Taipei",
+        "text": "@sandianshuigg @Fei2411 限定在国模里啊，kimi的老版订阅我实测倍率是API12--13倍，算上订阅倍率后国模里DeepSeek官key和glm的性价比肯定是打不过他，qwen和hy什么的干脆没有性价。"
+      },
+      "observed": {
+        "oral": {
+          "kimiLegacySubscriptionMultiplierVsApi": [
+            12,
+            13
+          ],
+          "claimedMeasured": true
+        }
+      },
+      "gaps": [
+        "倍率是相对 API 列表价的倍数，不是配额百分比；无 token、无截图、无周期",
+        "与两天前 2118544351630680402「K3.1Pro 是 API 接近 13 倍额度」同方向，算相关重复表述而非全新结构，但仍是独立 post id"
+      ],
+      "deduplication": {
+        "relatedEarlierPost": "2118544351630680402",
+        "alreadyInLocalPriorJson": false,
+        "openPrHits": {
+          "#208": false,
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium oral; same family as 2118544351630680402"
+      }
+    },
+    {
+      "id": "x-2118544351630680402",
+      "confidence": "Medium",
+      "planId": "kimi-k3-1-pro",
+      "model": "k3.1-pro",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/2232960089q/status/2118544351630680402",
+        "account": "2232960089q",
+        "profileUrl": "https://x.com/2232960089q",
+        "createdAt": "2026-11-06T03:21:48.000Z",
+        "createdAtTaipei": "2026-11-06 11:21:48 Asia/Taipei",
+        "text": "@leo114119 其实kimi从k3大基模梭哈成功后就一直是断档第一国模，国际上也是去掉OAG就轮到他，并且订阅套餐其实在国模里也算合理的用量，比如K3.1Pro是API接近13倍额度"
+      },
+      "observed": {
+        "oral": {
+          "k31ProApproxMultiplierVsApi": 13
+        }
+      },
+      "gaps": [
+        "口述倍率，无 token / 配额% / 截图"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "openPrHits": {
+          "#208": false,
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium oral"
+      }
+    },
+    {
+      "id": "x-2118559141459628116",
+      "confidence": "Medium",
+      "planId": "kimi-allegretto-vs-chatgpt-plus",
+      "model": null,
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/2232960089q/status/2118559141459628116",
+        "account": "2232960089q",
+        "profileUrl": "https://x.com/2232960089q",
+        "createdAt": "2026-11-06T04:20:34.000Z",
+        "createdAtTaipei": "2026-11-06 12:20:34 Asia/Taipei",
+        "text": "@sunyihahah @leo114119 你指望多少啊，allergetto每周80美元就比plus多点（plus70美元，sol6.1和k3.1p定价一样），但是国模里也没更好的了，只能说一切都是比较而言"
+      },
+      "observed": {
+        "oral": {
+          "allegrettoWeeklyUsd": 80,
+          "plusUsd": 70,
+          "alsoStated": "Sol 6.1 priced the same as K3.1P"
+        }
+      },
+      "gaps": [
+        "Allergetto/Allegretto 拼写与套餐官方名未核；无截图；Plus $70 窗口在本帖写「每周」只明确落在 Allegretto 上，Plus 是否同一窗口稍含糊",
+        "不要和官方 Kimi 面板或其他人数字拼接"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "openPrHits": {
+          "#208": false,
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium oral"
+      }
+    },
+    {
+      "id": "x-2116934618607915352",
+      "confidence": "Medium",
+      "planId": null,
+      "model": "opus-5.5",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/2232960089q/status/2116934618607915352",
+        "account": "2232960089q",
+        "profileUrl": "https://x.com/2232960089q",
+        "createdAt": "2026-11-01T16:45:18.000Z",
+        "createdAtTaipei": "2026-11-02 00:45:18 Asia/Taipei",
+        "text": "@DeerLit73888 @_kaichen 这少成啥了都，opus5.5是6亿token300美元，12亿token不打折的话就600美元啊，考虑到agy上下文短甚至可能就500美元"
+      },
+      "observed": {
+        "oral": {
+          "opus55_600mTokens_usd": 300,
+          "opus55_1_2bTokens_undiscounted_usd": 600,
+          "agyShortContextMaybeUsd": 500
+        }
+      },
+      "gaps": [
+        "像按 API 列表价做的换算，不是配额面板；「不打折」「agy 上下文短」说明 600/500 是派生",
+        "无套餐、无配额%、无截图；不要当成某档订阅的周池"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "openPrHits": {
+          "#208": false,
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium oral, likely derived list-price mapping"
+      }
+    },
+    {
+      "id": "x-2116257905494381042",
+      "confidence": "Medium",
+      "planId": "chatgpt-plus",
+      "model": null,
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/2232960089q/status/2116257905494381042",
+        "account": "2232960089q",
+        "profileUrl": "https://x.com/2232960089q",
+        "createdAt": "2026-10-30T19:56:17.000Z",
+        "createdAtTaipei": "2026-10-31 03:56:17 Asia/Taipei",
+        "text": "@Vaelion113022 @theo 我也觉得离奇，我最近转向其他订阅只保留了一个plus没有测Pro，但我觉得可能一台电脑或者一个IP，openai有风控类似的东西，plus的API额度如果按照12小时输入计算我测试的是100美元，如果按照基本输入标价计算应该是70美元左右（in",
+        "apiTextTruncated": true
+      },
+      "observed": {
+        "oral": {
+          "plusApiWorthUsd_12hInputBasis_tested": 100,
+          "plusApiWorthUsd_baseInputList_approx": 70,
+          "didNotTestProThisPeriod": true
+        }
+      },
+      "gaps": [
+        "X API 正文在「（in」处截断",
+        "同一 Plus 给出 $100 与 $70 两个口径，必须保留，不取其中一个当「真实值」",
+        "窗口（12 小时输入 vs 未说明的基本标价周期）不同；与日后「plus 几乎 70 美元」相关但不自动合并"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "openPrHits": {
+          "#208": false,
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium oral; still inside the 14-day window (from 2026-10-28T00:00:00Z)"
+      }
+    },
+    {
+      "id": "x-2118192319489032518",
+      "confidence": "Low",
+      "planId": "devin-max",
+      "model": null,
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/2232960089q/status/2118192319489032518",
+        "account": "2232960089q",
+        "profileUrl": "https://x.com/2232960089q",
+        "createdAt": "2026-11-05T04:02:57.000Z",
+        "createdAtTaipei": "2026-11-05 12:02:57 Asia/Taipei",
+        "text": "@YaroslavNareyko @AdamHoltererer 根本无法相比，我有两个devin max，他们加起来也不如一个Pro"
+      },
+      "observed": {
+        "oral": {
+          "twoDevinMaxLessThanOnePro": true,
+          "proProductUnspecified": true
+        }
+      },
+      "gaps": [
+        "无硬数字、无窗口、Pro 指哪家产品未写死；Low，不计入有效新信号"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "disposition": "Low; recorded but not counted"
+      }
+    },
+    {
+      "id": "x-2117520576030056684",
+      "confidence": "Low",
+      "planId": null,
+      "model": null,
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/2232960089q/status/2117520576030056684",
+        "account": "2232960089q",
+        "profileUrl": "https://x.com/2232960089q",
+        "createdAt": "2026-11-03T07:33:41.000Z",
+        "createdAtTaipei": "2026-11-03 15:33:41 Asia/Taipei",
+        "text": "@Fei2411 现在是GPT要更多，都按照对应缓存计算GPT每1X现在是100，Claude是300，但是GPT是Terra5 Sol10 Astra50，Claude是Sonnet10，Opus20 Fable120。加上GPT倍数有一倍优势，用量相当于多给三分之一"
+      },
+      "observed": {
+        "oral": {
+          "gptPer1xLiteral": 100,
+          "claudePer1xLiteral": 300,
+          "gptWeights": {
+            "Terra": 5,
+            "Sol": 10,
+            "Astra": 50
+          },
+          "claudeWeights": {
+            "Sonnet": 10,
+            "Opus": 20,
+            "Fable": 120
+          }
+        }
+      },
+      "gaps": [
+        "100/300 单位缺失；已在 #208 discardedLow 按默认规则不收录。本次不重新计为有效新信号，只做作者行为记录"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": true,
+        "alreadyInOpenPr": "#208 discardedLow",
+        "disposition": "already discarded in #208; not a new valid signal"
+      }
+    }
+  ],
+  "scopeNote": "口述 API 估值与倍率：Pro 10X 每周 $700、Plus 几乎 $70、50X $3500、Kimi 老版约 API 12–13 倍、Allegretto 每周 $80、Opus 5.5 6 亿 token $300、Plus $100 与约 $70 两口径。无配额面板，不采用。",
+  "screenshotsCommitted": false,
+  "screenshotStorage": "X 截图不入库。image 文件名只是目视核对时的引用，不是仓库路径。图上字段和原帖 URL 写在本文件。"
+}

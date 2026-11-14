@@ -1,0 +1,43 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 204,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-08 扫描：ChatGPT/Codex $200 日均 700M–1.8B 口述 + 热力图 Nov 4 = 1.4B。与 #198 Pro$100 周样本不同档。",
+  "items": [
+    {
+      "id": "x-kimmonismus-codex-200-daily-1p4b-nov4",
+      "confidence": "Medium",
+      "planId": "chatgpt_or_codex_200",
+      "model": "Codex (unspecified)",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/kimmonismus/status/2119065835910148420",
+        "account": "kimmonismus",
+        "createdAt": "2026-11-07T13:54:00Z"
+      },
+      "observed": {
+        "planUsdPerMonthClaim": 200,
+        "consideringUpgradeUsd": 500,
+        "dailyTokensClaimMin": 700000000,
+        "dailyTokensClaimMax": 1800000000,
+        "heatmapPoint": {
+          "date": "2026-11-04",
+          "tokens": 1400000000
+        },
+        "hasScreenshot": true,
+        "screenshotNote": "usage heatmap tooltip 'Nov 4 / 1.4B tokens'; not copied into repo"
+      },
+      "gaps": [
+        "无 weekly remaining %",
+        "$200 档位全名未写明",
+        "热力图只露出 Nov 4 一格",
+        "无 input/cache/output"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-08.json",
+    "chatgpt-pro100-codex-weekly-x-2026-11-07.json"
+  ]
+}

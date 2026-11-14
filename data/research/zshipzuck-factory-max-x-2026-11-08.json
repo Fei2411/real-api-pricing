@@ -1,0 +1,79 @@
+{
+  "recordedAt": "2026-11-11T19:47:00+08:00",
+  "sourceType": "x_author_timeline_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "timezoneNote": "source timestamps are UTC (Z); createdAtTaipei is converted to Asia/Taipei (UTC+8)",
+  "id": "zshipzuck-factory-max-x-2026-11-08",
+  "items": [
+    {
+      "id": "x-2119313365478826240",
+      "confidence": "Medium",
+      "planId": "factory-max-200",
+      "model": "opus-5.5-high",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ZShipZuck/status/2119313365478826240",
+        "account": "ZShipZuck",
+        "profileUrl": "https://x.com/ZShipZuck",
+        "createdAt": "2026-11-08T06:17:35.000Z",
+        "createdAtTaipei": "2026-11-08 14:17:35 Asia/Taipei",
+        "text": "Factory Max试了一天, 我用的是opus5.5 high,缓存命中约93%, 周容量约 $970  月容量: 约 $1,940",
+        "quotes": "https://x.com/ZShipZuck/status/2118805051183706581"
+      },
+      "observed": {
+        "oral": {
+          "plan": "Factory Max",
+          "model": "opus 5.5 high",
+          "testWindow": "one-day test",
+          "cacheHitPctApprox": 93,
+          "weeklyWorthUsdApprox": 970,
+          "monthlyWorthUsdApprox": 1940
+        },
+        "screenshot": {
+          "kind": "author infographic, not a raw quota dashboard",
+          "image": "images/ZShipZuck-factory-max.jpg",
+          "rows": {
+            "factoryMax_200_per_month": {
+              "fiveHourUsdApprox": 88,
+              "sevenDayUsdApprox": 970,
+              "thirtyDayUsdApprox": 1940,
+              "note": "当前实测: 缓存命中率约 93%"
+            },
+            "claudePro_20_per_month": {
+              "fiveHourUsdApprox": 42,
+              "sevenDayUsdApprox": 245,
+              "thirtyDayUsdApprox": 1050
+            },
+            "claudeMax5x_100_per_month": {
+              "fiveHourUsdApprox": 210,
+              "sevenDayUsdApprox": 1225,
+              "thirtyDayUsdApprox": 5250
+            }
+          }
+        }
+      },
+      "gaps": [
+        "无 token、无配额百分比；93% 是缓存命中率，不是配额使用率",
+        "美元是 API 列表价估值/容量，不是账单或订阅价",
+        "口述与图上 Factory Max 7d/30d 一致；同图 Claude Pro / Max 5x 未必同等实测，Factory Max 日测是作者明确的测量声明",
+        "同作者 2026-11-06 图（2118805051183706581）Claude Pro：5h $25 / 周 $200–260 / 月 $960，与本图 5h $42 / 7d $245 / 30d $1,050 冲突，保留两边，不平均",
+        "与 MartinM91217805 同日 Magpie 口述 Factory Max 5h~$80 / 周~$500 / 月 $1000 冲突，不平均、不拼接"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "defaultBranchSearch": "0 hits for 2119313365478826240",
+        "openPrHits": {
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#208": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium; quotes already-staged 2118805051183706581 but this is a distinct post and graphic"
+      }
+    }
+  ],
+  "scopeNote": "Factory Max 一日信息图：opus 5.5 high，缓存命中约 93%（不是配额%），周约 $970、月约 $1940。与 Martin Magpie $500/$1000 冲突，两边都留，不采用。",
+  "screenshotsCommitted": false,
+  "screenshotStorage": "X 截图不入库。image 文件名只是目视核对时的引用，不是仓库路径。图上字段和原帖 URL 写在本文件。"
+}

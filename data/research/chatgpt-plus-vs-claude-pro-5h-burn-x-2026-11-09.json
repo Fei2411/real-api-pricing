@@ -1,0 +1,42 @@
+{
+  "recordedAt": "2026-11-09",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 214,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "ChatGPT Plus vs Claude Pro 同任务 5h 窗百分比对比。截图只链原帖。",
+  "items": [
+    {
+      "id": "x-ji_she-plus-vs-claude-pro-5h-burn",
+      "confidence": "Medium",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ji_she46383/status/2119582846793007217",
+        "account": "ji_she46383",
+        "createdAt": "2026-11-09T00:08:25Z"
+      },
+      "observed": {
+        "chatgptPlan": "ChatGPT Plus $19.99 (App Store)",
+        "claudePlan": "Claude Pro Monthly $20.00 (App Store)",
+        "thinkingEffort": "高",
+        "codex": {
+          "lines": 356,
+          "fiveHourPct": 20
+        },
+        "claudeCode": {
+          "lines": 423,
+          "fiveHourPct": 3
+        },
+        "hasScreenshot": true,
+        "screenshotNote": "App Store subscriptions page, not usage panel"
+      },
+      "gaps": [
+        "无绝对 token",
+        "模型档未写明",
+        "行数≠token"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-09.json"
+  ]
+}

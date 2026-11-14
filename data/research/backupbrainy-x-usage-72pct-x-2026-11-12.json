@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "backupbrainy-x-usage-72pct-2026-11-12",
+    "grade": "Medium",
+    "postId": "2120922128497488278",
+    "url": "https://x.com/BackupBrainy/status/2120922128497488278",
+    "author": "BackupBrainy",
+    "authorId": "1758760791178633216",
+    "createdAt": "2026-11-12T16:50:14.000Z",
+    "planOrModel": "截图为设置页 Usage 72%，下方有 The X Subscription。邮箱域可见但报告不转述。档位未写。",
+    "tokens": null,
+    "quotaPercent": {
+      "settingsUsage": "72%"
+    },
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/BackupBrainy-72pct.jpg"
+    ],
+    "oralText": "Two small tasks and 72% quota gone.",
+    "alreadyInPrOrMain": false,
+    "recommendation": "暂不采用",
+    "why": "只有设置页 Usage 72%，无 token、无分项、套餐档未写清。「两个小任务」是口述，不能当校准。",
+    "evidenceFile": "evidence/backupbrainy-x-usage-72pct-x-2026-11-12.json"
+  }
+}

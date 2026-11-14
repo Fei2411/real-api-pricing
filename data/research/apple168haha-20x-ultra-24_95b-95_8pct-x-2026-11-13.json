@@ -1,0 +1,51 @@
+{
+  "recordedAt": "2026-11-14",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "apple168haha-20x-ultra-24_95b-95_8pct-2026-11-13",
+    "grade": "Medium",
+    "sourceType": "author_custom_telemetry",
+    "postId": "2121172471244353843",
+    "url": "https://x.com/apple168haha/status/2121172471244353843",
+    "author": "apple168haha",
+    "authorId": "1017570188932182016",
+    "createdAt": "2026-11-13T09:25:01.000Z",
+    "planOrModel": "Google AI Ultra (20x) on Antigravity (title of the custom report). Not an official Google usage console.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/apple168haha-1.jpg",
+      "images/apple168haha-2.jpg"
+    ],
+    "screenshotFields": {
+      "image1": {
+        "title": "20x Ultra 单周真实配额天花板实测报告; ANTIGRAVITY 7D TELEMETRY; PROMPT CACHE 86.1%",
+        "headerQuota": "Gemini 周池消耗进度 95.8% 已用（余 4.2%）; Claude 独立周池 (3p-weekly) 余 54.4% · 重置 11-14 15:50",
+        "period": "2026-11-07 15:50 ~ 11-13 16:54 (CST)",
+        "totalTokens": "24.95 亿 (2,495,000,000+), 15,877+ billed requests; new input 2.77亿, cache 21.70亿, output/thinking listed as 10.98M in the detailed table",
+        "values": "cache-discounted $796.81; estimated full kit $850–$900; no-cache equivalent $3,980+",
+        "byModel": {
+          "Gemini 4 Argon High": "2,700 req, 159.64M uncached in, 1,038.09M cache, 3.11M out, 1,200.83M total, $454.17",
+          "Gemini 4 Hydrogen xhigh": "1,727 req, 15.57M, 242.27M, 1.65M, 259.49M, $71.88",
+          "Gemini 4 Carbon High": "303 req, 33.10M, 67.24M, 0.37M, 100.71M, $76.59",
+          "Gemini 3.8 Flash": "10,835 req, 103.74M, 822.82M, 5.09M, 931.65M, $174.48",
+          "Claude Opus 5.5 High": "40 req, 1.36M uncached, 0.71M out, 2.07M total, $19.66",
+          "other 3.x light": "311 req, 0.37M, $0.04",
+          "gateway total": "15,916 req, 313.70M uncached, 2,170.45M cache, 10.98M out, 2,405.12M tokens, $796.81"
+        },
+        "footerVs5x": "VS 5x 实烧 (3.05亿): 8.15x Token, 6.3x ($797 vs $127)"
+      },
+      "image2": "CPA USAGE KEEPER, a different multi-API-key dashboard (commandcode GOAT 100% of providers; also gpt-6.1-sol and deepseek). This is not treated as the same ledger as image 1. API key prefixes and credential filenames visible in the crop are not transcribed."
+    },
+    "oralText": "实测汇报一下 Google AI Ultra (20x) 在 Antigravity 上的单周真实额度天花板。这周单号把 gemini-weekly 池子打到了 95.8% 已用（仅剩 4.2%），拉了后端 7 天全量账本……",
+    "conflictsToKeep": "95.8% and 24.95亿 appear only on a self-built telemetry board, not on an official Antigravity Usage popover in this post. Period 11-07 15:50–11-13 16:54 may or may not match the official weekly reset. Cache is 21.70亿 of 24.95亿 (86.1%). API value ≠ subscription quota. Footer comparison with shengtang/KOF97AI 5x 3.05亿 is a cross-account, cross-mix comparison and must not be used to infer a 20x/5x pool ratio. Do not 24.95亿÷95.8%. Image 2 must not be mixed into image 1.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "硬数字来自作者自建 7 日遥测看板，不是官方用量 UI；缓存占大部分；禁止用 24.95 亿÷95.8% 反推周池，也不可与 5x 的 3.05 亿拼接。",
+    "evidenceFile": "evidence/apple168haha-20x-ultra-24_95b-95_8pct-x-2026-11-13.json"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用为站点新数字或新规则",
+  "evidence": {
+    "id": "kevinzhu-codex-reset-inventory-96pct-2026-11-13",
+    "grade": "Medium",
+    "postId": "2121035143825789254",
+    "url": "https://x.com/kevinzhu1990/status/2121035143825789254",
+    "author": "kevinzhu1990",
+    "authorId": "1993513399872110597",
+    "createdAt": "2026-11-13T00:19:19.000Z",
+    "planOrModel": "Codex 中文用量面板。未写 Plus/Pro。重置卡文案为「完全重置（每周 + 5 小时）」，更像 Plus/Business 的覆盖范围。",
+    "tokens": null,
+    "quotaPercent": {
+      "fiveHourRemaining": "96%，将于 13:03 重置",
+      "weeklyRemaining": "96%，将于 11月19日 重置"
+    },
+    "screenshotReads": {
+      "resetsAvailable": 3,
+      "type": "完全重置（每周 + 5 小时）",
+      "expiriesGMT8": [
+        "12/1 04:29",
+        "12/2 06:53",
+        "12/13 06:49"
+      ]
+    },
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/kevinzhu1990-codex.jpg"
+    ],
+    "oralText": "已经浪费了 3 次重置机会。",
+    "alreadyInPrOrMain": false,
+    "recommendation": "暂不采用为站点新数字或新规则",
+    "why": "账户库存截图，印证本轮官方 banked reset 已到账，且剩余 96% 时不能兑现（官方 <80% 剩余规则）。不是 token+% 实测。",
+    "evidenceFile": "evidence/kevinzhu-codex-reset-inventory-x-2026-11-13.json"
+  }
+}

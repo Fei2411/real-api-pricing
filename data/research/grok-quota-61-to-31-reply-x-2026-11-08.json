@@ -1,0 +1,58 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_public_reply_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "评论区口述的配额百分比变化。没有 token，不能反推额度池。research-only，不改 adopted.csv。",
+  "items": [
+    {
+      "id": "x-2117165895764377605",
+      "confidence": "Medium",
+      "planId": "x_grok_plan_unspecified",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/tonyklose1984/status/2117165895764377605",
+        "account": "tonyklose1984",
+        "createdAt": "2026-11-02T08:04:19.000Z",
+        "createdAtPacific": "2026-11-02T00:04:19-08:00",
+        "text": "@Fei2411 我的刚突然从61% ，降低到31%，你们自己看看额度是不是恢复了？",
+        "conversationId": "2117098933252141111",
+        "referencedPosts": [
+          {"id": "2117098933252141111", "type": "replied_to"}
+        ]
+      },
+      "observed": {
+        "evidenceKind": "oral quota-percentage change; no tokens and no screenshot on this post",
+        "hasScreenshot": false,
+        "oral": {
+          "usagePctBefore": 61,
+          "usagePctAfter": 31,
+          "provider": "X/Grok Bot from root context",
+          "plan": null
+        },
+        "tokens": null,
+        "cycleUsage": null,
+        "apiPriceEstimateUsd": null,
+        "availableAllowance": null,
+        "notInferred": "61 到 31 不是精确的额度翻倍；百分比是整数，不能反推 token 池"
+      },
+      "gaps": [
+        "没有 token，也没有这张帖子自己的截图",
+        "套餐档位没写；X/Grok 只来自根帖上下文",
+        "只能当作计量变化的旁证，不能确证额度恢复的幅度",
+        "同一作者更早的 2116695489639010636 是另一条 ChatGPT 转述，不是这条 61%→31%，不并档"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-user-submitted-2026-11-08.json"
+  ],
+  "deduplication": {
+    "result": "new Medium; this post id was absent. Same account has a different post on the unmerged 2026-11-01 daily branch, not this claim.",
+    "otherPostNotMerged": {
+      "postId": "2116695489639010636",
+      "branch": "cursor/daily-2026-11-01-pricing-signals-037c",
+      "file": "openai-chatgpt-codex-shared-pool-x-2026-11-01.json"
+    },
+    "index": "x-scan-user-submitted-2026-11-08.json"
+  }
+}

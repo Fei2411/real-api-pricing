@@ -1,0 +1,49 @@
+{
+  "recordedAt": "2026-11-14",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "annthonny-claude-max-5h2-7d18-4_57b-2026-11-14",
+    "grade": "Medium",
+    "sourceType": "custom_usage_bar_and_third_party_panel",
+    "postId": "2121400063859781748",
+    "url": "https://x.com/Annthonny/status/2121400063859781748",
+    "author": "Annthonny",
+    "authorId": "1605208588741652480",
+    "createdAt": "2026-11-14T00:29:23.000Z",
+    "planOrModel": "Claude Max (header: Claude Code v2.1.325, Opus 5.5 with high effort · Claude Max).",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/Annthonny-usage-bar.jpg"
+    ],
+    "screenshotFields": {
+      "customUsageBar": "0 tokens · $0.0000 · 5h 2% 2h 13m · 7d 18% 5d 16h",
+      "rightPanelTab": "Tokens, 30d, Oct 15 – Nov 13, updated just now",
+      "total": "4.57 B tokens, 340 sessions, $2,160.26 at API list prices",
+      "byProvider": "Claude Code 267 sessions 98.3% of tokens · 4.50B · $2,841.66; Codex 73 sessions 1.7% · 77.3M · $118.60",
+      "cache": "Cache read 4.45B, Cache write 92.7M, Input 4.97M, Output 26.7M, Cache hit 98%",
+      "byModel": {
+        "opus-5-5": "$1,748.65, 84.2%, 3.85B",
+        "fable-5-2": "unpriced, 7.6%, 347M",
+        "sonnet-5-5": "$128.05, 3.3%, 149M",
+        "fable-5-1": "$263.70, 3.2%, 146M",
+        "gpt-6-astra": "$115.09, 1.3%, 58.7M",
+        "gpt-6.1-sol": "$3.51, 0.3%, 15.1M",
+        "codex-auto-review": "unpriced, <0.1%, 3.59M",
+        "haiku-5-5": "$0.0480, <0.1%, 543k",
+        "opus-5": "$1.22, <0.1%, 521k"
+      },
+      "noteOnPanel": "351M tokens from models without a known price aren't in the total. Header API list total $2,160.26 is not arithmetically reconciled here with the per-provider dollar figures; record both as shown, do not invent a fix. A line under the model name is redacted in the screenshot; this report does not transcribe it."
+    },
+    "oralText": "Mods have been my favorite part of Claude Code lately. Built a usage bar above the prompt that shows tokens, cost and my 5h/weekly limits.",
+    "conflictsToKeep": "4.57B is a 30-day Tokens tab, not the weekly 18% window. 5h 2% / 7d 18% are on the custom bar, not an official Anthropic console page. Cache hit 98% is not quota%. API list $ is not subscription quota. Do not divide 4.57B by 18%.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "自定义用量条有 5h 2% / 7d 18%，但 4.57B 是 30 日面板且无对应周配额%，窗口不能配对。",
+    "evidenceFile": "evidence/annthonny-claude-max-5h2-7d18-4_57b-x-2026-11-14.json"
+  }
+}

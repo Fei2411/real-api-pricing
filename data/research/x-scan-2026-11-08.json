@@ -1,0 +1,305 @@
+{
+  "recordedAt": "2026-11-08",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "sourceType": "x_public_scan",
+  "tool": "x.search_posts_all (Grok Bot built-in; not user X Platform API)",
+  "window": {
+    "start_time": "2026-11-06T01:00:00Z",
+    "end_note": "scan fire ~2026-11-08T01:05Z UTC / Asia/Shanghai day 2026-11-08"
+  },
+  "siteSnapshot": {
+    "url": "https://realapipricing.com/",
+    "snapshotDate": "2026-10-27",
+    "lagDaysApprox": 12
+  },
+  "counts": {
+    "High": 1,
+    "Medium": 16,
+    "discardedLowApprox": 90
+  },
+  "issuesCreated": [
+    {
+      "number": 202,
+      "url": "https://github.com/Fei2411/real-api-pricing/issues/202",
+      "grade": "High"
+    },
+    {
+      "number": 203,
+      "url": "https://github.com/Fei2411/real-api-pricing/issues/203",
+      "grade": "Medium"
+    },
+    {
+      "number": 204,
+      "url": "https://github.com/Fei2411/real-api-pricing/issues/204",
+      "grade": "Medium"
+    }
+  ],
+  "issueComments": [
+    {
+      "issue": 192,
+      "note": "Super 55% (7 days left) + Super 28% day-one follow-up"
+    },
+    {
+      "issue": 195,
+      "note": "Ultra 99% / 44% in ~2 days / 40% oral follow-up"
+    },
+    {
+      "issue": 198,
+      "note": "Claude Pro weekly 99% + 5h 19% Opus 5.5 panel"
+    }
+  ],
+  "skippedDuplicates": [
+    {
+      "theme": "Claude Max lawsuit 3.5x/6x vs advertised 5x/20x weekly",
+      "reason": "widely repeated Nov 6-8 court news; weekly-vs-5h multiplier already covered by #170/#156"
+    },
+    {
+      "theme": "ChatGPT Pro/Business monthly API credits $100/$200/$500 and Business seat caps",
+      "reason": "policy restatement already in #157/#161"
+    },
+    {
+      "theme": "Codex/ChatGPT Pro no 5-hour window, weekly only",
+      "reason": "covered by #161/#198; LimitWatch restates"
+    }
+  ],
+  "queries": [
+    {
+      "q": "Kimi (Code OR 代码) (用量 OR 配额 OR 打满 OR 百分比 OR token) -is:retweet",
+      "kept": 0,
+      "note": "noisy marketing / model-release / gateway ads"
+    },
+    {
+      "q": "Kimi (199 OR \"K3.1\" OR Highspeed OR 控制台) (用量 OR token OR %) -is:retweet",
+      "error": "invalid query: % character"
+    },
+    {
+      "q": "(\"Claude Code\" OR Anthropic) (用量 OR usage OR quota OR tokens OR 配额 OR 打满) -is:retweet",
+      "kept": "Medium buntablog Claude Pro 99%; lawsuit recaps skipped"
+    },
+    {
+      "q": "Cursor (用量 OR 额度 OR 打满 OR quota OR usage OR limit) -is:retweet",
+      "kept": "Medium imranbru99 452.3M; Ultra/Super % cluster; Jeree Opus 5.5=0"
+    },
+    {
+      "q": "Kimi (199 OR \"K3.1\" OR Highspeed OR HighSpeed OR 控制台 OR Allegro) (用量 OR token OR 配额 OR 打满) -is:retweet",
+      "kept": "OpenCode Go page Kimi $15 worth (nextaurame); no new Kimi console panel"
+    },
+    {
+      "q": "(Codex OR \"ChatGPT Pro\" OR \"ChatGPT Plus\") (用量 OR quota OR 配额 OR 额度 OR usage OR tokens) -is:retweet",
+      "kept": "Medium kimmonismus $200 daily; Ssr360535694 Claude A/B; LimitWatch policy"
+    },
+    {
+      "q": "(DeepSeek OR GLM OR MiniMax OR Devin OR OpenCode) (用量 OR 配额 OR 订阅 OR 调价 OR pricing OR quota) -is:retweet",
+      "kept": "Medium nextaurame OpenCode Go table"
+    },
+    {
+      "q": "(Cursor OR Claude OR Kimi OR Codex) (调价 OR 涨价 OR 降价 OR 新套餐 OR 促销 OR promo) -is:retweet",
+      "kept": "Jeree Cursor Ultra Opus 5.5=0; rest share-account spam / unrelated promo"
+    },
+    {
+      "q": "(Weekly Ultra OR Weekly Super OR Weekly Premium OR \"Weekly Limit\" OR \"Included usage\" OR \"M tokens\") (Cursor OR Ultra OR Super) has:images -is:retweet",
+      "kept": "Super 55%/28%; Ultra 40%/99% cluster; sanchitobless 41.5%"
+    },
+    {
+      "q": "Claude (\"Claude Code\" OR Max OR Ultra OR Pro) (周额度 OR 五小时 OR weekly OR \"5-hour\" OR \"5 hour\") (用量 OR 配额 OR 上限 OR limit OR 打满) -is:retweet",
+      "kept": "Claude Ultra 98% one_dyor; lawsuit/rename recaps skipped"
+    },
+    {
+      "q": "(\"Command Code\" OR GOAT OR \"OpenCode Go\") (用量 OR usage OR tokens OR credits OR 配额 OR quota) -is:retweet",
+      "kept": "Medium CMM_AI_ >10B for $10; OpenCode Go table"
+    },
+    {
+      "q": "\"Kimi Code\" (用量 OR 配额 OR 打满 OR 控制台 OR token) -is:retweet",
+      "kept": "High ren8peter Plus $19 9-day monthly"
+    }
+  ],
+  "keptSignals": [
+    {
+      "grade": "High",
+      "handle": "ren8peter",
+      "plan": "Kimi Code Plus $19",
+      "numbers": "9-day local+server table: input 3.62M + cache read 198.4M + output 0.98M = 203.00M; API-worth $38.57; monthly exhausted; 2.03x vs $19",
+      "screenshot": "Y (token table)",
+      "url": "https://x.com/ren8peter/status/2118601947062444316",
+      "issue": 202
+    },
+    {
+      "grade": "Medium",
+      "handle": "imranbru99",
+      "plan": "X Subscription (unspecified)",
+      "numbers": "Total/Included 452.3M, $0 extra; Nov 7 Cursor 439,970,073 + Grok Chat 6,153,435",
+      "screenshot": "Y",
+      "url": "https://x.com/imranbru99/status/2119224875625902583",
+      "issue": 203
+    },
+    {
+      "grade": "Medium",
+      "handle": "kimmonismus",
+      "plan": "ChatGPT/Codex $200",
+      "numbers": "daily claim 700M–1.8B; heatmap Nov 4 = 1.4B; considering $500",
+      "screenshot": "Y (heatmap tooltip)",
+      "url": "https://x.com/kimmonismus/status/2119065835910148420",
+      "issue": 204
+    },
+    {
+      "grade": "Medium",
+      "handle": "buntablog",
+      "plan": "Claude Pro",
+      "numbers": "weekly all-models 99% (resets Tue 11:00); 5-hour 19% (resets Sun 4:00); Opus 5.5 medium / auto",
+      "screenshot": "Y (official usage bars, no tokens)",
+      "url": "https://x.com/buntablog/status/2119232181687976096",
+      "issueComment": 198
+    },
+    {
+      "grade": "Medium",
+      "handle": "maatewoos",
+      "plan": "X Ultra",
+      "numbers": "99% used, resets in 10 minutes",
+      "screenshot": "Y (percent only)",
+      "url": "https://x.com/maatewoos/status/2119228222609256467",
+      "issueComment": 195
+    },
+    {
+      "grade": "Medium",
+      "handle": "FieldToFuture",
+      "plan": "X Ultra",
+      "numbers": "44% of weekly Ultra in ~2 days; mentions extra $300-500 overage risk",
+      "screenshot": "N",
+      "url": "https://x.com/FieldToFuture/status/2119222429642100828",
+      "issueComment": 195
+    },
+    {
+      "grade": "Medium",
+      "handle": "ayoub4el",
+      "plan": "X Super",
+      "numbers": "weekly usage limit 55% used, resets in 7 days; extra credits $0.19 remaining",
+      "screenshot": "Y",
+      "url": "https://x.com/ayoub4el/status/2119207713787793577",
+      "issueComment": 192
+    },
+    {
+      "grade": "Medium",
+      "handle": "Moriarty_tech",
+      "plan": "X Super $100",
+      "numbers": "28% used on day one, resets in 6 days",
+      "screenshot": "Y (percent only)",
+      "url": "https://x.com/Moriarty_tech/status/2119093621634879829",
+      "issueComment": 192
+    },
+    {
+      "grade": "Medium",
+      "handle": "sanchitobless",
+      "plan": "cheapest X/Grok Bot plan",
+      "numbers": "41.5% weekly in one morning: Grok bots 12.2% + other apps/Cursor 29.3%",
+      "screenshot": "Y (custom infographic, not official panel)",
+      "url": "https://x.com/sanchitobless/status/2119209444646978012",
+      "issueComment": 192
+    },
+    {
+      "grade": "Medium",
+      "handle": "nextaurame",
+      "plan": "OpenCode Go $10",
+      "numbers": "page lists DeepSeek V4.1 Flash as $100/mo usage and ~43,330 requests / 5h; Kimi K3.1 Pro only $15 on same plan",
+      "screenshot": "N",
+      "url": "https://x.com/nextaurame/status/2119225509506933216",
+      "note": "official-table transcription; overlaps #171/#180; scan-only no new issue"
+    },
+    {
+      "grade": "Medium",
+      "handle": "CMM_AI_",
+      "plan": "Command Code $10",
+      "numbers": "over 10B tokens for $10 (oral)",
+      "screenshot": "N",
+      "url": "https://x.com/CMM_AI_/status/2119216601161670716",
+      "note": "overlaps #197 12.8B vs 8B cluster; scan-only"
+    },
+    {
+      "grade": "Medium",
+      "handle": "Ssr360535694",
+      "plan": "Claude (unspecified, A/B)",
+      "numbers": "claims 5-hour quota +20% and weekly quota -20%; not all users; testing",
+      "screenshot": "N",
+      "url": "https://x.com/Ssr360535694/status/2119232839275413569",
+      "note": "policy A/B claim; no panel; scan-only vs #156"
+    },
+    {
+      "grade": "Medium",
+      "handle": "Jeree12408242",
+      "plan": "Cursor Ultra $200 (new plan)",
+      "numbers": "Opus 5.5 included quota = 0; billed at API list if used",
+      "screenshot": "N",
+      "url": "https://x.com/Jeree12408242/status/2119223582756618666",
+      "note": "single oral plan-table claim; scan-only"
+    },
+    {
+      "grade": "Medium",
+      "handle": "TomSolidPM",
+      "plan": "X Ultra $200",
+      "numbers": "5-bot swarm >24h burned 40% of weekly allowance",
+      "screenshot": "Y (audit/code, not usage panel)",
+      "url": "https://x.com/TomSolidPM/status/2119152740186104081",
+      "issueComment": 195
+    },
+    {
+      "grade": "Medium",
+      "handle": "maxpower815",
+      "plan": "X Ultra",
+      "numbers": "40% in 14 hours; 6 days until weekly reset",
+      "screenshot": "Y (avatar only, not panel)",
+      "url": "https://x.com/maxpower815/status/2119166408013869416",
+      "issueComment": 195
+    },
+    {
+      "grade": "Medium",
+      "handle": "maz3839",
+      "plan": "X / Grok Bot",
+      "numbers": "same tasks now routed to Cursor cloud agent use 20% vs previous local Grok Bot edits 1-2%",
+      "screenshot": "N",
+      "url": "https://x.com/maz3839/status/2119211117591580761",
+      "note": "corroborates #172 Cloud Agent multi-request billing; scan-only"
+    },
+    {
+      "grade": "Medium",
+      "handle": "one_dyor",
+      "plan": "Claude Ultra",
+      "numbers": "work ate 98% of weekly limit and still unfinished",
+      "screenshot": "N on the 98% update",
+      "url": "https://x.com/one_dyor/status/2119212547664650322",
+      "note": "percent only; scan-only vs #156/#170"
+    }
+  ],
+  "discardSummary": [
+    "Kimi K3.1 Pro 开源权重 / Bedrock / Foundry 营销，无订阅用量面板",
+    "Claude Max 诉讼 3.5x/6x 复述（已见 #170）",
+    "ChatGPT Pro/Business API credits 政策复述（#157/#161）",
+    "印尼 Claude 共享账号促销、代充、网关/magpie 广告",
+    "Grok Bot 无数字吐槽、重置授权弹窗（DUNQU1）无 token",
+    "Claude Team $25→$20 二手且与另一帖 $25/$125 矛盾，丢弃",
+    "DeepSeek V4.1 Flash 1017 列表价二手（zg0820）无官方链，未开 issue",
+    "查询含字面 % 被 X API 拒（1 次）"
+  ],
+  "recommendedPrFiles": [
+    {
+      "path": "data/research/x-scan-2026-11-08.json",
+      "outline": "本扫描总日志"
+    },
+    {
+      "path": "data/research/kimi-code-plus19-monthly-x-2026-11-08.json",
+      "outline": "issue #202 High"
+    },
+    {
+      "path": "data/research/cursor-x-included-452m-day-x-2026-11-08.json",
+      "outline": "issue #203 Medium"
+    },
+    {
+      "path": "data/research/chatgpt-codex-200-daily-x-2026-11-08.json",
+      "outline": "issue #204 Medium"
+    }
+  ],
+  "draftPrTitle": "daily: 2026-11-08 pricing signals",
+  "notes": [
+    "Do NOT merge/deploy without user confirmation",
+    "Do NOT touch adopted.csv",
+    "Yesterday draft PR #199 / issues #197 #198 not duplicated"
+  ]
+}

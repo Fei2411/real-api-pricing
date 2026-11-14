@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 203,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-08 扫描：X Usage 面板单日 Total/Included 452.3M，$0 extra。计划名未标注。截图只链原帖。",
+  "items": [
+    {
+      "id": "x-imranbru99-452p3m-included-nov7",
+      "confidence": "Medium",
+      "planId": "x_subscription_unspecified",
+      "model": "mixed Cursor + Grok Chat shared pool",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/imranbru99/status/2119224875625902583",
+        "account": "imranbru99",
+        "createdAt": "2026-11-08T00:25:58Z"
+      },
+      "observed": {
+        "totalTokens": 452300000,
+        "includedTokens": 452300000,
+        "creditUsageUsd": 0,
+        "window": "2026-11-01 to 2026-11-08",
+        "nov7Tooltip": {
+          "cursorTokens": 439970073,
+          "grokChatTokens": 6153435,
+          "totalTokens": 446123508
+        },
+        "authorDayClaimTokens": 440000000,
+        "hasScreenshot": true,
+        "screenshotNote": "Total/Included/Credit usage cards + tokens-per-day chart; plan name not shown; not copied into repo"
+      },
+      "gaps": [
+        "无 weekly %",
+        "无 input/cache/output",
+        "档位未知（Premium/Super/Ultra 不自行择一）",
+        "顶栏 452.3M 与 Nov 7 tooltip 446.1M 差异原样保留"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-08.json",
+    "cursor-x-super-687m-99pct-x-2026-11-07.json"
+  ]
+}

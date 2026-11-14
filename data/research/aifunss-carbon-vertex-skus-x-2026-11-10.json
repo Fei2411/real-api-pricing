@@ -1,0 +1,85 @@
+{
+  "recordedAt": "2026-11-11T19:47:00+08:00",
+  "sourceType": "x_author_timeline_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "timezoneNote": "source timestamps are UTC (Z); createdAtTaipei is converted to Asia/Taipei (UTC+8)",
+  "id": "aifunss-carbon-vertex-skus-x-2026-11-10",
+  "items": [
+    {
+      "id": "x-2120068769804693678",
+      "confidence": "Medium",
+      "planId": null,
+      "model": "gemini-4-carbon",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ai_funss/status/2120068769804693678",
+        "account": "ai_funss",
+        "profileUrl": "https://x.com/ai_funss",
+        "createdAt": "2026-11-10T08:19:18.000Z",
+        "createdAtTaipei": "2026-11-10 16:19:18 Asia/Taipei",
+        "text": "Gemini 4 Carbon 已在 Vertex AI 上线了\n\n价格：\n输入：$4\n输出：$20\n缓存输入：$0.2\n\n不知道普通Pro用户可以用到么？"
+      },
+      "observed": {
+        "oral": {
+          "listedPerMTokUsd": {
+            "input": 4,
+            "output": 20,
+            "cacheInput": 0.2
+          },
+          "omittedFromOral": "card also shows Batch/Flex at $2 / $10 / $0.1"
+        },
+        "screenshot": {
+          "image": "images/aifunss-carbon-price-1.png",
+          "kind": "third-party LuminaBench billing-catalogue card, not an official Google pricing page",
+          "title": "CLOUD BILLING LISTING · GOOGLE — Gemini 4 Carbon",
+          "subtitle": "Spotted in Google Cloud's public billing catalogue.",
+          "service": "Vertex AI",
+          "skus": {
+            "online_text_global_per_m_billed_units": {
+              "inputUsd": 4,
+              "outputUsd": 20,
+              "cacheReadsUsd": 0.2
+            },
+            "batch_text_global_per_m_billed_units": {
+              "inputUsd": 2,
+              "outputUsd": 10,
+              "cacheReadsUsd": 0.1
+            },
+            "flex_text_global_per_m_billed_units": {
+              "inputUsd": 2,
+              "outputUsd": 10,
+              "cacheReadsUsd": 0.1
+            }
+          },
+          "evidenceNote": "90 published billing SKUs",
+          "disclaimerOnCard": "Billing listing only; release, public model ID and API access unconfirmed",
+          "attribution": "LuminaBench.com / @LuminaBench"
+        }
+      },
+      "gaps": [
+        "这是价格信号，不是用量/配额样本",
+        "与仓库 #233 已收官方介绍价冲突/需对照：官方介绍价至 2026-11-30 为 in $2 / cache $0.10 / out $10 per MTok，自 2026-12-01 为 $4 / $20 / $0.20。本卡把 Online 写成后一档，Batch/Flex 写成前一档，且未标注生效日",
+        "第三方目录，卡片自己声明 access unconfirmed；不要写成官方定价页",
+        "不可与 shengtang Carbon 用量或 ai_funss Ultra 月估值拼接"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "sisterPostAlreadyStaged": "2120065411240874466 Ultra monthly API-worth is in /workspace/ai-funss-2026-11-10 and now also in #208",
+        "officialPricesAlreadyIn": "#233 / related official Carbon API file — do not merge this catalogue card into that official file",
+        "defaultBranchSearch": "0 hits",
+        "openPrHits": {
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#208": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium price-list signal; not a recount of the Ultra usage chart"
+      }
+    }
+  ],
+  "scopeNote": "LuminaBench Vertex 价卡：Online $4/$20/$0.2，Batch/Flex $2/$10/$0.1。不是官方导入价，不要写进官方 Carbon 价文件。",
+  "screenshotsCommitted": false,
+  "screenshotStorage": "X 截图不入库。image 文件名只是目视核对时的引用，不是仓库路径。图上字段和原帖 URL 写在本文件。",
+  "doNot": "不要把 LuminaBench / ai_funss Vertex 卡写进官方 Carbon 导入价文件，也不要和 #233 的官方导入价（至 11-30 $2/$10/$0.1，12-01 起 $4/$20/$0.2）合并成一条采用价。"
+}

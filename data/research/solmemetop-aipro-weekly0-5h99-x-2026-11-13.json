@@ -1,0 +1,35 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "solmemetop-aipro-weekly0-5h99-2026-11-13",
+    "grade": "Medium",
+    "postId": "2121041865176912252",
+    "url": "https://x.com/SolMemetop/status/2121041865176912252",
+    "author": "SolMemetop",
+    "authorId": "1730573182783168512",
+    "createdAt": "2026-11-13T00:46:02.000Z",
+    "planOrModel": "口述「我目前的 AI Pro 界面」；截图为 Antigravity 用量弹出层。未在图上看到档位标签。",
+    "tokens": null,
+    "quotaPercent": {
+      "geminiWeeklyLeft": "0%，Resets in 23h 54m",
+      "geminiFiveHourLeft": "99%，Resets in 4h 56m",
+      "claudeAndGptWeeklyLeft": "0%，Resets in 5d",
+      "claudeAndGptFiveHourLeft": "100%，Resets in 5h",
+      "gemini4ArgonWeeklyLeft": "0%，resets in 23h 31m"
+    },
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/SolMemetop-antigravity.png"
+    ],
+    "oralText": "额度太少了。图上多款模型带黄色警告三角。",
+    "alreadyInPrOrMain": false,
+    "recommendation": "暂不采用",
+    "why": "周额度已空而 5h 条仍接近满，是窗口 vs 周限的截图旁证，但无 token。不要外推池。",
+    "evidenceFile": "evidence/solmemetop-aipro-weekly0-5h99-x-2026-11-13.json"
+  }
+}

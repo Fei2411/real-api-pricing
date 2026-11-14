@@ -1,0 +1,49 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用任何反推周池或上线数字",
+  "evidence": {
+    "id": "patriciotrials-xsuper-95pct-7_7b-window-mismatch-2026-11-12",
+    "grade": "Medium",
+    "gradeNote": "控制台同时出现 weekly % 与 token 总数，但日期筛选 Sep 1–Nov 12 与周表（Resets Nov 14）不是同一窗口，不能当 High 配对。",
+    "postId": "2120977204863709199",
+    "url": "https://x.com/PatricioTrials/status/2120977204863709199",
+    "author": "PatricioTrials",
+    "authorId": "119068411",
+    "authorProfile": "https://x.com/PatricioTrials",
+    "createdAt": "2026-11-12T20:29:06.000Z",
+    "planOrModel": "X One Super / X Super（口述 $100/月，前 3 个月促销 $60）。由 Cursor Pro $60 + X Premium $8 升级而来。",
+    "tokens": {
+      "source": "Cursor usage dashboard screenshot, date filter Sep 1 – Nov 12, 2026",
+      "total": "7.7B tokens",
+      "included": "7.7B tokens",
+      "creditUsage": "$0",
+      "additionalUsageThisMonth": "$0.00",
+      "creditBalance": "$0.00"
+    },
+    "quotaPercent": {
+      "weeklyIncludedUsed": "95%",
+      "productShareOfWeeklyMeter": {
+        "Cursor": "54%",
+        "Grok Bot": "41%"
+      },
+      "weeklyResets": "Nov 14",
+      "source": "同一张 Usage 控制台顶部 Weekly included usage 卡"
+    },
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/PatricioTrials-super.jpg"
+    ],
+    "imageNotes": "Usage resets 区显示 Couldn't load usage resets。下方 Tokens per week 柱状图从 Sep 1 到 Nov 8，不要把柱高读成精确周池。",
+    "oralText": "升级 5 天后已用掉 weekly allowance 的 95%；usage history 显示工作量与以前差不多，有时甚至更少。促销结束后相当于涨 47%。",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "absent",
+    "recommendation": "暂不采用任何反推周池或上线数字",
+    "why": "周表 95%（Cursor 54% / Grok Bot 41%，重置 Nov 14）是真实周表；7.7B 属于 Sep 1–Nov 12 约 10 周的日期筛选，与当前周窗不是同一窗口。与上轮 grokademy 2.1B/78% 是同一类错位。禁止 7.7B÷95%。套餐有口述。可讨论 Super 相对旧 Cursor Pro+Premium 的体感，但不能当校准。",
+    "conflictsToKeep": "作者把 95% 当作升级后用量变差的证据，但 7.7B 不是这一周的用量。原样保留，不平均、不采用。",
+    "evidenceFile": "evidence/patriciotrials-xsuper-95pct-7_7b-x-2026-11-12.json"
+  }
+}

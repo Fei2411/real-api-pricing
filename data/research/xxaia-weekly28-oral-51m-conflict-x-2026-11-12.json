@@ -1,0 +1,42 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "xxaia-weekly28-oral-51m-conflict-2026-11-12",
+    "grade": "Medium",
+    "gradeNote": "截图只有周 28%，51M 仅为口述，且口述把消耗归给 Grok Bot，截图显示主要是 Cursor 26% + Grok Bot 仅 2%。不能当 High 配对。",
+    "postId": "2120806586071269467",
+    "url": "https://x.com/xXaia/status/2120806586071269467",
+    "author": "xXaia",
+    "authorId": "115734711",
+    "createdAt": "2026-11-12T09:11:07.000Z",
+    "planOrModel": "Cursor 控制台 Weekly included usage。套餐未写（有 Upgrade 按钮）。",
+    "tokens": {
+      "oralOnly": "around 51M tokens",
+      "inScreenshot": null
+    },
+    "quotaPercent": {
+      "screenshotWeeklyUsed": "28%",
+      "productShare": {
+        "Cursor": "26%",
+        "Grok Bot": "2%"
+      },
+      "weeklyResets": "Nov 17",
+      "oral": "almost 30% in under an hour"
+    },
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/xXaia-grokbot-51m.jpg"
+    ],
+    "oralText": "The Grok model in Cursor used by Grok Bot is draining my weekly usage extremely fast: almost 30% in under an hour, around 51M tokens.",
+    "alreadyInPrOrMain": false,
+    "recommendation": "暂不采用",
+    "why": "周 28% 是真截图，但 51M 不在图上；口述把近 30% 归给 Grok Bot，图上 Grok Bot 只有 2%、Cursor 26%。禁止 51M÷28% 或按 Grok Bot 占比反推。",
+    "conflictsToKeep": "口述归因与截图产品分摊冲突，原样保留。",
+    "evidenceFile": "evidence/xxaia-weekly28-oral-51m-conflict-x-2026-11-12.json"
+  }
+}

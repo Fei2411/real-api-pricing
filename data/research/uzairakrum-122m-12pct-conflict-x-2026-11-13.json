@@ -1,0 +1,42 @@
+{
+  "recordedAt": "2026-11-14",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "uzairakrum-122m-12pct-conflict-2026-11-13",
+    "grade": "Medium",
+    "sourceType": "third_party_usage_panel_with_oral_conflict",
+    "postId": "2121363083738358263",
+    "url": "https://x.com/uzairakrum/status/2121363083738358263",
+    "author": "uzairakrum",
+    "authorId": "1742965064963948544",
+    "createdAt": "2026-11-13T22:02:26.000Z",
+    "planOrModel": "Oral: Gemini Pro sub and Gemini 4 Hydrogen. Screenshot is a third-party Usage panel (All environments / All providers), not a Google official quota page.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/uzairakrum-122m-12pct.jpg"
+    ],
+    "screenshotFields": {
+      "timeFilter": "Past 24h (selected). Tokens tab, not Limits.",
+      "total": "163M processed tokens, 26 sessions",
+      "providers": {
+        "Codex": "8 sessions, 20.4M, 12.5% of tokens, $2.78",
+        "Claude Code": "1 session, 20.7M, 12.7% of tokens, $7.45",
+        "OpenCode": "1 session, 48.4K, <0.1% of tokens, $0.00",
+        "Antigravity": "16 sessions, 122M, 74.8% of tokens, $39.15"
+      },
+      "totals": "Processed 163M; Cached input 146M; Uncached input 15M; Output 1.73M; Cache savings $251.07",
+      "byType": "Input 15M, Cache read 146M, Cache write 283K, Output 1.73M"
+    },
+    "oralText": "I have used 122M tokens on Gemini 4 hydrogen so far. It used 12% of my weekly Gemini Pro Sub.",
+    "conflictsToKeep": "Oral 122M on Hydrogen and 12% of weekly Gemini Pro are not on the screenshot. The screenshot's 122M is the Antigravity provider total over Past 24h (74.8% of tokens, which is a share of 163M, not a quota %). Codex's 12.5% of tokens is also a share, not weekly quota. No Limits/quota % is visible. Window is Past 24h, not weekly. Hydrogen is not isolated from other Antigravity models. Do not treat as a High pairing, and do not 122M÷12%.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "口述 122M Hydrogen 用掉 Gemini Pro 周配额 12%，与截图冲突：图是 Past 24h、122M 是 Antigravity 合计、可见的 12.5% 是 token 占比不是配额%。",
+    "evidenceFile": "evidence/uzairakrum-122m-12pct-conflict-x-2026-11-13.json"
+  }
+}

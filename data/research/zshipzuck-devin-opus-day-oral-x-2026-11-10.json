@@ -1,0 +1,55 @@
+{
+  "recordedAt": "2026-11-11T19:47:00+08:00",
+  "sourceType": "x_author_timeline_research",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "timezoneNote": "source timestamps are UTC (Z); createdAtTaipei is converted to Asia/Taipei (UTC+8)",
+  "id": "zshipzuck-devin-opus-day-oral-x-2026-11-10",
+  "items": [
+    {
+      "id": "x-2120003497290772885",
+      "confidence": "Medium",
+      "planId": "devin-unspecified",
+      "model": "opus-5.5",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ZShipZuck/status/2120003497290772885",
+        "account": "ZShipZuck",
+        "profileUrl": "https://x.com/ZShipZuck",
+        "createdAt": "2026-11-10T03:59:56.000Z",
+        "createdAtTaipei": "2026-11-10 11:59:56 Asia/Taipei",
+        "text": "@junior1018858 看你的缓存命中,每个人使用情况不一样,估计就在这个范围了. 我个人体验就是1天不到就把devin一周的opus 5.5额度用完了"
+      },
+      "observed": {
+        "oral": {
+          "plan": "Devin (tier unspecified)",
+          "model": "opus 5.5",
+          "claim": "less than one day to exhaust one week of Devin Opus 5.5 quota",
+          "alsoStated": "results depend on cache hit; individual usage differs"
+        },
+        "screenshot": null,
+        "tokens": null,
+        "quotaPct": null
+      },
+      "gaps": [
+        "无 token、无配额百分比、无截图、无套餐档位",
+        "不能和 Factory Max $970 或他人 Devin 周 token 拼接",
+        "只说明耗尽速度，不能反推额度池"
+      ],
+      "deduplication": {
+        "alreadyInLocalPriorJson": false,
+        "defaultBranchSearch": "0 hits",
+        "openPrHits": {
+          "#233": false,
+          "#223": false,
+          "#216": false,
+          "#208": false,
+          "#205": false
+        },
+        "disposition": "new independent Medium oral; not a recount of 2118805051183706581 or 2119313365478826240"
+      }
+    }
+  ],
+  "scopeNote": "口述不到 1 天用完 Devin 一周 Opus 5.5 额度。无 token、无配额%、无档位，不反推池。",
+  "screenshotsCommitted": false,
+  "screenshotStorage": "X 截图不入库。image 文件名只是目视核对时的引用，不是仓库路径。图上字段和原帖 URL 写在本文件。"
+}

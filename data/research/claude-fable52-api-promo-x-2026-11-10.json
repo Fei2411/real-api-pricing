@@ -1,0 +1,40 @@
+{
+  "recordedAt": "2026-11-10",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 220,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "Fable 5.2 API $8/$40 + Pro 限免周与 50% 周上限 + Fable 重置卡。待对官方页。",
+  "items": [
+    {
+      "id": "x-fable52-api-8-40",
+      "confidence": "Medium",
+      "planId": "anthropic_api",
+      "model": "claude-fable-5-2",
+      "observed": {
+        "listPricePerMTok": {"inputUsd": 8, "outputUsd": 40, "priorInputUsd": 10, "priorOutputUsd": 50},
+        "sources": [
+          "https://x.com/UhrsNix/status/2119960243845366265",
+          "https://x.com/runes_leo/status/2119959226697269735",
+          "https://x.com/LabubuNoBB/status/2119955983967588676"
+        ],
+        "note": "Multi-source secondhand; verify Anthropic pricing page before adopt"
+      }
+    },
+    {
+      "id": "x-fable52-pro-promo-50pct",
+      "confidence": "Medium",
+      "planId": "claude_pro",
+      "model": "claude-fable-5-2",
+      "observed": {
+        "promoEnd": "2026-11-16T23:59:00-08:00",
+        "fableShareOfWeeklyCapPct": 50,
+        "uiTooltipSource": "https://x.com/xiuyuanAI/status/2119936696582340715",
+        "ultraPanelPercentsSource": "https://x.com/lechattys/status/2119947111777398965",
+        "ultraParentFreshWeek8pct": "https://x.com/lechattys/status/2119875244718743847",
+        "maxUltraResetCards": "1-3 Fable resets by tenure; screenshots show Expires Mar 9",
+        "hasScreenshot": true
+      }
+    }
+  ],
+  "relatedFiles": ["x-scan-2026-11-10.json", "claude-ultra-fable52-247m-30pct-x-2026-11-10.json"]
+}

@@ -1,0 +1,49 @@
+{
+  "recordedAt": "2026-11-12",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "ImLukeF 2026-11-11 T3 Code 日面板 Total 2.83B。69.2% / 30.0% 是当日产品份额，不是配额%。98.3% 是 cache。禁止与 #223 的 247.1M@30% 或 11-09 日面板 2.78B/2.81B 拼接或相除反推周池。截图不入库。",
+  "items": [
+    {
+      "id": "x-ImLukeF-t3code-2_83b-day-2026-11-11",
+      "confidence": "Medium",
+      "planId": null,
+      "model": "mixed Claude Code + Codex on a T3 Code day panel; this post does not restate a subscription tier",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ImLukeF/status/2120486758525850001",
+        "account": "ImLukeF",
+        "authorId": "1951414337891082241",
+        "createdAt": "2026-11-11T12:00:14.000Z"
+      },
+      "observed": {
+        "panelLabel": "today (2026-11-11)",
+        "totalToday": "2.83B",
+        "cacheReadPct": "98.3%",
+        "cacheReadPctIsNotQuota": true,
+        "output": "6.7M",
+        "claudeCode": "1.96B (69.2% of today's tokens)",
+        "codex": "849.0M (30.0% of today's tokens)",
+        "productShareIsNotQuotaPct": "69.2% / 30.0% 是当日 token 的产品份额，不是配额%。",
+        "alsoOnPanel": "53-day streak; best day 3.98B (Sat, 5 Sept); +61% last 7 days vs the 7 before",
+        "image1": "T3 Code 输入栏，模型显示 Opus 5.5 Extra High，无用量数字",
+        "image2": "Tokens 日面板，字段如上",
+        "oralText": "almost 3B tokens in one day and almost 2B of those in Claude — 与图 2.83B / Claude 1.96B 相符。",
+        "hasScreenshot": true,
+        "screenshotsCommitted": false
+      },
+      "gaps": [
+        "本帖未重述订阅档位",
+        "无订阅配额%",
+        "禁止用 2.83B 反推周池",
+        "禁止与 #223 247.1M @ Weekly·Fable 30% 拼接",
+        "禁止与 2026-11-09 日面板 2.78B / 2.81B 拼接、相加或平均；那是不同日"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "imlukef-2p8b-today-codex29-x-2026-11-09.json",
+    "claude-ultra-fable52-247m-30pct-x-2026-11-10.json",
+    "x-scan-2026-11-10.json"
+  ]
+}

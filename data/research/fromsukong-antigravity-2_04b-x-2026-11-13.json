@@ -1,0 +1,37 @@
+{
+  "recordedAt": "2026-11-14",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "fromsukong-antigravity-2_04b-2026-11-13",
+    "grade": "Medium",
+    "sourceType": "cropped_third_party_panel",
+    "postId": "2121244896891961451",
+    "url": "https://x.com/fromsukong/status/2121244896891961451",
+    "author": "fromsukong",
+    "authorId": "1883495451095351296",
+    "createdAt": "2026-11-13T14:12:48.000Z",
+    "planOrModel": "Oral implies a Gemini / Antigravity weekly quota that is already exhausted, and attributes 2B tokens to one week of Gemini 3.8 Flash. Plan tier is not labeled on the crop.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/fromsukong-gemini-2b.jpg"
+    ],
+    "screenshotFields": {
+      "crop": "Phone photo of a third-party usage panel, date range not visible",
+      "total": "4.42B, 989 sessions",
+      "antigravity": "391 sessions, 2.04B, 46.3% of tokens, $144.35",
+      "pi": "151 sessions, 1.74B, 39.5% of tokens, $0.00",
+      "claudeCode": "447 sessions, 630M, 14.3% of tokens, $198.39"
+    },
+    "oralText": "Gemini 4 hydrogen just launched to replace Gemini 3.8 flash, but I couldn't test it because weekly quota is exhausted. Sharing stats for how many Gemini 3.8 flash tokens you get in 1 week (2 billions).",
+    "conflictsToKeep": "2.04B is the Antigravity provider total, not a Gemini 3.8 Flash model breakdown. 46.3% is share of 4.42B, not weekly quota %. The crop does not show the date filter (7d vs 30d vs all-time). No official quota % is visible. Do not treat 2.04B as a measured official weekly Flash pool, and do not 2.04B÷100%.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "截图被裁掉了时间窗，2.04B 是 Antigravity 合计不是 Gemini 3.8 Flash 周池，可见百分比是 token 占比。",
+    "evidenceFile": "evidence/fromsukong-antigravity-2_04b-x-2026-11-13.json"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_user_supplied",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "用户指定来源。只有口述的美元周池，没有 token，也没有配额百分比。与 ZShipZuck 的 $95–155 并列保留，互不覆盖。research-only，不改 adopted.csv。",
+  "items": [
+    {
+      "id": "x-2119274129128099962",
+      "confidence": "Medium",
+      "planId": "devin_max",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/2232960089q/status/2119274129128099962",
+        "account": "2232960089q",
+        "createdAt": "2026-11-08T03:41:41.000Z",
+        "createdAtTaipei": "2026-11-08T11:41:41+08:00",
+        "text": "@Rainnystone @Fei2411 这个帖子devinmax的测量是对的，devin max现在每周额度是100美元，没有150的情况，但是可以卡6周额度，如果你不用那两个免费swedevin max就是拉完了现在，买个Pro蹬几十亿免费模型好了"
+      },
+      "observed": {
+        "evidenceKind": "author self-report correction; no image",
+        "hasScreenshot": false,
+        "cycleUsageTokens": null,
+        "apiPriceEstimateUsd": null,
+        "authorClaim": {
+          "weeklyWorthUsd": 100,
+          "rejectedWeeklyWorthUsd": 150,
+          "sixWeeksPossible": true,
+          "freeModelsText": "两个免费swe",
+          "recommendation": "Pro for billions of free-model tokens"
+        },
+        "availableAllowance": {
+          "note": "作者把每周额度说成 100 美元；没有 token、重置日或账户条件，不能当成已经裁定的标准周池",
+          "weeklyWorthUsdClaim": 100,
+          "quotaPct": null,
+          "totalTokens": null
+        },
+        "quotaPct": null,
+        "totalTokens": null
+      },
+      "gaps": [
+        "没有原始日志、token 数量和配额百分比；$100 的计价基准没写",
+        "与 ZShipZuck 的每周 $95–155 冲突，两边都保留，不能静默覆盖；也可能是不同账户或不同时期",
+        "「卡 6 周」是口述，不是标准月池，也不当作操作建议；不要把 $100 乘 6 或乘 4 当成月额度",
+        "「几十亿免费模型」没有精确 token，不能补成一个用量数字",
+        "这是 Devin Max 口述，不能覆盖既有 Devin Pro 的 token + 百分比面板样本，也不能和 ceciiiax 的 $20 账期用量混成一档"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-user-submitted-2026-11-08.json",
+    "claude-factory-devin-allowances-x-2026-11-08.json",
+    "devin-pro-opus55-round1-2026-11-01.json"
+  ],
+  "deduplication": {
+    "result": "new; post id absent on main, on draft #205, and on the other remote research branches checked 2026-11-08",
+    "conflictRetainedWith": "x-2118805051183706581",
+    "index": "x-scan-user-submitted-2026-11-08.json"
+  }
+}

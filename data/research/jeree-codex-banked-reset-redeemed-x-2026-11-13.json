@@ -1,0 +1,32 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "jeree-codex-banked-reset-redeemed-2026-11-13",
+    "grade": "Medium",
+    "postId": "2121035751588815359",
+    "url": "https://x.com/Jeree12408242/status/2121035751588815359",
+    "author": "Jeree12408242",
+    "authorId": "1136830981736947712",
+    "createdAt": "2026-11-13T00:21:44.000Z",
+    "planOrModel": "Codex（档位仍未写）",
+    "tokens": null,
+    "quotaPercent": {
+      "oralYesterdayWeeklyRemaining": "6%（已在上轮 2120672710833340863 计数，不重计）",
+      "oralThisMorningBeforeRedeem": "条还是 6%，Usage 里多了一张重置卡",
+      "oralAfterClick": "周额度回到 100%"
+    },
+    "hasScreenshot": false,
+    "relatedExisting": [
+      "2120672710833340863 上轮口述 5h 100% / 周剩余 6%，已在 #234"
+    ],
+    "alreadyInPrOrMain": false,
+    "recommendation": "暂不采用",
+    "why": "是上轮弱口述样本的后续事件（手动兑换后周额度回 100%），仍无截图、无 token、无套餐。可作官方「到账≠自动回满、需手动兑换」的用户旁证，不能上线数字。不要把两次口述拼成一条新 High。",
+    "evidenceFile": "evidence/jeree-codex-banked-reset-redeemed-x-2026-11-13.json"
+  }
+}

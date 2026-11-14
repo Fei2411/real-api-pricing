@@ -1,0 +1,43 @@
+{
+  "recordedAt": "2026-11-11",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 229,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-11 扫描：Cursor Pro+ $60，周表 99% 时约 396M included tokens。无截图。",
+  "items": [
+    {
+      "id": "x-garyanderson-cursor-proplus-396m-99pct",
+      "confidence": "High",
+      "planId": "cursor_pro_plus_60_usd",
+      "model": "unspecified (included usage)",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/garyanderson/status/2120251476840710221",
+        "account": "garyanderson",
+        "createdAt": "2026-11-10T20:25:19Z",
+        "altUrl": "https://x.com/garyanderson/status/2120251968996221029"
+      },
+      "observed": {
+        "planClaim": "Cursor Pro+ ($60/mo)",
+        "weeklyMeterPercentUsed": 99,
+        "tokensIncludedOneWeekApprox": 396000000,
+        "tokensOneDayApprox": 153000000,
+        "tokensBillingCycleSince2026-10-16Approx": 440000000,
+        "splitNote": "No input/cache/output absolute split; author says most volume is cached context re-read each turn",
+        "hasScreenshot": false
+      },
+      "derivedResearchOnly": {
+        "weeklyIncludedPoolTokensApprox": 400000000,
+        "note": "396M / 0.99; DO NOT adopt without maintainer ruling. Billing-cycle 440M since Oct 16 is consistent with one heavy week plus lighter earlier weeks."
+      },
+      "gaps": [
+        "无控制台/用量面板截图",
+        "数字带 ~，自称 usage report，未展示分项",
+        "未写所用模型与是否含 sub-agent"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-11.json"
+  ]
+}

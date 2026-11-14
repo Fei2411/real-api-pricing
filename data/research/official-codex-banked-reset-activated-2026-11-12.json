@@ -1,0 +1,87 @@
+{
+  "recordedAt": "2026-11-13",
+  "sourceType": "official_announcement_and_docs",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence.imagesVisuallyChecked 里的 images/ 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "值得讨论采用进研究归档/产品说明，须维护者确认；不要自动改 adopted。用户库存截图只作旁证，不上线为额度数字。",
+  "evidence": {
+    "id": "official-codex-banked-reset-activated-2026-11-12",
+    "grade": "Medium",
+    "sourceType": "official_announcement_and_docs",
+    "urls": [
+      "https://x.com/thsottiaux/status/2120999993079451919",
+      "https://x.com/thsottiaux/status/2120410480204525936",
+      "https://help.openai.com/en/articles/20001498-how-resets-work-in-codex"
+    ],
+    "author": "Tibo @thsottiaux (OpenAI) + OpenAI Help Center",
+    "createdAt": "2026-11-12T21:59:39.000Z",
+    "officialTerms": {
+      "activationPost": "2120999993079451919 at 2026-11-12T21:59:39Z: We shipped some good updates to dots today and the banked reset has been activated and should land in everyones accounts sometime soon!",
+      "teaserPost": "2120410480204525936 at 2026-11-11T06:57:08Z: Thursday is feeling codexy to me. Perhaps also a good time for a banked reset.",
+      "mustRedeemManually": true,
+      "desktop": "Settings > Usage & billing; web Usage settings; not in mobile app; CLI /usage then Redeem reset",
+      "eightyPercentRule": "To use a banked reset from Usage settings, at least one covered allowance must have less than 80% remaining. Otherwise the reset stays available.",
+      "whatIsRestored": {
+        "Go": "monthly allowance",
+        "Plus and Business Standard": "5-hour and weekly allowances",
+        "Pro 100 / Pro 200 / Pro 500": "weekly allowance only (not the 5-hour allowance)"
+      },
+      "refreshTime": "Using a reset can change the next refresh time for affected allowances; it does not permanently increase plan limits.",
+      "delivery": "Eligible accounts may receive the banked reset at different times within the delivery window."
+    },
+    "corroboratingUserPosts": [
+      {
+        "postId": "2121035751588815359",
+        "author": "Jeree12408242",
+        "note": "口述：昨周剩余 6%，今早出现重置卡，条仍是 6%，点下去周额度回到 100%。无截图。与必须手动兑换一致。"
+      },
+      {
+        "postId": "2121035143825789254",
+        "author": "kevinzhu1990",
+        "note": "截图：5h 与周均剩余 96%，库存 3 张「完全重置（每周 + 5 小时）」。与 80% 规则一致（剩余过高无法兑）。UI 写每周+5小时，更像 Plus/Business 而不是 Pro-only-weekly。"
+      },
+      {
+        "postId": "2121041714089488714",
+        "author": "imocone",
+        "note": "二手口述与官方一致：Plus 回 5h+周，Pro 只回每周，刷新时间会变。不作独立实测。"
+      }
+    ],
+    "alreadyInPrOrMain": "Codex 重置机制可能已有既有 issue/#234 材料；本轮新的是 Tibo 宣布本轮 banked reset 已激活，以及官方帮助中心对 Plus vs Pro 恢复范围的核对。",
+    "defaultBranchSearch": "activation post IDs not found on default branch (search_code total_count=0 for related new user IDs); official article not searched as a post ID",
+    "recommendation": "值得讨论采用进研究归档/产品说明，须维护者确认；不要自动改 adopted。用户库存截图只作旁证，不上线为额度数字。",
+    "why": "官方账号宣布激活 + 官方帮助中心条款。最重要的产品差异是 Pro 100/200/500 的 banked reset 只恢复周额度，Plus/Business 恢复 5h+周。与 Claude 全额度重置不是同一政策。",
+    "evidenceFile": "evidence/official-codex-banked-reset-activated-2026-11-12.json"
+  },
+  "recheck": {
+    "recheckedAt": "2026-11-13",
+    "helpArticle": "https://help.openai.com/en/articles/20001498-how-resets-work-in-codex",
+    "helpArticleOpenedThisPass": true,
+    "activationPostOpened": {
+      "url": "https://x.com/thsottiaux/status/2120999993079451919",
+      "published": "2026-11-12T21:59:39.000Z",
+      "text": "We shipped some good updates to dots today and the banked reset has been activated and should land in everyones accounts sometime soon!"
+    },
+    "teaserPostOpened": {
+      "url": "https://x.com/thsottiaux/status/2120410480204525936",
+      "published": "2026-11-11T06:57:08.000Z",
+      "text": "Thursday is feeling codexy to me. Perhaps also a good time for a banked reset."
+    },
+    "officialBullets": {
+      "receivingDoesNotRefresh": "Receiving one does not refresh your usage; you choose when to use it before it expires.",
+      "where": "Desktop: Settings > Usage & billing. Web: Usage settings. Not available in the mobile app. CLI: enter /usage and select Redeem reset.",
+      "eightyPercent": "To use a banked reset from Usage settings, at least one allowance it covers must have less than 80% remaining. If all covered allowances have 80% or more remaining, you’ll see “Your usage does not need a reset right now,” and the reset stays available until you use it or it expires.",
+      "restores": {
+        "Go": "The monthly allowance.",
+        "Plus and Business Standard": "The 5-hour and weekly allowances.",
+        "Pro 100, Pro 200, and Pro 500": "The weekly allowance."
+      },
+      "proFiveHour": "帮助中心对 Pro 100 / Pro 200 / Pro 500 只写 “The weekly allowance.”，没有把 5-hour allowance 列进这一条。Plus 与 Business Standard 写的是 “The 5-hour and weekly allowances.”。据此核对：Pro 只恢复周额度，不恢复 5 小时额度。",
+      "doesNotPermanentlyIncrease": "These one-time resets are separate from your regular scheduled usage refresh. They do not permanently increase your plan’s limits or add usage credits.",
+      "refreshTime": "Banked, global, and paid resets can change the next refresh time for the allowances they affect without changing your subscription billing date."
+    },
+    "priorRepoCoverage": "main 与本 PR 没有 2026-11-12 这条激活帖，也没有现行帮助中心这条 Plus vs Pro 恢复范围。较早研究文件（如 chatgpt-astra-quota-round8-2026-09-11.json）记过 2026-09 Astra 期间的 banked/global reset，以及「重置恢复额度、不永久提高套餐限额」，链接是旧文 how-banked-codex-resets-work。#234 已有 jeree-codex-5h100-weekly6-oral-x-2026-11-12.json（前帖口述 5h 100% / 周剩 6%），不是本轮激活。本轮新意是这一轮已激活，以及 Plus 恢复 5 小时 + 周额度、Pro 只恢复周额度。",
+    "userInventoryNotANewQuotaRow": "kevinzhu 库存截图与 Jeree 兑换口述只作旁证，不写成新的实测额度行。",
+    "doNotChangeAdopted": true
+  }
+}
