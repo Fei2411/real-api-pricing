@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-11-10",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 222,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "Cursor $60：周四重置后约 6h 周池 100%；on-demand $10.25/$10；随后善意重置到 0%。",
+  "items": [
+    {
+      "id": "x-Flycap316-cursor60-6h-100pct",
+      "confidence": "Medium",
+      "planId": "cursor_60_usd_unspecified_tier",
+      "model": "Grok Bot / Cursor shared pool (X Subscription style)",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/Flycap316/status/2119904608784994426",
+        "account": "Flycap316",
+        "createdAt": "2026-11-09T21:26:59Z"
+      },
+      "observed": {
+        "planClaimUsdPerMonth": 60,
+        "weeklyBurn": {"resetLocal": "Thursday ~4 PM", "hit100PctLocal": "Thursday ~10 PM", "hoursApprox": 6},
+        "onDemand": {"usedUsd": 10.25, "capUsd": 10},
+        "afterGoodwillReset": {"weeklyPct": 0, "nextResetStillThursday": true},
+        "hasScreenshot": true,
+        "screenshotNote": "Usage card: Weekly 0% + On-demand $10.25/$10; not copied into repo"
+      },
+      "gaps": ["$60 对应 Premium/哪一档待确认", "无绝对 token"]
+    }
+  ],
+  "relatedFiles": ["x-scan-2026-11-10.json"]
+}
