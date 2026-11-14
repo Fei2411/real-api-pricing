@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-11-14",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "octoberry-claude-pro-weekly-compiled-2026-11-13",
+    "grade": "Medium",
+    "sourceType": "author_compiled_dashboard",
+    "postId": "2121280623608274998",
+    "url": "https://x.com/Octoberry/status/2121280623608274998",
+    "author": "Octoberry",
+    "authorId": "1542979293050970115",
+    "createdAt": "2026-11-13T16:34:46.000Z",
+    "planOrModel": "Claude Code $20 plan / Pro (title of the compiled graphic).",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/Octoberry-weekly-token-cmp.jpg"
+    ],
+    "screenshotFields": {
+      "title": "Claude Code ($20 plan) — weekly usage limit (API-equivalent)",
+      "header": "Oct 19 → Nov 16: $518.09 → $423.72 (−18.2% total); week on week +0.0% · −7.8% · −11.3%",
+      "weeks": [
+        "Mon Oct 19 – Mon Oct 26 · Pro: 93% Used (7% wasted), 622.7M Tokens of 669.6M, $481.82 API-equivalent of $518.09",
+        "Mon Oct 26 – Mon Nov 2 · Pro: 84% Used (16% wasted), 515.8M Tokens of 614.1M, $435.21 of $518.11",
+        "Mon Nov 2 – Mon Nov 9 · Pro: 95% Used (5% wasted), 539.3M Tokens of 567.7M, $454.03 of $477.93",
+        "This week · Mon Nov 9 – Mon Nov 16 · Pro: 51% Used (~15% will be wasted), 220.4M Tokens of 432.1M, $216.10 of $423.72"
+      ],
+      "footer": "Weekly usage limit taken from each dashboard (\"API-equivalent of ...\")."
+    },
+    "oralText": "Claude Code usage limits might be getting smaller. (Esp $20 pro plan). Two weeks ago, 84% of the weekly limit represented around 515M tokens. This week, 51% represents only 220M tokens.",
+    "conflictsToKeep": "This is a compiled comparison graphic, not a raw official console screenshot, though the footer says numbers were taken from each dashboard. API-equivalent dollars are not the subscription quota. Raw token counts at a given usage % can shrink when model mix, cache rates, or weighting change, even if the official pool is unchanged. 'Wasted' is the author's label. Do not treat 432.1M or $423.72 as an official published weekly pool, and do not splice weeks into one number.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "作者自制多周对照图，不是原始官方控制台；token 与 API-equivalent 会随模型组合和缓存变化，不能当成官方周池在缩小的裁定证据。",
+    "evidenceFile": "evidence/octoberry-claude-pro-weekly-compiled-x-2026-11-13.json"
+  }
+}

@@ -3,6 +3,12 @@
   "kind": "research-archive-increment",
   "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
   "parentIndex": "backlog-archive-index-2026-11-12.json",
+  "laterIncrement": {
+    "date": "2026-11-14",
+    "index": "backlog-archive-index-2026-11-14.json",
+    "scan": "x-scan-2026-11-14.json",
+    "note": "11-14 早扫描追加在同一 PR #234。本索引已归档的采用判断不改写。Hydrogen API 价与 Codex banked reset 不重计。没有可直接上线的 adopted 改动。"
+  },
   "pullRequest": 234,
   "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",
   "scanEndUtc": "2026-11-13T01:05:53Z",

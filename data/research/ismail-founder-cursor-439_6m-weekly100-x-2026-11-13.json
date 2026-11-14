@@ -1,0 +1,46 @@
+{
+  "recordedAt": "2026-11-14",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "ismail-founder-cursor-439_6m-weekly100-2026-11-13",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2121182998536298751",
+    "url": "https://x.com/Ismail_Founder/status/2121182998536298751",
+    "author": "Ismail_Founder",
+    "authorId": "2049699306102530048",
+    "createdAt": "2026-11-13T10:06:51.000Z",
+    "planOrModel": "Cursor (oral does not name a specific plan tier). Screenshot is the official Usage page.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/Ismail_Founder-cursor-439m.jpg"
+    ],
+    "screenshotFields": {
+      "dateFilter": "Nov 1 - 13, 2026 (top-right of the official Usage page)",
+      "weeklyIncludedUsage": "100% used",
+      "weeklyBreakdown": "Cursor 100%",
+      "weeklyReset": "Resets Nov 16",
+      "additionalUsage": "$2.10 used this month; Credit balance $0.00; Resets Dec 1 · Set monthly limit",
+      "totals": "Total 439.6M tokens; Included 437.7M tokens; Credit usage $2.10",
+      "chart": "Tokens per day, Group by Product, Day view"
+    },
+    "oralText": "13 days into November and I’ve already burned through 439.6M tokens on Cursor. 100% of weekly usage maxed out. Already dipping into extra credits. Still 3 days until the reset.",
+    "quotaPercent": "Weekly included usage 100% used (screenshot). This is the weekly bar, not proven to share a window with the 439.6M total.",
+    "tokens": {
+      "source": "screenshot",
+      "total": "439.6M tokens",
+      "included": "437.7M tokens",
+      "windowOnScreen": "date filter Nov 1–13, 2026, not the weekly reset window"
+    },
+    "conflictsToKeep": "439.6M / 437.7M sit under a Nov 1–13 date filter (about 13 days). Weekly 100% resets Nov 16. These are not demonstrated to be the same window. Same class of misalignment as PatricioTrials 95% vs 7.7B and grokademy 2.1B/78%. Additional $2.10 this month is consistent with starting to use credits after included weekly was exhausted, but does not fix the window problem.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "官方控制台同时有周 100% 和 439.6M token，但 token 合计属于 Nov 1–13 日期筛选，不能当作单周池，禁止 439.6M÷100%。",
+    "evidenceFile": "evidence/ismail-founder-cursor-439_6m-weekly100-x-2026-11-13.json"
+  }
+}

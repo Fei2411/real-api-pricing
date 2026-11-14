@@ -1,0 +1,58 @@
+{
+  "recordedAt": "2026-11-14",
+  "sourceType": "official_announcement",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "讨论采用说明/归档，须维护者确认",
+  "evidence": {
+    "id": "official-antigravity-gemini-quota-reset-2026-11-13",
+    "grade": "Medium",
+    "sourceType": "official_announcement",
+    "postId": "2121380918355234957",
+    "url": "https://x.com/_mohansolo/status/2121380918355234957",
+    "urls": [
+      "https://x.com/_mohansolo/status/2121380918355234957",
+      "https://x.com/huang18825/status/2121404207538569304",
+      "https://x.com/keiba_assistant/status/2121385028987007448"
+    ],
+    "author": "_mohansolo (Varun Mohan, Antigravity)",
+    "authorId": "1086145626633494528",
+    "createdAt": "2026-11-13T23:13:18.000Z",
+    "planOrModel": "Antigravity; official text is everyone's Gemini quota. Not a new subscription token table.",
+    "officialTerms": {
+      "text": "To mark a week of relentless shipping, we’re resetting everyone’s Gemini quota on Antigravity! Go build something amazing with swarms",
+      "kind": "automatic global reset, not a banked/redeemable card",
+      "namedAllowances": "Gemini quota only in this announcement. Unlike the 2026-11-06 post (2118855362518675720) which named Gemini and Argon, this post does not name Argon or Claude.",
+      "nov6AlreadyStaged": "2118855362518675720 is already known context for shengtang's 11-06 window comments; do not recount the Nov 6 reset as a new item."
+    },
+    "screenshotOfficialUi": false,
+    "corroboratingUserPosts": [
+      {
+        "postId": "2121404207538569304",
+        "author": "huang18825",
+        "authorId": "1899029408654233600",
+        "image": "images/huang18825-reset.png",
+        "note": "Official-looking Antigravity Usage popover after the reset: Gemini Models weekly 100% left and 5h 100% left; Claude and GPT weekly 44% left (resets in 2d 6h) and 5h 100% left. Oral: only Gemini was reset, Claude unchanged. No tokens, plan not labeled in the crop."
+      },
+      {
+        "postId": "2121385028987007448",
+        "author": "keiba_assistant",
+        "authorId": "1909720631677272066",
+        "image": "images/keiba-gemini-reset.jpg",
+        "note": "Japanese official-looking usage UI shortly after the announcement: Gemini weekly 100% / 5h 100%; Claude and GPT weekly 100% / 5h 100%; Gemini 4 Argon weekly 100%. No tokens. Later oral in another post says Gemini Pro license. Yesterday's keiba sample (Gemini weekly 12% used / 5h 18%) is a pre-reset snapshot and must not be spliced with this 100% post-reset screen."
+      },
+      {
+        "postId": "2121399369538904485",
+        "author": "leo114119",
+        "note": "Screenshot is only the official _mohansolo tweet, not a usage console. Echo, not independent measurement."
+      }
+    ],
+    "conflictsToKeep": "Official wording is Gemini quota, not Claude. huang18825's Claude weekly remaining 44% is consistent with Claude not being reset. Argon has a separate weekly meter; keiba shows Argon 100% after the reset, but the official tweet did not name Argon this time — do not treat that as a confirmed official Argon reset.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass (optional GitHub read-only dedup skipped)",
+    "recommendation": "讨论采用说明/归档，须维护者确认",
+    "why": "这是官方账号宣布的一轮自动全局 Gemini 配额重置，不是新的订阅额度表，也不能自动改 adopted。与已在 #234 草稿里的 11-06 重置是不同事件。用户库存/截图只作旁证。",
+    "evidenceFile": "evidence/official-antigravity-gemini-quota-reset-2026-11-13.json"
+  }
+}

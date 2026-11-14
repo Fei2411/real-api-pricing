@@ -1,0 +1,72 @@
+{
+  "scannedAt": "2026-11-14T00:59:10Z",
+  "recordedAt": "2026-11-14",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "source": "精简自 2026-11-14 早扫描 scan-status.json。不另开 PR。分页 token 不入库。原始搜索大文件不入库。",
+  "method": "Grok Bot 自带公开 X 读取。官方页用 WebFetch/WebSearch 核对。未写仓库、未开新 PR、未 merge 进 main、未部署、未发邮件、未在 X 上互动。",
+  "window": {
+    "keywordStart": "2026-11-12T01:05:00Z",
+    "authorStart": "2026-11-12T01:05:00Z",
+    "end": "2026-11-14T00:59:10Z",
+    "overlap": "相对上轮结束 2026-11-13T01:05:53Z，关键词与作者起点重叠至少 24 小时。上轮关键词与 Fei 的 next_token 因 start 已变，未续用。",
+    "fei2411": "近 7 天自 2026-11-07T00:50:00Z，优先 48 小时自 2026-11-12T00:50:00Z",
+    "grokademyBackfill": "近 14 日自 2026-10-30T00:00:00Z，复用上轮 next_token。本轮再翻 4 页后已关闭。"
+  },
+  "notExhaustive": [
+    "Claude 关键词 2 页约 47 分钟；Gemini 1 页约 17 分钟；Codex 1 页约 44 分钟；DeepSeek/GLM/MiniMax 1 页约 38 分钟；Devin 1 页约 2.4 小时；Cursor 1 页约 4 小时；Kimi 1 页约 9 小时。定向 has:images 3 页从 2026-11-13T05:20Z 扫到截止（约 19.5 小时）。均未翻到 2026-11-12T01:05Z，均留有 next_token。",
+    "上轮旧窗口 start=2026-11-11T00:59:00Z 的 next_token 没有续用，也没有用 end_time 重搜补前半缺口。",
+    "Fei2411 发帖 3 页覆盖到 2026-11-12T14:20Z，距 48 小时起点约差 13.5 小时；提及 3 页只翻到 2026-11-13T10:52Z。48 小时优先窗口未关闭，7 日更未关闭。未对新年根帖做独立 conversation_id 翻页。",
+    "grokademy 14 日回补本轮已关闭。garyanderson 14 日回补上轮已关闭，今日只做增量。",
+    "PatricioTrials、keiba_assistant、StatsWire、TorhileCharles 的 14 日 unfiltered 因高产未做。SolMemetop 14 日 unfiltered 已关闭。shengtang / leo / ai_funss 只用合并关键词页；leo 本周期 +350，不能声称穷尽。",
+    "xiuyuanAI 本周期 2027→2732（+705），本轮未做 from: 关键词或时间线，必须记为缺口。imranbru99 / lechattys / kimmonismus 14 日仍未补。可选的 GitHub 只读去重本轮未做；新 post ID 对照了上轮索引，并在归档时对 origin/main 的 data/research/ 复核官方重置帖为 0。",
+    "查询不能带 %。视频未抽帧。无 429、无 auth 失败。停止是为了交付整理，不是额度耗尽。"
+  ],
+  "counts": {
+    "newValidHigh": 0,
+    "newValidMedium": 13
+  },
+  "officialPagesRecheckedUnchanged": [
+    "https://aistudio.google.com/docs/pricing",
+    "https://aistudio.google.com/docs/whats-new-gemini-4-hydrogen",
+    "https://help.openai.com/en/articles/20001498-how-resets-work-in-codex",
+    "https://www.kimi.com/help/membership/membership-pricing"
+  ],
+  "notRecountedStillAwaitingConfirmation": [
+    "Gemini 4 Hydrogen 付费档仍是 $1.50 / $7.50 / $0.075，官方页仍无首发 5 折。已在 #234，不重计。",
+    "Codex banked reset 帮助中心规则未变。已在 #234，不重计。",
+    "Carbon / Argon 价、Token Plan、Qwen4 预览折扣不重计。Kimi 仍无官方绝对 token 表，不改 #209。"
+  ],
+  "retained": [
+    {
+      "url": "https://x.com/_mohansolo/status/2121380918355234957",
+      "account": "_mohansolo",
+      "planOrModel": "Antigravity Gemini quota",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "createdAt": "2026-11-13T23:13:18.000Z",
+      "why": "官方宣布自动全局重置所有人在 Antigravity 上的 Gemini 配额。正文只写 Gemini，不是 banked card，也不是新的订阅额度表。旁证显示 Claude 未重置。不得把 keiba 的 Argon 100% 写成官方确认。建议讨论写入说明，须维护者确认。不改 adopted。",
+      "altUrls": [
+        "https://x.com/huang18825/status/2121404207538569304",
+        "https://x.com/keiba_assistant/status/2121385028987007448"
+      ]
+    }
+  ],
+  "notAdoptedMedium": [
+    "https://x.com/Ismail_Founder/status/2121182998536298751",
+    "https://x.com/apple168haha/status/2121172471244353843",
+    "https://x.com/shengtang135754/status/2121129295443525695",
+    "https://x.com/uzairakrum/status/2121363083738358263",
+    "https://x.com/fromsukong/status/2121244896891961451",
+    "https://x.com/Annthonny/status/2121400063859781748",
+    "https://x.com/Octoberry/status/2121280623608274998",
+    "https://x.com/StatsWire/status/2121253388713169011",
+    "https://x.com/maanasms/status/2121167272714948715",
+    "https://x.com/Jerry_Galaxy/status/2121144896664789163",
+    "https://x.com/xuanwo/status/2121196171381383185",
+    "https://x.com/SaulFloresJr/status/2121400627813326950"
+  ],
+  "suggestion": "没有建议直接上线的 adopted 改动。本轮唯一值得维护者确认后再考虑写入说明的新官方项，是 2026-11-13T23:13:18Z 的 Antigravity Gemini 配额重置。其余 Medium 用量样本全部暂不采用，只作 research-only 归档。",
+  "index": "backlog-archive-index-2026-11-14.json"
+}

@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-11-14",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "jerry-galaxy-ultra5x-weekly91left-2026-11-13",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2121144896664789163",
+    "url": "https://x.com/Jerry_Galaxy/status/2121144896664789163",
+    "author": "Jerry_Galaxy",
+    "authorId": "1158875676",
+    "createdAt": "2026-11-13T07:35:26.000Z",
+    "planOrModel": "Google Ultra 5X (oral). Official Antigravity Usage popover with Orchestrator (Carbon) selected, which is consistent with Ultra.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/Jerry_Galaxy-1.jpg",
+      "images/Jerry_Galaxy-2.jpg"
+    ],
+    "screenshotFields": {
+      "officialUsage": {
+        "geminiWeekly": "91% left, Resets in 5d 8h",
+        "gemini5h": "82% left, Resets in <1m",
+        "claudeGptWeekly": "100% left",
+        "claudeGpt5h": "100% left"
+      },
+      "image2": "Unrelated Arete-27B / comment screenshot, not a usage panel."
+    },
+    "oralText": "升级到Google Ultra 5X后，我断断续续的用了一天半吧，gemini模型周额度只消耗了9%。",
+    "quotaPercent": "Gemini weekly 91% left = 9% used, matches the oral 9%. No tokens on the official UI.",
+    "conflictsToKeep": "Reset timers (5d 8h) differ from maanasms (2d 18h) and StatsWire (14–19h); different weekly anchors, do not splice. Image 2 is not usage evidence. Duration '一天半' is oral.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "官方 UI 百分比与口述 9% 相符，但没有 token，不能校准周池。",
+    "evidenceFile": "evidence/jerry-galaxy-ultra5x-weekly91left-x-2026-11-13.json"
+  }
+}

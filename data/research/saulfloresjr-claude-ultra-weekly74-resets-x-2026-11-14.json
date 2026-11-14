@@ -1,0 +1,39 @@
+{
+  "recordedAt": "2026-11-14",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用为站点新数字。Fable reset vs weekly reset 的官方 UI 文案可作规则旁证讨论，须维护者确认，且不要与 Codex banked reset 混为一谈。",
+  "evidence": {
+    "id": "saulfloresjr-claude-ultra-weekly74-resets-2026-11-14",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2121400627813326950",
+    "url": "https://x.com/SaulFloresJr/status/2121400627813326950",
+    "author": "SaulFloresJr",
+    "authorId": "1692392515381669889",
+    "createdAt": "2026-11-14T00:31:38.000Z",
+    "planOrModel": "Claude Ultra (screenshot label: Your usage Ultra).",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/SaulFloresJr-ultra.png"
+    ],
+    "screenshotFields": {
+      "plan": "Ultra",
+      "statusLine": "On track. You should reach Sunday's reset with room to spare.",
+      "thisWeek": "74% used, Resets Sunday 2:00 AM",
+      "limitResetsAvailable": "5 available",
+      "fableResets": "Fable reset · 3; all expire Mar 8, 2027, 11:59 PM PST. UI text: Refills your Fable allowance and gives back what Fable used on your weekly limit. It doesn't reset your whole week. There's no Fable usage to reset right now.",
+      "weeklyResets": "Weekly reset · 2; First expires Dec 10, 2:00 PM PST"
+    },
+    "oralText": "No matter how hard I push Claude Code, I still can't max out the Ultra plan. I wish I could gift my unused usage to other users instead of letting it go to waste.",
+    "quotaPercent": "This week 74% used (screenshot). No tokens.",
+    "conflictsToKeep": "Oral 'can't max out' is opinion; 74% used is the hard number and still leaves room, consistent with the status line. Fable resets are not full weekly resets — keep the UI wording. This inventory is a different product from Codex banked reset already staged in #234.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用为站点新数字。Fable reset vs weekly reset 的官方 UI 文案可作规则旁证讨论，须维护者确认，且不要与 Codex banked reset 混为一谈。",
+    "why": "官方 Ultra 周已用 74%，无 token。重置库存说明 Fable 卡只退 Fable 占用、不重置整周，这是规则旁证而不是新的额度实测行。",
+    "evidenceFile": "evidence/saulfloresjr-claude-ultra-weekly74-resets-x-2026-11-14.json"
+  }
+}

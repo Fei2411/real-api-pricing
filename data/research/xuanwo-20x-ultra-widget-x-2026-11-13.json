@@ -1,0 +1,39 @@
+{
+  "recordedAt": "2026-11-14",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "xuanwo-20x-ultra-widget-2026-11-13",
+    "grade": "Medium",
+    "sourceType": "third_party_usage_widget",
+    "postId": "2121196171381383185",
+    "url": "https://x.com/xuanwo/status/2121196171381383185",
+    "author": "xuanwo",
+    "authorId": "3399124639",
+    "createdAt": "2026-11-13T10:59:11.000Z",
+    "planOrModel": "20x Ultra (oral, in a reply on Fei2411's Google AI Pro promo thread). Screenshot is a third-party Antigravity usage widget, not the official popover. A name/account label at the top is blurred and is not transcribed.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/xuanwo-20x-ultra.jpg"
+    ],
+    "screenshotFields": {
+      "gemini5h": "剩余 85.6%；重置于 20:53 · 2小时后；配速 +48%；整窗：数据不足",
+      "gemini7d": "剩余 69.3%；重置于 11月18日 00:20 · 4天后；配速 +9%；整窗：数据不足",
+      "claudeGpt5h": "剩余 100%；重置于 23:58 · 5小时后",
+      "claudeGpt7d": "剩余 96.8%；重置于 11月19日 01:44 · 5天后；配速 +21%",
+      "chartWindow": "本周期，11月11日 00:20 至 11月19日 01:44",
+      "legendRounded": "Gemini 7天 70%；Gemini 5小时 87%；Claude & GPT 7天 97%；Claude & GPT 5小时 100%"
+    },
+    "oralText": "确实爽，我现在 20x ultra 每天爽蹬",
+    "quotaPercent": "Widget remaining: Gemini 7d 69.3% / 5h 85.6%; Claude & GPT 7d 96.8% / 5h 100%. No tokens.",
+    "conflictsToKeep": "Pace ('配速') and '整窗：数据不足' are the widget's own projections, not official. Legend percentages are slightly rounded vs the headline figures; record both. This is before the 23:13Z official Gemini reset. Do not splice with apple168haha's 20x custom 24.95亿 board or Jerry_Galaxy's 5X official 91% left.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "第三方组件只有剩余百分比、无 token，配速是外推。20x Ultra 口述套餐不要与其他 20x/5x 样本拼算。",
+    "evidenceFile": "evidence/xuanwo-20x-ultra-widget-x-2026-11-13.json"
+  }
+}
