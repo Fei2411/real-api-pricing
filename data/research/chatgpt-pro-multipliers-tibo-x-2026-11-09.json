@@ -1,0 +1,34 @@
+{
+  "recordedAt": "2026-11-09",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 215,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "Tibo 口径 ChatGPT/Codex Pro 倍数表（二手多源）。截图只链原帖。",
+  "items": [
+    {
+      "id": "x-tibo-pro-multipliers-cluster",
+      "confidence": "Medium",
+      "observed": {
+        "pro100": "10x Plus",
+        "pro200": "20x Plus",
+        "pro500": "50x Plus + ultrafast",
+        "noFiveHourOnAnyPro": true,
+        "pro50UnderDiscussion": "5x Plus solicited"
+      },
+      "sources": [
+        "https://x.com/linxiaobei888/status/2119589610099753043",
+        "https://x.com/thecsguy/status/2119598462752935981",
+        "https://x.com/Awanioz/status/2119490553998156241",
+        "https://x.com/omarvvvr/status/2119593604511383746",
+        "https://x.com/b3inside/status/2119598310113919198"
+      ],
+      "gaps": [
+        "未见 Tibo 原帖直链",
+        "无 Plus 基线绝对 token"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-09.json"
+  ]
+}
