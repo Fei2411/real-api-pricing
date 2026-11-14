@@ -1,0 +1,71 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "x_public_scan",
+  "relatedIssue": 202,
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "scopeNote": "2026-11-08 扫描：Kimi Code Plus $19，9 天打满 Monthly Usage 的 sessions 风格分项表（input/cache read/output）。截图只链原帖。打满为口述，但 API-worth $38.57 / $19 = 2.03x 自洽。",
+  "items": [
+    {
+      "id": "x-ren8peter-kimi-code-plus19-9d-monthly-exhausted",
+      "confidence": "High",
+      "planId": "kimi_code_plus_19_usd",
+      "model": "K2.8 Preview (dominant) + K3",
+      "source": {
+        "type": "x_post",
+        "url": "https://x.com/ren8peter/status/2118601947062444316",
+        "account": "ren8peter",
+        "createdAt": "2026-11-06T07:10:40Z"
+      },
+      "observed": {
+        "planUsdPerMonth": 19,
+        "planNameClaim": "Kimi Code Plus $19",
+        "windowDays": 9,
+        "windowNote": "Kimi Code（期間：9日・ローカル＋サーバー合算）",
+        "monthlyStatusClaim": "exhausted",
+        "apiRatioClaim": 2.03,
+        "authorNote": "Kimi only provides about 2x credits versus API",
+        "rows": [
+          {
+            "model": "K2.8 Preview",
+            "inputTokensApprox": 3290000,
+            "cacheReadTokensApprox": 188800000,
+            "outputTokensApprox": 890000,
+            "cacheHitPct": 98.3,
+            "apiWorthUsd": 35.3
+          },
+          {
+            "model": "K3",
+            "inputTokensApprox": 340000,
+            "cacheReadTokensApprox": 9600000,
+            "outputTokensApprox": 90000,
+            "cacheHitPct": 96.6,
+            "apiWorthUsd": 3.27
+          }
+        ],
+        "totalsPanel": {
+          "inputTokensApprox": 3620000,
+          "cacheReadTokensApprox": 198400000,
+          "outputTokensApprox": 980000,
+          "cacheHitPct": 98.2,
+          "apiWorthUsd": 38.57,
+          "rawTokensSumApprox": 203000000
+        },
+        "derivedMonthlyApiWorthIfExhausted": 38.57,
+        "derivedMonthlyRawTokensIfExhaustedApprox": 203000000,
+        "usdPerMonthOverApiWorth": 0.4926,
+        "hasScreenshot": true,
+        "screenshotNote": "sessions-style token table; not official console percentage bar; not copied into repo"
+      },
+      "gaps": [
+        "无官方控制台百分比条",
+        "无 cache write 列",
+        "国际站 Plus $19 与国区 ¥199 / Allegro 对齐未裁定",
+        "Kimi 月池=周池×5 口径下 9 天打满是否异常待确认"
+      ]
+    }
+  ],
+  "relatedFiles": [
+    "x-scan-2026-11-08.json",
+    "kimi-v2-plans-round1-2026-10-26.json"
+  ]
+}
