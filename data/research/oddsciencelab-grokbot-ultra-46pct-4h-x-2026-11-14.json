@@ -1,0 +1,32 @@
+{
+  "recordedAt": "2026-11-15",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "oddsciencelab-grokbot-ultra-46pct-4h-2026-11-14",
+    "grade": "Medium",
+    "sourceType": "oral_only",
+    "postId": "2121580989747277826",
+    "url": "https://x.com/OddScienceLab/status/2121580989747277826",
+    "author": "OddScienceLab",
+    "authorId": "824451388226752512",
+    "createdAt": "2026-11-14T12:28:19.000Z",
+    "planOrModel": "Oral: Grok Bot on Ultra. No screenshot.",
+    "hasScreenshot": false,
+    "imagesVisuallyChecked": [],
+    "oralText": "My Grok Bot (Ultra) burned 46% of my weekly usage in ~4 hours today, and still produced ZERO finished work. It keeps deleting and rewriting, then rewriting and deleting again. It burns usage AND it's getting dumber. Ticket T-J645",
+    "quotaPercent": "Oral only: 46% of weekly usage in about 4 hours.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "No screenshot. Do not splice with this author's already-staged Ultra 100% sample. Ticket ID is not a usage measurement.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "只有口述周用量 46%/约 4 小时，没有截图和 token，不能上线。",
+    "evidenceFile": "evidence/oddsciencelab-grokbot-ultra-46pct-4h-x-2026-11-14.json"
+  }
+}

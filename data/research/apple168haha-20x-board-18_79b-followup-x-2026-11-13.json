@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-11-15",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "apple168haha-20x-board-18_79b-followup-2026-11-13",
+    "grade": "Medium",
+    "sourceType": "third_party_telemetry_board",
+    "postId": "2121298361701822778",
+    "url": "https://x.com/apple168haha/status/2121298361701822778",
+    "author": "apple168haha",
+    "authorId": "1017570188932182016",
+    "createdAt": "2026-11-13T17:45:15.000Z",
+    "planOrModel": "Oral: 20x weekly quota drained. Screenshot is the author's self-built Antigravity/CPA throughput board, not an official Antigravity popover. Prior 24.95B@95.8% post (2121172471244353843) is already staged and must not be recounted.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/apple168haha-drained-20x.jpg"
+    ],
+    "screenshotFields": {
+      "title": "Antigravity / CPA Token 吞吐量与官方 API 价值全量统计看板",
+      "window": "2026-11-07 10:42 – 2026-11-14 01:44:58 CST; tab 本周重置后",
+      "requestsAndCache": "总请求 6,140；Prompt Cache 命中率 87.3%",
+      "totals": "总 Token 1,878,603,081（约 18.79 亿；新输入 238.07M，缓存 1.63B，扫描/思考 6.25M）",
+      "apiValue": "实付等额 API（含缓存折扣）$701.83；标准挂牌正价参考（2×倍率）$1,403.65；无缓存等价值 $3,806.94（缓存净省 $3,105.13，直降 81.6%）",
+      "fx": "1 USD ≈ 6.75 CNY",
+      "modelBreakdown": "gemini-4-argon-high 1.20B / $454.84 paid; gemini-4-hydrogen-xhigh 576.23M / $170.30; gemini-4-carbon-high 100.71M / $76.59; plus tiny Flash rows",
+      "quotaChips": "Custom board also shows several Gemini remaining% chips (about 44.8% to 99.1%) with different countdowns; Claude remaining also shown on some chips. These are not a single official popover paired with the 18.79B total. Account identifiers were visible and are not restated."
+    },
+    "oralText": "@Jerry_Galaxy 榨干了一个20x的周额度，表示极度舒畅，现在准备开榨colab",
+    "quotaPercent": "Oral 'drained a 20x weekly quota' conflicts with visible Gemini remaining chips still at 44.8%+ on the same board. No official popover in the same frame as 18.79B.",
+    "tokens": {
+      "source": "self-built board",
+      "total": "1,878,603,081 in the stated CST window"
+    },
+    "conflictsToKeep": "Oral drained vs remaining 44.8%+ chips. This 18.79B window and total differ from the already-staged 24.95B@95.8% board (different post, different window/start, different total) — do not splice or add them. API valuation ≠ subscription quota. Cache hit 87.3% ≠ quota%. Multiple account chips cannot be combined.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "仍是自建看板，不是官方弹窗。18.79 亿与口述「榨干 20x」以及看板上仍显示的 Gemini 剩余 44.8%+ 冲突；也不可与已计的 24.95 亿@95.8% 拼接或相加。",
+    "evidenceFile": "evidence/apple168haha-20x-board-18_79b-followup-x-2026-11-13.json"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "recordedAt": "2026-11-15",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "statswire-ultra-weekly-reset-100left-2026-11-14",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2121611612826349877",
+    "url": "https://x.com/StatsWire/status/2121611612826349877",
+    "author": "StatsWire",
+    "authorId": "1326885552793247751",
+    "createdAt": "2026-11-14T14:30:00.000Z",
+    "planOrModel": "Google AI Ultra (prior posts). Official-looking Antigravity Usage popover; Gemini 4 Carbon High selected.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/StatsWire-weekly-reset.jpg"
+    ],
+    "screenshotFields": {
+      "geminiModels": "Weekly 100% left (resets in 6d 20h); 5h 100% left (resets in 1h 33m)",
+      "claudeAndGpt": "Weekly 79% left (resets in 6d 5h); 5h 91% left (resets in 1h 33m)",
+      "tokens": "none"
+    },
+    "oralText": "Google weekly quota FINALLY RESET!!! I spent the entire week hammering Gemini 4 Argon, Carbon, Hydrogen, and Orchestrator. Thought I'd exhaust my weekly limit for the FIRST TIME. Didn't happen. Even after all that testing, Google beat me to the reset. Now I'm back at 100%… (truncated)",
+    "quotaPercent": "Official Gemini weekly 100% left after this reset. Claude weekly 79% left was not reset to 100%.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "This is later than the official 11-13T23:13Z Gemini reset already staged in #234 / 11-14 scan. StatsWire also posted at 01:38Z that the official reset happened when the natural weekly was only hours away. Gemini timer (6d 20h) and Claude timer (6d 5h) differ. Do not splice with this author's 11-13 pre-reset 23%/20% left samples, and do not treat this as a second official global reset announcement.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "官方弹窗只有重置后的 Gemini 周剩余 100%，无 token。这是用户自然周/重置后的旁证，不是新额度表；也不可与上轮 20–23% 样本拼接。",
+    "evidenceFile": "evidence/statswire-ultra-weekly-reset-100left-x-2026-11-14.json"
+  }
+}

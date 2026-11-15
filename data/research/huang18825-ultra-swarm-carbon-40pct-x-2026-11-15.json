@@ -1,0 +1,48 @@
+{
+  "recordedAt": "2026-11-15",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用为站点新数字。官方回复只说明看见了这条用户故事，不是额度表，不进入建议采用。作者 Ultra 5X 与官方回复 ultra 100 两种措辞原样保留。",
+  "evidence": {
+    "id": "huang18825-ultra-swarm-carbon-40pct-2026-11-15",
+    "grade": "Medium",
+    "sourceType": "oral_plus_official_reply",
+    "postId": "2121762017807917240",
+    "url": "https://x.com/huang18825/status/2121762017807917240",
+    "urls": [
+      "https://x.com/huang18825/status/2121762017807917240",
+      "https://x.com/_mohansolo/status/2121767664314089815"
+    ],
+    "author": "huang18825",
+    "authorId": "1899029408654233600",
+    "createdAt": "2026-11-15T00:27:40.000Z",
+    "planOrModel": "Author oral: Ultra 5X. Official reply wording: 'ultra 100 quota'. Model path: Antigravity /swarm with Carbon.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/huang18825-swarm-1.jpg",
+      "images/huang18825-swarm-2.jpg",
+      "images/huang18825-swarm-3.jpg"
+    ],
+    "screenshotFields": {
+      "allThree": "Minecraft gameplay screenshots only. No official Usage popover, no token table, no quota bar."
+    },
+    "oralText": "耗时差不多4-5个小时。40%左右utlra 5X的周额度。",
+    "officialReply": {
+      "postId": "2121767664314089815",
+      "createdAt": "2026-11-15T00:50:06.000Z",
+      "text": "The fact that you did it with carbon with just 40% of ultra 100 quota is great, there’s so much you can build"
+    },
+    "quotaPercent": "Oral ~40% of weekly quota used in 4–5 hours. Official account repeated the 40% figure but wrote 'ultra 100 quota', which conflicts with the author's 'Ultra 5X'.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "Plan-tier wording conflict: author Ultra 5X vs official reply 'ultra 100 quota'. Keep both wordings; do not decide which plan it is. No usage UI. Official reply is acknowledgment of a user story, not a published quota table.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "三张图都是游戏画面，没有控制台。40% 是口述；官方回复复述了 40%，但写成 ultra 100，与作者 Ultra 5X 冲突，不能当作官方额度表。",
+    "evidenceFile": "evidence/huang18825-ultra-swarm-carbon-40pct-x-2026-11-15.json"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "recordedAt": "2026-11-15",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "bebuu-ai-claude-pro-30d-3_3b-weekly55-2026-11-14",
+    "grade": "Medium",
+    "sourceType": "custom_usage_bar_api_equivalent",
+    "postId": "2121544952094281762",
+    "url": "https://x.com/bebuu_ai/status/2121544952094281762",
+    "author": "bebuu_ai",
+    "authorId": "1963124452390297600",
+    "createdAt": "2026-11-14T10:05:07.000Z",
+    "planOrModel": "Oral: standard $20/month Claude Pro. Screenshot is a custom/local-log usage bar, not a raw official console.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/bebuu_ai-claude-pro-30d.jpg"
+    ],
+    "screenshotFields": {
+      "fiveHour": "剩余 100%",
+      "weekly": "剩余 55%，2 天 16 小时后重置；旁注余量 17% · 持续到重置 · 估算 4.2 会话额度剩余 · 距重置还有 12 个窗口",
+      "fableWeekly": "剩余 75%，2 天 16 小时后重置；旁注余量 37% · 持续到重置",
+      "resetsBanked": "限额重置额度 1 次可用，26 天 17 小时",
+      "today": "$0.00；最近 token 用量 4.5M",
+      "currentWindow": "当前窗口 $178.34；当前窗口 token 用量 345M；11月10日 04:59 – 11月17日 04:59",
+      "priorWindows": "上一窗口部分估算 ≥$145.36 · 417M（11/3–11/10）；2 个窗口前估算 $285.62 · 832M（10/27–11/3）；3 个窗口前估算 $462.18 · 1.2B（10/20–10/27）",
+      "thirtyDay": "近 30 天费用 $1,239.46；近 30 天 token 用量 3.3B",
+      "footer": "Estimated from local Claude logs at API rates; token t… (cropped)"
+    },
+    "oralText": "Someone parsed 30 days of their local Claude Code logs at official Anthropic API prices on a standard $20/month Claude Pro account… Across four weekly cycles, that single $20 subscription chewed through 3.3… (API text truncated; screenshot supplies 3.3B / $1,239.46)",
+    "quotaPercent": "Custom bar weekly 55% left and Fable weekly 75% left. Not an official Claude Usage page.",
+    "tokens": {
+      "source": "local logs valued at API rates, footer says estimated",
+      "thirtyDay": "3.3B / $1,239.46",
+      "currentWeekWindow": "345M / $178.34 for Nov 10 04:59–Nov 17 04:59"
+    },
+    "conflictsToKeep": "API-equivalent ≠ subscription quota. 3.3B is 30 days; 345M is the current weekly window; 55% left is a custom bar. Do not pair 3.3B or 345M with 55%. Same class as Octoberry / Annthonny compiled or custom bars.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "自制/本地日志按 API 价估算，脚注写明 estimated。3.3B 是 30 日，345M 是当前周窗，与自定义周剩余 55% 不能配对反推。",
+    "evidenceFile": "evidence/bebuu-ai-claude-pro-30d-3_3b-weekly55-x-2026-11-14.json"
+  }
+}

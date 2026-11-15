@@ -1,0 +1,71 @@
+{
+  "scannedAt": "2026-11-15T01:33:51Z",
+  "recordedAt": "2026-11-15",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "source": "精简自 2026-11-15 早扫描 scan-status.json。不另开 PR。分页 token 不入库。原始搜索大文件不入库。截图不入库。",
+  "method": "Grok Bot 自带公开 X 读取。官方页用 WebFetch 核对。未写仓库、未开新 PR、未 merge 进 main、未部署、未发邮件、未在 X 上互动。",
+  "window": {
+    "keywordStart": "2026-11-13T00:59:00Z",
+    "authorStart": "2026-11-13T00:59:00Z",
+    "end": "2026-11-15T01:33:51Z",
+    "scanStartedUtc": "2026-11-15T01:29:11Z",
+    "overlap": "相对上轮结束 2026-11-14T00:59:10Z，关键词与作者起点重叠至少 24 小时。上轮关键词与 Fei 的 next_token 因 start 已变，未续用。",
+    "fei2411": "近 7 天自 2026-11-08T00:50:00Z，优先 48 小时自 2026-11-13T00:50:00Z",
+    "grokademyGarySol": "14 日首次回补上轮已关闭，今日只做增量，未拿旧 token 续页。"
+  },
+  "notExhaustive": [
+    "Claude 关键词 1 页约 33 分钟；Gemini 1 页约 29 分钟；Codex 1 页约 74 分钟；DeepSeek/GLM/MiniMax 1 页约 45 分钟；Devin 1 页约 2.1 小时；Cursor 1 页约 8.4 小时；Kimi 1 页约 10 小时。定向 has:images 4 页从 2026-11-13T10:00Z 扫到截止（约 39.5 小时），仍未到 2026-11-13T00:59Z（约缺 9 小时）。均留有 next_token，token 本身不入库。",
+    "上轮旧窗口 start=2026-11-12T01:05:00Z 的 next_token 没有续用，也没有用 end_time 重搜补前半缺口。上轮 Claude/Gemini 等高流量路更早缺口仍在。",
+    "Fei2411 发帖 3 页覆盖到 2026-11-13T00:58Z，距 48 小时起点只差约 8 分钟，优先 48 小时基本关闭；7 日未关闭。提及 3 页只翻到 2026-11-13T12:43Z，48 小时优先窗口未关闭。未对新年根帖做独立 conversation_id 翻页。",
+    "合并作者关键词 4 页最旧 2026-11-13T11:33Z，未到起点。leo +425、shengtang +62、StatsWire +90、grokademy +81，不能声称穷尽。",
+    "xiuyuanAI 本周期 2732→3080（+348）：from: 关键词增量第 3 页 result_count=0，该关键词查询已关闭；命中几乎全是「周末/周」误伤，无新控制台。未做 unfiltered 时间线。",
+    "ceciiiax / big_mm_cat / SolMemetop 本周期 tweetDelta=0，未再拉 unfiltered。Annthonny unfiltered 1 页未关闭。imranbru99 / lechattys 14 日首次回补本轮未做。kimmonismus +35 / 47080 帖，仍不做全量。",
+    "查询不能带 %。视频未抽帧。若干长帖 API 正文截断且 note_post 为空。无 429、无 auth 失败。日读取额度约剩 950/1000，停止是为了交付整理，不是额度耗尽。",
+    "归档时对 origin/main 全库检索本轮 post ID 为 0。扫描当时可选的 GitHub 只读去重未做，不假装扫描中已经搜过默认分支。"
+  ],
+  "counts": {
+    "newValidHigh": 0,
+    "newValidMedium": 11
+  },
+  "officialPagesRecheckedUnchanged": [
+    "https://aistudio.google.com/docs/pricing",
+    "https://aistudio.google.com/docs/whats-new-gemini-4-hydrogen",
+    "https://help.openai.com/en/articles/20001498-how-resets-work-in-codex",
+    "https://www.kimi.com/help/membership/membership-pricing"
+  ],
+  "notRecountedStillAwaitingConfirmation": [
+    "Gemini 4 Hydrogen 付费档仍是 $1.50 / $7.50 / $0.075，官方页仍无首发 5 折。已在 #234，不重计。",
+    "Codex banked reset 帮助中心规则未变。已在 #234，不重计。",
+    "2026-11-13T23:13:18Z Gemini 配额重置已在 11-14 增量，不重计，也不与本轮 Orchestrator 公告混写。",
+    "Carbon / Argon 价、Token Plan、Qwen4 预览折扣不重计。Kimi 仍无官方绝对 token 表，不改 #209。"
+  ],
+  "retained": [
+    {
+      "url": "https://x.com/_mohansolo/status/2121040958213230875",
+      "account": "_mohansolo",
+      "planOrModel": "Antigravity Pro; Orchestrator using Hydrogen and Argon",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "createdAt": "2026-11-13T00:42:26.000Z",
+      "why": "官方宣布 Orchestrator 对 Pro 订阅开放，完成任务时使用 Hydrogen 和 Argon，并称会更慢消耗 Argon 配额。这是产品可用性/路由变更，不是额度表，也没有倍数或 token。不得把「更慢消耗」写成已测量倍率。与 2026-11-13T23:13:18Z 的 Gemini 配额重置是不同事件。建议讨论写入说明，须维护者确认。不改 adopted。",
+      "notTheSameEventAs": "https://x.com/_mohansolo/status/2121380918355234957"
+    }
+  ],
+  "notAdoptedMedium": [
+    "https://x.com/Hsanli_x/status/2121538804981084162",
+    "https://x.com/RegnesV/status/2121540803340476530",
+    "https://x.com/StatsWire/status/2121611612826349877",
+    "https://x.com/VersunPan/status/2121413109223211140",
+    "https://x.com/bebuu_ai/status/2121544952094281762",
+    "https://x.com/jkgorka/status/2121630961180045651",
+    "https://x.com/huang18825/status/2121762017807917240",
+    "https://x.com/bebuu_ai/status/2121511783299187140",
+    "https://x.com/apple168haha/status/2121298361701822778",
+    "https://x.com/OddScienceLab/status/2121580989747277826"
+  ],
+  "officialReplySeenNotAQuotaRow": "https://x.com/_mohansolo/status/2121767664314089815",
+  "suggestion": "没有建议直接上线的 adopted 改动。本轮唯一值得维护者确认后再考虑写入说明的新官方项，是 2026-11-13T00:42:26Z 的 Orchestrator 对 Pro 开放。它不是新的订阅额度实测行，也不要和已计的 11-13T23:13Z Gemini 配额重置混写。其余 10 条 Medium 全部暂不采用，禁止 ÷配额% 反推。",
+  "index": "backlog-archive-index-2026-11-15.json"
+}

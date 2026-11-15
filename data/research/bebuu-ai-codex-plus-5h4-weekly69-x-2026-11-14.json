@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-11-15",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "bebuu-ai-codex-plus-5h4-weekly69-2026-11-14",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2121511783299187140",
+    "url": "https://x.com/bebuu_ai/status/2121511783299187140",
+    "author": "bebuu_ai",
+    "authorId": "1963124452390297600",
+    "createdAt": "2026-11-14T07:53:19.000Z",
+    "planOrModel": "Screenshot: Usage source Your Plus plan. The surrounding tweet discusses a GitHub issue about GPT-6.1 Sol (Ultra) burning a 5-hour limit; the visible UI is labeled Plus.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/bebuu_ai-codex-5h.jpg"
+    ],
+    "screenshotFields": {
+      "usageSource": "Your Plus plan",
+      "fiveHour": "4% left",
+      "weekly": "69% left, Resets in 6d 15h",
+      "credits": "0 credits",
+      "tokens": "none"
+    },
+    "oralText": "A developer has found a possible reason why Codex Plus and Pro users are burning through their 5-hour usage limits so quickly. In GitHub issue #61471, a user reported selecting GPT-6.1 Sol (Ultra) for a task in the Windows app. Just 7 minutes and 33 seconds later, their entire… (API text truncated)",
+    "quotaPercent": "Official-looking Codex UI: 5h 4% left, weekly 69% left, Plus plan.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "Tweet body is second-hand (GitHub issue #61471) and truncated, so the 7m33s 'entire 5h burned' claim is not fully recovered from the API. The visible screenshot still has 4% of 5h left, not 0%, and is labeled Plus, while the anecdote mentions selecting an Ultra model. Do not treat this as a measured 5-hour pool size.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "官方风格的 Plus 用量条只有 5h 剩余 4% / 周剩余 69%，无 token。正文里的 7 分 33 秒打满故事是二手且被截断，不能上线为额度数字。",
+    "evidenceFile": "evidence/bebuu-ai-codex-plus-5h4-weekly69-x-2026-11-14.json"
+  }
+}

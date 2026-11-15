@@ -1,0 +1,42 @@
+{
+  "recordedAt": "2026-11-15",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "versunpan-devin-pro-weekly-doubled-27m-2026-11-14",
+    "grade": "Medium",
+    "sourceType": "third_party_dashboard_plus_oral",
+    "postId": "2121413109223211140",
+    "url": "https://x.com/VersunPan/status/2121413109223211140",
+    "author": "VersunPan",
+    "authorId": "1569289525729587203",
+    "createdAt": "2026-11-14T01:21:13.000Z",
+    "planOrModel": "Oral: Devin Pro, Claude quota. Screenshot is a third-party usage dashboard, not an official Devin console.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/VersunPan-devin-pro.jpg"
+    ],
+    "screenshotFields": {
+      "filters": "7天 tab; Devin; claude-opus-5-5",
+      "tokens": "27M total; 输入 486; 输出 189K; 缓存 26M",
+      "footer": "统计网关调用与会话日志调用；本地拒绝的请求不计入汇总。",
+      "linkedPriorPost": "https://twitter.com/VersunPan/status/2104453331372708227 (comparison link in the tweet; not visually re-audited as a new independent item)"
+    },
+    "oralText": "更新下 devin pro 的 claude 额度。周额度比以前翻倍了，2个日额度 = 30M token。月额度 = 30 x 4 = 120M token。",
+    "quotaPercent": "none on the screenshot",
+    "tokens": {
+      "source": "third-party 7-day filter",
+      "total": "27M, of which cache 26M",
+      "windowOnScreen": "7 days, not demonstrated to be the official weekly quota window"
+    },
+    "conflictsToKeep": "Oral 30M weekly is '2 daily quotas'; monthly 120M is 30×4, which is extrapolation, not a screenshot field. 27M is a 7-day third-party total dominated by cache, with a suspiciously tiny input count (486). No official quota%. Forbidden: treat 27M or 30M or 120M as an official Devin weekly/monthly pool.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "截图是第三方 7 日面板 27M（其中缓存 26M），不是官方 Devin 控制台；口述 30M 周额和 30×4=120M 月额是外推，不能上线。",
+    "evidenceFile": "evidence/versunpan-devin-pro-weekly-doubled-27m-x-2026-11-14.json"
+  }
+}

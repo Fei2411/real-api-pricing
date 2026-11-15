@@ -1,0 +1,46 @@
+{
+  "recordedAt": "2026-11-15",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "hsanli-x-argon-16_03m-weekly28left-2026-11-14",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot_plus_third_party_day_panel",
+    "postId": "2121538804981084162",
+    "url": "https://x.com/Hsanli_x/status/2121538804981084162",
+    "urls": [
+      "https://x.com/Hsanli_x/status/2121538804981084162",
+      "https://x.com/Hsanli_x/status/2121537770711642566"
+    ],
+    "author": "Hsanli_x",
+    "authorId": "1998230620615671808",
+    "createdAt": "2026-11-14T09:40:42.000Z",
+    "planOrModel": "Oral: Gemini Pro. Official-looking Antigravity Usage popover; Gemini 4 Hydrogen Extra is selected; Carbon Unavailable.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/Hsanli_x-argon-1.jpg",
+      "images/Hsanli_x-argon-2.png"
+    ],
+    "screenshotFields": {
+      "officialPopover": "Gemini Models weekly 88% left (resets in 6d 16h), 5h 75% left (resets in 2h 54m). Claude and GPT weekly 100% / 5h 100%. Gemini 4 Argon weekly 28% left (resets in 6d 16h). No tokens on this official popover.",
+      "thirdPartyDayPanel": "Title Token 活动, Desktop + CLI, 每天 tab. 今日消耗 48.68M (Desktop 1.81M / CLI 46.87M). 本周消耗 975.3M (缓存率 92%, 输出 9.42M). 本月 1.33B (活跃 14 天). 累计 3.03B (33 活跃天, 缓存率 93%). 2026-11-14 今日明细: 输入 9.12M / 缓存 38.89M (81%) / 输出 670.9k, 总 48.68M. Tooltip: Gemini 4 Argon 16.03M (32.9% of today's tokens) [输入 4.64M / 缓存 11.26M / 输出 129k]; also Gemini 3.8 Flash 11.33M, Gemini Flash 10.88M, Gemini 4 Hydrogen 10.44M. The 32.9% is share of today's tokens, not quota%."
+    },
+    "oralText": "算算Gemini Pro 的 Argon 周额度到有多少Token！刚好今天周额度刚重置了，从 100% 一路跑到只剩 28%，这一波干掉了 72% 的周额度。Argon消耗：100% -> 28%（72%）：用了 16.03M Token，缓存大概 70% 左右（11.26M）。预计算：100% -> 0%：周额度大概有 22.3M Token 左右。目前输入 2 刀、输出…（API 正文在此后截断，note_post 为空）",
+    "quotaPercent": "Official popover: Argon weekly 28% left (=72% used). Gemini Models weekly 88% left. These are official weekly bars, not proven to share a window with the third-party 16.03M day total.",
+    "tokens": {
+      "source": "third-party day panel, not official Usage popover",
+      "argonToday": "16.03M (input 4.64M / cache 11.26M / output 129k) under 2026-11-14",
+      "todayTotal": "48.68M",
+      "weekOnSameBoard": "975.3M — a different 'this week' definition, all models, cannot be spliced with the just-reset Argon weekly bar"
+    },
+    "conflictsToKeep": "16.03M is today's Argon on a third-party board; 28% left is official weekly Argon. Author claims the weekly bar started at 100% today, which is oral. 32.9% on the tooltip is share of today's tokens, not the 72% quota. Cache 70% ≠ quota%. 本周 975.3M is misaligned with a same-day weekly reset. Duplicate post 2121537770711642566 uses the same images; count once. Forbidden: 16.03M÷72% = 22.3M pool.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "官方弹窗只有 Argon 周剩余 28%，没有 token；16.03M 来自第三方「今天」面板。不能当 High 配对，禁止用 16.03M÷72% 反推 22.3M 周池。",
+    "evidenceFile": "evidence/hsanli-x-argon-16_03m-weekly28left-x-2026-11-14.json"
+  }
+}

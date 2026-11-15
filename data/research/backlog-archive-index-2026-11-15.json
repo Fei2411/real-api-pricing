@@ -1,0 +1,119 @@
+{
+  "recordedAt": "2026-11-15",
+  "kind": "research-archive-increment",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "parentIndex": "backlog-archive-index-2026-11-14.json",
+  "pullRequest": 234,
+  "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",
+  "scanEndUtc": "2026-11-15T01:33:51Z",
+  "scope": "2026-11-15 早扫描的 11 条新证据。只追加 data/research/。没有 High 配对，没有可直接上线的 adopted 改动。不改 adopted.csv、scripts/build_adopted.py、data/conventions.json 的 updatedAt、derived/、charts/、线上文案。不 merge 新的 main、不关闭旧 PR、不 deploy。",
+  "images": "X 截图不入库。图上字段和原帖 URL 写在各 JSON 的 evidence 里。images/ 路径只是扫描包内文件名。",
+  "mergedMainThisPass": false,
+  "mainShaUnchanged": "3d1be6c8bd62a74a3b50c10eeace124b7241a5a9",
+  "mainNote": "2026-11-15 核对远程 main 仍是 3d1be6c8bd62a74a3b50c10eeace124b7241a5a9（Merge #235）。本增量不必再 merge main。#235 已在本分支，不重计 GOAT GLM-5.3。",
+  "defaultBranchDedup": {
+    "postId": "2121040958213230875",
+    "result": "origin/main（3d1be6c8bd62a74a3b50c10eeace124b7241a5a9）全库检索 2121040958213230875 为 0。本分支在写入本增量之前，data/research/ 文件名与正文也没有本轮 11 个新 post ID，以及重复帖 2121537770711642566、前帖 2121629057515487509、官方回复 2121767664314089815。"
+  },
+  "doesNotChange": [
+    "data/adopted.csv",
+    "scripts/build_adopted.py",
+    "data/conventions.json updatedAt",
+    "derived/",
+    "charts/",
+    "线上文案"
+  ],
+  "doesNotRecount": [
+    "Gemini 4 Hydrogen 付费档标准 API 价仍是输入 $1.50 / 1M、输出（含 thinking）$7.50 / 1M、隐式缓存输入 $0.075 / 1M。本轮官方页未变，不重计、不覆盖 #234 已有条目。仍须维护者确认。不写入 Fei2411 的 Hydrogen 5 折口述。",
+    "Codex banked reset：帮助中心规则未变（须手动兑换、至少一侧剩余低于 80%、Plus 与 Business Standard 恢复 5 小时 + 周额度、Pro 100/200/500 只恢复周额度）。抓取时页上显示 Updated: 18 days ago，不是当天改写。本轮不重计、不覆盖。仍须维护者确认。",
+    "2026-11-13T23:13:18Z 的 Antigravity Gemini 配额重置（2121380918355234957）已在 11-14 增量。本轮不重计、不覆盖，也不与 2026-11-13T00:42:26Z 的 Orchestrator 对 Pro 开放混写成同一次公告或同一次重置。",
+    "Gemini 4 Carbon / Argon：至 2026-11-30 的 $2 / $10，12 月 1 日起 $4 / $20。本轮官方页未变，不重计。已在 #231 / #233 / #234。",
+    "阿里云 Token Plan Credits 表与 Qwen4-Max-Preview 预览折扣：不重计。本轮 8jhy8 的 39 元 / 20,000 Credits 对照图未独立打开阿里云官方页核对，不重计。",
+    "Kimi 官方「新套餐 Plus 及以上有滚动 5 小时限额、无周限额」仍无绝对 token 表。不改 #209。"
+  ],
+  "stillAwaitingMaintainerConfirmationNotRecounted": [
+    {
+      "file": "official-gemini4-hydrogen-api-pricing-2026-11-12.json",
+      "item": "Gemini 4 Hydrogen 付费档标准 API 价 $1.50 / $7.50 / $0.075",
+      "thisPass": "2026-11-15 再次打开定价页与 what's-new，数字未变，官方页仍无首发 5 折。不重计、不覆盖。不采用 Fei 口述的 $0.75 / $3.75 / $0.0375。仍须维护者确认后才可进入官方 API 价表。本 PR 不改 adopted。"
+    },
+    {
+      "file": "official-codex-banked-reset-activated-2026-11-12.json",
+      "item": "Codex banked reset 已激活，以及 Plus vs Pro 恢复范围",
+      "thisPass": "2026-11-15 再次打开帮助中心，规则未变。不重计、不覆盖。仍须维护者确认后才可写入产品说明。本 PR 不改 adopted。"
+    },
+    {
+      "file": "official-antigravity-gemini-quota-reset-2026-11-13.json",
+      "item": "官方 Antigravity 于 2026-11-13T23:13:18Z 重置所有人的 Gemini 配额",
+      "url": "https://x.com/_mohansolo/status/2121380918355234957",
+      "postId": "2121380918355234957",
+      "thisPass": "已在 11-14 增量的 recommendDiscussAdopt。本轮不重计、不覆盖，也不再列成新的建议采用项。与本轮 2026-11-13T00:42:26Z 的 Orchestrator 对 Pro 开放是不同事件。仍须维护者确认。本 PR 不改 adopted。"
+    },
+    {
+      "file": "gemini-4-carbon-api-pricing-2026-11-11.json",
+      "item": "Gemini 4 Carbon / Argon 价：至 2026-11-30 为 $2 / $10，2026-12-01 起 $4 / $20",
+      "thisPass": "2026-11-15 再次打开定价页，数字未变。已在 #231 / #233 / #234。不重计、不覆盖。仍须维护者确认。本 PR 不改 adopted。"
+    }
+  ],
+  "recommendDiscussAdopt": [
+    {
+      "file": "official-antigravity-orchestrator-on-pro-2026-11-13.json",
+      "item": "官方 Antigravity 于 2026-11-13T00:42:26Z 宣布 Orchestrator 对 Pro 订阅开放",
+      "url": "https://x.com/_mohansolo/status/2121040958213230875",
+      "postId": "2121040958213230875",
+      "author": "_mohansolo",
+      "createdAt": "2026-11-13T00:42:26.000Z",
+      "text": "Quick update - Orchestrator is now available on your Pro sub and it will use Hydrogen and Argon to finish a task. This will allow you to finish a task faster and draw down Argon quota more slowly! More to come tomorrow",
+      "kind": "产品可用性/路由变更。Orchestrator 现已对 Pro 订阅开放，完成任务时使用 Hydrogen 和 Argon。不是新的订阅额度表，没有倍数、token 数或价格。",
+      "namedAllowances": "Argon 配额只被说成会更慢消耗。不得把「draw down Argon quota more slowly」写成已测量倍率。",
+      "notTheGeminiReset": "帖子时间早于同日 2026-11-13T23:13:18Z 的 Gemini 配额重置（2121380918355234957，已在 11-14 增量）。这是不同事件，不要混写成同一次重置或同一次公告。此帖落在上轮窗口内，但上轮高流量 Gemini 路未覆盖到；本轮在 mohansolo 定向检索中补到。",
+      "needs": "维护者确认后再考虑写入说明/归档。这是产品事件，不是新的订阅额度实测行。本 PR 不改 adopted。"
+    }
+  ],
+  "officialReplyCorroborationNotAQuotaRow": {
+    "file": "huang18825-ultra-swarm-carbon-40pct-x-2026-11-15.json",
+    "url": "https://x.com/huang18825/status/2121762017807917240",
+    "officialReply": "https://x.com/_mohansolo/status/2121767664314089815",
+    "authorOral": "Antigravity /swarm 配 Carbon，约 4–5 小时，用掉约 40% Ultra 5X 周额度。三张图都是 Minecraft，没有控制台。口述原文保留 utlra。",
+    "officialText": "The fact that you did it with carbon with just 40% of ultra 100 quota is great, there’s so much you can build",
+    "doNot": "官方复述了 40%，但写成 ultra 100，与作者 Ultra 5X 冲突。两种措辞原样保留，不裁定套餐档。可记为「官方看见了这条用户故事」的旁证，不要写成新的建议采用项或额度行，也不要放进 recommendDiscussAdopt。"
+  },
+  "doNotAdopt": [
+    "所有 ÷配额% 外推，禁止跨窗口、跨账号拼接",
+    "Hsanli_x https://x.com/Hsanli_x/status/2121538804981084162：官方弹窗 Argon 周剩余 28%（Gemini 周 88% left / 5h 75% left，Carbon Unavailable，Hydrogen Extra 已选），无 token。第三方「今日」面板 Argon 16.03M（占今日 token 32.9%；输入 4.64M / 缓存 11.26M / 输出 129k），今日总 48.68M；同板「本周消耗 975.3M」是全模型。口述反推 22.3M 周池。禁止 16.03M÷72%。缓存占比不是配额%。同图重复帖 2121537770711642566 只计一次",
+    "RegnesV https://x.com/RegnesV/status/2121540803340476530：官方 Weekly limits，All models 31% used / Fable only 22% used，Resets Mon 12:30 PM，无 token，裁切看不到重置库存，套餐档未标明",
+    "StatsWire https://x.com/StatsWire/status/2121611612826349877：官方弹窗 Gemini 周剩余 100%（6d 20h）、Claude and GPT 周剩余 79%（6d 5h），无 token。不可与上轮重置前 20–23% 拼接。这不是第二次官方全局重置公告",
+    "VersunPan https://x.com/VersunPan/status/2121413109223211140：口述 Devin Pro Claude 周额翻倍、2 日额=30M、月=30×4=120M。图是第三方 7 日 / Devin / claude-opus-5-5 面板 27M（缓存 26M）。禁止当官方池",
+    "bebuu_ai Claude https://x.com/bebuu_ai/status/2121544952094281762：自定义/本地日志 API 估值，脚注 Estimated from local Claude logs at API rates。5h 100% left，周剩余 55%，Fable 周剩余 75%，当前窗 $178.34 / 345M（11/10–11/17），近 30 天 $1,239.46 / 3.3B。禁止 3.3B÷55% 或 345M÷45%",
+    "jkgorka https://x.com/jkgorka/status/2121630961180045651：口述 Ultra Fable 13.5M+@100%；图是客服对话等，不是用量控制台，另一条写 6.4M+6.1M / 周 74%。冲突原样保留",
+    "huang18825 https://x.com/huang18825/status/2121762017807917240：口述 /swarm+Carbon 约 4–5 小时用掉约 40% Ultra 5X 周额度，三张图都是游戏、没有控制台。官方回复 https://x.com/_mohansolo/status/2121767664314089815 复述了 40%，但写成 ultra 100，与作者 Ultra 5X 冲突。不是额度行",
+    "bebuu_ai Codex https://x.com/bebuu_ai/status/2121511783299187140：官方风格 Plus 条，5h 剩余 4% / 周剩余 69%，Credits 0，无 token。正文 7 分 33 秒故事被截断，且与 Plus 标签不完全对齐",
+    "apple168haha https://x.com/apple168haha/status/2121298361701822778：自建看板 1,878,603,081 token（11-07 10:42–11-14 01:44 CST，本周重置后页签）；口述「榨干 20x」与看板上 Gemini 剩余约 44.8%–99.1% 冲突。不可与已计的 24.95 亿@95.8% 拼接或相加。API 估值 ≠ 订阅额度。账号标识不写入仓库",
+    "OddScienceLab https://x.com/OddScienceLab/status/2121580989747277826：口述 Grok Bot Ultra 约 4 小时烧掉周用量 46%，无截图、无 token。不可与该作者已计样本拼接",
+    "Fei2411 Hydrogen 首发 5 折口述"
+  ],
+  "relationToOlderPrs": {
+    "234": "本增量追加在 #234，不另开研究 PR。",
+    "235": "已在本分支（main 3d1be6c）。本轮没有新的 main 可 merge。不重计 GOAT GLM-5.3。",
+    "231-233": "Carbon 官方导入价、Token Plan Credits、Qwen4 预览折扣仍待维护者确认，本轮不重计、不覆盖。",
+    "207": "仍视为已被 main 的 claude_pro × claude-opus-5.5 = 30.46 代替。不关闭。",
+    "209": "无新的官方绝对 token 表，不改 Kimi 699 vs 官方 3.0× 的待裁定状态，不改 adopted。不关闭。",
+    "closeOnlyWithLaterPermission": [205, 208, 216, 223, 233, 207, 209],
+    "notClosedThisPass": [205, 208, 216, 223, 233, 207, 209, 234]
+  },
+  "files": [
+    "apple168haha-20x-board-18_79b-followup-x-2026-11-13.json",
+    "backlog-archive-index-2026-11-15.json",
+    "bebuu-ai-claude-pro-30d-3_3b-weekly55-x-2026-11-14.json",
+    "bebuu-ai-codex-plus-5h4-weekly69-x-2026-11-14.json",
+    "hsanli-x-argon-16_03m-weekly28left-x-2026-11-14.json",
+    "huang18825-ultra-swarm-carbon-40pct-x-2026-11-15.json",
+    "jkgorka-claude-ultra-fable-13_5m-conflict-x-2026-11-14.json",
+    "oddsciencelab-grokbot-ultra-46pct-4h-x-2026-11-14.json",
+    "official-antigravity-orchestrator-on-pro-2026-11-13.json",
+    "regnesv-claude-weekly31-fable22-x-2026-11-14.json",
+    "statswire-ultra-weekly-reset-100left-x-2026-11-14.json",
+    "versunpan-devin-pro-weekly-doubled-27m-x-2026-11-14.json",
+    "x-scan-2026-11-15.json"
+  ]
+}

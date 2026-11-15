@@ -1,0 +1,44 @@
+{
+  "recordedAt": "2026-11-15",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用",
+  "evidence": {
+    "id": "jkgorka-claude-ultra-fable-13_5m-conflict-2026-11-14",
+    "grade": "Medium",
+    "sourceType": "oral_plus_support_screenshots",
+    "postId": "2121630961180045651",
+    "url": "https://x.com/jkgorka/status/2121630961180045651",
+    "urls": [
+      "https://x.com/jkgorka/status/2121630961180045651",
+      "https://x.com/jkgorka/status/2121629057515487509"
+    ],
+    "author": "jkgorka",
+    "authorId": "1335664752",
+    "createdAt": "2026-11-14T15:46:53.000Z",
+    "planOrModel": "Oral: Claude Code Ultra, weekly Fable quota, reset day. No official Usage page in the attached images.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/jkgorka-fable-1.jpg",
+      "images/jkgorka-fable-2.jpg"
+    ],
+    "screenshotFields": {
+      "image1": "Screenshot of another jkgorka tweet plus a support-bot thread. Oral in that tweet: Day one of weekly reset; Claude Code launched a 6.4M-token run, a 6.1M-token run and 54 agents; 74% of my week, gone. Support bot says there is no way to track fix status. Not a usage console.",
+      "image2": "Claude/agent chat admitting it chose the sizes and ignored a cost-warning rule. No usage console."
+    },
+    "oralText": "Meanwhile in Claude Code on Ultra: Ultracode overrode my confirmation rules, spawned 54 agents, and burned 13.5M+ tokens (100% of my weekly Fable quota) on reset day. Earlier tweet in the screenshot: 6.4M + 6.1M runs and 74% of my week gone.",
+    "quotaPercent": "Oral only, and conflicting: 74% of the week gone vs 100% of weekly Fable quota.",
+    "tokens": {
+      "source": "oral / quoted earlier tweet, not an official usage page",
+      "figures": "13.5M+ vs 6.4M + 6.1M = 12.5M"
+    },
+    "conflictsToKeep": "74% vs 100%, and 12.5M vs 13.5M+, must be kept. Images are support chat and a text tweet, not official token or quota UI. Cannot be High.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "没有官方用量控制台。口述 13.5M+@100% Fable 与同作者截图里的 6.4M+6.1M / 周 74% 冲突，不能上线。",
+    "evidenceFile": "evidence/jkgorka-claude-ultra-fable-13_5m-conflict-x-2026-11-14.json"
+  }
+}

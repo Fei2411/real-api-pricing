@@ -1,0 +1,32 @@
+{
+  "recordedAt": "2026-11-15",
+  "sourceType": "official_announcement",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "讨论采用说明/归档，须维护者确认",
+  "evidence": {
+    "id": "official-antigravity-orchestrator-on-pro-2026-11-13",
+    "grade": "Medium",
+    "sourceType": "official_announcement",
+    "postId": "2121040958213230875",
+    "url": "https://x.com/_mohansolo/status/2121040958213230875",
+    "author": "_mohansolo (Varun Mohan, Antigravity)",
+    "authorId": "1086145626633494528",
+    "createdAt": "2026-11-13T00:42:26.000Z",
+    "planOrModel": "Antigravity Pro; Orchestrator now uses Hydrogen and Argon. Not a new subscription token table.",
+    "hasScreenshot": false,
+    "imagesVisuallyChecked": [],
+    "officialTerms": {
+      "text": "Quick update - Orchestrator is now available on your Pro sub and it will use Hydrogen and Argon to finish a task. This will allow you to finish a task faster and draw down Argon quota more slowly! More to come tomorrow",
+      "kind": "official product availability / routing change",
+      "namedAllowances": "Argon quota is named only as being drawn down more slowly when Orchestrator uses Hydrogen and Argon. No numeric token table, no percentage, no price change."
+    },
+    "conflictsToKeep": "This post is earlier than the 11-13T23:13Z Gemini quota reset and is a different event. It does not say Claude or Gemini weekly pools changed. Do not treat 'draw down Argon quota more slowly' as a measured multiplier.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass (optional GitHub read-only dedup skipped)",
+    "recommendation": "讨论采用说明/归档，须维护者确认",
+    "why": "这是官方账号宣布的产品可用性变更（Pro 订阅可用 Orchestrator，路由 Hydrogen + Argon，号称更慢消耗 Argon 配额），不是新的订阅额度表，也不能自动改 adopted。",
+    "evidenceFile": "evidence/official-antigravity-orchestrator-on-pro-2026-11-13.json"
+  }
+}

@@ -3,6 +3,12 @@
   "kind": "research-archive-increment",
   "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
   "parentIndex": "backlog-archive-index-2026-11-13.json",
+  "laterIncrement": {
+    "date": "2026-11-15",
+    "index": "backlog-archive-index-2026-11-15.json",
+    "scan": "x-scan-2026-11-15.json",
+    "note": "11-15 早扫描追加在同一 PR #234。本索引已归档的采用判断不改写。11-13T23:13Z Gemini 配额重置不重计，也不与 11-13T00:42Z 的 Orchestrator 对 Pro 开放混写。没有可直接上线的 adopted 改动。"
+  },
   "pullRequest": 234,
   "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",
   "scanEndUtc": "2026-11-14T00:59:10Z",
