@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-11-16",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用任何上线数字。第三方 ccusage 本地日志不是官方配额控制台。禁止把口述 40 亿当反推池。API 估值 ≠ 订阅额度。账号标识不入库。",
+  "evidence": {
+    "id": "moyerxx-ccusage-29yi-x-2026-11-15",
+    "grade": "Medium",
+    "sourceType": "third_party_cli_plus_oral",
+    "postId": "2121968022000992549",
+    "url": "https://x.com/moyerxx/status/2121968022000992549",
+    "author": "moyerxx",
+    "authorId": "2112894500620443648",
+    "createdAt": "2026-11-15T14:06:15.000Z",
+    "planOrModel": "Oral: Claude $20 plan. Screenshot 1 is ccusage (local Claude/Codex logs at API rates), not an official quota console. Screenshot 2 is a chat explaining the ccusage tool.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/moyerxx-claude-29yi-1.jpg",
+      "images/moyerxx-claude-29yi-2.jpg"
+    ],
+    "screenshotFields": {
+      "tool": "npx ccusage monthly --breakdown; header 'Coding (Agent) CLI Usage Report - Monthly; Detected: Claude, Codex'",
+      "oct2026All": "Total tokens 1,617,249,366; cost $571.00 (Claude 1,535,153,994 / $530.44, almost all opus-5-5 cache-read; Codex 82,095,372 / $40.57)",
+      "nov2026All": "Total tokens 1,329,546,717; cost $521.42 (Claude 1,293,275,457 / $487.16 of which opus-5-5 1,136,396,333 and fable-5-2 156,879,124; Codex 36,271,260 / $34.26)",
+      "grandTotal": "2,946,796,083 tokens; $1,092.42 across Oct+Nov, Claude+Codex combined",
+      "image2": "chat recommending ccusage; not a usage console. Notes Claude Code logs default to 30 days.",
+      "accountIdentifiers": "A local Windows username appeared in the terminal prompt; omitted from this file."
+    },
+    "oralText": "我的天呐Claude大人，29亿Tokens！还有3天会员到期，而我已经消耗了29亿tokens，折合美元1000多美元，折合人民币6600元。昨天刷新额度，我还剩下100%的周额度没有使用，上一周，周额度用了60%多，使用了一次完全重置。由此可以推断。 Claude 20刀套餐提供的额度换算成tokens要在40亿以上！",
+    "quotaPercent": "Oral only: after yesterday's refresh, 100% weekly remaining; previous week 60%+ used plus one full reset. No official % in either image.",
+    "tokens": {
+      "source": "third-party ccusage local logs at API rates, Oct+Nov combined, Claude+Codex",
+      "total": 2946796083,
+      "note": "Mostly cache-read. API-dollar estimate ≠ subscription allowance."
+    },
+    "conflictsToKeep": "29亿 is the two-month Claude+Codex log total (~2.95B), not a single weekly official quota. Oral 100% weekly remaining after refresh is not in the screenshots. The inferred '40亿以上 for a $20 plan' is forbidden pool extrapolation and must not be adopted. Currency is USD in the table; oral also gives RMB 6600.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用任何上线数字，尤其禁止 40 亿推断",
+    "why": "第三方本地日志跨两个月、含 Codex、以缓存读取为主，且无官方配额%；口述 40 亿是反推，禁止采用。",
+    "evidenceFile": "evidence/moyerxx-ccusage-29yi-x-2026-11-15.json"
+  }
+}

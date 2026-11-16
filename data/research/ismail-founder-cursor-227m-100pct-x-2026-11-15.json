@@ -1,0 +1,46 @@
+{
+  "recordedAt": "2026-11-16",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用为站点数字。套餐档未在裁切里出现。100% 对应 included 225.3M，不是口述的 227M。禁止与已计 439.6M 拼接。",
+  "evidence": {
+    "id": "ismail-founder-cursor-227m-100pct-x-2026-11-15",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122008727335075933",
+    "url": "https://x.com/Ismail_Founder/status/2122008727335075933",
+    "author": "Ismail_Founder",
+    "authorId": "2049699306102530048",
+    "createdAt": "2026-11-15T16:48:00.000Z",
+    "planOrModel": "Cursor (plan tier not labeled in the visible crop; Upgrade button present)",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/Ismail_Founder-cursor-227m.jpg"
+    ],
+    "screenshotFields": {
+      "dateRange": "Usage filter Nov 9 – 15, 2026",
+      "weeklyIncluded": "100% used; label Cursor 100%; Resets Nov 16",
+      "additionalUsage": "$2.10 of $3; Resets Dec 1; Credit balance $0.00",
+      "totals": "Total 227M tokens; Included 225.3M tokens; Credit usage $1.85",
+      "chart": "Tokens per day, Group by Product, Day view; peak around Nov 11 then drop toward zero after Nov 12",
+      "planLabel": "not visible in this crop",
+      "inputCacheOutput": "not shown"
+    },
+    "oralText": "Burned through 227 MILLION tokens in a week. Cursor usage: 100% maxed out. Credit balance: $0.00. Reset timer: 1 day left.",
+    "quotaPercent": "Official weekly included usage 100% used, resets Nov 16.",
+    "tokens": {
+      "source": "official Cursor Usage dashboard in the same screenshot",
+      "total": "227M (includes credit usage)",
+      "included": "225.3M (the 100% included bar)",
+      "note": "227M and 225.3M are not the same number. Do not treat 227M as the included pool."
+    },
+    "conflictsToKeep": "Plan tier is not visible. Additional usage $2.10 of $3 vs Credit usage $1.85 vs Credit balance $0.00 are as shown, not reconciled here. Do not stitch with this author's already-staged 439.6M sample (different post/window). Date filter Nov 9-15 may or may not exactly equal the weekly billing window that resets Nov 16. No input/cache/output split.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用为站点数字",
+    "why": "同屏有官方 100% included 与 225.3M/227M token，但套餐档未出现在裁切里，100% 对应的是 included 225.3M 而不是口述的 227M；不能当作可上线的额度行。",
+    "evidenceFile": "evidence/ismail-founder-cursor-227m-100pct-x-2026-11-15.json"
+  }
+}

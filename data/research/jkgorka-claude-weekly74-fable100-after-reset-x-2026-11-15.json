@@ -1,0 +1,40 @@
+{
+  "recordedAt": "2026-11-16",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用。官方周条 All models 74% used、Fable 100% used，无 token，本图未标明套餐档。可能与 11-14 已计的 74%/100% Fable 是同一重置日，不要当成第二次独立周实测，也不要把 13.5M 缝到这根条上。",
+  "evidence": {
+    "id": "jkgorka-claude-weekly74-fable100-after-reset-x-2026-11-15",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122077410954969427",
+    "url": "https://x.com/jkgorka/status/2122077410954969427",
+    "author": "jkgorka",
+    "authorId": "1335664752",
+    "createdAt": "2026-11-15T21:20:55.000Z",
+    "planOrModel": "Claude Usage · Weekly limits (plan tier not in this crop; author previously said Ultra). Reply to @bindureddy.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/jkgorka-after-reset.jpg"
+    ],
+    "screenshotFields": {
+      "title": "Usage · Weekly limits",
+      "allModels": "74% used; Resets Sat 11:00",
+      "fableOnly": "100% used; Resets Sat 11:00",
+      "tokens": "none"
+    },
+    "oralText": "That was a few hours after the weekly reset...",
+    "quotaPercent": "Official: All models 74% used; Fable only 100% used. Both reset Sat 11:00.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "This official Usage page confirms 74% all-models used and 100% Fable used. Yesterday's 11-14 items already had oral/tweet-text 74% vs 100% Fable plus 13.5M token claims, but those images were not this official Usage UI. The screenshot timestamp is unknown; it may depict the same reset-day already discussed on 11-14, posted later as a reply. Do not treat this as a second independent week, and do not stitch yesterday's 13.5M / 12.5M token figures onto this bar.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "官方周条确认 All models 74% used、Fable 100% used，无 token、档位未在本图标明；可能与已计的 11-14 Fable 冲突是同一重置日，不可当作第二次独立实测。",
+    "evidenceFile": "evidence/jkgorka-claude-weekly74-fable100-after-reset-x-2026-11-15.json"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "recordedAt": "2026-11-16",
+  "sourceType": "official_announcement",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "讨论采用进产品说明/研究归档，须维护者确认。这是上下文窗口/压缩行为变更，不是订阅额度表。不得把「压缩下降 3.5x/回合」写成已测量的额度倍率。用户口述的窗口 token 数不缝进本项当作已核实数字。不改 adopted。",
+  "evidence": {
+    "id": "official-antigravity-context-window-doubled-2026-11-16",
+    "grade": "Medium",
+    "sourceType": "official_post",
+    "postId": "2122119826575646918",
+    "url": "https://x.com/_mohansolo/status/2122119826575646918",
+    "author": "_mohansolo",
+    "authorId": "1086145626633494528",
+    "createdAt": "2026-11-16T00:09:28.000Z",
+    "planOrModel": "Antigravity · Gemini 4 Argon / Carbon / Hydrogen (context window, not a quota table)",
+    "hasScreenshot": false,
+    "imagesVisuallyChecked": [],
+    "officialTerms": "We’re doubling the context window for Argon, Carbon, and Hydrogen in Antigravity. Lots of work to make this happen but you should now see compaction go down by 3.5x per user turn!",
+    "oralText": null,
+    "quotaPercent": null,
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "Official product-behavior change, not a subscription allowance table and not a token count. User ScarletKc later orally said 256k doubled to 512k; that is unmetered corroboration, not an official number, and is not stitched into this item as a measured value. Do not treat this as a quota reset or a pricing change.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "讨论采用进产品说明/研究归档，须维护者确认",
+    "why": "官方账号原文；是上下文窗口/压缩行为变更，不是新的订阅额度表。",
+    "evidenceFile": "evidence/official-antigravity-context-window-doubled-2026-11-16.json"
+  }
+}

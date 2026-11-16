@@ -1,0 +1,42 @@
+{
+  "recordedAt": "2026-11-16",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用。官方 Google AI Pro 弹窗只有配额剩余%，无 token。这是 Pro 不是 Ultra。不可与该作者已计的 Claude Ultra Fable 13.5M 项拼接。",
+  "evidence": {
+    "id": "jkgorka-antigravity-pro-0pct-x-2026-11-15",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122045469140627761",
+    "url": "https://x.com/jkgorka/status/2122045469140627761",
+    "author": "jkgorka",
+    "authorId": "1335664752",
+    "createdAt": "2026-11-15T19:14:00.000Z",
+    "planOrModel": "Google AI Pro (official Plan card). Antigravity usage panel. Model credits overages off.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/jkgorka-antigravity-0pct.jpg"
+    ],
+    "screenshotFields": {
+      "plan": "Your Plan: Google AI Pro (upgrade CTA to Google AI Ultra)",
+      "modelCreditsOverages": "Enable AI Credit Overages = off",
+      "geminiModels": "Weekly Limit Remaining 0%; will fully refresh in 6 days. Five Hour Limit Remaining 100%.",
+      "claudeAndGpt": "Weekly Limit Remaining 0%; hit weekly limit, refreshes in 6 days, 8 hours; 5-hour limit does not currently apply.",
+      "gemini4Argon": "Gemini 4 Argon Weekly Limit 0%; will fully refresh in 6 days, 4 hours.",
+      "tokens": "none"
+    },
+    "oralText": "Until last week I could never use up my Antigravity quota. Always had loads left over. Then Gemini 4 Argon, and Hydrogen turned up and now it's 0% across the board, with 6 days to wait for a refresh.",
+    "quotaPercent": "Official remaining: Gemini weekly 0%, Gemini 5h 100%, Claude/GPT weekly 0%, Argon weekly 0%. Refresh countdowns differ (6d vs 6d 8h vs 6d 4h).",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "This is Google AI Pro, not Ultra. Do not splice with this author's already-staged Claude Ultra Fable 13.5M conflict, or with the separate Claude Usage bars in 2122077410954969427. Oral '0% across the board' matches the weekly remaining 0% rows; Gemini 5h remaining is 100%, so not literally every bar is 0%.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "官方 Pro 档弹窗只有配额剩余%，无 token，不能当作池大小；可作 Hydrogen/Argon 上线后 Pro 也能打满周额度的旁证。",
+    "evidenceFile": "evidence/jkgorka-antigravity-pro-0pct-x-2026-11-15.json"
+  }
+}

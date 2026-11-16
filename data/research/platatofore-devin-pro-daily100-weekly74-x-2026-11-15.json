@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-11-16",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用 1.8B 或任何反推池。官方 Devin Pro 页只有日 100% / 周 74%，无 token。禁止 1.8B÷74%。同图重复帖只计一次。不可与 mirrercrouse 的 9% 拼接。",
+  "evidence": {
+    "id": "platatofore-devin-pro-daily100-weekly74-x-2026-11-15",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2121852065890857123",
+    "urls": [
+      "https://x.com/platatofore/status/2121852065890857123",
+      "https://x.com/platatofore/status/2121851445821710451"
+    ],
+    "url": "https://x.com/platatofore/status/2121852065890857123",
+    "author": "platatofore",
+    "authorId": "1864236479977017349",
+    "createdAt": "2026-11-15T06:25:29.000Z",
+    "planOrModel": "Devin Pro $20/month; Renews on December 13, 2026. Official Settings / Usage & limits. SWE-2 mentioned only in oral text.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/platatofore-devin-1_8b.jpg"
+    ],
+    "screenshotFields": {
+      "currentPlan": "Pro, $20/month, renews December 13, 2026",
+      "dailyQuota": "100% used; Resets in 2 hours",
+      "weeklyQuota": "74% used; Resets in 2 hours",
+      "tokens": "none in the official page"
+    },
+    "oralText": "On the first day I activated Devin, due to my high personal usage—compounded by my decision to run a multi-agent cluster test for a task using SWE-2—I burned through nearly 1.8 billion tokens in just a few hours. Although I encountered some rate-limiting along the way, the task… (API text truncated; note_post empty)",
+    "quotaPercent": "Official included usage: daily 100% used, weekly 74% used; both 'Resets in 2 hours'.",
+    "tokens": {
+      "source": "oral only, not in the official screenshot",
+      "claimed": "nearly 1.8 billion in just a few hours"
+    },
+    "conflictsToKeep": "Duplicate post 2121851445821710451 uses the same image and is counted once. 1.8B is oral, not on the official page. Daily already 100% used while weekly is 74% used; both reset timers say 2 hours. Do not divide 1.8B by 74% or 100%. Do not stitch with mirrercrouse 9% weekly (different author, different window).",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用 1.8B 或任何反推池",
+    "why": "官方 Devin Pro 页只有日 100%/周 74%，无 token；1.8B 是口述且正文截断，禁止当官方池。",
+    "evidenceFile": "evidence/platatofore-devin-pro-daily100-weekly74-x-2026-11-15.json"
+  }
+}

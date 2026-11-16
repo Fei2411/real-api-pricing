@@ -1,0 +1,40 @@
+{
+  "recordedAt": "2026-11-16",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用。官方 Max 周条按 100% used 理解，5h 36% 按 Claude Code 惯例暂作 used 但确定性较低。无 token。",
+  "evidence": {
+    "id": "urbangibon-claude-max-weekly100-x-2026-11-15",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2121952110439014539",
+    "url": "https://x.com/UrbanGibon/status/2121952110439014539",
+    "author": "UrbanGibon",
+    "authorId": "1740761107671769088",
+    "createdAt": "2026-11-15T13:03:01.000Z",
+    "planOrModel": "Claude 'Plan usage limits · Max'; model chip Opus 5.5 Medium Auto",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/UrbanGibon-claude-weekly.jpg"
+    ],
+    "screenshotFields": {
+      "header": "Plan usage limits · Max",
+      "fiveHour": "5-hour limit 36%; Resets at 12:30 PM (blue bar, not full)",
+      "weeklyAllModels": "Weekly · all models 100%; Resets at 11:00 PM (full red bar)",
+      "tokens": "none"
+    },
+    "oralText": "Claude is a real one. Still (somehow) continues working even after I hit my weekly limit. P.S. Building a full-stack app for creators = RIP tokens btw",
+    "quotaPercent": "Official Max weekly all-models 100% (used, matching oral 'hit my weekly limit' and the full red bar). 5-hour 36% is shown without an explicit used/left label; given Claude Code convention of '% used' and a partially filled blue bar, treat as 36% used unless later contradicted.",
+    "tokens": {
+      "source": "none in the official bar; oral 'RIP tokens' is unmetered"
+    },
+    "conflictsToKeep": "Bars are labeled only '36%' and '100%' without the word used/left. Interpretation 100% used is supported by the red full weekly bar plus oral 'hit my weekly limit'. 5h 36% is less certain. Do not invent tokens.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "官方 Max 周条 100% used、5h 36%，无 token；可作打满周限后仍能继续的旁证，不是额度表。",
+    "evidenceFile": "evidence/urbangibon-claude-max-weekly100-x-2026-11-15.json"
+  }
+}

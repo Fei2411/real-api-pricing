@@ -1,0 +1,84 @@
+{
+  "scannedAt": "2026-11-16T01:37:12Z",
+  "recordedAt": "2026-11-16",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "source": "精简自 2026-11-16 早扫描 scan-status.json 与 verification-report.md。不另开 PR。分页 token 不入库。原始搜索大文件不入库。截图不入库。账号标识不入库。",
+  "method": "Grok Bot 自带公开 X 读取。官方页用 WebFetch 核对。未写仓库、未开新 PR、未 merge 进 main、未部署、未发邮件、未在 X 上互动。",
+  "window": {
+    "keywordStart": "2026-11-14T01:33:00Z",
+    "authorStart": "2026-11-14T01:33:00Z",
+    "end": "2026-11-16T01:37:12Z",
+    "scanStartedUtc": "2026-11-16T01:33:04Z",
+    "overlap": "相对上轮结束 2026-11-15T01:33:51Z，关键词与作者起点重叠至少 24 小时。上轮关键词与 Fei 的 next_token 因 start 已变，未续用。",
+    "fei2411": "优先 48 小时自 2026-11-14T01:30:00Z。7 日起点 2026-11-09T01:30:00Z 本轮未打开。",
+    "newAuthor14dBackfill": "起点 2026-11-02T01:33:00Z。只完成 RegnesV。Hsanli_x / jkgorka / bebuu_ai 未翻完。VersunPan、huang18825 的 unfiltered 回补未开始。"
+  },
+  "notExhaustive": [
+    "定向 has:images 4 页从 2026-11-14T02:25Z 扫到截止（最旧距起点约 52 分钟），仍余 next_token。token 本身不入库。",
+    "高流量关键词没有翻到窗口起点。Claude 1 页约 13 分钟；Gemini 1 页约 27 分钟；Codex 1 页约 28 分钟；DeepSeek/GLM/MiniMax 1 页约 37 分钟；Devin 1 页约 2.2 小时；Cursor 1 页约 4.5 小时；Kimi 1 页约 9.6 小时。均留有 next_token。",
+    "合并作者关键词 3 页最旧 2026-11-15T05:26Z，未到起点（约差 28 小时）。huang18825 周末「周」误伤占用大量页。leo +202、shengtang +119、StatsWire +101、Jerry +119、grokademy +76，不能声称穷尽。",
+    "xiuyuanAI 本周期 3080→3126（+46）：只做了 1 页关键词增量，未关闭；命中几乎全是「周末/周」误伤，无新控制台。未做 unfiltered。",
+    "Fei2411 发帖 3 页后第 3 页 result_count=0，优先 48 小时发帖窗口已关闭；7 日未打开。提及 4 页只翻到 2026-11-15T10:41Z，48 小时优先窗口未关闭。本轮未对新年根帖做独立 conversation_id 翻页。",
+    "低量 unfiltered：2232960089q（+2）1 页已关闭；Annthonny（+11）1 页未关闭。tweetDelta=0 的账号未再拉。imranbru99 / lechattys 14 日首次回补本轮未做。kimmonismus 47104 帖（+24），仍不做全量。",
+    "14 日首次回补只关闭了 RegnesV。Hsanli_x / jkgorka / bebuu_ai 未完成。VersunPan、huang18825 未开始。",
+    "查询不能带 %。视频未抽帧。若干长帖 API 正文截断且 note_post 为空。无 429、无 auth 失败。日读取额度结束时约剩 948/1000，停止是为了交付整理，不是额度耗尽。",
+    "扫描当时可选的 GitHub 只读去重未做。归档时对 origin/main 全库检索本轮 post ID 为 0，不假装扫描中已经搜过默认分支。"
+  ],
+  "counts": {
+    "newValidHigh": 0,
+    "newValidMedium": 11
+  },
+  "officialPagesRecheckedUnchanged": [
+    "https://aistudio.google.com/docs/pricing",
+    "https://aistudio.google.com/docs/whats-new-gemini-4-hydrogen",
+    "https://help.openai.com/en/articles/20001498-how-resets-work-in-codex",
+    "https://www.kimi.com/help/membership/membership-pricing"
+  ],
+  "notRecountedStillAwaitingConfirmation": [
+    "Gemini 4 Hydrogen 付费档仍是 $1.50 / $7.50 / $0.075，官方页仍无首发 5 折。已在 #234，不重计。不写入 Fei 的 Hydrogen 5 折口述。",
+    "Codex banked reset 帮助中心规则未变。Updated: 19 days ago 只是日历递增。已在 #234，不重计。",
+    "2026-11-13T23:13:18Z Gemini 配额重置已在 11-14 增量，不重计。",
+    "2026-11-13T00:42:26Z Orchestrator 对 Pro 开放已在 11-15 增量，不重计，也不与本轮上下文窗口加倍混写。",
+    "Carbon / Argon 价、Token Plan、Qwen4 预览折扣不重计。Kimi 仍无官方绝对 token 表，不改 #209。",
+    "官方 Ultra 100 再述 https://x.com/_mohansolo/status/2121847427582022021 是已计 huang18825 40% 用户故事的再述，不作为新测量。"
+  ],
+  "retained": [
+    {
+      "url": "https://x.com/_mohansolo/status/2122119826575646918",
+      "account": "_mohansolo",
+      "planOrModel": "Antigravity · Argon / Carbon / Hydrogen context window",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "createdAt": "2026-11-16T00:09:28.000Z",
+      "why": "官方宣布为 Argon、Carbon、Hydrogen 加倍上下文窗口，并称每用户回合压缩下降约 3.5x。这是产品行为/上下文变更，不是额度表，也没有 token 数或倍数池。不得把 3.5x 写成已测量的额度倍率。用户口述的 256k→512k 不缝进本项当作已核实数字。与 2026-11-13T00:42:26Z 的 Orchestrator 对 Pro 开放、以及 2026-11-13T23:13:18Z 的 Gemini 配额重置是不同事件。建议讨论写入说明，须维护者确认。不改 adopted。",
+      "notTheSameEventAs": [
+        "https://x.com/_mohansolo/status/2121040958213230875",
+        "https://x.com/_mohansolo/status/2121380918355234957"
+      ]
+    }
+  ],
+  "discussPossibleQualificationNotConfirmedPolicy": {
+    "url": "https://x.com/mirrercrouse/status/2122122670540267850",
+    "account": "mirrercrouse",
+    "createdAt": "2026-11-16T00:20:46.000Z",
+    "percent": "Weekly quota 9% used; Resets in 6 days",
+    "tokens": null,
+    "why": "官方条只有周已用 9%，无 token、档位未标明。作者推断 SWE-2 在仍有 included 额度时也会扣订阅周额度，这不是官方政策原文。可讨论作为已登记「SWE-2 永久免费」的可能限定，须维护者确认。不改 adopted。不可与 platatofore 的 Pro 74% / 口述 18 亿拼接。"
+  },
+  "notAdoptedMedium": [
+    "https://x.com/Ismail_Founder/status/2122008727335075933",
+    "https://x.com/jkgorka/status/2122045469140627761",
+    "https://x.com/jkgorka/status/2122077410954969427",
+    "https://x.com/platatofore/status/2121852065890857123",
+    "https://x.com/Ethan151300/status/2122138122582638718",
+    "https://x.com/UrbanGibon/status/2121952110439014539",
+    "https://x.com/baimuxicici/status/2121811447701270960",
+    "https://x.com/grokademy/status/2121858045705875757",
+    "https://x.com/moyerxx/status/2121968022000992549"
+  ],
+  "officialReplySeenNotAQuotaRow": "https://x.com/_mohansolo/status/2121847427582022021",
+  "suggestion": "没有建议直接上线的 adopted 改动，也没有新的 High 配对。本轮唯一新的官方讨论采用项，是 2026-11-16T00:09:28Z 的 Antigravity 上下文窗口加倍。另外可讨论 mirrercrouse 对 SWE-2 仍消耗尚未用尽的 included 周额度的推断；这是作者推断，不是官方政策。两者都须维护者确认，都不改 adopted。其余 9 条 Medium 全部暂不采用，禁止 ÷配额% 反推。上轮已在 #234 的 Hydrogen API 价、Codex banked reset、Gemini 配额重置、Carbon/Argon 价、Orchestrator 对 Pro 开放不重计。",
+  "index": "backlog-archive-index-2026-11-16.json"
+}

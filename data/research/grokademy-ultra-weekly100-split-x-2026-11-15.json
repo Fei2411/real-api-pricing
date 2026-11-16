@@ -1,0 +1,40 @@
+{
+  "recordedAt": "2026-11-16",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用。官方 Weekly Ultra Limit 100% used，拆分 Cursor 52% / Grok Bot 47% / Chat 1%，无 token。不是已丢弃「90%」插画的重计，也不可与那张插画拼接。",
+  "evidence": {
+    "id": "grokademy-ultra-weekly100-split-x-2026-11-15",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2121858045705875757",
+    "url": "https://x.com/grokademy/status/2121858045705875757",
+    "author": "grokademy",
+    "authorId": "958545632418938881",
+    "createdAt": "2026-11-15T06:49:14.000Z",
+    "planOrModel": "Official 'Weekly Ultra Limit' bar. Reply to @GrokBotRadar.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/grokademy-ultra-3days.jpg"
+    ],
+    "screenshotFields": {
+      "title": "Weekly Ultra Limit",
+      "used": "100% used",
+      "reset": "Resets November 17, 2026 at 1:42 PM",
+      "split": "Cursor 52%; Grok Bot 47%; Chat 1%"
+    },
+    "oralText": "On Ultra/ It lasted 3 days after Cursor ate up my usage.",
+    "quotaPercent": "Official Weekly Ultra Limit 100% used; product split Cursor 52% / Grok Bot 47% / Chat 1% (sums to 100, share of the used weekly cap).",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "This is a real official usage bar, not a recount of yesterday's discarded grokademy '90%' illustration (that image was not a console). Do not splice the 90% illustration into this 100% bar. Oral 'lasted 3 days after Cursor ate up my usage' is not independently timed from the bar.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "官方 Ultra 周条 100% used 且有 Cursor/Grok Bot/Chat 拆分，无 token，不能当池大小。",
+    "evidenceFile": "evidence/grokademy-ultra-weekly100-split-x-2026-11-15.json"
+  }
+}

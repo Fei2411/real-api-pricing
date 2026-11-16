@@ -1,0 +1,39 @@
+{
+  "recordedAt": "2026-11-16",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用。官方弹窗周剩余 22%、5h 剩余 0%，且周限制当时不适用。口述 70%+ 与图上约 78% used 不对齐。无 token，未标明套餐档。",
+  "evidence": {
+    "id": "ethan151300-gemini-weekly22-5h0-x-2026-11-16",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122138122582638718",
+    "url": "https://x.com/Ethan151300/status/2122138122582638718",
+    "author": "Ethan151300",
+    "authorId": "1946094337059868672",
+    "createdAt": "2026-11-16T01:22:10.000Z",
+    "planOrModel": "Official Gemini 模型 quota popover; Hydrogen / /teamwork mentioned only in oral text. Plan tier not shown.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/Ethan151300-hydrogen-70pct.png"
+    ],
+    "screenshotFields": {
+      "weeklyRemaining": "22%, but English help text: 'You have hit your 5-hour limit, so the weekly limit does not currently apply. Your 5-hour limit will refresh in 12 minutes.'",
+      "fiveHourRemaining": "0%; refresh in 12 minutes; 'If on a supported paid plan, you can use AI credits in the interim.'",
+      "tokens": "none"
+    },
+    "oralText": "昨晚一个 /teamwork 开发项目干完了周额度的70%+，没想到用 Gemini的hydrogen 还有token 焦虑！",
+    "quotaPercent": "Official weekly remaining 22% (so about 78% used) but weekly is currently not applying because 5h is at 0%.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "Oral '70%+' weekly used vs official weekly remaining 22% (~78% used). Keep the mismatch. The 22% weekly figure is also marked as not currently applying. Plan/model not labeled on the popover beyond 'Gemini 模型'.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "官方弹窗只有剩余%，且当时 5h 已尽所以周限制并不适用；口述 70%+ 与图上约 78% used 也不对齐；无 token。",
+    "evidenceFile": "evidence/ethan151300-gemini-weekly22-5h0-x-2026-11-16.json"
+  }
+}

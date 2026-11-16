@@ -1,0 +1,40 @@
+{
+  "recordedAt": "2026-11-16",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "讨论作为已登记「SWE-2 永久免费」的可能限定，须维护者确认。这是作者从「只派了 SWE-2」加 9% 条做出的推断，不是官方政策原文，不是已确认变更。不改 adopted。不可与 platatofore 的 Pro 74% / 口述 18 亿拼接。",
+  "evidence": {
+    "id": "mirrercrouse-devin-swe2-weekly9-x-2026-11-16",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122122670540267850",
+    "url": "https://x.com/mirrercrouse/status/2122122670540267850",
+    "author": "mirrercrouse",
+    "authorId": "1134400308",
+    "createdAt": "2026-11-16T00:20:46.000Z",
+    "planOrModel": "Devin included usage card; plan tier not visible in this crop. Oral says only SWE-2 was assigned overnight.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/mirrercrouse-devin-swe2-9pct.jpg"
+    ],
+    "screenshotFields": {
+      "includedUsage": "Weekly quota 9% used; Resets in 6 days",
+      "dailyQuota": "not in this crop",
+      "planLabel": "not in this crop",
+      "tokens": "none"
+    },
+    "oralText": "天塌了，昨晚给T3布置上任务就去睡了，早晨一看devin套餐已经被用了9%，但是我只给T3用swe2，也就是说，如果还有额度，swe2也会吃额度，只有用完了额度，再用swe2才是免费！",
+    "quotaPercent": "Official weekly included usage 9% used, resets in 6 days.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "The claim that SWE-2 consumes included quota until the included pool is exhausted, and is free only afterwards, is the author's inference from 'I only assigned SWE-2' plus a 9% bar. We cannot verify the overnight task mix from the screenshot. This may qualify the already-staged 'Devin SWE-2 permanently free' root, but it is not an official policy statement. Do not stitch with platatofore's Pro 74%/1.8B oral.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "讨论作为已登记「SWE-2 永久免费」的可能限定条件，须官方或维护者确认；不要自动改 adopted",
+    "why": "官方周条只有 9% used，无 token、档位未标明；SWE-2 仍吃剩余订阅额度是作者推断，不是官方政策原文。",
+    "evidenceFile": "evidence/mirrercrouse-devin-swe2-weekly9-x-2026-11-16.json"
+  }
+}

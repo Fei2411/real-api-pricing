@@ -3,6 +3,12 @@
   "kind": "research-archive-increment",
   "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
   "parentIndex": "backlog-archive-index-2026-11-14.json",
+  "laterIncrement": {
+    "date": "2026-11-16",
+    "index": "backlog-archive-index-2026-11-16.json",
+    "scan": "x-scan-2026-11-16.json",
+    "note": "11-16 早扫描追加在同一 PR #234，不另开分支。指向最新增量。11-15 及更早的采用判断不改写。Hydrogen API 价、Codex banked reset、11-13T23:13Z Gemini 配额重置、Carbon/Argon 价与 11-13T00:42Z Orchestrator 对 Pro 开放不重计。官方 Ultra 100 再述（2121847427582022021）不是新测量。没有可直接上线的 adopted 改动。"
+  },
   "pullRequest": 234,
   "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",
   "scanEndUtc": "2026-11-15T01:33:51Z",

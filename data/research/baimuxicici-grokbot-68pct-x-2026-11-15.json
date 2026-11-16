@@ -1,0 +1,48 @@
+{
+  "recordedAt": "2026-11-16",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。evidence 里的 images/ 与 imagesVisuallyChecked 只是扫描包内文件名。图上字段与原帖 URL 留在 evidence，实测字段未改。",
+  "scopeNote": "暂不采用。用量与账单 68% 已用（Grok Bot 64% + 其他 4%），无 token，套餐档未标明。同文重复帖只计一次。",
+  "evidence": {
+    "id": "baimuxicici-grokbot-68pct-x-2026-11-15",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2121811447701270960",
+    "urls": [
+      "https://x.com/baimuxicici/status/2121811447701270960",
+      "https://x.com/baimuxicici/status/2121811182956818464"
+    ],
+    "url": "https://x.com/baimuxicici/status/2121811447701270960",
+    "author": "baimuxicici",
+    "authorId": "2097920625587146758",
+    "createdAt": "2026-11-15T03:44:05.000Z",
+    "planOrModel": "Official-looking Grok Bot 用量与账单 panel; plan tier not labeled in the crop.",
+    "hasScreenshot": true,
+    "imagesVisuallyChecked": [
+      "images/baimuxicici-grokbot-1.jpg",
+      "images/baimuxicici-grokbot-2.jpg",
+      "images/baimuxicici-grokbot-3.jpg"
+    ],
+    "screenshotFields": {
+      "topBar": "68% 已用; 18 hours until reset",
+      "grokBotUsage": "64% (占每周上限), window 11月8日–11月15日; caption '你每周限额中其余的 4% 用于其他应用'",
+      "extraUsage": "超出每周限额的用量需付费; enable CTA",
+      "resetReferral": "推荐好友即可免费获得一次重置",
+      "image2": "author content collection list, not a usage console",
+      "image3": "Grok Bot referral: first 2 weeks free for the friend; referrer gets one free usage reset 7 days after the friend's first payment"
+    },
+    "oralText": "Grok bot的每周 token 额度马上又要重置了。这周比上周有进步，上周token的使用量不到 50%，这周 token 的使用量已经突破 60%，今天肯定可以超过 70%。",
+    "quotaPercent": "Official: 68% used overall, 18h to reset; Grok Bot 64% of the weekly cap (Nov 8–15) plus 4% other apps.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "Oral last week <50% is not in this screenshot. Oral '突破 60%、今天肯定超过 70%' is consistent with official 68% used. Duplicate post 2121811182956818464 counted once. Plan tier not shown. 64%+4%=68% as labeled; do not invent a token pool.",
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "not run this pass",
+    "recommendation": "暂不采用",
+    "why": "官方用量面板有周已用 68% 与 Grok Bot 64% 拆分，无 token、档位未标明。",
+    "evidenceFile": "evidence/baimuxicici-grokbot-68pct-x-2026-11-15.json"
+  }
+}
