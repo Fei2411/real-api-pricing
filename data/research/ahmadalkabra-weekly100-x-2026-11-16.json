@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。Weekly usage limit 100%，3 天后重置。口述从 Ultra 降到 Premium 后新周期开局已 100% 不在裁切里。无 token。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "ahmadalkabra-weekly100-x-2026-11-16",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122446013407576233",
+    "url": "https://x.com/ahmadalkabra/status/2122446013407576233",
+    "author": "ahmadalkabra",
+    "createdAt": "2026-11-16T21:45:37Z",
+    "planOrModel": "Weekly usage limit。套餐名不在裁切里。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "weekly": "Weekly usage limit 100%",
+      "reset": "3 天后重置",
+      "planLabel": "not in the crop",
+      "tokens": "none"
+    },
+    "oralText": "从 Ultra 降到 Premium 后，新周期开局已经 100%。",
+    "quotaPercent": "Weekly usage limit 100%, resets in 3 days. used/remaining word was not separately read on the crop.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "The Ultra-to-Premium downgrade and 'already 100% at the start of the new period' are oral and not in the crop. No tokens.",
+    "recommendation": "暂不采用",
+    "why": "图上只有 100% 周条。降档说法不在裁切里。无 token。",
+    "evidenceFile": "evidence/ahmadalkabra-weekly100-x-2026-11-16.json"
+  }
+}

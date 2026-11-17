@@ -1,0 +1,207 @@
+{
+  "recordedAt": "2026-11-17",
+  "kind": "research-archive-increment",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "parentIndex": "backlog-archive-index-2026-11-16.json",
+  "pullRequest": 234,
+  "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",
+  "scanEndUtc": "2026-11-17T01:37:06Z",
+  "scanStartUtc": "2026-11-15T01:37:12Z",
+  "taipeiLocalEnd": "2026-11-17 09:37",
+  "scope": "2026-11-17 扫描的 21 条新证据（2 条 High、#240、17 条 Medium、1 条官方范围说明）。只追加 data/research/。没有可直接上线的 adopted 改动。不改 adopted.csv、scripts/build_adopted.py、data/conventions.json 的 updatedAt、derived/、charts/、线上文案。不把本分支 merge 进 main、不关闭旧 PR、不 deploy。为赶上 #236，已把当时的远程 main merge 进本分支。",
+  "images": "X 与 GitHub 截图不入库。图上字段、口述和目视纠正写在各 JSON 的 evidence 里。本轮不把扫描包内 images/ 文件名写入仓库。",
+  "mergedMainThisPass": true,
+  "mainShaMerged": "057882f6b5d1e072648a22856e14a92614de7361",
+  "mainNote": "2026-11-16T02:54:36Z 远程 main 已是 057882f6b5d1e072648a22856e14a92614de7361（Merge #236）。本增量开始前已把该提交 merge 进本分支。唯一带入文件是 data/research/opencode-go-qwen4-max-round1-2026-11-16.json。冲突没有超出 data/research/。不重计、不改 adopted。X 上转述的 $1.50 / $4.50 不作为未核实新项。",
+  "recommendAdopt": [],
+  "recommendDiscussAdopt": [
+    {
+      "file": "official-antigravity-usage-not-affect-google-account-2026-11-16.json",
+      "item": "官方回复：基于 Antigravity usage 的操作不会影响 Google 账号，只限于 Antigravity",
+      "url": "https://x.com/_mohansolo/status/2122421560212611393",
+      "postId": "2122421560212611393",
+      "author": "_mohansolo",
+      "createdAt": "2026-11-16T20:08:27Z",
+      "text": "官方回复：基于 Antigravity usage 的操作不会影响 Google 账号，只限于 Antigravity。",
+      "kind": "产品范围说明。不是配额表，没有 token 数或价格。",
+      "notTheSameEventAs": [
+        "https://x.com/_mohansolo/status/2122119826575646918",
+        "https://x.com/_mohansolo/status/2121040958213230875",
+        "https://x.com/_mohansolo/status/2121380918355234957"
+      ],
+      "needs": "维护者确认后再考虑写入说明。不要与上下文窗口加倍混写成同一公告。本 PR 不改 adopted。"
+    }
+  ],
+  "stillAwaitingMaintainerConfirmationNotRecounted": [
+    {
+      "file": "official-antigravity-context-window-doubled-2026-11-16.json",
+      "item": "官方 Antigravity 于 2026-11-16T00:09:28Z 宣布为 Argon、Carbon、Hydrogen 加倍上下文窗口",
+      "url": "https://x.com/_mohansolo/status/2122119826575646918",
+      "postId": "2122119826575646918",
+      "thisPass": "已在 11-16 增量的 recommendDiscussAdopt。本轮不重计、不覆盖，也不再列成新的建议采用项。与本轮「usage 不影响 Google 账号」是不同事件。仍须维护者确认。本 PR 不改 adopted。"
+    },
+    {
+      "file": "mirrercrouse-devin-swe2-weekly9-x-2026-11-16.json",
+      "item": "mirrercrouse 推断：SWE-2 在仍有 included 额度时也会扣 Devin 订阅周额度",
+      "url": "https://x.com/mirrercrouse/status/2122122670540267850",
+      "postId": "2122122670540267850",
+      "thisPass": "已在 11-16 增量，作者推断，不是官方政策。本轮不重计、不覆盖。仍须维护者确认。本 PR 不改 adopted。"
+    },
+    {
+      "file": "official-gemini4-hydrogen-api-pricing-2026-11-12.json",
+      "item": "Gemini 4 Hydrogen 付费档标准 API 价 $1.50 / $7.50 / $0.075",
+      "thisPass": "本轮不重计、不覆盖。仍须维护者确认后才可进入官方 API 价表。本 PR 不改 adopted。"
+    },
+    {
+      "file": "official-codex-banked-reset-activated-2026-11-12.json",
+      "item": "Codex banked reset 已激活，以及 Plus vs Pro 恢复范围",
+      "thisPass": "本轮不重计、不覆盖。仍须维护者确认。本 PR 不改 adopted。"
+    },
+    {
+      "file": "gemini-4-carbon-api-pricing-2026-11-11.json",
+      "item": "Gemini 4 Carbon / Argon 价：至 2026-11-30 为 $2 / $10，2026-12-01 起 $4 / $20",
+      "thisPass": "本轮不重计、不覆盖。已在 #231 / #233 / #234。仍须维护者确认。本 PR 不改 adopted。"
+    },
+    {
+      "file": "aliyun-token-plan-credits-2026-11-11.json",
+      "item": "阿里云 Token Plan 官方 Credits 表",
+      "thisPass": "2026-11-17 复核 https://help.aliyun.com/zh/model-studio/token-plan-personal-overview 与 #232 一致：Lite ¥39 / 20,000，首月 ¥19.5；Pro ¥312 / 200,000。不重计官方 Credits 表。仍须维护者确认。本 PR 不改 adopted。"
+    },
+    {
+      "file": "official-qwen4-max-preview-credits-2026-11-11.json",
+      "item": "Qwen4-Max-Preview 预览折扣：预览 2 折，夜间再 4 折为标准价的 0.8 折，预览期至 2026-11-25 24:00 UTC+8",
+      "thisPass": "本轮不重计、不覆盖。作者「非夜间约 5 倍」不采用：去掉夜间 4 折后仍是预览 2 折，应为 2.5 倍；相对标准价是 12.5 倍。官方「2 折≈5 倍用量」是预览对标准，不是夜间对非夜间。仍须维护者确认。本 PR 不改 adopted。"
+    },
+    {
+      "file": "official-antigravity-gemini-quota-reset-2026-11-13.json",
+      "item": "官方 Antigravity 于 2026-11-13T23:13:18Z 重置所有人的 Gemini 配额",
+      "url": "https://x.com/_mohansolo/status/2121380918355234957",
+      "postId": "2121380918355234957",
+      "thisPass": "已在 11-14 增量。本轮不重计、不覆盖。与上下文窗口加倍、Orchestrator 对 Pro 开放、以及本轮账号范围说明是不同事件。仍须维护者确认。本 PR 不改 adopted。"
+    },
+    {
+      "file": "official-antigravity-orchestrator-on-pro-2026-11-13.json",
+      "item": "官方 Antigravity 于 2026-11-13T00:42:26Z 宣布 Orchestrator 对 Pro 订阅开放",
+      "url": "https://x.com/_mohansolo/status/2121040958213230875",
+      "postId": "2121040958213230875",
+      "thisPass": "已在 11-15 增量。本轮不重计、不覆盖，也不再列成新的建议采用项。仍须维护者确认。本 PR 不改 adopted。"
+    }
+  ],
+  "doesNotRecount": [
+    "OpenCode Go qwen4-max 官方 API 价已在 main #236：input $1.50 / output $4.50 / cache read $0.075（另有 cache write 5 分钟 $1.875、1 小时 $3，见 opencode-go-qwen4-max-round1-2026-11-16.json）。本轮不重计、不改 adopted。X 上的二手 $1.50/$4.50 不作为未核实新项，不新建证据文件。",
+    "jkgorka https://x.com/jkgorka/status/2122170660109844813 是已归档 2122077410954969427（All models 74% used / Fable only 100% used，Resets Sat 11:00）的重发。不重计，不新建证据文件。",
+    "Antigravity 上下文窗口加倍、mirrercrouse SWE-2 推断、Hydrogen API 价、Codex banked reset、Carbon/Argon 价、Token Plan 官方 Credits 表、Qwen4 预览折扣、11-13 Gemini 配额重置、Orchestrator 对 Pro 开放：本轮不重计。",
+    "Kimi 仍无新的官方绝对 token 表。不改 #209。"
+  ],
+  "cannotExecute": {
+    "issue": 239,
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/239",
+    "author": "mamaruo",
+    "createdAt": "2026-11-16T14:17:26Z",
+    "updatedAt": "2026-11-16T14:17:26Z",
+    "title": "更新 AA index",
+    "body": null,
+    "attachments": "无",
+    "result": "无法执行。正文为空、无附件。不编造 AA 数字，不改站点，不关闭该 issue。"
+  },
+  "doNotAdopt": [
+    "所有 ÷配额% 外推，禁止跨窗口、跨账号拼接",
+    "Ismail_Founder https://x.com/Ismail_Founder/status/2122345697710125546（High，暂不采用）：官方 Cursor Usage，日期筛选 Nov 1–16, 2026。Weekly included 1% used（Cursor 1%，Resets Nov 23）。Additional $2.10 of $3，Resets Dec 1，Credit balance $0.00，Credit usage $2.10。目视纠正：Total 440.3M，Included 438.4M。口述 Total burned so far 440.3M 对得上 Total。扫描包 RapidOCR 把标签写反，不采用写反的数。440.3M 是区间总量，1% 是重置后的新一周。禁止 440.3M÷1%，禁止与已归档 2122008727335075933 的 227M / 225.3M / 周 100% 拼接。裁切无套餐档，无 input/cache/output。",
+    "capputschino https://x.com/capputschino/status/2122445533520236546（新作者；形态接近 High，暂不采用）：自制图 “Grok Bot: measured from my own usage exports”，不是官方控制台。Before Nov 1 ~310–320M（Bots only）；Nov 1–15 220M（Bots only）；Super since Nov 15 ~760M*（Chat + Bots shared），其上标 202M used (26.6%)。饼图 99% Bots / <1% Chat。构成 Cached input 90% / Cache write 5% / Prompt 4% / Output 1%。脚注写明 760M 由 202M 与 26.6% 外推，estimate only。禁止再除一遍。cache% 不是配额%。",
+    "#240 https://github.com/Fei2411/real-api-pricing/issues/240（Medium，暂不采用）：千问 Token Plan 个人版 Lite × qwen4-max-preview。CLI 目视 type=token_plan_individual_lite、monthlyCredits.total=20000、usedPct=1.8950066，1.8950066%×20000=379.00132 算术成立，截图无 token 字段。作者称面板 token 合计 18,867,577（fresh input 1,474,782 + cache read 17,250,628 + cache write 0 + output 142,167），作者算术自洽，但没有面板截图。标题 227.6万 与正文 18,867,577 冲突，不取舍。禁止 ÷1.895% 外推。作者「非夜间约 5 倍 credits」不采用。不与 #236 OpenCode Go qwen4-max API 价拼接。",
+    "pcshipp https://x.com/pcshipp/status/2122490904313512445：官方 Claude Plan usage limits · Pro，5h 42%（11:10 PM 重置），Weekly all models 100%（Sat 3:30 AM 重置）。口述 Welcome to Codex 是打满 Claude 后换用，图不是 Codex 控制台。无 token。",
+    "voidJan https://x.com/voidJan/status/2122479810610110960：Gemini 组周剩余 0.00%（112h 4m），5h Disabled（因撞周限）；Claude/GPT 组周剩余 61.98%，5h 100%。口述 Ultra 5x、两天用完，套餐名不在裁切里。无 token。不同于 Ethan151300 的 22% / 5h 0%。",
+    "qijiefan https://x.com/qijiefan/status/2122457442059788707：口述 2 天登完，图上 Gemini 周剩余 28%、5h 100% left。以图为准。重复帖 2122457307699364198、2122457220973781225 只计一次。无 token。",
+    "Matt_INHK https://x.com/Matt_INHK/status/2122502510992928824：Weekly Super Grok Heavy Limit 中 Chat 1% of total（Mon 23 Nov 12:19pm 重置）；独立 Weekly Grok Bot Limit 58% used（Tue 17 Nov 2:59pm 重置）。额外积分 US$0.00。无 token。",
+    "BruceTa55302936 https://x.com/BruceTa55302936/status/2122500888107626977：图是 X Premium+ 99% used、4 天后重置，On-demand $10.87/$120。口述 Grok Bot 100%、还剩 3 天 1 小时，与图不完全一致，分开记录。无 token。",
+    "chessxyz https://x.com/chessxyz/status/2122492696988410145：官方 Weekly usage limit 100%，2 天后重置，额外积分 $0。套餐名 OCR 未读到。无 token。",
+    "heIpfullandlord https://x.com/heIpfullandlord/status/2122486945037390033：Weekly usage limit 92%，2 天后重置。裁切未写 used/remaining；结合口述 running out 暂按已用，确定性中等。无 token。",
+    "missionaryjdot https://x.com/missionaryjdot/status/2122470449808277641：Premium（Renews Nov 25, 2026），周已用 40%（Voice 38% + Grok Bot 2%），Nov 21 重置。口述 38% 是 Voice 分项。无 token。",
+    "MrOngDedy https://x.com/MrOngDedy/status/2122490923703836943：Weekly usage 53% used，2 天后重置。口述 $100 套餐、日常不到 10% 不在图上。无 token。",
+    "PatricioTrials https://x.com/PatricioTrials/status/2122326069713711409：Super Renews Dec 7, 2026；周已用 20%，Nov 21 重置；Cursor 14% / Grok Bot 5% / Imagine 1%。昨日仅口头无图。本条是新官方证据，不与已归档 7.7B 拼接。无 token。",
+    "BanksCircle https://x.com/BanksCircle/status/2122480360202133703：Ultra 周已用 41%，Monday 12:00 PM 重置。Fable 子帽 Up to 50% of your weekly limit，63% used。口述 50% 周额度 / 220€ 与图上 41% 周条不一致；图上 50% 是 Fable 子帽。220€ 只在口述。无 token。",
+    "Kilnexa https://x.com/Kilnexa/status/2122426032426991913：Your Plan: Google AI Ultra。Gemini 周剩余 57%（4d 2h），5h 剩余 57%（4h 25m）；Claude/GPT 两组均 100%。不能证明两个池一样大。无 token。",
+    "norbexking https://x.com/norbexking/status/2122446753228030126：Premium Renews 10 Dec 2026；周已用 100%（Grok Bot 68% + Cursor 31% + Chat 1%），18 Nov 重置；本月 Additional $0.24。不是 grokademy 已归档 Ultra 100% 的重计。无 token。",
+    "ahmadalkabra https://x.com/ahmadalkabra/status/2122446013407576233：Weekly usage limit 100%，3 天后重置。口述从 Ultra 降到 Premium 后新周期开局已 100% 不在裁切里。无 token。",
+    "Sheshanksingh26 https://x.com/Sheshanksingh26/status/2122422700174094522：My plan Premium，Weekly usage 100% used，4 天后重置。无 token。",
+    "ciertasskyn https://x.com/ciertasskyn/status/2122334736051798275：口述已烧 92%、还剩 4 天。图是设计图，不是完整官方控制台。OCR 见 WEEKLYUSAGE97%。92% 与 97% 冲突，不强行平均。",
+    "bebuu_ai https://x.com/bebuu_ai/status/2122339203044483271：Devin Desktop Model Scout 卡（STEALTH MODEL，unknown lab，maker unconfirmed）。silicon-2 标价 $10 input / $50 output per 1M tokens。同图还有 roadrunner，不编造其价格。未官宣。"
+  ],
+  "defaultBranchDedup": {
+    "result": "origin/main（057882f6b5d1e072648a22856e14a92614de7361）全库检索本轮 post ID、重复帖 2122457307699364198 与 2122457220973781225、以及重发 2122170660109844813 为 0。写入前本分支 data/research/ 也没有这些 ID，也没有 #240 / #239 的研究文件。2122170660109844813 不新建文件。"
+  },
+  "scanGaps": [
+    "Fei2411 7 日时间线 6 页，最旧仅到 2026-11-12T03:25:40Z，未关窗到 11-10。conversation/quote 未拉。",
+    "Fei 提及 5 页，最旧 2026-11-15T14:08:13Z，未接上轮 2026-11-15T10:41Z。",
+    "新作者 14 日回填本轮未开始。",
+    "多数关键词与高产作者时间线仍有 next_token。分页 token 不入库。",
+    "公开读取结束时约剩 940/1000。不声称搜全。"
+  ],
+  "doesNotChange": [
+    "data/adopted.csv",
+    "scripts/build_adopted.py",
+    "data/conventions.json updatedAt",
+    "derived/",
+    "charts/",
+    "线上文案"
+  ],
+  "relationToOlderPrs": {
+    "234": "本增量追加在 #234，不另开研究 PR。",
+    "236": "已 merge 进本分支。只带入 OpenCode Go qwen4-max 的 research-only 记录。不重计，不改 adopted。",
+    "237": "外部研究 PR，保留，不关闭。",
+    "238": "外部研究 PR，保留，不关闭。",
+    "239": "正文为空，无法执行。不编造 AA 数字，不改站点，不关闭。",
+    "240": "本增量记为 Medium、不采用。不关闭。",
+    "231-233": "Carbon 官方导入价、Token Plan Credits、Qwen4 预览折扣仍待维护者确认，本轮不重计、不覆盖。",
+    "207": "仍视为已被 main 的 claude_pro × claude-opus-5.5 = 30.46 代替。该 PR 现为 dirty。不关闭。",
+    "209": "无新的官方绝对 token 表，不改 Kimi 699 vs 官方 3.0× 的待裁定状态，不改 adopted。不关闭。",
+    "closeOnlyWithLaterPermission": [
+      205,
+      208,
+      216,
+      223,
+      233,
+      207,
+      209
+    ],
+    "notClosedThisPass": [
+      205,
+      208,
+      216,
+      223,
+      233,
+      207,
+      209,
+      234,
+      237,
+      238,
+      239,
+      240
+    ]
+  },
+  "files": [
+    "ahmadalkabra-weekly100-x-2026-11-16.json",
+    "backlog-archive-index-2026-11-17.json",
+    "bankscircle-claude-ultra-weekly41-fable63-x-2026-11-17.json",
+    "bebuu-ai-silicon2-scout-10-50-x-2026-11-16.json",
+    "bruceta-x-premium-plus-99-x-2026-11-17.json",
+    "capputschino-grokbot-202m-26pct-export-x-2026-11-16.json",
+    "chessxyz-grok-weekly100-x-2026-11-17.json",
+    "ciertasskyn-oral92-ocr97-design-x-2026-11-16.json",
+    "helpfulandlord-weekly92-x-2026-11-17.json",
+    "ismail-founder-cursor-440m-period-weekly1-x-2026-11-16.json",
+    "kilnexa-google-ai-ultra-gemini57-x-2026-11-16.json",
+    "mamaruo-qwen-tokenplan-lite-qwen4-max-preview-2026-11-16.json",
+    "matt-inhk-super-chat1-grokbot58-x-2026-11-17.json",
+    "missionaryjdot-premium-weekly40-x-2026-11-16.json",
+    "mrongdedy-weekly53-used-x-2026-11-17.json",
+    "norbexking-premium-weekly100-split-x-2026-11-16.json",
+    "official-antigravity-usage-not-affect-google-account-2026-11-16.json",
+    "patriciotrials-xsuper-weekly20-split-x-2026-11-16.json",
+    "pcshipp-claude-pro-weekly100-5h42-x-2026-11-17.json",
+    "qijiefan-gemini-weekly28-left-x-2026-11-16.json",
+    "sheshanksingh26-premium-weekly100-x-2026-11-16.json",
+    "voidjan-gemini-weekly0-5h-disabled-x-2026-11-16.json",
+    "x-scan-2026-11-17.json"
+  ]
+}

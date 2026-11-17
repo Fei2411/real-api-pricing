@@ -1,0 +1,51 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。官方 Cursor Usage 同屏有 token 与周百分比，形态是 High，但 Nov 1–16 区间总量与重置后新一周的 1% 不是同一窗口。套餐档未出现，无 input/cache/output。禁止 440.3M÷1%，禁止与已归档 227M 拼接。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "ismail-founder-cursor-440m-period-weekly1-x-2026-11-16",
+    "grade": "High",
+    "gradeNote": "官方控制台同屏有 token 与周百分比，扫描分级为 High。日期筛选与周重置窗口不对齐，且套餐档未出现，所以不采用。",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122345697710125546",
+    "url": "https://x.com/Ismail_Founder/status/2122345697710125546",
+    "author": "Ismail_Founder",
+    "createdAt": "2026-11-16T15:07:00Z",
+    "planOrModel": "Cursor Usage。裁切里看不到套餐档。",
+    "hasScreenshot": true,
+    "visualCorrection": "必须采用目视结果：Total 440.3M tokens，Included 438.4M tokens。扫描包 RapidOCR 把这两个标签颠倒了；颠倒后的标签不是实测值，本文件不记录那组写反的数字。口述 “Total burned so far: 440.3M tokens” 对得上 Total。",
+    "screenshotFields": {
+      "dateRange": "Usage filter Nov 1–16, 2026",
+      "weeklyIncluded": "1% used; label Cursor 1%; Resets Nov 23",
+      "additionalUsage": "$2.10 of $3; Resets Dec 1; Credit balance $0.00",
+      "creditUsage": "$2.10",
+      "totals": "Total 440.3M tokens; Included 438.4M tokens",
+      "planLabel": "not visible in this crop",
+      "inputCacheOutput": "not shown"
+    },
+    "oralText": "Total burned so far: 440.3M tokens",
+    "quotaPercent": "Official weekly included 1% used after reset (Resets Nov 23). This 1% is the new week, not the Nov 1–16 date-filter total.",
+    "tokens": {
+      "source": "official Cursor Usage dashboard, visual correction (not the inverted RapidOCR labels)",
+      "total": "440.3M",
+      "included": "438.4M",
+      "note": "440.3M is the Nov 1–16 date-filter total. Included on that same card is 438.4M. Neither number is the new week's 1% bar."
+    },
+    "notTheSamePostAs": {
+      "postId": "2122008727335075933",
+      "file": "ismail-founder-cursor-227m-100pct-x-2026-11-15.json",
+      "window": "Nov 9–15, 2026; Total 227M; Included 225.3M; weekly included 100%"
+    },
+    "conflictsToKeep": "Do not divide the period total by the new-week 1%. Do not stitch 440.3M with the archived 227M sample or with the 1% bar. Plan tier is absent. No input/cache/output split.",
+    "recommendation": "暂不采用",
+    "why": "同作者新周期的官方用量卡。440.3M 是 Nov 1–16 区间总量，1% 是重置后的新一周。套餐档未出现，无 input/cache/output。不能上线为额度行。",
+    "evidenceFile": "evidence/ismail-founder-cursor-440m-period-weekly1-x-2026-11-16.json"
+  }
+}

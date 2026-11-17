@@ -1,0 +1,44 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。官方弹层只有剩余%与 Disabled，无 token。套餐名不在裁切里。不同于昨日 Ethan151300 的 22% / 5h 0%。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "voidjan-gemini-weekly0-5h-disabled-x-2026-11-16",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122479810610110960",
+    "url": "https://x.com/voidJan/status/2122479810610110960",
+    "author": "voidJan",
+    "createdAt": "2026-11-16T23:59:55Z",
+    "planOrModel": "官方分组配额弹层。口述 Ultra 5x。套餐名不在裁切里。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "geminiWeeklyRemaining": "0.00%（112h 4m）",
+      "geminiFiveHour": "Disabled，因撞周限",
+      "claudeGptWeeklyRemaining": "61.98%",
+      "claudeGptFiveHour": "100%（used/remaining 字样本轮未另写）",
+      "tokens": "none"
+    },
+    "oralText": "Ultra 5x，两天用完。",
+    "quotaPercent": "Gemini weekly remaining 0.00%; 5h Disabled because the weekly limit was hit. Claude/GPT weekly remaining 61.98%, 5h shows 100%.",
+    "tokens": {
+      "source": "none"
+    },
+    "notTheSamePostAs": {
+      "postId": "2122138122582638718",
+      "file": "ethan151300-gemini-weekly22-5h0-x-2026-11-16.json",
+      "note": "昨日 Ethan151300 是周剩余 22%、5h 剩余 0%。不是同一条。"
+    },
+    "conflictsToKeep": "Plan name Ultra 5x is oral only and not in the crop. Do not stitch with Ethan151300. No tokens. 100% on the Claude/GPT 5h row is recorded as displayed, without an extra used/remaining word.",
+    "recommendation": "暂不采用",
+    "why": "只有剩余百分比，无 token，套餐名不在图上。",
+    "evidenceFile": "evidence/voidjan-gemini-weekly0-5h-disabled-x-2026-11-16.json"
+  }
+}

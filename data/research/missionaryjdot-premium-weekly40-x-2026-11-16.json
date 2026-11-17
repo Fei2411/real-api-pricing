@@ -1,0 +1,40 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。Premium 周已用 40%（Voice 38% + Grok Bot 2%）。无 token。口述 38% 是 Voice 分项，不是另一根周条。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "missionaryjdot-premium-weekly40-x-2026-11-16",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122470449808277641",
+    "url": "https://x.com/missionaryjdot/status/2122470449808277641",
+    "author": "missionaryjdot",
+    "createdAt": "2026-11-16T23:22:43Z",
+    "planOrModel": "Premium（Renews Nov 25, 2026）",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "plan": "Premium",
+      "renews": "Nov 25, 2026",
+      "weeklyUsed": "40%",
+      "split": "Voice 38% + Grok Bot 2%",
+      "reset": "Nov 21",
+      "tokens": "none"
+    },
+    "oralText": "38% 是 Voice 分项。",
+    "quotaPercent": "Weekly used 40%, of which Voice 38% and Grok Bot 2%. Resets Nov 21.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "38% is the Voice slice of the 40% weekly used bar, not a second weekly pool. No tokens.",
+    "recommendation": "暂不采用",
+    "why": "官方周已用 40% 有分项，但无 token。",
+    "evidenceFile": "evidence/missionaryjdot-premium-weekly40-x-2026-11-16.json"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "github_issue",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "GitHub 附件截图不入库。CLI 字段来自本轮目视。厂商用量面板的 token 分项没有面板截图，只记作者正文，不据此采用。",
+  "scopeNote": "分级 Medium。额度侧有 CLI 截图，token 侧未见图，且标题 227.6万 与正文 18,867,577 冲突。禁止 ÷1.895% 外推月额度。不改 adopted。不重计官方 Credits 表。不与 #236 的 OpenCode Go qwen4-max API 价拼接。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索 issue #240 与本文件名为 0；写入前本分支也没有对应研究文件。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "mamaruo-qwen-tokenplan-lite-qwen4-max-preview-2026-11-16",
+    "grade": "Medium",
+    "gradeNote": "额度侧有目视过的 CLI 截图。token 分项没有面板截图，且 issue 标题与正文冲突，所以不是 High，不采用。",
+    "sourceType": "github_issue_plus_cli_screenshot",
+    "issue": 240,
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/240",
+    "author": "mamaruo",
+    "createdAt": "2026-11-16T15:06:04Z",
+    "updatedAt": "2026-11-16T17:19:26Z",
+    "title": "[数据 / Data] 千问 Token Plan 个人版 Lite · qwen4-max-preview（BYOK）：11-16 面板 227.6万 tokens 分项",
+    "planOrModel": "千问 Token Plan 个人版 Lite × qwen4-max-preview。套餐专属 Key 作为 BYOK 接入 Qoder。国内站 platform.qianwenai.com。作者另写模型 ID qwen4.0-max-preview-tp、provider qwencloud-cn、显示名 Qwen-4.0-Max-Preview。与 OpenCode Go 的模型 id qwen4-max 不是同一产品。",
+    "hasScreenshot": true,
+    "screenshotWhat": "已目视 CLI：qianwen subscription tokenplan status --format json。截图里没有 token 字段。厂商用量面板的 token 分项没有面板截图。",
+    "cliVisuallyChecked": {
+      "command": "qianwen subscription tokenplan status --format json",
+      "type": "token_plan_individual_lite",
+      "name": "Lite",
+      "status": "active",
+      "monthlyCredits": {
+        "total": 20000,
+        "usedPct": 1.8950066
+      },
+      "resetTime": "2026-12-14T00:00:00.000+08:00",
+      "periodStart": "2026-11-13T21:26:07.000+08:00",
+      "periodEnd": "2026-12-14T00:00:00.000+08:00",
+      "remainingDays": 27,
+      "autoRenew": {
+        "enabled": false
+      },
+      "completeness": "partial",
+      "tokensOnThisScreenshot": null
+    },
+    "arithmeticCheckedNotAdopted": {
+      "expression": "1.8950066% × 20000",
+      "resultCredits": 379.00132,
+      "holds": true,
+      "note": "只核对 CLI 百分比与总额的乘法。不是 token 池，也不可再除 1.895% 去外推月 token。"
+    },
+    "authorTokenClaimNoPanelScreenshot": {
+      "window": "2026-11-13 与 2026-11-16 两个日粒度点之和（UTC+8）",
+      "authorNightWindows": "作者称两组请求都在夜间折扣窗：11-13 22:01–23:13、11-16 01:27–01:44（UTC+8，均在 22:00–次日 08:00）。",
+      "total": 18867577,
+      "freshInput": 1474782,
+      "cacheRead": 17250628,
+      "cacheWrite": 0,
+      "cacheWriteNote": "作者：面板未单列，故写 0。",
+      "outputIncludingReasoning": 142167,
+      "authorSumHolds": true,
+      "authorSum": "1474782+17250628+142167=18867577"
+    },
+    "titleBodyConflict": {
+      "titleSays": "227.6万 tokens",
+      "bodySays": 18867577,
+      "resolution": "不擅自取舍，两边都不采用。"
+    },
+    "price": {
+      "author": "首月限时 ¥19.5/月，原价 ¥39；活动至 2026-11-30 23:59:59 UTC+8。",
+      "officialHelpRechecked": "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview 于 2026-11-17 复核与 #232 一致：Lite ¥39 / 20,000，首月 ¥19.5；Pro ¥312 / 200,000。不重计官方 Credits 表。",
+      "authorAlsoCited": "https://platform.qianwenai.com/docs/token-plan/personal/token-plan-personal-overview"
+    },
+    "previewDiscountNotRecounted": {
+      "model": "qwen4-max-preview",
+      "previewWindow": "2026-11-11 10:00 至 2026-11-25 24:00 UTC+8",
+      "preview": "预览 2 折（官方：相当于 5 倍用量）",
+      "night": "22:00–次日 08:00 再 4 折，即标准价的 0.8 折",
+      "afterPreview": "预览结束后下线",
+      "authorClaimRejected": "作者称「非夜间同等用量 credits 约 5 倍」。不要采用。去掉夜间 4 折后仍是预览 2 折，credits 应为 2.5 倍；相对标准价是 12.5 倍。官方「2 折≈5 倍用量」是预览对标准，不是夜间对非夜间。"
+    },
+    "notStitchedWith": {
+      "pullRequest": 236,
+      "file": "opencode-go-qwen4-max-round1-2026-11-16.json",
+      "why": "OpenCode Go 的 qwen4-max 官方 API 价是另一产品、另一模型 id。不拼接，不重计，不改 adopted。"
+    },
+    "oralText": "作者正文中的 token 分项与「非夜间约 5 倍 credits」。token 分项没有面板截图。5 倍换算不采用。",
+    "quotaPercent": "CLI monthlyCredits.usedPct=1.8950066 on a 20,000 credit Lite plan. This is a credit percent, not a token quota percent.",
+    "tokens": {
+      "source": "author text only; no usage-panel screenshot",
+      "totalClaimed": 18867577,
+      "notAdoptedBecause": "标题 227.6万 与正文冲突，且面板截图缺失。"
+    },
+    "conflictsToKeep": "Title 227.6万 vs body 18,867,577. CLI screenshot has credits and usedPct but no token fields. Do not divide any token figure by 1.8950066%. Do not adopt the author's 5× non-night credit claim. Do not splice with OpenCode Go qwen4-max API prices.",
+    "recommendation": "暂不采用",
+    "why": "额度侧 CLI 可读，token 侧未见图且与标题冲突。不能上线为额度或 token 行。",
+    "evidenceFile": "evidence/mamaruo-qwen-tokenplan-lite-qwen4-max-preview-2026-11-16.json"
+  }
+}

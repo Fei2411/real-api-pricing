@@ -1,0 +1,44 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。新的官方周条：Super 周已用 20%，拆分 Cursor 14% / Grok Bot 5% / Imagine 1%。无 token。昨日仅口头无图，不与已归档 7.7B 拼接。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "patriciotrials-xsuper-weekly20-split-x-2026-11-16",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122326069713711409",
+    "url": "https://x.com/PatricioTrials/status/2122326069713711409",
+    "author": "PatricioTrials",
+    "createdAt": "2026-11-16T13:49:00Z",
+    "planOrModel": "Super（Renews Dec 7, 2026）",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "plan": "Super",
+      "renews": "Dec 7, 2026",
+      "weeklyUsed": "20%",
+      "reset": "Nov 21",
+      "split": "Cursor 14% / Grok Bot 5% / Imagine 1%",
+      "tokens": "none"
+    },
+    "oralText": null,
+    "quotaPercent": "Weekly used 20% with product split Cursor 14 / Grok Bot 5 / Imagine 1. Resets Nov 21.",
+    "tokens": {
+      "source": "none"
+    },
+    "notTheSamePostAs": {
+      "file": "patriciotrials-xsuper-95pct-7_7b-x-2026-11-12.json",
+      "note": "已归档样本是另一窗口的 7.7B 与 95%。昨日仅口头、无图，不是本条。本条是新的官方周条，不拼接。"
+    },
+    "conflictsToKeep": "No tokens. Do not divide anything by 20%. Do not stitch with the archived 7.7B / 95% sample.",
+    "recommendation": "暂不采用",
+    "why": "官方周已用 20% 有拆分，但无 token。",
+    "evidenceFile": "evidence/patriciotrials-xsuper-weekly20-split-x-2026-11-16.json"
+  }
+}

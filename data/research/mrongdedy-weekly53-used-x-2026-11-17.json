@@ -1,0 +1,37 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。图上 Weekly usage 53% used。口述 $100 套餐和日常不到 10% 不在图上。无 token。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "mrongdedy-weekly53-used-x-2026-11-17",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122490923703836943",
+    "url": "https://x.com/MrOngDedy/status/2122490923703836943",
+    "author": "MrOngDedy",
+    "createdAt": "2026-11-17T00:44:04Z",
+    "planOrModel": "Weekly usage。套餐档不在图上。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "weekly": "53% used",
+      "reset": "2 天后重置",
+      "tokens": "none"
+    },
+    "oralText": "$100 套餐；日常不到 10%。",
+    "quotaPercent": "Image only: weekly 53% used, resets in 2 days.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "Oral $100 plan and 'daily under 10%' are not on the image. Do not adopt them. No tokens.",
+    "recommendation": "暂不采用",
+    "why": "图上只有 53% used，口述档位与日用量没有图。",
+    "evidenceFile": "evidence/mrongdedy-weekly53-used-x-2026-11-17.json"
+  }
+}

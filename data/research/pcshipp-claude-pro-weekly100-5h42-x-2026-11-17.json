@@ -1,0 +1,37 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。官方 Claude Plan usage limits · Pro，无 token。口述换去 Codex，图不是 Codex 控制台。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "pcshipp-claude-pro-weekly100-5h42-x-2026-11-17",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122490904313512445",
+    "url": "https://x.com/pcshipp/status/2122490904313512445",
+    "author": "pcshipp",
+    "createdAt": "2026-11-17T00:44:00Z",
+    "planOrModel": "官方 Claude Plan usage limits · Pro。图不是 Codex 控制台。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "fiveHour": "5h 42%（11:10 PM 重置）。本轮记录未另加 used/remaining 字样。",
+      "weekly": "Weekly all models 100%（Sat 3:30 AM 重置）",
+      "tokens": "none"
+    },
+    "oralText": "Welcome to Codex。含义是打满 Claude 后换 Codex。",
+    "quotaPercent": "Weekly all models 100%; 5h 42%. No token count.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "Oral Codex switch is not a Codex console. The image is Claude Plan usage limits · Pro. Do not treat 42% or 100% as a token pool.",
+    "recommendation": "暂不采用",
+    "why": "只有配额百分比，无 token。图不是 Codex 控制台。",
+    "evidenceFile": "evidence/pcshipp-claude-pro-weekly100-5h42-x-2026-11-17.json"
+  }
+}

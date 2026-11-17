@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。以官方弹层为准：Gemini 周剩余 28%，5h 100% left。口述「2 天登完」与图冲突。无 token。重复帖只计一次。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "qijiefan-gemini-weekly28-left-x-2026-11-16",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122457442059788707",
+    "url": "https://x.com/qijiefan/status/2122457442059788707",
+    "author": "qijiefan",
+    "createdAt": "2026-11-16T22:31:02Z",
+    "planOrModel": "官方 Gemini 配额弹层。套餐档本轮未另记。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "geminiWeeklyRemaining": "28%",
+      "fiveHour": "100% left",
+      "tokens": "none"
+    },
+    "oralText": "2 天把 Gemini 周额度登完。",
+    "quotaPercent": "Trust the image: Gemini weekly remaining 28%, 5h 100% left. Oral claim that the week was used up is not the figure to adopt.",
+    "tokens": {
+      "source": "none"
+    },
+    "duplicatesCountedOnce": [
+      "2122457307699364198",
+      "2122457220973781225"
+    ],
+    "conflictsToKeep": "Oral 'used up in 2 days' vs image weekly remaining 28%. Do not average. Duplicate posts are not separate measurements. No tokens.",
+    "recommendation": "暂不采用",
+    "why": "图上是周剩余 28% 而不是登完。无 token。",
+    "evidenceFile": "evidence/qijiefan-gemini-weekly28-left-x-2026-11-16.json"
+  }
+}

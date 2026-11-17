@@ -1,0 +1,96 @@
+{
+  "scannedAt": "2026-11-17T01:37:06Z",
+  "recordedAt": "2026-11-17",
+  "taipeiLocal": "2026-11-17 09:37",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "source": "精简自 2026-11-17 扫描结论。不另开 PR。分页 token 不入库。原始搜索大文件不入库。截图不入库。账号标识不入库。",
+  "method": "公开 X 读取，外加 GitHub issue #240 / #239。未写线上文案、未开新 PR、未把本分支 merge 进 main、未部署。为赶上 #236，已把当时的远程 main merge 进本分支。",
+  "window": {
+    "start": "2026-11-15T01:37:12Z",
+    "end": "2026-11-17T01:37:06Z",
+    "previousEnd": "2026-11-16T01:37:12Z",
+    "overlap": "窗口起点早于上轮结束 2026-11-16T01:37:12Z，重叠至少 24 小时。"
+  },
+  "notExhaustive": [
+    "Fei2411 7 日时间线 6 页，最旧仅到 2026-11-12T03:25:40Z，未关窗到 11-10。conversation/quote 未拉。",
+    "Fei 提及 5 页，最旧 2026-11-15T14:08:13Z，未接上轮 2026-11-15T10:41Z。",
+    "新作者 14 日回填本轮未开始。",
+    "多数关键词与高产作者时间线仍有 next_token。token 本身不入库。",
+    "公开读取结束时约剩 940/1000。停止是为了交付整理，不是额度耗尽，也不是搜全。"
+  ],
+  "counts": {
+    "newValidHigh": 2,
+    "highNotAdopted": 2,
+    "xMediumNotAdopted": 17,
+    "githubIssueMediumNotAdopted": 1,
+    "officialDiscussNotQuotaTable": 1,
+    "repostNotFiled": 1,
+    "directAdopt": 0
+  },
+  "mergedMain": {
+    "sha": "057882f6b5d1e072648a22856e14a92614de7361",
+    "pullRequest": 236,
+    "file": "opencode-go-qwen4-max-round1-2026-11-16.json",
+    "note": "research-only。OpenCode Go qwen4-max 官方 API 价 $1.50 / $4.50 / cache read $0.075。不重计，不改 adopted。X 上的二手 $1.50/$4.50 不作为未核实新项。"
+  },
+  "noDirectAdopt": true,
+  "retainedForDiscussion": [
+    {
+      "url": "https://x.com/_mohansolo/status/2122421560212611393",
+      "account": "_mohansolo",
+      "planOrModel": "Antigravity usage 不影响 Google 账号",
+      "tokens": null,
+      "percent": null,
+      "hasScreenshot": false,
+      "confidence": "Medium",
+      "createdAt": "2026-11-16T20:08:27Z",
+      "why": "官方回复：基于 Antigravity usage 的操作不会影响 Google 账号，只限于 Antigravity。这是范围说明，不是配额表。须维护者确认后才写入说明。不要与上下文窗口加倍混写成同一公告。不改 adopted。"
+    }
+  ],
+  "notAdoptedHigh": [
+    "https://x.com/Ismail_Founder/status/2122345697710125546",
+    "https://x.com/capputschino/status/2122445533520236546"
+  ],
+  "notAdoptedMedium": [
+    "https://x.com/pcshipp/status/2122490904313512445",
+    "https://x.com/voidJan/status/2122479810610110960",
+    "https://x.com/qijiefan/status/2122457442059788707",
+    "https://x.com/Matt_INHK/status/2122502510992928824",
+    "https://x.com/BruceTa55302936/status/2122500888107626977",
+    "https://x.com/chessxyz/status/2122492696988410145",
+    "https://x.com/heIpfullandlord/status/2122486945037390033",
+    "https://x.com/missionaryjdot/status/2122470449808277641",
+    "https://x.com/MrOngDedy/status/2122490923703836943",
+    "https://x.com/PatricioTrials/status/2122326069713711409",
+    "https://x.com/BanksCircle/status/2122480360202133703",
+    "https://x.com/Kilnexa/status/2122426032426991913",
+    "https://x.com/norbexking/status/2122446753228030126",
+    "https://x.com/ahmadalkabra/status/2122446013407576233",
+    "https://x.com/Sheshanksingh26/status/2122422700174094522",
+    "https://x.com/ciertasskyn/status/2122334736051798275",
+    "https://x.com/bebuu_ai/status/2122339203044483271",
+    "https://github.com/Fei2411/real-api-pricing/issues/240"
+  ],
+  "repostNotFiled": {
+    "url": "https://x.com/jkgorka/status/2122170660109844813",
+    "postId": "2122170660109844813",
+    "sameAs": "2122077410954969427",
+    "file": "jkgorka-claude-weekly74-fable100-after-reset-x-2026-11-15.json",
+    "note": "已归档 All models 74% used / Fable only 100% used，Resets Sat 11:00 的重发。不重计，不新建证据文件。"
+  },
+  "cannotExecute": {
+    "issue": 239,
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/239",
+    "title": "更新 AA index",
+    "body": null,
+    "why": "正文为空、无附件。不编造 AA 数字，不改站点。"
+  },
+  "notRecountedStillAwaitingConfirmation": [
+    "Antigravity 上下文窗口加倍（2122119826575646918）仍待确认。本轮不重计，也不与「不影响 Google 账号」混写。",
+    "mirrercrouse SWE-2 仍扣 included 的推断仍待确认。本轮不重计。",
+    "Gemini 4 Hydrogen API 价、Codex banked reset、Carbon/Argon 价、Token Plan 官方 Credits 表、Qwen4 预览折扣、11-13 Gemini 配额重置、Orchestrator 对 Pro 开放：本轮不重计。",
+    "OpenCode Go qwen4-max 官方 API 价已在 main #236。不重计，不改 adopted。"
+  ],
+  "suggestion": "没有可直接上线的 adopted 改动。两条 High（Ismail 440.3M/438.4M 与 capputschino 自制 202M/26.6%）都不采用。#240 分级 Medium，不采用。本轮唯一新的讨论项是 Antigravity usage 不影响 Google 账号，须维护者确认，且不是配额表。#239 无法执行。",
+  "index": "backlog-archive-index-2026-11-17.json"
+}

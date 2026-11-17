@@ -1,0 +1,37 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。口述已烧 92%、还剩 4 天。图是设计图，不是完整官方控制台。OCR 见 WEEKLYUSAGE97%。92% 与 97% 冲突，不强行平均。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "ciertasskyn-oral92-ocr97-design-x-2026-11-16",
+    "grade": "Medium",
+    "sourceType": "design_image_plus_oral",
+    "postId": "2122334736051798275",
+    "url": "https://x.com/ciertasskyn/status/2122334736051798275",
+    "author": "ciertasskyn",
+    "createdAt": "2026-11-16T14:23:26Z",
+    "planOrModel": "未标明。图不是完整官方控制台。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "kind": "设计图，不是完整官方控制台",
+      "ocr": "WEEKLYUSAGE97%",
+      "tokens": "none"
+    },
+    "oralText": "已烧 92%，还剩 4 天。",
+    "quotaPercent": "Do not average oral 92% and OCR 97%.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "Oral 92% vs OCR WEEKLYUSAGE97%. The image is a design, not a full official console. Do not average. No tokens.",
+    "recommendation": "暂不采用",
+    "why": "92% 与 97% 冲突，图也不是完整官方控制台。",
+    "evidenceFile": "evidence/ciertasskyn-oral92-ocr97-design-x-2026-11-16.json"
+  }
+}

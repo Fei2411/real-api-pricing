@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。周条 92%，裁切未写 used/remaining。结合口述 running out 暂按已用，确定性中等。无 token。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "helpfulandlord-weekly92-x-2026-11-17",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122486945037390033",
+    "url": "https://x.com/heIpfullandlord/status/2122486945037390033",
+    "author": "heIpfullandlord",
+    "createdAt": "2026-11-17T00:28:16Z",
+    "planOrModel": "Weekly usage limit。套餐档未另记。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "weekly": "Weekly usage limit 92%",
+      "reset": "2 天后重置",
+      "usedOrRemainingLabel": "裁切未写 used/remaining 字样",
+      "tokens": "none"
+    },
+    "oralText": "running out",
+    "quotaPercent": "92% on the weekly limit. Reading it as used is a medium-confidence inference from the oral 'running out', not a printed used/remaining word.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "The crop does not say used or remaining. Do not treat 92% as a measured pool. Certainty of the 'used' reading is medium.",
+    "recommendation": "暂不采用",
+    "why": "百分比方向确定性中等，且无 token。",
+    "evidenceFile": "evidence/helpfulandlord-weekly92-x-2026-11-17.json"
+  }
+}

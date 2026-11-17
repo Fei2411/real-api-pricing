@@ -4,22 +4,28 @@
   "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
   "parentIndex": "backlog-archive-index-2026-11-12.json",
   "laterIncrement": {
-    "date": "2026-11-16",
-    "index": "backlog-archive-index-2026-11-16.json",
-    "scan": "x-scan-2026-11-16.json",
+    "date": "2026-11-17",
+    "index": "backlog-archive-index-2026-11-17.json",
+    "scan": "x-scan-2026-11-17.json",
     "previous": {
-      "date": "2026-11-15",
-      "index": "backlog-archive-index-2026-11-15.json",
-      "scan": "x-scan-2026-11-15.json",
+      "date": "2026-11-16",
+      "index": "backlog-archive-index-2026-11-16.json",
+      "scan": "x-scan-2026-11-16.json",
       "previous": {
-        "date": "2026-11-14",
-        "index": "backlog-archive-index-2026-11-14.json",
-        "scan": "x-scan-2026-11-14.json",
-        "note": "11-14 早扫描追加在同一 PR #234。本索引已归档的采用判断不改写。Hydrogen API 价与 Codex banked reset 不重计。没有可直接上线的 adopted 改动。"
+        "date": "2026-11-15",
+        "index": "backlog-archive-index-2026-11-15.json",
+        "scan": "x-scan-2026-11-15.json",
+        "previous": {
+          "date": "2026-11-14",
+          "index": "backlog-archive-index-2026-11-14.json",
+          "scan": "x-scan-2026-11-14.json",
+          "note": "11-14 早扫描追加在同一 PR #234。本索引已归档的采用判断不改写。Hydrogen API 价与 Codex banked reset 不重计。没有可直接上线的 adopted 改动。"
+        },
+        "note": "11-15 早扫描追加在同一 PR #234。本索引已归档的采用判断不改写。Hydrogen API 价、Codex banked reset 与 11-13T23:13Z Gemini 配额重置不重计，也不与 11-13T00:42Z Orchestrator 对 Pro 开放混写。没有可直接上线的 adopted 改动。"
       },
-      "note": "11-15 早扫描追加在同一 PR #234。本索引已归档的采用判断不改写。Hydrogen API 价、Codex banked reset 与 11-13T23:13Z Gemini 配额重置不重计，也不与 11-13T00:42Z Orchestrator 对 Pro 开放混写。没有可直接上线的 adopted 改动。"
+      "note": "11-16 早扫描追加在同一 PR #234，不另开分支。指向最新增量。11-15 及更早的采用判断不改写。Hydrogen API 价、Codex banked reset、11-13T23:13Z Gemini 配额重置、Carbon/Argon 价与 11-13T00:42Z Orchestrator 对 Pro 开放不重计。官方 Ultra 100 再述（2121847427582022021）不是新测量。没有可直接上线的 adopted 改动。"
     },
-    "note": "11-16 早扫描追加在同一 PR #234，不另开分支。指向最新增量。11-15 及更早的采用判断不改写。Hydrogen API 价、Codex banked reset、11-13T23:13Z Gemini 配额重置、Carbon/Argon 价与 11-13T00:42Z Orchestrator 对 Pro 开放不重计。官方 Ultra 100 再述（2121847427582022021）不是新测量。没有可直接上线的 adopted 改动。"
+    "note": "11-17 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-16 及更早的采用判断不改写。已把 main 057882f6b5d1e072648a22856e14a92614de7361（Merge #236，OpenCode Go qwen4-max 官方 API 价，research-only）merge 进本分支，不重计、不改 adopted。X 上的二手 $1.50/$4.50 不作为未核实新项。没有可直接上线的 adopted 改动。"
   },
   "pullRequest": 234,
   "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",
@@ -91,8 +97,25 @@
     "223": "ImLukeF 247.1M@30% 与本轮 13.18B 七日面板保持分开。",
     "207": "仍视为已被 main 的 claude_pro × claude-opus-5.5 = 30.46 代替。不关闭。",
     "209": "无新的官方绝对 token 表，不改 Kimi 699 vs 官方 3.0× 的待裁定状态，不改 adopted。不关闭。",
-    "closeOnlyWithLaterPermission": [205, 208, 216, 223, 233, 207, 209],
-    "notClosedThisPass": [205, 208, 216, 223, 233, 207, 209, 234]
+    "closeOnlyWithLaterPermission": [
+      205,
+      208,
+      216,
+      223,
+      233,
+      207,
+      209
+    ],
+    "notClosedThisPass": [
+      205,
+      208,
+      216,
+      223,
+      233,
+      207,
+      209,
+      234
+    ]
   },
   "files": [
     "af3g453f-chatgpt-pro-3_72b-oral-full-week-x-2026-11-12.json",

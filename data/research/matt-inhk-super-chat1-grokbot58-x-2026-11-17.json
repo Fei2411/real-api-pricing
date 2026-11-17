@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。两条独立周限，无 token。Chat 1% of total 不是 Grok Bot 的 58%。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "matt-inhk-super-chat1-grokbot58-x-2026-11-17",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122502510992928824",
+    "url": "https://x.com/Matt_INHK/status/2122502510992928824",
+    "author": "Matt_INHK",
+    "createdAt": "2026-11-17T01:30:07Z",
+    "planOrModel": "Weekly Super Grok Heavy Limit，以及独立的 Weekly Grok Bot Limit。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "weeklySuperGrokHeavy": "Chat 1% of total; resets Mon 23 Nov 12:19pm",
+      "weeklyGrokBot": "58% used; resets Tue 17 Nov 2:59pm",
+      "extraCredits": "US$0.00",
+      "tokens": "none"
+    },
+    "oralText": null,
+    "quotaPercent": "Two separate bars. Chat is 1% of the Super Grok Heavy total. Grok Bot is its own weekly limit at 58% used.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "Do not add 1% and 58% or treat them as one pool. No tokens.",
+    "recommendation": "暂不采用",
+    "why": "两条官方百分比，无 token，不能当池大小。",
+    "evidenceFile": "evidence/matt-inhk-super-chat1-grokbot58-x-2026-11-17.json"
+  }
+}

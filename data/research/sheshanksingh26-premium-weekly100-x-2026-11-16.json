@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。My plan Premium，Weekly usage 100% used，4 天后重置。无 token。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "sheshanksingh26-premium-weekly100-x-2026-11-16",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122422700174094522",
+    "url": "https://x.com/Sheshanksingh26/status/2122422700174094522",
+    "author": "Sheshanksingh26",
+    "createdAt": "2026-11-16T20:12:59Z",
+    "planOrModel": "My plan Premium",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "plan": "Premium",
+      "weekly": "100% used",
+      "reset": "4 天后重置",
+      "tokens": "none"
+    },
+    "oralText": null,
+    "quotaPercent": "Premium weekly usage 100% used, resets in 4 days.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "No tokens. Percent alone is not a pool size.",
+    "recommendation": "暂不采用",
+    "why": "官方 Premium 周已用 100%，无 token。",
+    "evidenceFile": "evidence/sheshanksingh26-premium-weekly100-x-2026-11-16.json"
+  }
+}

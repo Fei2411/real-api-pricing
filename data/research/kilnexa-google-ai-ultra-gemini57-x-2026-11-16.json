@@ -1,0 +1,39 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。Google AI Ultra 弹层只有剩余%。不能证明 Gemini 池与 Claude/GPT 池一样大。无 token。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "kilnexa-google-ai-ultra-gemini57-x-2026-11-16",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122426032426991913",
+    "url": "https://x.com/Kilnexa/status/2122426032426991913",
+    "author": "Kilnexa",
+    "createdAt": "2026-11-16T20:26:13Z",
+    "planOrModel": "Your Plan: Google AI Ultra",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "plan": "Google AI Ultra",
+      "geminiWeeklyRemaining": "57%（4d 2h）",
+      "geminiFiveHourRemaining": "57%（4h 25m）",
+      "claudeAndGpt": "两组均 100%。本轮未把这个 100% 改写成与 Gemini 相同的「剩余」字样。",
+      "tokens": "none"
+    },
+    "oralText": null,
+    "quotaPercent": "Gemini weekly remaining 57% and 5h remaining 57%. Claude/GPT groups both display 100%.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "Equal remaining percents do not prove the pools are the same size. No tokens.",
+    "recommendation": "暂不采用",
+    "why": "只有剩余百分比。不能由百分比相同推出两个池一样大。",
+    "evidenceFile": "evidence/kilnexa-google-ai-ultra-gemini57-x-2026-11-16.json"
+  }
+}

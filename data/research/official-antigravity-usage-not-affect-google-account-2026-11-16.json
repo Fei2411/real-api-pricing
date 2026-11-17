@@ -1,0 +1,39 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "official_announcement",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本条按本轮记录的官方回复含义归档。不把上下文窗口加倍混进同一公告。",
+  "scopeNote": "讨论写入说明，须维护者确认。这不是配额表，没有 token 数或价格。本 PR 不改 adopted。不与 2026-11-16T00:09:28Z 的上下文窗口加倍混写。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "official-antigravity-usage-not-affect-google-account-2026-11-16",
+    "grade": "Medium",
+    "gradeNote": "官方回复，但是产品范围说明，不是配额表，也不是可直接上线的额度行。",
+    "sourceType": "official_post",
+    "postId": "2122421560212611393",
+    "url": "https://x.com/_mohansolo/status/2122421560212611393",
+    "author": "_mohansolo",
+    "createdAt": "2026-11-16T20:08:27Z",
+    "planOrModel": "Antigravity 与 Google 账号的影响范围。不是配额表。",
+    "hasScreenshot": false,
+    "officialTerms": "官方回复：基于 Antigravity usage 的操作不会影响 Google 账号，只限于 Antigravity。",
+    "oralText": null,
+    "quotaPercent": null,
+    "tokens": {
+      "source": "none"
+    },
+    "notTheSameEventAs": [
+      "https://x.com/_mohansolo/status/2122119826575646918",
+      "https://x.com/_mohansolo/status/2121040958213230875",
+      "https://x.com/_mohansolo/status/2121380918355234957"
+    ],
+    "conflictsToKeep": "This is an account-scope statement. It is not the context-window doubling announcement, not the Orchestrator-on-Pro announcement, and not the 2026-11-13 Gemini quota reset. No allowance numbers.",
+    "recommendation": "讨论采用进产品说明/研究归档，须维护者确认",
+    "why": "官方账号说明操作范围限于 Antigravity，不影响 Google 账号。写入说明前须维护者确认。不是新的订阅额度行。",
+    "evidenceFile": "evidence/official-antigravity-usage-not-affect-google-account-2026-11-16.json"
+  }
+}

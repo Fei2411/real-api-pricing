@@ -1,0 +1,40 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。图是 X Premium+ 99% used。口述 Grok Bot 100% 与图不完全一致，分开记录。无 token。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "bruceta-x-premium-plus-99-x-2026-11-17",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122500888107626977",
+    "url": "https://x.com/BruceTa55302936/status/2122500888107626977",
+    "author": "BruceTa55302936",
+    "createdAt": "2026-11-17T01:23:40Z",
+    "planOrModel": "图上是 X Premium+。口述另说 Grok Bot。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "plan": "X Premium+",
+      "used": "99% used",
+      "reset": "4 天后重置",
+      "onDemand": "$10.87 / $120",
+      "tokens": "none"
+    },
+    "oralText": "Grok Bot 100%，还剩 3 天 1 小时。",
+    "oralKeptSeparate": true,
+    "quotaPercent": "Image: X Premium+ 99% used, resets in 4 days. Oral Grok Bot 100% and 3 days 1 hour remaining are not the same reading.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "Image 99% / 4 days vs oral Grok Bot 100% / 3 days 1 hour. Keep both. Do not merge them into one number. No tokens.",
+    "recommendation": "暂不采用",
+    "why": "图与口述不一致，且无 token。",
+    "evidenceFile": "evidence/bruceta-x-premium-plus-99-x-2026-11-17.json"
+  }
+}

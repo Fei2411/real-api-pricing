@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。Devin Desktop Model Scout 卡，不是官宣。只记录图上 silicon-2 的 $10 / $50。同图 roadrunner 不编造价格。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "bebuu-ai-silicon2-scout-10-50-x-2026-11-16",
+    "grade": "Medium",
+    "sourceType": "unofficial_scout_card",
+    "postId": "2122339203044483271",
+    "url": "https://x.com/bebuu_ai/status/2122339203044483271",
+    "author": "bebuu_ai",
+    "createdAt": "2026-11-16T14:41:11Z",
+    "planOrModel": "Devin Desktop Model Scout。STEALTH MODEL，unknown lab，maker unconfirmed。模型名 silicon-2。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "card": "Devin Desktop Model Scout",
+      "label": "STEALTH MODEL; unknown lab; maker unconfirmed",
+      "silicon2Price": "$10 input / $50 output per 1M tokens",
+      "alsoOnImage": "roadrunner。本文件不编造其价格。",
+      "officialAnnouncement": false
+    },
+    "oralText": null,
+    "quotaPercent": null,
+    "tokens": {
+      "source": "none"
+    },
+    "priceShown": {
+      "model": "silicon-2",
+      "inputPerMTokUsd": 10,
+      "outputPerMTokUsd": 50,
+      "status": "scout card only; not an official price; not adopted"
+    },
+    "conflictsToKeep": "Maker is unconfirmed. Do not invent a roadrunner price from the same image. Do not write this into adopted API prices.",
+    "recommendation": "暂不采用",
+    "why": "未官宣的 Scout 标价，实验室与制作方都未确认。",
+    "evidenceFile": "evidence/bebuu-ai-silicon2-scout-10-50-x-2026-11-16.json"
+  }
+}

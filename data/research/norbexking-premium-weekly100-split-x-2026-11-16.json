@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。Premium 周已用 100%，拆分 Grok Bot 68% + Cursor 31% + Chat 1%。无 token。不是 grokademy 已归档 Ultra 100% 的重计。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "norbexking-premium-weekly100-split-x-2026-11-16",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122446753228030126",
+    "url": "https://x.com/norbexking/status/2122446753228030126",
+    "author": "norbexking",
+    "createdAt": "2026-11-16T21:48:33Z",
+    "planOrModel": "Premium（Renews 10 Dec 2026）",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "plan": "Premium",
+      "renews": "10 Dec 2026",
+      "weeklyUsed": "100%",
+      "split": "Grok Bot 68% + Cursor 31% + Chat 1%",
+      "reset": "18 Nov",
+      "additionalThisMonth": "$0.24",
+      "tokens": "none"
+    },
+    "oralText": null,
+    "quotaPercent": "Premium weekly used 100%. Split sums to 100. Resets 18 Nov.",
+    "tokens": {
+      "source": "none"
+    },
+    "notTheSamePostAs": {
+      "file": "grokademy-ultra-weekly100-split-x-2026-11-15.json",
+      "note": "那是另一作者的 Ultra 100% 拆分。本条是 Premium，不重计那条。"
+    },
+    "conflictsToKeep": "No tokens. Do not recount the archived grokademy Ultra bar as this Premium bar.",
+    "recommendation": "暂不采用",
+    "why": "官方 Premium 周条已满且有拆分，但无 token。",
+    "evidenceFile": "evidence/norbexking-premium-weekly100-split-x-2026-11-16.json"
+  }
+}

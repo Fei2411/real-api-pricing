@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。图上 Ultra 周已用 41%，Fable 子帽 63% used。口述 50% 周额度与 220€ 不以图为准。无 token。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "bankscircle-claude-ultra-weekly41-fable63-x-2026-11-17",
+    "grade": "Medium",
+    "sourceType": "official_ui_screenshot",
+    "postId": "2122480360202133703",
+    "url": "https://x.com/BanksCircle/status/2122480360202133703",
+    "author": "BanksCircle",
+    "createdAt": "2026-11-17T00:02:06Z",
+    "planOrModel": "Ultra。Fable 是周额度里的子帽，不是第二根周总条。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "weekly": "41% of your weekly limit used",
+      "reset": "Monday 12:00 PM",
+      "fableSubcap": "Up to 50% of your weekly limit; 63% used",
+      "tokens": "none"
+    },
+    "oralText": "50% 周额度；220€。",
+    "quotaPercent": "Weekly bar is 41% used. The 50% on the image is the Fable subcap size, and that subcap is 63% used.",
+    "tokens": {
+      "source": "none"
+    },
+    "conflictsToKeep": "Oral '50% of the weekly allowance' does not match the 41% weekly bar. On the image, 50% is the Fable subcap. 220€ is oral only. No tokens.",
+    "recommendation": "暂不采用",
+    "why": "周条是 41% used。图上的 50% 是 Fable 子帽，不是周总条。无 token。",
+    "evidenceFile": "evidence/bankscircle-claude-ultra-weekly41-fable63-x-2026-11-17.json"
+  }
+}

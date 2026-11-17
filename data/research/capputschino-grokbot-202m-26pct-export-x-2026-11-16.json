@@ -1,0 +1,51 @@
+{
+  "recordedAt": "2026-11-17",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 截图不入库。本轮不把扫描包内 images/ 文件名写入仓库。图上字段、口述与目视纠正分开记在 evidence。分页 token 与账号标识不入库。",
+  "scopeNote": "暂不采用。形态接近 High，但图是作者自制导出图，不是官方控制台。760M 是作者外推。禁止再用 202M÷26.6% 除一遍。cache% 不是配额%。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "origin/main 057882f6b5d1e072648a22856e14a92614de7361 全库检索本 post ID 为 0；写入前本分支也没有。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "capputschino-grokbot-202m-26pct-export-x-2026-11-16",
+    "grade": "High",
+    "gradeNote": "同屏有 token 与 26.6%，扫描形态接近 High。图不是官方控制台，760M 为作者外推，所以不采用。",
+    "sourceType": "author_export_chart",
+    "postId": "2122445533520236546",
+    "url": "https://x.com/capputschino/status/2122445533520236546",
+    "author": "capputschino",
+    "authorNote": "新作者。本轮没有 14 日回填。",
+    "createdAt": "2026-11-16T21:43:42Z",
+    "planOrModel": "自制图，标题 “Grok Bot: measured from my own usage exports”。不是官方控制台。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "title": "Grok Bot: measured from my own usage exports",
+      "bars": {
+        "beforeNov1": "~310–320M (Bots only)",
+        "nov1to15": "220M (Bots only)",
+        "superSinceNov15": "~760M* (Chat + Bots shared), superscript 202M used (26.6%)"
+      },
+      "pie": "99% Bots / <1% Chat",
+      "composition": "Cached input 90% / Cache write 5% / Prompt 4% / Output 1%",
+      "footnote": "Super: extrapolated from 202M tokens at 26.6% (rounded app value), estimate only"
+    },
+    "oralText": null,
+    "quotaPercent": "Chart marks 202M used (26.6%) on the Super-since-Nov-15 bar. 26.6% is the author's rounded app value, not a license to divide again.",
+    "tokens": {
+      "source": "author-made chart from their own usage exports, not an official console",
+      "shownUsed": "202M",
+      "shownPercent": "26.6%",
+      "authorExtrapolatedSuper": "~760M (footnote: estimate only)",
+      "beforeNov1BotsOnly": "~310–320M",
+      "nov1to15BotsOnly": "220M",
+      "note": "Do not divide 202M by 26.6% again. The ~760M figure is the author's extrapolation. Composition percents are token mix, not quota percent."
+    },
+    "conflictsToKeep": "Not an official console. ~760M is extrapolated. Cache-mix percents are not quota percents. Do not treat 202M÷26.6% as a new pool.",
+    "recommendation": "暂不采用",
+    "why": "有 token 与百分比，但图是自制导出图，760M 已由作者从 202M 与 26.6% 外推。不能上线。",
+    "evidenceFile": "evidence/capputschino-grokbot-202m-26pct-export-x-2026-11-16.json"
+  }
+}
