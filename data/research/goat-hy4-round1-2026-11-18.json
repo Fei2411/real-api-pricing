@@ -1,0 +1,171 @@
+{
+  "collectedAt": "2026-11-18",
+  "collectionMethod": "Manual capture of the official Command Code GOAT plan page, the pricing-limits resource page and the public pricing page (English) around 10:38 Beijing time / 02:38Z on 2026-11-18: https://commandcode.ai/docs/plans/goat, https://commandcode.ai/docs/resources/pricing-limits and https://commandcode.ai/pricing, read as published. The RSC payload (model catalog + budgetUsd rows on the plan page; models + planBudgetUsd / planAllowanceUsd / availability on the pricing-limits page), the rendered plan-page model tables (context, prices, monthly credits, caps) and the official 'Estimated requests' table were read field by field, and the same three pages captured on 2026-11-17 were compared on budgetUsd / rates / shape / timeOfDay per model. One new paid GOAT model observed (Tencent Hy4). Two non-GOAT catalog additions on the pricing-limits page (GPT-6.2 Astra, GPT-6.2 Sol) are recorded only as out-of-scope observations. Research-only — no adopted row generated, no adopted value changed, no script changed.",
+  "sources": [
+    "https://commandcode.ai/docs/plans/goat",
+    "https://commandcode.ai/docs/resources/pricing-limits",
+    "https://commandcode.ai/pricing"
+  ],
+  "scope": "Command Code GOAT official catalog only. One new paid model observed on 2026-11-18: 'Tencent Hy4' (slug hy4, plan-page id and pricing-limits id both 'tencent/hy4'). Vendor Tencent, category opensource, blurb 'long-horizon agentic coding with image understanding', launchedAt 2026-11-04, minPlanName Go, context 1,024,000 tokens, reasoning true, vision true, marked 'not yet scored' (intelligenceIndex and codingIndex unpublished). Priced $0.834 input / $2.501 output / $0.042 cached read per 1M tokens with no cache-write price listed. GOAT per-model monthly credits budgetUsd 20 (credits column '$20'). pricing-limits planBudgetUsd / planAllowanceUsd = {go: 6, goat: 20, pro: 30}. Official estimated requests on the plan page: 1,220 / 5h, 3,060 / week, 6,120 / month (identical to the already-listed Tencent Hy4 Preview row, which has the same three-part price and $20 GOAT credits). Availability includes individual-go / individual-goat / individual-pro. The GOAT plan page counters moved All plans 103 -> 106, GOAT plan 75 -> 76; Deals stayed 4 and Free stayed 3. The pricing-limits All counter moved 105 -> 108. Other previously listed paid GOAT models keep the same budgetUsd / rates / shape (GLM-5.3 stays at budgetUsd 70). Shared-pool wording did not change. No leaderboard/score data, no adopted.csv row.",
+  "previousCapture": {
+    "capturedAt": "2026-11-17",
+    "file": "goat-hy4-flash-round1-2026-11-17.json",
+    "note": "The 2026-11-17 baseline is the same-pages capture used for goat-hy4-flash-round1-2026-11-17.json / goat-qwen4-max-round1-2026-11-17.json. That capture already listed Tencent Hy4 Flash and Tencent Hy4 Preview, but had no paid 'Tencent Hy4' row (id tencent/hy4).",
+    "baselineValues": {
+      "tencentHy4": {
+        "present": false,
+        "paidRowPresent": false,
+        "note": "No 'Tencent Hy4' row (id tencent/hy4, slug hy4) existed in the official GOAT catalog on 2026-11-17. Tencent Hy4 Flash (tencent/hy4-flash, budgetUsd 15) and Tencent Hy4 Preview (tencent/hy4-preview, budgetUsd 20) were already present."
+      },
+      "goatModelCounters": {
+        "planPageAllPlansCount": 103,
+        "planPageGoatPlanCount": 75,
+        "planPageDealsCount": 4,
+        "planPageFreeCount": 3,
+        "pricingLimitsAllCount": 105,
+        "pricingLimitsDealsCount": 4,
+        "pricingLimitsFreeCount": 3
+      },
+      "goatSharedPoolWording": {
+        "goat": "Up to $100",
+        "pro": "Up to $110"
+      },
+      "glm53": {
+        "rscBudgetUsd": 70,
+        "creditsColumnDisplay": "$70",
+        "note": "GLM-5.3 keeps budgetUsd 70 on both the 2026-11-17 and the 2026-11-18 plan-page payloads; its rates, request shape and timeOfDay are unchanged."
+      }
+    },
+    "diff": {
+      "modelsAdded": [
+        "Tencent Hy4"
+      ],
+      "modelsRemoved": [],
+      "budgetUsdChanged": false,
+      "ratesChanged": false,
+      "counterChange": {
+        "planPageAllPlansCount": "103 -> 106",
+        "planPageGoatPlanCount": "75 -> 76",
+        "planPageDealsCount": "4 -> 4",
+        "planPageFreeCount": "3 -> 3",
+        "pricingLimitsAllCount": "105 -> 108",
+        "pricingLimitsDealsCount": "4 -> 4",
+        "pricingLimitsFreeCount": "3 -> 3"
+      },
+      "note": "Compared with the 2026-11-17 capture of the same pages, the only paid GOAT catalog change is the addition of 'Tencent Hy4'. Every other paid GOAT row keeps the same budgetUsd / rates / shape; GLM-5.3 stays at budgetUsd 70. The plan-page paid budgetUsd rows grew 64 -> 65. The pricing-limits page also added GPT-6.2 Astra and GPT-6.2 Sol, which are not available on the GOAT plan (see otherObservations)."
+    }
+  },
+  "adoptionStatus": "research-only; not adopted; no command_code_goat × hy4 row in adopted.csv yet — adding one requires a COMMAND_CODE_GOAT_MODELS entry in scripts/build_adopted.py, left to maintainer review",
+  "observed": {
+    "paidModel": {
+      "name": "Tencent Hy4",
+      "slug": "hy4",
+      "modelId": "tencent/hy4",
+      "idVariants": {
+        "planPageId": "tencent/hy4",
+        "pricingLimitsId": "tencent/hy4"
+      },
+      "vendor": "Tencent",
+      "category": "opensource",
+      "blurb": "long-horizon agentic coding with image understanding",
+      "launchedAt": "2026-11-04",
+      "minPlanName": "Go",
+      "contextWindow": 1024000,
+      "reasoning": true,
+      "vision": true,
+      "scored": false,
+      "availability": {
+        "individual-go": true,
+        "individual-go-v1": true,
+        "individual-goat": true,
+        "individual-pro": true,
+        "individual-pro-v1": true,
+        "individual-provider": true,
+        "individual-max": true,
+        "individual-ultra": true,
+        "teams-pro": true,
+        "all": true
+      },
+      "threePartPrice": {
+        "unit": "USD / MTok",
+        "inputPerMTokUsd": 0.834,
+        "outputPerMTokUsd": 2.501,
+        "cachedReadPerMTokUsd": 0.042,
+        "cacheWritePerMTokUsd": null,
+        "cacheWriteNote": "No cache-write price is listed on the plan page or the pricing-limits page (the credits table shows '-' for Cache Write).",
+        "rscBlendedCostPerMTok": 1.25075,
+        "rscAgentLoopInputPerMTok": 0.2796,
+        "blendedNote": "blendedCostPerMTok and agentLoopInputPerMTok are transcribed from the plan-page RSC payload as published; they are not computed in this file."
+      },
+      "monthlyCredits": {
+        "goatBudgetUsd": 20,
+        "creditsColumnDisplay": "$20",
+        "planBudgetUsd": {
+          "go": 6,
+          "goat": 20,
+          "pro": 30
+        },
+        "planAllowanceUsd": {
+          "go": 6,
+          "goat": 20,
+          "pro": 30
+        }
+      },
+      "requestShape": {
+        "inputTokens": 800,
+        "outputTokens": 200,
+        "cacheReadTokens": 50000,
+        "source": "plan-page RSC budgetUsd row shape block"
+      },
+      "officialRequestEstimates": {
+        "note": "Official estimated-requests table on the GOAT plan page.",
+        "per5h": 1220,
+        "perWeek": 3060,
+        "perMonth": 6120,
+        "rowAsPublished": "Tencent Hy4 1,220 3,060 6,120",
+        "sameAsHy4Preview": true,
+        "sameAsHy4PreviewNote": "The already-listed Tencent Hy4 Preview row publishes the same 1,220 / 3,060 / 6,120 estimates, the same three-part price, and the same $20 GOAT credits. The two rows remain distinct catalog entries (different ids, launch dates and vision flags)."
+      },
+      "deal": null,
+      "dealNote": "The plan-page deal wording is unchanged: 'Qwen 4 Max and Tencent Hy4 Flash start at $15.' That sentence does not mention Tencent Hy4. The Hy4 credits column is the standard $20 GOAT allowance, with no deal object in the RSC payload (deal is unpublished / $undefined).",
+      "caps": {
+        "text": true,
+        "vision": true,
+        "reasoning": true
+      }
+    }
+  },
+  "notAdopted": {
+    "reason": "Adding a command_code_goat × hy4 adopted row requires a COMMAND_CODE_GOAT_MODELS entry in scripts/build_adopted.py. This PR only records the official catalog evidence.",
+    "scriptsChangeRequired": true
+  },
+  "otherObservations": [
+    {
+      "topic": "GPT-6.2 Astra and GPT-6.2 Sol added on pricing-limits, not on GOAT",
+      "observation": "The pricing-limits catalog grew by three rows: Tencent Hy4 plus GPT-6.2 Astra (id gpt-6.2-astra, contextWindow 1,050,000, individual-goat false, individual-pro false, individual-max true, individual-ultra true) and GPT-6.2 Sol (id gpt-6.2-sol, contextWindow 1,050,000, individual-goat false, individual-pro true, individual-max true). Neither GPT-6.2 model is available on the GOAT plan. The public /pricing page does not list Tencent Hy4 or either GPT-6.2 model. totalReleases on /pricing moved 428 -> 432; nowMs moved 1794883145327 -> 1794969501345. The visible dollar-amount set on /pricing is unchanged.",
+      "note": "Recorded only. Non-GOAT models are outside the GOAT subscription watch and are not adopted here."
+    },
+    {
+      "topic": "Tencent Hy4 Flash and Tencent Hy4 Preview unchanged",
+      "observation": "Tencent Hy4 Flash remains budgetUsd 15 / planBudgetUsd go 6, goat 15, pro 25, rates $0.07 / $0.281 / $0.003, estimated requests 11,400 / 28,600 / 57,200. Tencent Hy4 Preview remains budgetUsd 20 / go 6, goat 20, pro 30, same three-part price as Tencent Hy4.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Free models and deals wording unchanged",
+      "observation": "Deals count stayed 4 and Free count stayed 3. Flint remains a free-while-it-lasts model and is not tracked. The deals sentence is still 'Qwen 4 Max and Tencent Hy4 Flash start at $15.'",
+      "note": "Recorded only."
+    }
+  ],
+  "sharedPoolUnchanged": {
+    "planPage": "up to $20 of usage in any 5 hours, $50 weekly, $100 monthly",
+    "pricingLimits": {
+      "goat": "Up to $100",
+      "pro": "Up to $110"
+    },
+    "note": "Shared-pool wording is unchanged from 2026-11-17. The hardcoded scripts/build_adopted.py shared-pool constant is left to upstream and is not changed here."
+  },
+  "computationNote": "This file computes no monthlyYi, no blended per-MTok price and no adopted allowance; blendedCostPerMTok / agentLoopInputPerMTok and official request estimates are transcribed as published. No adopted value is derived from this capture.",
+  "confidence": "medium",
+  "confidenceNote": "Official Command Code plan and pricing-limits pages agree on the new paid row, the three-part price, the GOAT $20 credits and the Go/GOAT/Pro plan budgets. The public /pricing page does not yet list the model. No end date is published.",
+  "basis": "official"
+}
