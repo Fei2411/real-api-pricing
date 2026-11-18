@@ -1,0 +1,35 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "official_x_post",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "需要维护者讨论。先不改 adopted。不要与 11-13 Gemini 重置、账号范围说明或上下文窗口加倍写成同一公告。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "official-antigravity-anniversary-quota-reset-2026-11-17",
+    "grade": "Medium",
+    "sourceType": "official_x_post",
+    "postId": "2122836883877347836",
+    "url": "https://x.com/_mohansolo/status/2122836883877347836",
+    "author": "_mohansolo",
+    "createdAt": "2026-11-17T23:38:48Z",
+    "planOrModel": "Antigravity，全部模型",
+    "hasScreenshot": false,
+    "quotedText": "In honor of Antigravity turning 1, we’re resetting quota for everyone across all models.",
+    "tokens": null,
+    "quotaPercent": null,
+    "notTheSameEventAs": [
+      "https://x.com/_mohansolo/status/2121380918355234957",
+      "https://x.com/_mohansolo/status/2122421560212611393",
+      "https://x.com/_mohansolo/status/2122119826575646918"
+    ],
+    "repliesAreNotMeasurements": "跟帖口述重置前剩余（Ultra 88%、12%、90% 且剩 3 天）只作反应。见 songyukite-ultra-88-before-reset-oral-x-2026-11-18.json。不采用。",
+    "recommendation": "暂不采用；可讨论是否写入产品说明",
+    "why": "这是重置声明，没有 token，也没有新的配额表。",
+    "evidenceFile": "evidence/official-antigravity-anniversary-quota-reset-2026-11-17.json"
+  }
+}

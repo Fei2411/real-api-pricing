@@ -91,6 +91,6 @@
     "Gemini 4 Hydrogen API 价、Codex banked reset、Carbon/Argon 价、Token Plan 官方 Credits 表、Qwen4 预览折扣、11-13 Gemini 配额重置、Orchestrator 对 Pro 开放：本轮不重计。",
     "OpenCode Go qwen4-max 官方 API 价已在 main #236。不重计，不改 adopted。"
   ],
-  "suggestion": "没有可直接上线的 adopted 改动。两条 High（Ismail 440.3M/438.4M 与 capputschino 自制 202M/26.6%）都不采用。#240 分级 Medium，不采用。本轮唯一新的讨论项是 Antigravity usage 不影响 Google 账号，须维护者确认，且不是配额表。#239 无法执行。",
+  "suggestion": "没有可直接上线的 adopted 改动。两条 High（Ismail 440.3M/438.4M 与 capputschino 自制 202M/26.6%）都不采用。#240 在 11-17 扫描时分级 Medium、不采用。2026-11-18 作者补图后，现行判断更正为 High、仍不采用，见更新后的 mamaruo 文件与 backlog-archive-index-2026-11-18.json。11-17 当时没有面板图这一观察不删。本轮唯一新的讨论项是 Antigravity usage 不影响 Google 账号，须维护者确认，且不是配额表。#239 无法执行。",
   "index": "backlog-archive-index-2026-11-17.json"
 }

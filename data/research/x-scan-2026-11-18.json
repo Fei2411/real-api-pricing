@@ -1,0 +1,100 @@
+{
+  "scannedAt": "2026-11-18T01:39:07Z",
+  "recordedAt": "2026-11-18",
+  "taipeiLocal": "2026-11-18 09:32–09:39",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "source": "精简自 2026-11-18 扫描结论。不另开 PR。分页 token、原始搜索大文件、截图二进制和账号标识不入库。",
+  "method": "公开 X 读取，外加核对 GitHub issue #240 的更新正文。未回复评论，未发帖，未部署，未改 adopted。为赶上 #238 与 #241，已把远程 main merge 进本分支。",
+  "window": {
+    "start": "2026-11-16T01:37:06Z",
+    "end": "2026-11-18T01:39:07Z",
+    "previousEnd": "2026-11-17T01:37:06Z",
+    "overlap": "起点早于上轮结束至少 24 小时。已归档 post ID 只补缺、不重计。"
+  },
+  "counts": {
+    "uniquePostsScanned": 855,
+    "knownIdHits": 81,
+    "recommendAdopt": 0,
+    "notAdoptedHigh": 3,
+    "notAdoptedMedium": 10,
+    "discuss": 7,
+    "restatementsNotRecounted": 5,
+    "directAdopt": 0
+  },
+  "notExhaustive": [
+    "多数 has:images 关键词只翻 1 页，最旧仍停在 11-17 夜到 11-18 凌晨，未到 2026-11-16T01:37:06Z。weekly 图搜 2 页，最旧 11-17 14:49Z，仍有分页。",
+    "中文控制台查询第 2 页为 0 条，第 1 页最旧 11-16 03:00Z。01:37–03:00 仍可能漏帖。",
+    "Fei2411 48h 时间线 2 页无后续页，最旧 2026-11-16T02:11:27Z，比 01:30Z 起点仍晚约 41 分钟。7 日缺口回补 1 页，最旧 11-11 06:23:07Z，未关到 11-11 01:30Z。48h 提及 2 页仍有分页，最旧 11-17 08:25:54Z。11-15 提及缺口 1 页最旧 12:39:37Z，未接到 10:41Z。相关 conversation / 引用只翻了 1 页。",
+    "新作者 14 日回填只关完 capputschino。Hsanli_x、jkgorka、bebuu_ai、VersunPan、huang18825、imranbru99、lechattys 未完成。kimmonismus 未做全量。",
+    "missionaryjdot 用户不存在，未能解析。",
+    "停止时公开读取约剩 926/1000，重置 2026-11-19T00:00:00Z。无 429。请求的 max_results=100 都被降到 25。停止是为了留额度看图和交付，不是搜全。"
+  ],
+  "budget": {
+    "remainingAtStop": 926,
+    "dailyCap": 1000,
+    "resetsAt": "2026-11-19T00:00:00.000Z",
+    "http429": false,
+    "maxResultsNote": "请求 100，接口每次降到 25。",
+    "stopReason": "留额度看图和写报告。不是搜全。"
+  },
+  "mergedMain": {
+    "sha": "b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5",
+    "pullRequests": [
+      238,
+      241
+    ],
+    "note": "research-only 文件。不重计，不改 adopted。"
+  },
+  "noDirectAdopt": true,
+  "recommendAdopt": [],
+  "notAdoptedHigh": [
+    "https://x.com/maanasms/status/2122856947749953612",
+    "https://x.com/ethan_leee9113/status/2122858946163876240",
+    "https://x.com/jkgorka/status/2120989185645613307"
+  ],
+  "notAdoptedMedium": [
+    "https://x.com/Fei2411/status/2122859265329439077",
+    "https://x.com/leo114119/status/2122600144243986712",
+    "https://x.com/taiyop/status/2122859657605824621",
+    "https://x.com/shengtang135754/status/2122849514168172617",
+    "https://x.com/dr_andrewlaw/status/2122859164263420223",
+    "https://x.com/RingoS0725/status/2122862958657290555",
+    "https://x.com/richardphearne/status/2122853179415224333",
+    "https://x.com/gakhil96/status/2122861045593375032",
+    "https://x.com/jkgorka/status/2121417865274556632",
+    "https://x.com/leo114119/status/2122583245783257356"
+  ],
+  "discussNote": "讨论项按扫描包是 7 条。下面的 URL 把 OpenCode Phase 1 与 Phase 2 分开列出，所以有 8 个链接，仍是同一条 GLM 讨论加其余 6 条。",
+  "discuss": [
+    "https://x.com/_mohansolo/status/2122836883877347836",
+    "https://x.com/opencode/status/2122763721923559595",
+    "https://x.com/opencode/status/2122600875562537329",
+    "https://x.com/Fei2411/status/2122863640680513866",
+    "https://x.com/_mohansolo/status/2122652485555023972",
+    "https://x.com/_mohansolo/status/2122618270356472254",
+    "https://x.com/SongyuKite/status/2122863843491848536",
+    "https://x.com/Fei2411/status/2122852754972656057"
+  ],
+  "issue240": {
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/240",
+    "gradeNow": "High",
+    "adopted": false,
+    "priorGradeOn2026-11-17": "Medium",
+    "commentOn234NotReplied": "2026-11-18T01:24:00Z"
+  },
+  "glm53Trial": {
+    "file": "opencode-go-glm53-monthly-200-trial-2026-11-18.json",
+    "monthlyYi": 6.468,
+    "monthlyTokens": 646800000,
+    "status": "待核对，未写入 adopted"
+  },
+  "restatementsNotRecounted": [
+    "2122758744983367898",
+    "2122587892652347865",
+    "2122502510992928824",
+    "2122848072493396037",
+    "2122163138045116546"
+  ],
+  "suggestion": "没有可直接上线的 adopted 改动。三条 High 都不采用。#240 升为 High 仍不采用。OpenCode GLM-5.3 的 $200 与 Antigravity 一周年重置留给维护者确认。#239 仍无法执行。",
+  "index": "backlog-archive-index-2026-11-18.json"
+}

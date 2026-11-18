@@ -1,0 +1,50 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "暂不采用。2.9B 看起来覆盖 Nov 1–18，不能当周池满额。以图为准。禁止跨窗口相除。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "ethan-leee9113-grok-included-2_9b-weekly100-x-2026-11-18",
+    "grade": "High",
+    "gradeNote": "新作者。图上有硬 token 和周条 100%，分级 High。不能当周池满额。",
+    "sourceType": "x_public_scan",
+    "postId": "2122858946163876240",
+    "url": "https://x.com/ethan_leee9113/status/2122858946163876240",
+    "author": "ethan_leee9113",
+    "createdAt": "2026-11-18T01:06:28Z",
+    "planOrModel": "口述 Cursor Ultra。截图地址栏是 grok.com/dashboard/usage，图上没有套餐名。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "urlBar": "grok.com/dashboard/usage",
+      "included": "2.9B tokens",
+      "creditUsage": "$1.10",
+      "axis": "Tokens per day，横轴 Nov 1–Nov 18",
+      "nov17Tooltip": {
+        "Cursor": 2034636563,
+        "GrokBot": 1554545,
+        "Chat": 7104892,
+        "Automations": 109974,
+        "Total": 2043405974,
+        "sumHolds": "2034636563+1554545+7104892+109974=2043405974"
+      },
+      "weekly": "图2 Weekly usage limit 100%，Resets in 3 days。周条页没有套餐名，也没有 2.9B。"
+    },
+    "oralText": "口述 Cursor Ultra，并称没打开 Cursor、本应只有 10–15%。与图上的 Cursor 2,034,636,563 冲突。以图为准，口述保留。",
+    "quotaPercent": "Weekly usage limit 100%，约 3 天后重置。",
+    "tokens": {
+      "includedShown": "2.9B",
+      "windowShown": "横轴约 Nov 1–18，未标明这 2.9B 是周池还是月池",
+      "nov17Total": 2043405974
+    },
+    "conflictsToKeep": "口述套餐和「没开 Cursor」与 grok.com 图冲突。2.03B 的 Cursor 行不能当打满实测。禁止 2.9B÷100%，禁止把 Nov 17 单日除进周条。",
+    "recommendation": "暂不采用",
+    "why": "2.9B 的窗口盖过 Nov 1–18，周条是另一页。",
+    "evidenceFile": "evidence/ethan-leee9113-grok-included-2_9b-weekly100-x-2026-11-18.json"
+  }
+}

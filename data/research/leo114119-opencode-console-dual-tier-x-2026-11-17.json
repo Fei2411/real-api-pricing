@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "更早的控制台图里 GLM-5.3 同时有 $100 与 $200。不单取一档。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "leo114119-opencode-console-dual-tier-x-2026-11-17",
+    "grade": "Medium",
+    "postId": "2122600144243986712",
+    "url": "https://x.com/leo114119/status/2122600144243986712",
+    "author": "leo114119",
+    "createdAt": "2026-11-17T07:58:05Z",
+    "planOrModel": "口述 OpenCode Go。图是 CONSOLE 双条对比，VIEW ALL 32 MODELS。",
+    "hasScreenshot": true,
+    "screenshotFields": "每模型两条：Gemini 4 Argon 566/$30 与 2,260/$120；GLM-5.2 792/$60 与 2,370/$180；Kimi K2.7 Code 994/$60 与 2,980/$180；DeepSeek V4 Pro 1,040/$15 与 4,180/$60；GLM-5.3 1,320/$100 与 2,640/$200；Hy4 preview 1,350/$30 与 5,410/$120。发帖略早于官方 Phase 1。与 Fei 后来的单列裁切不完全相同（Argon 566 对 440）。",
+    "oralText": "口述只写 Go 提升到 $100。图上 GLM-5.3 同时有 $100 与 $200。",
+    "tokens": null,
+    "seeAlso": "opencode-go-glm53-monthly-200-trial-2026-11-18.json",
+    "recommendation": "暂不采用",
+    "why": "双档不能单取 $100 或 $200。现行官方表以 11-18 打开的 console/go 为准，见试算文件。",
+    "evidenceFile": "evidence/leo114119-opencode-console-dual-tier-x-2026-11-17.json"
+  }
+}

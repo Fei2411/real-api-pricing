@@ -1,0 +1,156 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "official_catalog_plus_x",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "只归档官方页、模型接口摘录、推文和待核对试算。不改 adopted.csv，不改图表，不改 data/conventions.json 的 updatedAt。未运行 build_adopted.py。",
+  "scopeNote": "推荐维护者讨论后决定是否采用。本 PR 不采用。$200 是 GLM-5.3 这一行的月度 Usage，不是整份 $10 计划的总池。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "id": "opencode-go-glm53-monthly-200-trial-2026-11-18",
+    "grade": "discuss",
+    "recommendation": "须维护者确认后再改 adopted。本文件不是采用。",
+    "whyPending": "推文把它叫作 Operation GLM，且没有截止日。现行控制台这一行没有 Limited time 标签。要确认这是长期表还是没有截止日的促销，确认前不动 adopted。",
+    "posts": [
+      {
+        "phase": 1,
+        "postId": "2122600875562537329",
+        "url": "https://x.com/opencode/status/2122600875562537329",
+        "createdAt": "2026-11-17T08:00:59Z",
+        "text": "Operation GLM Phase 1：Go $10 的 GLM 5.3 用量 $100，对所有 OpenCode Go 订阅开放。"
+      },
+      {
+        "phase": 2,
+        "postId": "2122763721923559595",
+        "url": "https://x.com/opencode/status/2122763721923559595",
+        "createdAt": "2026-11-17T18:48:05Z",
+        "text": "Phase 2：同一 $10 套餐的 GLM 5.3 用量升到 $200。推文没有截止日。"
+      }
+    ],
+    "pagesReadThisPass": {
+      "console": "https://opencode.ai/console/go",
+      "docs": "https://opencode.ai/docs/go/",
+      "models": "https://opencode.ai/inference/go/v1/models",
+      "modelsListCreatedSharedByEveryModel": "2026-11-18T01:46:08Z",
+      "modelsListCreatedIsNotAPromoStart": "列表里每个模型的 created 都是同一个时间，只说明这次目录快照，不是 GLM 促销开始日。release_date 仍是 2026-08-14。"
+    },
+    "docsGoDoesNotPrint200": "https://opencode.ai/docs/go/ 这次打开没有印出 GLM-5.3 的 $200。它写的是：付费模型共用一份 allowance；每个模型的月限表示「如果这个月只用这个模型，计划能覆盖多少该模型的 usage」。例子是 $15 限额上的 $1.50 与 $60 限额上的 $6 都是月 allowance 的 10%。5 小时限额是月 allowance 的 20%，周限额是 50%，周限周一 00:00 UTC 重置。同页写 Usage limits may change。Gemini 4 Argon 的 50% 折扣写明到 2026-11-30，这是另一条促销，不是 GLM。",
+    "consoleIncludedModels": {
+      "glm-5.3": {
+        "estRequests5h": {
+          "go": 2640,
+          "goPlus": 5280
+        },
+        "monthlyLimit": {
+          "go": 200,
+          "goPlus": 400
+        },
+        "limitedTimeLabel": false,
+        "freeLabel": false
+      },
+      "glm-5.3-flash": {
+        "estRequests5h": {
+          "go": 6320,
+          "goPlus": 18900
+        },
+        "monthlyLimit": {
+          "go": 60,
+          "goPlus": 180
+        },
+        "matchesAdoptedGoUsage": true
+      },
+      "glm-5.2": {
+        "estRequests5h": {
+          "go": 792,
+          "goPlus": 2370
+        },
+        "monthlyLimit": {
+          "go": 60,
+          "goPlus": 180
+        },
+        "matchesAdoptedGoUsage": true
+      },
+      "otherRowsAreNotOnePool": "同一张表的其他付费模型仍各有月限，多数是 Go $15 / $30 / $60。例如 Kimi K3 $15、Gemini 4 Argon $30、Claude Haiku 5.5 $15、GPT-6 Luna $15、DeepSeek V4.1 Flash $100。Qwen4 Max 标了 New，Go 月限 $15。带 Free / Limited time 的是 Beam、Hy4 flash、Iceman、LongCat 2.5，不是 GLM-5.3。"
+    },
+    "modelsEndpointPrices": {
+      "glm-5.3": {
+        "inputPer1M": 1.4,
+        "cacheReadPer1M": 0.26,
+        "outputPer1M": 4.4,
+        "monthlyUsage": {
+          "go": 200,
+          "goPlus": 400,
+          "goTeams": 205
+        },
+        "featured": true,
+        "limitedRegions": false,
+        "endDateField": null,
+        "pricesMatchRepoTuple": "与 scripts/build_adopted.py 的 OPENCODE_GO_MODELS 中 glm-5.3 三段价 0.26 / 1.4 / 4.4 一致。变的是月 Usage，从 $15 到 $200。"
+      },
+      "glm-5.3-flash": {
+        "inputPer1M": 0.15,
+        "cacheReadPer1M": 0.03,
+        "outputPer1M": 0.5,
+        "monthlyUsageGo": 60,
+        "pricesAndGoUsageMatchAdopted": true,
+        "recomputed": false
+      },
+      "glm-5.2": {
+        "inputPer1M": 1.4,
+        "cacheReadPer1M": 0.26,
+        "outputPer1M": 4.4,
+        "monthlyUsageGo": 60,
+        "pricesAndGoUsageMatchAdopted": true,
+        "recomputed": false
+      }
+    },
+    "adoptedRowLeftUntouched": {
+      "plan": "opencode_go",
+      "model": "glm-5.3",
+      "monthlyUsageUsd": 15,
+      "monthlyTokens": 48500000,
+      "monthlyYi": 0.485,
+      "realUsdPerMtok": 0.20618557,
+      "dataDate": "2026-09-30",
+      "confidence": "medium",
+      "chartTier": "full",
+      "formula": "模型月 Usage $ ÷ 统一标准负载加权价。yi = round(usage / blended / 100, 3)。blended = 0.97*cacheRead + 0.025*input + 0.005*output。cache write 不进标准负载。"
+    },
+    "trialNotAdopted": {
+      "label": "待核对试算。三段价未变，所以按仓库公式重算，不把已四舍五入的 48,500,000 硬乘 13.333。",
+      "pricesUsed": {
+        "cacheRead": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "mix": {
+        "cache": 0.97,
+        "input": 0.025,
+        "output": 0.005
+      },
+      "blendedUsdPer1M": 0.3092,
+      "usageUsd": 200,
+      "rawYiBeforeRound": 6.468305304010349,
+      "monthlyYiRoundedLikeBuildAdopted": 6.468,
+      "monthlyTokens": 646800000,
+      "realUsdPerMtokEightSignificantDigits": 0.01546073,
+      "realUsdPerMtokExact": 0.015460729746444033,
+      "planFeeUsd": 10,
+      "noteOnRealPrice": "real_usd_per_mtok 用的是 $10 计划价，不是 $200 usage。与现有 opencode_go 行相同。",
+      "proportionalFromRoundedAdoptedRow": {
+        "expression": "200/15 × 48500000",
+        "tokens": 646666666.6666666,
+        "tokensRounded": 646666667,
+        "realUsdPerMtok": 0.015463917525773195,
+        "whyNotUsed": "这是把已经四舍五入成 0.485 亿的采用值再乘一遍。未舍入的 15/0.3092/100 = 0.4851228978 亿，乘 200/15 后就是上面的 6.468305304 亿，round 到 3 位是 6.468 亿。价没有变，所以不用否决 13.333 倍；要否决的是对已舍入 token 数硬乘。"
+      },
+      "goPlusNotCalculatedAsCandidate": "同一行 Go Plus 月限是 $400，Go Teams 接口是 $205。本试算只对现有 adopted 的 $10 Go 行。不新开 Plus 行。",
+      "requestEstimateNotUsed": "控制台 5 小时 2,640 次是估计请求数。仓库已规定官方请求数只作交叉检查，不再当额度主值。这里没有用 2,640 反推 token。"
+    },
+    "doNotWriteAsPlanPool": "不要把 $200 写成整份 $10 计划的总池。Fei2411 2122859265329439077 的口头概括过宽。leo114119 2122600144243986712 更早的图里 GLM-5.3 曾同时出现 $100 与 $200。",
+    "outOfScopeNotAdopted": "Qwen4 Max New 的 Go $15 还没有 adopted 的 opencode_go 行。三段价与 #236 已归档的 $1.50 / $4.50 / cache read $0.075 一致，本轮不重计，也不把这行写进 adopted。表上其他模型的目录漂移同样不动。",
+    "relatedIdNotRead": "扫描把 2122771057879003200 列在相关 ID 里。本轮没有单独读到该帖正文，不用它作证据。",
+    "evidenceFile": "evidence/opencode-go-glm53-monthly-200-trial-2026-11-18.json"
+  }
+}

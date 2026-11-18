@@ -1,0 +1,28 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "降档后周条 0%、5h 100%。无 token。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "richardphearne-plus-weekly0-5h100-x-2026-11-18",
+    "grade": "Medium",
+    "postId": "2122853179415224333",
+    "url": "https://x.com/richardphearne/status/2122853179415224333",
+    "author": "richardphearne",
+    "createdAt": "2026-11-18T00:43:33Z",
+    "planOrModel": "口述当天从 Pro 降到 Plus。图只写 out of Codex and Work usage，没有套餐名。",
+    "hasScreenshot": true,
+    "screenshotFields": "5-hour limit 100% left。Weekly limit 0% left。Credits 0。Rate limit resets 22 Nov, 16:37。",
+    "oralText": "降档前还有约 50% 周 Work 用量，图上没有这 50%。图是降档后的 0% / 100%。",
+    "tokens": null,
+    "recommendation": "暂不采用",
+    "why": "官方百分比反映降档后周条已空、5h 仍满。不是 token 表。",
+    "evidenceFile": "evidence/richardphearne-plus-weekly0-5h100-x-2026-11-18.json"
+  }
+}

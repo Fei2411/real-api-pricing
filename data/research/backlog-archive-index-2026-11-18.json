@@ -1,0 +1,164 @@
+{
+  "recordedAt": "2026-11-18",
+  "kind": "research-archive-increment",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "parentIndex": "backlog-archive-index-2026-11-17.json",
+  "pullRequest": 234,
+  "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",
+  "scanStartUtc": "2026-11-18T01:32:00Z",
+  "scanEndUtc": "2026-11-18T01:39:07Z",
+  "taipeiLocal": "2026-11-18 09:32–09:39",
+  "scope": "2026-11-18 扫描窗口 2026-11-16T01:37:06Z 至 2026-11-18T01:39:07Z，与上轮结束重叠至少 24 小时。去重后看过 855 帖，撞到已归档 81 帖。recommendAdopt 为空。三条 High 暂不采用。#240 补图后由 Medium 更正为 High，仍不采用。OpenCode Go × GLM-5.3 月限 $200 只做待核对试算。只追加 data/research/。不改 adopted.csv、scripts/build_adopted.py、data/conventions.json 的 updatedAt、derived/、charts/、线上文案。不部署、不关闭旧 PR、不把本分支 merge 进 main。为赶上 #238 与 #241，已把远程 main merge 进本分支。",
+  "images": "X 与 GitHub 截图不入库。图上字段来自目视。不写入扫描包 images/ 文件名、分页 token 或账号标识。",
+  "mergedMainThisPass": true,
+  "mainShaMerged": "b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5",
+  "mainNote": "远程 main b8117804（2026-11-17T03:19:12Z）比合并前的本分支超前 4 个 commit：#238 Magpie round3、#241 Command Code GOAT Qwen4 Max / Hy4 Flash。全部是 data/research/。merge 无冲突。不重计，不改 adopted。",
+  "recommendAdopt": [],
+  "recommendDiscussAdopt": [
+    {
+      "file": "opencode-go-glm53-monthly-200-trial-2026-11-18.json",
+      "item": "OpenCode Go × GLM-5.3 官方月限由 $15 变为 $200",
+      "urls": [
+        "https://opencode.ai/console/go",
+        "https://opencode.ai/docs/go/",
+        "https://x.com/opencode/status/2122600875562537329",
+        "https://x.com/opencode/status/2122763721923559595"
+      ],
+      "trial": "三段价未变（cache read $0.26 / input $1.40 / output $4.40）。仓库公式 round(200/0.3092/100, 3)=6.468 亿，即 646,800,000 tokens。$10 计划价下 real_usd_per_mtok 约 0.01546073。把已舍入的 48,500,000×200/15=646,666,667 只作对照，不采用该硬乘。",
+      "needs": "维护者确认这是现行官方表，还是没有截止日的 Operation GLM 促销。确认前不改 adopted。不要写成整份 $10 计划的 $200 总池。GLM-5.3-Flash 与 GLM-5.2 的 Go $60 和三段价与 adopted 一致，不重算。"
+    },
+    {
+      "file": "official-antigravity-anniversary-quota-reset-2026-11-17.json",
+      "item": "Antigravity 一周年，为所有人重置全部模型配额",
+      "url": "https://x.com/_mohansolo/status/2122836883877347836",
+      "postId": "2122836883877347836",
+      "createdAt": "2026-11-17T23:38:48Z",
+      "kind": "重置声明。不是配额表。",
+      "notTheSameEventAs": [
+        "https://x.com/_mohansolo/status/2121380918355234957",
+        "https://x.com/_mohansolo/status/2122421560212611393",
+        "https://x.com/_mohansolo/status/2122119826575646918"
+      ],
+      "needs": "维护者确认后再考虑写入说明。跟帖里的剩余百分比只作反应。本 PR 不改 adopted。"
+    }
+  ],
+  "issue240Corrected": {
+    "file": "mamaruo-qwen-tokenplan-lite-qwen4-max-preview-2026-11-16.json",
+    "issue": 240,
+    "updatedAt": "2026-11-18T01:22:06Z",
+    "grade": "High",
+    "stillNotAdopted": true,
+    "whatChanged": "作者补了两张千问 AI 平台用量面板截图，并把非夜间倍数从错误的 5 倍改成 2.5 倍。标题未改。227.6万 是 11-16 单日 2,275,738；18,867,577 是 11-13 与 11-16 之和。标题冲突消解。11-17 索引里的 Medium / 标题冲突判断以本更正为准。",
+    "commentNotReplied": "mamaruo 于 2026-11-18T01:24:00Z 在 PR #234 说已补充 #240。本轮未回复。"
+  },
+  "stillAwaitingMaintainerConfirmationNotRecounted": [
+    "OpenCode Go × GLM-5.3 的 $200 试算本身在 recommendDiscussAdopt。确认前 adopted 行仍是 $15 → 48,500,000。",
+    "Antigravity 一周年全模型重置在 recommendDiscussAdopt。不与 11-13 Gemini 重置、账号范围说明、上下文窗口加倍混写。",
+    "Antigravity usage 不影响 Google 账号、上下文窗口加倍、mirrercrouse 的 SWE-2 推断：本轮不重计。",
+    "Gemini 4 Hydrogen API 价、Qwen4 Max API 价、#238 Magpie round3、#241 GOAT Qwen4 Max / Hy4 Flash：已在 main 或既有归档，本轮不重计。",
+    "Codex banked reset、Carbon/Argon 价、Token Plan 官方 Credits 表、Qwen4 预览窗口（2026-11-11 10:00 至 2026-11-25 24:00 UTC+8）：本轮不重计。预览窗口与既有归档一致，本轮没有重新打开阿里云帮助页。",
+    "11-13 Orchestrator 对 Pro 开放：本轮不重计。"
+  ],
+  "doesNotRecount": [
+    "PatricioTrials 2122758744983367898 重述已归档 Super 周 20%（Cursor 14% / Grok Bot 5% / Imagine 1%）。不重计。",
+    "capputschino 2122587892652347865 继续外推约 760M。已在上轮 High 不采用项，不重计，不再除一遍。",
+    "Matt_INHK 2122502510992928824 已在 11-17 索引。不重计。",
+    "kanataminds 2122848072493396037 转述 Gemini 4 Hydrogen API $1.50/$7.50。不重计。",
+    "Fei2411 2122163138045116546 是 Qwen 4 Max 发布根帖。OpenCode Go qwen4-max 官方 API 价已在 #236。不重计。",
+    "官方请求数不回到额度主值。GLM-5.3 的 2,640 次/5 小时只作交叉检查。"
+  ],
+  "cannotExecute": {
+    "issue": 239,
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/239",
+    "result": "正文仍空。不编造 AA 数字，不关闭。"
+  },
+  "doNotAdopt": [
+    "所有 ÷配额% 外推，禁止跨窗口、跨账号、跨产品拼接。",
+    "maanasms https://x.com/maanasms/status/2122856947749953612（High）：Day 页 11.3M / $10.96 / 104 requests。cache hit 97%（10.9M/11.2M）是缓存命中率。构成比不是配额。5h 0% left，周 77% left，Credits 0。禁止 11.3M÷23%。",
+    "ethan_leee9113 https://x.com/ethan_leee9113/status/2122858946163876240（High，新作者）：图是 grok.com/dashboard/usage，Included 2.9B，Credit usage $1.10。Nov 17 合计 2,043,405,974，加法成立。周条 100%，3 天后重置。口述 Cursor Ultra 且没开 Cursor，与图冲突，以图为准。2.9B 窗口看起来覆盖 Nov 1–18，不能当周池满额。",
+    "jkgorka https://x.com/jkgorka/status/2120989185645613307（High，14 日回填）：Weekly limit (SuperGrok) 100%。Session usage 合计 119,127,482，118,121,623+1,005,859 成立。119M 是 session，不是周池。API cost $25.7276。",
+    "#240 更正后仍不采用（High）：见 issue240Corrected。禁止 18,867,577÷1.895%。面板未证明按 qwen4-max-preview 过滤。不新开 Token Plan Lite 行。不与 #236/#241 的 qwen4-max API 价拼接。",
+    "Medium 无 token 或不够采用：taiyop 重置后剩余 99%/97%；shengtang135754 图上 Gemini 剩余 97% 与口述视频 34% 冲突，两边都留；dr_andrewlaw SuperGrok 99% 与 All models 20%；RingoS0725 剩余条，85% 是剩余；richardphearne 降档后周 0%、5h 100%；gakhil96 第三方 100M 混产品 API 估值；jkgorka 2121417865274556632 Pro 周剩余 4%；leo114119 Mythos 转述与图上 This week 34% used 冲突，以图为准。",
+    "Fei2411 与 leo114119 的 OpenCode 裁图不单独采用。$200 的讨论只走试算文件。",
+    "Carbon 只给 Ultra、credits 避开 Opus 配额、Fei 口述 Carbon 在 5x 上 limit 太小、Devin Bots 耗额度、SongyuKite 口述重置前剩 88%：都不是配额表。"
+  ],
+  "defaultBranchDedup": {
+    "result": "写入前 origin/main b8117804 与本分支 data/ 检索本轮新 post ID 为 0。#240 的研究文件已在本分支，本轮是更正而不是新建。已归档重述帖不新建文件。"
+  },
+  "scanGaps": [
+    "多数 has:images 关键词只翻 1 页，最旧仍停在 11-17 夜到 11-18 凌晨，未到 2026-11-16T01:37:06Z。weekly 图搜 2 页，最旧 11-17 14:49Z，仍有分页。",
+    "中文控制台查询第 2 页为 0 条，第 1 页最旧 11-16 03:00Z。01:37–03:00 仍可能漏帖。",
+    "Fei2411 48h 时间线 2 页无后续页，最旧 2026-11-16T02:11:27Z，比 01:30Z 起点仍晚约 41 分钟。7 日缺口回补 1 页，最旧 11-11 06:23:07Z，未关到 11-11 01:30Z。48h 提及 2 页仍有分页，最旧 11-17 08:25:54Z。11-15 提及缺口 1 页最旧 12:39:37Z，未接到 10:41Z。相关 conversation / 引用只翻了 1 页。",
+    "新作者 14 日回填只关完 capputschino。Hsanli_x、jkgorka、bebuu_ai、VersunPan、huang18825、imranbru99、lechattys 未完成。kimmonismus 未做全量。",
+    "missionaryjdot 用户不存在，未能解析。",
+    "停止时公开读取约剩 926/1000，重置 2026-11-19T00:00:00Z。无 429。请求的 max_results=100 都被降到 25。停止是为了留额度看图和交付，不是搜全。"
+  ],
+  "doesNotChange": [
+    "data/adopted.csv",
+    "scripts/build_adopted.py",
+    "data/conventions.json updatedAt",
+    "derived/",
+    "charts/",
+    "线上文案"
+  ],
+  "relationToOlderPrs": {
+    "234": "本增量追加在 #234，不另开研究 PR，保持草稿。",
+    "236": "已在本分支。OpenCode Go qwen4-max API 价不重计。",
+    "237": "外部研究 PR，保留，不关闭。",
+    "238": "已合进 main，本轮 merge 进来。Magpie round3 不重计，不关闭问题。",
+    "239": "空正文，无法执行。不编造 AA 数字，不关闭。",
+    "240": "不关闭。11-18 更正为 High，仍不采用，不改 adopted。",
+    "241": "已合进 main，本轮 merge 进来。GOAT Qwen4 Max / Hy4 Flash 不重计。",
+    "207": "仍视为已被 main 的 claude_pro × claude-opus-5.5 = 30.46 代替。该 PR dirty，不关闭。",
+    "209": "无新的官方绝对 token 表，不改，不关闭。",
+    "closeOnlyWithLaterPermission": [
+      205,
+      208,
+      216,
+      223,
+      233,
+      207,
+      209
+    ],
+    "notClosedThisPass": [
+      205,
+      208,
+      216,
+      223,
+      233,
+      207,
+      209,
+      234,
+      237,
+      238,
+      239,
+      240,
+      241
+    ]
+  },
+  "files": [
+    "backlog-archive-index-2026-11-18.json",
+    "dr-andrewlaw-supergrok-99-claude-20-x-2026-11-18.json",
+    "ethan-leee9113-grok-included-2_9b-weekly100-x-2026-11-18.json",
+    "fei2411-carbon-5x-limit-oral-x-2026-11-18.json",
+    "fei2411-devin-bots-quota-oral-x-2026-11-18.json",
+    "fei2411-opencode-glm53-200-crop-x-2026-11-18.json",
+    "gakhil96-mixed-100m-api-estimate-x-2026-11-18.json",
+    "jkgorka-chatgpt-pro-weekly4-left-x-2026-11-14.json",
+    "jkgorka-supergrok-session-119m-weekly100-x-2026-11-12.json",
+    "leo114119-mythos-week34-conflict-x-2026-11-17.json",
+    "leo114119-opencode-console-dual-tier-x-2026-11-17.json",
+    "maanasms-chatgpt-plus-day-11_3m-weekly77-x-2026-11-18.json",
+    "mamaruo-qwen-tokenplan-lite-qwen4-max-preview-2026-11-16.json",
+    "official-antigravity-anniversary-quota-reset-2026-11-17.json",
+    "official-antigravity-carbon-ultra-only-2026-11-17.json",
+    "official-antigravity-credits-avoid-opus-quota-2026-11-17.json",
+    "opencode-go-glm53-monthly-200-trial-2026-11-18.json",
+    "richardphearne-plus-weekly0-5h100-x-2026-11-18.json",
+    "ringos0725-gemini-plus-remaining-x-2026-11-18.json",
+    "shengtang135754-reset-97-oral34-x-2026-11-18.json",
+    "songyukite-ultra-88-before-reset-oral-x-2026-11-18.json",
+    "taiyop-antigravity-remaining-after-reset-x-2026-11-18.json",
+    "x-scan-2026-11-18.json"
+  ]
+}

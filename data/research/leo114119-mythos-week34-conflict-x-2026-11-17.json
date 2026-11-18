@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "转述 Mythos/20x。口述 3 小时烧光，图是 This week 34% used。以图为准。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "leo114119-mythos-week34-conflict-x-2026-11-17",
+    "grade": "Medium",
+    "postId": "2122583245783257356",
+    "url": "https://x.com/leo114119/status/2122583245783257356",
+    "author": "leo114119",
+    "createdAt": "2026-11-17T06:50:56Z",
+    "planOrModel": "口述 Claude 20x Max 的二手网友实测。图有 Fable 行，会话条写 Mythos 5.2。",
+    "hasScreenshot": true,
+    "screenshotFields": "图1 只是会话条：Mythos 5.2 Max · Ultracode，56m 5s，不是用量页。图2 This week 34% used，Resets Thursday 5:00 AM；Fable 32% used，Up to 50% of your weekly limit。",
+    "oralText": "口述 1 小时烧掉 Fable 30%、3 小时烧光周额度。与图中 34% / 32% 已用冲突。",
+    "tokens": null,
+    "conflictsToKeep": "转述且冲突。以图为准，口述保留。不采用。",
+    "recommendation": "暂不采用",
+    "why": "不是独立满额实测。",
+    "evidenceFile": "evidence/leo114119-mythos-week34-conflict-x-2026-11-17.json"
+  }
+}

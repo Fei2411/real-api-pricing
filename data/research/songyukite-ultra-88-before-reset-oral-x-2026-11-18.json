@@ -1,0 +1,27 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "只作对周年重置的反应。同类口述 12% 与 90% 且剩 3 天没有单独的 post 档案，不补造 ID。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "songyukite-ultra-88-before-reset-oral-x-2026-11-18",
+    "grade": "Low",
+    "postId": "2122863843491848536",
+    "url": "https://x.com/SongyuKite/status/2122863843491848536",
+    "author": "SongyuKite",
+    "createdAt": "2026-11-18T01:25:55Z",
+    "planOrModel": "口述 Ultra，Antigravity。",
+    "hasScreenshot": false,
+    "oralText": "重置前 Ultra 还剩 88%。扫描还记到同类口述：有人说只剩 12%，有人说 90% 且还剩 3 天。都没有当作本文件的实测。",
+    "tokens": null,
+    "recommendation": "暂不采用",
+    "why": "无截图。说明中途重置会清掉剩余，不是满额表。",
+    "evidenceFile": "evidence/songyukite-ultra-88-before-reset-oral-x-2026-11-18.json"
+  }
+}

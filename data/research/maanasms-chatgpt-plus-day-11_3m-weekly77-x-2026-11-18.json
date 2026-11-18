@@ -1,0 +1,44 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "暂不采用。11.3M 在 Day 视图。禁止 11.3M÷23% 外推周池。API 估值不是订阅额度。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "maanasms-chatgpt-plus-day-11_3m-weekly77-x-2026-11-18",
+    "grade": "High",
+    "gradeNote": "同帖有目视过的 token 分项和官方配额条，分级 High。窗口对不齐，不采用。",
+    "sourceType": "x_public_scan",
+    "postId": "2122856947749953612",
+    "url": "https://x.com/maanasms/status/2122856947749953612",
+    "author": "maanasms",
+    "createdAt": "2026-11-18T00:58:31Z",
+    "planOrModel": "口述 ChatGPT Plus，模型 gpt-6.2-astra（口述 max/xhigh）。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "dayPage": "图1 明确是 Day 页。TOTAL TOKENS 11.3M，API 估值 $10.96。gpt-6.2-astra 11.3M / 104 requests / $10.96 / 100%。",
+      "cache": "Cache hit rate 97% · 10.9M reused / 11.2M input。这是缓存命中率，不是配额%。",
+      "contextBreakdown": "Messages 9.1M 80.8% / Tool calls 2.1M 19.0% / Reasoning 26.7K 0.2%。这是构成比。All/CODEX 的 100.00% 也是构成比，不是配额。",
+      "quotaDialog": "图2 官方弹窗 “You're out of Codex and Work usage”。5-hour limit 0% left（reset 10:56 AM）。Weekly limit 77% left。Credits 0。"
+    },
+    "oralText": "口述约用了周额度的 23%，与 Weekly 77% left 相符。套餐与 effort 只在口述。",
+    "quotaPercent": "5-hour 0% left；weekly 77% left；credits 0。",
+    "tokens": {
+      "ui": "Day",
+      "totalDisplayed": "11.3M",
+      "inputDisplayed": "11.2M",
+      "cacheReusedDisplayed": "10.9M",
+      "requests": 104,
+      "apiWorth": "$10.96"
+    },
+    "conflictsToKeep": "Day token 与周/5h 条不是同一窗口。cache% 和构成比都不是配额%。",
+    "recommendation": "暂不采用",
+    "why": "不能用 11.3M÷23% 外推周池，也不能把 $10.96 API 估值当成订阅额度。",
+    "evidenceFile": "evidence/maanasms-chatgpt-plus-day-11_3m-weekly77-x-2026-11-18.json"
+  }
+}

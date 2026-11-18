@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "Fei 裁图把 GLM-5.3 的 2,640 / $200 说成「$10 计划提供 $200 额度」。口头过宽。不采用。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "fei2411-opencode-glm53-200-crop-x-2026-11-18",
+    "grade": "Medium",
+    "gradeNote": "裁图能对上控制台一行，但口述把单模型月限说成整份计划的总池。",
+    "postId": "2122859265329439077",
+    "url": "https://x.com/Fei2411/status/2122859265329439077",
+    "author": "Fei2411",
+    "createdAt": "2026-11-18T01:07:44Z",
+    "planOrModel": "口述 OpenCode $10。图中没有套餐名表头。",
+    "hasScreenshot": true,
+    "screenshotFields": "宽图裁切。可见估计请求数和美元额：Kimi K3.1 Pro 147 / $15（顶行被切）；Gemini 4 Argon 440 / $30；GLM-5.3 高亮 2,640 / $200；Claude Haiku 5.5 3,850 / $15；GPT 6 Luna 4,230 / $15；底行 Flash 类被切。各行美元额不同。",
+    "oralText": "把 GLM-5.3 这一行说成「$10 计划提供 $200 额度」。同表其他可见行仍是 $15 或 $30。",
+    "tokens": null,
+    "quotaPercent": null,
+    "seeAlso": "opencode-go-glm53-monthly-200-trial-2026-11-18.json",
+    "recommendation": "暂不采用",
+    "why": "不能把单模型月限写成整份 $10 计划的总池。官方目录的试算另记，确认前不改 adopted。",
+    "evidenceFile": "evidence/fei2411-opencode-glm53-200-crop-x-2026-11-18.json"
+  }
+}

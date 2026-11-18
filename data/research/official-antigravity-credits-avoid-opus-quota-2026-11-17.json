@@ -1,0 +1,28 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "official_x_post",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "不是配额表。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "official-antigravity-credits-avoid-opus-quota-2026-11-17",
+    "grade": "Medium",
+    "sourceType": "official_x_post",
+    "postId": "2122618270356472254",
+    "url": "https://x.com/_mohansolo/status/2122618270356472254",
+    "author": "_mohansolo",
+    "createdAt": "2026-11-17T09:10:06Z",
+    "planOrModel": "Opus，credits",
+    "hasScreenshot": false,
+    "quotedText": "You can pay for credits so you don't hit quota on Opus.",
+    "tokens": null,
+    "recommendation": "暂不采用",
+    "why": "只说明可以买 credits 续用。",
+    "evidenceFile": "evidence/official-antigravity-credits-avoid-opus-quota-2026-11-17.json"
+  }
+}

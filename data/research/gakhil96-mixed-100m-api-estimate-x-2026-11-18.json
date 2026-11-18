@@ -1,0 +1,28 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "第三方 24h 统计 100M，混了多个产品。无配额条。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "gakhil96-mixed-100m-api-estimate-x-2026-11-18",
+    "grade": "Medium",
+    "postId": "2122861045593375032",
+    "url": "https://x.com/gakhil96/status/2122861045593375032",
+    "author": "gakhil96",
+    "createdAt": "2026-11-18T01:14:48Z",
+    "planOrModel": "第三方仪表盘，混了 Codex、Claude Code、Antigravity。不是订阅控制台。",
+    "hasScreenshot": true,
+    "screenshotFields": "Processed 100M，27 sessions。Codex 53.1M / $9.82 / 12 sessions；Claude Code 46.6M / $27.11 / 14 sessions；Antigravity 365K / $0.37 / 1 session。Cached input 96.6M，uncached input 1.46M，output 538K，cache savings $270.21。",
+    "tokens": "100M 是工具统计，不是配额。",
+    "quotaPercent": null,
+    "recommendation": "暂不采用",
+    "why": "有分项 token，没有对应配额条，而且跨产品、是 API 估值。",
+    "evidenceFile": "evidence/gakhil96-mixed-100m-api-estimate-x-2026-11-18.json"
+  }
+}

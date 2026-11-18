@@ -1,0 +1,28 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "14 日回填。ChatGPT Pro 周剩余 4%，1 分钟后重置。无 token。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "jkgorka-chatgpt-pro-weekly4-left-x-2026-11-14",
+    "grade": "Medium",
+    "postId": "2121417865274556632",
+    "url": "https://x.com/jkgorka/status/2121417865274556632",
+    "author": "jkgorka",
+    "createdAt": "2026-11-14T01:40:07Z",
+    "windowNote": "14 日回填，此前未入库。与同作者的 SuperGrok session 帖不是同一条。",
+    "planOrModel": "Usage source: Your Pro plan。",
+    "hasScreenshot": true,
+    "screenshotFields": "Weekly limit 4% left，Resets in 1m。Credits 0。无 5h 行，无 token。",
+    "tokens": null,
+    "recommendation": "暂不采用",
+    "why": "只有周剩余百分比。",
+    "evidenceFile": "evidence/jkgorka-chatgpt-pro-weekly4-left-x-2026-11-14.json"
+  }
+}

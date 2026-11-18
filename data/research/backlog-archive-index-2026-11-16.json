@@ -4,10 +4,16 @@
   "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
   "parentIndex": "backlog-archive-index-2026-11-15.json",
   "laterIncrement": {
-    "date": "2026-11-17",
-    "index": "backlog-archive-index-2026-11-17.json",
-    "scan": "x-scan-2026-11-17.json",
-    "note": "11-17 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-16 及更早的采用判断不改写。已把 main 057882f6b5d1e072648a22856e14a92614de7361（Merge #236，OpenCode Go qwen4-max 官方 API 价，research-only）merge 进本分支，不重计、不改 adopted。X 上的二手 $1.50/$4.50 不作为未核实新项。没有可直接上线的 adopted 改动。"
+    "date": "2026-11-18",
+    "index": "backlog-archive-index-2026-11-18.json",
+    "scan": "x-scan-2026-11-18.json",
+    "previous": {
+      "date": "2026-11-17",
+      "index": "backlog-archive-index-2026-11-17.json",
+      "scan": "x-scan-2026-11-17.json",
+      "note": "11-17 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-16 及更早的采用判断不改写。已把 main 057882f6b5d1e072648a22856e14a92614de7361（Merge #236，OpenCode Go qwen4-max 官方 API 价，research-only）merge 进本分支，不重计、不改 adopted。X 上的二手 $1.50/$4.50 不作为未核实新项。没有可直接上线的 adopted 改动。"
+    },
+    "note": "11-18 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-17 及更早的采用判断不改写，唯 #240 按补图更正为 High、仍不采用。已把 main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5（#238 Magpie round3、#241 Command Code GOAT Qwen4 Max / Hy4 Flash，均 research-only）merge 进本分支，不重计、不改 adopted。OpenCode Go × GLM-5.3 月限 $200 只归档待核对试算。没有可直接上线的 adopted 改动。"
   },
   "pullRequest": 234,
   "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",

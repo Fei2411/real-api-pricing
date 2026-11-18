@@ -3,6 +3,12 @@
   "kind": "research-archive-increment",
   "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
   "parentIndex": "backlog-archive-index-2026-11-16.json",
+  "laterIncrement": {
+    "date": "2026-11-18",
+    "index": "backlog-archive-index-2026-11-18.json",
+    "scan": "x-scan-2026-11-18.json",
+    "note": "11-18 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-17 及更早的采用判断不改写，唯 #240 按补图更正为 High、仍不采用。已把 main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5（#238 Magpie round3、#241 Command Code GOAT Qwen4 Max / Hy4 Flash，均 research-only）merge 进本分支，不重计、不改 adopted。OpenCode Go × GLM-5.3 月限 $200 只归档待核对试算。没有可直接上线的 adopted 改动。"
+  },
   "pullRequest": 234,
   "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",
   "scanEndUtc": "2026-11-17T01:37:06Z",
@@ -70,7 +76,7 @@
     {
       "file": "official-qwen4-max-preview-credits-2026-11-11.json",
       "item": "Qwen4-Max-Preview 预览折扣：预览 2 折，夜间再 4 折为标准价的 0.8 折，预览期至 2026-11-25 24:00 UTC+8",
-      "thisPass": "本轮不重计、不覆盖。作者「非夜间约 5 倍」不采用：去掉夜间 4 折后仍是预览 2 折，应为 2.5 倍；相对标准价是 12.5 倍。官方「2 折≈5 倍用量」是预览对标准，不是夜间对非夜间。仍须维护者确认。本 PR 不改 adopted。"
+      "thisPass": "本轮不重计、不覆盖官方预览折扣。11-17 时作者把非夜间写成约 5 倍，该说法不采用。2026-11-18 作者已把 issue 正文改成 2.5 倍，与「去掉夜间 4 折后仍是预览 2 折」一致；相对标准价仍是 12.5 倍。官方「2 折≈5 倍用量」仍是预览对标准，不是夜间对非夜间。更正记在 #240 文件。仍须维护者确认。本 PR 不改 adopted。"
     },
     {
       "file": "official-antigravity-gemini-quota-reset-2026-11-13.json",
@@ -108,7 +114,7 @@
     "所有 ÷配额% 外推，禁止跨窗口、跨账号拼接",
     "Ismail_Founder https://x.com/Ismail_Founder/status/2122345697710125546（High，暂不采用）：官方 Cursor Usage，日期筛选 Nov 1–16, 2026。Weekly included 1% used（Cursor 1%，Resets Nov 23）。Additional $2.10 of $3，Resets Dec 1，Credit balance $0.00，Credit usage $2.10。目视纠正：Total 440.3M，Included 438.4M。口述 Total burned so far 440.3M 对得上 Total。扫描包 RapidOCR 把标签写反，不采用写反的数。440.3M 是区间总量，1% 是重置后的新一周。禁止 440.3M÷1%，禁止与已归档 2122008727335075933 的 227M / 225.3M / 周 100% 拼接。裁切无套餐档，无 input/cache/output。",
     "capputschino https://x.com/capputschino/status/2122445533520236546（新作者；形态接近 High，暂不采用）：自制图 “Grok Bot: measured from my own usage exports”，不是官方控制台。Before Nov 1 ~310–320M（Bots only）；Nov 1–15 220M（Bots only）；Super since Nov 15 ~760M*（Chat + Bots shared），其上标 202M used (26.6%)。饼图 99% Bots / <1% Chat。构成 Cached input 90% / Cache write 5% / Prompt 4% / Output 1%。脚注写明 760M 由 202M 与 26.6% 外推，estimate only。禁止再除一遍。cache% 不是配额%。",
-    "#240 https://github.com/Fei2411/real-api-pricing/issues/240（Medium，暂不采用）：千问 Token Plan 个人版 Lite × qwen4-max-preview。CLI 目视 type=token_plan_individual_lite、monthlyCredits.total=20000、usedPct=1.8950066，1.8950066%×20000=379.00132 算术成立，截图无 token 字段。作者称面板 token 合计 18,867,577（fresh input 1,474,782 + cache read 17,250,628 + cache write 0 + output 142,167），作者算术自洽，但没有面板截图。标题 227.6万 与正文 18,867,577 冲突，不取舍。禁止 ÷1.895% 外推。作者「非夜间约 5 倍 credits」不采用。不与 #236 OpenCode Go qwen4-max API 价拼接。",
+    "#240 https://github.com/Fei2411/real-api-pricing/issues/240：11-17 当时记为 Medium，因为没有面板截图，且标题 227.6万 与正文 18,867,577 未取舍，作者当时写非夜间约 5 倍。2026-11-18 作者补图并改为 2.5 倍。现行判断已更正为 High、仍不采用，见更新后的 mamaruo-qwen-tokenplan-lite-qwen4-max-preview-2026-11-16.json 与 backlog-archive-index-2026-11-18.json。禁止 ÷1.895% 外推。不与 #236 拼接。",
     "pcshipp https://x.com/pcshipp/status/2122490904313512445：官方 Claude Plan usage limits · Pro，5h 42%（11:10 PM 重置），Weekly all models 100%（Sat 3:30 AM 重置）。口述 Welcome to Codex 是打满 Claude 后换用，图不是 Codex 控制台。无 token。",
     "voidJan https://x.com/voidJan/status/2122479810610110960：Gemini 组周剩余 0.00%（112h 4m），5h Disabled（因撞周限）；Claude/GPT 组周剩余 61.98%，5h 100%。口述 Ultra 5x、两天用完，套餐名不在裁切里。无 token。不同于 Ethan151300 的 22% / 5h 0%。",
     "qijiefan https://x.com/qijiefan/status/2122457442059788707：口述 2 天登完，图上 Gemini 周剩余 28%、5h 100% left。以图为准。重复帖 2122457307699364198、2122457220973781225 只计一次。无 token。",
@@ -151,7 +157,7 @@
     "237": "外部研究 PR，保留，不关闭。",
     "238": "外部研究 PR，保留，不关闭。",
     "239": "正文为空，无法执行。不编造 AA 数字，不改站点，不关闭。",
-    "240": "本增量记为 Medium、不采用。不关闭。",
+    "240": "11-17 当时记为 Medium、不采用。11-18 更正为 High、仍不采用。不关闭。",
     "231-233": "Carbon 官方导入价、Token Plan Credits、Qwen4 预览折扣仍待维护者确认，本轮不重计、不覆盖。",
     "207": "仍视为已被 main 的 claude_pro × claude-opus-5.5 = 30.46 代替。该 PR 现为 dirty。不关闭。",
     "209": "无新的官方绝对 token 表，不改 Kimi 699 vs 官方 3.0× 的待裁定状态，不改 adopted。不关闭。",

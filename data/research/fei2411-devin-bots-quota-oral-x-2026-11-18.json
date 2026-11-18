@@ -1,0 +1,27 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "产品行为讨论。conversation 未翻完。不采用。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "fei2411-devin-bots-quota-oral-x-2026-11-18",
+    "grade": "Low",
+    "postId": "2122852754972656057",
+    "url": "https://x.com/Fei2411/status/2122852754972656057",
+    "author": "Fei2411",
+    "createdAt": "2026-11-18T00:41:52Z",
+    "planOrModel": "Devin Bots",
+    "hasScreenshot": false,
+    "oralText": "称 Devin Bots 消耗额度很快。跟帖 2122854115336483264 说应用来做专业工作而不是日常琐事，无数字。BroadwakeAI 2122859418828304623 是二手说法，图未作为本轮重点核读，不采用其中的额度结构。",
+    "tokens": null,
+    "recommendation": "暂不采用",
+    "why": "无硬数字。",
+    "evidenceFile": "evidence/fei2411-devin-bots-quota-oral-x-2026-11-18.json"
+  }
+}

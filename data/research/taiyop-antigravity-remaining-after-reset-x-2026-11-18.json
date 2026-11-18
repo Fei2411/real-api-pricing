@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "重置后的官方剩余百分比。无 token。可佐证周年重置，不能当满额表。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "taiyop-antigravity-remaining-after-reset-x-2026-11-18",
+    "grade": "Medium",
+    "postId": "2122859657605824621",
+    "url": "https://x.com/taiyop/status/2122859657605824621",
+    "author": "taiyop",
+    "createdAt": "2026-11-18T01:09:17Z",
+    "planOrModel": "官方 Gemini/Antigravity 用量弹层。套餐名未写。口述对各模型 effort=low 问 what time?。",
+    "hasScreenshot": true,
+    "screenshotFields": "Gemini Models 周剩余 99%、5h 剩余 99%。Claude and GPT 周剩余 99%、5h 剩余 97%。Gemini 4 Argon 周剩余 99%。刷新文案 6 days 23 hours / 4 hours 59 minutes。",
+    "oralText": "Opus 5.5 一句 what time?（effort=low）吃掉 5h 的 3%，与 Claude/GPT 5h 剩余 97% 相符。",
+    "tokens": null,
+    "quotaPercent": "剩余百分比，不是已用满额，也没有 token。",
+    "recommendation": "暂不采用",
+    "why": "能佐证刚重置，不能当配额表。",
+    "evidenceFile": "evidence/taiyop-antigravity-remaining-after-reset-x-2026-11-18.json"
+  }
+}

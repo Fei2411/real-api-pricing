@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "重置后图上 Gemini 剩余 97%。口述「这周视频 34%」与图冲突，两边都保留。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "shengtang135754-reset-97-oral34-x-2026-11-18",
+    "grade": "Medium",
+    "postId": "2122849514168172617",
+    "url": "https://x.com/shengtang135754/status/2122849514168172617",
+    "author": "shengtang135754",
+    "createdAt": "2026-11-18T00:28:59Z",
+    "planOrModel": "官方 Antigravity/Gemini 弹层。套餐名未写。",
+    "hasScreenshot": true,
+    "screenshotFields": "重置后 Gemini Models 周/5h 剩余均为 97%（周刷新 6 days 23 hours，5h 刷新 4 hours 44 minutes）。Claude and GPT 周/5h 剩余均为 100%。图上没有 34%。",
+    "oralText": "口述这周做视频消耗了 34%。只当重置前口述。",
+    "tokens": null,
+    "conflictsToKeep": "34% 与图上 Gemini 剩余 97% 冲突。不平均，不外推。",
+    "recommendation": "暂不采用",
+    "why": "百分比可佐证中途重置。没有 token。",
+    "evidenceFile": "evidence/shengtang135754-reset-97-oral34-x-2026-11-18.json"
+  }
+}

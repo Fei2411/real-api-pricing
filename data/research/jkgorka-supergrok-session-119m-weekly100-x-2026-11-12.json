@@ -1,0 +1,48 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "暂不采用。119,127,482 是 session usage，不是 SuperGrok 周合计。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "jkgorka-supergrok-session-119m-weekly100-x-2026-11-12",
+    "grade": "High",
+    "gradeNote": "此前未入库。客户端页同时有周条和 token 分项，分级 High。分项标题是 session，不采用。",
+    "sourceType": "x_public_scan",
+    "postId": "2120989185645613307",
+    "url": "https://x.com/jkgorka/status/2120989185645613307",
+    "author": "jkgorka",
+    "createdAt": "2026-11-12T21:16:42Z",
+    "windowNote": "14 日回填。创建时间早于本轮增量起点，落在 14 日回填起点 2026-11-04T01:37:06Z 之内。",
+    "planOrModel": "客户端 Usage limit 页。Weekly limit (SuperGrok)。不是 grok.com 官方控制台。",
+    "hasScreenshot": true,
+    "screenshotFields": {
+      "weekly": "Weekly limit (SuperGrok) 100%，Resets November 12, 06:21",
+      "sessionLabel": "Session usage (since start or last resume)",
+      "input": 118121623,
+      "cachedWithinInput": 112232832,
+      "output": 1005859,
+      "reasoningWithinOutput": 689600,
+      "total": 119127482,
+      "sumHolds": "118121623+1005859=119127482",
+      "calls": 1244,
+      "apiTime": "4h22m",
+      "apiCost": "$25.7276"
+    },
+    "oralText": "作者写的是 one session，与图上的 session 标题一致。",
+    "quotaPercent": "SuperGrok weekly 100%。",
+    "tokens": {
+      "label": "session，不是周合计",
+      "total": 119127482
+    },
+    "conflictsToKeep": "周条 100% 不能把 session 119M 收成周池满额。$25.7276 是 API 估值。缓存数不是配额%。",
+    "recommendation": "暂不采用",
+    "why": "119M 是一次 session，不是 SuperGrok 周配额。",
+    "evidenceFile": "evidence/jkgorka-supergrok-session-119m-weekly100-x-2026-11-12.json"
+  }
+}

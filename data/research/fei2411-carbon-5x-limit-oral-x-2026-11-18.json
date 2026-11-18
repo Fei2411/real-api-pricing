@@ -1,0 +1,28 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "x_public_scan",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "X 与 GitHub 截图不入库。图上字段来自扫描员目视，不把扫描包 images/ 文件名、分页 token 或账号标识写入仓库。",
+  "scopeNote": "讨论项，不是配额表。不与官方「Carbon 目前只给 Ultra」拼算。",
+  "evidence": {
+    "alreadyInPrOrMain": false,
+    "defaultBranchSearch": "写入前 origin/main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5 与本分支 data/ 检索本 post ID 为 0。截图、分页 token、账号标识不入库。",
+    "imagesVisuallyChecked": [],
+    "screenshotsCommitted": false,
+    "id": "fei2411-carbon-5x-limit-oral-x-2026-11-18",
+    "grade": "Low",
+    "postId": "2122863640680513866",
+    "url": "https://x.com/Fei2411/status/2122863640680513866",
+    "author": "Fei2411",
+    "createdAt": "2026-11-18T01:25:07Z",
+    "planOrModel": "口述 5x 上的 Carbon。",
+    "hasScreenshot": false,
+    "oralText": "Carbon 很快，但 usage limit 太小，5x 几乎干不完活。无数字。",
+    "conversationNotFinished": "根帖 2122773936266182899 的 conversation 只翻了 1 页。",
+    "tokens": null,
+    "recommendation": "暂不采用",
+    "why": "无截图、无数字。",
+    "evidenceFile": "evidence/fei2411-carbon-5x-limit-oral-x-2026-11-18.json"
+  }
+}
