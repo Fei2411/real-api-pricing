@@ -1,0 +1,28 @@
+{
+  "id": "tigerbr-l-grok-weekly48-used-x-2026-11-19",
+  "grade": "Medium",
+  "sourceType": "official_ui_screenshot",
+  "postId": "2123211208014856651",
+  "url": "https://x.com/TigerBR_L/status/2123211208014856651",
+  "author": "TigerBR_L",
+  "authorId": "4100400493",
+  "createdAt": "2026-11-19T00:26:14.000Z",
+  "planOrModel": "图2 用量页未写套餐名；图1 聊天里作者拿同价位 Codex $20 对比。",
+  "hasScreenshot": true,
+  "imagesVisuallyChecked": [
+    "images/TigerBR_L-2123211208014856651-1.jpg",
+    "images/TigerBR_L-2123211208014856651-2.jpg"
+  ],
+  "screenshotFields": {
+    "image1": "客服/机器人对话，不是控制台。作者称额度少、同样 Codex 20 美元套餐更耐用。",
+    "image2": "用量页：每周用量限额 48%，7 天后重置。条接近一半。未写「已用」或「剩余」，但口述明确是用了 48%。",
+    "tokens": null
+  },
+  "oralText": "正好12个小时，额度就用了48％，简单的几个任务，grok bot是好用，不过额度真不耐用",
+  "recommendation": "暂不采用",
+  "why": "只有官方周百分比，无 token，套餐未在用量页标注。48% 按口述记为已用。",
+  "alreadyInPrOrMain": false,
+  "targetPath": "data/research/tigerbr-l-grok-weekly48-used-x-2026-11-19.json",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false
+}

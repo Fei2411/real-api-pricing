@@ -1,0 +1,54 @@
+{
+  "recordedAt": "2026-11-19",
+  "kind": "official-model-launch",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "recommendAdopt": false,
+  "recommendDiscussAdopt": true,
+  "title": "GPT-6.2 Astra and Sol official API prices and availability; no official subscription token quotas found",
+  "issue": 245,
+  "sources": [
+    "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+    "https://developers.openai.com/api/docs/models/gpt-6.2-astra.md",
+    "https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol"
+  ],
+  "announced": "2026-11-17 (ChatGPT Learn dated November 17, 2026)",
+  "availabilityQuote": "Starting today, GPT-6.2 Astra and Sol are available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex. Pro 500 subscribers can use Ultrafast with either model. For the first time, we're also bringing Ultrafast to Pro 200 subscribers, starting with GPT-6.2 Sol.",
+  "efficiencyQuote": "Compared with GPT-6.1 Sol, GPT-6.2 Sol is smarter, more efficient, and lets you complete more tasks on the same paid plan.",
+  "apiPricesUsdPerMTok": {
+    "gpt-6.2-astra": {
+      "input": 8,
+      "cachedInput": 0.4,
+      "cacheWrite30m": 10,
+      "output": 40,
+      "note": "20% lower input/output than GPT-6 Astra; 60% discount on cached input. Long-context and Ultrafast multipliers exist on the docs page and are not used in the standard-workload trial below."
+    },
+    "gpt-6.2-sol": {
+      "input": 2,
+      "cachedInput": 0.1,
+      "output": 10,
+      "note": "Official announcement: keeps GPT-6.1 Sol API token prices. Cache-write was not restated in the intro post; do not invent it here."
+    }
+  },
+  "trialBlendedStandardWorkload": {
+    "workload": "97.0% cache read / 2.50% input / 0.50% output (same as existing openai_*_api rows; cache write not in this blend)",
+    "gpt-6.2-astra": {
+      "realUsdPerMTok": 0.788,
+      "formula": "0.97*0.40 + 0.025*8 + 0.005*40"
+    },
+    "gpt-6.2-sol": {
+      "realUsdPerMTok": 0.197,
+      "formula": "0.97*0.10 + 0.025*2 + 0.005*10"
+    }
+  },
+  "adoptedGap": {
+    "subscriptionRowsForGpt62": "none — adopted has no gpt-6.2-astra or gpt-6.2-sol subscription rows. Existing ChatGPT rows still use gpt-6.1-sol / gpt-5.6-* / gpt-6-*.",
+    "apiRowsForGpt62": "none"
+  },
+  "whyNotAutoAdopt": [
+    "官方只公布了 API 标价和「同一付费计划能完成更多任务」的效率说法，没有给出 Plus/Pro 的新 token 池或配额百分比，不能用效率宣传外推订阅额度。",
+    "API 行若要加入 adopted，属于官方标价×统一负载，数字可算，但仍需维护者确认是否本轮写入，以及是否同时收录 Ultrafast / 长上下文乘数。",
+    "订阅额度应等待可追溯的面板或官方配额表，不把 6.1 Sol 的额度直接改挂到 6.2。"
+  ],
+  "confidence": "high for API list prices and availability; no subscription quota numbers",
+  "basis": "official"
+}

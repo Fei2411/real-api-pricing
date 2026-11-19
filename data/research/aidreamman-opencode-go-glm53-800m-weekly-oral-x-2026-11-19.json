@@ -1,0 +1,23 @@
+{
+  "id": "aidreamman-opencode-go-glm53-800m-weekly-oral-x-2026-11-19",
+  "grade": "Low",
+  "sourceType": "oral_plus_official_table_screenshot",
+  "postId": "2123207053460287776",
+  "relatedPostId": "2123203749309206828",
+  "url": "https://x.com/AIDREAMMAN/status/2123207053460287776",
+  "author": "AIDREAMMAN",
+  "authorId": "2087913485460180992",
+  "createdAt": "2026-11-19T00:09:43.000Z",
+  "hasScreenshot": true,
+  "imagesVisuallyChecked": [
+    "images/AIDREAMMAN-2123207053460287776-1.jpg"
+  ],
+  "screenshotFields": "与官方 Go 限额表相同，红框 $500。没有周 8 亿 token、没有个人用量条。",
+  "oralText": "10美金有500美金的额度……实测周额度8亿多GLM5.3，比GLM官方的1000多人民币的Max套餐给的量都多。",
+  "recommendation": "暂不采用",
+  "why": "「周额度 8 亿多」纯口述，截图不能支持。$500 官方表已在 round2 官方文件中记录，不在本条重复采用。禁止把 8 亿当打满实测。",
+  "alreadyInPrOrMain": false,
+  "targetPath": "data/research/aidreamman-opencode-go-glm53-800m-weekly-oral-x-2026-11-19.json",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false
+}

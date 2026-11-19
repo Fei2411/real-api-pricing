@@ -1,0 +1,37 @@
+{
+  "id": "llmlearnerai-antigravity-sonnet-ok-gemini-neon-quota-x-2026-11-19",
+  "grade": "Medium",
+  "sourceType": "official_ui_screenshot",
+  "postId": "2123219679665947091",
+  "url": "https://x.com/LLMLearnerAI/status/2123219679665947091",
+  "author": "LLMLearnerAI",
+  "authorId": "1939336034954657793",
+  "createdAt": "2026-11-19T00:59:53.000Z",
+  "planOrModel": "口述 $20 subscription；截图是 Antigravity 风格 Models & Quota，未写套餐名。",
+  "hasScreenshot": true,
+  "imagesVisuallyChecked": [
+    "images/LLMLearnerAI-2123219679665947091-1.png"
+  ],
+  "screenshotFields": {
+    "modelCommand": "/model set to Claude Sonnet 5.5 (Low); prompt just return \"ok\" → ok",
+    "geminiGroup": {
+      "models": "Gemini 4 Neon, Gemini 4 Hydrogen, Orchestrator (Neon), Gemini 3.8 Flash",
+      "weeklyRemaining": "90.86%; refreshes in 158h 7m",
+      "fiveHourRemaining": "79.30%; refreshes in 4h 19m"
+    },
+    "claudeGptGroup": {
+      "models": "Claude Opus 5.5, Claude Sonnet 5.5, GPT-OSS 120B",
+      "weeklyRemaining": "99.39%; refreshes in 167h 59m",
+      "fiveHourRemaining": "98.78%; refreshes in 4h 59m"
+    },
+    "tokens": null
+  },
+  "oralText": "Do u know the quota for Antigravity on the $20 subscription? Sonnet (low) return \"ok\"— ate 20% of the 5-hour limit and 0.6% of the weekly limit. Gemini 4 Neon collecting its data and releasing it used 20% of the 5-hour limit and 10% of the weekly limit. Way too limited!",
+  "conflictsToKeep": "Claude/GPT 周已用约 0.61%，与口述 0.6% 相符；但 5 小时剩余 98.78%（约已用 1.22%）与口述「Sonnet ok 吃掉 5h 的 20%」不符。Gemini 周剩余 90.86%（约已用 9.14%）接近口述 10%；5h 剩余 79.30%（约已用 20.70%）接近口述 20%。套餐 $20 只在口述。图上 Gemini 池含 Neon+Hydrogen+Orchestrator(Neon)+3.8 Flash，未见 Carbon。",
+  "recommendation": "暂不采用",
+  "why": "官方风格配额条只有剩余百分比，无 token。口述与图在 Sonnet 5h 消耗上冲突，须原样保留。不能用百分比反推池大小。对 #245 Gemini 4 分池有讨论价值，但不能当订阅额度采用值。",
+  "alreadyInPrOrMain": false,
+  "targetPath": "data/research/llmlearnerai-antigravity-sonnet-ok-gemini-neon-quota-x-2026-11-19.json",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false
+}

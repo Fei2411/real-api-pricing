@@ -1,0 +1,30 @@
+{
+  "id": "chenfuxi3698-x-premium-weekly100-x-2026-11-19",
+  "grade": "Medium",
+  "sourceType": "official_ui_screenshot",
+  "postId": "2123222830263541799",
+  "url": "https://x.com/chenfuxi3698/status/2123222830263541799",
+  "author": "chenfuxi3698",
+  "authorId": "2087460219005911040",
+  "createdAt": "2026-11-19T01:12:24.000Z",
+  "planOrModel": "截图：X 用量与账单，计划 Premium。",
+  "hasScreenshot": true,
+  "imagesVisuallyChecked": [
+    "images/chenfuxi3698-2123222830263541799-1.png"
+  ],
+  "screenshotFields": {
+    "plan": "Premium",
+    "weeklyUsage": "100% 已用",
+    "resets": "2天后重置",
+    "note": "你已用完本周的附带用量。在下方开启额度即可继续使用。",
+    "tokens": null
+  },
+  "oralText": "Grok bot现在真是没法用了，一个小小的修复就耗掉了周额度的30%。还有两天时间，这个额度才重置",
+  "conflictsToKeep": "图为周用量 100% 已用、2 天后重置；口述是「一个小修复耗掉周额度 30%」。可能是增量口述，也可能把当前用量说成 30%。冲突原样保留。无 token。",
+  "recommendation": "暂不采用",
+  "why": "官方周条打满，但无 token，且口述 30% 与图 100% 不完全对齐。",
+  "alreadyInPrOrMain": false,
+  "targetPath": "data/research/chenfuxi3698-x-premium-weekly100-x-2026-11-19.json",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false
+}

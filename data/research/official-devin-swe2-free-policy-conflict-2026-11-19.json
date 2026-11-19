@@ -1,0 +1,60 @@
+{
+  "id": "official-devin-swe2-free-policy-conflict-2026-11-19",
+  "recordedAt": "2026-11-19T01:45:00Z",
+  "sourceType": "official_docs_blog_pricing_conflict",
+  "adoptionStatus": "research-only; do not change adopted.csv until maintainer confirmation",
+  "recommendAdopt": false,
+  "pendingMaintainerConfirmation": true,
+  "confidence": "Medium",
+  "grade": "Medium (official but conflicting surfaces)",
+  "planId": "devin_pro",
+  "model": "swe-2",
+  "alreadyInRepo": {
+    "adopted": "devin_pro × swe-2：unmetered=true，promo_until=2026-10-31，data_date=2026-09-10。该截止日期在本扫描日（2026-11-19）已经过期。#245 指出限时免费已改永久免费，表里还显示旧截止日期。",
+    "research": "devin-swe2-round1-2026-09-12.json 在 main；PR #234 另有 mirrercrouse-devin-swe2-weekly9-x-2026-11-16.json 等，不是本条政策冲突的归档。"
+  },
+  "observed": {
+    "blog": {
+      "url": "https://devin.ai/blog/devin-teams-plan",
+      "date": "2026-11-12",
+      "quote": "We're also making free SWE-2 in Devin Desktop and CLI a permanent part of our Teams, Pro, and Max plans."
+    },
+    "pricingPage": {
+      "url": "https://devin.ai/pricing",
+      "fetchedAt": "2026-11-19T01:41:00Z",
+      "proBullet": "Free use of SWE-2",
+      "endDateOnPricingPage": null
+    },
+    "docsDesktopModels": {
+      "url": "https://docs.devin.ai/desktop/models",
+      "fetchedAt": "2026-11-19T01:41:00Z",
+      "quote": "SWE-2 is free for self-serve plans in Devin Desktop and Devin CLI through November 30, 2026; it does not apply to Devin cloud sessions. List pricing ($3.00/1M input, $15.00/1M output, $0.30/1M cache input) applies afterward.",
+      "swe2FlashNote": "SWE-2 Flash is free until December 4, 2026 at 18:00 UTC."
+    },
+    "selfServeDocs": {
+      "url": "https://docs.devin.ai/admin/billing/self-serve",
+      "note": "Teams Free mode: each member can run up to 2 cloud sessions at a time at no cost, powered by SWE-2. This is cloud Free mode, distinct from Desktop/CLI free SWE-2."
+    }
+  },
+  "corroboratingPosts": [
+    {
+      "url": "https://x.com/jomagonmar/status/2123173159277035936",
+      "author": "jomagonmar",
+      "createdAt": "2026-11-18T21:55:02.000Z",
+      "screenshots": [
+        "images/jomagonmar-2123173159277035936-1.jpg",
+        "images/jomagonmar-2123173159277035936-2.jpg"
+      ],
+      "visual": "图1 就是 docs.devin.ai Desktop Models 页，蓝条原文与本轮抓取一致：self-serve Desktop/CLI 免费到 2026-11-30，之后 $3/$15/$0.30，且不适用 cloud。图2 是 Devin 选择器，可见 SWE-2 Lightning / Flash，不是配额条。口述「免费到 11 月 30 号」跟文档一致，但与 11-12 博客「permanent」冲突。"
+    },
+    {
+      "url": "https://x.com/toolsbisnis/status/2123139455460753757",
+      "author": "toolsbisnis",
+      "createdAt": "2026-11-18T19:41:06.000Z",
+      "screenshot": "images/toolsbisnis-2123139455460753757-1.jpg",
+      "visual": "不是官方页，是模型合成摘要（自称 60 sources）。它已经点出博客/定价页写永久、部分文档仍写 30 Nov。只作讨论回声，不算独立官方证据。"
+    }
+  ],
+  "whyNotAdoptYet": "adopted 里 promo_until=2026-10-31 已过期，#245 的「不要还显示旧截止日期」成立，但不能在官方冲突未裁定前改成「永久免费」或「到 11-30」。博客与定价页（付费档 Desktop+CLI 永久免费）和当前文档（到 2026-11-30，之后按 list price，且不包括 cloud）相互矛盾。SWE-2 Flash 另有 2026-12-04 18:00 UTC 截止。建议研究归档冲突，由维护者裁定 adopted 行怎么改。",
+  "targetPath": "data/research/official-devin-swe2-free-policy-conflict-2026-11-19.json"
+}

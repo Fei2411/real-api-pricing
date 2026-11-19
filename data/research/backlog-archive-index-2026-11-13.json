@@ -4,34 +4,40 @@
   "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
   "parentIndex": "backlog-archive-index-2026-11-12.json",
   "laterIncrement": {
-    "date": "2026-11-18",
-    "index": "backlog-archive-index-2026-11-18.json",
-    "scan": "x-scan-2026-11-18.json",
+    "date": "2026-11-19",
+    "index": "backlog-archive-index-2026-11-19.json",
+    "scan": "x-scan-2026-11-19.json",
     "previous": {
-      "date": "2026-11-17",
-      "index": "backlog-archive-index-2026-11-17.json",
-      "scan": "x-scan-2026-11-17.json",
+      "date": "2026-11-18",
+      "index": "backlog-archive-index-2026-11-18.json",
+      "scan": "x-scan-2026-11-18.json",
       "previous": {
-        "date": "2026-11-16",
-        "index": "backlog-archive-index-2026-11-16.json",
-        "scan": "x-scan-2026-11-16.json",
+        "date": "2026-11-17",
+        "index": "backlog-archive-index-2026-11-17.json",
+        "scan": "x-scan-2026-11-17.json",
         "previous": {
-          "date": "2026-11-15",
-          "index": "backlog-archive-index-2026-11-15.json",
-          "scan": "x-scan-2026-11-15.json",
+          "date": "2026-11-16",
+          "index": "backlog-archive-index-2026-11-16.json",
+          "scan": "x-scan-2026-11-16.json",
           "previous": {
-            "date": "2026-11-14",
-            "index": "backlog-archive-index-2026-11-14.json",
-            "scan": "x-scan-2026-11-14.json",
-            "note": "11-14 早扫描追加在同一 PR #234。本索引已归档的采用判断不改写。Hydrogen API 价与 Codex banked reset 不重计。没有可直接上线的 adopted 改动。"
+            "date": "2026-11-15",
+            "index": "backlog-archive-index-2026-11-15.json",
+            "scan": "x-scan-2026-11-15.json",
+            "previous": {
+              "date": "2026-11-14",
+              "index": "backlog-archive-index-2026-11-14.json",
+              "scan": "x-scan-2026-11-14.json",
+              "note": "11-14 早扫描追加在同一 PR #234。本索引已归档的采用判断不改写。Hydrogen API 价与 Codex banked reset 不重计。没有可直接上线的 adopted 改动。"
+            },
+            "note": "11-15 早扫描追加在同一 PR #234。本索引已归档的采用判断不改写。Hydrogen API 价、Codex banked reset 与 11-13T23:13Z Gemini 配额重置不重计，也不与 11-13T00:42Z Orchestrator 对 Pro 开放混写。没有可直接上线的 adopted 改动。"
           },
-          "note": "11-15 早扫描追加在同一 PR #234。本索引已归档的采用判断不改写。Hydrogen API 价、Codex banked reset 与 11-13T23:13Z Gemini 配额重置不重计，也不与 11-13T00:42Z Orchestrator 对 Pro 开放混写。没有可直接上线的 adopted 改动。"
+          "note": "11-16 早扫描追加在同一 PR #234，不另开分支。指向最新增量。11-15 及更早的采用判断不改写。Hydrogen API 价、Codex banked reset、11-13T23:13Z Gemini 配额重置、Carbon/Argon 价与 11-13T00:42Z Orchestrator 对 Pro 开放不重计。官方 Ultra 100 再述（2121847427582022021）不是新测量。没有可直接上线的 adopted 改动。"
         },
-        "note": "11-16 早扫描追加在同一 PR #234，不另开分支。指向最新增量。11-15 及更早的采用判断不改写。Hydrogen API 价、Codex banked reset、11-13T23:13Z Gemini 配额重置、Carbon/Argon 价与 11-13T00:42Z Orchestrator 对 Pro 开放不重计。官方 Ultra 100 再述（2121847427582022021）不是新测量。没有可直接上线的 adopted 改动。"
+        "note": "11-17 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-16 及更早的采用判断不改写。已把 main 057882f6b5d1e072648a22856e14a92614de7361（Merge #236，OpenCode Go qwen4-max 官方 API 价，research-only）merge 进本分支，不重计、不改 adopted。X 上的二手 $1.50/$4.50 不作为未核实新项。没有可直接上线的 adopted 改动。"
       },
-      "note": "11-17 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-16 及更早的采用判断不改写。已把 main 057882f6b5d1e072648a22856e14a92614de7361（Merge #236，OpenCode Go qwen4-max 官方 API 价，research-only）merge 进本分支，不重计、不改 adopted。X 上的二手 $1.50/$4.50 不作为未核实新项。没有可直接上线的 adopted 改动。"
+      "note": "11-18 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-17 及更早的采用判断不改写，唯 #240 按补图更正为 High、仍不采用。已把 main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5（#238 Magpie round3、#241 Command Code GOAT Qwen4 Max / Hy4 Flash，均 research-only）merge 进本分支，不重计、不改 adopted。OpenCode Go × GLM-5.3 月限 $200 只归档待核对试算。没有可直接上线的 adopted 改动。"
     },
-    "note": "11-18 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-17 及更早的采用判断不改写，唯 #240 按补图更正为 High、仍不采用。已把 main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5（#238 Magpie round3、#241 Command Code GOAT Qwen4 Max / Hy4 Flash，均 research-only）merge 进本分支，不重计、不改 adopted。OpenCode Go × GLM-5.3 月限 $200 只归档待核对试算。没有可直接上线的 adopted 改动。"
+    "note": "11-19 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-18 及更早的采用判断不改写，只注明 11-18 的 OpenCode Go × GLM-5.3 月限 $200 讨论项已被本轮官方 Go $500 / Plus $1000 / Teams $505、promo_until=2026-11-22 捕获取代，仍不写入 adopted。已把 main 40cfb4e34ca2263ef4ddf4b06c44cfa578a3d10c（#242 GOAT Hy4、#243 OpenCode Go GLM-5.3 $200 round1、#244 OpenCode Go Qwen4 Max round2，均 research-only）merge 进本分支，不重计、不改 adopted。recommendAdopt 为空。没有可直接上线的 adopted 改动。"
   },
   "pullRequest": 234,
   "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",

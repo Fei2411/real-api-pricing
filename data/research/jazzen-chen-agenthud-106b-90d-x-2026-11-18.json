@@ -1,0 +1,44 @@
+{
+  "id": "jazzen-chen-agenthud-106b-90d-x-2026-11-18",
+  "grade": "Medium",
+  "sourceType": "third_party_dashboard_screenshot",
+  "postId": "2123111378865320320",
+  "url": "https://x.com/Jazzen_Chen/status/2123111378865320320",
+  "author": "Jazzen_Chen",
+  "authorId": "1642719241286868992",
+  "createdAt": "2026-11-18T17:49:32.000Z",
+  "planOrModel": "多工具 90 天混合：Claude Code / Codex / Antigravity / DeepSeek / WorkBuddy / Cursor。套餐在图上未按产品隔离。作者是 Agent HUD 开发者。",
+  "hasScreenshot": true,
+  "imagesVisuallyChecked": [
+    "images/Jazzen_Chen-2123111378865320320-1.jpg",
+    "images/Jazzen_Chen-2123111378865320320-2.jpg",
+    "images/Jazzen_Chen-2123111378865320320-3.jpg",
+    "images/Jazzen_Chen-2123111378865320320-4.jpg"
+  ],
+  "screenshotFields": {
+    "toolBanner": "Screenshot: Agent HUD statistics; Last 90 days; Usage tab, All tokens, 90 days",
+    "totalTokens90d": "106B",
+    "sessions": 1656,
+    "busiestDay": "6.1B on Mon Sep 28",
+    "cacheHitRate": "98.2%（缓存命中率，不是 quota%）",
+    "apiWorth": "$47,529+ +¥22.78",
+    "subscriptionsReturned": "53x；$47,037 on $890 of plans（图2）。图4 口述滑动写 paid under $1,000、50x+ return。",
+    "recordedSince": "Mar 25, 2026；active days 230/240；avg active day 556M；140-day streak",
+    "byAgent": {
+      "Claude Code": "85B (80%), 851 sessions, cost $38,632.23+；Input 1.0M, Output 118M, Reasoning 112M, Cache write 1.3B, Cache read 83B；Opus 5.5 67B 79%, Opus 5 13B 15%, Fable 5.1 2.3B 3%, 8 more 2.8B；Quota by day 标注 5h 1%, Weekly 22%, Fable 0%",
+      "Codex": "19B (18%), 646 sessions, $8,405.04+；Input 453M, Output 29M, Reasoning 20M, Cache write 0, Cache read 18B；gpt-6.1-sol 11B 58%, gpt-5.6-sol 3.9B 21%, gpt-6-astra 2.7B 14%；Quota Weekly 4%, Monthly 0%",
+      "Antigravity": "2.4B (2%), 97 sessions, $489.92+；Input 130M, Output 8.2M, Reasoning 4.6M, Cache read 2.2B；gemini-4-argon 1.1B 46%, gemini-3.8-flash 778M 33%, gemini-4-carbon 212M 9%；Quota Gemini 7d 0%, Gemini 5h 0%",
+      "DeepSeek": "208M",
+      "WorkBuddy": "1.6M",
+      "Cursor": "1.5M, grok-4.7 100%"
+    }
+  },
+  "oralText": "Just looked at my stats: I've burned through 106 billion tokens in the last 3 months without even noticing. I run a dozen-plus agents nonstop every day: Claude Code: 85B, 851 sessions, almost all Opus 5.5; Codex: 19B, 646 sessions, mostly gpt-6.1-sol; Antigravity: 2.4B, …",
+  "conflictsToKeep": "90 天 token 总量与图3右侧「Quota by day」百分比窗口不是同一口径；这些 % 也不是官方厂商配额条。API 估值 ≠ 订阅额度。cache 98.2% 不是 quota%。图2「$890 of plans」与图4「under $1,000」需保留。作者是 Agent HUD 开发者，仪表盘是第三方汇编。",
+  "recommendation": "暂不采用",
+  "why": "虽有详细 input/cache/output 分项，但是第三方 90 天混合多套餐多模型汇总，配额百分比与 token 窗口对不上，且不是官方控制台。禁止用 90 天总量或 API 价值反推任一订阅满额。",
+  "alreadyInPrOrMain": false,
+  "targetPath": "data/research/jazzen-chen-agenthud-106b-90d-x-2026-11-18.json",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false
+}

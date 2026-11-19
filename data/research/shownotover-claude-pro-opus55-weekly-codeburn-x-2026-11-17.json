@@ -1,0 +1,161 @@
+{
+  "id": "x-shownotover-claude-pro-opus55-weekly-codeburn-2026-11-17",
+  "recordedAt": "2026-11-17T07:30:00-08:00",
+  "timezoneNote": "Source timestamps are UTC (Z). Times in this file also given as America/Los_Angeles (PT, UTC-8).",
+  "sourceType": "x_post",
+  "adoptionStatus": "research-only; do not change adopted.csv; do not merge or deploy",
+  "recommendAdopt": false,
+  "confidence": "Medium",
+  "confidenceNote": "正文给出四周 token 与 API 等价金额，但配图是 CodeBurn「30 Days」抬头，可见日期为 2026-09-23 至 09-30，红箭头指向 $1309.27，看不到正文四周数字。周序列按口述/作者汇编记录。作者自称每周打满、已计入 cache，且同时每周用尽 Claude Max 与 Claude Pro，分项与套餐隔离未在图上证实。",
+  "planId": "claude_pro",
+  "planClaim": "$20 plan / Claude Pro (oral); author also said they use Claude Max completely every week",
+  "model": "claude-opus-5.5",
+  "modelNote": "Author reply: same Opus 5.5; have not calculated Sonnet.",
+  "tool": "npx codeburn report (author); Claude Code was tested but this screenshot is CodeBurn",
+  "source": {
+    "type": "x_post",
+    "url": "https://x.com/shownotover/status/2122673087103840767",
+    "account": "shownotover",
+    "authorId": "2080910665041010688",
+    "createdAt": "2026-11-17T12:47:55.000Z",
+    "createdAtPT": "2026-11-17 04:47:55 PT",
+    "conversationId": "2122673087103840767",
+    "replyCountAtFetch": 21,
+    "quoteCountAtFetch": 2,
+    "text": "🚨 claude users!! ($20 plan)\n\nClaude usage is being nerfed quitely!!\n\n- Oct 19 week: 655.6M token ($518 API)\n- Oct 26 week: 614.1M ($498 API)\n- Nov 2 week: 567.7M ($458 API)\n- THIS week: 432.1M ($424 API)\n\nThat's 655 Million down to 432 Million tokens!!",
+    "media": [
+      {
+        "type": "photo",
+        "url": "https://pbs.twimg.com/media/HXU_6HsWEAAPvDV.jpg",
+        "localPath": "images/shownotover-claude-weekly.jpg",
+        "width": 901,
+        "height": 352
+      }
+    ]
+  },
+  "distinctFrom": [
+    {
+      "url": "https://x.com/shownotover/status/2115142779525595566",
+      "what": "Cursor Pro $20 × Grok 4.7, oral 27M / screenshot 27.9M included @ monthly 7%. Different product. Do not merge into this item."
+    },
+    {
+      "what": "Historical shownotover Claude Pro /usage panel 32.87M = weekly 7% (claude-adoption-round8-2026-09-20.json). Already de-weighted from claude_pro × opus-5 on main. Different sample and window."
+    }
+  ],
+  "observed": {
+    "oralWeeklySeries": [
+      {
+        "weekLabel": "Oct 19 week",
+        "tokens": 655600000,
+        "apiWorthUsd": 518,
+        "impliedUsdPerMTok": 0.7901
+      },
+      {
+        "weekLabel": "Oct 26 week",
+        "tokens": 614100000,
+        "apiWorthUsd": 498,
+        "impliedUsdPerMTok": 0.811
+      },
+      {
+        "weekLabel": "Nov 2 week",
+        "tokens": 567700000,
+        "apiWorthUsd": 458,
+        "impliedUsdPerMTok": 0.8068
+      },
+      {
+        "weekLabel": "THIS week",
+        "tokens": 432100000,
+        "apiWorthUsd": 424,
+        "impliedUsdPerMTok": 0.9813,
+        "windowCaveat": "Posted 2026-11-17 04:47 PT Tuesday. If the week started Mon Nov 16, this may be an incomplete week unless the author already hit the cap, which they later claimed they do every week. Nov 9 week is missing from the series."
+      }
+    ],
+    "tokenDropOct19ToThisPct": -34.09,
+    "apiWorthDropOct19ToThisPct": -18.15,
+    "screenshot": {
+      "toolBanner": "CodeBurn 30 Days",
+      "costUsd": 1309.27,
+      "calls": 3671,
+      "sessionsAtLeast": 282,
+      "cacheHitStatedPct": 94.0,
+      "inputUncachedM": 90.5,
+      "outputM": 10.3,
+      "cachedB": 1.6,
+      "cacheWriteM": 13.0,
+      "dailyActivityVisibleDates": "2026-09-23 to 2026-09-30",
+      "redArrowPointsAt": "$1309.27",
+      "weeklySeriesVisible": false,
+      "planLabelVisible": false,
+      "modelLabelVisible": false,
+      "cacheHitFormula": "Not proven. If 1.60B cache_read / (90.5M uncached_in + 1.60B) = 94.65%. If write 13.0M is also in the denominator, 93.92% ≈ 94.0%. Figures are one-decimal rounded. Output is listed separately and should not enter the hit denominator under project rules.",
+      "doNotApply30dCacheToWeeklySeries": true
+    },
+    "authorThreadClarifications": [
+      {
+        "url": "https://x.com/shownotover/status/2122675393086054874",
+        "createdAtPT": "2026-11-17 04:57:05 PT",
+        "text": "Claude Code was tested but this one is `npx codeburn report`"
+      },
+      {
+        "url": "https://x.com/shownotover/status/2122674938628984861",
+        "createdAtPT": "2026-11-17 04:55:17 PT",
+        "text": "Yes, same Opus 5.5. Haven't calculated for Sonnet though"
+      },
+      {
+        "url": "https://x.com/shownotover/status/2122685142208770230",
+        "createdAtPT": "2026-11-17 05:35:50 PT",
+        "text": "Yes! (to 'Opus 5.5?')"
+      },
+      {
+        "url": "https://x.com/shownotover/status/2122706493372027131",
+        "createdAtPT": "2026-11-17 07:00:40 PT",
+        "text": "Yes! (to 'Accounted for cache hit?')"
+      },
+      {
+        "url": "https://x.com/shownotover/status/2122706614629326863",
+        "createdAtPT": "2026-11-17 07:01:09 PT",
+        "text": "Yes... I use Claude Max and Claude Pro completely every week"
+      },
+      {
+        "url": "https://x.com/shownotover/status/2122706829079884061",
+        "createdAtPT": "2026-11-17 07:02:00 PT",
+        "text": "Yes, I hit the cap in everyweek... I think the model quality changed that can be the reason why the cost remained the same while Output tokens were increased for same amount of work done."
+      },
+      {
+        "url": "https://x.com/shownotover/status/2122678655692517833",
+        "createdAtPT": "2026-11-17 05:10:03 PT",
+        "text": "I don't think so... Everything stayed the same except we got less usage (rejecting harness-efficiency explanation)"
+      }
+    ]
+  },
+  "dedup": {
+    "mainDefaultBranch": "0 hits for 2122673087103840767 / shownotover / 655.6",
+    "pr234": "Not in PR body or research filenames. Last PR 234 scan ended 2026-11-17T01:37:06Z (2026-11-16 17:37:06 PT), before this post.",
+    "localPrior": "Cursor sample 2115142779525595566 is in local x-scan-2026-10-28 / issue #150 notes only; different product. This Claude weekly series is new.",
+    "otherClaudeProWeeklyAlreadyInPr234": [
+      "data/research/octoberry-claude-pro-weekly-compiled-x-2026-11-13.json",
+      "data/research/pcshipp-claude-pro-weekly100-5h42-x-2026-11-17.json",
+      "data/research/bebuu-ai-claude-pro-30d-3_3b-weekly55-x-2026-11-14.json",
+      "data/research/torhilecharles-claude-pro-fable100-week53-x-2026-11-12.json"
+    ]
+  },
+  "currentAdoptedNotToOverwrite": {
+    "claude_pro_x_claude-opus-5.5": "30.46亿/月, high, 2026-09-22~2026-11-07, Anthropic-workload conversion from #52 + Reddit + maintainer 5h 12.5pp (30.54→30.46 on 2026-11-10)"
+  },
+  "whyNotAdopt": [
+    "Screenshot does not show the four weekly totals or API-worth figures in the tweet text",
+    "Visible screenshot window is CodeBurn 30 Days with late-September daily rows, not the Oct 19–Nov weekly series",
+    "94.0% cache hit is the 30-day header; do not attach it to the weekly series",
+    "Author uses both Max and Pro to completion every week; Pro-only isolation is not visible on the screenshot",
+    "THIS week may be incomplete (posted Tuesday 04:47 PT); Nov 9 week is missing",
+    "Third-party CodeBurn report, not an official Anthropic quota panel",
+    "No per-week input/cache/output split to verify the API-worth column",
+    "Site High bar is maintainer panel / controlled fill / official tables; this is a single-author oral weekly series",
+    "Do not convert 655.6M or 432.1M ×4 or ×5 into a new monthly pool, and do not replace 30.46亿"
+  ],
+  "gaps": [
+    "Need a weekly CodeBurn (or official) view that actually lists the four weeks",
+    "Need plan filter proving $20 Pro only, not Max+Pro blended",
+    "Need per-week cache/input/output if API-worth is to be checked"
+  ]
+}

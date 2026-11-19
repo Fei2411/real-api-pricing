@@ -1,0 +1,95 @@
+{
+  "scannedAt": "2026-11-19T01:45:45Z",
+  "recordedAt": "2026-11-19",
+  "taipeiLocal": "2026-11-19 09:34:02–09:45:45",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "source": "精简自 2026-11-19 扫描结论。不另开 PR。分页 token、原始搜索大文件、截图二进制和账号密钥不入库。作者帖数只沿用扫描草稿，不另算频率。",
+  "method": "公开 X 读取，外加 2026-11-19 抓取 OpenCode 与 Devin 官方页，以及只读核对 issue #245。未回复评论，未发帖，未部署，未改 adopted。为赶上 #242、#243、#244，已把远程 main merge 进本分支。",
+  "window": {
+    "start": "2026-11-17T01:39:07Z",
+    "end": "2026-11-19T01:45:45Z",
+    "previousEnd": "2026-11-18T01:39:07Z",
+    "overlap": "增量起点 2026-11-17T01:39:07Z，相对上轮结束 2026-11-18T01:39:07Z 重叠 24 小时。已归档 post ID 只补缺、不重计。",
+    "scanStartedUtc": "2026-11-19T01:34:02Z",
+    "scanEndedUtc": "2026-11-19T01:45:45Z",
+    "scanStartedTaipei": "2026-11-19 09:34:02 Asia/Taipei",
+    "scanEndedTaipei": "2026-11-19 09:45:45 Asia/Taipei"
+  },
+  "counts": {
+    "uniquePostsScanned": 475,
+    "knownIdHits": 1,
+    "recommendAdopt": 0,
+    "notAdoptedHigh": 0,
+    "notAdoptedMedium": 10,
+    "discussAdoptPendingConfirmation": 3,
+    "directAdopt": 0
+  },
+  "judgmentNote": "扫描包曾把 GLM-5.3 $500 计成 1 条建议采用，并把 discuss 计成 5（SWE-2、GPT-6.2、Gemini 4、AIDREAMMAN 口述、shownotover）。本归档按确认门槛把 GLM-5.3、SWE-2、GPT-6.2 记为 recommendDiscussAdopt，recommendAdopt 为空。Gemini 4、shownotover 与 Medium/Low 样本都不采用。",
+  "notExhaustive": [
+    "多数 has:images 关键词只翻 1–2 页：Claude/Gemini/GPT 图搜最旧仍停在 11-18 夜到 11-19 凌晨；Cursor 图搜最旧 2026-11-18T17:29:38Z。均未关到 11-17 01:39Z。",
+    "中文控制台查询因 % 操作符非法改写后只翻了 1 页，11-16 01:37–03:00 旧缺口仍未专门回补。",
+    "Fei2411 增量根帖 2 页，最旧 2026-11-18T02:17:00Z，仍有分页，未关到 11-17T01:39:07Z。7 日缺口补了 1 页，最旧 11-11 02:12:20Z，无 next，仍比 01:30Z 晚约 42 分钟。",
+    "Fei2411 提及增量 2 页，最旧 2026-11-18T18:49:35Z，仍有分页。上轮 11-16 提及窗和 11-15 10:41–12:39 缺口本轮未补。",
+    "14 日仍未完成：Hsanli_x、jkgorka、bebuu_ai、VersunPan、huang18825、imranbru99、lechattys。上轮新作者多只做了账号解析。shownotover 增量 1 页仍有分页。kimmonismus 未做全量。",
+    "capputschino 上轮 14 日已关，本轮未做增量。missionaryjdot 用户不存在，未再查询。",
+    "停止时公开读取约剩 954/1000，重置 2026-11-20T00:00:00.000Z。无 429。每次最多 25 条。停止是为了把已核实内容归档，不是搜全，也不是额度耗尽。"
+  ],
+  "budget": {
+    "remainingAtStop": 954,
+    "dailyCap": 1000,
+    "perMinuteCap": 30,
+    "resetsAt": "2026-11-20T00:00:00.000Z",
+    "http429": false,
+    "maxResultsNote": "请求 25–100，接口每次最多 25。",
+    "stopReason": "已拿到可归档的官方 GLM-5.3 $500 更新、SWE-2 政策冲突和一批目视过的用量截图。预留额度未用尽。公开读取结束时约剩 954/1000。"
+  },
+  "nextBackfillCutoff": "2026-11-19T01:45:45Z",
+  "mergedMain": {
+    "sha": "40cfb4e34ca2263ef4ddf4b06c44cfa578a3d10c",
+    "pullRequests": [
+      242,
+      243,
+      244
+    ],
+    "note": "research-only 文件。不重计，不改 adopted。#243 的 $200 被本轮 $500 捕获取代。"
+  },
+  "noDirectAdopt": true,
+  "recommendAdopt": [],
+  "recommendDiscussAdopt": [
+    "official-opencode-go-glm53-limit-round2-2026-11-19.json",
+    "official-devin-swe2-free-policy-conflict-2026-11-19.json",
+    "official-gpt-62-astra-sol-api-2026-11-19.json"
+  ],
+  "notAdoptedHigh": [],
+  "notAdoptedMedium": [
+    "https://x.com/LLMLearnerAI/status/2123219679665947091",
+    "https://x.com/ohayou792/status/2123223626350780506",
+    "https://x.com/FreemyerGreg/status/2123200479735726509",
+    "https://x.com/Jazzen_Chen/status/2123111378865320320",
+    "https://x.com/chenfuxi3698/status/2123222830263541799",
+    "https://x.com/Kayanagi660/status/2123214305705488741",
+    "https://x.com/ErickV924/status/2123214612757926047",
+    "https://x.com/TigerBR_L/status/2123211208014856651",
+    "https://x.com/loboto_mized/status/2123205339126628597",
+    "https://x.com/Zeronine2026/status/2123103472006599114"
+  ],
+  "notAdoptedOther": [
+    "https://x.com/shownotover/status/2122673087103840767",
+    "https://x.com/AIDREAMMAN/status/2123207053460287776"
+  ],
+  "issue245": {
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/245",
+    "assessed": true,
+    "replied": false,
+    "adopted": false
+  },
+  "glm53Trial": {
+    "file": "official-opencode-go-glm53-limit-round2-2026-11-19.json",
+    "monthlyYi": 16.171,
+    "monthlyTokens": 1617100000,
+    "promoUntilIfShown": "2026-11-22",
+    "status": "待维护者确认，未写入 adopted。recommendAdopt 为 false。"
+  },
+  "suggestion": "没有可直接上线的 adopted 改动。GLM-5.3 $500 是到 2026-11-22 的官方促销，试算 16.171 亿，确认前不改 48,500,000。SWE-2 的 10/31 已过期，但博客与 docs 冲突，不自动改。GPT-6.2 只记录 API 价，不发明订阅配额。",
+  "index": "backlog-archive-index-2026-11-19.json"
+}

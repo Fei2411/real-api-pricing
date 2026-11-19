@@ -1,0 +1,34 @@
+{
+  "id": "kayanagi660-x-premium-weekly99-imagine96-x-2026-11-19",
+  "grade": "Medium",
+  "sourceType": "official_ui_screenshot",
+  "postId": "2123214305705488741",
+  "url": "https://x.com/Kayanagi660/status/2123214305705488741",
+  "author": "Kayanagi660",
+  "authorId": "2102913184705486849",
+  "createdAt": "2026-11-19T00:38:32.000Z",
+  "planOrModel": "截图：每周 Premium 限额。",
+  "hasScreenshot": true,
+  "imagesVisuallyChecked": [
+    "images/Kayanagi660-2123214305705488741-1.jpg"
+  ],
+  "screenshotFields": {
+    "plan": "每周 Premium 限额",
+    "total": "总量的 99%",
+    "reset": "11月26日周四 04:34 重置",
+    "split": {
+      "Imagine": "总量的 96%",
+      "Grok Bot": "总量的 3%"
+    },
+    "extraCredits": "US$0.00",
+    "tokens": null
+  },
+  "oralText": "19号四点重置，一天就没了🫡。接下来就是纯放置六天……你的图像代理模式是真吃我的额度。",
+  "conflictsToKeep": "发帖时间 2026-11-19T00:38:32Z（台北 08:38）。口述「19 号四点重置」与图上「11月26日周四 04:34 重置」不符。图上 99%≈Imagine 96%+Grok Bot 3%，与「图像代理吃额度」方向一致，但重置日期必须按截图。",
+  "recommendation": "暂不采用",
+  "why": "官方 Premium 周条和分项百分比有价值，但无 token，且口述重置日期与图冲突。",
+  "alreadyInPrOrMain": false,
+  "targetPath": "data/research/kayanagi660-x-premium-weekly99-imagine96-x-2026-11-19.json",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false
+}

@@ -1,0 +1,117 @@
+{
+  "id": "official-opencode-go-glm53-limit-round2-2026-11-19",
+  "recordedAt": "2026-11-19T01:41:00Z",
+  "timezoneNote": "Source timestamps are UTC (Z). Times also given as Asia/Taipei (UTC+8).",
+  "sourceType": "official_catalog_and_docs",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "recommendAdopt": false,
+  "pendingMaintainerConfirmation": true,
+  "confidence": "High",
+  "confidenceNote": "2026-11-19 现场抓取官方 models API 与落地页表，并与官方 docs markdown 交叉。数字是官方公布的月用量美元上限和 5 小时请求估计，不是用户打满 token 表。docs 写明 Higher usage limits apply through November 22, 2026。落地页该行没有 Limited time 标签，但 docs 有截止日期。过期后回落值官方未写明（可能回到 adopted 仍在用的 $15，或 11-18 研究文件中的 $200）。",
+  "planId": "opencode_go",
+  "model": "glm-5.3",
+  "relatedPlans": [
+    "opencode_go",
+    "opencode_go_plus",
+    "opencode_go_teams"
+  ],
+  "grade": "High (official published limits, time-limited)",
+  "alreadyInRepo": {
+    "mainResearch": "data/research/opencode-go-glm53-limit-round1-2026-11-18.json （#243，Go $200 / Plus $400 / Teams $205，当时落地页无截止日期标签）",
+    "pr234Research": "data/research/opencode-go-glm53-monthly-200-trial-2026-11-18.json 以及 fei2411-opencode-glm53-200-crop-x-2026-11-18.json（$200 阶段，不要当成新采用项重复发明）",
+    "adopted": "opencode_go × glm-5.3 = 0.485 亿/月，medium，口径是官方月 Usage $15 ÷ 统一标准负载加权价，data_date 2026-09-30，promo_until 为空。flash 行仍是 $60 → 16.973 亿，本轮 flash 未变。"
+  },
+  "observed": {
+    "capturedAtUtc": "2026-11-19T01:41:00Z",
+    "capturedAtTaipei": "2026-11-19 09:41:00 Asia/Taipei",
+    "modelsApi": {
+      "url": "https://opencode.ai/inference/go/v1/models",
+      "glm-5.3": {
+        "monthly_usage": {
+          "go": 500,
+          "go-plus": 1000,
+          "go-teams": 505
+        }
+      },
+      "glm-5.3-flash": {
+        "monthly_usage": {
+          "go": 60,
+          "go-plus": 180,
+          "go-teams": 65
+        },
+        "unchangedVs2026-11-18": true
+      },
+      "threePartPriceUnchanged": {
+        "inputPerMTokUsd": 1.4,
+        "outputPerMTokUsd": 4.4,
+        "cachedReadPerMTokUsd": 0.26
+      }
+    },
+    "landingPage": {
+      "url": "https://opencode.ai/console/go",
+      "rowAsPublished": "GLM-5.3 | Est. requests / 5 hr: Go: 6,600; Go Plus: 13,200 | Monthly limit: Go: $500; Go Plus: $1000",
+      "limitedTimeLabelOnRow": false,
+      "planPrices": {
+        "go": "$10 per month",
+        "goPlus": "$40 per month"
+      }
+    },
+    "docs": {
+      "url": "https://opencode.ai/docs/console/go.md",
+      "quotes": [
+        "The 5-hour limit is 20% of your monthly allowance. The window starts when you first use your allowance and lasts five hours.",
+        "The weekly limit is 50% of your monthly allowance. It resets on Monday at 00:00 UTC.",
+        "GLM-5.3: Higher usage limits apply through November 22, 2026."
+      ],
+      "endDate": "2026-11-22",
+      "postExpiryValuePublished": false
+    }
+  },
+  "corroboratingPosts": [
+    {
+      "url": "https://x.com/hi_xiaoji/status/2123224024407007629",
+      "author": "hi_xiaoji",
+      "createdAt": "2026-11-19T01:17:09.000Z",
+      "screenshot": "images/hi_xiaoji-2123224024407007629-1.jpg",
+      "visual": "官方 OpenCode Console 模型限额表：GLM-5.3 6,600 / 13,200 与 $500 / $1,000。图中未见 11-22 截止日期。口述把过期后说成变回 $15，图上无法证实。"
+    },
+    {
+      "url": "https://x.com/AIDREAMMAN/status/2123207053460287776",
+      "author": "AIDREAMMAN",
+      "createdAt": "2026-11-19T00:09:43.000Z",
+      "screenshot": "images/AIDREAMMAN-2123207053460287776-1.jpg",
+      "visual": "官方 Go 订阅页 Limits 表，作者红框标出 GLM-5.3 Monthly usage $500，5 小时估计 6,600，边栏 Go $10 / Plus $40。同图被用于 2123203749309206828。口述「实测周额度 8 亿多 GLM5.3」完全没有出现在截图上，不得当作打满实测。"
+    },
+    {
+      "url": "https://x.com/Fei2411/status/2122978519001321742",
+      "author": "Fei2411",
+      "createdAt": "2026-11-18T09:01:36.000Z",
+      "screenshot": "images/Fei2411-2122978519001321742-1.jpg",
+      "text": "？？？多少？ $10 美元买 $500 GLM 5.3 额度？？？",
+      "note": "维护者本人发现入口，配官方表截图。不构成独立用量实测。"
+    }
+  ],
+  "whyAdoptOrNot": "建议写入研究文件并请维护者确认是否、以及如何改 adopted。官方当前公布值已经从 #243 的 $200 再升到 $500（Plus $1000，Teams $505），docs 同时补上截止日期 2026-11-22 与短周期限额（5 小时=月额度 20%，每周=月额度 50%，周一 00:00 UTC 重置）。这是可追溯的官方目录，不是用户拼算。但不能在未确认的情况下直接覆盖 adopted：现采用值仍按 $15 计算 0.485 亿；限时活动过期后回落值未公布；若采用，月 token 必须用同一套官方负载公式从 $500 重算，禁止用 8 亿周口述或 $500÷单价外推。",
+  "suggestedAdoptedHandling": "先归档本文件。若维护者确认采用限时值，应给 opencode_go × glm-5.3 写明 promo_until=2026-11-22，并重算 monthly_tokens；过期策略单独裁定。不要把 AIDREAMMAN 的 8 亿周口述或 alltcvma34381「30 亿都没有」的估算写入 adopted。",
+  "targetPath": "data/research/official-opencode-go-glm53-limit-round2-2026-11-19.json",
+  "recommendDiscussAdopt": true,
+  "trialComputation": {
+    "workload": "project standard 97.0% cache read / 2.50% input / 0.50% output",
+    "blendedUsdPerMTok": 0.3092,
+    "formula": "round(500 / 0.3092 / 100, 3) 亿",
+    "monthlyYi": 16.171,
+    "monthlyTokens": 1617100000,
+    "planPriceUsd": 10,
+    "realUsdPerMTok": 0.00618391,
+    "checkAgainst200Trial": "200 档试算 6.468 亿 × 500/200 = 16.170 亿，与直接 round(500/0.3092/100,3)=16.171 的差来自先四舍五入再缩放，本文件采用直接按 $500 计算。",
+    "notAdopted": true
+  },
+  "supersedes": [
+    "data/research/opencode-go-glm53-limit-round1-2026-11-18.json",
+    "data/research/opencode-go-glm53-monthly-200-trial-2026-11-18.json"
+  ],
+  "indexGuidance": {
+    "recommendAdopt": [],
+    "recommendDiscussAdopt": "OpenCode Go × GLM-5.3 official monthly limit Go $500 / Plus $1000 / Teams $505 through 2026-11-22. Trial: round(500/0.3092/100,3)=16.171 亿 = 1,617,100,000 tokens; $10 plan ≈ $0.00618391/MTok. Do not treat as standing replacement for adopted $15 → 48,500,000. If adopted for the promo window, set promo_until=2026-11-22 and decide the post-expiry fallback separately."
+  }
+}

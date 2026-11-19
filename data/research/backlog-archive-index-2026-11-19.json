@@ -1,0 +1,502 @@
+{
+  "recordedAt": "2026-11-19",
+  "kind": "research-archive-increment",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "parentIndex": "backlog-archive-index-2026-11-18.json",
+  "pullRequest": 234,
+  "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",
+  "scanStartUtc": "2026-11-19T01:34:02Z",
+  "scanEndUtc": "2026-11-19T01:45:45Z",
+  "taipeiLocal": "2026-11-19 09:34:02–09:45:45",
+  "nextBackfillCutoff": "2026-11-19T01:45:45Z",
+  "scope": "2026-11-19 扫描窗口 2026-11-17T01:39:07Z 至 2026-11-19T01:45:45Z，与上轮结束 2026-11-18T01:39:07Z 重叠 24 小时。去重后看过 475 帖，撞到已归档 1 帖。recommendAdopt 为空。没有 High。10 条 Medium 与 shownotover、AIDREAMMAN 口述都不采用。OpenCode Go × GLM-5.3 的 $500、SWE-2 政策冲突、GPT-6.2 API 标价只做待维护者确认的讨论。只追加 data/research/。不改 adopted.csv、scripts/build_adopted.py、data/conventions.json 的 updatedAt、derived/、charts/、线上文案。不部署、不关闭旧 PR、不把本分支 merge 进 main、不回复 #234/#240/#245。为赶上 #242、#243、#244，已把远程 main merge 进本分支。",
+  "images": "X 与 GitHub 截图不入库。图上字段来自目视。不写入分页 token。研究 JSON 里若出现扫描包 images/ 路径，只是草稿里的本地文件名，二进制不进仓库。",
+  "mergedMainThisPass": true,
+  "mainShaMerged": "40cfb4e34ca2263ef4ddf4b06c44cfa578a3d10c",
+  "mainNote": "远程 main 40cfb4e34ca2263ef4ddf4b06c44cfa578a3d10c（2026-11-18T02:51:35Z）比合并前的本分支超前：#242 GOAT Hy4、#243 OpenCode Go GLM-5.3 月限 $200、#244 OpenCode Go Qwen4 Max round2。merge 无冲突，只带入这 3 个 data/research/ 文件。三者都是 research-only，不重计，不改 adopted。#243 的 $200 已被本轮 $500 / promo_until=2026-11-22 捕获取代，不是新的采用项。",
+  "recommendAdopt": [],
+  "recommendDiscussAdopt": [
+    {
+      "file": "official-opencode-go-glm53-limit-round2-2026-11-19.json",
+      "item": "OpenCode Go × GLM-5.3 官方月限额现为 Go $500 / Plus $1000 / Teams $505，docs 写明限时至 2026-11-22",
+      "recommendAdopt": false,
+      "pendingMaintainerConfirmation": true,
+      "urls": [
+        "https://opencode.ai/inference/go/v1/models",
+        "https://opencode.ai/console/go",
+        "https://opencode.ai/docs/console/go/"
+      ],
+      "docsQuote": "GLM-5.3: Higher usage limits apply through November 22, 2026.",
+      "capturedAtUtc": "2026-11-19T01:41:00Z",
+      "fiveHourEstimates": {
+        "go": 6600,
+        "goPlus": 13200
+      },
+      "allowanceRules": "共享额度。5 小时 = 月额度的 20%，从首次使用起滚 5 小时。周 = 月额度的 50%，周一 00:00 UTC 重置。",
+      "threePartPriceUnchanged": "cache read $0.26 / input $1.40 / output $4.40。GLM-5.3-Flash 仍是 $60 / $180 / $65。",
+      "trial": "仓库公式 round(500/0.3092/100, 3)=16.171 亿，即 1,617,100,000 tokens。$10 计划价下 real_usd_per_mtok ≈ 0.00618391。trialComputation 留在研究文件里，recommendAdopt 仍是 false。",
+      "adoptedStill": "opencode_go × glm-5.3 仍是 $15 → 48,500,000，promo_until 为空。",
+      "supersedes": [
+        "data/research/opencode-go-glm53-limit-round1-2026-11-18.json",
+        "data/research/opencode-go-glm53-monthly-200-trial-2026-11-18.json"
+      ],
+      "needs": "若维护者要在站上展示这段促销，使用 promo_until=2026-11-22，并单独决定 2026-11-22 之后的回落值。官方页没有写回落值。不能默认回到 adopted 的 $15，也不能留在 11-18 的 $200。#245 写的 $200 已经过时。确认前不改 adopted。"
+    },
+    {
+      "file": "official-devin-swe2-free-policy-conflict-2026-11-19.json",
+      "item": "Devin SWE-2：adopted 的 promo_until=2026-10-31 已过期，但博客/定价页与 docs 冲突",
+      "recommendAdopt": false,
+      "pendingMaintainerConfirmation": true,
+      "urls": [
+        "https://devin.ai/blog/devin-teams-plan",
+        "https://devin.ai/pricing",
+        "https://docs.devin.ai/desktop/models",
+        "https://x.com/jomagonmar/status/2123173159277035936"
+      ],
+      "blogQuote": "We're also making free SWE-2 in Devin Desktop and CLI a permanent part of our Teams, Pro, and Max plans.",
+      "blogDate": "2026-11-12",
+      "docsQuote": "SWE-2 is free for self-serve plans in Devin Desktop and Devin CLI through November 30, 2026; it does not apply to Devin cloud sessions. List pricing ($3.00/1M input, $15.00/1M output, $0.30/1M cache input) applies afterward.",
+      "swe2Flash": "SWE-2 Flash 是另一条促销，免费至 2026-12-04 18:00 UTC。",
+      "scope": "付费 Teams / Pro / Max 的 Desktop 与 CLI。不是 Free 计划，也不是一般的 Devin Cloud。Teams 另有最多 2 个并发的 cloud Free mode，与 Desktop/CLI 免费 SWE-2 分开。",
+      "adoptedStill": "devin_pro × swe-2 仍是 unmetered，计划名仍写「促销至 10/31」，promo_until 仍是 2026-10-31。",
+      "needs": "不把 adopted 改成永久免费，也不改成 2026-11-30。等维护者在博客与 docs 之间裁定。"
+    },
+    {
+      "file": "official-gpt-62-astra-sol-api-2026-11-19.json",
+      "item": "GPT-6.2 Astra / Sol 官方 API 标价与可用性；没有官方订阅 token 池",
+      "recommendAdopt": false,
+      "pendingMaintainerConfirmation": true,
+      "urls": [
+        "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+        "https://developers.openai.com/api/docs/models/gpt-6.2-astra.md",
+        "https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol"
+      ],
+      "announced": "2026-11-17",
+      "availability": "Plus / Pro / Enterprise / Edu 可在 ChatGPT Work 与 Codex 使用。Codex 与 Work 共享用量。Pro $200 可用 Sol 的 Ultrafast；Pro $500 两个模型都可以。",
+      "apiPricesUsdPerMTok": {
+        "gpt-6.2-astra": {
+          "input": 8,
+          "cachedInput": 0.4,
+          "cacheWrite30m": 10,
+          "output": 40
+        },
+        "gpt-6.2-sol": {
+          "input": 2,
+          "cachedInput": 0.1,
+          "output": 10,
+          "note": "维持 GPT-6.1 Sol 的 API 标价。介绍文没有重述 cache write，这里不编造。"
+        }
+      },
+      "trialBlendedStandardWorkload": {
+        "workload": "97.0% cache read / 2.50% input / 0.50% output。cache write 不进这套混合，与现有 openai_*_api 行一致。",
+        "gpt-6.2-astra": 0.788,
+        "gpt-6.2-sol": 0.197
+      },
+      "adoptedStill": "adopted 没有 gpt-6.2-astra 或 gpt-6.2-sol 行。",
+      "needs": "「同一付费计划能完成更多任务」是效率说法，不是配额表。不发明 Plus/Pro token 配额，也不把 6.1 Sol 的池改挂到 6.2。API 行若要加入，等维护者确认，并决定是否同时收录 Ultrafast 与长上下文乘数。"
+    }
+  ],
+  "issue245AssessedNotReplied": {
+    "file": "issue-245-gap-assessment-2026-11-19.json",
+    "issue": 245,
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/245",
+    "author": "yk4464",
+    "createdAt": "2026-11-18T02:54:37Z",
+    "comments": 0,
+    "didNotReply": true,
+    "gpt62": "官方 2026-11-17 已发布。API 价可归档。没有订阅 token 池，不编造。",
+    "gemini4": "adopted 仍无 Carbon / Hydrogen / Neon 订阅行，只有 gemini-4-argon。本轮没有可靠的新配额表。Antigravity 分池 UI 只作线索，不采用。",
+    "opencodeGoGlm53": "诉求里的 $200 已被 11-19 官方 $500 越过，并有截止日期 2026-11-22。短周期仍以官方 docs 为准，不用 8 亿周口述。",
+    "swe2": "旧截止日期不应继续当现行值，但不能在博客与 docs 冲突时自动改成永久或 11-30。"
+  },
+  "notAdoptedThisPass": {
+    "shownotover": {
+      "file": "shownotover-claude-pro-opus55-weekly-codeburn-x-2026-11-17.json",
+      "url": "https://x.com/shownotover/status/2122673087103840767",
+      "postId": "2122673087103840767",
+      "grade": "research-only, not adopted",
+      "why": "口述四周周用量与配图 CodeBurn「30 Days」（可见日期 2026-09-23 至 09-30）窗口不符。作者可能同时打满 Max 与 Pro。不改线上 Claude Pro 行。不与 2115142779525595566 的 Cursor 27.9M/7% 混写。本轮作者增量没有对这组四周数字的新图。",
+      "newToThisPrAndMain": true
+    },
+    "medium": [
+      "LLMLearnerAI https://x.com/LLMLearnerAI/status/2123219679665947091：Antigravity 配额条只有剩余百分比。Gemini 池周剩余 90.86%、5h 79.30%；Claude+GPT 周 99.39%、5h 98.78%。无 token。口述 Sonnet 吃掉 5h 的 20% 与图上约 1.22% 已用冲突。",
+      "ohayou792 https://x.com/ohayou792/status/2123223626350780506：官方弹层 Gemini 周剩余 93%、Argon 周 100%。口述 Neon/Flash、Argon/Carbon 分池图上不能证实。",
+      "FreemyerGreg https://x.com/FreemyerGreg/status/2123200479735726509：Cursor Ultra Spending，Cursor Models 8% used，Other Models 52% used，重置 Dec 14。口述约 1/3 与当前图冲突。无 token。",
+      "Jazzen_Chen https://x.com/Jazzen_Chen/status/2123111378865320320：第三方 Agent HUD 90 天 106B。配额百分比与 token 窗口不是同一口径。API 估值不是订阅额度。",
+      "chenfuxi3698 https://x.com/chenfuxi3698/status/2123222830263541799：X Premium 周 100% 已用。口述 30% 与图冲突。无 token。",
+      "Kayanagi660 https://x.com/Kayanagi660/status/2123214305705488741：Premium 周 99%（Imagine 96% + Grok Bot 3%），图上 11-26 04:34 重置。口述 19 号重置与图冲突。无 token。",
+      "ErickV924 https://x.com/ErickV924/status/2123214612757926047：周条 98%，2 天后重置，有 Upgrade to Ultra，所以不是 Ultra。无 token。配了一张动图，不声称看过动图。",
+      "TigerBR_L https://x.com/TigerBR_L/status/2123211208014856651：周用量 48%（口述已用），7 天后重置。套餐未在用量页标注。无 token。",
+      "loboto_mized https://x.com/loboto_mized/status/2123205339126628597：只有 Usage 90% 一行。窗口和套餐不清。",
+      "Zeronine2026 https://x.com/Zeronine2026/status/2123103472006599114：Kimi 开放平台 Tier0 TPD 1,500,000，外加 429。口述误写成 Codex 额度。不是订阅池。"
+    ],
+    "low": [
+      "AIDREAMMAN https://x.com/AIDREAMMAN/status/2123207053460287776：官方表截图支持 $500，口述「周额度 8 亿多」没有出现在图上。不采用，不当打满实测。"
+    ]
+  },
+  "stillAwaitingMaintainerConfirmationNotRecounted": [
+    "11-18 的 OpenCode Go × GLM-5.3 $200 试算已被本轮 $500 捕获取代。原文留在 opencode-go-glm53-monthly-200-trial-2026-11-18.json，并在该索引上加了 supersededBy。不把 $200 再列成新的采用项。",
+    "Antigravity 一周年全模型重置仍在 11-18 的 recommendDiscussAdopt。本轮不重计。",
+    "#240 仍是 High、不采用。本轮不重开，不回复 mamaruo。",
+    "#242 GOAT Hy4、#243 GLM-5.3 $200 round1、#244 Qwen4 Max round2 已在 main，本轮 merge 进来，不重计。",
+    "Gemini 4 Carbon / Hydrogen：仍无 adopted 订阅行。本轮不编造配额。Fei2411 https://x.com/Fei2411/status/2123228599088275791 问 Logan Neon 在 AI 订阅里是否比 Carbon 更贵，扫描截止时无回复。"
+  ],
+  "cannotExecute": {
+    "issue": 239,
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/239",
+    "result": "正文仍空。不编造 AA 数字，不关闭。"
+  },
+  "notCommittedDuplicates": [
+    "opencode-go-glm53-monthly-500-promo-2026-11-19.json",
+    "official-devin-swe2-permanent-free-conflict-2026-11-19.json"
+  ],
+  "scanGaps": [
+    "多数 has:images 关键词只翻 1–2 页：Claude/Gemini/GPT 图搜最旧仍停在 11-18 夜到 11-19 凌晨；Cursor 图搜最旧 2026-11-18T17:29:38Z。均未关到 11-17 01:39Z。",
+    "中文控制台查询因 % 操作符非法改写后只翻了 1 页，11-16 01:37–03:00 旧缺口仍未专门回补。",
+    "Fei2411 增量根帖 2 页，最旧 2026-11-18T02:17:00Z，仍有分页，未关到 11-17T01:39:07Z。7 日缺口补了 1 页，最旧 11-11 02:12:20Z，无 next，仍比 01:30Z 晚约 42 分钟。",
+    "Fei2411 提及增量 2 页，最旧 2026-11-18T18:49:35Z，仍有分页。上轮 11-16 提及窗和 11-15 10:41–12:39 缺口本轮未补。",
+    "14 日仍未完成：Hsanli_x、jkgorka、bebuu_ai、VersunPan、huang18825、imranbru99、lechattys。上轮新作者多只做了账号解析。shownotover 增量 1 页仍有分页。kimmonismus 未做全量。",
+    "capputschino 上轮 14 日已关，本轮未做增量。missionaryjdot 用户不存在，未再查询。",
+    "停止时公开读取约剩 954/1000，重置 2026-11-20T00:00:00.000Z。无 429。每次最多 25 条。停止是为了把已核实内容归档，不是搜全，也不是额度耗尽。"
+  ],
+  "doesNotChange": [
+    "data/adopted.csv",
+    "scripts/build_adopted.py",
+    "data/conventions.json updatedAt",
+    "derived/",
+    "charts/",
+    "线上文案"
+  ],
+  "relationToOlderPrs": {
+    "234": "本增量追加在 #234，不另开研究 PR，保持草稿。",
+    "236": "已在本分支。OpenCode Go qwen4-max API 价不重计。",
+    "237": "外部研究 PR，保留，不关闭。",
+    "239": "空正文，无法执行。不编造 AA 数字，不关闭。",
+    "240": "不关闭，不重开，不回复。仍是 High、不采用。",
+    "242": "已合进 main，本轮 merge 进来。GOAT Hy4 不重计。",
+    "243": "已合进 main，本轮 merge 进来。其中 GLM-5.3 $200 被本轮 $500 捕获取代，不重计，不改 adopted。",
+    "244": "已合进 main，本轮 merge 进来。Qwen4 Max round2 不重计。",
+    "245": "已评估，未回复，不关闭。",
+    "207": "仍视为已被 main 的 claude_pro × claude-opus-5.5 = 30.46 代替。该 PR dirty，不关闭。",
+    "209": "无新的官方绝对 token 表，不改，不关闭。",
+    "closeOnlyWithLaterPermission": [
+      205,
+      208,
+      216,
+      223,
+      233,
+      207,
+      209
+    ],
+    "notClosedThisPass": [
+      205,
+      208,
+      216,
+      223,
+      233,
+      207,
+      209,
+      234,
+      237,
+      239,
+      240,
+      245
+    ]
+  },
+  "authorIndex": {
+    "foldedFrom": "author-index-draft-2026-11-19.json",
+    "whyHere": "#234 没有单独的 research author-index 文件，所以作者索引进本索引，不另建文件。",
+    "frequencyNote": "tweetsNow 是扫描草稿里当时看到的账号帖数，本索引不另算发帖频率，也不把这些数字当成用量。backfill14dComplete 保持草稿原值。",
+    "thisChecked": "2026-11-19T01:45:45Z",
+    "thisCheckedTaipei": "2026-11-19 09:45:45 Asia/Taipei",
+    "authors": [
+      {
+        "handle": "LLMLearnerAI",
+        "id": "1939336034954657793",
+        "url": "https://x.com/LLMLearnerAI",
+        "tweetsNow": 293,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "backfill14dComplete": false,
+        "verifiedContribution": "Antigravity Models & Quota 截图：Gemini 池周剩余 90.86%/5h 79.30%，Claude+GPT 周 99.39%/5h 98.78%。Medium，暂不采用。",
+        "priority": "high"
+      },
+      {
+        "handle": "ohayou792",
+        "id": "1536363232373637120",
+        "url": "https://x.com/ohayou792",
+        "tweetsNow": 4055,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "backfill14dComplete": false,
+        "verifiedContribution": "官方弹层 Gemini Models 周剩余 93%，Argon 周 100%。口述 Neon/Flash、Argon/Carbon 分池未在图上证实。高产，未拉 14 日全文。",
+        "priority": "high"
+      },
+      {
+        "handle": "FreemyerGreg",
+        "id": "1396742700523786240",
+        "url": "https://x.com/FreemyerGreg",
+        "tweetsNow": 25272,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "backfill14dComplete": false,
+        "verifiedContribution": "Cursor Ultra $200 官方 Spending：Cursor Models 8% used，Other Models 52% used，重置 Dec 14。高产，仅处理本帖。",
+        "priority": "medium"
+      },
+      {
+        "handle": "Jazzen_Chen",
+        "id": "1642719241286868992",
+        "url": "https://x.com/Jazzen_Chen",
+        "tweetsNow": 753,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "backfill14dComplete": false,
+        "verifiedContribution": "Agent HUD 90 天 106B 分项。第三方仪表盘，暂不采用。作者即该工具开发者。",
+        "priority": "medium"
+      },
+      {
+        "handle": "AIDREAMMAN",
+        "id": "2087913485460180992",
+        "url": "https://x.com/AIDREAMMAN",
+        "tweetsNow": 1542,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "backfill14dComplete": false,
+        "verifiedContribution": "官方 Go 表 $500 截图；口述周 8 亿无图证。",
+        "priority": "medium"
+      },
+      {
+        "handle": "hi_xiaoji",
+        "id": "1291586710946459650",
+        "url": "https://x.com/hi_xiaoji",
+        "tweetsNow": 7392,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "backfill14dComplete": false,
+        "verifiedContribution": "官方 Console 表 GLM-5.3 $500/$1000。高产未拉全文。",
+        "priority": "medium"
+      },
+      {
+        "handle": "chenfuxi3698",
+        "id": "2087460219005911040",
+        "url": "https://x.com/chenfuxi3698",
+        "tweetsNow": 22,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "backfill14dComplete": false,
+        "verifiedContribution": "X Premium 周 100% 已用。",
+        "priority": "medium"
+      },
+      {
+        "handle": "Kayanagi660",
+        "id": "2102913184705486849",
+        "url": "https://x.com/Kayanagi660",
+        "tweetsNow": 11,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "backfill14dComplete": false,
+        "verifiedContribution": "Premium 周 99%（Imagine 96% + Grok Bot 3%），重置 11-26 04:34。",
+        "priority": "medium"
+      },
+      {
+        "handle": "TigerBR_L",
+        "id": "4100400493",
+        "url": "https://x.com/TigerBR_L",
+        "tweetsNow": 467,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "backfill14dComplete": false,
+        "verifiedContribution": "周用量 48% 已用（口述），7 天后重置。",
+        "priority": "low"
+      },
+      {
+        "handle": "ErickV924",
+        "id": "734191521457545218",
+        "url": "https://x.com/ErickV924",
+        "tweetsNow": 14568,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "backfill14dComplete": false,
+        "verifiedContribution": "周条 98%，2 天后重置，Upgrade to Ultra。高产未拉全文。",
+        "priority": "medium"
+      },
+      {
+        "handle": "jomagonmar",
+        "id": "573649348",
+        "url": "https://x.com/jomagonmar",
+        "tweetsNow": 1338,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "backfill14dComplete": false,
+        "verifiedContribution": "Devin docs 截图，SWE-2 免费到 11-30 的文档表述。",
+        "priority": "medium"
+      },
+      {
+        "handle": "loboto_mized",
+        "id": "1945105300966584320",
+        "url": "https://x.com/loboto_mized",
+        "tweetsNow": 24777,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "backfill14dComplete": false,
+        "verifiedContribution": "Usage 90% 一行。高产未拉。",
+        "priority": "low"
+      },
+      {
+        "handle": "alltcvma34381",
+        "id": "2026337189433618432",
+        "url": "https://x.com/alltcvma34381",
+        "tweetsNow": 290,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "backfill14dComplete": false,
+        "verifiedContribution": "回复 Fei2411：GLM 单价贵，$500 可能 30 亿 token 都没有。讨论估算，非实测。",
+        "priority": "low"
+      },
+      {
+        "handle": "shownotover",
+        "id": "2080910665041010688",
+        "url": "https://x.com/shownotover",
+        "tweetsNow": 11172,
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "thisPass": "增量 1 页，newest 未在本页（本页 11-17 21:51 至 18:01），hasMore，未关到 11-17 01:39，也未再拉到 12:47 原帖之后的全部回复。未见对四周周用量的新图或新数字，维持暂不采用。",
+        "backfill14dComplete": false,
+        "priority": "high"
+      },
+      {
+        "handle": "Fei2411",
+        "id": "2055515632146472960",
+        "url": "https://x.com/Fei2411",
+        "tweetsPriorNote": "上轮 11022",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "thisPass": "增量根帖 2 页，newest 2026-11-19T01:38:17Z，oldest 2026-11-18T02:17:00Z，仍有分页，未关到 11-17T01:39:07Z。7 日缺口 11-11T01:30–06:23 拉到 1 页，oldest 11-11T02:12:20Z，无 next，仍比 01:30 晚约 42 分钟。提及增量 2 页，oldest 11-18T18:49:35Z，仍有分页。11-16 与 11-15 提及缺口本轮未补。问 Logan Neon vs Carbon 订阅计价的帖 2123228599088275791 当时尚无回复。",
+        "backfill14dComplete": false,
+        "priority": "high"
+      },
+      {
+        "handle": "Hsanli_x",
+        "id": "1998230620615671808",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "14 日回填仍未完成，本轮未拉未过滤时间线。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "jkgorka",
+        "id": "1335664752",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "14 日回填仍未完成，本轮未拉。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "bebuu_ai",
+        "id": "1963124452390297600",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "14 日回填仍未完成，本轮未拉。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "VersunPan",
+        "id": "1569289525729587203",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "14 日回填仍未完成，本轮未拉。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "huang18825",
+        "id": "1899029408654233600",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "14 日回填仍未完成，本轮未拉。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "imranbru99",
+        "id": "1085544934461992961",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "14 日回填仍未完成，本轮未拉。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "lechattys",
+        "id": "2018056420843761665",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "14 日回填仍未完成，本轮未拉。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "maanasms",
+        "id": "1545428061180416000",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "已解析；本轮未拉增量时间线。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "ethan_leee9113",
+        "id": "1684893453019459584",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "已解析；本轮未拉增量时间线。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "taiyop",
+        "id": "15501789",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "高产 33205 帖，本轮未拉。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "dr_andrewlaw",
+        "id": "1425476327726006275",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "已解析；本轮未拉。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "RingoS0725",
+        "id": "1600556171030499328",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "已解析；本轮未拉。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "richardphearne",
+        "id": "24548265",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "已解析；本轮未拉。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "gakhil96",
+        "id": "1670558045997518850",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "已解析；本轮未拉。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "SongyuKite",
+        "id": "1925388589241966594",
+        "lastChecked": "2026-11-19T01:45:45Z",
+        "note": "已解析；本轮未拉。",
+        "backfill14dComplete": false
+      },
+      {
+        "handle": "capputschino",
+        "id": null,
+        "lastChecked": "2026-11-18T01:39:07Z",
+        "note": "上轮 14 日已关完，本轮未做增量。",
+        "backfill14dComplete": true
+      },
+      {
+        "handle": "missionaryjdot",
+        "exists": false,
+        "note": "用户不存在，不要再当有效账号。"
+      }
+    ]
+  },
+  "files": [
+    "backlog-archive-index-2026-11-19.json",
+    "x-scan-2026-11-19.json",
+    "official-opencode-go-glm53-limit-round2-2026-11-19.json",
+    "official-devin-swe2-free-policy-conflict-2026-11-19.json",
+    "official-gpt-62-astra-sol-api-2026-11-19.json",
+    "issue-245-gap-assessment-2026-11-19.json",
+    "shownotover-claude-pro-opus55-weekly-codeburn-x-2026-11-17.json",
+    "llmlearnerai-antigravity-sonnet-ok-gemini-neon-quota-x-2026-11-19.json",
+    "ohayou792-antigravity-gemini-weekly93-argon100-x-2026-11-19.json",
+    "freemyergreg-cursor-ultra-cursor8-other52-x-2026-11-18.json",
+    "jazzen-chen-agenthud-106b-90d-x-2026-11-18.json",
+    "chenfuxi3698-x-premium-weekly100-x-2026-11-19.json",
+    "kayanagi660-x-premium-weekly99-imagine96-x-2026-11-19.json",
+    "erickv924-x-weekly98-upgrade-ultra-x-2026-11-19.json",
+    "tigerbr-l-grok-weekly48-used-x-2026-11-19.json",
+    "loboto-mized-x-usage-90-x-2026-11-19.json",
+    "zeronine2026-kimi-tpd-1500000-tier0-x-2026-11-18.json",
+    "aidreamman-opencode-go-glm53-800m-weekly-oral-x-2026-11-19.json"
+  ]
+}

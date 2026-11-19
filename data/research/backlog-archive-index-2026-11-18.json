@@ -3,6 +3,12 @@
   "kind": "research-archive-increment",
   "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
   "parentIndex": "backlog-archive-index-2026-11-17.json",
+  "laterIncrement": {
+    "date": "2026-11-19",
+    "index": "backlog-archive-index-2026-11-19.json",
+    "scan": "x-scan-2026-11-19.json",
+    "note": "11-19 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-18 及更早的采用判断不改写，只注明 11-18 的 OpenCode Go × GLM-5.3 月限 $200 讨论项已被本轮官方 Go $500 / Plus $1000 / Teams $505、promo_until=2026-11-22 捕获取代，仍不写入 adopted。已把 main 40cfb4e34ca2263ef4ddf4b06c44cfa578a3d10c（#242 GOAT Hy4、#243 OpenCode Go GLM-5.3 $200 round1、#244 OpenCode Go Qwen4 Max round2，均 research-only）merge 进本分支，不重计、不改 adopted。recommendAdopt 为空。没有可直接上线的 adopted 改动。"
+  },
   "pullRequest": 234,
   "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",
   "scanStartUtc": "2026-11-18T01:32:00Z",
@@ -25,7 +31,12 @@
         "https://x.com/opencode/status/2122763721923559595"
       ],
       "trial": "三段价未变（cache read $0.26 / input $1.40 / output $4.40）。仓库公式 round(200/0.3092/100, 3)=6.468 亿，即 646,800,000 tokens。$10 计划价下 real_usd_per_mtok 约 0.01546073。把已舍入的 48,500,000×200/15=646,666,667 只作对照，不采用该硬乘。",
-      "needs": "维护者确认这是现行官方表，还是没有截止日的 Operation GLM 促销。确认前不改 adopted。不要写成整份 $10 计划的 $200 总池。GLM-5.3-Flash 与 GLM-5.2 的 Go $60 和三段价与 adopted 一致，不重算。"
+      "needs": "维护者确认这是现行官方表，还是没有截止日的 Operation GLM 促销。确认前不改 adopted。不要写成整份 $10 计划的 $200 总池。GLM-5.3-Flash 与 GLM-5.2 的 Go $60 和三段价与 adopted 一致，不重算。",
+      "supersededBy": {
+        "date": "2026-11-19",
+        "file": "official-opencode-go-glm53-limit-round2-2026-11-19.json",
+        "note": "11-19 官方目录已是 Go $500 / Plus $1000 / Teams $505。docs 原文：GLM-5.3: Higher usage limits apply through November 22, 2026。本条 $200 试算被该捕获取代，不是新的采用项。main #243 的 $200 研究同样被取代，不重计。adopted 仍是 $15 → 48,500,000。若展示该促销，需要 promo_until=2026-11-22，并单独决定 2026-11-22 之后的回落值；官方页没有给出回落值。本条原文试算不改写。"
+      }
     },
     {
       "file": "official-antigravity-anniversary-quota-reset-2026-11-17.json",

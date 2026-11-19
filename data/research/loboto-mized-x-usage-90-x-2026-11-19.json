@@ -1,0 +1,26 @@
+{
+  "id": "loboto-mized-x-usage-90-x-2026-11-19",
+  "grade": "Medium",
+  "sourceType": "official_ui_screenshot",
+  "postId": "2123205339126628597",
+  "url": "https://x.com/loboto_mized/status/2123205339126628597",
+  "author": "loboto_mized",
+  "authorId": "1945105300966584320",
+  "createdAt": "2026-11-19T00:02:54.000Z",
+  "planOrModel": "图上只有 Usage 90% 与 The X Subscription 入口，未写 Premium/Ultra 或周/月。",
+  "hasScreenshot": true,
+  "imagesVisuallyChecked": [
+    "images/loboto_mized-2123205339126628597-1.jpg"
+  ],
+  "screenshotFields": {
+    "usageRow": "90%",
+    "tokens": null
+  },
+  "oralText": "Did X recently lower bot usage again? I barely used Grokbot this week and I’m already at 90%?",
+  "recommendation": "暂不采用",
+  "why": "只有一行 90%，窗口和套餐都看不清，证据很弱，仅归档。",
+  "alreadyInPrOrMain": false,
+  "targetPath": "data/research/loboto-mized-x-usage-90-x-2026-11-19.json",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false
+}

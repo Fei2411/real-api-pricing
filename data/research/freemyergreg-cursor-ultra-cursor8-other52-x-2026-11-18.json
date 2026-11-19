@@ -1,0 +1,30 @@
+{
+  "id": "freemyergreg-cursor-ultra-cursor8-other52-x-2026-11-18",
+  "grade": "Medium",
+  "sourceType": "official_ui_screenshot",
+  "postId": "2123200479735726509",
+  "url": "https://x.com/FreemyerGreg/status/2123200479735726509",
+  "author": "FreemyerGreg",
+  "authorId": "1396742700523786240",
+  "createdAt": "2026-11-18T23:43:36.000Z",
+  "planOrModel": "截图官方 Cursor Spending：Ultra $200/MO。口述只说 Cursor pricing for Grok。",
+  "hasScreenshot": true,
+  "imagesVisuallyChecked": [
+    "images/FreemyerGreg-2123200479735726509-1.png"
+  ],
+  "screenshotFields": {
+    "currentPlan": "Ultra $200/MO",
+    "usageLimitsReset": "Dec 14 (26 days left)",
+    "cursorModelsIncludesCursorGrokAndComposer": "8% used",
+    "otherModels": "52% used",
+    "tokens": null
+  },
+  "oralText": "Something weird with Cursor pricing for Grok. I checked several hours ago and in just 3 days I had used about 1/3rd of my monthly allotment. That was extremely surprising as it felt like the price had jumped 500% or more. Now, my usage amount has dropped drastically to be…（正文被截断）",
+  "conflictsToKeep": "口述数小时前 3 天用掉月额度约 1/3，随后用量大幅下降。当前截图是 Cursor Models 8% used、Other Models 52% used，月重置 Dec 14。1/3 与 8%/52% 不能混成同一个检查点。",
+  "recommendation": "暂不采用",
+  "why": "官方套餐和百分比清楚，但无 token，且口述 1/3 与当前图冲突。禁止用百分比反推月池。",
+  "alreadyInPrOrMain": false,
+  "targetPath": "data/research/freemyergreg-cursor-ultra-cursor8-other52-x-2026-11-18.json",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false
+}

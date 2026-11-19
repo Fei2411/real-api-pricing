@@ -1,0 +1,37 @@
+{
+  "id": "ohayou792-antigravity-gemini-weekly93-argon100-x-2026-11-19",
+  "grade": "Medium",
+  "sourceType": "official_ui_screenshot",
+  "postId": "2123223626350780506",
+  "url": "https://x.com/ohayou792/status/2123223626350780506",
+  "author": "ohayou792",
+  "authorId": "1536363232373637120",
+  "createdAt": "2026-11-19T01:15:34.000Z",
+  "planOrModel": "官方 Gemini / Antigravity 限额弹层；套餐名未写明。",
+  "hasScreenshot": true,
+  "imagesVisuallyChecked": [
+    "images/ohayou792-2123223626350780506-1.jpg"
+  ],
+  "screenshotFields": {
+    "geminiModels": {
+      "weeklyRemaining": "93%（文案：You have used some of your weekly limit, it will fully refresh in 6 days, 8 hours.）",
+      "fiveHourRemaining": "100%"
+    },
+    "claudeAndGpt": {
+      "weeklyRemaining": "100%",
+      "fiveHourRemaining": "100%"
+    },
+    "gemini4Argon": {
+      "weeklyRemaining": "100%"
+    },
+    "tokens": null
+  },
+  "oralText": "Neon作为一个准pro级别的模型，意图是替代Argon现在次旗舰的位置。但是没想到的是，在反重力里Neon消耗的居然是flash的额度池，Argon依然和Carbon一个额度池。",
+  "conflictsToKeep": "图上可见「Gemini Models」通用周条 93% 剩余，以及单独的 Gemini 4 Argon 周条 100%。不能从图上证明 Neon 走的是 flash 池，也看不到 Carbon。口述分池主张未在截图证实，须与图分开记录。",
+  "recommendation": "暂不采用",
+  "why": "只有官方剩余百分比和池分组 UI，无 token，无套餐标签。口述 Neon/Flash、Argon/Carbon 分池不能当官方表采用。",
+  "alreadyInPrOrMain": false,
+  "targetPath": "data/research/ohayou792-antigravity-gemini-weekly93-argon100-x-2026-11-19.json",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false
+}

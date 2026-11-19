@@ -1,0 +1,17 @@
+{
+  "recordedAt": "2026-11-19",
+  "kind": "issue-triage",
+  "adoptionStatus": "research-only; not adopted",
+  "issue": 245,
+  "url": "https://github.com/Fei2411/real-api-pricing/issues/245",
+  "author": "yk4464",
+  "createdAt": "2026-11-18T02:54:37Z",
+  "summary": "请求补充 GPT-6.2 模型与订阅额度、Gemini 4 Carbon/Hydrogen 在各订阅的额度、OpenCode Go GLM-5.3「$10 覆盖 $200」及短周期限额、以及 SWE-2 限时免费改为永久免费以免表中仍显示旧截止日期。",
+  "didNotReply": true,
+  "assessment": {
+    "gpt-6.2": "模型已于 2026-11-17 官方发布，API 价可归档；订阅额度缺官方 token 池，暂不编造。详见 official-gpt-62-astra-sol-api-2026-11-19.json。",
+    "gemini-4-carbon-hydrogen": "main adopted 目前只有 Google AI Pro × gemini-4-argon（low，0.66 亿）和 OpenCode Go × gemini-4-argon-contributor。没有 Carbon 或 Hydrogen 的 adopted 行。此前研究里有 Hydrogen API 价、Carbon 仅 Ultra 等讨论，本 issue 本身没有新实测。在缺少可靠订阅额度前只标缺口，不新造配额。",
+    "opencode-go-glm-5.3": "诉求中的 $200 已被 11-19 官方表越过：现行为 Go $500 / Plus $1000 / Teams $505，文档写明更高限额至 2026-11-22。短周期规则官方仍是 5 小时=月额度 20%、周=50%（周一 00:00 UTC 重置）。adopted 仍是 $15→0.485 亿。",
+    "swe-2": "adopted 行「Devin Pro (促销至 10/31)」的 promo_until=2026-10-31 确已过期。官方博客 11-12 称 Desktop/CLI 永久免费（Teams/Pro/Max），但 docs.devin.ai 11-19 仍写到 2026-11-30。不自动改成永久免费。"
+  }
+}

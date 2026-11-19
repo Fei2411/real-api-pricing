@@ -1,0 +1,33 @@
+{
+  "id": "erickv924-x-weekly98-upgrade-ultra-x-2026-11-19",
+  "grade": "Medium",
+  "sourceType": "official_ui_screenshot",
+  "postId": "2123214612757926047",
+  "url": "https://x.com/ErickV924/status/2123214612757926047",
+  "author": "ErickV924",
+  "authorId": "734191521457545218",
+  "createdAt": "2026-11-19T00:39:45.000Z",
+  "planOrModel": "截图 Usage 页有 Upgrade to Ultra，故低于 Ultra；具体档名未写明。另有 animated_gif 未当作已看完的视频。",
+  "hasScreenshot": true,
+  "imagesVisuallyChecked": [
+    "images/ErickV924-2123214612757926047-2.jpg"
+  ],
+  "notViewedAsVideo": [
+    "images/ErickV924-2123214612757926047-1.jpg（animated_gif 预览，不声称看过动图全文）"
+  ],
+  "screenshotFields": {
+    "weeklyUsageLimit": "98%",
+    "resets": "Resets in 2 days",
+    "upgradePrompt": "Upgrade to Ultra",
+    "resetsAvailable": "No resets available",
+    "extraCredits": "$0",
+    "tokens": null
+  },
+  "oralText": "Early usage reset? 🥺 At 98% with 2 days left, building custom oil & gas software on my own dime with 10 Bots.",
+  "recommendation": "暂不采用",
+  "why": "官方周条 98%、2 天后重置与口述相符，但无 token、套餐只知不是 Ultra。",
+  "alreadyInPrOrMain": false,
+  "targetPath": "data/research/erickv924-x-weekly98-upgrade-ultra-x-2026-11-19.json",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false
+}

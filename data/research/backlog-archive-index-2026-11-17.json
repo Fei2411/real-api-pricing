@@ -4,10 +4,16 @@
   "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
   "parentIndex": "backlog-archive-index-2026-11-16.json",
   "laterIncrement": {
-    "date": "2026-11-18",
-    "index": "backlog-archive-index-2026-11-18.json",
-    "scan": "x-scan-2026-11-18.json",
-    "note": "11-18 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-17 及更早的采用判断不改写，唯 #240 按补图更正为 High、仍不采用。已把 main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5（#238 Magpie round3、#241 Command Code GOAT Qwen4 Max / Hy4 Flash，均 research-only）merge 进本分支，不重计、不改 adopted。OpenCode Go × GLM-5.3 月限 $200 只归档待核对试算。没有可直接上线的 adopted 改动。"
+    "date": "2026-11-19",
+    "index": "backlog-archive-index-2026-11-19.json",
+    "scan": "x-scan-2026-11-19.json",
+    "previous": {
+      "date": "2026-11-18",
+      "index": "backlog-archive-index-2026-11-18.json",
+      "scan": "x-scan-2026-11-18.json",
+      "note": "11-18 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-17 及更早的采用判断不改写，唯 #240 按补图更正为 High、仍不采用。已把 main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5（#238 Magpie round3、#241 Command Code GOAT Qwen4 Max / Hy4 Flash，均 research-only）merge 进本分支，不重计、不改 adopted。OpenCode Go × GLM-5.3 月限 $200 只归档待核对试算。没有可直接上线的 adopted 改动。"
+    },
+    "note": "11-19 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-18 及更早的采用判断不改写，只注明 11-18 的 OpenCode Go × GLM-5.3 月限 $200 讨论项已被本轮官方 Go $500 / Plus $1000 / Teams $505、promo_until=2026-11-22 捕获取代，仍不写入 adopted。已把 main 40cfb4e34ca2263ef4ddf4b06c44cfa578a3d10c（#242 GOAT Hy4、#243 OpenCode Go GLM-5.3 $200 round1、#244 OpenCode Go Qwen4 Max round2，均 research-only）merge 进本分支，不重计、不改 adopted。recommendAdopt 为空。没有可直接上线的 adopted 改动。"
   },
   "pullRequest": 234,
   "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",

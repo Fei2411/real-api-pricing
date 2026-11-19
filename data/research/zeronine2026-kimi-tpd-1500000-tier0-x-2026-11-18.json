@@ -1,0 +1,29 @@
+{
+  "id": "zeronine2026-kimi-tpd-1500000-tier0-x-2026-11-18",
+  "grade": "Medium",
+  "sourceType": "official_rate_limit_and_error",
+  "postId": "2123103472006599114",
+  "url": "https://x.com/Zeronine2026/status/2123103472006599114",
+  "author": "Zeronine2026",
+  "createdAt": "2026-11-18T17:18:07.000Z",
+  "planOrModel": "Kimi 开放平台账户等级速率限制（不是 Codex 订阅额度）。",
+  "hasScreenshot": true,
+  "imagesVisuallyChecked": [
+    "images/Zeronine2026-2123103472006599114-1.jpg",
+    "images/Zeronine2026-2123103472006599114-2.jpg",
+    "images/Zeronine2026-2123103472006599114-3.png"
+  ],
+  "screenshotFields": {
+    "officialTable": "Kimi 开放平台「模型与定价」：按累计充值分 Tier。Tier0 累计 ¥0，并发 1，RPM 3，TPM 500,000，TPD 1,500,000。Tier1 累计 ¥50 起，TPD Unlimited。",
+    "error": "Claude Code / kimi-k3.pro Max：429 organization TPD rate limit, current 1,546,842 与 1,546,863，limit 1,500,000。与 Tier0 TPD 一致。",
+    "account": "可用余额 ¥11.95452，累计充值 ¥30.00000（未到 Tier1 的 ¥50），故仍应按 Tier0。"
+  },
+  "oralText": "这波是真被kimi恶心到了，没注意看，第一次用说改个东西，codex额度又用完了。。。这尼玛以后狗都不用，霸王条款啊",
+  "conflictsToKeep": "口述说「codex额度又用完了」，截图全是 Kimi 开放平台 TPD 速率限制，不是 ChatGPT/Codex 订阅配额。须分开记录。",
+  "recommendation": "暂不采用（订阅额度表）",
+  "why": "这是官方 API 日速率（TPD）撞上限，不是订阅 token 池。可作 Kimi 平台限速讨论，不能改 adopted 订阅行。",
+  "alreadyInPrOrMain": false,
+  "targetPath": "data/research/zeronine2026-kimi-tpd-1500000-tier0-x-2026-11-18.json",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false
+}
