@@ -1,0 +1,134 @@
+{
+  "scannedAt": "2026-11-20T01:51:04Z",
+  "recordedAt": "2026-11-20",
+  "taipeiLocal": "2026-11-20 09:38:23–09:51:04",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "source": "精简自 2026-11-20 扫描结论。不另开 PR。分页 token、原始搜索大文件、截图二进制和账号密钥不入库。tweetCountSnapshot 不是发帖频率。",
+  "method": "公开 X 读取，外加 2026-11-20 09:39–09:40 台北时间复核 OpenCode 与 Devin 官方页，以及只读核对 issue #247。未回复评论，未发帖，未部署，未改 adopted。为赶上 #246 与 #237，已把远程 main 13080beb25054a0ab567ed5b6b60ce37c5c40f1b merge 进本分支。",
+  "window": {
+    "start": "2026-11-18T01:45:45Z",
+    "end": "2026-11-20T01:51:04Z",
+    "previousEnd": "2026-11-19T01:45:45Z",
+    "overlap": "增量起点 2026-11-18T01:45:45Z，相对上轮结束 2026-11-19T01:45:45Z 重叠 24 小时。已归档 post ID 只补缺、不重计。",
+    "scanStartedUtc": "2026-11-20T01:38:23Z",
+    "scanEndedUtc": "2026-11-20T01:51:04Z",
+    "scanStartedTaipei": "2026-11-20 09:38:23 Asia/Taipei",
+    "scanEndedTaipei": "2026-11-20 09:51:04 Asia/Taipei"
+  },
+  "counts": {
+    "uniquePostsScanned": 327,
+    "knownIdHits": 41,
+    "newIdsSeen": 286,
+    "recommendAdopt": 0,
+    "notAdoptedHigh": 0,
+    "notAdoptedMedium": 6,
+    "discussAdoptPendingConfirmation": 0,
+    "directAdopt": 0,
+    "note": "不含共享目录里出现、但本轮未调用的 leo114119 时间线缓存。leo 的 Fable 帖来自本轮关键词检索。#247 是 GitHub issue，不计入这里的 notAdoptedHigh。"
+  },
+  "judgmentNote": "recommendAdopt 为空。没有同时具备同帖具体 tokens 与配额%、且控制台截图能对上口述的新 High 样本。6 条 Medium 不升级、不采用。官方 OpenCode / Devin 相对 11-19 与已合并的 #246 没有新结论。",
+  "notExhaustive": [
+    "四路 has:images 都只翻了 1 页，仍有分页，未关到 2026-11-18T01:45:45Z。OpenCode/GLM 图搜最旧 2026-11-19T16:46:12Z。Cursor、Claude、Antigravity/Gemini 图搜最旧同样停在 11-19 下午到夜间。",
+    "Kimi、DeepSeek、Codex/ChatGPT、Devin、MiniMax、千问/Qwen、Grok 的独立带图检索本轮未跑。中文控制台查询本轮未跑；上轮 11-16 01:37–03:00 缺口仍在。",
+    "from:Fei2411 1 页 25 条，最新 2026-11-20T01:38:52Z，最旧 2026-11-19T13:41:38Z，仍有分页，未关到窗口起点，也未关到 2026-11-17T01:39:07Z 或 7 日起点。",
+    "to:Fei2411 最旧 2026-11-19T17:29:53Z；@Fei2411 -from:Fei2411 最旧 2026-11-19T18:53:28Z。各 1 页 25 条，仍有分页。11-16 提及窗、11-15 10:41–12:39、7 日缺口（11-11 01:30 附近仍晚约 42 分钟）本轮未补。",
+    "14 日已关：UYouximi58156、ceciiiax、ZShipZuck、big_mm_cat；mamaruo 与 bebuu 近 14 日为 0 条，窗口视为空且关完。capputschino 上轮 14 日已完成，本轮增量 8 条，无后续页。",
+    "14 日未关完，各 1 页 25 条，仍有分页：2232960089q 最旧 2026-11-07T15:00:45Z；MartinM91217805 最旧 2026-11-16T05:51:00Z；niko70129972 最旧 2026-11-17T13:40:32Z；Riom510 最旧 2026-11-18T23:54:28Z；imranbru99 最旧 2026-11-16T10:23:47Z；lechattys 最旧 2026-11-16T20:57:30Z。",
+    "本轮只解析、未拉时间线：Octoberry、TorhileCharles、kimmonismus。完全未拉：ai_funss、shengtang135754、leo114119、shownotover、pcshipp、bebuu_ai、maanasms、ethan_leee9113、jkgorka、Hsanli_x、VersunPan、huang18825。leo114119 的新帖来自关键词检索。",
+    "missionaryjdot 不存在，未再查。停止是为了把已目视样本和官方复核归档，不是搜全，也不是额度耗尽。"
+  ],
+  "budget": {
+    "source": "共享公开 X 读取，不是用户 X 插件。",
+    "visibleAfterResolve": "981/1000",
+    "remainingAtLastCall": "955/1000",
+    "dailyCap": 1000,
+    "approxReadsUsed": 45,
+    "reservedUnused": "100+",
+    "resetsAt": "2026-11-21T00:00:00.000Z",
+    "http429": "2026-11-20T01:43Z 左右一次。等到 2026-11-20T01:46:12Z 后重试 Fei 检索，成功。无第二次 429。",
+    "maxResultsNote": "接口每次最多 25 条。",
+    "stopReason": "已把目视过的 6 条 Medium 和官方复核归档。预留额度未用尽。最后一次关键词检索时约剩 955/1000。"
+  },
+  "nextBackfillCutoff": "2026-11-20T01:51:04Z",
+  "mergedMain": {
+    "sha": "13080beb25054a0ab567ed5b6b60ce37c5c40f1b",
+    "pullRequests": [
+      246,
+      237
+    ],
+    "note": "只带入 data/research/。#246 是 OpenCode Go GLM-5.3 $500 研究文件，#237 是 Copilot / synthetic.new。不重计，不把 $500 当成新的采用项，不改 adopted。"
+  },
+  "noDirectAdopt": true,
+  "recommendAdopt": [],
+  "recommendDiscussAdopt": [],
+  "notAdoptedHigh": [],
+  "notAdoptedMedium": [
+    "https://x.com/aChow_hz/status/2123575299787080073",
+    "https://x.com/jayleaton/status/2123584107888418895",
+    "https://x.com/leo114119/status/2123585760909791742",
+    "https://x.com/keke202106/status/2123581131794870333",
+    "https://x.com/andreimerlescu/status/2123576866149720419",
+    "https://x.com/2232960089q/status/2121837005831324041"
+  ],
+  "notAdoptedLowExamples": [
+    "https://x.com/HmafVj0nsz59334/status/2123591522075763182：单会话联网次数限制，与 Ultra 订阅额度无关。",
+    "https://x.com/growaiskills/status/2123593812828381206：口述 20% 配的是插画，不是控制台。",
+    "https://x.com/TheSeanMcKenna/status/2123591192801636677：口述 Cursor $60 月末剩 80%，图是未标明产品的 Weekly 35%。",
+    "https://x.com/keyelifeai/status/2123579452567503036：Grok Bot 周限用尽提示，无计量数字。",
+    "https://x.com/cantonesify/status/2123562004946604291：口述 Cursor Ultra / Grok bots，图像 ChatGPT Weekly 42% 与 On-demand $20.01/$20。"
+  ],
+  "officialRecheck": {
+    "notANewAdoptionItem": true,
+    "recommendAdopt": false,
+    "file": "official-opencode-devin-recheck-2026-11-20.json",
+    "opencodeGoGlm53": {
+      "fetchedAtUtc": "2026-11-20T01:39:34Z",
+      "unchangedVs2026-11-19": true,
+      "alreadyOnMain": "data/research/opencode-go-glm53-limit-round2-2026-11-19.json",
+      "sameConclusionAlsoOnThisBranch": "data/research/official-opencode-go-glm53-limit-round2-2026-11-19.json",
+      "monthlyUsageUsd": {
+        "go": 500,
+        "goPlus": 1000,
+        "goTeams": 505
+      },
+      "pricesPerMillionUsd": {
+        "input": 1.4,
+        "output": 4.4,
+        "cacheRead": 0.26
+      },
+      "docsQuote": "GLM-5.3: Higher usage limits apply through November 22, 2026.",
+      "landing": "Go $500 / Plus $1000；Est. requests / 5 hr 6,600 / 13,200。落地页 HTML 未写 November 22。",
+      "fallbackValuePublished": false
+    },
+    "devinSwe2": {
+      "fetchedAtUtc": "2026-11-20T01:40:07Z",
+      "conflictUnchanged": true,
+      "blog": "free SWE-2 in Desktop and CLI is a permanent part of Teams, Pro, and Max",
+      "pricing": "Pro 仍写 Free use of SWE-2，无截止日期。",
+      "docsSelfServeThrough": "2026-11-30",
+      "docsExcludesCloudSessions": true,
+      "docsListAfterUsdPerMTok": {
+        "input": 3.0,
+        "output": 15.0,
+        "cacheRead": 0.3
+      },
+      "swe2FlashFreeUntil": "2026-12-04T18:00:00Z",
+      "adoptedStill": "devin_pro × swe-2 仍是 unmetered，promo_until 仍是 2026-10-31。"
+    },
+    "recordOnly": [
+      "GPT-5.6 Sol 标准上下文价将于 2026-11-21T07:00Z 从 $4/$20 调到 $5/$30（Fast mode 2x）。只记录，不自动改 adopted。"
+    ]
+  },
+  "issue247": {
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/247",
+    "file": "mamaruo-qwen-tokenplan-lite-deepseek-v41-flash-1017-2026-11-19.json",
+    "grade": "High",
+    "recommendAdopt": false,
+    "adopted": false,
+    "replied": false,
+    "xTimeline14d": "0 posts",
+    "note": "主流程核实。不计入本扫描 counts.notAdoptedHigh。不覆盖 #240。"
+  },
+  "suggestion": "没有可直接写入 adopted 的改动。#247 的标准负载试算留在研究文件的 trialComputationNotAdopted。官方复核不产生新的采用项。",
+  "index": "backlog-archive-index-2026-11-20.json"
+}

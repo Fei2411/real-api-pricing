@@ -1,0 +1,46 @@
+{
+  "researchOnly": true,
+  "adoptionStatus": "research-only; not adopted",
+  "collectedAt": "2026-11-20T01:51:04Z",
+  "collectedAtTaipei": "2026-11-20 09:51:04 Asia/Taipei",
+  "collectionMethod": "Public X MCP namespace x; screenshots downloaded with curl and read visually. No repo write, no issue/PR, no author contact.",
+  "id": "official-opencode-devin-recheck-2026-11-20",
+  "file": "data/research/official-opencode-devin-recheck-2026-11-20.json",
+  "grade": "Official confirmation",
+  "recommendAdopt": false,
+  "recommendAdoptReason": "OpenCode Go GLM-5.3 月限与 11-19 官方快照及已合并到 main 的 #246 研究文件一致，不是新结论，不要再开一轮 adopted 变更。Devin SWE-2 永久免费 vs 11-30 截止的冲突仍在，同样不要在未裁定前改 adopted。GPT-5.6 Sol 标价将于 11-21 07:00 UTC 上调是新的官方日期，只记录，不自动改 adopted。",
+  "fetched": {
+    "opencode": "2026-11-20T01:39:34Z",
+    "devin": "2026-11-20T01:40:07Z"
+  },
+  "opencodeGoGlm53": {
+    "modelsApi": {
+      "go": 500,
+      "goPlus": 1000,
+      "goTeams": 505,
+      "prices": {
+        "input": 1.4,
+        "output": 4.4,
+        "cacheRead": 0.26
+      }
+    },
+    "docsQuote": "GLM-5.3: Higher usage limits apply through November 22, 2026.",
+    "landing": "仍见 Go $500 / Plus $1000 与 5 小时估计 6,600 / 13,200；落地页 HTML 未写 November 22。",
+    "unchangedVs2026-11-19": true,
+    "alreadyOnMain": "data/research/opencode-go-glm53-limit-round2-2026-11-19.json (PR #246). PR #234 上对应文件名曾是 official-opencode-go-glm53-limit-round2-2026-11-19.json。",
+    "fallbackValuePublished": false
+  },
+  "devinSwe2": {
+    "blogPermanent": "https://devin.ai/blog/devin-teams-plan 仍写 free SWE-2 in Desktop and CLI is a permanent part of Teams, Pro, and Max.",
+    "pricing": "https://devin.ai/pricing Pro 仍写 Free use of SWE-2，无截止日期。",
+    "docsSelfServe": "https://docs.devin.ai/desktop/models.md 仍写 SWE-2 is free for self-serve plans in Desktop and CLI through November 30, 2026; it does not apply to Devin cloud sessions. List pricing $3 / $15 / $0.30 cache afterward. Teams Free mode: up to 2 cloud sessions.",
+    "docsSwe2FlashSelfServe": "SWE-2 Flash is free until December 4, 2026 at 18:00 UTC.",
+    "conflictUnchanged": true
+  },
+  "otherOfficialDates": [
+    "GPT-5.6 Sol standard-context rates change on November 21, 2026 at 07:00 UTC from $4 to $5 per million input and $20 to $30 per million output (token-based plans; Fast mode 2x).",
+    "Claude Fable 5.2 launch gift badge through November 23, 2026 at 18:30 UTC does not indicate a discount.",
+    "Gemini 3.7/3.8 Flash intro pricing through December 31, 2026; Gemini 4 Argon discount until December 1, 2026 08:00 UTC.",
+    "Enterprise ACU tab: SWE-2 Flash 25% off until November 18, 2026 18:00 UTC（抓取时已过期）。"
+  ]
+}

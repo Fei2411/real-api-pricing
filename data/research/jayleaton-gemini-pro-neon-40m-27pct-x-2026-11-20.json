@@ -1,0 +1,29 @@
+{
+  "researchOnly": true,
+  "adoptionStatus": "research-only; not adopted",
+  "collectedAt": "2026-11-20T01:51:04Z",
+  "collectedAtTaipei": "2026-11-20 09:51:04 Asia/Taipei",
+  "collectionMethod": "Public X MCP namespace x; screenshots downloaded with curl and read visually. No repo write, no issue/PR, no author contact.",
+  "id": "jayleaton-gemini-pro-neon-40m-27pct-x-2026-11-20",
+  "file": "data/research/jayleaton-gemini-pro-neon-40m-27pct-x-2026-11-20.json",
+  "grade": "Medium",
+  "recommendAdopt": false,
+  "recommendAdoptReason": "图上只有 Gemini 5h/周进度条百分比，40 million tokens in 只在口述，未见 input/cache/output 分项。Ultra 约 800M/周是作者外推，外推不等于打满实测，不能覆盖 adopted。",
+  "post": {
+    "id": "2123584107888418895",
+    "url": "https://x.com/jayleaton/status/2123584107888418895",
+    "author": "jayleaton",
+    "createdAt": "2026-11-20T01:08:00.000Z"
+  },
+  "oral": "Gemini Neon；40 million tokens in，已用 Pro 计划的 27%。估计 Ultra 约 800M tokens/week。",
+  "screenshot": {
+    "file": "images/jayleaton-2123584107888418895-1.png",
+    "visual": {
+      "antigravity": "0 requests",
+      "geminiSession5hour": "1h 34m, bar labeled 89%",
+      "geminiWeekly7day": "6d 20h, bar labeled 27%"
+    },
+    "note": "周条 27% 与口述“已用 27%”一致，按已用口径解读。5 小时条 89% 几乎拉满，图上未写 used/remaining 字样，结合口述“已用”倾向已用。图上没有 40M 或任何 token 数字。计划名 Pro 只在口述。"
+  },
+  "extrapolation": "Ultra ≈800M/周为作者估计，不是截图实测，也不是官方值。"
+}

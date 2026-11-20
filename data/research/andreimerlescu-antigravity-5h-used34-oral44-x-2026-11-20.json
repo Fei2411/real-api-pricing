@@ -1,0 +1,35 @@
+{
+  "researchOnly": true,
+  "adoptionStatus": "research-only; not adopted",
+  "collectedAt": "2026-11-20T01:51:04Z",
+  "collectedAtTaipei": "2026-11-20 09:51:04 Asia/Taipei",
+  "collectionMethod": "Public X MCP namespace x; screenshots downloaded with curl and read visually. No repo write, no issue/PR, no author contact.",
+  "id": "andreimerlescu-antigravity-5h-used34-oral44-x-2026-11-20",
+  "file": "data/research/andreimerlescu-antigravity-5h-used34-oral44-x-2026-11-20.json",
+  "grade": "Medium",
+  "recommendAdopt": false,
+  "recommendAdoptReason": "面板只有剩余%。口述 44% 与图上 5 小时剩余 66%（已用约 34%）冲突。$4.99/mo 计划未在图上出现。无 token。",
+  "post": {
+    "id": "2123576866149720419",
+    "url": "https://x.com/andreimerlescu/status/2123576866149720419",
+    "author": "andreimerlescu",
+    "createdAt": "2026-11-20T00:39:13.000Z"
+  },
+  "oral": "$4.99/mo Antigravity，3 小时工作 44%；对比 Claude Opus 5.5 在 $20/mo 1 小时用完 session。",
+  "screenshot": {
+    "file": "images/andreimerlescu-2123576866149720419-1.jpg",
+    "visual": {
+      "geminiModels": {
+        "weeklyRemaining": "90%",
+        "refresh": "6 days, 22 hours",
+        "fiveHourRemaining": "66%",
+        "fiveHourRefresh": "3 hours, 2 minutes"
+      },
+      "claudeAndGptModels": {
+        "weeklyRemaining": "100%",
+        "fiveHourRemaining": "100%"
+      }
+    }
+  },
+  "oralVsScreenshot": "若按剩余口径，5h 已用约 34%，不是口述 44%。计划价 $4.99 图上不可见。"
+}

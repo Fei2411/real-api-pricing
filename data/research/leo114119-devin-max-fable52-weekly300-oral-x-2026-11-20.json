@@ -1,0 +1,24 @@
+{
+  "researchOnly": true,
+  "adoptionStatus": "research-only; not adopted",
+  "collectedAt": "2026-11-20T01:51:04Z",
+  "collectedAtTaipei": "2026-11-20 09:51:04 Asia/Taipei",
+  "collectionMethod": "Public X MCP namespace x; screenshots downloaded with curl and read visually. No repo write, no issue/PR, no author contact.",
+  "id": "leo114119-devin-max-fable52-weekly300-oral-x-2026-11-20",
+  "file": "data/research/leo114119-devin-max-fable52-weekly300-oral-x-2026-11-20.json",
+  "grade": "Medium",
+  "recommendAdopt": false,
+  "recommendAdoptReason": "17M tokens / 95% 缓存 / 周限 5% / 折合约 $300 均为口述。唯一截图是 Devin 模型选择器上的 Fable 5.2 标价（$8 / $0.2 cache / $40 per 1M），不是用量或配额面板。不能把口述周限写入 adopted。",
+  "post": {
+    "id": "2123585760909791742",
+    "url": "https://x.com/leo114119/status/2123585760909791742",
+    "author": "leo114119",
+    "createdAt": "2026-11-20T01:14:34.000Z"
+  },
+  "oral": "Devin Max，Fable 5.2 用量实测：1 小时约 17M tokens，缓存命中 95%，约 $20 价值；约 50 tok/s；额度用了周限 5%（非 Fast mode）。因此若一周都跑 Fable 5.2，周限大约 $300。作者称比 Claude Max 5 订阅略高（仅计 Fable 5.2）。",
+  "screenshot": {
+    "file": "images/leo114119-2123585760909791742-1.png",
+    "visual": "Devin 模型列表：SWE-2 High、SWE-2 Flash High 标 Free、Claude Fable 5.2 Medium（正在查看）、Claude Opus 5.5 Medium、GPT-6.2 Astra、GPT-6 Astra、GPT-6 Sol。右侧 Claude Fable 5.2 Medium：1M context，Effort Medium，Fast Mode 关闭。标价 Input $8/1M，Cached input $0.2/1M，Output $40/1M。无用量%、无 17M、无周限。"
+  },
+  "priceCrossCheck": "与 2026-11-20 抓取的 docs.devin.ai/desktop/models.md 中 Fable 5.2 标价 $8 / $40 / $0.20 cache read 一致。这是 API/标价，不是订阅额度实测。"
+}

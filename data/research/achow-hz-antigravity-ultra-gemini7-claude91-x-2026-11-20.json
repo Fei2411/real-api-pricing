@@ -1,0 +1,41 @@
+{
+  "researchOnly": true,
+  "adoptionStatus": "research-only; not adopted",
+  "collectedAt": "2026-11-20T01:51:04Z",
+  "collectedAtTaipei": "2026-11-20 09:51:04 Asia/Taipei",
+  "collectionMethod": "Public X MCP namespace x; screenshots downloaded with curl and read visually. No repo write, no issue/PR, no author contact.",
+  "id": "achow-hz-antigravity-ultra-gemini7-claude91-x-2026-11-20",
+  "file": "data/research/achow-hz-antigravity-ultra-gemini7-claude91-x-2026-11-20.json",
+  "grade": "Medium",
+  "recommendAdopt": false,
+  "recommendAdoptReason": "官方风格 Antigravity Models & Usage 面板只有配额剩余百分比，没有 token（input/cache/output）。ChatGPT Plus 周 72% 只在口述、图上没有。不能据此改 adopted 配额表。",
+  "post": {
+    "id": "2123575299787080073",
+    "url": "https://x.com/aChow_hz/status/2123575299787080073",
+    "author": "aChow_hz",
+    "createdAt": "2026-11-20T00:33:00.000Z"
+  },
+  "planVisible": "Google AI Ultra（面板 Your Plan: Google AI Ultra；Enable AI Credit Overages 关闭）",
+  "screenshot": {
+    "files": [
+      "images/aChow_hz-2123575299787080073-1.png",
+      "images/aChow_hz-2123575299787080073-2.png"
+    ],
+    "visual": {
+      "geminiModels": {
+        "weeklyLimitRemaining": "93%",
+        "fiveHourLimitRemaining": "100%",
+        "refresh": "6 days, 2 hours"
+      },
+      "claudeAndGptModels": {
+        "weeklyLimitRemaining": "9%",
+        "fiveHourLimitRemaining": "100%",
+        "refresh": "6 days, 2 hours"
+      },
+      "image2": "模型选择器，当前 Gemini 4 Carbon Medium；可见 Neon/Argon/Hydrogen、Orchestrator、Claude Opus 5.5 / Sonnet 5.5、GPT-OSS 120B。无数字。"
+    }
+  },
+  "oral": "稍高强度使用一天 Gemini Carbon 和 Neon，消耗只有 7%；差不多的工作 ChatGPT Plus 用了周额度 72%；Antigravity 里 Opus 蹬两轮方案思考就快没了。",
+  "oralVsScreenshot": "Gemini 周剩余 93% 与口述消耗 7% 一致（100-93）。Claude and GPT 周剩余 9%（已用约 91%）可对应口述 Opus 消耗快。ChatGPT Plus 72% 图上未出现，不能用本图证实。cache% 未出现。",
+  "tokensOnScreenshot": false
+}

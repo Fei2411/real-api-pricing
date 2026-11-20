@@ -3,6 +3,12 @@
   "kind": "research-archive-increment",
   "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
   "parentIndex": "backlog-archive-index-2026-11-18.json",
+  "laterIncrement": {
+    "date": "2026-11-20",
+    "index": "backlog-archive-index-2026-11-20.json",
+    "scan": "x-scan-2026-11-20.json",
+    "note": "11-20 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-19 及更早的采用判断不改写。本轮 recommendAdopt 为空。#247 分级 High、暂不采用。OpenCode Go × GLM-5.3 的 $500 已由 main 13080beb25054a0ab567ed5b6b60ce37c5c40f1b 的 #246 收录（opencode-go-glm53-limit-round2-2026-11-19.json），与本分支既有 official-opencode-go-glm53-limit-round2-2026-11-19.json 是同一结论；11-20 官方复核不是新发现，不把 $500 当成新的采用项。Devin SWE-2 博客/定价与 docs 的冲突未消失，不改 adopted。已把该 main merge 进本分支（另含 #237 Copilot / synthetic.new，均 research-only），不重计、不改 adopted。没有可直接上线的 adopted 改动。"
+  },
   "pullRequest": 234,
   "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",
   "scanStartUtc": "2026-11-19T01:34:02Z",

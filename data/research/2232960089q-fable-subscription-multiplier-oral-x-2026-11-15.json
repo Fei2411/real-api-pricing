@@ -1,0 +1,21 @@
+{
+  "researchOnly": true,
+  "adoptionStatus": "research-only; not adopted",
+  "collectedAt": "2026-11-20T01:51:04Z",
+  "collectedAtTaipei": "2026-11-20 09:51:04 Asia/Taipei",
+  "collectionMethod": "Public X MCP namespace x; screenshots downloaded with curl and read visually. No repo write, no issue/PR, no author contact.",
+  "id": "2232960089q-fable-subscription-multiplier-oral-x-2026-11-15",
+  "file": "data/research/2232960089q-fable-subscription-multiplier-oral-x-2026-11-15.json",
+  "grade": "Medium",
+  "recommendAdopt": false,
+  "recommendAdoptReason": "纯口述，声称来自 Claude 官方文档，本轮未见截图，也未把该文档原文附上。不能单独改 adopted。",
+  "post": {
+    "id": "2121837005831324041",
+    "url": "https://x.com/2232960089q/status/2121837005831324041",
+    "author": "2232960089q",
+    "createdAt": "2026-11-15T05:25:38.000Z"
+  },
+  "oral": "claude官方文档说了，fable在订阅计划中有额外消耗，实际上大概是2.3--2.5倍，如果算上本身API价格，那么每个token消耗订阅速度是接近五倍",
+  "screenshot": null,
+  "note": "出现在该作者 14 日回补第一页，时间在窗口重叠段之前，但仍是新 post ID。"
+}

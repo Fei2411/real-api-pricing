@@ -1,0 +1,36 @@
+{
+  "researchOnly": true,
+  "adoptionStatus": "research-only; not adopted",
+  "collectedAt": "2026-11-20T01:51:04Z",
+  "collectedAtTaipei": "2026-11-20 09:51:04 Asia/Taipei",
+  "collectionMethod": "Public X MCP namespace x; screenshots downloaded with curl and read visually. No repo write, no issue/PR, no author contact.",
+  "id": "keke202106-gemini-pro-usage-61-60-x-2026-11-20",
+  "file": "data/research/keke202106-gemini-pro-usage-61-60-x-2026-11-20.json",
+  "grade": "Medium",
+  "recommendAdopt": false,
+  "recommendAdoptReason": "官方风格 Usage 面板只有剩余百分比，无 token。计划名 Pro 只在口述。不足以下调或改 adopted。",
+  "post": {
+    "id": "2123581131794870333",
+    "url": "https://x.com/keke202106/status/2123581131794870333",
+    "author": "keke202106",
+    "createdAt": "2026-11-20T00:56:10.000Z"
+  },
+  "oral": "昨天开了 Gemini Pro 玩 Neon。重度用 Neon 一周用量不够；可能是缓存问题，感觉没有 Claude Pro 用量多。",
+  "screenshot": {
+    "file": "images/keke202106-2123581131794870333-1.jpg",
+    "visual": {
+      "geminiModels": {
+        "weekly": "61% left",
+        "reset": "6d 3h",
+        "fiveHour": "100% left"
+      },
+      "claudeAndGptModels": {
+        "weekly": "60% left",
+        "reset": "6d 12h",
+        "fiveHour": "100% left"
+      },
+      "gemini4ArgonWeekly": "100% left"
+    },
+    "note": "两个池的周重置倒计时不同（6d 3h vs 6d 12h）。图上无 Pro 字样，无 token。"
+  }
+}
