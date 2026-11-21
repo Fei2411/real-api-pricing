@@ -1,0 +1,1200 @@
+{
+  "collectedAt": "2026-11-16",
+  "collectedAtDetail": "Read-only capture around 2026-11-16 11:14 Asia/Shanghai (2026-11-16T03:14:11Z).",
+  "collectionMethod": "Read-only fetch of the public GitHub Copilot plans page and the two official billing documents named below. Plan credit cells and the model-availability matrix were read from the plans-page content payload (strikethrough = not included). Per-token rates were read from the models-and-pricing document. Research-only: no adopted row, no token conversion, no script change.",
+  "sources": [
+    "https://github.com/features/copilot/plans",
+    "https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing",
+    "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing"
+  ],
+  "scope": "GitHub Copilot official AI Credits allowance and GitHub-billed model rates. Individual Pro, Pro+, and Max are the plans with a published flex allotment. Business and Enterprise dollar cells on the same plans page are recorded because they were in the same comparison rows. No monthly token quota is published, and none is computed here.",
+  "adoptionStatus": "research-only; not adopted; no adopted.csv row and no credit-to-token conversion — left to maintainer review. Refs https://github.com/Fei2411/real-api-pricing/issues/201 . This file does not close that issue.",
+  "issue": {
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/201",
+    "coverage": "partial — GitHub Copilot only in this file; Muse Code, Mistral, Synthetic, and BytePlus are not recorded here"
+  },
+  "duplicateCheck": {
+    "upstreamDefaultBranchCodeSearch": "repo:Fei2411/real-api-pricing query \"copilot OR synthetic.new\" returned 0 hits on 2026-11-16",
+    "openPullRequests": "None of the 8 open PRs on Fei2411/real-api-pricing mentioned Copilot plans, Synthetic, Muse, Mistral, BytePlus, or issue 201.",
+    "closedDraft152": "https://github.com/Fei2411/real-api-pricing/pull/152 is a closed unmerged draft about an X scan, including a different Copilot GPT-6.1 Terra usage-billing note. It is not this plans-page capture and its files are not on main."
+  },
+  "creditUnit": {
+    "quote": "1 AI credit = $0.01 USD",
+    "sources": [
+      "https://github.com/features/copilot/plans",
+      "https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing",
+      "https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing"
+    ],
+    "note": "A credit is one cent of GitHub-billed model cost. It is not, by itself, evidence that the credit buys one cent of the underlying provider list-API tokens."
+  },
+  "billingMeter": {
+    "whatDrawsCredits": [
+      "Copilot Chat",
+      "Copilot CLI",
+      "Copilot cloud agent",
+      "Copilot Spaces",
+      "Spark",
+      "Third-party coding agents",
+      "Copilot code review (token consumption; the review also consumes GitHub Actions minutes)"
+    ],
+    "plansPageQuote": "Agent mode, code review, Copilot in the cloud, Copilot CLI, and Copilot app consume GitHub AI Credits.",
+    "doesNotDrawCredits": {
+      "features": [
+        "code completions",
+        "next edit suggestions",
+        "inline suggestions"
+      ],
+      "paidPlans": "Not billed in AI credits and remain unlimited for all paid plans.",
+      "freePlanInlineSuggestions": "2,000 per month",
+      "proProPlusMaxBusinessEnterpriseInlineSuggestions": "Unlimited"
+    },
+    "pool": "One monthly allowance per plan, shared across the features that draw credits. It is not a separate quota per model. Included credits do not carry over. Unused credits are forfeited. The allowance resets to the full monthly amount at 00:00:00 UTC on the first day of each calendar month, not on the subscription anniversary.",
+    "individualPlansAreNotOrgPooled": "The plans-page row \"Pooled usage\" (\"Included AI credits are shared org-wide with admin controls for spending\") is Not included for Free, Pro, Pro+, and Max.",
+    "orgPoolSentence": "The models-and-pricing document says Copilot Business and Copilot Enterprise include per-user GitHub AI Credits allowances that are pooled at the billing entity level. This capture did not open the organization billing document, so the pool rules beyond that sentence and the plans-page cells are not recorded."
+  },
+  "plans": {
+    "free": {
+      "priceUsdPerMonth": 0,
+      "totalCreditsDisplay": "Limited chat and agent usage",
+      "baseCreditsDisplay": "Limited chat and agent usage",
+      "flexAllotment": "Not included",
+      "publishedCreditCount": null,
+      "publishedCreditCountNote": "The individual billing document says Copilot Free has an allowance of AI credits and access to models through auto model selection only, and 2,000 code completions per month. Neither page states a Free credit count. No count is invented here.",
+      "inlineSuggestions": "2,000 per month"
+    },
+    "student": {
+      "onPlansComparisonTable": false,
+      "documented": "The individual billing document says Copilot Student has an allowance of AI credits, access through auto model selection only, and unlimited code completions. No Student price or credit count is stated on the captured pages."
+    },
+    "pro": {
+      "priceUsdPerUserPerMonth": 10,
+      "baseCredits": 1000,
+      "baseCreditsUsd": 10,
+      "flexAllotmentCredits": 500,
+      "flexAllotmentUsd": 5,
+      "totalMonthlyCredits": 1500,
+      "totalMonthlyCreditsUsd": 15,
+      "plansPageCells": {
+        "total": "$15 per month",
+        "base": "$10 per month",
+        "flex": "$5 per month"
+      },
+      "additionalCredits": "Included"
+    },
+    "proPlus": {
+      "priceUsdPerUserPerMonth": 39,
+      "baseCredits": 3900,
+      "baseCreditsUsd": 39,
+      "flexAllotmentCredits": 3100,
+      "flexAllotmentUsd": 31,
+      "totalMonthlyCredits": 7000,
+      "totalMonthlyCreditsUsd": 70,
+      "plansPageCells": {
+        "total": "$70 per month",
+        "base": "$39 per month",
+        "flex": "$31 per month"
+      },
+      "additionalCredits": "Included"
+    },
+    "max": {
+      "priceUsdPerUserPerMonth": 100,
+      "baseCredits": 10000,
+      "baseCreditsUsd": 100,
+      "flexAllotmentCredits": 10000,
+      "flexAllotmentUsd": 100,
+      "totalMonthlyCredits": 20000,
+      "totalMonthlyCreditsUsd": 200,
+      "plansPageCells": {
+        "total": "$200 per month",
+        "base": "$100 per month",
+        "flex": "$100 per month"
+      },
+      "additionalCredits": "Included"
+    },
+    "business": {
+      "priceUsdPerUserPerMonth": 19,
+      "totalCreditsDisplay": "$19 per user per month",
+      "baseCreditsDisplay": "$19 per user per month",
+      "flexAllotment": "Disabled on the plans page",
+      "publishedSeparateFlexCredits": null,
+      "note": "Displayed base and total cells equal the displayed per-user price. The individual credit-count table does not include Business. Org pooling is only the sentence recorded under billingMeter.orgPoolSentence."
+    },
+    "enterprise": {
+      "priceUsdPerUserPerMonth": 39,
+      "totalCreditsDisplay": "$39 per user per month",
+      "baseCreditsDisplay": "$39 per user per month",
+      "flexAllotment": "Disabled on the plans page",
+      "publishedSeparateFlexCredits": null,
+      "note": "Displayed base and total cells equal the displayed per-user price. The individual credit-count table does not include Enterprise."
+    }
+  },
+  "baseAndFlexRules": {
+    "baseQuote": "Base credits: These are included with your plan subscription each month. These match with your subscription price and they never change.",
+    "flexQuote": "The flex allotment is a variable part of your included usage; it is designed to adapt as the economics of AI evolve, including model pricing, new models, and improvements in efficiency.",
+    "plansPageFlexSubheading": "Variable additional usage on top of your base. Flex allotments may change over time.",
+    "spendOrder": "Base credits are used first. Flex is then applied automatically at the same rates across the IDE, GitHub.com, and Copilot CLI.",
+    "implication": "Pro $10 / Pro+ $39 / Max $100 base dollars match 1,000 / 3,900 / 10,000 credits at $0.01. The flex portion ($5 / $31 / $100) is officially changeable, so the $15 / $70 / $200 totals are the captured allowance, not a permanent entitlement."
+  },
+  "conditionalDiscountsOnGithubModelCost": [
+    {
+      "name": "Copilot Fusion",
+      "discount": "30% on model costs",
+      "who": "users on paid Copilot plans",
+      "until": "2026-11-30",
+      "quote": "Through November 30, 2026, users on paid Copilot plans receive a 30% discount on model costs when using Copilot Fusion."
+    },
+    {
+      "name": "Auto model selection",
+      "discount": "10% on model costs",
+      "who": "paid Copilot plan",
+      "surfaces": [
+        "Copilot Chat",
+        "Copilot cloud agent"
+      ],
+      "quote": "If you are on a paid Copilot plan, you qualify for a 10% discount on model costs while using auto model selection in Copilot Chat, or Copilot cloud agent."
+    }
+  ],
+  "githubBilledModelRates": {
+    "unit": "USD per 1 million tokens",
+    "creditConversion": "The token cost at these GitHub rates is converted into AI credits at 1 credit = $0.01.",
+    "cacheWrite": "null means the captured table has no cache-write price for that row (column absent, or cell \"Not applicable\"). It is not a price of zero.",
+    "emptySections": [
+      "Fine-tuned (GitHub) table had no model rows."
+    ],
+    "rows": [
+      {
+        "provider": "OpenAI",
+        "model": "GPT-5.3-Codex",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 1.75,
+          "cachedInput": 0.175,
+          "cacheWrite": null,
+          "output": 14.0
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-5.4 nano",
+        "releaseStatus": "GA",
+        "category": "Lightweight",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 0.2,
+          "cachedInput": 0.02,
+          "cacheWrite": null,
+          "output": 1.25
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-5.6 Luna",
+        "releaseStatus": "GA",
+        "category": "Lightweight",
+        "tier": "Default",
+        "inputTokenThreshold": "≤ 200K",
+        "usdPerMillionTokens": {
+          "input": 0.2,
+          "cachedInput": 0.02,
+          "cacheWrite": 0.25,
+          "output": 1.2
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-5.6 Luna",
+        "releaseStatus": "GA",
+        "category": "Lightweight",
+        "tier": "Long context",
+        "inputTokenThreshold": "> 200K",
+        "usdPerMillionTokens": {
+          "input": 0.4,
+          "cachedInput": 0.04,
+          "cacheWrite": 0.5,
+          "output": 1.8
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-5.6 Sol",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "≤ 272K",
+        "usdPerMillionTokens": {
+          "input": 4.0,
+          "cachedInput": 0.4,
+          "cacheWrite": 5.0,
+          "output": 20.0
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-5.6 Sol",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Long context",
+        "inputTokenThreshold": "> 272K",
+        "usdPerMillionTokens": {
+          "input": 8.0,
+          "cachedInput": 0.8,
+          "cacheWrite": 10.0,
+          "output": 30.0
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-5.6 Terra",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Default",
+        "inputTokenThreshold": "≤ 272K",
+        "usdPerMillionTokens": {
+          "input": 2.0,
+          "cachedInput": 0.2,
+          "cacheWrite": 2.5,
+          "output": 12.0
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-5.6 Terra",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Long context",
+        "inputTokenThreshold": "> 272K",
+        "usdPerMillionTokens": {
+          "input": 4.0,
+          "cachedInput": 0.4,
+          "cacheWrite": 5.0,
+          "output": 18.0
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-6 Astra",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "≤ 272K",
+        "usdPerMillionTokens": {
+          "input": 10.0,
+          "cachedInput": 1.0,
+          "cacheWrite": 12.5,
+          "output": 50.0
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-6 Astra",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Long context",
+        "inputTokenThreshold": "> 272K",
+        "usdPerMillionTokens": {
+          "input": 20.0,
+          "cachedInput": 2.0,
+          "cacheWrite": 25.0,
+          "output": 75.0
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-6 Luna",
+        "releaseStatus": "GA",
+        "category": "Lightweight",
+        "tier": "Default",
+        "inputTokenThreshold": "≤ 272K",
+        "usdPerMillionTokens": {
+          "input": 0.1,
+          "cachedInput": 0.01,
+          "cacheWrite": 0.125,
+          "output": 0.5
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-6 Luna",
+        "releaseStatus": "GA",
+        "category": "Lightweight",
+        "tier": "Long context",
+        "inputTokenThreshold": "> 272K",
+        "usdPerMillionTokens": {
+          "input": 0.2,
+          "cachedInput": 0.02,
+          "cacheWrite": 0.25,
+          "output": 0.75
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-6 Sol",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "≤ 272K",
+        "usdPerMillionTokens": {
+          "input": 2.0,
+          "cachedInput": 0.2,
+          "cacheWrite": 2.5,
+          "output": 10.0
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-6 Sol",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Long context",
+        "inputTokenThreshold": "> 272K",
+        "usdPerMillionTokens": {
+          "input": 4.0,
+          "cachedInput": 0.4,
+          "cacheWrite": 5.0,
+          "output": 15.0
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-6.1 Sol",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "≤ 272K",
+        "usdPerMillionTokens": {
+          "input": 2.0,
+          "cachedInput": 0.1,
+          "cacheWrite": 2.5,
+          "output": 10.0
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-6.1 Sol",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Long context",
+        "inputTokenThreshold": "> 272K",
+        "usdPerMillionTokens": {
+          "input": 4.0,
+          "cachedInput": 0.2,
+          "cacheWrite": 5.0,
+          "output": 15.0
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-6.1 Terra",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Default",
+        "inputTokenThreshold": "≤ 272K",
+        "usdPerMillionTokens": {
+          "input": 1.0,
+          "cachedInput": 0.05,
+          "cacheWrite": 1.25,
+          "output": 5.0
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "model": "GPT-6.1 Terra",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Long context",
+        "inputTokenThreshold": "> 272K",
+        "usdPerMillionTokens": {
+          "input": 2.0,
+          "cachedInput": 0.1,
+          "cacheWrite": 2.5,
+          "output": 7.5
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Haiku 4.5",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 1.0,
+          "cachedInput": 0.1,
+          "cacheWrite": 1.25,
+          "output": 5.0
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Haiku 5.5",
+        "releaseStatus": "GA",
+        "category": "Lightweight",
+        "tier": "Default",
+        "inputTokenThreshold": "≤ 100K",
+        "usdPerMillionTokens": {
+          "input": 0.1,
+          "cachedInput": 0.01,
+          "cacheWrite": 0.125,
+          "output": 0.5
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Haiku 5.5",
+        "releaseStatus": "GA",
+        "category": "Lightweight",
+        "tier": "Long context",
+        "inputTokenThreshold": "> 100K",
+        "usdPerMillionTokens": {
+          "input": 0.5,
+          "cachedInput": 0.05,
+          "cacheWrite": 0.625,
+          "output": 2.5
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Sonnet 4",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 3.0,
+          "cachedInput": 0.3,
+          "cacheWrite": 3.75,
+          "output": 15.0
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Sonnet 4.6",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 3.0,
+          "cachedInput": 0.3,
+          "cacheWrite": 3.75,
+          "output": 15.0
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Opus 4.8",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 5.0,
+          "cachedInput": 0.5,
+          "cacheWrite": 6.25,
+          "output": 25.0
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Opus 5",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 5.0,
+          "cachedInput": 0.5,
+          "cacheWrite": 6.25,
+          "output": 25.0
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Opus 5.5",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 4.0,
+          "cachedInput": 0.2,
+          "cacheWrite": 5.0,
+          "output": 20.0
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Sonnet 5",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 2.0,
+          "cachedInput": 0.2,
+          "cacheWrite": 2.5,
+          "output": 10.0
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Sonnet 5.5",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 2.0,
+          "cachedInput": 0.1,
+          "cacheWrite": 2.5,
+          "output": 10.0
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Opus 4.8 (fast mode) (preview)",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 10.0,
+          "cachedInput": 1.0,
+          "cacheWrite": 12.5,
+          "output": 50.0
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Fable 5",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 10.0,
+          "cachedInput": 1.0,
+          "cacheWrite": 12.5,
+          "output": 50.0
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Fable 5.1",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 10.0,
+          "cachedInput": 0.25,
+          "cacheWrite": 12.5,
+          "output": 50.0
+        }
+      },
+      {
+        "provider": "Anthropic",
+        "model": "Claude Fable 5.2",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 8.0,
+          "cachedInput": 0.2,
+          "cacheWrite": 10.0,
+          "output": 40.0
+        }
+      },
+      {
+        "provider": "Google",
+        "model": "Gemini 3.8 Flash",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 0.75,
+          "cachedInput": 0.075,
+          "cacheWrite": null,
+          "output": 3.75
+        },
+        "footnote": "Promotional pricing through December 31, 2026."
+      },
+      {
+        "provider": "Google",
+        "model": "Gemini 4 Argon",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 2.0,
+          "cachedInput": 0.1,
+          "cacheWrite": null,
+          "output": 10.0
+        },
+        "footnote": "Promotional pricing until December 1, 2026. No post-promotion price is stated on this page."
+      },
+      {
+        "provider": "Google",
+        "model": "Gemini 4 Carbon",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 2.0,
+          "cachedInput": 0.1,
+          "cacheWrite": null,
+          "output": 10.0
+        },
+        "footnote": "Promotional pricing until December 1, 2026. Starting December 1, 2026 the page states $4.00 input, $0.20 cached input, and $20.00 output per 1M tokens."
+      },
+      {
+        "provider": "Google",
+        "model": "Gemini 4 Hydrogen",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Default",
+        "inputTokenThreshold": "Not applicable",
+        "usdPerMillionTokens": {
+          "input": 1.5,
+          "cachedInput": 0.075,
+          "cacheWrite": null,
+          "output": 7.5
+        },
+        "footnote": "No promotional end date is attached to this row."
+      },
+      {
+        "provider": "Microsoft",
+        "model": "MAI-Code-1.1-Flash",
+        "releaseStatus": "GA",
+        "category": "Lightweight",
+        "tier": null,
+        "inputTokenThreshold": null,
+        "usdPerMillionTokens": {
+          "input": 0.2,
+          "cachedInput": 0.02,
+          "cacheWrite": null,
+          "output": 1.2
+        }
+      },
+      {
+        "provider": "xAI",
+        "model": "Grok 4.5",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Default",
+        "inputTokenThreshold": "≤ 200K",
+        "usdPerMillionTokens": {
+          "input": 2.0,
+          "cachedInput": 0.5,
+          "cacheWrite": null,
+          "output": 6.0
+        }
+      },
+      {
+        "provider": "xAI",
+        "model": "Grok 4.5",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Long context",
+        "inputTokenThreshold": "> 200K",
+        "usdPerMillionTokens": {
+          "input": 4.0,
+          "cachedInput": 1.0,
+          "cacheWrite": null,
+          "output": 12.0
+        }
+      },
+      {
+        "provider": "xAI",
+        "model": "Grok 4.6",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Default",
+        "inputTokenThreshold": "≤ 200K",
+        "usdPerMillionTokens": {
+          "input": 2.0,
+          "cachedInput": 0.5,
+          "cacheWrite": null,
+          "output": 6.0
+        }
+      },
+      {
+        "provider": "xAI",
+        "model": "Grok 4.6",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Long context",
+        "inputTokenThreshold": "> 200K",
+        "usdPerMillionTokens": {
+          "input": 4.0,
+          "cachedInput": 1.0,
+          "cacheWrite": null,
+          "output": 12.0
+        }
+      },
+      {
+        "provider": "xAI",
+        "model": "Grok 4.7",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Default",
+        "inputTokenThreshold": "≤ 200K",
+        "usdPerMillionTokens": {
+          "input": 2.0,
+          "cachedInput": 0.5,
+          "cacheWrite": null,
+          "output": 6.0
+        }
+      },
+      {
+        "provider": "xAI",
+        "model": "Grok 4.7",
+        "releaseStatus": "GA",
+        "category": "Versatile",
+        "tier": "Long context",
+        "inputTokenThreshold": "> 200K",
+        "usdPerMillionTokens": {
+          "input": 4.0,
+          "cachedInput": 1.0,
+          "cacheWrite": null,
+          "output": 12.0
+        }
+      },
+      {
+        "provider": "Moonshot AI",
+        "model": "Kimi K3",
+        "releaseStatus": "GA",
+        "category": "Powerful",
+        "tier": null,
+        "inputTokenThreshold": null,
+        "usdPerMillionTokens": {
+          "input": 3.0,
+          "cachedInput": 0.3,
+          "cacheWrite": null,
+          "output": 15.0
+        }
+      }
+    ],
+    "imageGeneration": {
+      "note": "Billed separately from the session model. Text sent counts as text input, images sent as image input, and the generated image as image output. No text-output price.",
+      "rows": [
+        {
+          "model": "GPT Image 2.5 Flare",
+          "releaseStatus": "Public preview",
+          "usdPerMillionTokens": {
+            "textInput": 5.0,
+            "cachedTextInput": 1.25,
+            "imageInput": 8.0,
+            "cachedImageInput": 2.0,
+            "imageOutput": 30.0
+          }
+        }
+      ]
+    },
+    "codeReviewEstimates": {
+      "status": "estimates only, not an entitlement",
+      "quote": "The model is selected automatically and is not disclosed, so per-token costs may vary between reviews.",
+      "alsoConsumes": "GitHub Actions minutes, excluded from the credit estimates",
+      "perReviewUsd": {
+        "Lite": {
+          "typicalRange": [
+            0.05,
+            1
+          ],
+          "approximateAverage": 0.25
+        },
+        "Balanced": {
+          "typicalRange": [
+            0.25,
+            5
+          ],
+          "approximateAverage": 1.5
+        },
+        "Max": {
+          "typicalRange": [
+            1.5,
+            25
+          ],
+          "approximateAverage": 10
+        }
+      }
+    }
+  },
+  "modelAvailabilityOnPlansPage": {
+    "source": "https://github.com/features/copilot/plans comparison row \"Available models\"",
+    "encoding": "A model name without strikethrough is included. A strikethrough name is not included. The same 38 names appear on every plan column.",
+    "catalogInPageOrder": [
+      "Anthropic Claude Fable 5",
+      "Anthropic Claude Fable 5.1",
+      "Anthropic Claude Fable 5.2",
+      "Anthropic Claude Haiku 4.5",
+      "Anthropic Claude Haiku 5.5",
+      "Anthropic Claude Sonnet 4",
+      "Anthropic Claude Sonnet 4.6",
+      "Anthropic Claude Sonnet 5",
+      "Anthropic Claude Sonnet 5.5",
+      "Anthropic Claude Opus 4.8",
+      "Anthropic Claude Opus 4.8 (fast mode) (Preview)",
+      "Anthropic Claude Opus 5",
+      "Anthropic Claude Opus 5.5",
+      "OpenAI GPT-5 mini",
+      "OpenAI GPT-5.2",
+      "OpenAI GPT-5.2-Codex",
+      "OpenAI GPT-5.3-Codex",
+      "OpenAI GPT-5.4",
+      "OpenAI GPT-5.4 mini",
+      "OpenAI GPT-5.5",
+      "OpenAI GPT-5.6 Sol",
+      "OpenAI GPT-5.6 Terra",
+      "OpenAI GPT-5.6 Luna",
+      "OpenAI GPT-6 Astra",
+      "OpenAI GPT-6 Luna",
+      "OpenAI GPT-6 Sol",
+      "OpenAI GPT-6.1 Sol",
+      "OpenAI GPT-6.1 Terra",
+      "Microsoft MAI-Code-1.1-Flash",
+      "Google Gemini 3.7 Flash",
+      "Google Gemini 3.8 Flash",
+      "Google Gemini 4 Argon",
+      "Google Gemini 4 Carbon",
+      "Google Gemini 4 Hydrogen",
+      "xAI Grok 4.5",
+      "xAI Grok 4.6",
+      "xAI Grok 4.7",
+      "Kimi K3"
+    ],
+    "byPlan": {
+      "Free": {
+        "included": [
+          "Anthropic Claude Haiku 4.5",
+          "OpenAI GPT-5 mini"
+        ],
+        "notIncludedStrikethrough": [
+          "Anthropic Claude Fable 5",
+          "Anthropic Claude Fable 5.1",
+          "Anthropic Claude Fable 5.2",
+          "Anthropic Claude Haiku 5.5",
+          "Anthropic Claude Sonnet 4",
+          "Anthropic Claude Sonnet 4.6",
+          "Anthropic Claude Sonnet 5",
+          "Anthropic Claude Sonnet 5.5",
+          "Anthropic Claude Opus 4.8",
+          "Anthropic Claude Opus 4.8 (fast mode) (Preview)",
+          "Anthropic Claude Opus 5",
+          "Anthropic Claude Opus 5.5",
+          "OpenAI GPT-5.2",
+          "OpenAI GPT-5.2-Codex",
+          "OpenAI GPT-5.3-Codex",
+          "OpenAI GPT-5.4",
+          "OpenAI GPT-5.4 mini",
+          "OpenAI GPT-5.5",
+          "OpenAI GPT-5.6 Sol",
+          "OpenAI GPT-5.6 Terra",
+          "OpenAI GPT-5.6 Luna",
+          "OpenAI GPT-6 Astra",
+          "OpenAI GPT-6 Luna",
+          "OpenAI GPT-6 Sol",
+          "OpenAI GPT-6.1 Sol",
+          "OpenAI GPT-6.1 Terra",
+          "Microsoft MAI-Code-1.1-Flash",
+          "Google Gemini 3.7 Flash",
+          "Google Gemini 3.8 Flash",
+          "Google Gemini 4 Argon",
+          "Google Gemini 4 Carbon",
+          "Google Gemini 4 Hydrogen",
+          "xAI Grok 4.5",
+          "xAI Grok 4.6",
+          "xAI Grok 4.7",
+          "Kimi K3"
+        ]
+      },
+      "Pro": {
+        "included": [
+          "Anthropic Claude Haiku 4.5",
+          "Anthropic Claude Haiku 5.5",
+          "Anthropic Claude Sonnet 4",
+          "Anthropic Claude Sonnet 4.6",
+          "Anthropic Claude Sonnet 5",
+          "Anthropic Claude Sonnet 5.5",
+          "OpenAI GPT-5 mini",
+          "OpenAI GPT-5.2",
+          "OpenAI GPT-5.2-Codex",
+          "OpenAI GPT-5.3-Codex",
+          "OpenAI GPT-5.4",
+          "OpenAI GPT-5.4 mini",
+          "OpenAI GPT-5.6 Terra",
+          "OpenAI GPT-5.6 Luna",
+          "OpenAI GPT-6 Luna",
+          "OpenAI GPT-6.1 Terra",
+          "Microsoft MAI-Code-1.1-Flash",
+          "Google Gemini 3.7 Flash",
+          "Google Gemini 3.8 Flash",
+          "Google Gemini 4 Hydrogen",
+          "xAI Grok 4.5",
+          "xAI Grok 4.6",
+          "xAI Grok 4.7",
+          "Kimi K3"
+        ],
+        "notIncludedStrikethrough": [
+          "Anthropic Claude Fable 5",
+          "Anthropic Claude Fable 5.1",
+          "Anthropic Claude Fable 5.2",
+          "Anthropic Claude Opus 4.8",
+          "Anthropic Claude Opus 4.8 (fast mode) (Preview)",
+          "Anthropic Claude Opus 5",
+          "Anthropic Claude Opus 5.5",
+          "OpenAI GPT-5.5",
+          "OpenAI GPT-5.6 Sol",
+          "OpenAI GPT-6 Astra",
+          "OpenAI GPT-6 Sol",
+          "OpenAI GPT-6.1 Sol",
+          "Google Gemini 4 Argon",
+          "Google Gemini 4 Carbon"
+        ]
+      },
+      "ProPlus": {
+        "included": [
+          "Anthropic Claude Fable 5",
+          "Anthropic Claude Fable 5.1",
+          "Anthropic Claude Fable 5.2",
+          "Anthropic Claude Haiku 4.5",
+          "Anthropic Claude Haiku 5.5",
+          "Anthropic Claude Sonnet 4",
+          "Anthropic Claude Sonnet 4.6",
+          "Anthropic Claude Sonnet 5",
+          "Anthropic Claude Sonnet 5.5",
+          "Anthropic Claude Opus 4.8",
+          "Anthropic Claude Opus 4.8 (fast mode) (Preview)",
+          "Anthropic Claude Opus 5",
+          "Anthropic Claude Opus 5.5",
+          "OpenAI GPT-5 mini",
+          "OpenAI GPT-5.2",
+          "OpenAI GPT-5.2-Codex",
+          "OpenAI GPT-5.3-Codex",
+          "OpenAI GPT-5.4",
+          "OpenAI GPT-5.4 mini",
+          "OpenAI GPT-5.5",
+          "OpenAI GPT-5.6 Sol",
+          "OpenAI GPT-5.6 Terra",
+          "OpenAI GPT-5.6 Luna",
+          "OpenAI GPT-6 Astra",
+          "OpenAI GPT-6 Luna",
+          "OpenAI GPT-6 Sol",
+          "OpenAI GPT-6.1 Sol",
+          "OpenAI GPT-6.1 Terra",
+          "Microsoft MAI-Code-1.1-Flash",
+          "Google Gemini 3.7 Flash",
+          "Google Gemini 3.8 Flash",
+          "Google Gemini 4 Argon",
+          "Google Gemini 4 Carbon",
+          "Google Gemini 4 Hydrogen",
+          "xAI Grok 4.5",
+          "xAI Grok 4.6",
+          "xAI Grok 4.7",
+          "Kimi K3"
+        ],
+        "notIncludedStrikethrough": []
+      },
+      "Max": {
+        "included": [
+          "Anthropic Claude Fable 5",
+          "Anthropic Claude Fable 5.1",
+          "Anthropic Claude Fable 5.2",
+          "Anthropic Claude Haiku 4.5",
+          "Anthropic Claude Haiku 5.5",
+          "Anthropic Claude Sonnet 4",
+          "Anthropic Claude Sonnet 4.6",
+          "Anthropic Claude Sonnet 5",
+          "Anthropic Claude Sonnet 5.5",
+          "Anthropic Claude Opus 4.8",
+          "Anthropic Claude Opus 4.8 (fast mode) (Preview)",
+          "Anthropic Claude Opus 5",
+          "Anthropic Claude Opus 5.5",
+          "OpenAI GPT-5 mini",
+          "OpenAI GPT-5.2",
+          "OpenAI GPT-5.2-Codex",
+          "OpenAI GPT-5.3-Codex",
+          "OpenAI GPT-5.4",
+          "OpenAI GPT-5.4 mini",
+          "OpenAI GPT-5.5",
+          "OpenAI GPT-5.6 Sol",
+          "OpenAI GPT-5.6 Terra",
+          "OpenAI GPT-5.6 Luna",
+          "OpenAI GPT-6 Astra",
+          "OpenAI GPT-6 Luna",
+          "OpenAI GPT-6 Sol",
+          "OpenAI GPT-6.1 Sol",
+          "OpenAI GPT-6.1 Terra",
+          "Microsoft MAI-Code-1.1-Flash",
+          "Google Gemini 3.7 Flash",
+          "Google Gemini 3.8 Flash",
+          "Google Gemini 4 Argon",
+          "Google Gemini 4 Carbon",
+          "Google Gemini 4 Hydrogen",
+          "xAI Grok 4.5",
+          "xAI Grok 4.6",
+          "xAI Grok 4.7",
+          "Kimi K3"
+        ],
+        "notIncludedStrikethrough": []
+      },
+      "Business": {
+        "included": [
+          "Anthropic Claude Fable 5",
+          "Anthropic Claude Fable 5.1",
+          "Anthropic Claude Fable 5.2",
+          "Anthropic Claude Haiku 4.5",
+          "Anthropic Claude Haiku 5.5",
+          "Anthropic Claude Sonnet 4",
+          "Anthropic Claude Sonnet 5",
+          "Anthropic Claude Sonnet 5.5",
+          "Anthropic Claude Opus 4.8",
+          "Anthropic Claude Opus 4.8 (fast mode) (Preview)",
+          "Anthropic Claude Opus 5",
+          "Anthropic Claude Opus 5.5",
+          "OpenAI GPT-5 mini",
+          "OpenAI GPT-5.2",
+          "OpenAI GPT-5.2-Codex",
+          "OpenAI GPT-5.3-Codex",
+          "OpenAI GPT-5.4",
+          "OpenAI GPT-5.4 mini",
+          "OpenAI GPT-5.5",
+          "OpenAI GPT-5.6 Sol",
+          "OpenAI GPT-5.6 Terra",
+          "OpenAI GPT-5.6 Luna",
+          "OpenAI GPT-6 Astra",
+          "OpenAI GPT-6 Luna",
+          "OpenAI GPT-6 Sol",
+          "OpenAI GPT-6.1 Sol",
+          "OpenAI GPT-6.1 Terra",
+          "Microsoft MAI-Code-1.1-Flash",
+          "Google Gemini 3.7 Flash",
+          "Google Gemini 3.8 Flash",
+          "Google Gemini 4 Argon",
+          "Google Gemini 4 Carbon",
+          "Google Gemini 4 Hydrogen",
+          "xAI Grok 4.5",
+          "xAI Grok 4.6",
+          "xAI Grok 4.7",
+          "Kimi K3"
+        ],
+        "notIncludedStrikethrough": [
+          "Anthropic Claude Sonnet 4.6"
+        ]
+      },
+      "Enterprise": {
+        "included": [
+          "Anthropic Claude Fable 5",
+          "Anthropic Claude Fable 5.1",
+          "Anthropic Claude Fable 5.2",
+          "Anthropic Claude Haiku 4.5",
+          "Anthropic Claude Haiku 5.5",
+          "Anthropic Claude Sonnet 4",
+          "Anthropic Claude Sonnet 5",
+          "Anthropic Claude Sonnet 5.5",
+          "Anthropic Claude Opus 4.8",
+          "Anthropic Claude Opus 4.8 (fast mode) (Preview)",
+          "Anthropic Claude Opus 5",
+          "Anthropic Claude Opus 5.5",
+          "OpenAI GPT-5 mini",
+          "OpenAI GPT-5.2",
+          "OpenAI GPT-5.2-Codex",
+          "OpenAI GPT-5.3-Codex",
+          "OpenAI GPT-5.4",
+          "OpenAI GPT-5.4 mini",
+          "OpenAI GPT-5.5",
+          "OpenAI GPT-5.6 Sol",
+          "OpenAI GPT-5.6 Terra",
+          "OpenAI GPT-5.6 Luna",
+          "OpenAI GPT-6 Astra",
+          "OpenAI GPT-6 Luna",
+          "OpenAI GPT-6 Sol",
+          "OpenAI GPT-6.1 Sol",
+          "OpenAI GPT-6.1 Terra",
+          "Microsoft MAI-Code-1.1-Flash",
+          "Google Gemini 3.7 Flash",
+          "Google Gemini 3.8 Flash",
+          "Google Gemini 4 Argon",
+          "Google Gemini 4 Carbon",
+          "Google Gemini 4 Hydrogen",
+          "xAI Grok 4.5",
+          "xAI Grok 4.6",
+          "xAI Grok 4.7",
+          "Kimi K3"
+        ],
+        "notIncludedStrikethrough": [
+          "Anthropic Claude Sonnet 4.6"
+        ]
+      }
+    },
+    "notTheSameListAsTheRateTable": "The plans matrix includes models with no row in the captured rate table (GPT-5 mini, GPT-5.2, GPT-5.2-Codex, GPT-5.4, GPT-5.4 mini, GPT-5.5, Gemini 3.7 Flash). The rate table includes models that are not in this matrix (GPT-5.4 nano, GPT Image 2.5 Flare). No rate is invented for a model that has availability but no price row.",
+    "freeAutoSelectionTension": "The individual billing document says Copilot Free and Copilot Student access models through auto model selection only. The plans matrix still marks Claude Haiku 4.5 and GPT-5 mini as included on Free and the other 36 names as struck through. Both statements are recorded; this file does not decide whether Free can pick those two models or only receive them through auto."
+  },
+  "notEquatedToProviderListApi": {
+    "decision": "GitHub model-billing prices are not asserted to equal underlying provider list API prices, and credits are not asserted to equal provider list-API value.",
+    "why": "This capture did not re-fetch provider price lists on 2026-11-16. GitHub also publishes its own conditional discounts and promotional Gemini rows, and some GitHub rows omit cache-write or long-context variants that provider lists publish.",
+    "olderRepoArchiveCrossChecksOnly": [
+      {
+        "model": "Claude Opus 5.5 default row",
+        "github": {
+          "input": 4.0,
+          "cachedInput": 0.2,
+          "cacheWrite": 5.0,
+          "output": 20.0
+        },
+        "repoArchive": "data/research/list-prices-2026-09.json claude-opus-5.5, checkedAt 2026-09-23, source https://platform.claude.com/docs/en/about-claude/pricing",
+        "matchOnThoseFourNumbers": true,
+        "notMatched": "That archive also records a 1-hour cache write of $8 and fast/batch variants. The GitHub table has no 1-hour cache-write row."
+      },
+      {
+        "model": "Grok 4.7",
+        "github": {
+          "defaultLeq200k": [
+            2.0,
+            0.5,
+            6.0
+          ],
+          "longGt200k": [
+            4.0,
+            1.0,
+            12.0
+          ]
+        },
+        "repoArchive": "data/research/list-prices-mimo-v26-grok47-round1-2026-09-22.json, checkedAt 2026-09-22",
+        "matchOnThoseNumbers": true
+      },
+      {
+        "model": "Kimi K3",
+        "github": {
+          "input": 3.0,
+          "cachedInput": 0.3,
+          "output": 15.0
+        },
+        "repoArchive": "data/research/list-prices-2026-09.json kimi-k3, checkedAt 2026-09-05, source https://platform.kimi.ai/",
+        "matchOnThoseThreeNumbers": true
+      }
+    ],
+    "crossCheckLimit": "These three comparisons use older files already in this repo. They are not a live provider check and they are not a multiplier for every model."
+  },
+  "legacyRequestBasedBilling": {
+    "recorded": false,
+    "pointerOnly": "The models-and-pricing document says existing annual Copilot Pro and Copilot Pro+ subscribers on the request-based billing model have different model multipliers, and links \"Model multipliers for annual plans on request-based billing (legacy)\". That page was not fetched. No legacy multiplier is copied here."
+  },
+  "notComputed": [
+    "No credits-to-tokens conversion.",
+    "No project standard-workload blend.",
+    "No monthly token allowance.",
+    "No adopted USD per million tokens."
+  ],
+  "confidence": "medium",
+  "confidenceDetail": "High on the transcribed credit dollars, the $0.01 rate, and the GitHub rate table, because the official pages state them. Medium overall because flex is officially changeable, Fusion and auto discounts are conditional, Free and Student credit counts are unpublished, and no token quota exists to adopt.",
+  "basis": "official"
+}

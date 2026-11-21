@@ -1,0 +1,188 @@
+{
+  "collectedAt": "2026-11-17",
+  "collectionMethod": "Manual capture of the official OpenCode Go documentation page (https://opencode.ai/docs/go/, which 301-redirects to /docs/console/go/), the Go landing page (https://opencode.ai/go, 302-redirects to /console/go), the OpenCode console changelog RSS feed (https://opencode.ai/console/changelog/rss.xml) and the full model catalog endpoint referenced by the documentation (https://opencode.ai/inference/go/v1/models), around 10:39 Beijing time / 02:39Z on 2026-11-17 (server Date headers 02:39:05Z and 02:39:06Z). The three documentation captures (docs, console-docs and v2-docs) are byte-identical to each other at 101791 bytes. All four surfaces were compared against the 2026-11-16 captures of the same URLs and against the already-archived data/research/opencode-go-qwen4-max-round1-2026-11-16.json: the documentation HTML changed (the Qwen4 Max and Hy4 flash Free rows are new relative to the 101791 → 99845 byte 2026-11-16 capture), the landing page changed (new template, 'View all 32 models', Hy4 banner removed), the RSS XML is byte-identical to the 2026-11-16 capture, and the models API grew from 31 to 32 catalog entries. Every price, limit and estimate below is transcribed as published; the documentation tables, the landing-page table and the models API were read independently and are kept side by side wherever they disagree. Research-only — no adopted row generated, no adopted value changed, no script changed, no chart or site change.",
+  "sources": [
+    "https://opencode.ai/docs/go/",
+    "https://opencode.ai/go",
+    "https://opencode.ai/v2/docs/console/go/",
+    "https://opencode.ai/inference/go/v1/models"
+  ],
+  "scope": "OpenCode Go official models interface only. The change on 2026-11-17 is that the official documentation and the Go landing page now publish a full Qwen4 Max allowance row — three-part price, Monthly limit, per-window estimated requests, request shape, privacy and endpoint — where the 2026-11-16 documentation had no such row at all, while the models API entry for the already-published 'qwen4-max' model had its output limit lowered and gained a Go allowance block. The new free model 'Hy4 flash Free' also appeared on the same day. Research-only — not adopted; no adopted.csv row, no computed allowance, no script change, no leaderboard/score data.",
+  "adoptionStatus": "research-only; not adopted; no opencode_go × qwen4-max row in adopted.csv yet — adding one requires an OPENCODE_GO_MODELS entry in scripts/build_adopted.py, left to maintainer review",
+  "observed": {
+    "paidModel": {
+      "name": "Qwen4 Max",
+      "modelId": "qwen4-max",
+      "canonicalId": "alibaba/qwen4-max",
+      "vendor": "Alibaba",
+      "vendorNote": "Vendor is derived from the 'alibaba/' prefix of canonical_id in the models API; the captured OpenCode Go docs and landing pages do not state a vendor name for this model.",
+      "openWeights": false,
+      "releaseDate": "2026-11-16",
+      "lastUpdated": "2026-11-16",
+      "description": "Flagship multimodal model for coding, office productivity, frontend design, and complex agentic tasks",
+      "statusChange": "New paid row added to all three official OpenCode Go documentation price tables (Go / Go Plus / Go Teams) on 2026-11-17, to the three 'Estimated requests' tables, to the request-shape list, to the Endpoints table and to the Privacy table, and to the Go landing-page model table with a 'New' marker. On 2026-11-16 the same documentation had no Qwen4 Max row anywhere.",
+      "endpoint": {
+        "docsEndpoint": "https://opencode.ai/inference/go/anthropic/v1/messages",
+        "apiBaseUrl": "https://opencode.ai/inference/go/anthropic/v1",
+        "note": "The documentation Endpoints table publishes the full messages path; the models API entry publishes the API family base_url together with an api.messages block. Both are recorded as published."
+      },
+      "sdk": "@ai-sdk/anthropic",
+      "contextLimit": 1000000,
+      "outputLimit": 262144,
+      "outputLimitChange": {
+        "before": 393216,
+        "after": 262144,
+        "source": "models API, limit.output",
+        "note": "The models API entry for qwen4-max carried limit.output = 393216 on 2026-11-16 and carries limit.output = 262144 on 2026-11-17. limit.context is 1000000 on both days. The documentation does not publish an output limit, so this change is visible only in the interface."
+      },
+      "threePartPrice": {
+        "unit": "USD / MTok",
+        "inputPerMTokUsd": 1.5,
+        "outputPerMTokUsd": 4.5,
+        "cachedReadPerMTokUsd": 0.075,
+        "cacheWritePerMTokUsd": {
+          "5m": 1.875,
+          "1h": 3
+        },
+        "docsCacheWriteUsd": 1.875,
+        "cacheWriteNote": "The documentation price table publishes a single Cached Write value of $1.875, while the models API publishes cache write as two tiers: 5m = 1.875 and 1h = 3. Both are recorded as published; neither is flattened into the other.",
+        "priceScope": "The Go, Go Plus and Go Teams documentation price tables all show the same three-part price for Qwen4 Max; no plan-specific price row exists.",
+        "sourceQuote": "Docs Go table: 'Qwen4 Max | $1.50 | $4.50 | $0.075 | $1.875 | $15'; Docs Go Plus table: 'Qwen4 Max | $1.50 | $4.50 | $0.075 | $1.875 | $60'; Docs Go Teams table: 'Qwen4 Max | $1.50 | $4.50 | $0.075 | $1.875 | $20'; models API cost.text: input.price = 1.5, input.cache.read = 0.075, input.cache.write = {5m: 1.875, 1h: 3}, output.price = 4.5"
+      },
+      "monthlyLimitUsd": {
+        "go": 15,
+        "goPlus": 60,
+        "goTeams": 20
+      },
+      "monthlyLimitNote": "Published identically on two independent surfaces on 2026-11-17: the documentation Monthly limit column (Go $15, Go Plus $60, Go Teams $20) and the models API go.monthly_usage block ({go: 15, go-plus: 60, go-teams: 20}). The qwen4-max entry carried no go block at all on 2026-11-16, so this allowance is new in the interface as well as in the documentation.",
+      "monthlyLimitRowsAsPublished": [
+        "Go table: 'Qwen4 Max | $1.50 | $4.50 | $0.075 | $1.875 | $15'",
+        "Go Plus table: 'Qwen4 Max | $1.50 | $4.50 | $0.075 | $1.875 | $60'",
+        "Go Teams table: 'Qwen4 Max | $1.50 | $4.50 | $0.075 | $1.875 | $20'",
+        "models API: go.monthly_usage = {go: 15, go-plus: 60, go-teams: 20}"
+      ],
+      "officialRequestEstimates": {
+        "note": "Official 'Estimated requests' figures from the three documentation tables (table header: Model | Requests per 5 hours | Requests per week | Requests per month). Kept as published cross-check evidence only.",
+        "go": {
+          "per5h": 460,
+          "perWeek": 1160,
+          "perMonth": 2310
+        },
+        "goPlus": {
+          "per5h": 1840,
+          "perWeek": 4640,
+          "perMonth": 9240
+        },
+        "goTeams": {
+          "per5h": 613,
+          "perWeek": 1550,
+          "perMonth": 3080
+        },
+        "rowsAsPublished": [
+          "Go table: 'Qwen4 Max | 460 | 1,160 | 2,310'",
+          "Go Plus table: 'Qwen4 Max | 1,840 | 4,640 | 9,240'",
+          "Go Teams table: 'Qwen4 Max | 613 | 1,550 | 3,080'"
+        ],
+        "usageWindowRule": "Each model has the following usage limits: 5-hour — 20% of the monthly limit; weekly — 50%; and monthly — 100%."
+      },
+      "landingPageRequestEstimates": {
+        "note": "The Go landing page model table (header: Model | Relative request allowances | Est. requests / 5 hr | Monthly limit) publishes its own per-5-hour figures for Qwen4 Max, marked 'New'. These differ from the documentation's 5-hour figures and are kept side by side; neither is used to correct the other, and no average or reconciliation is computed.",
+        "go": {
+          "per5h": 463,
+          "monthlyLimitUsd": 15
+        },
+        "goPlus": {
+          "per5h": 1850,
+          "monthlyLimitUsd": 60
+        },
+        "rowAsPublished": "Qwen4 Max (New) | Est. requests / 5 hr: Go: 463; Go Plus: 1,850 | Monthly limit: Go: $15; Go Plus: $60",
+        "discrepancyNote": "Landing page 5-hour estimates (Go 463, Go Plus 1,850) versus documentation 5-hour estimates (Go 460, Go Plus 1,840). The landing page also has no Go Teams column, so no Teams figure is published there. The Monthly limit values agree on both surfaces ($15 Go, $60 Go Plus). Recorded as a parallel discrepancy; not resolved in this file.",
+        "relativeAllowancesNote": "The landing page's 'Relative request allowances' column is rendered as a bar chart rather than a numeric cell, so it carries no transcribable number for this row."
+      },
+      "requestShape": {
+        "inputTokens": 420,
+        "cachedReadTokens": 66000,
+        "outputTokens": 200,
+        "pageWording": "Qwen4 Max — 420 input, 66,000 cached, 200 output tokens per request",
+        "note": "Published in the documentation request-shape list on 2026-11-17. The shape is identical to the adjacent Qwen3.8 Max row ('Qwen3.8 Max — 420 input, 66,000 cached, 200 output tokens per request')."
+      },
+      "privacy": {
+        "modelTraining": "Not used",
+        "dataRetention": "0 days",
+        "sourceQuote": "Privacy table: 'Qwen4 Max | Not used | 0 days'",
+        "apiCrossCheck": "The models API go block for qwen4-max publishes training = false and zdr = true, which is consistent with the documentation 'Not used' / '0 days' row."
+      },
+      "landingPageBanner": null,
+      "landingPageBannerNote": "The 'Hy4 is now available in Go' announcement banner present on the 2026-11-16 landing page is gone on 2026-11-17; the string does not occur in the 2026-11-17 landing page HTML, and the announcement layer that carried it on 2026-11-16 is absent from the 2026-11-17 page. There is no replacement Qwen4 banner; Qwen4 Max is instead marked 'New' inside the model table.",
+      "modelCount": {
+        "before": 33,
+        "after": 32,
+        "pageWording": "'View all 33 models' → 'View all 32 models'"
+      },
+      "modelCountNote": "The landing-page counter reads 'View all 32 models' on 2026-11-17 (both the view-all button and the '32 models' count label), against 'View all 33 models' on 2026-11-16. This is the landing-page counter, a different series from the models API catalog count (31 → 32) below.",
+      "apiCatalogNote": {
+        "catalogEntryCount": 32,
+        "previousCatalogEntryCount": 31,
+        "note": "The models API catalog holds 32 entries in total on 2026-11-17, including the new free model hy4-flash-free. This is the API catalog count and is a different series from the landing-page 'View all N models' counter (33 → 32), which counts the broader model list.",
+        "createdTimestampNote": "Every entry in the models API carries the same 'created' Unix timestamp (1794883146 on 2026-11-17; 1794796726 on 2026-11-16), which is the capture-time timestamp of the response, not a model creation date. Model dates are taken only from release_date and last_updated.",
+        "goBlockAddedCatalogWide": "On 2026-11-17 every catalog entry gained a 'go' block (monthly_usage / training / zdr / limited_regions) that no entry carried on 2026-11-16. For qwen4-max this block publishes monthly_usage {go: 15, go-plus: 60, go-teams: 20}, matching the documentation Monthly limit column exactly. Recorded as published; it does not change any adopted value.",
+        "otherFieldChanges": "Apart from the added 'go' block, the only qwen4-max field changes on 2026-11-17 are limit.output (393216 → 262144), the addition of capabilities.cache (implicit: true, explicit ttl ['5m', '1h']) and capabilities.reasoning.effort (['low', 'medium', 'xhigh'] → ['low', 'high', 'xhigh']). All other model entries are unchanged apart from the shared 'go' block."
+      }
+    }
+  },
+  "context": {
+    "round1Capture": {
+      "file": "opencode-go-qwen4-max-round1-2026-11-16.json",
+      "note": "The 2026-11-16 round-1 file recorded the official Qwen4 Max three-part price, endpoint, SDK, context limit and output limit (393216) from the models API, but the documentation price tables, the Monthly limit column, the 'Estimated requests' tables, the request-shape list and the privacy table had no Qwen4 Max row yet, so monthlyLimitUsd, officialRequestEstimates, requestShape and privacy were all null there. The 2026-11-17 capture fills those fields from the documentation and lowers the recorded output limit to 262144.",
+      "repoState": "The repo still carries no opencode_go × qwen4-max adopted row: scripts/build_adopted.py OPENCODE_GO_MODELS has no 'qwen4-max' entry, and data/adopted.csv contains no qwen4-max row on any channel. This capture changed no adopted value."
+    },
+    "existingQwen38MaxAdoptedRow": {
+      "name": "Qwen3.8 Max",
+      "modelId": "qwen3.8-max",
+      "repoState": "The repo already carries an opencode_go × qwen3.8-max adopted row (0.465 亿 monthly tokens, from a published Go Monthly limit of $15, generated from the 'qwen3.8-max' entry in scripts/build_adopted.py OPENCODE_GO_MODELS).",
+      "note": "Background context only. qwen3.8-max and qwen4-max are different models; today's capture changed nothing about the qwen3.8-max row. The two models share the same published request shape (420 input, 66,000 cached, 200 output tokens per request) but differ in price and Monthly limit."
+    }
+  },
+  "crossChannelNote": {
+    "commandCodeGoat": {
+      "observation": "On the same day the Command Code GOAT channel also added the paid models 'Qwen 4 Max' (id qwen-4-max, provider Alibaba, inputCost 1.5 / outputCost 4.5 / cacheReadCost 0.075 / cacheWriteCost 1.875) and 'Tencent Hy4 Flash' (id tencent/hy4-flash, provider Tencent, inputCost 0.07 / outputCost 0.281 / cacheReadCost 0.003); neither string occurs in the 2026-11-16 GOAT captures. Both new GOAT rows publish planBudgetUsd / planAllowanceUsd = {go: 6, goat: 15, pro: 25}, i.e. a GOAT budget of $15. See the contemporaneous GOAT research for that channel.",
+      "adopted": false,
+      "reason": "Cross-channel observation only; this file changes no GOAT row and no GOAT value. The GOAT Qwen 4 Max row is a distinct channel entry from the OpenCode Go qwen4-max row, and its $15 GOAT budget is a GOAT-channel budget, not the OpenCode Go Monthly limit."
+    }
+  },
+  "otherObservations": [
+    {
+      "topic": "New free model Hy4 flash Free",
+      "observation": "A new free model 'Hy4 flash Free' (model id hy4-flash-free, canonical_id tencent/hy4-flash, cost all 0, release_date / last_updated 2026-11-16) appeared in the models API catalog on 2026-11-17, taking it from 31 to 32 entries, and was added to the documentation price tables as 'Hy4 flash Free | Free | Free | Free | - | Unlimited (limited time)', to the three 'Estimated requests' tables as 'Unlimited', and to the landing-page model table as 'Hy4 flash Free (New, Limited time)' with Go: ∞ and Go Plus: ∞. Its endpoint row is https://opencode.ai/inference/go/openai/v1/chat/completions with @ai-sdk/openai-compatible, and its models API go.monthly_usage is null.",
+      "note": "Recorded only. Free models are not tracked by this repo, so nothing is adopted for Hy4 flash Free."
+    },
+    {
+      "topic": "Changelog RSS has no new entry",
+      "observation": "The OpenCode console changelog RSS is byte-identical to the 2026-11-16 capture (5743 bytes, 11 items); the newest item is still 2026-11-14 'Pay for Go with WeChat Pay'.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Other existing paid rows unchanged in the documentation",
+      "observation": "A row-by-row diff of all three documentation price tables, all three 'Estimated requests' tables, the Endpoints table and the Privacy table between the 2026-11-16 and 2026-11-17 captures shows exactly two added rows per table — 'Qwen4 Max' and 'Hy4 flash Free' — and no change to any other row's price, Monthly limit, estimate, endpoint or privacy values.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "MiMo-V2.5 and MiMo-V2.5-Pro still listed in the documentation",
+      "observation": "The documentation price table and the privacy table still list MiMo-V2.5 and MiMo-V2.5-Pro, and the request-shape list still carries 'MiMo-V2.5 — 830 input, 71,500 cached, 295 output tokens per request' and 'MiMo-V2.5-Pro — 790 input, 86,000 cached, 305 output tokens per request'; neither id is in the 32-entry models API catalog, which holds only mimo-v2.6-flash and mimo-v2.6-pro under that vendor.",
+      "note": "Recorded only. The repo already carries opencode_go × mimo-v2.5 and opencode_go × mimo-v2.5-pro adopted rows; per the existing convention, delisting a model is left to the upstream removal of its adopted row, so this file neither deletes nor modifies those rows."
+    },
+    {
+      "topic": "Documentation request shape for MiMo-V2.5 rows still published",
+      "observation": "The 2026-11-16 documentation already carried the MiMo-V2.5 / MiMo-V2.5-Pro request-shape lines; they are unchanged on 2026-11-17 and are listed here only because the request-shape list is the source that also received the new Qwen4 Max line.",
+      "note": "Recorded only; no adopted value changed."
+    }
+  ],
+  "computationNote": "This file computes no monthlyYi, no blended per-MTok price, no mixed unit price and no adopted allowance; all numbers are transcribed as published on the official documentation, landing page and models API. The documentation and landing-page 5-hour request estimates for Qwen4 Max (460 / 1,840 versus 463 / 1,850) are kept in parallel and are neither reconciled nor averaged. No adopted value is derived from this capture.",
+  "relatedFiles": [
+    "opencode-go-qwen4-max-round1-2026-11-16.json",
+    "opencode-go-hy4-round1-2026-11-05.json",
+    "opencode-go-round5-2026-09-06.json"
+  ],
+  "confidence": "medium",
+  "basis": "official"
+}

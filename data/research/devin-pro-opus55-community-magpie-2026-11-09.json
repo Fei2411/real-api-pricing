@@ -1,0 +1,135 @@
+{
+  "collectedAt": "2026-11-09",
+  "subject": "GitHub Issue #210（作者 sopping）Devin Pro 额度证据原样录入：2026-10-22 与 2026-11-03 两次采样（Claude Opus 5.5 high），数据来自本地 Magpie 用量记录与额度历史快照",
+  "scopeNote": "Issue #210 正文的两组采样原样录入，不做换算、不做归一化、不产生采用值。采样工具为本地 Magpie（用量记录 + 额度历史快照），无原始截图，无官方绝对 token 额度。价格与地区投稿人未填。",
+  "plan": {
+    "name": "Devin Pro",
+    "vendor": "Cognition / Devin",
+    "priceUsdPerMonth": 20,
+    "priceNote": "价格来自仓库既有文件（data/research/devin-pro-opus55-round1-2026-11-01.json、devin-pro-opus55-round1-2026-10-30.json 的 priceSource：https://docs.devin.ai/admin/billing/self-serve、https://devin.ai/pricing），投稿人未填价格；本文件不据此认定采样当时的实际计费。",
+    "region": null,
+    "regionNote": "投稿人未填地区，暂时留空。",
+    "servedModel": "Claude Opus 5.5 high",
+    "modelId": "claude-opus-5.5",
+    "effort": "high",
+    "officialAllowance": null,
+    "officialAllowanceNote": "官方额度未填；Devin Pro 官方未公布绝对 token 额度。",
+    "officialTokenAllowance": null
+  },
+  "source": {
+    "type": "community_issue_local_usage_log",
+    "platform": "GitHub Issue",
+    "issue": "#210",
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/210",
+    "author": "sopping",
+    "postedAtUtc": "2026-11-08T13:53:25Z",
+    "issueTitle": "Devin Pro 额度证据：2026-10-22 vs 2026-11-03（Claude Opus 5.5 high）",
+    "providedBy": "GitHub issue 正文（2026-11-09 录入）"
+  },
+  "measurementTool": "Magpie（本地用量记录 + 本地额度历史快照）",
+  "samples": [
+    {
+      "id": "issue210-devin-pro-2026-10-22",
+      "date": "2026-10-22",
+      "timezone": "UTC+8",
+      "requests": 70,
+      "spans": {
+        "requestSpanMinutes": 37,
+        "requestSpanNote": "请求跨度约 37 分钟",
+        "quotaSnapshotSpanMinutes": 42,
+        "quotaSnapshotSpanNote": "额度快照跨度约 42 分钟"
+      },
+      "dailyPct": { "start": 48, "end": 99 },
+      "weeklyPct": { "start": 75, "end": 100 },
+      "tokens": {
+        "input": 146,
+        "cacheRead": 15319700,
+        "cacheWrite": 287137,
+        "output": 163913
+      },
+      "totalTokensAsSubmitted": 15770896,
+      "totalTokensNote": "四项直接相加：146 + 15,319,700 + 287,137 + 163,913 = 15,770,896",
+      "notes": [
+        "周额度终点触底（75% → 100%），实际消耗可能有截断",
+        "字段口径未填：input 是否含 cache read 未填，output 是否含 reasoning 未填",
+        "无原始截图，数据来自本地 Magpie 记录",
+        "官方额度未填"
+      ]
+    },
+    {
+      "id": "issue210-devin-pro-2026-11-03",
+      "date": "2026-11-03",
+      "timezone": "UTC+8",
+      "requests": 56,
+      "spans": {
+        "requestSpanMinutes": 29,
+        "requestSpanNote": "请求跨度约 29 分钟",
+        "quotaSnapshotSpanMinutes": 34,
+        "quotaSnapshotSpanNote": "额度快照跨度约 34 分钟"
+      },
+      "dailyPct": { "start": 0, "end": 94 },
+      "weeklyPct": { "start": 52, "end": 99 },
+      "tokens": {
+        "input": 118,
+        "cacheRead": 9624701,
+        "cacheWrite": 591142,
+        "output": 118423
+      },
+      "totalTokensAsSubmitted": 10334384,
+      "totalTokensNote": "四项直接相加：118 + 9,624,701 + 591,142 + 118,423 = 10,334,384",
+      "notes": [
+        "字段口径未填：input 是否含 cache read 未填，output 是否含 reasoning 未填",
+        "无原始截图，数据来自本地 Magpie 记录",
+        "官方额度未填"
+      ]
+    }
+  ],
+  "fieldSemantics": {
+    "input": null,
+    "inputNote": "投稿人未填：input 是否含 cache read 未明确。",
+    "cacheRead": "投稿人未填口径说明。",
+    "cacheWrite": "投稿人未填口径说明。",
+    "output": null,
+    "outputNote": "投稿人未填：output 是否含 reasoning 未明确。",
+    "total": "token 总数为四项直接相加，字段是否互斥尚未独立核实（投稿人补充说明）。",
+    "officialAllowance": "官方额度未填。"
+  },
+  "contributorNotes": [
+    "Pro 套餐是根据此前的账户记录填写，两次采样时的套餐状态未从用量文件独立核验。",
+    "两组来自同一 Team，但不能排除其他设备或会话消耗额度。",
+    "token 总数为四项直接相加，字段是否互斥尚未独立核实。",
+    "价格和地区没有明确记录，暂时留空。"
+  ],
+  "caveats": [
+    "无原始截图：两组数据都来自投稿人本地 Magpie 记录，仓库侧无法复核面板读数与请求计数的对应关系。",
+    "字段口径未知：input 是否含 cache read、output 是否含 reasoning 均未填，token 四项是否互斥尚未独立核实，直接相加的总口径可能重复计数。",
+    "套餐未独立核验：Devin Pro 是根据此前账户记录填的，采样当时的套餐状态未从用量文件独立核验。",
+    "非隔离观测：两组来自同一 Team，不能排除其他设备或会话在同窗内消耗额度，额度百分比变化未必全部由本次请求造成。",
+    "周额度触底截断：2026-10-22 采样周额度终点为 100%，实际消耗可能被截断。",
+    "价格与地区缺失：投稿人未填价格和地区，plan 中的 $20/月来自仓库既有文件，不能视为本次采样的计费确认。",
+    "官方绝对额度缺失：没有官方公布的 Devin Pro 绝对 token 额度可对照。",
+    "本文件不计算 monthlyYi、不做负载归一化、不做百分点换算，所有数字均为 Issue 原文与面板读数原样记录。"
+  ],
+  "reviewNotes": {
+    "by": "本仓库录入方（2026-11-09）",
+    "notes": [
+      "两组采样的面板读数（Daily/Weekly 起止百分比）与 token 分项、请求次数均按 Issue 正文原样录入，未做任何加减乘除。",
+      "Issue 正文未附任何截图，本仓库未打开外部附件核对，因此所有读数均为单一投稿来源。",
+      "仓库既有 Devin Pro × claude-opus-5.5 采用值由 scripts/build_adopted.py 生成，本文件不改动该脚本、不改动 data/adopted.csv，采用值是否调整留给上游管线与维护者按仓库算法裁定。"
+    ],
+    "notVerified": [
+      "两组 token 分项与请求次数只有 Issue 正文自述，无截图可核。",
+      "额度百分比与本地用量记录的对应关系（是否全部由本次请求造成）无法独立验证。",
+      "Magpie 的字段口径（input 是否含 cache read、output 是否含 reasoning）未由投稿人说明，无法判定。"
+    ],
+    "noNewValuesComputed": "本文件不计算 monthlyYi、混合价或任何采用值，也不做百分点到 token 池的换算；所有数字均为 Issue 原文原样记录。"
+  },
+  "adoptionStatus": "research-only; not adopted; adopted values untouched — left to the upstream pipeline/maintainer",
+  "confidence": "low",
+  "confidenceRationale": "无截图、字段口径未知、套餐未独立核验、额度可能被其他设备或会话污染，故为 low。",
+  "basis": "community",
+  "relatedFiles": [
+    "devin-pro-opus55-round1-2026-10-30.json",
+    "devin-pro-opus55-round1-2026-11-01.json"
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "collectedAt": "2026-11-19",
+  "collectionMethod": "Manual capture around 10:35 Beijing time / 02:35Z on 2026-11-19 of the official OpenCode Go documentation page (https://opencode.ai/docs/go/, which 301-redirects to /docs/console/go/), the Go landing page (https://opencode.ai/go, 302-redirects to /console/go), the documentation markdown export (https://opencode.ai/docs/console/go.md), the OpenCode console changelog RSS feed (https://opencode.ai/console/changelog/rss.xml) and the full model catalog endpoint referenced by the documentation (https://opencode.ai/inference/go/v1/models). All surfaces were compared against the 2026-11-18 captures of the same URLs. Every price, limit, estimate and promo sentence below is transcribed as published. Research-only — no adopted row generated, no adopted value changed, no script changed, no chart or site change.",
+  "sources": [
+    "https://opencode.ai/docs/go/",
+    "https://opencode.ai/go",
+    "https://opencode.ai/docs/console/go.md",
+    "https://opencode.ai/v2/docs/console/go",
+    "https://opencode.ai/inference/go/v1/models"
+  ],
+  "scope": "OpenCode Go official catalog only. The change on 2026-11-19 is that the published monthly limit for GLM-5.3 moved from Go $200 / Go Plus $400 / Go Teams $205 (recorded in opencode-go-glm53-limit-round1-2026-11-18.json, which had no end date on the catalog surfaces) to Go $500 / Go Plus $1000 / Go Teams $505. The official documentation now states: 'GLM-5.3: Higher usage limits apply through November 22, 2026.' The three-part token price is unchanged. GLM-5.3-Flash and every other paid model's monthly_usage in the models API are unchanged. Research-only — not adopted; no computed allowance, no script change, no leaderboard/score data.",
+  "adoptionStatus": "research-only; not adopted; the opencode_go × glm-5.3 adopted row is generated from scripts/build_adopted.py OPENCODE_GO_MODELS; updating it from the previously recorded $200 Go monthly limit (or the still-hardcoded earlier $15) to the new $500 monthly limit, and applying the 2026-11-22 end date, is left to maintainer review",
+  "previous": {
+    "capturedAt": "2026-11-18",
+    "file": "opencode-go-glm53-limit-round1-2026-11-18.json",
+    "modelsApiMonthlyUsage": {
+      "go": 200,
+      "go-plus": 400,
+      "go-teams": 205
+    },
+    "landingPage": {
+      "per5h": {
+        "go": 2640,
+        "goPlus": 5280
+      },
+      "monthlyLimitUsd": {
+        "go": 200,
+        "goPlus": 400
+      },
+      "rowAsPublished": "GLM-5.3 | Est. requests / 5 hr: Go: 2,640; Go Plus: 5,280 | Monthly limit: Go: $200; Go Plus: $400",
+      "promoMarker": "none — the 2026-11-18 landing-page row had no 'New' or 'Limited time' label, and no end date was published on the models API, the landing page, or the documentation"
+    },
+    "docsPromoSentence": null,
+    "threePartPrice": {
+      "inputPerMTokUsd": 1.4,
+      "outputPerMTokUsd": 4.4,
+      "cachedReadPerMTokUsd": 0.26
+    }
+  },
+  "observed": {
+    "paidModel": {
+      "name": "GLM-5.3",
+      "modelId": "glm-5.3",
+      "canonicalId": "zhipuai/glm-5.3",
+      "vendor": "ZhipuAI",
+      "vendorNote": "Vendor is derived from the 'zhipuai/' prefix of canonical_id in the models API.",
+      "openWeights": true,
+      "releaseDate": "2026-08-14",
+      "lastUpdated": "2026-08-14",
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "statusChange": "On 2026-11-19 the models API go.monthly_usage block and the Go landing-page model table published a higher GLM-5.3 monthly limit than the 2026-11-18 capture. The official documentation added a promo end date. The three-part price, context / output limits, and the GLM-5.3-Flash monthly limits are unchanged.",
+      "endpoint": {
+        "apiBaseUrl": "https://opencode.ai/inference/go/openai/v1",
+        "sdk": "@ai-sdk/openai-compatible"
+      },
+      "contextLimit": 1000000,
+      "outputLimit": 131072,
+      "threePartPrice": {
+        "unit": "USD / MTok",
+        "inputPerMTokUsd": 1.4,
+        "outputPerMTokUsd": 4.4,
+        "cachedReadPerMTokUsd": 0.26,
+        "cacheWritePerMTokUsd": null,
+        "priceUnchanged": true,
+        "sourceQuote": "models API cost.text: input.price = 1.4, input.cache.read = 0.26, output.price = 4.4, identical to the 2026-11-18 capture"
+      },
+      "monthlyLimitUsd": {
+        "go": 500,
+        "goPlus": 1000,
+        "goTeams": 505
+      },
+      "monthlyLimitChange": {
+        "go": {
+          "before": 200,
+          "after": 500
+        },
+        "goPlus": {
+          "before": 400,
+          "after": 1000
+        },
+        "goTeams": {
+          "before": 205,
+          "after": 505
+        },
+        "source": "models API go.monthly_usage, compared with the 2026-11-18 capture of the same endpoint"
+      },
+      "promoEndDate": {
+        "date": "2026-11-22",
+        "asPublished": "GLM-5.3: Higher usage limits apply through November 22, 2026.",
+        "source": "Official documentation markdown export https://opencode.ai/docs/console/go.md and the prerendered HTML of /docs/go/ (which 301-redirects to /docs/console/go/). The sentence is new versus the 2026-11-18 documentation capture, which had no GLM-5.3 end-date line.",
+        "landingPageAndModelsApi": "The Go landing-page GLM-5.3 row still has no 'New' or 'Limited time' label and does not print the November 22 date. The models API entry has no end-date field. The end date is taken from the official documentation sentence above."
+      },
+      "monthlyLimitNote": "Published on the models API as go.monthly_usage = {go: 500, go-plus: 1000, go-teams: 505}. The Go landing-page table independently publishes Monthly limit Go: $500; Go Plus: $1,000 (the same row also contains the unformatted string $1000; no Go Teams column). The 2026-11-19 documentation HTML and markdown export do not print the $500 / $1000 / $505 figures or the 5-hour estimates; they add the promo sentence and continue to point readers to https://opencode.ai/console/go#limits.",
+      "landingPageRequestEstimates": {
+        "note": "The Go landing page model table publishes its own per-5-hour figures for GLM-5.3. The documentation markdown export does not include a corresponding estimated-requests table in this capture, so no docs-side 5-hour / week / month figures are transcribed here.",
+        "go": {
+          "per5h": 6600,
+          "monthlyLimitUsd": 500
+        },
+        "goPlus": {
+          "per5h": 13200,
+          "monthlyLimitUsd": 1000
+        },
+        "rowAsPublished": "GLM-5.3 | Est. requests / 5 hr: Go: 6,600; Go Plus: 13,200 | Monthly limit: Go: $500; Go Plus: $1,000 (the same row also contains $1000)",
+        "previousRowAsPublished": "GLM-5.3 | Est. requests / 5 hr: Go: 2,640; Go Plus: 5,280 | Monthly limit: Go: $200; Go Plus: $400",
+        "promoMarker": "none on the landing-page row — no 'New' or 'Limited time' label; the November 22 end date appears only in the official documentation"
+      }
+    }
+  },
+  "otherObservations": [
+    {
+      "topic": "GLM-5.3-Flash monthly limits unchanged",
+      "observation": "models API go.monthly_usage for glm-5.3-flash remains {go: 60, go-plus: 180, go-teams: 65}. The landing page still shows GLM-5.3-Flash Est. requests / 5 hr Go: 6,320; Go Plus: 18,900 and Monthly limit Go: $60; Go Plus: $180, identical to the 2026-11-18 landing-page row. Three-part price remains $0.15 / $0.50 / $0.03.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Qwen4 Max monthly limits unchanged versus 2026-11-18",
+      "observation": "models API go.monthly_usage for qwen4-max remains {go: 15, go-plus: 60, go-teams: 20}; limit.output remains 262144. The landing page still shows Qwen4 Max (New) Est. requests / 5 hr Go: 463; Go Plus: 1,850 and Monthly limit Go: $15; Go Plus: $60.",
+      "note": "Recorded only; this file does not change the Qwen4 Max evidence."
+    },
+    {
+      "topic": "Documentation now states a GLM-5.3 promo end date but still does not print the dollar limits",
+      "observation": "The 2026-11-19 captures of /docs/go/, /docs/console/go/ and /v2/docs/console/go are 65214 bytes (64821 on 2026-11-18). The markdown export and the prerendered HTML both contain the new sentence 'GLM-5.3: Higher usage limits apply through November 22, 2026.' They still do not print $500 / $1000 / $505 or the 5-hour estimates, and still link to https://opencode.ai/console/go#limits. Limits and estimates in this file come from the models API and the landing page; the end date comes from this documentation sentence.",
+      "note": "Recorded only."
+    },
+    {
+      "topic": "Changelog RSS has no new entry",
+      "observation": "The OpenCode console changelog RSS is byte-identical to the 2026-11-18 capture (5743 bytes); the newest item is still 2026-11-14 'Pay for Go with WeChat Pay'.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "recommended_api field added on catalog entries",
+      "observation": "The 2026-11-19 models API adds a recommended_api string on catalog entries (for example glm-5.3 = chat-completions) and advances the created timestamp on every model. monthly_usage and cost blocks are otherwise unchanged, except for glm-5.3 as recorded above. Plan prices remain Go $10 / Go Plus $40 / Go Teams $20 per member.",
+      "note": "Recorded only. recommended_api and created are not quota or price fields and are not adopted here."
+    }
+  ],
+  "computationNote": "This file computes no monthlyYi, no blended per-MTok price and no adopted allowance; all numbers are transcribed as published on the models API, the landing page, and the official documentation promo sentence. No ratio, scale factor or reconstruction from the previous $200 / $400 limits is used to derive the new figures. No adopted value is derived from this capture.",
+  "relatedFiles": [
+    "opencode-go-glm53-limit-round1-2026-11-18.json",
+    "opencode-go-qwen4-max-round2-2026-11-17.json",
+    "opencode-go-hy4-round1-2026-11-05.json"
+  ],
+  "confidence": "medium",
+  "basis": "official"
+}

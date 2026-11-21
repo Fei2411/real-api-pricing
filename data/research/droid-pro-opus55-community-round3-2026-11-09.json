@@ -1,0 +1,153 @@
+{
+  "collectedAt": "2026-11-09",
+  "subject": "Factory Droid Pro × Claude Opus 5.5 社区实测补充评论原样录入（GitHub Issue #131 作者 sopping 的 2026-11-08 补充评论）：本地用量日志 token 分项 + Magpie 保存的额度历史快照",
+  "scopeNote": "本文件只把 Issue #131 的补充评论内容原样存档为 research 证据：投稿人给出的样本区间、token 分项、额度历史快照与 API 等价估值。全部数字照抄评论原文，不做负载归一化、不算 monthlyYi、不改任何采用值。",
+  "plan": {
+    "name": "Droid Pro",
+    "vendor": "Factory AI (Droid)",
+    "priceUsdPerMonth": 20,
+    "priceNote": "USD $20/month（沿用 Issue #131 记录的 Factory Droid Pro 官方月价）",
+    "region": "International",
+    "servedModel": "Claude Opus 5.5",
+    "source": "https://factory.ai/pricing",
+    "officialAllowance": "官方未公布绝对 token 额度；Factory 有 5 小时 / 7 天 / 30 天三个用量窗",
+    "repoWindowConvention": "仓库既有裁定：Factory 30 天滚动窗 = 2× 7 天窗（2026-10-03 维护者裁定）"
+  },
+  "source": {
+    "type": "community_issue_comment_local_usage_log",
+    "platform": "GitHub Issue",
+    "issue": "#131",
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/131#issuecomment-6721884271",
+    "author": "sopping",
+    "postedAtUtc": "2026-11-08T13:08:22Z",
+    "issueTitle": "补充数据 / Contribute evidence",
+    "providedBy": "GitHub issue #131 下的补充评论（2026-11-09 录入）",
+    "measurementWindow": "2026-10-22（UTC+8）；具体起止时刻评论未记录",
+    "provenance": "评论声明来源为 Magpie 本地用量记录，以及 Magpie 保存的额度历史快照。Factory 原始面板截图已无法提供（提交时点不再可获得）。"
+  },
+  "supersedesGapsIn": {
+    "file": "droid-pro-opus55-community-round2-2026-10-22.json",
+    "relation": "本文件为该文件所记录缺口的补充回答（针对我方 2026-10-23 评论 https://github.com/Fei2411/real-api-pricing/issues/131#issuecomment-6356217005 的三项要求）",
+    "gapsAddressed": [
+      "本地用量截图：投稿人改以 Magpie 本地用量记录提供 token 分项数字，截图未附",
+      "token 分项：本次给出普通输入 / 缓存读取 / 缓存写入 / 输出四项",
+      "起点读数：本次给出开始前 5 小时、7 天、30 天额度均剩余 100% 的快照"
+    ],
+    "gapsStillOpen": [
+      "Factory 原始面板截图仍无法提供",
+      "最接近样本结束的周 / 月快照并非严格的样本结束后快照（采集时间比最后一次请求早约 1 分钟）",
+      "无请求 ID，无法证明这 70 条本地记录与原帖样本逐条对应"
+    ],
+    "priorFileUnchanged": "data/research/droid-pro-opus55-community-round2-2026-10-22.json 原样保留，未做任何修改。"
+  },
+  "sample": {
+    "date": "2026-10-22",
+    "timezone": "UTC+8",
+    "plan": "Factory Droid Pro",
+    "servedModel": "Claude Opus 5.5",
+    "successfulRequests": 70,
+    "totalTokens": 19882604,
+    "tool": "Magpie 本地用量记录"
+  },
+  "tokens": {
+    "unit": "tokens（绝对值，原样记录）",
+    "total": 19882604,
+    "totalNote": "四项相加 = 19,882,604，数字由投稿人给出。",
+    "breakdown": {
+      "freshInput": 152,
+      "cacheRead": 17818415,
+      "cacheWrite": 1951387,
+      "output": 112650
+    },
+    "reasoningTokens": {
+      "value": null,
+      "note": "无单独 reasoning token 字段，无法从输出中拆分 reasoning。"
+    }
+  },
+  "quotaSnapshots": {
+    "source": "Magpie 保存的额度历史快照",
+    "beforeSample": [
+      {
+        "window": "5-hour",
+        "remainingPct": 100
+      },
+      {
+        "window": "7-day",
+        "remainingPct": 100
+      },
+      {
+        "window": "30-day",
+        "remainingPct": 100
+      }
+    ],
+    "afterSample": [
+      {
+        "window": "5-hour",
+        "remainingPct": 58
+      }
+    ],
+    "closestToSampleEnd": [
+      {
+        "window": "7-day",
+        "remainingPct": 86
+      },
+      {
+        "window": "30-day",
+        "remainingPct": 93
+      }
+    ],
+    "closestToSampleEndNote": "最接近样本结束的周 / 月快照剩余 86% / 93%，但采集时间比最后一次请求早约 1 分钟，因此与原帖面板已用 14% / 7% 一致，但并非严格的样本结束后快照。",
+    "originalIssuePanelReading": {
+      "window": "5-hour / 7-day / 30-day",
+      "usedPct": "42% / 14% / 7%",
+      "note": "原帖 Issue #131 面板读数，原样引用作对照。"
+    }
+  },
+  "apiEquivalent": {
+    "method": "按当前 Magpie 价表折算的 API 等价估值",
+    "priceTableUsdPerMTok": {
+      "freshInput": 4,
+      "cacheRead": 0.2,
+      "cacheWrite": 5,
+      "output": 20
+    },
+    "totalUsd": 15.57,
+    "note": "合计约 $15.57（投稿人给出的估值）。这不是 Factory 的实际账单金额；所用价表不一定与测试当天相同。"
+  },
+  "contributorStatement": {
+    "disclaimer": "以下为投稿人自述的原样记录，不构成请本仓库直接改采用值的请求。",
+    "statements": [
+      "请求数、时间范围和估值均吻合。",
+      "原 issue 没有记录请求 ID，因此不能证明这 70 条本地记录与原样本逐条对应。"
+    ]
+  },
+  "caveats": [
+    "Factory 原始面板截图已无法提供，额度数字只能依赖 Magpie 保存的历史快照",
+    "最接近样本结束的周 / 月快照采集时间比最后一次请求早约 1 分钟，不是严格的结束后快照",
+    "无请求 ID，70 条本地记录与原帖样本无法逐条对应",
+    "无单独 reasoning token 字段，输出中 reasoning 不可拆分",
+    "$15.57 是 API 等价估值，不是 Factory 实际账单；所用价表不一定与测试当天相同",
+    "单次观测样本"
+  ],
+  "reviewNotes": {
+    "by": "本仓库录入方（2026-11-09）",
+    "notes": [
+      "本文件补齐了 round2 文件所列三项缺口中的两项半：token 分项完整、起点读数为 100%；但面板原图仍缺、快照非严格结束后。",
+      "仓库现有 droid_pro × claude-opus-5.5 采用值（2.15 亿，confidence low）由 scripts/build_adopted.py 生成，本文件不改脚本，不改采用值。",
+      "是否据本文件更新采用值、是否重算负载折算，留给上游管线 / 维护者按仓库口径裁定。"
+    ],
+    "notVerified": [
+      "Magpie 本地用量记录原始文件未随本文件保存，分项数字无法在本仓库内重算核对",
+      "额度历史快照的原始采集记录未提供，剩余百分比无法独立复核",
+      "API 等价估值依赖投稿人所用的价表，价表原文未附"
+    ],
+    "noNewValuesComputed": "本文件不计算 monthlyYi、不做负载归一化、不计算混合价、不改任何采用值；所有数字均为投稿人评论原文原样记录。"
+  },
+  "adoptionStatus": "research-only; not adopted; adopted values untouched — left to the upstream pipeline/maintainer",
+  "confidence": "low-medium",
+  "basis": "community",
+  "relatedFiles": [
+    "droid-pro-opus55-community-round2-2026-10-22.json",
+    "droid-pro-opus55-community-round1-2026-09-29.json"
+  ]
+}
