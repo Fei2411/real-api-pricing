@@ -225,6 +225,13 @@ KIMI_199_USED_TOKENS = 37_362_656
 KIMI_199_MONTHLY_FRACTION = 0.0192
 KIMI_199_WEEKLY_FRACTION = 0.0961
 KIMI_MONTHLY_TO_WEEKLY = 5
+# issue #182（2026-11-02）：旧 699 Allegro × k3.1-pro 控制台周面板，周额度 99%（约 3h50min 后重置）；
+#   Usage over time：Input 784.9M（含 Cache 读 761.6M、97%）、Output 2.2M、Total 787.1M、5552 requests；
+#   作者另称有对话消耗未计入统计 → 99% 含未计入用量，按本面板推出的周池是下限。
+KIMI_699_SEGMENT = {"cache_read": 761_600_000, "input": 23_300_000, "output": 2_200_000}
+KIMI_699_TOTAL_TOKENS = 787_100_000
+KIMI_699_WEEKLY_FRACTION = 0.99
+KIMI_K31_PRO_LIST = (0.2, 2.0, 10.0)  # k3.1-pro 官方标价（$0.2/$2/$10，issue #151）；k3 的 0.3/3/15 恰为 1.5×，折算结果不变
 KIMI_K27_199_USED_TOKENS = 11_913_113
 KIMI_K27_199_MONTHLY_USED_FRACTION = 0.0076
 CLAUDE_PRO_SESSION_TOKENS = 32_868_513
@@ -744,6 +751,16 @@ def kimi_199_monthly_yi() -> float:
     )
 
 
+def kimi_699_monthly_yi() -> float:
+    # issue #182：段 list-worth ÷99% ×5 周（Kimi 月池=周池×5）÷ 标准负载混合价；
+    #   k3.1-pro 与 k3 三段价成 1.5× 比例，两套价目折算结果相同
+    seg = KIMI_699_SEGMENT
+    worth = (seg["cache_read"] * KIMI_K31_PRO_LIST[0] + seg["input"] * KIMI_K31_PRO_LIST[1]
+             + seg["output"] * KIMI_K31_PRO_LIST[2]) / 1e6
+    return round(worth / KIMI_699_WEEKLY_FRACTION * KIMI_MONTHLY_TO_WEEKLY
+                 / blended(*KIMI_K31_PRO_LIST) / 100, 2)
+
+
 def kimi_k27_199_monthly_yi() -> float:
     return round(
         KIMI_K27_199_USED_TOKENS
@@ -979,7 +996,7 @@ OPENCODE_GO_MODELS = (
     ("claude-haiku-5.5", 15, 0.01, 0.1, 0.5, "new official row; <=100K list price; >100K band kept in research variants; goat-opencode-catalogs-round4-2026-10-20.json"),
     ("gpt-6-luna", 15, 0.01, 0.1, 0.5, "new official row; <=272K list price; >272K band kept in research variants; goat-opencode-catalogs-round3-2026-09-30.json"),
     ("glm-5.3-flash", 60, 0.03, 0.15, 0.5, "official Usage $15->$60 (reverified 2026-09-30); goat-opencode-catalogs-round3-2026-09-30.json"),
-    ("glm-5.3", 15, 0.26, 1.4, 4.4, "官网单档"),
+    ("glm-5.3", 200, 0.26, 1.4, 4.4, "2026-11-18 官网无截止日常设月限额 $15→$200（至 2026-11-22 的 4 天 $500 短期活动按临时促销规则留注不采）；opencode-go-glm53-limit-round1-2026-11-18.json；opencode-go-glm53-limit-round2-2026-11-19.json"),
     ("glm-5.2", 60, 0.26, 1.4, 4.4, "官网单档"),
     ("kimi-k3", 15, 0.3, 3.0, 15.0, "官网单档"),
     ("kimi-k3.1-pro", 15, 0.2, 2.0, 10.0, "Official $15 per-model limit; cache write $2/MTok excluded from standard workload"),
@@ -993,11 +1010,13 @@ OPENCODE_GO_MODELS = (
     ("minimax-m3.1-flash", 20, 0.015, 0.15, 0.60, "Official $20 per-model limit; distinct from the previously adopted preview model"),
     ("muse-spark-1.3-contributor", 60, 0.002, 0.1, 0.2, "官网单档"),
     ("muse-spark-1.2-contributor", 60, 0.002, 0.1, 0.2, "官网单档"),
+    ("qwen4-max", 15, 0.075, 1.5, 4.5, "new official row (2026-11-17); Go monthly $15; cache write $1.875/5m excluded from standard workload; opencode-go-qwen4-max-round2-2026-11-17.json"),
     ("qwen3.8-max", 15, 0.25, 2.0, 6.0, "官网单档"),
     ("qwen3.8-flash", 30, 0.016, 0.15, 0.47, "官网单档"),
     ("qwen3.7-plus", 60, 0.04, 0.4, 1.6, "≤256K 标价；>256K 档保留在 research variants"),
     ("deepseek-v4.1-flash", 100, 0.003, 0.15, 0.60, "Official monthly limit $100 (2026-10-30); off-peak; peak prices are 2x"),
     ("deepseek-v4-pro", 15, 0.022, 0.66, 1.98, "Off-Peak；Peak 额度为其一半，保留在 research variants；OpenCode 价表未改"),
+    ("hy4", 60, 0.042, 0.834, 2.501, "new official row (2026-11-05); Go monthly $60; opencode-go-hy4-round1-2026-11-05.json"),
     ("hy4-preview", 30, 0.042, 0.834, 2.501, "官网单档"),
     ("hy3", 60, 0.035, 0.14, 0.58, "官网单档"),
     ("gemini-4-argon-contributor", 30, 0.20, 4.0, 20.0, "new official row; Go monthly $30; 2x limited-time $60 with no end date excluded per temp-promo policy; $4/$20/cached $0.20; Not ZDR; opencode-go-gemini4-argon-round1-2026-10-15.json"),
@@ -1079,12 +1098,12 @@ COMMAND_CODE_GOAT_MODELS = (
     ("glm-5.2", 70, 0.26, 1.4, 4.4, "官网三段价"),
     ("hy3", 70, 0.035, 0.14, 0.58, "官网三段价"),
     ("qwen3.8-27b", 70, 0.04, 0.4, 3.0, "官网三段价"),
-    ("deepseek-v4.1-flash", 80, 0.003, 0.15, 0.60, "官网 allowance $60→$80（2026-10-20）；Off-Peak；Peak=2×保留在 research variants"),
+    ("deepseek-v4.1-flash", 100, 0.003, 0.15, 0.60, "官网 allowance $80→$100（2026-10-31），受 $70 共享池封顶；Off-Peak；Peak=2×保留在 research variants；goat-deepseek-glm-boost-round1-2026-10-31.json"),
     ("kimi-k2.7-code", 60, 0.19, 0.95, 4.0, "官网三段价"),
     ("deepseek-v4-flash", 60, 0.003, 0.15, 0.60, "back in official catalog as 'V4 Flash (latest)' at $60 (restored after the 9/10 removal); Off-Peak; Peak=2x kept in research variants; goat-opencode-catalogs-round3-2026-09-30.json"),
     ("deepseek-v4.1-flash-fast", 60, 0.016, 0.16, 0.58, "new official row 'V4.1 Flash Fast' at $60 (off-peak $0.016/$0.16/$0.58, 57,500 requests/mo); goat-opencode-catalogs-round3-2026-09-30.json"),
     ("minimax-m3", 47, 0.06, 0.3, 1.2, "官网页成交/折扣三段价（-50%类）"),
-    ("glm-5.3-flash", 80, 0.03, 0.15, 0.5, "官网三段价；credits $40→$80（$100 限时至10/17已结束，$80 常态）"),
+    ("glm-5.3-flash", 100, 0.03, 0.15, 0.5, "官网三段价；credits $80→$100（2026-10-31），受 $70 共享池封顶；goat-deepseek-glm-boost-round1-2026-10-31.json"),
     ("gemini-3.8-flash", 40, 0.15, 1.5, 7.5, "官网三段价"),
     ("qwen3.7-max", 33, 0.5, 2.5, 7.5, "官网三段价"),
     ("qwen3.7-plus", 33, 0.08, 0.4, 1.6, "官网三段价（本渠道 cache read=$0.08）"),
@@ -1104,7 +1123,12 @@ COMMAND_CODE_GOAT_MODELS = (
     ("glm-5.3-flashx", 20, 0.075, 0.37, 1.25, "official three-part price; New models table $20; goat-opencode-catalogs-round3-2026-09-30.json"),
     ("deepseek-v4-flash-vision-exp", 20, 0.003, 0.15, 0.60, "back in official catalog as 'V4 Flash Vision (exp)' at $20 (restored after the 9/10 removal); Off-Peak; Peak=2x kept in research variants; goat-opencode-catalogs-round3-2026-09-30.json"),
     ("deepseek-v4-flash-fast", 20, 0.07, 0.28, 0.56, "官网三段价；New models 默认$20；与Flash额度分开"),
-    ("glm-5.3", 20, 0.26, 1.4, 4.4, "官网三段价；New models 默认$20"),
+    ("deepseek-v4.1-flash-ultrafast", 20, 0.048, 2.4, 9.6, "new official row (2026-11-07); New models table $20; goat-dsv41-flash-ultrafast-round1-2026-11-07.json"),
+    ("glm-5.3", 70, 0.26, 1.4, 4.4, "官网三段价；per-model credits $20→$70（2026-11-13 无截止日常设档）；goat-glm53-boost-round1-2026-11-13.json"),
+    ("muse-ember", 20, 0.004, 0.1, 0.5, "new official row (2026-11-10); New models table $20; goat-muse-ember-round1-2026-11-10.json"),
+    ("qwen4-max", 15, 0.075, 1.5, 4.5, "new official row (2026-11-17); $15 per-model credits; cache write $1.875 excluded from standard workload; goat-qwen4-max-round1-2026-11-17.json"),
+    ("hy4-flash", 15, 0.003, 0.07, 0.281, "new official row (2026-11-17); $15 per-model credits; goat-hy4-flash-round1-2026-11-17.json"),
+    ("hy4", 20, 0.042, 0.834, 2.501, "new official row (2026-11-18); $20 per-model credits; goat-hy4-round1-2026-11-18.json"),
     ("muse-spark-1.3", 20, 0.15, 1.25, 4.25, "官网标准档三段价；New models 默认$20"),
     ("muse-spark-1.3-contributor", 20, 0.002, 0.1, 0.2, "官网 contributor 三段价；New models 默认$20"),
     ("muse-spark-1.2", 20, 0.15, 1.25, 4.25, "官网标准档三段价；New models 默认$20"),
@@ -1139,6 +1163,7 @@ COMMAND_CODE_GOAT_MODELS = (
     ("minimax-m2.7", 20, 0.06, 0.3, 1.2, "official three-part price; Older models all $20; goat-opencode-catalogs-round3-2026-09-30.json"),
     ("minimax-m2.5", 20, 0.03, 0.3, 1.2, "official three-part price; Older models all $20; goat-opencode-catalogs-round3-2026-09-30.json"),
     ("ling-3.1-flash", 100, 0.06, 0.3, 0.9, "new official row; per-model credits $20->$100 (reverified 2026-10-16 ~10:36 Beijing: credits table shows a flat $100 with no was/through/creditDeal wording, and RSC budgetUsd=100 with budgetSteps carrying no down-step, so the $100 tier is adopted as the standing tier per the no-end-marker precedent, same as DeepSeek V4.1 Flash $15->$60; effective = min($70 shared pool, $100) = $70; the 2026-10-15T12:30Z scheduled $100 step that was not live at the round1 capture is now live and permanent; three-part price unchanged cached/input/output=$0.06/$0.30/$0.90; goat-ling31-flash-round1-2026-10-15.json; goat-ling31-flash-round2-2026-10-16.json"),
+    ("ling-3.1-flash-1019", 100, 0.06, 0.3, 0.9, "new official paid row (2026-11-04, after free trial ended Nov 3); per-model credits $100 with no end date, capped at $70 shared pool; goat-ling31-flash-1019-round1-2026-11-04.json"),
 )
 
 
@@ -1153,9 +1178,9 @@ COMMAND_CODE_GOAT_DEEPSEEK_SOURCE = (
 )
 COMMAND_CODE_GOAT_NOTES = {
     "deepseek-v4.1-flash": (
-        "62.112→72.464亿：min(共享月池$70, 模型allowance $80) ÷ 统一标准负载加权价；"
+        "62.112→72.464亿：min(共享月池$70, 模型allowance $100) ÷ 统一标准负载加权价；"
         "官网闲时 cached/input/output=$0.003/$0.15/$0.60，高峰2×。"
-        "模型月allowance由$60升为$80（2026-10-20 官网 credits $80；限时 $100 仅 10/20 01:00Z–10/21 01:00Z 24小时，不采用）。"
+        "模型月allowance由$60→$80（2026-10-20）→$100（2026-10-31），均受$70共享月池封顶，有效额度维持$70；goat-deepseek-glm-boost-round1-2026-10-31.json。"
         "官方请求数仅作交叉检查，不作为额度主值；忽略 processing fee；同套餐各模型额度不可相加"
     ),
     "deepseek-v4-flash": (
@@ -1369,6 +1394,58 @@ def mimo_rows() -> list[tuple]:
     return rows
 
 
+# 千问 / 阿里云百炼 Token Plan 个人版国内站（2026-11-09 20:00 UTC+8 扩容调价口径）：
+# 官方月度 Credits 池 × 1 Credit=¥0.01（100 Credits=¥1 实时推理人民币标价），按项目统一标准负载折算。
+# 双向互证：①官方《用量与额度》qwen3.6-plus 示例（入 8,349/缓存 40,794/出 573 tok × ¥2/¥0.2/¥12 = ¥0.0317328 ≈ 3.18 Credits）；
+#           ②@mamaruo #247 忙时 4h 整点遥测（deepseek-v4.1-flash-1017 7,886,665 tok × ¥0.04/¥2/¥8 = ¥1.67926848 = 167.926848 Credits）。
+# 新客首月半价（Lite ¥19.5、Essential ¥39.5，至 11-30）属一次性首购优惠，不入常设月费；
+# 官方标「限时夜间折扣」（22:00-08:00 qwen3.8 4折、deepseek-v4 5折）无截止日，按临时活动规则留决策注不入主值；
+# qwen4-max-preview（#240，11-25 24:00 下线、无独立按量标价且处于 0.8 折叠加态）留 research-only。
+ALIYUN_TOKEN_TIERS = (
+    ("aliyun_token_lite_cn", "阿里云百炼 Token Plan Lite (¥39)", 39, 6, 20_000, "新客首月¥19.5（至11-30）不计入常设月费"),
+    ("aliyun_token_essential_cn", "阿里云百炼 Token Plan Essential (¥79)", 79, 10, 45_000, "新客首月¥39.5（至11-30）不计入常设月费"),
+    ("aliyun_token_standard_cn", "阿里云百炼 Token Plan Standard (¥139)", 139, 18, 80_000, "附赠独立 Harness 权益不计入模型池"),
+    ("aliyun_token_pro_cn", "阿里云百炼 Token Plan Pro (¥312)", 312, 43, 200_000, "2026-11-09 目录价由¥499降至¥312、额度由18万升至20万 Credits；附赠独立 Harness 权益不计入"),
+)
+ALIYUN_TOKEN_MODELS = (
+    ("qwen4-max", 0.5, 10.0, 30.0, "千问实时推理标价不分区间（隐式/显式缓存命中¥0.5、输入¥10、输出¥30，显式缓存创建¥12.5不进标准负载）；11-25下线的 qwen4-max-preview（#240）分开留 research"),
+    ("qwen3.8-max", 1.5, 12.0, 36.0, "千问实时推理标价不分区间（隐式缓存命中¥1.5、输入¥12、输出¥36）；官方「限时夜间折扣」22:00-08:00 享4折无截止日，留注不入主值"),
+    ("qwen3.8-flash", 0.1, 0.8, 2.7, "千问实时推理标价不分区间（隐式缓存命中¥0.1、输入¥0.8、输出¥2.7）；官方「限时夜间折扣」22:00-08:00 享4折无截止日，留注不入主值"),
+    ("deepseek-v4.1-flash", 0.04, 2.0, 8.0, "忙时（08:00-22:00）标价¥0.04/¥2/¥8（与 deepseek-v4.1-flash-1017 同价，#247 遥测逐位闭环）；闲时标价减半且另有无限时截止日的夜间5折说明，留注不叠加"),
+    ("glm-5.3", 2.0, 8.0, 28.0, "千问实时推理标价不分区间（隐式缓存命中¥2、输入¥8、输出¥28）"),
+)
+ALIYUN_TOKEN_SOURCE = (
+    "https://platform.qianwenai.com/docs/token-plan/personal/token-plan-personal-overview 官方四档 Credits；"
+    "https://platform.qianwenai.com/docs/token-plan/token-plan-usage-quota 官方 Credits 示例；"
+    "https://platform.qianwenai.com/docs/developer-guides/getting-started/model-prices 人民币三段价；"
+    "aliyun-token-plan-credits-2026-11-11.json；aliyun-token-plan-adoption-round1-2026-11-21.json；"
+    "mamaruo-qwen-tokenplan-lite-deepseek-v41-flash-1017-2026-11-19.json"
+)
+
+
+def aliyun_token_rows() -> list[tuple]:
+    rows = []
+    for pid, name, price_cny, intl_usd, credits, tier_note in ALIYUN_TOKEN_TIERS:
+        worth_cny = credits / 100
+        for model, cached, inp, out, model_note in ALIYUN_TOKEN_MODELS:
+            blended_cny = blended(cached, inp, out)
+            yi = round(worth_cny / blended_cny / 100, 3)
+            is_verified = (pid == "aliyun_token_lite_cn" and model == "deepseek-v4.1-flash")
+            conf = "high" if is_verified else "medium"
+            verify_note = (
+                "Lite×DeepSeek V4.1 Flash 双向闭环（#247）：18:00-22:00 忙时整点 7,886,665 tok（读7.354M/入0.479M/出0.053M）×忙时价=¥1.67926848，面板月额度+0.83963424%×20,000=167.926848 Credits，1 Credit=¥0.01 逐位成立（按20,000 Credits官方满池折标准负载，不用0.84%小段直接外推）"
+                if is_verified else
+                "借用官方 qwen3.6-plus 示例与 #247 双向闭环验证的 1 Credit=¥0.01 计费口径，池额与三段价取官方表值"
+            )
+            note = (
+                f"新增{yi:g}亿：国内站月度{credits:,} Credits（=¥{worth_cny:g} 标价等值）÷统一标准负载混合价¥{blended_cny:.4g}/M；"
+                f"{model_note}；{tier_note}；国际站同名档 ${intl_usd:g}/月同 Credits 池但美元模型单价未验证，按国内人民币口径计；"
+                f"{verify_note}；耗尽即停不自动转按量；同套餐各模型额度不可相加"
+            )
+            rows.append((pid, name, price_cny, "CNY", model, yi, conf, ALIYUN_TOKEN_SOURCE, note))
+    return rows
+
+
 # ---- 订阅：(plan_id, plan_name, price, currency, served_model, monthly_yi, confidence, source, decision_note)
 SUBS = [
     # OpenAI —— Sol 为 Terra/5.5 基准；Luna 改用 Plus 维护者面板实测，Pro 档按官方 10x/20x 推算（$100 档 2026-10-30 起由 5x 提为 10x）
@@ -1470,7 +1547,7 @@ SUBS = [
     ("kimi_allegretto_cn", "Kimi 会员 199", 199, "CNY", "kimi-k3", kimi_199_monthly_yi(), "medium", f"维护者实测：Allegretto(赠送) k3.1-pro 单日 {KIMI_199_USED_TOKENS} ÷ 控制台月总{KIMI_199_MONTHLY_FRACTION:.2%} 直推月池；kimi-allegretto-quota-round2-2026-10-27.json", "19.46亿（2026-10-27换基）：k3.1-pro 单日37.36M ÷ 月总1.92% 直推；同窗7天9.61%得周池3.89亿、月/周=5.005吻合月池=周池×5；替换旧基14.51亿（2026-07 k3-256k混合ccusage 243.74M/84%反推）——模型等效不同（k3.1-pro vs k3-256k混合），非纯池变化；未折算：面板只存合计"),
     ("kimi_moderato_cn", "Kimi 会员 99", 99, "CNY", "kimi-k3", round(kimi_199_monthly_yi() * 4 / 20, 2), "medium", "199档×官方4/20；kimi-allegretto-quota-round2-2026-10-27.json", "旧2.90亿→3.89亿：随199档换基（k3.1-pro实测）；继承模型等效，不是K3 1M纯模型实测"),
     ("kimi_andante_cn", "Kimi 会员 49", 49, "CNY", "kimi-k3", round(kimi_199_monthly_yi() / 20, 2), "medium", "199档×官方1/20", ""),
-    ("kimi_allegro_cn", "Kimi 会员 699", 699, "CNY", "kimi-k3", round(kimi_199_monthly_yi() * 60 / 20, 2), "medium", "199档×官方60/20；kimi-allegretto-quota-round2-2026-10-27.json", "旧43.53亿→58.38亿：随199档换基（k3.1-pro实测）；继承模型等效，不是K3 1M纯模型实测"),
+    ("kimi_allegro_cn", "Kimi 会员 699", 699, "CNY", "kimi-k3", kimi_699_monthly_yi(), "medium", "issue #182（X @achaosxyz，2026-11-02）：旧版 699 Allegro × k3.1-pro 控制台双图——周额度 99% + Usage over time 分项 787.1M（Input 784.9M 含 Cache 761.6M/97%、Output 2.2M、5552 requests）；kimi-allegro-weekly-panel-x-2026-11-02.json", "58.38→37.95亿（2026-11-08，#182 直测换基）：段 list-worth $220.92（读 761.6M×$0.2 ＋ 普通输入 23.3M×$2 ＋ 出 2.2M×$10）÷99% ×5 周 ÷ 标准负载混合价 $0.294/MTok；raw 口径 787.1M÷99%×5＝39.75亿 留作对照（未折算时即旧口径）。与 199 档×官方 60/20 的 58.38 亿差 35%——直测取代档间倍率，199 档自身 19.46 亿（raw）不动，两者比值由 3.0× 变为 1.95×，官方 60/20 倍率与实测不符记为准；弱点：作者称另有对话消耗未计入统计，99% 可能包含未计入用量，周池为下限；单账号 n=1，置信度维持 medium"),
     # K2.7 Standard —— ¥199纯模型面板直接按月百分比反推；其余档按官方Code credits 1x/4x/20x/60x
     ("kimi_allegretto_cn", "Kimi 会员 199", 199, "CNY", "kimi-k2.7-code", kimi_k27_199_monthly_yi(), "medium", f"V2EX纯K2.7面板 {KIMI_K27_199_USED_TOKENS}/{KIMI_K27_199_MONTHLY_USED_FRACTION:.2%}=15.68亿；kimi-k27-round7-2026-09-08.json；kimi-k27-adoption-round8-2026-09-08.json", "新增K2.7 Standard独立点：采用直接月%反推15.68亿，不与较弱的699档混合样本取中点；可信范围约15.6~16.7亿。单一纯模型账号证据high，但跨账号/时期采用降为medium；未折算：只有 cache 读＋合计，缺 input/output 分项"),
     ("kimi_moderato_cn", "Kimi 会员 99", 99, "CNY", "kimi-k2.7-code", round(kimi_k27_199_monthly_yi() * 4 / 20, 2), "medium", "199档×官方4/20；kimi-k27-adoption-round8-2026-09-08.json", "新增3.14亿：继承199档15.68亿与官方Code credits倍率；非独立实测"),
@@ -1483,8 +1560,8 @@ SUBS = [
     #   证据：kimi-v2-plans-round1-2026-10-26.json
     ("kimi_plus_cn", "Kimi Plus 99", 99, "CNY", "kimi-k3", round(kimi_199_monthly_yi() * 4 / 20 / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增1.95亿（v2）：Plus ¥99 接 Moderato ¥99 价位＝v1 3.89亿×1/2；取消周限额仅留5h+月池；非独立实测"),
     ("kimi_pro_cn", "Kimi Pro 199", 199, "CNY", "kimi-k3", round(kimi_199_monthly_yi() / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增9.73亿（v2）：Pro ¥199 接 Allegretto ¥199 价位＝v1 19.46亿×1/2；取消周限额仅留5h+月池；非独立实测"),
-    ("kimi_max_cn", "Kimi Max 699", 699, "CNY", "kimi-k3", round(kimi_199_monthly_yi() * 60 / 20 / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增29.19亿（v2）：Max ¥699 接 Allegro ¥699 价位＝v1 58.38亿×1/2；取消周限额仅留5h+月池；非独立实测"),
-    ("kimi_ultra_cn", "Kimi Ultra 1399", 1399, "CNY", "kimi-k3", round(kimi_199_monthly_yi() * 60 / 20 / 2 * 2, 2), "medium", "官方新套餐页「Ultra为Max的2倍」+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增58.38亿（v2）：Ultra ¥1399 无 v1 同价对照，按官方 Agent 额度 28/14=2× Max 派生；数值恰同 v1 Allegro；非独立实测"),
+    ("kimi_max_cn", "Kimi Max 699", 699, "CNY", "kimi-k3", round(kimi_699_monthly_yi() / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json；issue #182 直测换基", f"29.19→{round(kimi_699_monthly_yi() / 2, 2):g}亿（v2）：Max ¥699 接 Allegro ¥699 价位＝v1 {kimi_699_monthly_yi():g}亿×1/2，随 #182 直测换基；取消周限额仅留5h+月池；非独立实测"),
+    ("kimi_ultra_cn", "Kimi Ultra 1399", 1399, "CNY", "kimi-k3", round(kimi_699_monthly_yi(), 2), "medium", "官方新套餐页「Ultra为Max的2倍」+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json；issue #182 直测换基", f"58.38→{kimi_699_monthly_yi():g}亿（v2）：Ultra ¥1399 无 v1 同价对照，按官方 Agent 额度 28/14=2× Max 派生，随 #182 直测换基后与 v1 Allegro 同值；非独立实测"),
     ("kimi_plus_cn", "Kimi Plus 99", 99, "CNY", "kimi-k2.7-code", round(kimi_k27_199_monthly_yi() * 4 / 20 / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增1.57亿（v2）：Plus ¥99 接 Moderato ¥99 价位＝v1 3.14亿×1/2；非独立实测"),
     ("kimi_pro_cn", "Kimi Pro 199", 199, "CNY", "kimi-k2.7-code", round(kimi_k27_199_monthly_yi() / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增7.84亿（v2）：Pro ¥199 接 Allegretto ¥199 价位＝v1 15.68亿×1/2；非独立实测"),
     ("kimi_max_cn", "Kimi Max 699", 699, "CNY", "kimi-k2.7-code", round(kimi_k27_199_monthly_yi() * 60 / 20 / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增23.52亿（v2）：Max ¥699 接 Allegro ¥699 价位＝v1 47.04亿×1/2；非独立实测"),
@@ -1514,15 +1591,17 @@ SUBS = [
     *stepfun_rows(),
     # 小米 MiMo Token Plan —— Credits 月池 × 分模型 burn 率；日/夜两情景点。
     *mimo_rows(),
+    # 千问/阿里云百炼 Token Plan 个人版国内站 —— 官方月度 Credits（1 Credit=¥0.01，#247 遥测逐位闭环）× 人民币实时三段价。
+    *aliyun_token_rows(),
 ]
 
 # ---- 不计额度（unmetered）订阅点：月费 ÷ 无界可用量 → $0/MTok。无 token 分母，图上用专用刻度位，不进对数换算。
-#   元组：(id, name, price, cur, model, conf, src, note)。促销口径，促销结束必须复核；见 conventions.promotions。
+#   元组：(id, name, price, cur, model, conf, src, note)。见 conventions.promotions。
 SWE2_PROMO = CONVENTIONS["promotions"]["devin_swe2"]
 UNMETERED = [
-    ("devin_pro", f"Devin Pro (促销至 {SWE2_PROMO['endDate'][5:].replace('-', '/')})", 20, "USD", "swe-2", "medium",
-     "官推2026-09-10：SWE-2 free for all Pro, Max & Teams subscribers for the next month；维护者面板同段swe-2 45.5M tokens不计额度；docs.devin.ai/admin/billing/usage 无并发上限；devin-swe2-round1-2026-09-12.json",
-     f"新增≈$0/MTok（记0）：SWE-2 促销期对 Pro/Max/Teams 不占额度、不计费，无并发上限→分母无界；裁定按促销价进前沿并改变前沿，截止 {SWE2_PROMO['endDate']}（裁定；官推仅写 for the next month）；取最便宜可得档 Pro $20，Max 同 Y 更贵不重复画；促销结束后必须复核计费权重，定价页永久免费口径为 SWE 1.7 不是 SWE-2"),
+    ("devin_pro", "Devin Pro", 20, "USD", "swe-2", "medium",
+     "2026-11-12 官方博客 https://devin.ai/blog/devin-teams-plan 宣布 Devin Desktop 与 CLI 的 SWE-2 在 Pro/Max/Teams 转为永久免费；https://devin.ai/pricing 标 Free use of SWE-2 无截止日；https://docs.devin.ai/desktop/models 仍残留 through November 30, 2026 字样；official-devin-swe2-free-policy-conflict-2026-11-19.json；devin-swe2-round1-2026-09-12.json",
+     "维持≈$0/MTok（记0，2026-11-21 去掉已过期的 2026-10-31 促销截止标签）：2026-11-12 官方博客与定价页宣布 SWE-2 在 Devin Desktop 与 CLI 对 Pro/Max/Teams 转为常设免费（无并发上限→分母无界）；取最便宜可得档 Pro $20，Max 同 Y 更贵不重复画；边界与官方表面冲突留注：①仅限 Desktop/CLI，不含 Devin Cloud 会话（Teams 另有最多 2 并发 Cloud Free mode）；②docs.devin.ai/desktop/models 今日仍残留免费至 2026-11-30（之后 $3/$15/cached $0.30）字样，留待 12-01 复核；③社区单帖猜测先扣剩余周额度未获官方证实（mirrercrouse-devin-swe2-weekly9-x-2026-11-16.json），维持 medium"),
 ]
 
 # ---- 同一套餐内推更多模型：(基准 plan_id, 基准模型, 新模型, token 倍率, 置信度, 依据, 是否进精选图)
@@ -1655,18 +1734,29 @@ METERED = [
     ("anthropic_sonnet5_api", "Claude Sonnet 5 API", "claude-sonnet-5", 0.2, 2.0, 10.0, "platform.claude.com/docs/en/about-claude/pricing"),
     ("anthropic_fable5_api", "Claude Fable 5 API", "claude-fable-5", 1.0, 10.0, 50.0, "platform.claude.com/docs/en/about-claude/pricing"),
     ("anthropic_fable51_api", "Claude Fable 5.1 API", "claude-fable-5.1", 0.25, 10.0, 50.0, "platform.claude.com/docs/en/about-claude/pricing；cache read $0.25=base input×0.025（其他模型0.1×），in/out 与 Fable 5 同价；claude-fable51-round1-2026-09-13.json"),
+    ("anthropic_fable52_api", "Claude Fable 5.2 API", "claude-fable-5.2", 0.2, 8.0, 40.0, "https://platform.claude.com/docs/en/about-claude/pricing；base input $8/out $40（较 Fable 5.1 降 20%），cache read $0.20=base input×0.025，写 $10/5m $16/1h；list-prices-nov2026-round1-2026-11-21.json"),
     ("anthropic_opus55_api", "Claude Opus 5.5 API", "claude-opus-5.5", 0.2, 4.0, 20.0, "platform.claude.com/docs/en/about-claude/pricing；cache read $0.20=base input×0.05（其他模型0.1×）、写 $5/5m $8/1h、Fast $8/$40；claude-opus55-round1-2026-09-23.json"),
     ("anthropic_sonnet55_api", "Claude Sonnet 5.5 API", "claude-sonnet-5.5", 0.1, 2.0, 10.0, "platform.claude.com/docs/en/about-claude/pricing；2026-09-28 发布价 cache read $0.20（同 Sonnet 5），Haiku 5.5 发布日降至 $0.10=base input×0.05（同 Opus 5.5 口径）；in/out 与写 $2.5/5m 不变；claude-haiku55-round1-2026-10-08.json"),
     ("anthropic_haiku55_api", "Claude Haiku 5.5 API", "claude-haiku-5.5", 0.01, 0.1, 0.5, "platform.claude.com/docs/en/about-claude/pricing；2026-10-08 发布，迄今最便宜最快迷你模型，官方称平均比 Haiku 4.5 便宜 ~75%；≤100K 档 cached $0.01/in $0.10/out $0.50、写 $0.125/5m；>100K 档 5×（cached $0.05/in $0.50/out $2.50、写 $0.625/5m）；按 90/10 分段混合；claude-haiku55-round1-2026-10-08.json"),
+    ("openai_astra62_api", "GPT-6.2 Astra API", "gpt-6.2-astra", 0.4, 8.0, 40.0, "https://developers.openai.com/api/docs/models/gpt-6.2-astra.md；https://openai.com/index/introducing-gpt-6-2-astra-sol/；2026-11-17 发布，较 GPT-6 Astra 降价 20%，30m 缓存写 $10 不进标准负载；official-gpt-62-astra-sol-api-2026-11-19.json"),
+    ("openai_sol62_api", "GPT-6.2 Sol API", "gpt-6.2-sol", 0.1, 2.0, 10.0, "https://openai.com/index/introducing-gpt-6-2-astra-sol/；2026-11-17 发布，维持 GPT-6.1 Sol API 三段价；official-gpt-62-astra-sol-api-2026-11-19.json"),
     ("openai_terra_api", "GPT-5.6 Terra API", "gpt-5.6-terra", 0.2, 2.0, 12.0, "developers.openai.com"),
     ("openai_luna_api", "GPT-5.6 Luna API", "gpt-5.6-luna", 0.02, 0.2, 1.2, "developers.openai.com"),
+    ("google_ai_carbon_api", "Gemini 4 Carbon API (导入价至 11/30)", "gemini-4-carbon", 0.1, 2.0, 10.0, "https://ai.google.dev/gemini-api/docs/pricing；2026-11-10 开放，导入价至 2026-11-30（$0.10/$2/$10），2026-12-01 起恢复常设 $0.20/$4/$20；gemini-4-carbon-api-pricing-2026-11-11.json"),
+    ("google_ai_neon_api", "Gemini 4 Neon API", "gemini-4-neon", 0.15, 3.0, 15.0, "https://ai.google.dev/gemini-api/docs/pricing；2026-11-18 发布常设标价 $0.15/$3/$15；list-prices-nov2026-round1-2026-11-21.json"),
+    ("google_ai_argon_api", "Gemini 4 Argon API (导入价至 11/30)", "gemini-4-argon", 0.1, 2.0, 10.0, "https://ai.google.dev/gemini-api/docs/pricing；导入价至 2026-11-30（$0.10/$2/$10），2026-12-01 起恢复常设 $0.20/$4/$20；list-prices-nov2026-round1-2026-11-21.json"),
+    ("google_ai_hydrogen_api", "Gemini 4 Hydrogen API", "gemini-4-hydrogen", 0.075, 1.5, 7.5, "https://ai.google.dev/gemini-api/docs/pricing；付费档常设标价 $0.075/$1.50/$7.50（免费档限流且用于改进产品，不作按量价）；list-prices-nov2026-round1-2026-11-21.json"),
 ]
+METERED_PROMO_UNTIL = {
+    "google_ai_carbon_api": "2026-11-30",
+    "google_ai_argon_api": "2026-11-30",
+}
 
 # 精选图只画主流套餐 + 前沿相关点，避免 60 个点挤在一起；全量图画全部
 MAIN_PLANS = {"chatgpt_plus", "chatgpt_pro_20x", "claude_pro", "claude_max_20x", "claude_team", "cursor_ultra", "cursor_ultra_fast", "cursor_pro",
               "google_ai_pro_us",
               "supergrok_heavy", "supergrok", "kimi_allegretto_cn", "kimi_pro_cn", "glm_coding_pro_cn_new_peak", "glm_coding_pro_cn_new_mid", "glm_coding_pro_cn_new_offpeak", "glm_coding_pro_cn_old_peak", "glm_coding_pro_cn_old_mid", "glm_coding_pro_cn_old_offpeak",
-              "minimax_token_plus_cn", "minimax_token_plus_global", "aliyun_coding_pro_cn", "devin_max", "devin_pro", "droid_max",
+              "minimax_token_plus_cn", "minimax_token_plus_global", "aliyun_coding_pro_cn", "aliyun_token_lite_cn", "aliyun_token_pro_cn", "devin_max", "devin_pro", "droid_max",
               "mimo_token_lite_day", "mimo_token_standard_day", "mimo_token_pro_day", "mimo_token_max_day",
               "mimo_token_lite_night", "mimo_token_standard_night", "mimo_token_pro_night", "mimo_token_max_night"}
 MAIN_EXTRA = {
@@ -1693,6 +1783,19 @@ DATA_DATES = {
     ("opencode_go", "deepseek-v4.1-flash"): ("2026-10-30", "official"),
     ("opencode_go", "kimi-k3.1-pro"): ("2026-10-30", "official"),
     ("opencode_go", "minimax-m3.1-flash"): ("2026-10-30", "official"),
+    ("opencode_go", "hy4"): ("2026-11-05", "official"),
+    ("opencode_go", "qwen4-max"): ("2026-11-17", "official"),
+    ("opencode_go", "glm-5.3"): ("2026-11-18", "official"),
+    ("command_code_goat", "deepseek-v4.1-flash"): ("2026-10-31", "official"),
+    ("command_code_goat", "glm-5.3-flash"): ("2026-10-31", "official"),
+    ("command_code_goat", "ling-3.1-flash-1019"): ("2026-11-04", "official"),
+    ("command_code_goat", "deepseek-v4.1-flash-ultrafast"): ("2026-11-07", "official"),
+    ("command_code_goat", "muse-ember"): ("2026-11-10", "official"),
+    ("command_code_goat", "glm-5.3"): ("2026-11-13", "official"),
+    ("command_code_goat", "qwen4-max"): ("2026-11-17", "official"),
+    ("command_code_goat", "hy4-flash"): ("2026-11-17", "official"),
+    ("command_code_goat", "hy4"): ("2026-11-18", "official"),
+    ("aliyun_token_lite_cn", "deepseek-v4.1-flash"): ("2026-11-19", "sample"),
     ("minimax_m_plan_go_cn", "minimax-m3.1-flash-preview"): ("2026-10-01", "sample"),
     ("chatgpt_plus", "gpt-5.6-sol"): ("2026-07-30", "sample"),
     ("chatgpt_pro_20x", "gpt-5.6-sol"): ("2026-06-10~2026-09-06", "sample"),
@@ -1733,6 +1836,7 @@ DATA_DATES = {
     ("cursor_pro", "grok-4.6"): ("2026-08-27", "sample"),
     ("cursor_ultra", "claude-opus-5.5"): ("2026-09-14~2026-10-05", "sample"),
     ("kimi_allegretto_cn", "kimi-k3"): ("2026-10-27", "sample"),
+    ("kimi_allegro_cn", "kimi-k3"): ("2026-10-26~2026-11-02", "sample"),
     ("kimi_allegretto_cn", "kimi-k2.7-code"): ("2026-08-20", "sample"),
     ("aliyun_coding_pro_cn", "qwen3.7-plus"): ("2026-07~2026-08", "sample"),
     ("minimax_token_plus_cn", "minimax-m3"): ("2026-06-01", "official"),
@@ -1741,7 +1845,7 @@ DATA_DATES = {
     ("minimax_token_plus_global", "minimax-m3"): ("2026-06-01", "official"),
     ("minimax_token_max_global", "minimax-m3"): ("2026-06-01", "official"),
     ("minimax_token_ultra_global", "minimax-m3"): ("2026-06-01", "official"),
-    ("devin_pro", "swe-2"): ("2026-09-10", "official"),
+    ("devin_pro", "swe-2"): ("2026-11-12", "official"),
     # 按量 API 标价
     ("deepseek_v41_flash_offpeak", "deepseek-v4.1-flash"): ("2026-09-10", "official"),
     ("deepseek_v41_flash_peak", "deepseek-v4.1-flash"): ("2026-09-10", "official"),
@@ -1752,6 +1856,8 @@ DATA_DATES = {
     ("openai_sol_api", "gpt-5.6-sol"): ("2026-09-05", "official"),
     ("openai_terra_api", "gpt-5.6-terra"): ("2026-09-05", "official"),
     ("openai_luna_api", "gpt-5.6-luna"): ("2026-09-05", "official"),
+    ("openai_astra62_api", "gpt-6.2-astra"): ("2026-11-17", "official"),
+    ("openai_sol62_api", "gpt-6.2-sol"): ("2026-11-17", "official"),
     ("xai_grok46_api", "grok-4.6"): ("2026-09-05", "official"),
     ("xai_grok47_api", "grok-4.7"): ("2026-09-22", "official"),
     ("mimo_v26_pro_api", "mimo-v2.6-pro"): ("2026-09-22", "official"),
@@ -1761,9 +1867,14 @@ DATA_DATES = {
     ("anthropic_sonnet5_api", "claude-sonnet-5"): ("2026-09-05", "official"),
     ("anthropic_fable5_api", "claude-fable-5"): ("2026-09-05", "official"),
     ("anthropic_fable51_api", "claude-fable-5.1"): ("2026-09-13", "official"),
+    ("anthropic_fable52_api", "claude-fable-5.2"): ("2026-11-10", "official"),
     ("anthropic_opus55_api", "claude-opus-5.5"): ("2026-09-23", "official"),
     ("anthropic_sonnet55_api", "claude-sonnet-5.5"): ("2026-10-08", "official"),
     ("anthropic_haiku55_api", "claude-haiku-5.5"): ("2026-10-08", "official"),
+    ("google_ai_carbon_api", "gemini-4-carbon"): ("2026-11-10", "official"),
+    ("google_ai_neon_api", "gemini-4-neon"): ("2026-11-18", "official"),
+    ("google_ai_argon_api", "gemini-4-argon"): ("2026-10-15", "official"),
+    ("google_ai_hydrogen_api", "gemini-4-hydrogen"): ("2026-11-18", "official"),
     # 派生行里锚点不止一个、不能简单沿用 DERIVED 基准行的，显式给日期与锚点
     ("chatgpt_pro_10x", "gpt-5.6-sol"): ("2026-07-30~2026-10-30", "derived",
                                         "ChatGPT Plus · gpt-5.6-sol；官方 $100 档倍率 5x→10x 复核 2026-10-30"),
@@ -1791,7 +1902,6 @@ DATA_DATE_INHERIT = {
     ("claude_max_5x", "claude-opus-5"): ("claude_max_20x", "claude-opus-5"),
     ("cursor_pro_plus", "grok-4.6"): ("cursor_ultra", "grok-4.6"),
     ("kimi_moderato_cn", "kimi-k3"): ("kimi_allegretto_cn", "kimi-k3"),
-    ("kimi_allegro_cn", "kimi-k3"): ("kimi_allegretto_cn", "kimi-k3"),
     ("kimi_moderato_cn", "kimi-k2.7-code"): ("kimi_allegretto_cn", "kimi-k2.7-code"),
     ("kimi_andante_cn", "kimi-k2.7-code"): ("kimi_allegretto_cn", "kimi-k2.7-code"),
     ("kimi_allegro_cn", "kimi-k2.7-code"): ("kimi_allegretto_cn", "kimi-k2.7-code"),
@@ -1821,6 +1931,8 @@ def family_data_date(pid: str, model: str) -> str | None:
         return "2026-09-30"
     if pid == "command_code_goat":
         return "2026-09-30"
+    if pid.startswith("aliyun_token_"):
+        return "2026-11-16" if model == "qwen4-max" else "2026-11-09"
     return None
 
 
@@ -1865,7 +1977,9 @@ def workload_of(pid: str, billing: str, model: str = "") -> str:
     if (pid == "chatgpt_plus" and model in ("gpt-6-sol", "gpt-6-luna", "gpt-6.1-sol", "gpt-5.6-luna")) \
             or (pid in ("chatgpt_pro_10x", "chatgpt_pro_20x") and model == "gpt-5.6-luna"):
         return "standard"
-    if pid.startswith(("opencode_", "command_code_", "ollama_", "glm_coding_", "mimo_token_")):
+    if pid in ("kimi_allegro_cn", "kimi_max_cn", "kimi_ultra_cn") and model == "kimi-k3":
+        return "standard"
+    if pid.startswith(("opencode_", "command_code_", "ollama_", "glm_coding_", "mimo_token_", "aliyun_token_")):
         return "standard"
     return "measured"
 
@@ -1904,7 +2018,7 @@ def sig(value: float, digits: int = 8) -> float:
 def unmetered_row(pid, name, price, cur, model, conf, src, note) -> dict:
     return dict(plan_id=pid, plan_name=name, plan_name_en="", billing="subscription", price=price, currency=cur,
                 price_usd=round(price / USD_PER_CNY if cur == "CNY" else price, 2), served_model=model,
-                monthly_tokens="", monthly_yi="", real_usd_per_mtok=0, unmetered="true", promo_until=SWE2_PROMO["endDate"],
+                monthly_tokens="", monthly_yi="", real_usd_per_mtok=0, unmetered="true", promo_until=SWE2_PROMO["endDate"] or "",
                 confidence=conf, chart_tier="main" if is_main(pid, model) else "full", source=src, decision_note=note)
 
 
@@ -1949,7 +2063,7 @@ def main() -> None:
             default_note = f"标价 cached {cached}/in {inp}/out {out} × 项目统一标准负载 {STANDARD_MIX['cache']:.1%}/{STANDARD_MIX['input']:.2%}/{STANDARD_MIX['output']:.2%}"
         rows.append(dict(plan_id=pid, plan_name=name, plan_name_en="", billing="metered", price="", currency="USD", price_usd="",
                          served_model=model, monthly_tokens="", monthly_yi="", real_usd_per_mtok=sig(mix_price),
-                         unmetered="", promo_until="", confidence="high", chart_tier="main", source=src,
+                         unmetered="", promo_until=METERED_PROMO_UNTIL.get(pid, ""), confidence="high", chart_tier="main", source=src,
                          decision_note=METERED_NOTES.get(pid, default_note),
                          plan_gen=plan_gen_of(pid), workload=workload_of(pid, "metered", model)))
 

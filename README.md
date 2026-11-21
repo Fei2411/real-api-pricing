@@ -17,7 +17,7 @@ AI coding subscriptions sell a monthly fee, not a per-token price. This project 
 - The black line is the Pareto frontier: for every point on it, no other point is both cheaper and higher-scoring.
 - Subscription prices assume you use the whole allowance. Use half of it and your real price doubles.
 
-Snapshot: <!-- stat:snapshot -->2026-11-21<!-- /stat --> · <!-- stat:points_total -->346<!-- /stat --> plan × model points · [all charts, SVG / PNG, both languages](charts/README.md)
+Snapshot: <!-- stat:snapshot -->2026-11-21<!-- /stat --> · <!-- stat:points_total -->381<!-- /stat --> plan × model points · [all charts, SVG / PNG, both languages](charts/README.md)
 
 ## Query from the terminal
 
@@ -51,7 +51,7 @@ guides price, allowance and plan comparisons with this CLI. In Codex, invoke
 - **Confidence.** Every row is rated high, medium or low. High means a dashboard back-calculation, a controlled test or an official table. Medium means an official multiplier applied to a high-confidence anchor, or several consistent independent sources. Low means a single report or a cross-plan assumption. Derived values are never presented as measurements.
 - **One plan, several models.** Each model on a plan gets its own point. Those allowances are alternatives and do not add up.
 - **Scores** are copied from each leaderboard and never mixed across boards. Static charts use each model's highest archived configuration.
-- **Free during a promotion.** A model that a plan temporarily doesn't meter is drawn at ≈$0 on a dedicated slot at the right edge. There are <!-- stat:points_unmetered -->1<!-- /stat --> such points at the moment: SWE-2 on Devin Pro, until 2026-10-31.
+- **Unmetered in-plan models.** A model that a plan doesn't meter against its quota is drawn at ≈$0 on a dedicated slot at the right edge. There are <!-- stat:points_unmetered -->1<!-- /stat --> such points at the moment: SWE-2 in Devin Desktop & CLI on Devin Pro (announced permanent 2026-11-12; `docs.devin.ai/desktop/models` still lists 2026-11-30).
 
 Every adopted value, its evidence and the reason for the choice: [DECISIONS.md](DECISIONS.md) and the `decision_note` column of [adopted.csv](data/adopted.csv).
 
@@ -63,7 +63,7 @@ Each leaderboard gets its own chart, with its own scores and snapshot date. A mo
 
 [SVG](charts/en/pareto/pareto-aa-intelligence.svg) · [PNG](charts/en/pareto/pareto-aa-intelligence.png) · [中文 SVG](charts/zh/pareto/帕累托_AA智力榜.svg) · [中文 PNG](charts/zh/pareto/帕累托_AA智力榜.png) · chart shown at the top
 
-Artificial Analysis Intelligence Index v4.3. Scores are not comparable with earlier index versions: a lower number after the version change does not mean a model got worse. Rows marked [AA estimate] are Artificial Analysis's own estimates.
+Artificial Analysis Intelligence Index v5.0.1. Scores are not comparable with earlier index versions (such as v4.3): a lower number after the version change does not mean a model got worse. Rows marked [AA estimate] are Artificial Analysis's own estimates.
 
 ### AA Coding Agent
 
@@ -71,7 +71,7 @@ Artificial Analysis Intelligence Index v4.3. Scores are not comparable with earl
 
 ![AA Coding Agent](charts/en/pareto/pareto-aa-coding-agent.svg)
 
-Coding Agent Index v1.5. Each score belongs to a tested harness × model × effort configuration. Higher effort doesn't change the price per token, but it can change how many tokens a task uses.
+Coding Agent Index v2.1. Each score belongs to a tested harness × model × effort configuration. Higher effort doesn't change the price per token, but it can change how many tokens a task uses.
 
 ### Code Arena
 
@@ -123,7 +123,7 @@ Pass@1 on 113 tasks, official rows run on mini-swe-agent (snapshot 2026-09-03). 
 
 ### Real price
 
-All <!-- stat:points_priced -->345<!-- /stat --> priced subscription and API points on one $/MTok scale.
+All <!-- stat:points_priced -->380<!-- /stat --> priced subscription and API points on one $/MTok scale.
 
 [SVG](charts/en/overview/real-price-overview.svg) · [PNG](charts/en/overview/real-price-overview.png) · [Table](charts/en/overview/real-price-overview-table.txt) · [中文 SVG](charts/zh/overview/单价总览.svg) · [中文 PNG](charts/zh/overview/单价总览.png) · [中文表](charts/zh/overview/单价总览表.txt)
 
@@ -131,7 +131,7 @@ All <!-- stat:points_priced -->345<!-- /stat --> priced subscription and API poi
 
 ### Monthly allowance
 
-The <!-- stat:points_allowance -->324<!-- /stat --> subscription points with a monthly allowance, split into three bands by monthly fee in USD. Each band is ranked on its own. The undivided chart and a hybrid-scale view are in the [chart index](charts/README.md).
+The <!-- stat:points_allowance -->352<!-- /stat --> subscription points with a monthly allowance, split into three bands by monthly fee in USD. Each band is ranked on its own. The undivided chart and a hybrid-scale view are in the [chart index](charts/README.md).
 
 **$0–30** · [SVG](charts/en/overview/monthly-allowance-overview-fee-0-30-usd.svg) · [PNG](charts/en/overview/monthly-allowance-overview-fee-0-30-usd.png) · [Table](charts/en/overview/monthly-allowance-overview-fee-0-30-usd-table.txt) · [中文 SVG](charts/zh/overview/额度总览_月费0-30美元.svg) · [中文 PNG](charts/zh/overview/额度总览_月费0-30美元.png) · [中文表](charts/zh/overview/额度总览表_月费0-30美元.txt)
 
@@ -151,27 +151,27 @@ Chinese charts count tokens in 亿 (100 million): 77.37 亿 = 7.737 billion.
 
 | Points | Count |
 |---|---:|
-| All plan × model points | <!-- stat:points_total -->346<!-- /stat --> |
-| Subscriptions with a monthly allowance | <!-- stat:points_allowance -->324<!-- /stat --> |
+| All plan × model points | <!-- stat:points_total -->381<!-- /stat --> |
+| Subscriptions with a monthly allowance | <!-- stat:points_allowance -->352<!-- /stat --> |
 | Free during a promotion (≈$0) | <!-- stat:points_unmetered -->1<!-- /stat --> |
-| Metered APIs at list price | <!-- stat:points_metered -->21<!-- /stat --> |
+| Metered APIs at list price | <!-- stat:points_metered -->28<!-- /stat --> |
 
 | Leaderboard | Scored points |
 |---|---:|
-| AA Intelligence | <!-- stat:scored_aa_intelligence_index -->307<!-- /stat --> |
-| AA Coding Agent | <!-- stat:scored_aa_coding_agent_index -->125<!-- /stat --> |
-| Code Arena | <!-- stat:scored_arena_code -->290<!-- /stat --> |
-| Agent Arena | <!-- stat:scored_arena_agent_mode -->246<!-- /stat --> |
-| OpenDesign Arena | <!-- stat:scored_open_design_arena -->79<!-- /stat --> |
-| Terminal-Bench 4.0 | <!-- stat:scored_terminal_bench_4 -->153<!-- /stat --> |
-| Terminal-Bench 4.0 (AA) | <!-- stat:scored_aa_terminal_bench_4 -->292<!-- /stat --> |
-| DeepSWE v1.1 | <!-- stat:scored_deepswe_1_1 -->201<!-- /stat --> |
+| AA Intelligence | <!-- stat:scored_aa_intelligence_index -->170<!-- /stat --> |
+| AA Coding Agent | <!-- stat:scored_aa_coding_agent_index -->111<!-- /stat --> |
+| Code Arena | <!-- stat:scored_arena_code -->302<!-- /stat --> |
+| Agent Arena | <!-- stat:scored_arena_agent_mode -->258<!-- /stat --> |
+| OpenDesign Arena | <!-- stat:scored_open_design_arena -->87<!-- /stat --> |
+| Terminal-Bench 4.0 | <!-- stat:scored_terminal_bench_4 -->161<!-- /stat --> |
+| Terminal-Bench 4.0 (AA) | <!-- stat:scored_aa_terminal_bench_4 -->189<!-- /stat --> |
+| DeepSWE v1.1 | <!-- stat:scored_deepswe_1_1 -->213<!-- /stat --> |
 
-The largest plan families are Command Code GOAT (<!-- stat:plans_command_code_goat -->60<!-- /stat --> points), MiMo Token Plan (<!-- stat:plans_mimo_token -->32<!-- /stat -->), OpenCode Go (<!-- stat:plans_opencode_go -->28<!-- /stat -->), Droid Max (<!-- stat:plans_droid_max -->27<!-- /stat -->), Ollama (<!-- stat:plans_ollama -->22<!-- /stat -->) and Step Plan (<!-- stat:plans_step_plan -->12<!-- /stat -->).
+The largest plan families are Command Code GOAT (<!-- stat:plans_command_code_goat -->66<!-- /stat --> points), MiMo Token Plan (<!-- stat:plans_mimo_token -->32<!-- /stat -->), OpenCode Go (<!-- stat:plans_opencode_go -->30<!-- /stat -->), Droid Max (<!-- stat:plans_droid_max -->27<!-- /stat -->), Ollama (<!-- stat:plans_ollama -->22<!-- /stat -->) and Step Plan (<!-- stat:plans_step_plan -->12<!-- /stat -->).
 
 **Downloads:** [adopted values (CSV)](data/adopted.csv) · [computed points (CSV)](derived/points.csv) / [JSON](derived/points.json) · [data notes](data/README.md) · [dated evidence](data/research/)
 
-**Every benchmark configuration**, not just the highest per model: the [configuration archive](derived/benchmark-configurations.json) ([CSV](derived/benchmark-configurations.csv)) keeps all <!-- stat:configs_total -->556<!-- /stat --> records with their original labels, harness, effort, score intervals and task costs. The [plan-to-configuration mappings](derived/benchmark-points.json) ([CSV](derived/benchmark-points.csv)) hold <!-- stat:refs_total -->2985<!-- /stat --> explicit references. Unknown harnesses, efforts and intervals stay empty instead of being guessed. The [all-configuration interactive chart](charts/zh/pareto/帕累托交互图.html) (Chinese; download and open locally, needs network access for Plotly) lets you switch between configurations and effort levels.
+**Every benchmark configuration**, not just the highest per model: the [configuration archive](derived/benchmark-configurations.json) ([CSV](derived/benchmark-configurations.csv)) keeps all <!-- stat:configs_total -->448<!-- /stat --> records with their original labels, harness, effort, score intervals and task costs. The [plan-to-configuration mappings](derived/benchmark-points.json) ([CSV](derived/benchmark-points.csv)) hold <!-- stat:refs_total -->2328<!-- /stat --> explicit references. Unknown harnesses, efforts and intervals stay empty instead of being guessed. The [all-configuration interactive chart](charts/zh/pareto/帕累托交互图.html) (Chinese; download and open locally, needs network access for Plotly) lets you switch between configurations and effort levels.
 
 ## Known limitations
 

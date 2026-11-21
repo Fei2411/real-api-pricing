@@ -160,6 +160,7 @@ def plan_name(row: dict, language: str) -> str:
         if row["plan_id"].startswith("kimi_"):
             name = name.replace("Kimi CN ", "Kimi CN CNY ")
         name = re.sub(r"\(促销至 (\d+/\d+)\)", r"(promo until \1)", name)
+        name = re.sub(r"\(导入价至 (\d+/\d+)\)", r"(intro until \1)", name)
     return name
 
 

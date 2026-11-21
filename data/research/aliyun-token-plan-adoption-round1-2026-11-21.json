@@ -1,0 +1,149 @@
+{
+  "collectedAt": "2026-11-21",
+  "kind": "official-credit-plan-and-price-verification",
+  "adoptionStatus": "adopted 2026-11-21 (aliyun_token_lite_cn, aliyun_token_essential_cn, aliyun_token_standard_cn, aliyun_token_pro_cn)",
+  "relatedIssues": [
+    232,
+    240,
+    247
+  ],
+  "sources": [
+    "https://platform.qianwenai.com/docs/token-plan/personal/token-plan-personal-overview",
+    "https://platform.qianwenai.com/docs/token-plan/token-plan-usage-quota",
+    "https://platform.qianwenai.com/docs/developer-guides/getting-started/model-prices",
+    "https://help.aliyun.com/zh/model-studio/token-plan-personal-overview"
+  ],
+  "creditToCnyVerification": {
+    "creditsPerCny": 100,
+    "cnyPerCredit": 0.01,
+    "officialDocExample": {
+      "source": "https://platform.qianwenai.com/docs/token-plan/token-plan-usage-quota#Credits-消耗规则",
+      "model": "qwen3.6-plus (≤256K: cached ¥0.20 / input ¥2.0 / output ¥12.0 per MTok)",
+      "tokens": {
+        "input": 8349,
+        "cached": 40794,
+        "output": 573
+      },
+      "creditsShown": {
+        "input": 1.67,
+        "cached": 0.82,
+        "output": 0.69,
+        "totalApprox": 3.18
+      },
+      "expectedCny": 0.0317328,
+      "expectedCreditsAt100PerCny": 3.17328
+    },
+    "communityTelemetryLoopClosure": {
+      "issue": 247,
+      "evidence": "data/research/mamaruo-qwen-tokenplan-lite-deepseek-v41-flash-1017-2026-11-19.json",
+      "model": "deepseek-v4.1-flash-1017 (busy 08:00-22:00 UTC+8: cached ¥0.04 / input ¥2.0 / output ¥8.0 per MTok)",
+      "tokens": {
+        "freshInput": 479220,
+        "cacheRead": 7354112,
+        "output": 53333,
+        "total": 7886665
+      },
+      "expectedCny": 1.67926848,
+      "panelDeltaPctOf20000": 0.83963424,
+      "panelDeltaCredits": 167.926848
+    }
+  },
+  "tiersCn": [
+    {
+      "planId": "aliyun_token_lite_cn",
+      "name": "阿里云百炼 Token Plan Lite (¥39)",
+      "cnyPerMonth": 39,
+      "newUserPromoCnyUntil2026-11-30": 19.5,
+      "intlUsd": 6,
+      "monthlyCredits": 20000,
+      "worthCny": 200
+    },
+    {
+      "planId": "aliyun_token_essential_cn",
+      "name": "阿里云百炼 Token Plan Essential (¥79)",
+      "cnyPerMonth": 79,
+      "newUserPromoCnyUntil2026-11-30": 39.5,
+      "intlUsd": 10,
+      "monthlyCredits": 45000,
+      "worthCny": 450
+    },
+    {
+      "planId": "aliyun_token_standard_cn",
+      "name": "阿里云百炼 Token Plan Standard (¥139)",
+      "cnyPerMonth": 139,
+      "intlUsd": 18,
+      "monthlyCredits": 80000,
+      "worthCny": 800
+    },
+    {
+      "planId": "aliyun_token_pro_cn",
+      "name": "阿里云百炼 Token Plan Pro (¥312)",
+      "cnyPerMonth": 312,
+      "intlUsd": 43,
+      "monthlyCredits": 200000,
+      "worthCny": 2000
+    }
+  ],
+  "adoptedModelsCnyPerMTok": [
+    {
+      "model": "qwen4-max",
+      "cachedInput": 0.5,
+      "input": 10.0,
+      "output": 30.0,
+      "explicitCacheWrite": 12.5,
+      "note": "GA 旗舰，不分区间；隐式/显式缓存命中均为 ¥0.5/MTok"
+    },
+    {
+      "model": "qwen3.8-max",
+      "cachedInput": 1.5,
+      "input": 12.0,
+      "output": 36.0,
+      "explicitCacheWrite": 15.0,
+      "limitedTimeNightFactor": 0.4,
+      "note": "不分区间；隐式缓存命中 ¥1.5/MTok（显式命中 ¥1.0）；官方标「限时夜间折扣」22:00-08:00 享 4 折无截止日，按临时活动规则留注不入主值"
+    },
+    {
+      "model": "qwen3.8-flash",
+      "cachedInput": 0.1,
+      "input": 0.8,
+      "output": 2.7,
+      "explicitCacheWrite": 1.25,
+      "limitedTimeNightFactor": 0.4,
+      "note": "不分区间；限时夜间 4 折无截止日留注"
+    },
+    {
+      "model": "deepseek-v4.1-flash",
+      "cachedInput": 0.04,
+      "input": 2.0,
+      "output": 8.0,
+      "offPeakList": {
+        "cachedInput": 0.02,
+        "input": 1.0,
+        "output": 4.0
+      },
+      "limitedTimeNightFactor": 0.5,
+      "note": "个人版同时支持 deepseek-v4.1-flash 与 deepseek-v4.1-flash-1017，忙时（08:00-22:00）三段价同为 ¥0.04/¥2/¥8，已由 #247 实测逐位闭环；闲时标价减半且另有无限时截止日的夜间 5 折说明，留注不叠加"
+    },
+    {
+      "model": "glm-5.3",
+      "cachedInput": 2.0,
+      "input": 8.0,
+      "output": 28.0,
+      "note": "不分区间；个人版支持清单在列"
+    }
+  ],
+  "excludedModels": [
+    {
+      "model": "qwen4-max-preview",
+      "reason": "预览期 2026-11-11 至 2026-11-25 24:00 UTC+8，结束后下线；仅限 Token Plan 无独立按量标价，且 #240 样本处于预览 2 折×夜间 4 折=0.8 折叠加态"
+    },
+    {
+      "model": "auto",
+      "reason": "动态路由模型，无固定单模型身份与单价"
+    },
+    {
+      "model": "decision-model-preview",
+      "reason": "决策辅助预览模型，限时免费"
+    }
+  ]
+}

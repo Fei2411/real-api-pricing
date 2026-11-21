@@ -1,0 +1,153 @@
+{
+  "recordedAt": "2026-11-20",
+  "capturedAtUtc": "2026-11-20T01:40:00Z",
+  "sourceType": "github_issue_plus_official_docs",
+  "adoptionStatus": "adopted 2026-11-21 as 1 Credit = ¥0.01 billing loop-closure anchor for aliyun_token_*_cn (high confidence on aliyun_token_lite_cn × deepseek-v4.1-flash; 20,000 Credits official pool ÷ standard-workload busy CNY rate, not 0.84% sample-mix extrapolation)",
+  "recommendAdopt": true,
+  "pendingMaintainerConfirmation": false,
+  "grade": "High",
+  "gradeNote": "High 是因为同窗有 total/fresh input/cache/output 与订阅月额度 credits%（厂商遥测+额度日志交叉，并与官方忙时标价逐位对上）。无截图。High 不等于可写入 adopted。",
+  "issue": 247,
+  "url": "https://github.com/Fei2411/real-api-pricing/issues/247",
+  "author": "mamaruo",
+  "createdAt": "2026-11-19T17:51:17Z",
+  "updatedAt": "2026-11-19T18:45:26Z",
+  "planOrModel": "千问 AI 平台 Token Plan 个人版 Lite × deepseek-v4.1-flash-1017（国内站 platform.qianwenai.com，套餐专属 Key sk-sp- 作为 BYOK 接入 Qoder）。与 OpenCode Go / Command Code GOAT 的 deepseek-v4.1-flash 不是同一产品。",
+  "price": {
+    "listCnyPerMonth": 39,
+    "authorFirstMonthPromoCny": 19.5,
+    "officialPageToday": "https://platform.qianwenai.com/docs/token-plan/personal/token-plan-personal-overview",
+    "officialPageStillSaysNewUserPromo": true,
+    "promoEndDateOnPageToday": null,
+    "priorArchivePromoUntil": "2026-11-30（仅见 aliyun-token-plan-credits-2026-11-11.json，今日概览页未复述截止日期）"
+  },
+  "officialCreditsReconfirmed2026-11-20": {
+    "lite": {
+      "cny": 39,
+      "credits": 20000,
+      "newUserPromoCny": 19.5
+    },
+    "essential": {
+      "cny": 79,
+      "credits": 45000,
+      "newUserPromoCny": 39.5
+    },
+    "standard": {
+      "cny": 139,
+      "credits": 80000
+    },
+    "pro": {
+      "cny": 312,
+      "credits": 200000
+    },
+    "addon": {
+      "cny": 100,
+      "credits": 20000,
+      "maxHeld": 5
+    },
+    "unchangedVs": "data/research/aliyun-token-plan-credits-2026-11-11.json 与 issue #232",
+    "doNotRecount": true
+  },
+  "window": {
+    "start": "2026-11-19 18:00",
+    "end": "2026-11-19 22:00",
+    "timezone": "Asia/Taipei / UTC+8",
+    "alignedHourBuckets": [
+      "18-19",
+      "19-20",
+      "20-21",
+      "21-22"
+    ],
+    "authorBoundaryNotes": "18:00 前次请求 17:51:38、下次 18:05:22；22:00 前次 20:51:20、下次 22:49:36。credit 在 17:51:32–18:12:01 恒为 572.83，在 20:57:01–22:47:02 恒为 740.76。",
+    "busyHoursOfficial": "官方模型页：错峰（闲时）为 UTC+8 22:00–次日 08:00，其余为忙时。https://platform.qianwenai.com/docs/models/deepseek-v4-1-flash 对 deepseek-v4.1-flash-1017 同述。故本窗口 18:00–22:00 周四属忙时。",
+    "nightDiscountOfficial": "个人版概览：该模型夜间 22:00–次日 08:00 享 5 折（不是 4 折）。4 折适用于 qwen3.8-max / qwen3.8-flash。作者写「未命中夜间 4 折」用词不准，但窗口确实避开了夜间折扣与闲时。",
+    "weekday": "Thursday"
+  },
+  "quota": {
+    "kind": "subscription-month credits, not 5h/week",
+    "officialMonthlyCredits": 20000,
+    "startUsedPct": 2.86414372,
+    "endUsedPct": 3.70377796,
+    "startCredits": 572.83,
+    "endCredits": 740.76,
+    "deltaCredits": 167.93,
+    "deltaPct": 0.83963424,
+    "arithmeticHolds": "2.86414372%×20000=572.828744；3.70377796%×20000=740.755592；差 167.926848≈167.93"
+  },
+  "tokens": {
+    "total": 7886665,
+    "freshInput": 479220,
+    "cacheRead": 7354112,
+    "cacheWrite": {
+      "authorRecorded": 0,
+      "meaning": "面板未单列，不要把 0 当成实测写入"
+    },
+    "output": 53333,
+    "inputIncludesCache": true,
+    "freshDefinition": "fresh = input − cached",
+    "outputReasoningUnknown": true,
+    "sumHolds": "479220+7354112+53333=7886665",
+    "mix": {
+      "cache": 0.932472,
+      "freshInput": 0.060763,
+      "output": 0.006763
+    },
+    "unit": "tokens"
+  },
+  "crossCheck": {
+    "officialBusyListCnyPerMTok": {
+      "freshInput": 2,
+      "cacheRead": 0.04,
+      "output": 8,
+      "source": "https://platform.qianwenai.com/docs/developer-guides/getting-started/model-prices 与模型页"
+    },
+    "worthCny": 1.67926848,
+    "authorStated": "¥1.68 ≈ 167.93 Credits（1 Credit ≈ ¥0.01）",
+    "creditsTimes0_01": 1.6793,
+    "match": true,
+    "creditToCnyOfficialSentenceFound": false,
+    "note": "1 Credit ≈ ¥0.01 由本样本与官方忙时标价逐位吻合支持，今日所读概览/用量页没有单独写出该换算句，不能当成另一条官方表。"
+  },
+  "measurementTools": {
+    "vendorTelemetry": "zeldaEasy.bailian-telemetry.platform-model.getModelMonitorDataWithOss via bl console call",
+    "local": "Qoder JSONL for endpoints; 5-minute credit log CSV",
+    "panelUrl": "https://platform.qianwenai.com/home/analytics/token-plan/individual",
+    "screenshot": false,
+    "authorSaysMatchesPanel": true
+  },
+  "trialComputationNotAdopted": {
+    "warn": "不是打满样本（只用了月 credits 的 0.8396%）。禁止用 7,886,665÷0.83963424% 外推月 token。下列只是官方 20,000 Credits 按项目标准负载与忙时标价的试算，未写入 adopted。",
+    "standardMix": {
+      "cache": 0.97,
+      "input": 0.025,
+      "output": 0.005
+    },
+    "busyListCnyPerMTok": 0.1288,
+    "ifOneCreditEquals0_01Cny": {
+      "monthlyCreditsWorthCny": 200,
+      "monthlyTokens": 1552795031,
+      "monthlyYi": 15.528,
+      "note": "round(200/0.1288)=1,552,795,031 tokens。闲时或夜间 5 折会改变分母，不能把忙时试算当成全天有效月池。"
+    },
+    "sampleMixExtrapolatedTokens": 939408000,
+    "doNotUseSampleMixExtrapolation": true
+  },
+  "notAdoptedBecause": [
+    "不是打满样本，只用了月 credits 约 0.84%。禁止按本窗 token÷credits% 外推月池。",
+    "adopted.csv 没有「千问 Token Plan 个人版 Lite」行；官方主值仍是 Credits 表，token 需按 conventions 负载折算并经维护者确认。",
+    "官方 Credits 档位（Lite ¥39 / 20,000 等）已在 #232 / aliyun-token-plan-credits-2026-11-11.json，今日复核不改，不重计。",
+    "价格有首月 ¥19.5 与目录价 ¥39；今日概览页仍写新用户限时价，但未复述截止日期。",
+    "无截图；数据来自作者复述的官方遥测与额度日志。交叉价格吻合提高可信度，仍不是维护者面板截图。",
+    "effort 未显式指定；output 是否含 reasoning 未知；cache write 未单列。",
+    "不与 OpenCode Go / Command Code GOAT 的 deepseek-v4.1-flash 行拼接。"
+  ],
+  "recommendation": "暂不采用；建议作为 High 实测样本归档，并继续把官方 Credits 表列为待维护者确认的新套餐，不新开 adopted 行。",
+  "related": [
+    "#247",
+    "#240",
+    "#232",
+    "aliyun-token-plan-credits-2026-11-11.json",
+    "mamaruo-qwen-tokenplan-lite-qwen4-max-preview-2026-11-16.json"
+  ],
+  "doNotReplyToIssue": true
+}

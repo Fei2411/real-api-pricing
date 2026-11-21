@@ -24,6 +24,7 @@ OPEN_DESIGN_MODELS = {
     "Kimi K3": "kimi-k3",
 }
 EFFORT = re.compile(r"(?<![a-z0-9])(xhigh|high|medium|low|max|none|thinking)(?![a-z0-9])", re.I)
+MODEL_NAME_MAX = re.compile(r"\bqwen\s*\d+(?:[.-]\d+)?[\s-]+max\b", re.I)
 
 # 我们自己的 RSC 抽取器（extract_all.py，只在 gitignore 的 _build/ 下，未入库）把一个
 # Python dict repr 拼进了 round4 的三条 variantLabel；AA 站上的原文到 " (max)" 就结束。
@@ -57,8 +58,15 @@ def configuration(record, archive):
     model = record.get("model") or (OPEN_DESIGN_MODELS.get(label) if board.startswith("open_design_arena") else None)
     identity = [board, model, label, record.get("checkedAt"), archive]
     cid = board + ":" + hashlib.sha256(json.dumps(identity).encode()).hexdigest()[:16]
-    effort = EFFORT.search(label)
-    declared = params.get("reasoning_effort")
+    effort_hits = EFFORT.findall(MODEL_NAME_MAX.sub("qwen", label))
+    if "reasoning_effort" in params:
+        declared = params["reasoning_effort"]
+    elif "reasoningEffort" in secondary:
+        declared = secondary["reasoningEffort"]
+    elif "effort" in secondary:
+        declared = secondary["effort"]
+    else:
+        declared = effort_hits[-1] if effort_hits else None
     harness = secondary.get("agentHarness")
     if harness is None and "codex-harness" in label.lower():
         harness = "Codex"
@@ -69,7 +77,7 @@ def configuration(record, archive):
         configuration_id=cid, board=board, model=model,
         variant=label + (" [AA estimate]" if estimated else "") + (" [vendor self-report]" if self_reported else ""),
         score_is_estimated=estimated, score_is_self_reported=self_reported,
-        agent_harness=harness, reasoning_effort=str(declared).lower() if declared else (effort.group(1).lower() if effort else None),
+        agent_harness=harness, reasoning_effort=str(declared).lower() if declared else None,
         service_mode={"cursor cli - composer 2.5 fast": "fast", "cursor cli - composer 2.5": "standard"}.get(label.lower())
                      if record["model"] == "composer-2.5" else None,
         score=record["score"], score_low=record["score"] - minus if minus is not None else None,

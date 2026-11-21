@@ -262,22 +262,23 @@ test("empty results succeed in JSON, CSV, and table without mixing diagnostics i
 });
 
 test("show returns one complete point and all original mappings, optionally for one board", () => {
-  const full = json<ShowRow>(["show", first.id]);
+  const target = data.points.find((p) => data.mappings.some((m) => m.point_id === p.id && m.board === board))!;
+  const full = json<ShowRow>(["show", target.id]);
   assert.equal(full.meta.command, "show");
   assert.equal(full.meta.view, null);
   assert.equal(full.meta.total, 1);
-  assert.equal(full.rows[0]!.point.id, first.id);
+  assert.equal(full.rows[0]!.point.id, target.id);
   assert.deepEqual(full.rows[0]!.benchmarks.map((m) => m.configuration_id).sort(),
-    data.mappings.filter((m) => m.point_id === first.id).map((m) => m.configuration_id).sort());
-  const selected = json<ShowRow>(["show", first.id, "--board", board]);
+    data.mappings.filter((m) => m.point_id === target.id).map((m) => m.configuration_id).sort());
+  const selected = json<ShowRow>(["show", target.id, "--board", board]);
   assert.equal(selected.meta.board, board);
   assert.equal(selected.meta.boardSnapshot, data.boards[board]!.snapshot);
   assert.ok(selected.rows[0]!.benchmarks.every((m) => m.board === board));
-  const result = run(["show", first.id, "--board", board, "--format", "csv"]);
+  const result = run(["show", target.id, "--board", board, "--format", "csv"]);
   assert.equal(result.status, 0, result.stderr);
   const rows = parse(result.stdout, { columns: true }) as Record<string, string>[];
   assert.equal(rows.length, selected.rows[0]!.benchmarks.length);
-  assert.ok(rows.every((r) => r.point_id === first.id && r.board === board));
+  assert.ok(rows.every((r) => r.point_id === target.id && r.board === board));
   assert.ok(rows.every((r) => JSON.parse(r.benchmark_json!).configuration_id === r.configuration_id));
   assert.match(result.stderr, /exported[ _]rows:\s*\d+/i);
 });

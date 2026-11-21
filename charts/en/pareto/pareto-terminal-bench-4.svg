@@ -302,7 +302,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0058917104" data-score="35.76" data-x="963.351" data-y="487.229" transform="translate(963.351 487.229)"><title>GLM 5.3 Flash · OpenCode Go · $0.00589/MTok · 35.76 · mediumClaude Code - GLM-5.3-Flash (none) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0F766E" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.20618557" data-score="41.82" data-x="466.211" data-y="437.913" transform="translate(466.211 437.913)"><title>GLM 5.3 · OpenCode Go · $0.20619/MTok · 41.82 · mediumClaude Code - GLM-5.3 (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.01546073" data-score="41.82" data-x="828.446" data-y="437.913" transform="translate(828.446 437.913)"><title>GLM 5.3 · OpenCode Go · $0.01546/MTok · 41.82 · mediumClaude Code - GLM-5.3 (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0F766E" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="true" data-price="0.00096599691" data-score="42.3" data-x="1216.189" data-y="434.007" transform="translate(1216.189 434.007)"><title>DeepSeek V4.1 Flash · OpenCode Go · $0.00097/MTok · 42.3 · mediumClaude Code - DeepSeek V4.1 Flash 1017 (max) - self-reported [vendor self-report] · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel. Vendor self-reported score, not an official leaderboard run.</title>
@@ -333,7 +333,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.16129032" data-score="26.97" data-x="500.550" data-y="558.761" transform="translate(500.550 558.761)"><title>Qwen3.8 Max 0902 · Command Code GOAT · $0.16129/MTok · 26.97 · mediumClaude Code - Qwen3.8-Max-0902 (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#DBA6FA" opacity=".68" stroke="#9571AA" stroke-width=".9"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.15455951" data-score="41.82" data-x="506.511" data-y="437.913" transform="translate(506.511 437.913)"><title>GLM 5.3 · Command Code GOAT · $0.15456/MTok · 41.82 · mediumClaude Code - GLM-5.3 (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.044169611" data-score="41.82" data-x="681.658" data-y="437.913" transform="translate(681.658 437.913)"><title>GLM 5.3 · Command Code GOAT · $0.04417/MTok · 41.82 · mediumClaude Code - GLM-5.3 (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#DBA6FA" opacity=".68" stroke="#9571AA" stroke-width=".9"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.099009901" data-score="14.55" data-x="568.787" data-y="659.834" transform="translate(568.787 659.834)"><title>Muse Spark 1.3 · Command Code GOAT · $0.09901/MTok · 14.55 · mediumMuse Code - Muse Spark 1.3 (xhigh) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
@@ -368,6 +368,30 @@
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.011783282" data-score="35.76" data-x="866.427" data-y="487.229" transform="translate(866.427 487.229)"><title>GLM 5.3 Flash · Ollama Max · $0.01178/MTok · 35.76 · mediumClaude Code - GLM-5.3-Flash (none) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#FC8EA7" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0037051233" data-score="42.3" data-x="1028.210" data-y="434.007" transform="translate(1028.210 434.007)"><title>DeepSeek V4.1 Flash · Alibaba Cloud Token Plan Lite (¥39) · $0.00371/MTok · 42.3 · highClaude Code - DeepSeek V4.1 Flash 1017 (max) - self-reported [vendor self-report] · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel. Vendor self-reported score, not an official leaderboard run.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.06560223" data-score="41.82" data-x="626.344" data-y="437.913" transform="translate(626.344 437.913)"><title>GLM 5.3 · Alibaba Cloud Token Plan Lite (¥39) · $0.0656/MTok · 41.82 · mediumClaude Code - GLM-5.3 (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0033356666" data-score="42.3" data-x="1042.899" data-y="434.007" transform="translate(1042.899 434.007)"><title>DeepSeek V4.1 Flash · Alibaba Cloud Token Plan Essential (¥79) · $0.00334/MTok · 42.3 · mediumClaude Code - DeepSeek V4.1 Flash 1017 (max) - self-reported [vendor self-report] · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel. Vendor self-reported score, not an official leaderboard run.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.059038257" data-score="41.82" data-x="641.085" data-y="437.913" transform="translate(641.085 437.913)"><title>GLM 5.3 · Alibaba Cloud Token Plan Essential (¥79) · $0.05904/MTok · 41.82 · mediumClaude Code - GLM-5.3 (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0033013599" data-score="42.3" data-x="1044.344" data-y="434.007" transform="translate(1044.344 434.007)"><title>DeepSeek V4.1 Flash · Alibaba Cloud Token Plan Standard (¥139) · $0.0033/MTok · 42.3 · mediumClaude Code - DeepSeek V4.1 Flash 1017 (max) - self-reported [vendor self-report] · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel. Vendor self-reported score, not an official leaderboard run.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.058436611" data-score="41.82" data-x="642.518" data-y="437.913" transform="translate(642.518 437.913)"><title>GLM 5.3 · Alibaba Cloud Token Plan Standard (¥139) · $0.05844/MTok · 41.82 · mediumClaude Code - GLM-5.3 (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0029640987" data-score="42.3" data-x="1059.413" data-y="434.007" transform="translate(1059.413 434.007)"><title>DeepSeek V4.1 Flash · Alibaba Cloud Token Plan Pro (¥312) · $0.00296/MTok · 42.3 · mediumClaude Code - DeepSeek V4.1 Flash 1017 (max) - self-reported [vendor self-report] · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel. Vendor self-reported score, not an official leaderboard run.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.052469818" data-score="41.82" data-x="657.578" data-y="437.913" transform="translate(657.578 437.913)"><title>GLM 5.3 · Alibaba Cloud Token Plan Pro (¥312) · $0.05247/MTok · 41.82 · mediumClaude Code - GLM-5.3 (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.016785564" data-score="21.52" data-x="816.949" data-y="603.113" transform="translate(816.949 603.113)"><title>GPT 5.6 Terra · Plus · $0.01679/MTok · 21.52 · mediumCodex - GPT-5.6 Terra (max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
@@ -472,7 +496,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0059382423" data-score="42.3" data-x="962.251" data-y="434.007" transform="translate(962.251 434.007)"><title>DeepSeek V4.1 Flash · Droid Max · $0.00594/MTok · 42.3 · mediumClaude Code - DeepSeek V4.1 Flash 1017 (max) - self-reported [vendor self-report] · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel. Vendor self-reported score, not an official leaderboard run.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0A0ABF" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="true" data-price="0.0" data-score="27.3" data-x="1316.000" data-y="556.076" transform="translate(1316.000 556.076)"><title>SWE-2 · Devin Pro · promo until Oct 31 · ≈$0/MTok · 27.3 · mediumDevin CLI - SWE-2 (best effort) [vendor self-report] · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel. Vendor self-reported score, not an official leaderboard run.</title>
+<g class="point" data-billing="subscription" data-frontier="true" data-price="0.0" data-score="27.3" data-x="1316.000" data-y="556.076" transform="translate(1316.000 556.076)"><title>SWE-2 · Devin Pro · ≈$0/MTok · 27.3 · mediumDevin CLI - SWE-2 (best effort) [vendor self-report] · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel. Vendor self-reported score, not an official leaderboard run.</title>
 <rect x="-11" y="-11" width="22" height="22" rx="6" fill="#FFF" stroke="#A1A1AA" stroke-width="1.35"/>
 <path transform="translate(-6.51 -7.63) scale(0.1327)" d="M0 38.6518V14.8349C7.06768e-06 13.7882 0.545676 12.821 1.43146 12.2977L21.5811 0.392519C22.4669 -0.13084 23.5583 -0.13084 24.444 0.392519L44.5937 12.2977C45.4795 12.821 46.0252 13.7882 46.0252 14.835V26.9983C46.1136 31.0401 48.201 34.9385 51.8723 37.1076C55.5435 39.2767 59.8863 39.1775 63.3509 37.2349L73.6442 31.1533C74.53 30.6299 75.6213 30.6299 76.5071 31.1533L96.6568 43.0584C97.5426 43.5818 98.0882 44.549 98.0882 45.5957V69.406C98.0882 70.4527 97.5426 71.4199 96.6568 71.9433L76.5071 83.8485C75.6213 84.3718 74.53 84.3718 73.6442 83.8485L63.4342 77.816C59.9562 75.8284 55.5738 75.7095 51.8732 77.8959C48.202 80.065 46.1146 83.9633 46.0262 88.005V100.165C46.0262 101.212 45.4805 102.179 44.5947 102.702L24.445 114.607C23.5592 115.131 22.4679 115.131 21.5821 114.607L1.43243 102.702C0.546645 102.179 0.000975341 101.212 0.000975341 100.165V76.3547C0.000982408 75.308 0.546652 74.3408 1.43244 73.8175L21.5821 61.9123C22.4679 61.3889 23.5592 61.3889 24.445 61.9123L34.7616 68.0077C38.2221 69.9367 42.5526 70.0305 46.215 67.8666C49.9155 65.6802 52.0061 61.7367 52.063 57.6605C51.9747 53.6187 49.8872 49.3025 46.216 47.1334C42.5447 44.9643 38.202 45.0635 34.7374 47.0061L24.3967 53.1502C23.5071 53.6788 22.4087 53.6783 21.5196 53.1489L1.42323 41.1841C0.542079 40.6595 -7.06754e-06 39.695 0 38.6518Z" fill="#A1A1AA" opacity="1.0"/>
 </g>
@@ -536,8 +560,8 @@
 <g class="front-label" data-model="swe-2">
 <path d="M1330.775,558.662Q1330.775,570.076 1396.000,570.076" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
 <text x="1390.000" y="583.076" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Devin CLI · SWE-2 [self-reported]</text>
-<text x="1390.000" y="603.076" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Devin Pro · promo until Oct 31</text>
-<text x="1390.000" y="623.076" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">≈$0 · promo until 10/31, unmetered</text>
+<text x="1390.000" y="603.076" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Devin Pro</text>
+<text x="1390.000" y="623.076" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">≈$0 · unmetered</text>
 </g>
 <rect x="57" y="826" width="8" height="8" fill="#16A34A"/>
 <text x="74.000" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >OpenAI</text>
@@ -549,28 +573,30 @@
 <text x="342.200" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Cursor</text>
 <rect x="409.96" y="826" width="8" height="8" fill="#1E1E1E"/>
 <text x="426.960" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >GLM</text>
-<rect x="473.84" y="826" width="8" height="8" fill="#0F766E"/>
-<text x="490.840" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >OpenCode</text>
-<rect x="572.52" y="826" width="8" height="8" fill="#DBA6FA"/>
-<text x="589.520" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Command Code</text>
-<rect x="699.04" y="826" width="8" height="8" fill="#FC8EA7"/>
-<text x="716.040" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Ollama</text>
-<rect x="783.8" y="826" width="8" height="8" fill="#4D6BFE"/>
-<text x="800.800" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >DeepSeek</text>
-<rect x="882.4799999999999" y="826" width="8" height="8" fill="#84CC16"/>
-<text x="899.480" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Google</text>
-<path transform="translate(966.78 824.77) scale(0.0910)" d="M0 38.6518V14.8349C7.06768e-06 13.7882 0.545676 12.821 1.43146 12.2977L21.5811 0.392519C22.4669 -0.13084 23.5583 -0.13084 24.444 0.392519L44.5937 12.2977C45.4795 12.821 46.0252 13.7882 46.0252 14.835V26.9983C46.1136 31.0401 48.201 34.9385 51.8723 37.1076C55.5435 39.2767 59.8863 39.1775 63.3509 37.2349L73.6442 31.1533C74.53 30.6299 75.6213 30.6299 76.5071 31.1533L96.6568 43.0584C97.5426 43.5818 98.0882 44.549 98.0882 45.5957V69.406C98.0882 70.4527 97.5426 71.4199 96.6568 71.9433L76.5071 83.8485C75.6213 84.3718 74.53 84.3718 73.6442 83.8485L63.4342 77.816C59.9562 75.8284 55.5738 75.7095 51.8732 77.8959C48.202 80.065 46.1146 83.9633 46.0262 88.005V100.165C46.0262 101.212 45.4805 102.179 44.5947 102.702L24.445 114.607C23.5592 115.131 22.4679 115.131 21.5821 114.607L1.43243 102.702C0.546645 102.179 0.000975341 101.212 0.000975341 100.165V76.3547C0.000982408 75.308 0.546652 74.3408 1.43244 73.8175L21.5821 61.9123C22.4679 61.3889 23.5592 61.3889 24.445 61.9123L34.7616 68.0077C38.2221 69.9367 42.5526 70.0305 46.215 67.8666C49.9155 65.6802 52.0061 61.7367 52.063 57.6605C51.9747 53.6187 49.8872 49.3025 46.216 47.1334C42.5447 44.9643 38.202 45.0635 34.7374 47.0061L24.3967 53.1502C23.5071 53.6788 22.4087 53.6783 21.5196 53.1489L1.42323 41.1841C0.542079 40.6595 -7.06754e-06 39.695 0 38.6518Z" fill="#A1A1AA" opacity="1.0"/>
-<text x="984.240" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Devin</text>
-<rect x="1045.04" y="826" width="8" height="8" fill="#0A0ABF"/>
-<text x="1062.040" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Factory</text>
-<path d="M1145.76 830h22" stroke="#303630" stroke-width="1.65"/>
-<text x="1175.760" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Pareto frontier</text>
+<rect x="473.84" y="826" width="8" height="8" fill="#C0142F"/>
+<text x="490.840" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Alibaba</text>
+<rect x="565.56" y="826" width="8" height="8" fill="#0F766E"/>
+<text x="582.560" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >OpenCode</text>
+<rect x="664.2399999999999" y="826" width="8" height="8" fill="#DBA6FA"/>
+<text x="681.240" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Command Code</text>
+<rect x="790.7599999999999" y="826" width="8" height="8" fill="#FC8EA7"/>
+<text x="807.760" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Ollama</text>
+<rect x="875.5199999999999" y="826" width="8" height="8" fill="#4D6BFE"/>
+<text x="892.520" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >DeepSeek</text>
+<rect x="974.1999999999998" y="826" width="8" height="8" fill="#84CC16"/>
+<text x="991.200" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Google</text>
+<path transform="translate(1058.50 824.77) scale(0.0910)" d="M0 38.6518V14.8349C7.06768e-06 13.7882 0.545676 12.821 1.43146 12.2977L21.5811 0.392519C22.4669 -0.13084 23.5583 -0.13084 24.444 0.392519L44.5937 12.2977C45.4795 12.821 46.0252 13.7882 46.0252 14.835V26.9983C46.1136 31.0401 48.201 34.9385 51.8723 37.1076C55.5435 39.2767 59.8863 39.1775 63.3509 37.2349L73.6442 31.1533C74.53 30.6299 75.6213 30.6299 76.5071 31.1533L96.6568 43.0584C97.5426 43.5818 98.0882 44.549 98.0882 45.5957V69.406C98.0882 70.4527 97.5426 71.4199 96.6568 71.9433L76.5071 83.8485C75.6213 84.3718 74.53 84.3718 73.6442 83.8485L63.4342 77.816C59.9562 75.8284 55.5738 75.7095 51.8732 77.8959C48.202 80.065 46.1146 83.9633 46.0262 88.005V100.165C46.0262 101.212 45.4805 102.179 44.5947 102.702L24.445 114.607C23.5592 115.131 22.4679 115.131 21.5821 114.607L1.43243 102.702C0.546645 102.179 0.000975341 101.212 0.000975341 100.165V76.3547C0.000982408 75.308 0.546652 74.3408 1.43244 73.8175L21.5821 61.9123C22.4679 61.3889 23.5592 61.3889 24.445 61.9123L34.7616 68.0077C38.2221 69.9367 42.5526 70.0305 46.215 67.8666C49.9155 65.6802 52.0061 61.7367 52.063 57.6605C51.9747 53.6187 49.8872 49.3025 46.216 47.1334C42.5447 44.9643 38.202 45.0635 34.7374 47.0061L24.3967 53.1502C23.5071 53.6788 22.4087 53.6783 21.5196 53.1489L1.42323 41.1841C0.542079 40.6595 -7.06754e-06 39.695 0 38.6518Z" fill="#A1A1AA" opacity="1.0"/>
+<text x="1075.960" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Devin</text>
+<rect x="1136.7599999999998" y="826" width="8" height="8" fill="#0A0ABF"/>
+<text x="1153.760" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Factory</text>
+<path d="M1237.4799999999998 830h22" stroke="#303630" stroke-width="1.65"/>
+<text x="1267.480" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Pareto frontier</text>
 <path d="M62 849l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>
 <text x="76.000" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Metered API</text>
 <text x="56.000" y="898.000" font-size="12" fill="#727B72" text-anchor="start" font-weight="400" >Default month = 4 weeks; Kimi pool = 5×, Droid = 2× weekly · Dollar/credit: 97% cache / 2.5% input / 0.5% output · Direct totals unchanged</text>
-<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >135 subscription positions / 13 API positions / 4 frontier positions</text>
+<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >143 subscription positions / 13 API positions / 4 frontier positions</text>
 <text x="56.000" y="922.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Highest archived configuration reference; harness and effort shown. Product/quota alignment unverified, not channel measurements.</text>
-<text x="56.000" y="943.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >≈$0 = SWE-2 promo: unmetered on Devin Pro/Max/Teams until 2026-10-31, not permanent; TB4 score self-reported by Cognition.</text>
+<text x="56.000" y="943.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >≈$0 = SWE-2: unmetered in Devin Desktop/CLI on Pro/Max/Teams (docs still say Nov 30); TB4 score self-reported by Cognition.</text>
 <text x="56.000" y="964.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Subscriptions and metered APIs share one frontier; line segments are visual guides, not purchasable plans.</text>
 <text x="1384.000" y="964.000" font-size="11" fill="#929A90" text-anchor="end" font-weight="400" >www.tbench.ai/leaderboard</text>
 </svg>

@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="940" viewBox="0 0 1440 940" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="964" viewBox="0 0 1440 964" role="img" aria-labelledby="title desc">
 <title id="title">OpenDesign Arena · Quality ranking · 帕累托前沿 · 全量</title>
 <desc id="desc">价格为对数轴，越右越便宜；分数越高越好。订阅和按量API共同参与帕累托前沿。</desc>
 <style>text{font-family:"Microsoft YaHei","Segoe UI",sans-serif} .serif{font-family:"Times New Roman",serif} .number{font-family:"Segoe UI",sans-serif;font-variant-numeric:tabular-nums} .label-name{paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round} .point:hover{opacity:1}</style>
-<rect width="1440" height="940" fill="#FAF9F6"/>
+<rect width="1440" height="964" fill="#FAF9F6"/>
 <text x="56.000" y="32.000" font-size="10" fill="#90968D" text-anchor="start" font-weight="400" letter-spacing="2.1">REAL API PRICING</text>
 <text x="54.000" y="85.000" font-size="36" fill="#343A33" text-anchor="start" font-weight="300" letter-spacing=".8">真实单价 × 评测配置参考</text>
 <path d="M61 147 Q197 141 343 147" stroke="#9FDDD0" stroke-width="17" stroke-linecap="round" opacity=".55" fill="none"/>
@@ -109,7 +109,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.048843188" data-score="65.7" data-x="645.283" data-y="680.685" transform="translate(645.283 680.685)"><title>Kimi K3 (v1) · Kimi 会员 99 · ¥99 / 国际 $19 · $0.04884/MTok · 65.7 · mediumKimi K3 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0EA5E9" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.016957862" data-score="65.7" data-x="815.103" data-y="680.685" transform="translate(815.103 680.685)"><title>Kimi K3 (v1) · Kimi 会员 699 · ¥699 / 国际 $99 · $0.01696/MTok · 65.7 · mediumKimi K3 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.026086957" data-score="65.7" data-x="745.963" data-y="680.685" transform="translate(745.963 680.685)"><title>Kimi K3 (v1) · Kimi 会员 699 · ¥699 / 国际 $99 · $0.02609/MTok · 65.7 · mediumKimi K3 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0EA5E9" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.097435897" data-score="65.7" data-x="534.426" data-y="680.685" transform="translate(534.426 680.685)"><title>Kimi K3 (v2) · Kimi Plus 99 · ¥99 / 国际 $19 · $0.09744/MTok · 65.7 · mediumKimi K3 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
@@ -118,10 +118,10 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.04008222" data-score="65.7" data-x="677.017" data-y="680.685" transform="translate(677.017 680.685)"><title>Kimi K3 (v2) · Kimi Pro 199 · ¥199 / 国际 $39 · $0.04008/MTok · 65.7 · mediumKimi K3 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0EA5E9" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.033915725" data-score="65.7" data-x="703.833" data-y="680.685" transform="translate(703.833 680.685)"><title>Kimi K3 (v2) · Kimi Max 699 · ¥699 / 国际 $99 · $0.03392/MTok · 65.7 · mediumKimi K3 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.052160169" data-score="65.7" data-x="634.736" data-y="680.685" transform="translate(634.736 680.685)"><title>Kimi K3 (v2) · Kimi Max 699 · ¥699 / 国际 $99 · $0.05216/MTok · 65.7 · mediumKimi K3 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0EA5E9" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.034087016" data-score="65.7" data-x="703.025" data-y="680.685" transform="translate(703.025 680.685)"><title>Kimi K3 (v2) · Kimi Ultra 1399 · ¥1399 / 国际 $199 · $0.03409/MTok · 65.7 · mediumKimi K3 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.052437418" data-score="65.7" data-x="633.885" data-y="680.685" transform="translate(633.885 680.685)"><title>Kimi K3 (v2) · Kimi Ultra 1399 · ¥1399 / 国际 $199 · $0.05244/MTok · 65.7 · mediumKimi K3 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0EA5E9" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.37735849" data-score="82.9" data-x="317.072" data-y="434.673" transform="translate(317.072 434.673)"><title>Grok 4.7 · OpenCode Go · $0.37736/MTok · 82.9 · mediumGrok 4.7 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
@@ -218,6 +218,30 @@
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0053072922" data-score="83.5" data-x="1001.579" data-y="426.091" transform="translate(1001.579 426.091)"><title>MiMo V2.6 Flash · MiMo Token Plan Max 夜间0.8× · ¥659 / 国际 $100 · $0.00531/MTok · 83.5 · mediumMiMo 2.6 Flash · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#FF8A00" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.055641349" data-score="72" data-x="624.365" data-y="590.576" transform="translate(624.365 590.576)"><title>Qwen3.8 Max · 阿里云百炼 Token Plan Lite (¥39) · $0.05564/MTok · 72 · mediumQwen 3.8-Max · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0037051233" data-score="81.2" data-x="1059.267" data-y="458.988" transform="translate(1059.267 458.988)"><title>DeepSeek V4.1 Flash · 阿里云百炼 Token Plan Lite (¥39) · $0.00371/MTok · 81.2 · highDeepSeek V4.1 Flash · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.050103835" data-score="72" data-x="641.193" data-y="590.576" transform="translate(641.193 590.576)"><title>Qwen3.8 Max · 阿里云百炼 Token Plan Essential (¥79) · $0.0501/MTok · 72 · mediumQwen 3.8-Max · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0033356666" data-score="81.2" data-x="1076.130" data-y="458.988" transform="translate(1076.130 458.988)"><title>DeepSeek V4.1 Flash · 阿里云百炼 Token Plan Essential (¥79) · $0.00334/MTok · 81.2 · mediumDeepSeek V4.1 Flash · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.049601854" data-score="72" data-x="642.809" data-y="590.576" transform="translate(642.809 590.576)"><title>Qwen3.8 Max · 阿里云百炼 Token Plan Standard (¥139) · $0.0496/MTok · 72 · mediumQwen 3.8-Max · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0033013599" data-score="81.2" data-x="1077.789" data-y="458.988" transform="translate(1077.789 458.988)"><title>DeepSeek V4.1 Flash · 阿里云百炼 Token Plan Standard (¥139) · $0.0033/MTok · 81.2 · mediumDeepSeek V4.1 Flash · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.044530306" data-score="72" data-x="660.123" data-y="590.576" transform="translate(660.123 590.576)"><title>Qwen3.8 Max · 阿里云百炼 Token Plan Pro (¥312) · $0.04453/MTok · 72 · mediumQwen 3.8-Max · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0029640987" data-score="81.2" data-x="1095.088" data-y="458.988" transform="translate(1095.088 458.988)"><title>DeepSeek V4.1 Flash · 阿里云百炼 Token Plan Pro (¥312) · $0.00296/MTok · 81.2 · mediumDeepSeek V4.1 Flash · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.11575414" data-score="80.3" data-x="506.771" data-y="471.861" transform="translate(506.771 471.861)"><title>Claude Fable 5.1 · Max 5x · 9/14+ · $0.11575/MTok · 80.3 · lowClaude Fable 5.1 · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#CC5A2E" opacity=".68"/>
@@ -321,29 +345,31 @@
 <text x="243.520" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >SpaceXAI</text>
 <rect x="325.2" y="826" width="8" height="8" fill="#0EA5E9"/>
 <text x="342.200" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Kimi</text>
-<rect x="396.03999999999996" y="826" width="8" height="8" fill="#0F766E"/>
-<text x="413.040" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >OpenCode</text>
-<rect x="494.71999999999997" y="826" width="8" height="8" fill="#DBA6FA"/>
-<text x="511.720" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Command Code</text>
-<rect x="621.24" y="826" width="8" height="8" fill="#FC8EA7"/>
-<text x="638.240" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Ollama</text>
-<rect x="706.0" y="826" width="8" height="8" fill="#4D6BFE"/>
-<text x="723.000" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >DeepSeek</text>
-<rect x="804.68" y="826" width="8" height="8" fill="#84CC16"/>
-<text x="821.680" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Google</text>
-<rect x="889.4399999999999" y="826" width="8" height="8" fill="#FF8A00"/>
-<text x="906.440" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Xiaomi</text>
-<path transform="translate(973.74 824.77) scale(0.0910)" d="M0 38.6518V14.8349C7.06768e-06 13.7882 0.545676 12.821 1.43146 12.2977L21.5811 0.392519C22.4669 -0.13084 23.5583 -0.13084 24.444 0.392519L44.5937 12.2977C45.4795 12.821 46.0252 13.7882 46.0252 14.835V26.9983C46.1136 31.0401 48.201 34.9385 51.8723 37.1076C55.5435 39.2767 59.8863 39.1775 63.3509 37.2349L73.6442 31.1533C74.53 30.6299 75.6213 30.6299 76.5071 31.1533L96.6568 43.0584C97.5426 43.5818 98.0882 44.549 98.0882 45.5957V69.406C98.0882 70.4527 97.5426 71.4199 96.6568 71.9433L76.5071 83.8485C75.6213 84.3718 74.53 84.3718 73.6442 83.8485L63.4342 77.816C59.9562 75.8284 55.5738 75.7095 51.8732 77.8959C48.202 80.065 46.1146 83.9633 46.0262 88.005V100.165C46.0262 101.212 45.4805 102.179 44.5947 102.702L24.445 114.607C23.5592 115.131 22.4679 115.131 21.5821 114.607L1.43243 102.702C0.546645 102.179 0.000975341 101.212 0.000975341 100.165V76.3547C0.000982408 75.308 0.546652 74.3408 1.43244 73.8175L21.5821 61.9123C22.4679 61.3889 23.5592 61.3889 24.445 61.9123L34.7616 68.0077C38.2221 69.9367 42.5526 70.0305 46.215 67.8666C49.9155 65.6802 52.0061 61.7367 52.063 57.6605C51.9747 53.6187 49.8872 49.3025 46.216 47.1334C42.5447 44.9643 38.202 45.0635 34.7374 47.0061L24.3967 53.1502C23.5071 53.6788 22.4087 53.6783 21.5196 53.1489L1.42323 41.1841C0.542079 40.6595 -7.06754e-06 39.695 0 38.6518Z" fill="#A1A1AA" opacity="1.0"/>
-<text x="991.200" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Devin</text>
-<rect x="1052.0" y="826" width="8" height="8" fill="#0A0ABF"/>
-<text x="1069.000" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Factory</text>
-<path d="M1152.72 830h22" stroke="#303630" stroke-width="1.65"/>
-<text x="1182.720" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >帕累托前沿</text>
-<path d="M1273.72 825l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>
-<text x="1287.720" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >按量 API</text>
-<text x="56.000" y="874.000" font-size="12" fill="#727B72" text-anchor="start" font-weight="400" >默认月=4周；Kimi月池=周池×5，Droid月=周×2 · 美元/credits换算：缓存97% / 输入2.5% / 输出0.5% · 直接total实测不重算</text>
-<text x="1384.000" y="874.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >71 个订阅位置 / 7 个 API 位置 / 4 个前沿位置</text>
-<text x="56.000" y="898.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >OpenDesign Harness 配置参考；产品/额度实测配置未对齐，不代表各渠道的实测成绩。</text>
-<text x="56.000" y="919.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >订阅与按量API共同参与前沿；连线中间不代表可购套餐。完整出处与假设见项目核对报告。</text>
-<text x="1384.000" y="919.000" font-size="11" fill="#929A90" text-anchor="end" font-weight="400" >open-design.ai/zh/llm-arena-for-design/</text>
+<rect x="396.03999999999996" y="826" width="8" height="8" fill="#C0142F"/>
+<text x="413.040" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Alibaba</text>
+<rect x="487.76" y="826" width="8" height="8" fill="#0F766E"/>
+<text x="504.760" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >OpenCode</text>
+<rect x="586.4399999999999" y="826" width="8" height="8" fill="#DBA6FA"/>
+<text x="603.440" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Command Code</text>
+<rect x="712.9599999999999" y="826" width="8" height="8" fill="#FC8EA7"/>
+<text x="729.960" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Ollama</text>
+<rect x="797.7199999999999" y="826" width="8" height="8" fill="#4D6BFE"/>
+<text x="814.720" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >DeepSeek</text>
+<rect x="896.3999999999999" y="826" width="8" height="8" fill="#84CC16"/>
+<text x="913.400" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Google</text>
+<rect x="981.1599999999999" y="826" width="8" height="8" fill="#FF8A00"/>
+<text x="998.160" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Xiaomi</text>
+<path transform="translate(1065.46 824.77) scale(0.0910)" d="M0 38.6518V14.8349C7.06768e-06 13.7882 0.545676 12.821 1.43146 12.2977L21.5811 0.392519C22.4669 -0.13084 23.5583 -0.13084 24.444 0.392519L44.5937 12.2977C45.4795 12.821 46.0252 13.7882 46.0252 14.835V26.9983C46.1136 31.0401 48.201 34.9385 51.8723 37.1076C55.5435 39.2767 59.8863 39.1775 63.3509 37.2349L73.6442 31.1533C74.53 30.6299 75.6213 30.6299 76.5071 31.1533L96.6568 43.0584C97.5426 43.5818 98.0882 44.549 98.0882 45.5957V69.406C98.0882 70.4527 97.5426 71.4199 96.6568 71.9433L76.5071 83.8485C75.6213 84.3718 74.53 84.3718 73.6442 83.8485L63.4342 77.816C59.9562 75.8284 55.5738 75.7095 51.8732 77.8959C48.202 80.065 46.1146 83.9633 46.0262 88.005V100.165C46.0262 101.212 45.4805 102.179 44.5947 102.702L24.445 114.607C23.5592 115.131 22.4679 115.131 21.5821 114.607L1.43243 102.702C0.546645 102.179 0.000975341 101.212 0.000975341 100.165V76.3547C0.000982408 75.308 0.546652 74.3408 1.43244 73.8175L21.5821 61.9123C22.4679 61.3889 23.5592 61.3889 24.445 61.9123L34.7616 68.0077C38.2221 69.9367 42.5526 70.0305 46.215 67.8666C49.9155 65.6802 52.0061 61.7367 52.063 57.6605C51.9747 53.6187 49.8872 49.3025 46.216 47.1334C42.5447 44.9643 38.202 45.0635 34.7374 47.0061L24.3967 53.1502C23.5071 53.6788 22.4087 53.6783 21.5196 53.1489L1.42323 41.1841C0.542079 40.6595 -7.06754e-06 39.695 0 38.6518Z" fill="#A1A1AA" opacity="1.0"/>
+<text x="1082.920" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Devin</text>
+<rect x="1143.7199999999998" y="826" width="8" height="8" fill="#0A0ABF"/>
+<text x="1160.720" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Factory</text>
+<path d="M1244.4399999999998 830h22" stroke="#303630" stroke-width="1.65"/>
+<text x="1274.440" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >帕累托前沿</text>
+<path d="M62 849l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>
+<text x="76.000" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >按量 API</text>
+<text x="56.000" y="898.000" font-size="12" fill="#727B72" text-anchor="start" font-weight="400" >默认月=4周；Kimi月池=周池×5，Droid月=周×2 · 美元/credits换算：缓存97% / 输入2.5% / 输出0.5% · 直接total实测不重算</text>
+<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >79 个订阅位置 / 7 个 API 位置 / 4 个前沿位置</text>
+<text x="56.000" y="922.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >OpenDesign Harness 配置参考；产品/额度实测配置未对齐，不代表各渠道的实测成绩。</text>
+<text x="56.000" y="943.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >订阅与按量API共同参与前沿；连线中间不代表可购套餐。完整出处与假设见项目核对报告。</text>
+<text x="1384.000" y="943.000" font-size="11" fill="#929A90" text-anchor="end" font-weight="400" >open-design.ai/zh/llm-arena-for-design/</text>
 </svg>
