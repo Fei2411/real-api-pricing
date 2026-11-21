@@ -66,10 +66,11 @@
 56    Droid Max                          USD 200             GPT 5.6 Sol          25.26       0.07918  medium
 57    Droid Max                          USD 200             Claude Opus 5        20.208      0.09897  medium
 58    Droid Max                          USD 200             Claude Opus 4.8      20.208      0.09897  medium
-59    Claude Max 20x (9/14+)             USD 200             Claude Fable 5.1     17.28       0.11574  medium
-60    Claude Max 20x (9/14+)             USD 200             Claude Fable 5       12.077      0.1656   low
-61    Devin Max                          USD 200             GPT-6 Astra          11.15       0.17937  medium
-62    Droid Max                          USD 200             Claude Fable 5.1     10.104      0.19794  medium
-63    Droid Max                          USD 200             Claude Fable 5       10.104      0.19794  medium
-64    Droid Max                          USD 200             GPT-6 Astra          10.104      0.19794  medium
-65    Cursor Ultra (Other Models)        USD 200             Claude Opus 5.5      8.96        0.22321  medium
+59    Devin Max                          USD 200             Gemini 4 Carbon      18.82       0.10627  medium
+60    Claude Max 20x (9/14+)             USD 200             Claude Fable 5.1     17.28       0.11574  medium
+61    Claude Max 20x (9/14+)             USD 200             Claude Fable 5       12.077      0.1656   low
+62    Devin Max                          USD 200             GPT-6 Astra          11.15       0.17937  medium
+63    Droid Max                          USD 200             Claude Fable 5.1     10.104      0.19794  medium
+64    Droid Max                          USD 200             Claude Fable 5       10.104      0.19794  medium
+65    Droid Max                          USD 200             GPT-6 Astra          10.104      0.19794  medium
+66    Cursor Ultra (Other Models)        USD 200             Claude Opus 5.5      8.96        0.22321  medium
