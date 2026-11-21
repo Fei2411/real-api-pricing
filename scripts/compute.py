@@ -52,6 +52,7 @@ SCORE_FILES = (
     "scores-deepswe-selfreport-1017-2026-10-20.json",
     "scores-deepswe-1.1-2026-10-13.json",
     "scores-deepswe-selfreport-carry-2026-10-30.json",
+    "scores-aa-round7-2026-11-21.json",
 )
 LIST_PRICE_FILES = (
     "list-prices-2026-09.json",
@@ -61,6 +62,7 @@ LIST_PRICE_FILES = (
     "list-prices-stepfun-round2-2026-09-21.json",
     "list-prices-mimo-v26-grok47-round1-2026-09-22.json",
     "list-prices-claude55-round1-2026-10-08.json",
+    "list-prices-nov2026-round1-2026-11-21.json",
 )
 
 
@@ -70,28 +72,28 @@ def score_archives():
 
 DISPLAY = {
     "minimax-m3.1-flash-preview": "MiniMax M3.1 Flash Preview", "minimax-m3.1-flash": "MiniMax M3.1 Flash", "kimi-k3.1-pro": "Kimi K3.1 Pro",
-    "gpt-5.6-sol": "GPT 5.6 Sol", "gpt-5.6-terra": "GPT 5.6 Terra", "gpt-5.6-luna": "GPT 5.6 Luna", "gpt-5.5": "GPT 5.5", "gpt-6-astra": "GPT-6 Astra", "gpt-6-sol": "GPT-6 Sol", "gpt-6-luna": "GPT-6 Luna", "gpt-6.1-sol": "GPT-6.1 Sol",
+    "gpt-5.6-sol": "GPT 5.6 Sol", "gpt-5.6-terra": "GPT 5.6 Terra", "gpt-5.6-luna": "GPT 5.6 Luna", "gpt-5.5": "GPT 5.5", "gpt-6-astra": "GPT-6 Astra", "gpt-6-sol": "GPT-6 Sol", "gpt-6-luna": "GPT-6 Luna", "gpt-6.1-sol": "GPT-6.1 Sol", "gpt-6.2-astra": "GPT-6.2 Astra", "gpt-6.2-sol": "GPT-6.2 Sol",
     "claude-opus-5": "Claude Opus 5", "claude-opus-5.5": "Claude Opus 5.5", "claude-fable-5": "Claude Fable 5", "claude-fable-5.1": "Claude Fable 5.1", "claude-fable-5.2": "Claude Fable 5.2", "claude-sonnet-5": "Claude Sonnet 5", "claude-opus-4.8": "Claude Opus 4.8", "claude-sonnet-5.5": "Claude Sonnet 5.5", "claude-haiku-5.5": "Claude Haiku 5.5",
     "grok-4.6": "Grok 4.6", "grok-4.7": "Grok 4.7", "grok-4.5": "Grok 4.5", "kimi-k3": "Kimi K3", "kimi-k2.7-code": "Kimi K2.7 Code", "kimi-k2.6": "Kimi K2.6", "kimi-k2.5": "Kimi K2.5",
     "glm-5.3": "GLM 5.3", "glm-5.3-flash": "GLM 5.3 Flash", "glm-5.3-flashx": "GLM 5.3 FlashX", "glm-5.2": "GLM 5.2", "glm-5.1": "GLM 5.1", "glm-5": "GLM 5",
     "minimax-m3": "MiniMax M3", "minimax-m2.7": "MiniMax M2.7", "minimax-m2.5": "MiniMax M2.5",
-    "qwen3.8-max": "Qwen3.8 Max", "qwen3.8-flash": "Qwen3.8 Flash", "qwen3.8-omni-flash": "Qwen3.8 Omni Flash", "qwen3.7-max": "Qwen3.7 Max",
+    "qwen4-max": "Qwen4 Max", "qwen3.8-max": "Qwen3.8 Max", "qwen3.8-flash": "Qwen3.8 Flash", "qwen3.8-omni-flash": "Qwen3.8 Omni Flash", "qwen3.7-max": "Qwen3.7 Max",
     "qwen3.7-plus": "Qwen3.7 Plus", "qwen3.7-flash": "Qwen3.7 Flash", "qwen3.6-plus": "Qwen3.6 Plus", "qwen3.6-max-preview": "Qwen3.6 Max Preview",
-    "deepseek-v4.1-flash": "DeepSeek V4.1 Flash", "deepseek-v4.1-flash-fast": "DeepSeek V4.1 Flash Fast", "deepseek-v4-flash": "DeepSeek V4 Flash", "deepseek-v4-flash-fast": "DeepSeek V4 Flash Fast", "deepseek-v4-pro": "DeepSeek V4 Pro",
+    "deepseek-v4.1-flash": "DeepSeek V4.1 Flash", "deepseek-v4.1-flash-fast": "DeepSeek V4.1 Flash Fast", "deepseek-v4.1-flash-ultrafast": "DeepSeek V4.1 Flash Ultrafast", "deepseek-v4-flash": "DeepSeek V4 Flash", "deepseek-v4-flash-fast": "DeepSeek V4 Flash Fast", "deepseek-v4-pro": "DeepSeek V4 Pro",
     "deepseek-v4-flash-vision-exp": "DeepSeek V4 Flash Vision Exp",
-    "gemini-3.1-pro": "Gemini 3.1 Pro", "gemini-3.6-flash": "Gemini 3.6 Flash", "gemini-3.7-flash": "Gemini 3.7 Flash", "gemini-3.8-flash": "Gemini 3.8 Flash", "gemini-4-argon": "Gemini 4 Argon", "gemini-4-neon": "Gemini 4 Neon",
+    "gemini-3.1-pro": "Gemini 3.1 Pro", "gemini-3.6-flash": "Gemini 3.6 Flash", "gemini-3.7-flash": "Gemini 3.7 Flash", "gemini-3.8-flash": "Gemini 3.8 Flash", "gemini-4-argon": "Gemini 4 Argon", "gemini-4-carbon": "Gemini 4 Carbon", "gemini-4-neon": "Gemini 4 Neon", "gemini-4-hydrogen": "Gemini 4 Hydrogen",
     "gemini-4-argon-contributor": "Gemini 4 Argon Contributor",
     "mimo-v2.5": "MiMo V2.5", "mimo-v2.5-pro": "MiMo V2.5 Pro", "mimo-v2.6-pro": "MiMo V2.6 Pro", "mimo-v2.6-flash": "MiMo V2.6 Flash",
     "mimo-v2.6-pro-ultraspeed": "MiMo V2.6 Pro UltraSpeed", "longcat-2.0": "LongCat 2.0",
     "muse-spark-1.3": "Muse Spark 1.3", "muse-spark-1.3-contributor": "Muse Spark 1.3 Contributor",
     "muse-spark-1.2": "Muse Spark 1.2", "muse-spark-1.2-contributor": "Muse Spark 1.2 Contributor",
-    "muse-wonder": "Muse Wonder",
+    "muse-wonder": "Muse Wonder", "muse-ember": "Muse Ember",
     "glm-5.2-fast": "GLM 5.2 Fast", "inkling": "Inkling", "inkling-small": "Inkling Small", "mistral-medium-3.5": "Mistral Medium 3.5",
     "kimi-k2.7-code-highspeed": "Kimi K2.7 Code HighSpeed", "nemotron-3-ultra": "Nemotron 3 Ultra",
     "qwen3.8-27b": "Qwen3.8 27B", "qwen3.8-max-0902": "Qwen3.8 Max 0902",
     "step-3.5-flash": "Step 3.5 Flash", "step-3.7-flash": "Step 3.7 Flash", "step-5-preview": "Step 5 Preview", "jev": "Jev",
-    "hy3": "Hy3", "hy4-preview": "Hy4 Preview", "omen-alpha": "Omen Alpha", "composer-2.5": "Composer 2.5",
-    "ling-3.1-flash": "Ling 3.1 Flash",
+    "hy3": "Hy3", "hy4": "Hy4", "hy4-flash": "Hy4 Flash", "hy4-preview": "Hy4 Preview", "omen-alpha": "Omen Alpha", "composer-2.5": "Composer 2.5",
+    "ling-3.1-flash": "Ling 3.1 Flash", "ling-3.1-flash-1019": "Ling 3.1 Flash 1019",
     "swe-2": "SWE-2",
 }
 VENDOR = {

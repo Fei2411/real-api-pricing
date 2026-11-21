@@ -1,0 +1,162 @@
+{
+  "collectedAt": "2026-11-21",
+  "usdPerCny": 6.7787,
+  "models": [
+    {
+      "model": "claude-fable-5.2",
+      "vendor": "Anthropic",
+      "input": 8.0,
+      "cachedInput": 0.2,
+      "output": 40.0,
+      "currency": "USD",
+      "variants": {
+        "cacheWrite5m": {
+          "input": 10.0
+        },
+        "cacheWrite1h": {
+          "input": 16.0
+        }
+      },
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "checkedAt": "2026-11-21",
+      "note": "Official Anthropic pricing table: base input $8, 5m write $10, 1h write $16, cache hits $0.20 (0.025x base input), output $40 per MTok (20% cut vs Fable 5.1 $10/$50/$0.25)."
+    },
+    {
+      "model": "gemini-4-carbon",
+      "vendor": "Google",
+      "input": 2.0,
+      "cachedInput": 0.1,
+      "output": 10.0,
+      "currency": "USD",
+      "variants": {
+        "from2026-12-01": {
+          "input": 4.0,
+          "cachedInput": 0.2,
+          "output": 20.0
+        }
+      },
+      "source": "https://aistudio.google.com/docs/pricing",
+      "checkedAt": "2026-11-21",
+      "note": "Introductory API pricing through 2026-11-30 ($2/$10/cached $0.10 per MTok); regular pricing from 2026-12-01 is $4/$20/cached $0.20."
+    },
+    {
+      "model": "gemini-4-neon",
+      "vendor": "Google",
+      "input": 3.0,
+      "cachedInput": 0.15,
+      "output": 15.0,
+      "currency": "USD",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-11-21",
+      "note": "Gemini Developer API list price published 2026-11-18: input $3, cache read $0.15, output $15 per MTok."
+    },
+    {
+      "model": "gemini-4-argon",
+      "vendor": "Google",
+      "input": 2.0,
+      "cachedInput": 0.1,
+      "output": 10.0,
+      "currency": "USD",
+      "variants": {
+        "from2026-12-01": {
+          "input": 4.0,
+          "cachedInput": 0.2,
+          "output": 20.0
+        }
+      },
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-11-21",
+      "note": "Introductory API pricing until 2026-12-01 08:00 UTC ($2/$10/cached $0.10 per MTok); regular pricing $4/$20/cached $0.20 afterward."
+    },
+    {
+      "model": "gemini-4-hydrogen",
+      "vendor": "Google",
+      "input": 1.5,
+      "cachedInput": 0.075,
+      "output": 7.5,
+      "currency": "USD",
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checkedAt": "2026-11-21",
+      "note": "Gemini Developer API paid tier list price: input $1.50, cache read $0.075, output $7.50 per MTok (Free tier also available with rate limits and content logging)."
+    },
+    {
+      "model": "gpt-6.2-astra",
+      "vendor": "OpenAI",
+      "input": 8.0,
+      "cachedInput": 0.4,
+      "output": 40.0,
+      "currency": "USD",
+      "variants": {
+        "cacheWrite30m": {
+          "input": 10.0
+        }
+      },
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.2-astra.md",
+      "checkedAt": "2026-11-21",
+      "note": "Launched 2026-11-17: 20% lower input/output than GPT-6 Astra ($8/$40) and $0.40 cached input."
+    },
+    {
+      "model": "gpt-6.2-sol",
+      "vendor": "OpenAI",
+      "input": 2.0,
+      "cachedInput": 0.1,
+      "output": 10.0,
+      "currency": "USD",
+      "source": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "checkedAt": "2026-11-21",
+      "note": "Launched 2026-11-17: matches GPT-6.1 Sol API token prices ($2/$10/cached $0.10)."
+    },
+    {
+      "model": "qwen4-max",
+      "vendor": "Alibaba",
+      "input": 10.0,
+      "cachedInput": 0.5,
+      "output": 30.0,
+      "currency": "CNY",
+      "variants": {
+        "intlChannelUsd": {
+          "input": 1.5,
+          "cachedInput": 0.075,
+          "output": 4.5,
+          "cacheWrite5m": 1.875
+        }
+      },
+      "source": "https://platform.qianwenai.com/docs/developer-guides/getting-started/model-prices",
+      "checkedAt": "2026-11-21",
+      "note": "Domestic Qianwen realtime list price ¥10/¥30/cached ¥0.5 per MTok (OpenCode Go / GOAT list $1.50/$4.50/$0.075)."
+    },
+    {
+      "model": "hy4",
+      "vendor": "Tencent",
+      "input": 0.834,
+      "cachedInput": 0.042,
+      "output": 2.501,
+      "currency": "USD",
+      "source": "https://opencode.ai/docs/go/",
+      "checkedAt": "2026-11-21",
+      "note": "Consistent three-part price across OpenCode Go and Command Code GOAT ($0.834/$2.501/cached $0.042)."
+    },
+    {
+      "model": "hy4-flash",
+      "vendor": "Tencent",
+      "input": 0.07,
+      "cachedInput": 0.003,
+      "output": 0.281,
+      "currency": "USD",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "checkedAt": "2026-11-21",
+      "note": "Command Code GOAT three-part price ($0.07/$0.281/cached $0.003)."
+    },
+    {
+      "model": "muse-ember",
+      "vendor": "Muse",
+      "input": 0.1,
+      "cachedInput": 0.004,
+      "output": 0.5,
+      "currency": "USD",
+      "source": "https://commandcode.ai/docs/plans/goat",
+      "checkedAt": "2026-11-21",
+      "note": "Command Code GOAT three-part price ($0.10/$0.50/cached $0.004)."
+    }
+  ]
+}

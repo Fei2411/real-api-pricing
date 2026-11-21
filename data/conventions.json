@@ -20,11 +20,12 @@
   "promotions": {
     "devin_swe2": {
       "startDate": "2026-09-10",
-      "endDate": "2026-10-31",
-      "labelZh": "SWE-2 促销：Pro/Max/Teams 不计额度",
-      "labelEn": "SWE-2 promo: unmetered on Pro/Max/Teams",
-      "endDateBasis": "2026-09-12 给定；官推仅写 for the next month",
-      "evidence": "data/research/devin-swe2-round1-2026-09-12.json"
+      "endDate": null,
+      "docsConflictEndDate": "2026-11-30",
+      "labelZh": "SWE-2 常设不计额度：Devin Pro/Max/Teams 桌面与 CLI",
+      "labelEn": "SWE-2 standing unmetered: Devin Desktop & CLI on Pro/Max/Teams",
+      "endDateBasis": "2026-11-12 官方博客与 devin.ai/pricing 宣布桌面与 CLI 常设免费（无截止日）；docs.devin.ai/desktop/models 仍残留 2026-11-30 字样，留待 12-01 复核",
+      "evidence": "data/research/official-devin-swe2-free-policy-conflict-2026-11-19.json"
     }
   },
   "monthWeeks": 4,

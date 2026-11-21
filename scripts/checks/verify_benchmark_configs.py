@@ -106,10 +106,12 @@ assert indexed["deepseek_v41_flash_offpeak::deepseek-v4.1-flash"]["real_usd_per_
 assert indexed["deepseek_v41_flash_peak::deepseek-v4.1-flash"]["real_usd_per_mtok"] == 0.01932
 assert indexed["deepseek_v41_flash_offpeak::deepseek-v4.1-flash"]["open_design_arena__score"] == 81.2
 # DeepSeek V4.1 Flash 1017 (2026-10-17) is a dated build of the same served model;
-# its AA and vendor TB4 rows (round6 supplements) outscore the 0910 build.
-assert indexed["opencode_go::deepseek-v4.1-flash"]["aa_intelligence_index__score"] == 45.0965
+# its AA v5.0.1 and vendor TB4 rows map to deepseek-v4.1-flash, while older models
+# absent from the AA v5.0.1 snapshot (such as GPT-6 Astra) stay unscored on AA v5.0.1.
+assert indexed["opencode_go::deepseek-v4.1-flash"]["aa_intelligence_index__score"] == 32.5896
 assert indexed["opencode_go::deepseek-v4.1-flash"]["terminal_bench_4__score"] == 42.3
 assert indexed["opencode_go::deepseek-v4.1-flash"]["terminal_bench_4__score_is_self_reported"] is True
-assert indexed["chatgpt_plus::gpt-6-astra"]["aa_intelligence_index__score"] == 52.6737
-assert indexed["chatgpt_plus::gpt-6-astra"]["aa_intelligence_index__configuration_count"] == 5
+assert indexed["chatgpt_plus::gpt-6-astra"]["aa_intelligence_index__score"] is None
+assert indexed["claude_pro::claude-opus-5.5"]["aa_intelligence_index__score"] == 59.106
+assert indexed["claude_pro::claude-opus-5.5"]["aa_intelligence_index__configuration_count"] == 5
 print(f"PASS: {len(configs)} configurations preserved, {len(links)} explicit mappings, exact modes, source CIs/costs and price inputs verified")

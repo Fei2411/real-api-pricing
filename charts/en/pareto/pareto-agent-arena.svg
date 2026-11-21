@@ -345,7 +345,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0058917104" data-score="-1.54" data-x="895.521" data-y="513.643" transform="translate(895.521 513.643)"><title>GLM 5.3 Flash · OpenCode Go · $0.00589/MTok · -1.54 · mediumGLM-5.3-Flash · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0F766E" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.20618557" data-score="1.31" data-x="438.366" data-y="485.618" transform="translate(438.366 485.618)"><title>GLM 5.3 · OpenCode Go · $0.20619/MTok · 1.31 · mediumGLM-5.3 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.01546073" data-score="1.31" data-x="771.466" data-y="485.618" transform="translate(771.466 485.618)"><title>GLM 5.3 · OpenCode Go · $0.01546/MTok · 1.31 · mediumGLM-5.3 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#0F766E" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.051546392" data-score="2.13" data-x="616.625" data-y="477.555" transform="translate(616.625 477.555)"><title>GLM 5.2 · OpenCode Go · $0.05155/MTok · 2.13 · mediumGLM-5.2 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
@@ -439,7 +439,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.03705076" data-score="2.47" data-x="659.083" data-y="474.212" transform="translate(659.083 474.212)"><title>Hy4 Preview · Command Code GOAT · $0.03705/MTok · 2.47 · mediumHy4 preview · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#DBA6FA" opacity=".68" stroke="#9571AA" stroke-width=".9"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.15455951" data-score="1.31" data-x="475.424" data-y="485.618" transform="translate(475.424 485.618)"><title>GLM 5.3 · Command Code GOAT · $0.15456/MTok · 1.31 · mediumGLM-5.3 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.044169611" data-score="1.31" data-x="636.485" data-y="485.618" transform="translate(636.485 485.618)"><title>GLM 5.3 · Command Code GOAT · $0.04417/MTok · 1.31 · mediumGLM-5.3 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#DBA6FA" opacity=".68" stroke="#9571AA" stroke-width=".9"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.099009901" data-score="3.33" data-x="532.692" data-y="465.755" transform="translate(532.692 465.755)"><title>Muse Spark 1.3 · Command Code GOAT · $0.09901/MTok · 3.33 · mediumMuse Spark 1.3 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
@@ -603,6 +603,42 @@
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.01261034" data-score="-8.21" data-x="797.671" data-y="579.232" transform="translate(797.671 579.232)"><title>MiMo V2.5 Pro · MiMo Token Plan Max (Night 0.8x) · $100 / CN ¥659 · $0.01261/MTok · -8.21 · mediumMiMo-V2.5-Pro · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#FF8A00" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.055641349" data-score="1.63" data-x="606.795" data-y="482.472" transform="translate(606.795 482.472)"><title>Qwen3.8 Max · Alibaba Cloud Token Plan Lite (¥39) · $0.05564/MTok · 1.63 · mediumQwen3.8-Max · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0037051233" data-score="5.13" data-x="955.164" data-y="448.055" transform="translate(955.164 448.055)"><title>DeepSeek V4.1 Flash · Alibaba Cloud Token Plan Lite (¥39) · $0.00371/MTok · 5.13 · highDeepSeek-V4.1-Flash-20261017 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.06560223" data-score="1.31" data-x="585.619" data-y="485.618" transform="translate(585.619 485.618)"><title>GLM 5.3 · Alibaba Cloud Token Plan Lite (¥39) · $0.0656/MTok · 1.31 · mediumGLM-5.3 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.050103835" data-score="1.63" data-x="620.275" data-y="482.472" transform="translate(620.275 482.472)"><title>Qwen3.8 Max · Alibaba Cloud Token Plan Essential (¥79) · $0.0501/MTok · 1.63 · mediumQwen3.8-Max · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0033356666" data-score="5.13" data-x="968.671" data-y="448.055" transform="translate(968.671 448.055)"><title>DeepSeek V4.1 Flash · Alibaba Cloud Token Plan Essential (¥79) · $0.00334/MTok · 5.13 · mediumDeepSeek-V4.1-Flash-20261017 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.059038257" data-score="1.31" data-x="599.175" data-y="485.618" transform="translate(599.175 485.618)"><title>GLM 5.3 · Alibaba Cloud Token Plan Essential (¥79) · $0.05904/MTok · 1.31 · mediumGLM-5.3 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.049601854" data-score="1.63" data-x="621.570" data-y="482.472" transform="translate(621.570 482.472)"><title>Qwen3.8 Max · Alibaba Cloud Token Plan Standard (¥139) · $0.0496/MTok · 1.63 · mediumQwen3.8-Max · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0033013599" data-score="5.13" data-x="970.000" data-y="448.055" transform="translate(970.000 448.055)"><title>DeepSeek V4.1 Flash · Alibaba Cloud Token Plan Standard (¥139) · $0.0033/MTok · 5.13 · mediumDeepSeek-V4.1-Flash-20261017 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.058436611" data-score="1.31" data-x="600.492" data-y="485.618" transform="translate(600.492 485.618)"><title>GLM 5.3 · Alibaba Cloud Token Plan Standard (¥139) · $0.05844/MTok · 1.31 · mediumGLM-5.3 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.044530306" data-score="1.63" data-x="635.439" data-y="482.472" transform="translate(635.439 482.472)"><title>Qwen3.8 Max · Alibaba Cloud Token Plan Pro (¥312) · $0.04453/MTok · 1.63 · mediumQwen3.8-Max · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0029640987" data-score="5.13" data-x="983.857" data-y="448.055" transform="translate(983.857 448.055)"><title>DeepSeek V4.1 Flash · Alibaba Cloud Token Plan Pro (¥312) · $0.00296/MTok · 5.13 · mediumDeepSeek-V4.1-Flash-20261017 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.052469818" data-score="1.31" data-x="614.342" data-y="485.618" transform="translate(614.342 485.618)"><title>GLM 5.3 · Alibaba Cloud Token Plan Pro (¥312) · $0.05247/MTok · 1.31 · mediumGLM-5.3 (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.016785564" data-score="0.28" data-x="760.895" data-y="495.747" transform="translate(760.895 495.747)"><title>GPT 5.6 Terra · Plus · $0.01679/MTok · 0.28 · mediumGPT-5.6 Terra (xHigh) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
@@ -849,7 +885,7 @@
 <path d="M400.91999999999996 849l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>
 <text x="414.920" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Metered API</text>
 <text x="56.000" y="898.000" font-size="12" fill="#727B72" text-anchor="start" font-weight="400" >Default month = 4 weeks; Kimi pool = 5×, Droid = 2× weekly · Dollar/credit: 97% cache / 2.5% input / 0.5% output · Direct totals unchanged</text>
-<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >223 subscription positions / 18 API positions / 4 frontier positions</text>
+<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >235 subscription positions / 18 API positions / 4 frontier positions</text>
 <text x="56.000" y="922.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Claude Max: permanent allowance estimate from Sep 14; Pro: historical Opus 4.8 measurement. Y uses the top archived variant per model.</text>
 <text x="56.000" y="943.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Subscriptions and metered APIs share one frontier; line segments are visual guides, not purchasable plans.</text>
 <text x="1384.000" y="943.000" font-size="11" fill="#929A90" text-anchor="end" font-weight="400" >arena.ai/leaderboard/agent</text>

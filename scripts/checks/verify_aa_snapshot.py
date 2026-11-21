@@ -17,14 +17,15 @@ for name, row in current_score_records(archives):
     secondary = row["secondary"]
     raw = raw_archives[name]["rawRecords"]["aa_intelligence_index" if row["boardId"] == "aa_terminal_bench_4" else row["boardId"]]
     if row["boardId"] == "aa_terminal_bench_4":
-        source = next(r for r in raw if r["slug"] == secondary["slug"])
-        expected = source["terminalBench40"] * 100
+        source = next(r for r in raw if (r.get("id") == secondary["modelId"] if "modelId" in secondary else r["slug"] == secondary["slug"]))
+        tb4 = source["terminalBench40"] if "terminalBench40" in source else source["scores"]["terminalbench-4-0"]
+        expected = tb4 * 100
         assert secondary["agentHarness"] == "Artificial Analysis"
         assert row["variantLabel"] == "Artificial Analysis - " + (source.get("shortName") or source["name"])
     elif row["boardId"] == "aa_intelligence_index":
-        source = next(r for r in raw if r["slug"] == secondary["slug"])
+        source = next(r for r in raw if (r.get("id") == secondary["modelId"] if "modelId" in secondary else r["slug"] == secondary["slug"]))
         expected = source["intelligenceIndex"]
-        assert secondary["intelligenceIndexIsEstimated"] == source["intelligenceIndexIsEstimated"]
+        assert secondary["intelligenceIndexIsEstimated"] == bool(source.get("intelligenceIndexIsEstimated", False))
         assert row["variantLabel"] == (source.get("shortName") or source["name"])
     else:
         source = next(r for r in raw if r["id"] == secondary["hostConfigId"])

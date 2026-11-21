@@ -1,0 +1,122 @@
+{
+  "recordedAt": "2026-11-18",
+  "sourceType": "github_issue",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "screenshotsCommitted": false,
+  "archiveNote": "GitHub 附件截图不入库。11-18 的面板分项来自维护者/扫描员目视，不再靠 OCR。附件文件名只作识别，不保存二进制。",
+  "scopeNote": "分级升为 High，仍暂不采用，不改 adopted。标题 227.6万 是 11-16 单日，正文 18,867,577 是 11-13 与 11-16 之和，标题冲突已消解。消解不等于采用。",
+  "priorJudgment2026-11-17": {
+    "grade": "Medium",
+    "why": "当时没有用量面板截图，标题 227.6万 与正文 18,867,577 未取舍，作者把非夜间写成约 5 倍。该判断被本文件的 11-18 更正取代，不删除当时没有面板图这一事实。"
+  },
+  "evidence": {
+    "alreadyInPrOrMain": true,
+    "defaultBranchSearch": "本文件在 11-17 增量已入库。origin/main 没有这份研究文件。11-18 只更正本文件，不新建第二份 #240 档案。",
+    "imagesVisuallyChecked": [
+      "issue #240 附件，文件名以 Screenshot_20261118_081906 开头（11-16 日柱 tooltip）",
+      "issue #240 附件，文件名以 Screenshot_20261118_081900 开头（11-13 日柱 tooltip）",
+      "此前已目视的 CLI 截图，本轮未变"
+    ],
+    "screenshotsCommitted": false,
+    "id": "mamaruo-qwen-tokenplan-lite-qwen4-max-preview-2026-11-16",
+    "grade": "High",
+    "gradeNote": "High 是因为官方面板 token 分项和 CLI 配额/credits% 都已目视。High 不等于可采用。",
+    "sourceType": "github_issue_plus_official_panel_and_cli",
+    "issue": 240,
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/240",
+    "author": "mamaruo",
+    "createdAt": "2026-11-16T15:06:04Z",
+    "updatedAt": "2026-11-18T01:22:06Z",
+    "titleUnchanged": "[数据 / Data] 千问 Token Plan 个人版 Lite · qwen4-max-preview（BYOK）：11-16 面板 227.6万 tokens 分项",
+    "titleWasNotEdited": true,
+    "planOrModel": "千问 Token Plan 个人版 Lite。作者称模型为 qwen4-max-preview（显示名 Qwen-4.0-Max-Preview，provider qwencloud-cn，模型 ID qwen4.0-max-preview-tp），BYOK 接入 Qoder。国内站 platform.qianwenai.com。与 OpenCode Go / Command Code GOAT 的 qwen4-max 不是同一产品。",
+    "commentOnPullRequest234NotReplied": {
+      "at": "2026-11-18T01:24:00Z",
+      "author": "mamaruo",
+      "pullRequest": 234,
+      "note": "评论说已补充 #240、提供了千问 AI 平台用量截图，并修改了笔误。本轮未回复。"
+    },
+    "panelVisuallyChecked": {
+      "product": "千问 AI 平台用量面板，单位 Tokens",
+      "day2026-11-16": {
+        "total": 2275738,
+        "cacheHitRateDisplayed": "92.4%",
+        "freshInput": 169530,
+        "cacheRead": 2053771,
+        "output": 52437,
+        "sumHolds": "169530+2053771+52437=2275738",
+        "hitRate": "2053771/(169530+2053771)=92.37485%，四舍五入到一位小数是面板上的 92.4%",
+        "titleMatch": "227.6万 就是这一日的 2,275,738，不是两日合计"
+      },
+      "day2026-11-13": {
+        "total": 16591839,
+        "cacheHitRateDisplayed": "92.1%",
+        "freshInput": 1305252,
+        "cacheRead": 15196857,
+        "output": 89730,
+        "sumHolds": "1305252+15196857+89730=16591839",
+        "hitRate": "15196857/(1305252+15196857)=92.090%，显示约 92.1%"
+      },
+      "twoDaySumMatchesIssueBody": {
+        "total": 18867577,
+        "freshInput": 1474782,
+        "cacheRead": 17250628,
+        "outputIncludingReasoning": 142167,
+        "sumHolds": "1474782+17250628+142167=18867577",
+        "partsMatchDays": "未缓存 169530+1305252=1474782；缓存 2053771+15196857=17250628；输出 52437+89730=142167"
+      },
+      "cacheWrite": {
+        "authorRecorded": 0,
+        "meaning": "作者因为面板未单列而记 0。保留该说明。不要把 0 当成实测的缓存写入。"
+      },
+      "cacheHitRateIsNotQuotaPercent": true,
+      "modelFilterNotProven": "裁切未证明图表已按 qwen4-max-preview 过滤。支持模型列表可见「千问 auto」（New，限时夜间4折）和「千问 qwen4-max」（New）。不能把全账户柱图等同单一模型，也不能只凭作者口述把全部 token 钉死为 qwen4-max-preview。",
+      "laterBar": "图上还能看到 11-18 的更矮柱，说明截图当日已有 11-18 用量。作者合计只用 11-13 与 11-16。不要把 11-18 柱算进下面的 CLI 1.895%。"
+    },
+    "cliVisuallyChecked": {
+      "command": "qianwen subscription tokenplan status --format json",
+      "type": "token_plan_individual_lite",
+      "name": "Lite",
+      "status": "active",
+      "monthlyCredits": {
+        "total": 20000,
+        "usedPct": 1.8950066
+      },
+      "periodStart": "2026-11-13T21:26:07+08:00",
+      "periodEnd": "2026-12-14T00:00:00+08:00",
+      "remainingDays": 27,
+      "autoRenew": {
+        "enabled": false
+      },
+      "completeness": "partial",
+      "tokensOnThisScreenshot": null,
+      "arithmetic": "1.8950066%×20000=379.00132，成立",
+      "snapshotIsEarlierThanPanel": "该 usedPct 快照早于 11-18 面板图。issue 初稿在 11-16。不要把 11-18 柱拼进 1.895%。"
+    },
+    "titleBodyConflictResolvedNotAdopted": {
+      "titleSays": "11-16 面板 227.6万 tokens",
+      "titleIs": "11-16 单日 2,275,738",
+      "bodyIs": "11-13 与 11-16 之和 18,867,577",
+      "resolution": "两边指的不是同一个窗口，不再视为互相冲突。更正不等于采用。"
+    },
+    "discount": {
+      "authorCorrectedText": "预览 2 折 × 夜间 4 折 = 标准价的 0.8 折；非夜间同等用量 credits 约为 2.5 倍。",
+      "matchesOfficialStack": "与既有官方归档一致：预览 2 折，夜间再 4 折为标准价的 0.8 折。去掉夜间 4 折后仍是预览 2 折，所以非夜间对这条夜间样本是 2.5 倍，不是 5 倍。官方「2 折相当于 5 倍用量」是预览对标准价，不是夜间对非夜间。",
+      "doNotSay": "禁止再用「官方 2 折≈5 倍用量」描述夜间对非夜间。",
+      "previewWindow": "既有文件 official-qwen4-max-preview-credits-2026-11-11.json 记为 2026-11-11 10:00 至 2026-11-25 24:00（UTC+8），预览结束后下线。本轮没有重新打开阿里云帮助页；该窗口与既有归档一致，不是新编的日期。",
+      "listPrice": "作者写首月 ¥19.5，原价 ¥39，活动至 2026-11-30。官方 Credits 表仍只以 #232 / aliyun-token-plan-credits-2026-11-11.json 为准，本轮不重计。"
+    },
+    "notAdoptedBecause": [
+      "不是打满样本，只用了月 credits 的 1.895%。禁止用 18,867,577÷1.895% 外推月 token。",
+      "全部请求在预览 2 折加夜间 4 折下，credits 消耗被折扣放大了 token/credit，不能反推标准价月池。",
+      "价格有首月 ¥19.5 与原价 ¥39 的差别，预览模型本身有窗口并在窗口结束后下线。",
+      "面板裁切没有模型过滤器；支持列表同时有 auto 与 qwen4-max。",
+      "adopted.csv 没有「千问 Token Plan 个人版 Lite」行。本轮检索没有 token_plan 或 qwen4-max-preview 行。不新开采用行。",
+      "官方 Credits 表（Lite ¥39 / 20,000 等）仍待维护者确认，本轮不重计。",
+      "不与 #236 / #241 的 OpenCode Go 或 Command Code GOAT qwen4-max API 价拼接。"
+    ],
+    "recommendation": "暂不采用",
+    "why": "证据够格归档为 High，仍不是可上线的满额 token 行。",
+    "evidenceFile": "evidence/mamaruo-qwen-tokenplan-lite-qwen4-max-preview-2026-11-16.json"
+  }
+}

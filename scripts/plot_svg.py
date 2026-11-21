@@ -96,6 +96,7 @@ def plan_name(plan, language):
     if language == "en":
         return (plan.replace(" (9/14+)", " · from Sep 14")
                 .replace(" (促销至 10/31)", " · promo until Oct 31")
+                .replace(" (导入价至 11/30)", " · intro until Nov 30")
                 .replace(" (老客 ¥149)", " · existing ¥149")
                 .replace(" (老客 ¥49)", " · existing ¥49")
                 .replace(" (老客 ¥469)", " · existing ¥469")
@@ -107,7 +108,7 @@ def plan_name(plan, language):
                 .replace("闲时", "off-peak")
                 .replace("中间值", "midpoint")
                 .replace("忙时", "peak"))
-    return plan.replace(" (9/14+)", " · 9/14+").replace(" (老客 ¥149)", " · 老客 ¥149").replace(" (促销至 10/31)", " · 促销至 10/31")
+    return plan.replace(" (9/14+)", " · 9/14+").replace(" (老客 ¥149)", " · 老客 ¥149").replace(" (促销至 10/31)", " · 促销至 10/31").replace(" (导入价至 11/30)", " · 导入价至 11/30")
 
 
 def plan_label(q, language):
@@ -147,9 +148,18 @@ def label_lines(p, language, board=None):
 
 # 完整档前沿标签的逐榜偏移 (dx, dy, anchor)：按 verify_label_overlap 搜索得到，优先于下方规则。
 FULL_TIER_LABEL_OFFSETS = {
+    ("claude-fable-5.2", "aa_intelligence_index"): (-24, -18, "end"),
+    ("claude-opus-5.5", "aa_intelligence_index"): (20, -48, "start"),
     ("deepseek-v4.1-flash", "aa_intelligence_index"): (40, 40, "middle"),
     ("claude-haiku-5.5", "aa_intelligence_index"): (-8, -60, "middle"),
-    ("deepseek-v4.1-flash", "aa_terminal_bench_4"): (-22, -20, "end"),
+    ("gemini-4-neon", "aa_coding_agent_index"): (-28, -40, "end"),
+    ("claude-fable-5.2", "aa_coding_agent_index"): (6, 52, "start"),
+    ("claude-opus-5.5", "aa_coding_agent_index"): (0, -48, "middle"),
+    ("claude-sonnet-5.5", "aa_coding_agent_index"): (28, -14, "start"),
+    ("deepseek-v4.1-flash", "aa_coding_agent_index"): (-64, 52, "end"),
+    ("claude-haiku-5.5", "aa_coding_agent_index"): (-18, -46, "middle"),
+    ("kimi-k3.1-pro", "aa_terminal_bench_4"): (24, 34, "start"),
+    ("deepseek-v4.1-flash", "aa_terminal_bench_4"): (-20, -64, "middle"),
     ("claude-haiku-5.5", "aa_terminal_bench_4"): (-8, 40, "end"),
     ("claude-sonnet-5.5", "arena_agent_mode"): (-8, 20, "end"),
     ("deepseek-v4.1-flash", "arena_agent_mode"): (40, 60, "middle"),
@@ -483,9 +493,9 @@ def draw(board, meta, points, tier, language="zh"):
         if board in ("aa_coding_agent_index", "terminal_bench_4", "aa_terminal_bench_4", "deepswe_1_1") else
         "Claude Max：9/14 起永久额度估算；Pro：Opus 5 周池面板反推。Y 取同模型存档最高分变体。"
     ))
-    promo = ("≈$0 = SWE-2 promo: unmetered on Devin Pro/Max/Teams until 2026-10-31, not permanent" +
+    promo = ("≈$0 = SWE-2: unmetered in Devin Desktop/CLI on Pro/Max/Teams (docs still say Nov 30)" +
              ("; TB4 score self-reported by Cognition" if board == "terminal_bench_4" else "") + "." if language == "en" else
-             "≈$0 为 SWE-2 促销价：Devin Pro/Max/Teams 至 2026-10-31 不计额度，非永久口径" +
+             "≈$0 为 SWE-2：Devin Pro/Max/Teams 桌面与 CLI 常设不计额度（docs 仍残留 11-30 字样）" +
              ("；TB4 分数为 Cognition 自报" if board == "terminal_bench_4" else "") + "。")
     y = legend_base + 40
     s += [text(56, y, f"Default month = 4 weeks; Kimi pool = 5×, Droid = 2× weekly · Dollar/credit: {STD_MIX['cache']:.0%} cache / {STD_MIX['input']:.1%} input / {STD_MIX['output']:.1%} output · Direct totals unchanged" if language == "en" else f"默认月=4周；Kimi月池=周池×5，Droid月=周×2 · 美元/credits换算：缓存{STD_MIX['cache']:.0%} / 输入{STD_MIX['input']:.1%} / 输出{STD_MIX['output']:.1%} · 直接total实测不重算", 12, "#727B72"),
