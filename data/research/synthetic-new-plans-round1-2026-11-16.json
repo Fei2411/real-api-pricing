@@ -1,0 +1,652 @@
+{
+  "collectedAt": "2026-11-16",
+  "collectedAtDetail": "Read-only capture around 2026-11-16 11:14 Asia/Shanghai (2026-11-16T03:14:11Z). Deployment id on the HTML: a11c34bda99e3a31845471652313553dff1fcb89.",
+  "collectionMethod": "Read-only fetch of the three public Synthetic pages. Plan cards and the default Standard token table were read from rendered HTML, including line-through marks. Exact token counts, API dollar integers, upToMonthlyUsageByPlan, and the regeneration config were read from the React server payload. Per-token prices were read from the model-pricing table (slate-400 = usage-based, emerald = subscription discounted). The weekly credit formula was read from the public client bundle. Research-only: no adopted row, no weekly-to-monthly conversion chosen by this file, no script change.",
+  "sources": [
+    "https://synthetic.new/pricing",
+    "https://synthetic.new/rate-limits",
+    "https://synthetic.new/pricing/models"
+  ],
+  "clientBundle": {
+    "chunk": "/_next/static/chunks/073eaogr9tenu.js?dpl=a11c34bda99e3a31845471652313553dff1fcb89",
+    "weeklyCreditQuotaFormula": "weeklyCreditQuotaCents: Math.round(700 * monthlyPrice / 30)",
+    "tooltipMix": [
+      "90% cached input tokens",
+      "9% uncached input tokens",
+      "1% output tokens"
+    ]
+  },
+  "scope": "synthetic.new public subscription plans Go, Standard, and Big, plus model-specific token and API-dollar tables and the usage-based versus discounted rates. A Bigger catalog entry is recorded only as payload/bundle data that is not on the public plan list.",
+  "adoptionStatus": "research-only; not adopted; no adopted.csv row. Source monthly token figures are preserved as published and are not re-derived onto this repo's month convention. Refs https://github.com/Fei2411/real-api-pricing/issues/201 . This file does not close that issue.",
+  "issue": {
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/201",
+    "coverage": "partial — Synthetic only in this file; GitHub Copilot is a separate record; Muse Code, Mistral, and BytePlus are not recorded here"
+  },
+  "duplicateCheck": {
+    "upstreamDefaultBranchCodeSearch": "repo:Fei2411/real-api-pricing query \"copilot OR synthetic.new\" returned 0 hits on 2026-11-16",
+    "openPullRequests": "None of the 8 open PRs mentioned Synthetic or issue 201.",
+    "forkSearch": "repo:klarkxy/real-api-pricing pull requests for copilot, synthetic, or 201 returned 0 hits."
+  },
+  "billingMeter": {
+    "headline": "One subscription for every model. Credits regenerate over the week and apply at discounted model rates.",
+    "quotaShape": "One weekly credit pool shared across models. The Tokens/mo column is an estimated monthly token count per model if that model is used under the stated mix. Rows are alternatives, not a sum.",
+    "debitVersusList": "Usage-based requests pay the usage-based price. A subscription debits the weekly rate limit at the subscription discounted rate. The API $/mo column is the page's estimated monthly value at the usage-based price, not the discounted debit.",
+    "overage": "All three public plans say \"Allows extra usage at API pricing\".",
+    "noFiveHourOrMonthlyLimitSentence": "Synthetic only uses weekly limits. Unlike other services, there aren't additional five-hour or monthly limits."
+  },
+  "weeklyRegeneration": {
+    "visibleSentence": "Every 202 minutes (about 3.4 hours), you get back 2% of your total weekly credit limit. That means it takes one week to fully regenerate from zero.",
+    "payload": {
+      "weeklyTickPercent": 0.02,
+      "weeklyTicksToFull": 50,
+      "weeklyTickIntervalMinutes": 201.6
+    },
+    "roundingFlag": "The visible copy says 202 minutes. The rate-limits payload says 201.6 minutes. 50 ticks of 201.6 minutes is 10,080 minutes, which is 7 days. 50 ticks of the rounded 202 minutes is 10,100 minutes. This file keeps both numbers and does not convert either into a monthly token quota."
+  },
+  "plans": {
+    "go": {
+      "userFacingName": "Go",
+      "monthlyPriceUsd": 9,
+      "tagline": "Generous limits and reliable access",
+      "includedLabels": [
+        "Allows extra usage at API pricing",
+        "Discounted Models",
+        "Web Search API",
+        "Beta Models"
+      ],
+      "struckThroughLabels": [
+        "Priority access",
+        "1 Usage Reset/month",
+        "Beta Features",
+        "Fast mode",
+        "Infinite mode"
+      ],
+      "publiclyListed": true,
+      "weeklyCreditQuotaCentsFromBundleFormula": 210
+    },
+    "standard": {
+      "userFacingName": "Standard",
+      "monthlyPriceUsd": 30,
+      "tagline": "Larger limits for more demanding projects",
+      "includedLabels": [
+        "Allows extra usage at API pricing",
+        "Discounted Models",
+        "Web Search API",
+        "Beta Models",
+        "Priority access",
+        "1 Usage Reset/month"
+      ],
+      "struckThroughLabels": [
+        "Beta Features",
+        "Fast mode",
+        "Infinite mode"
+      ],
+      "publiclyListed": true,
+      "defaultSelectedOnCapturedPricingPage": true,
+      "weeklyCreditQuotaCentsFromBundleFormula": 700
+    },
+    "big": {
+      "userFacingName": "Big",
+      "monthlyPriceUsd": 90,
+      "tagline": "A big plan for big projects",
+      "includedLabels": [
+        "Allows extra usage at API pricing",
+        "Discounted Models",
+        "Web Search API",
+        "Beta Models",
+        "Higher priority access",
+        "1 Usage Reset/month",
+        "Beta Features",
+        "Fast mode (Beta)",
+        "Infinite mode (Beta)"
+      ],
+      "struckThroughLabels": [],
+      "publiclyListed": true,
+      "banner": "Fast mode and Infinite mode are included with the Big plan",
+      "weeklyCreditQuotaCentsFromBundleFormula": 2100
+    },
+    "bigger": {
+      "userFacingName": "Bigger",
+      "monthlyPriceUsd": 300,
+      "publiclyListedOnCapturedPages": false,
+      "whereSeen": "Present as a key in the pricing RSC payload (tokens, API dollars, upToMonthlyUsageByPlan) and in the client catalog userPlanDefs inside chunk 073eaogr9tenu.js. Absent from availablePlans on both captured pages, which is [\"go\",\"standard\",\"big\"]. Not shown as a plan card.",
+      "catalogFields": {
+        "fastModeSupported": true,
+        "infiniteModeSupported": true,
+        "infiniteModeConcurrency": 5
+      },
+      "weeklyCreditQuotaCentsFromBundleFormula": 7000
+    }
+  },
+  "fastMode": {
+    "status": "Beta",
+    "onPublicPlans": {
+      "go": false,
+      "standard": false,
+      "big": true
+    },
+    "quote": "Turn on fast mode and your requests run up to 2× faster. While it's on, each request uses 2× as much of your rate limit."
+  },
+  "infiniteMode": {
+    "status": "Beta",
+    "onPublicPlans": {
+      "go": false,
+      "standard": false,
+      "big": true
+    },
+    "quote": "Built for background agents: infinite mode requests never count against your rate limit, in exchange for running much slower. (Currently DeepSeek V4.1 Flash only.)",
+    "docsLink": "https://dev.synthetic.new/docs/api/models#infinite-aliases",
+    "notAnUnlimitedAllowance": "The pricing table still publishes a finite Tokens/mo and API $/mo for DeepSeek-V4.1-Flash-1017 on Big (8,108,108,108 tokens, API $754). Infinite mode is a slower path that does not debit the rate limit for that limited model. It is not an unlimited adopted value."
+  },
+  "workloadAssumption": {
+    "where": "Tooltips on the Tokens/mo and API $/mo headers, in the pricing client bundle.",
+    "tokensTooltip": "Estimated monthly tokens per model for typical usage: 90% cached input tokens, 9% uncached input tokens, 1% output tokens.",
+    "apiTooltip": "Estimated monthly API value per model for typical usage: 90% cached input tokens, 9% uncached input tokens, 1% output tokens.",
+    "notProjectStandardMix": "This is Synthetic's stated mix. It is not this repo's standard token mix, and this file does not recompute the table under any other mix."
+  },
+  "upToMonthlyUsagePayload": {
+    "field": "upToMonthlyUsageByPlan",
+    "values": {
+      "go": "90",
+      "standard": "300",
+      "big": "900",
+      "bigger": "3000"
+    },
+    "lowestPlanToListPriceRatio": 0.1,
+    "availablePlans": [
+      "go",
+      "standard",
+      "big"
+    ],
+    "sale": null,
+    "saleNote": "The pricing payload sale field was undefined, so no active promotional price was served. A Kimi K3 first-month sale string exists in the client bundle and did not render.",
+    "visibilityCaveat": "These ceiling strings are in the server payload. The captured static HTML of /pricing does not contain a visible sentence \"up to $90\", \"up to $300\", or \"up to $900\", and the downloaded pricing client bundle does not reference the property name upToMonthlyUsageByPlan. The ceilings equal 10 times each catalog monthly price (including unpublished Bigger at $300 → \"3000\"). They are not the per-model API $/mo figures. Standard's highest published API $/mo in this capture is $251, which is below 300.",
+    "doNotTreatAsUniform10x": "Usage-based price divided by the discounted rate is different for each model and for input, cached input, and output. Examples from the captured table: DeepSeek V4.1 Flash is 10× / 10× / 4×; Kimi K3.1 Pro is 2× / 2× / about 1.43×; GLM-5.3 is 3.5× / about 3.71× / 2×; GLM-5.3 Flash is 1.5× / 2× / 2×."
+  },
+  "models": [
+    {
+      "id": "openai/gpt-oss-120b",
+      "beta": false,
+      "usdPerMillionTokens": {
+        "usageBased": {
+          "input": 0.1,
+          "cachedInput": 0.02,
+          "output": 0.1
+        },
+        "subscriptionDiscounted": {
+          "input": 0.01,
+          "cachedInput": 0.003,
+          "output": 0.05
+        }
+      },
+      "publishedTokens": {
+        "go": 2195121951,
+        "standard": 7317073171,
+        "big": 21951219512,
+        "bigger": 73170731707
+      },
+      "publishedApiUsdPerMonth": {
+        "go": 61,
+        "standard": 204,
+        "big": 614,
+        "bigger": 2048
+      },
+      "standardTableDisplay": {
+        "tokens": "7.32B",
+        "apiUsd": 204
+      }
+    },
+    {
+      "id": "zai-org/GLM-5.3",
+      "beta": true,
+      "usdPerMillionTokens": {
+        "usageBased": {
+          "input": 1.4,
+          "cachedInput": 0.26,
+          "output": 4.4
+        },
+        "subscriptionDiscounted": {
+          "input": 0.4,
+          "cachedInput": 0.07,
+          "output": 2.2
+        },
+        "beta": true
+      },
+      "publishedTokens": {
+        "go": 74380165,
+        "standard": 247933884,
+        "big": 743801653,
+        "bigger": 2479338843
+      },
+      "publishedApiUsdPerMonth": {
+        "go": 30,
+        "standard": 100,
+        "big": 300,
+        "bigger": 1001
+      },
+      "standardTableDisplay": {
+        "tokens": "248M",
+        "apiUsd": 100,
+        "betaBadge": true
+      }
+    },
+    {
+      "id": "zai-org/GLM-5.3-Flash",
+      "beta": false,
+      "usdPerMillionTokens": {
+        "usageBased": {
+          "input": 0.15,
+          "cachedInput": 0.04,
+          "output": 0.5
+        },
+        "subscriptionDiscounted": {
+          "input": 0.1,
+          "cachedInput": 0.02,
+          "output": 0.25
+        }
+      },
+      "publishedTokens": {
+        "go": 305084746,
+        "standard": 1016949153,
+        "big": 3050847458,
+        "bigger": 10169491525
+      },
+      "publishedApiUsdPerMonth": {
+        "go": 16,
+        "standard": 55,
+        "big": 166,
+        "bigger": 554
+      },
+      "standardTableDisplay": {
+        "tokens": "1.02B",
+        "apiUsd": 55
+      }
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "beta": false,
+      "usdPerMillionTokens": {
+        "usageBased": {
+          "input": 0.6,
+          "cachedInput": 0.03,
+          "output": 1.2
+        },
+        "subscriptionDiscounted": {
+          "input": 0.06,
+          "cachedInput": 0.003,
+          "output": 0.3
+        }
+      },
+      "publishedTokens": {
+        "go": 810810811,
+        "standard": 2702702703,
+        "big": 8108108108,
+        "bigger": 27027027027
+      },
+      "publishedApiUsdPerMonth": {
+        "go": 75,
+        "standard": 251,
+        "big": 754,
+        "bigger": 2513
+      },
+      "standardTableDisplay": {
+        "tokens": "2.70B",
+        "apiUsd": 251
+      }
+    },
+    {
+      "id": "moonshotai/Kimi-K3.1-Pro",
+      "beta": false,
+      "usdPerMillionTokens": {
+        "usageBased": {
+          "input": 2.0,
+          "cachedInput": 0.2,
+          "output": 10.0
+        },
+        "subscriptionDiscounted": {
+          "input": 1.0,
+          "cachedInput": 0.1,
+          "output": 7.0
+        }
+      },
+      "publishedTokens": {
+        "go": 36000000,
+        "standard": 120000000,
+        "big": 360000000,
+        "bigger": 1200000000
+      },
+      "publishedApiUsdPerMonth": {
+        "go": 16,
+        "standard": 55,
+        "big": 165,
+        "bigger": 552
+      },
+      "standardTableDisplay": {
+        "tokens": "120M",
+        "apiUsd": 55
+      }
+    },
+    {
+      "id": "Qwen/Qwen3.8-27B",
+      "beta": false,
+      "usdPerMillionTokens": {
+        "usageBased": {
+          "input": 0.45,
+          "cachedInput": 0.09,
+          "output": 2.2
+        },
+        "subscriptionDiscounted": {
+          "input": 0.23,
+          "cachedInput": 0.05,
+          "output": 1.1
+        }
+      },
+      "publishedTokens": {
+        "go": 117340287,
+        "standard": 391134289,
+        "big": 1173402868,
+        "bigger": 3911342894
+      },
+      "publishedApiUsdPerMonth": {
+        "go": 16,
+        "standard": 56,
+        "big": 168,
+        "bigger": 561
+      },
+      "standardTableDisplay": {
+        "tokens": "391M",
+        "apiUsd": 56
+      }
+    },
+    {
+      "id": "zai-org/GLM-4.7-Flash",
+      "beta": false,
+      "usdPerMillionTokens": {
+        "usageBased": {
+          "input": 0.1,
+          "cachedInput": 0.02,
+          "output": 0.5
+        },
+        "subscriptionDiscounted": {
+          "input": 0.01,
+          "cachedInput": 0.003,
+          "output": 0.05
+        }
+      },
+      "publishedTokens": {
+        "go": 2195121951,
+        "standard": 7317073171,
+        "big": 21951219512,
+        "bigger": 73170731707
+      },
+      "publishedApiUsdPerMonth": {
+        "go": 70,
+        "standard": 234,
+        "big": 702,
+        "bigger": 2341
+      },
+      "standardTableDisplay": {
+        "tokens": "7.32B",
+        "apiUsd": 234
+      }
+    }
+  ],
+  "weeklyVersusMonthlyFlag": {
+    "sourceConventionKept": "The public meter is a weekly pool. The table header the page actually publishes is Tokens/mo, with the tooltip \"Estimated monthly tokens\". Exact integers are stored in publishedTokens. The rendered Standard abbreviations are stored in standardTableDisplay. Go and Big were not the selected tab in the initial HTML; their integers come from the same payload.",
+    "bundleFormulaNotUsedAsAMonthlyQuota": "The client catalog sets weeklyCreditQuotaCents to Math.round(700 * monthlyPrice / 30), which is 210, 700, 2100, and 7000 cents for Go, Standard, Big, and Bigger. This file records that formula and those cent values. It does not multiply them into a second monthly token number.",
+    "upstreamMismatch": "A weekly regenerating pool and a Tokens/mo column do not tell this repo which month length to adopt. No weekly-to-monthly factor is chosen here."
+  },
+  "consistencyCheck": {
+    "status": "researcher arithmetic on the published rates, the published token integers, and the page's own 90/9/1 mix. Not a new quota and not adopted.",
+    "result": "For every captured model and every plan key, discounted blended value of the published token count equals the plan monthly price exactly ($9 / $30 / $90 / $300). Usage-based blended value floors to the published API $/mo integer.",
+    "models": [
+      {
+        "id": "openai/gpt-oss-120b",
+        "usageToDiscountedRatio": {
+          "input": 10.0,
+          "cachedInput": 6.666666666666667,
+          "output": 2.0
+        },
+        "blendUsdPerMillionAtStatedMix": {
+          "usageBased": 0.028000000000000004,
+          "subscriptionDiscounted": 0.0040999999999999995
+        },
+        "perPlan": {
+          "go": {
+            "usageBasedValueUsd": 61.46341462800001,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 8.9999999991
+          },
+          "standard": {
+            "usageBasedValueUsd": 204.87804878800003,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 30.000000001099995
+          },
+          "big": {
+            "usageBasedValueUsd": 614.6341463360001,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 89.99999999919999
+          },
+          "bigger": {
+            "usageBasedValueUsd": 2048.780487796,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 299.99999999869993
+          }
+        }
+      },
+      {
+        "id": "zai-org/GLM-5.3",
+        "usageToDiscountedRatio": {
+          "input": 3.4999999999999996,
+          "cachedInput": 3.714285714285714,
+          "output": 2.0
+        },
+        "blendUsdPerMillionAtStatedMix": {
+          "usageBased": 0.40399999999999997,
+          "subscriptionDiscounted": 0.12100000000000001
+        },
+        "perPlan": {
+          "go": {
+            "usageBasedValueUsd": 30.04958666,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 8.999999965
+          },
+          "standard": {
+            "usageBasedValueUsd": 100.165289136,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 29.999999964000004
+          },
+          "big": {
+            "usageBasedValueUsd": 300.495867812,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 90.000000013
+          },
+          "bigger": {
+            "usageBasedValueUsd": 1001.6528925719999,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 300.000000003
+          }
+        }
+      },
+      {
+        "id": "zai-org/GLM-5.3-Flash",
+        "usageToDiscountedRatio": {
+          "input": 1.4999999999999998,
+          "cachedInput": 2.0,
+          "output": 2.0
+        },
+        "blendUsdPerMillionAtStatedMix": {
+          "usageBased": 0.0545,
+          "subscriptionDiscounted": 0.029500000000000002
+        },
+        "perPlan": {
+          "go": {
+            "usageBasedValueUsd": 16.627118657,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 9.000000007
+          },
+          "standard": {
+            "usageBasedValueUsd": 55.423728838500004,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 30.000000013500003
+          },
+          "big": {
+            "usageBasedValueUsd": 166.271186461,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 90.00000001100001
+          },
+          "bigger": {
+            "usageBasedValueUsd": 554.2372881125,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 299.9999999875
+          }
+        }
+      },
+      {
+        "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "usageToDiscountedRatio": {
+          "input": 10.0,
+          "cachedInput": 10.0,
+          "output": 4.0
+        },
+        "blendUsdPerMillionAtStatedMix": {
+          "usageBased": 0.093,
+          "subscriptionDiscounted": 0.011099999999999999
+        },
+        "perPlan": {
+          "go": {
+            "usageBasedValueUsd": 75.40540542299999,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 9.000000002099998
+          },
+          "standard": {
+            "usageBasedValueUsd": 251.351351379,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 30.000000003299995
+          },
+          "big": {
+            "usageBasedValueUsd": 754.054054044,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 89.99999999879999
+          },
+          "bigger": {
+            "usageBasedValueUsd": 2513.513513511,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 299.9999999997
+          }
+        }
+      },
+      {
+        "id": "moonshotai/Kimi-K3.1-Pro",
+        "usageToDiscountedRatio": {
+          "input": 2.0,
+          "cachedInput": 2.0,
+          "output": 1.4285714285714286
+        },
+        "blendUsdPerMillionAtStatedMix": {
+          "usageBased": 0.45999999999999996,
+          "subscriptionDiscounted": 0.25
+        },
+        "perPlan": {
+          "go": {
+            "usageBasedValueUsd": 16.56,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 9.0
+          },
+          "standard": {
+            "usageBasedValueUsd": 55.199999999999996,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 30.0
+          },
+          "big": {
+            "usageBasedValueUsd": 165.6,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 90.0
+          },
+          "bigger": {
+            "usageBasedValueUsd": 552.0,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 300.0
+          }
+        }
+      },
+      {
+        "id": "Qwen/Qwen3.8-27B",
+        "usageToDiscountedRatio": {
+          "input": 1.9565217391304348,
+          "cachedInput": 1.7999999999999998,
+          "output": 2.0
+        },
+        "blendUsdPerMillionAtStatedMix": {
+          "usageBased": 0.1435,
+          "subscriptionDiscounted": 0.0767
+        },
+        "perPlan": {
+          "go": {
+            "usageBasedValueUsd": 16.8383311845,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 9.000000012900001
+          },
+          "standard": {
+            "usageBasedValueUsd": 56.1277704715,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 29.999999966300003
+          },
+          "big": {
+            "usageBasedValueUsd": 168.38331155799997,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 89.99999997559999
+          },
+          "bigger": {
+            "usageBasedValueUsd": 561.277705289,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 299.9999999698
+          }
+        }
+      },
+      {
+        "id": "zai-org/GLM-4.7-Flash",
+        "usageToDiscountedRatio": {
+          "input": 10.0,
+          "cachedInput": 6.666666666666667,
+          "output": 10.0
+        },
+        "blendUsdPerMillionAtStatedMix": {
+          "usageBased": 0.032,
+          "subscriptionDiscounted": 0.0040999999999999995
+        },
+        "perPlan": {
+          "go": {
+            "usageBasedValueUsd": 70.243902432,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 8.9999999991
+          },
+          "standard": {
+            "usageBasedValueUsd": 234.14634147200002,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 30.000000001099995
+          },
+          "big": {
+            "usageBasedValueUsd": 702.439024384,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 89.99999999919999
+          },
+          "bigger": {
+            "usageBasedValueUsd": 2341.463414624,
+            "floorsToPublishedApiUsd": true,
+            "discountedValueUsd": 299.99999999869993
+          }
+        }
+      }
+    ]
+  },
+  "notComputed": [
+    "No alternative monthly token count.",
+    "No project standard-mix reprice.",
+    "No adopted USD per million tokens.",
+    "Infinite mode is not recorded as unlimited tokens."
+  ],
+  "confidence": "medium",
+  "confidenceDetail": "High on the three public prices, the weekly 2% regeneration sentence, the seven model rate pairs, and the Standard table figures, because they are on the official pages. Medium overall because the monthly token column sits on a weekly pool, the 202 versus 201.6 minute labels disagree, the 10× ceiling is payload data rather than a visible sentence, and Bigger is not on the public plan list.",
+  "basis": "official"
+}

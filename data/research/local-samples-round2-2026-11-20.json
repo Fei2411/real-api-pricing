@@ -1,0 +1,75 @@
+{
+  "collectedAt": "2026-11-21",
+  "adoptionStatus": "Adopted 2026-11-21 in scripts/build_adopted.py. google_ai_pro_us × gemini-4-neon has no older sample, so its 37 weekly points are the whole weight. It does not replace google_ai_pro_us × gemini-4-argon. Ultra is not derived. The 50% weekly cap is not applied.",
+  "scopeNote": "2026-11-20 新 Google AI Pro 的 Neon 周样本，见 issue #248。与 Google AI Ultra 5x、已采用的 Argon 行分开。截图不入库。5h 反推、本账号 Claude/GPT 与 Argon 0 次只在 issue 里记为不采用。",
+  "method": "CONVENTIONS.md 低缓存档：带分项的样本按该模型标价折 list-worth，÷ 周百分点，再 ÷ conventions.lowCacheTokenMix（85% / 14.5% / 0.5%）混合价。月 = 周 worth × 4。单独一条新样本不替换其他模型的已采用值。",
+  "samples": [
+    {
+      "id": "google-ai-pro-neon-week-2026-11-20",
+      "issue": 248,
+      "issueUrl": "https://github.com/Fei2411/real-api-pricing/issues/248",
+      "planId": "google_ai_pro_us",
+      "plan": "Google AI Pro",
+      "priceUsd": 19.99,
+      "model": "gemini-4-neon",
+      "client": "Antigravity",
+      "separateFrom": ["google_ai_ultra_5x_us", "google_ai_pro_us::gemini-4-argon"],
+      "window": {
+        "timezone": "America/Los_Angeles",
+        "baselinePt": "2026-11-20 07:51",
+        "baselineRemainingPct": 100,
+        "readingPt": "2026-11-20 18:40",
+        "weekRemainingPct": 63,
+        "weekPp": 37,
+        "weekRefreshPt": "2026-11-27 07:40",
+        "calls": 277,
+        "callRangePt": "2026-11-20 07:51:44–18:40:38"
+      },
+      "tokens": {
+        "input": 6657933,
+        "output": 287026,
+        "cacheRead": 49013359,
+        "cacheWrite": 0,
+        "total": 55958318,
+        "hitRate": 0.8804,
+        "hitRateFormula": "cacheRead / (input + cacheWrite + cacheRead) = 49013359 / 55671292"
+      },
+      "efforts": {
+        "neonHigh": {"calls": 234, "raw": 35353418},
+        "neonXHigh": {"calls": 43, "raw": 20604900},
+        "sameListPrice": true
+      },
+      "pricesPerMtok": {
+        "input": 3,
+        "output": 15,
+        "cacheRead": 0.15,
+        "cacheWrite": null,
+        "published": "2026-11-18",
+        "source": "Gemini Developer API",
+        "lowCacheBlend": 0.6375,
+        "lowCacheBlendFormula": "0.85×$0.15 + 0.145×$3 + 0.005×$15",
+        "mix": "conventions.lowCacheTokenMix 85/14.5/0.5"
+      },
+      "listWorthUsd": 31.631193,
+      "listWorthFormula": "(6657933×3 + 287026×15 + 49013359×0.15) / 1e6",
+      "week": {
+        "worthUsd": 85.48971,
+        "worthFormula": "31.631193 / 0.37",
+        "lowCacheTokens": 134101506,
+        "lowCacheYi": 1.341,
+        "lowCacheFormula": "85.48971 / 0.6375 × 1e6, rounded",
+        "rawTokens": 151238697,
+        "rawYi": 1.512
+      },
+      "month": {
+        "weeks": 4,
+        "lowCacheTokens": 536406024,
+        "lowCacheYiUnrounded": 5.364,
+        "storedYi": 5.36,
+        "storedBecause": "round(unrounded monthly yi, 2), same as the other google_ai_pro rows",
+        "priceUsd": 19.99
+      },
+      "adopted": "google_ai_pro_us × gemini-4-neon = 5.36 亿/月 medium. The 37pp are the whole weight. Does not replace gemini-4-argon at 0.66 亿/月. Does not change Claude Pro Sonnet 5.5, Haiku 5.5, or Opus. Ultra is not derived. The 50% weekly cap is not applied."
+    }
+  ]
+}

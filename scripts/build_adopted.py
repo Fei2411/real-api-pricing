@@ -74,6 +74,11 @@ CHATGPT_PLUS_SOL61_SEGMENT = {"input": 2_742_389, "output": 254_397, "cache_read
 CHATGPT_PLUS_SOL61_USED_TOKENS = 55_532_850
 CHATGPT_PLUS_SOL61_USED_FRACTION = 0.31
 assert sum(CHATGPT_PLUS_SOL61_SEGMENT.values()) == CHATGPT_PLUS_SOL61_USED_TOKENS
+# 2026-11-09 本机 Codex 周窗（2026-11-04 21:02 PT → 2026-11-11 21:02 PT），22:11 PT 读到 67% used。
+# 67pp 是 Plus 共享周条。分子是该窗口全部模型的 API list-worth $25.77（其中 Sol $23.157456），
+# 与上面的纯 Sol 段按百分点合并。不把 $23.16 单独除以 67%。
+CHATGPT_PLUS_SOL61_WEEK_20261109_WORTH_USD = 25.77
+CHATGPT_PLUS_SOL61_WEEK_20261109_PP = 67.0
 # GPT-5.6 Luna Plus —— chatgpt-luna-adoption-round6 样本分项（cache_read 109,356,416 / input 2,941,040 / output 369,313）
 CHATGPT_PLUS_LUNA_SEGMENT = {"input": 2_941_040, "output": 369_313, "cache_read": 109_356_416}
 assert sum(CHATGPT_PLUS_LUNA_SEGMENT.values()) == CHATGPT_PLUS_LUNA_USED_TOKENS
@@ -208,10 +213,25 @@ GOOGLE_PRO_ISSUE55_SEGMENT = {"cache_read": 78_320_000, "input": 14_950_000, "ou
 GOOGLE_PRO_ARGON_SEGMENT = {"cache_read": 955_000, "input": 109_000, "output": 75_100}
 GOOGLE_PRO_ARGON_WEEKLY_PP = 15.1
 GEMINI_ARGON_LIST = (0.10, 2.0, 10.0)  # Gemini 4 Argon 引入价至 2026-11-30（ai.google.dev pricing；输出含 thinking，缓存仅隐式读价），其后 $0.2/$4/$20 须复核
+# Gemini 4 Neon —— 新 Google AI Pro 的 Gemini 周表，与 Ultra 5x、已采用 Argon 行分开（issue #248）。
+#   2026-11-20 7:51 AM PT 各表 100%；6:40 PM PT 周剩余 63%＝37pp。Neon only，277 次，
+#   7:51:44 AM–6:40:38 PM PT。High 与 XHigh 同价。没有更早的 Neon 样本，这 37pp 就是全部权重。
+GOOGLE_PRO_NEON_SEGMENT = {"cache_read": 49_013_359, "input": 6_657_933, "output": 287_026}
+GOOGLE_PRO_NEON_RAW_TOKENS = 55_958_318
+GOOGLE_PRO_NEON_WEEKLY_PP = 37
+GEMINI_NEON_LIST = (0.15, 3.0, 15.0)  # Gemini Developer API，2026-11-18：cache read $0.15 / input $3 / output $15；无显式 cache write，本段写 0
+assert sum(GOOGLE_PRO_NEON_SEGMENT.values()) == GOOGLE_PRO_NEON_RAW_TOKENS
 KIMI_199_USED_TOKENS = 37_362_656
 KIMI_199_MONTHLY_FRACTION = 0.0192
 KIMI_199_WEEKLY_FRACTION = 0.0961
 KIMI_MONTHLY_TO_WEEKLY = 5
+# issue #182（2026-11-02）：旧 699 Allegro × k3.1-pro 控制台周面板，周额度 99%（约 3h50min 后重置）；
+#   Usage over time：Input 784.9M（含 Cache 读 761.6M、97%）、Output 2.2M、Total 787.1M、5552 requests；
+#   作者另称有对话消耗未计入统计 → 99% 含未计入用量，按本面板推出的周池是下限。
+KIMI_699_SEGMENT = {"cache_read": 761_600_000, "input": 23_300_000, "output": 2_200_000}
+KIMI_699_TOTAL_TOKENS = 787_100_000
+KIMI_699_WEEKLY_FRACTION = 0.99
+KIMI_K31_PRO_LIST = (0.2, 2.0, 10.0)  # k3.1-pro 官方标价（$0.2/$2/$10，issue #151）；k3 的 0.3/3/15 恰为 1.5×，折算结果不变
 KIMI_K27_199_USED_TOKENS = 11_913_113
 KIMI_K27_199_MONTHLY_USED_FRACTION = 0.0076
 CLAUDE_PRO_SESSION_TOKENS = 32_868_513
@@ -318,8 +338,8 @@ assert (ANTHROPIC_MIX["cache"], ANTHROPIC_MIX["cacheWrite"], ANTHROPIC_MIX["outp
     STANDARD_MIX["cache"], STANDARD_MIX["input"], STANDARD_MIX["output"])
 # Anthropic 5 分钟缓存写入价（platform.claude.com pricing；Fable 5.1 见 claude-fable51-round1-2026-09-13.json）
 ANTHROPIC_CACHE_WRITE_5M = {"claude-opus-5": 6.25, "claude-sonnet-5": 2.5, "claude-fable-5": 12.5,
-                          "claude-fable-5.1": 12.5, "claude-opus-5.5": 5.0, "claude-sonnet-5.5": 2.5,
-                          "claude-haiku-5.5": 0.125}
+                          "claude-fable-5.1": 12.5, "claude-fable-5.2": 10.0, "claude-opus-5.5": 5.0,
+                          "claude-sonnet-5.5": 2.5, "claude-haiku-5.5": 0.125}
 
 
 def blended_anthropic(cached: float, write: float, out: float) -> float:
@@ -409,14 +429,33 @@ def chatgpt_luna6_raw_monthly_yi() -> float:
     )
 
 
+# 两条标准负载周读数等权。旧 31pp / 8.70 亿不入权。
+# 整周按 67% used 外推的 2.151 亿 / $38.47 已丢弃，不是输入。
+# 标准负载亿数是已经给出的周池，不再除以 $0.197。
+CHATGPT_PLUS_SOL61_NEW_WEEKS = (
+    {"standard_load_yi": 4.08, "api_usd": 73.17},  # 日志 6 点，65%→71%
+    {"standard_load_yi": 3.50, "api_usd": 62.71},  # 7 点下降
+)
+
+
+def chatgpt_sol61_weekly_standard_load_yi() -> float:
+    vals = [w["standard_load_yi"] for w in CHATGPT_PLUS_SOL61_NEW_WEEKS]
+    return round(sum(vals) / len(vals), 2)
+
+
+def chatgpt_sol61_weekly_api_usd() -> float:
+    vals = [w["api_usd"] for w in CHATGPT_PLUS_SOL61_NEW_WEEKS]
+    return round(sum(vals) / len(vals), 2)
+
+
 def chatgpt_sol61_monthly_yi() -> float:
-    # 段 worth $13.2824 ÷31% ×4周 = 月 $171.39 ÷ 标准档 $0.197/MTok（GPT-6.1 Sol 官方价）
-    # 若按 GPT-6 Sol 价 (0.2,2,10) 折算：worth $18.5360 → 8.14 亿，留作对照
-    return round(
-        worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST) / CHATGPT_PLUS_SOL61_USED_FRACTION
-        * MONTH_WEEKS / blended(*GPT61_SOL_LIST) * 1e6 / YI,
-        2,
-    )
+    # 周标准负载中点 × 4 周
+    return round(chatgpt_sol61_weekly_standard_load_yi() * MONTH_WEEKS, 2)
+
+
+assert chatgpt_sol61_weekly_standard_load_yi() == 3.79
+assert chatgpt_sol61_weekly_api_usd() == 67.94
+assert chatgpt_sol61_monthly_yi() == 15.16
 
 
 def chatgpt_sol61_raw_monthly_yi() -> float:
@@ -675,6 +714,34 @@ def google_ai_pro_argon_monthly_yi() -> float:
     )
 
 
+def google_ai_pro_neon_worth_usd() -> float:
+    return worth_usd(GOOGLE_PRO_NEON_SEGMENT, GEMINI_NEON_LIST)
+
+
+def google_ai_pro_neon_weekly_worth_usd() -> float:
+    # 段 worth ÷37pp。展示到 $85.48971；未舍入再除低缓存价比展示值多不到 1 token。
+    return google_ai_pro_neon_worth_usd() / GOOGLE_PRO_NEON_WEEKLY_PP * 100
+
+
+def google_ai_pro_neon_weekly_tokens() -> int:
+    # 采用注记的周 token：展示周美元 $85.48971 ÷ $0.6375/MTok，四舍五入。
+    # 未舍入商约 134,101,506.52，差 1 token；两种月值 round(..., 2) 都是 5.36 亿。
+    return round(round(google_ai_pro_neon_weekly_worth_usd(), 5) / blended_low(*GEMINI_NEON_LIST) * 1e6)
+
+
+def google_ai_pro_neon_monthly_yi() -> float:
+    # 未舍入周 worth ×4周 ÷ 低缓存档 $0.6375/MTok。没有上一条 Neon 样本可并。
+    return round(
+        google_ai_pro_neon_weekly_worth_usd() * MONTH_WEEKS
+        / blended_low(*GEMINI_NEON_LIST) * 1e6 / YI,
+        2,
+    )
+
+
+def google_ai_pro_neon_raw_week_tokens() -> int:
+    return round(GOOGLE_PRO_NEON_RAW_TOKENS / GOOGLE_PRO_NEON_WEEKLY_PP * 100)
+
+
 def kimi_199_monthly_yi() -> float:
     # 2026-10-27 换基：Allegretto(赠送)账号 k3.1-pro 单日 37.36M ÷ 控制台月总1.92% 直推月池；
     # 同窗 7天9.61% 得周池3.89亿，月/周=5.005 与月池=周池×5 吻合（kimi-allegretto-quota-round2-2026-10-27.json）
@@ -682,6 +749,16 @@ def kimi_199_monthly_yi() -> float:
         KIMI_199_USED_TOKENS / KIMI_199_MONTHLY_FRACTION / YI,
         2,
     )
+
+
+def kimi_699_monthly_yi() -> float:
+    # issue #182：段 list-worth ÷99% ×5 周（Kimi 月池=周池×5）÷ 标准负载混合价；
+    #   k3.1-pro 与 k3 三段价成 1.5× 比例，两套价目折算结果相同
+    seg = KIMI_699_SEGMENT
+    worth = (seg["cache_read"] * KIMI_K31_PRO_LIST[0] + seg["input"] * KIMI_K31_PRO_LIST[1]
+             + seg["output"] * KIMI_K31_PRO_LIST[2]) / 1e6
+    return round(worth / KIMI_699_WEEKLY_FRACTION * KIMI_MONTHLY_TO_WEEKLY
+                 / blended(*KIMI_K31_PRO_LIST) / 100, 2)
 
 
 def kimi_k27_199_monthly_yi() -> float:
@@ -732,14 +809,11 @@ assert sum(CLAUDE_PRO_OPUS55_SEGMENT.values()) == CLAUDE_PRO_OPUS55_5H_TOKENS
 #   标价 worth $587.52（读 $0.2 / 1h 写 $8 / 5m 写 $5 / 入 $4 / 出 $20）
 CLAUDE_PRO_OPUS55_ISSUE52_WORTH_USD = 587.52
 CLAUDE_PRO_OPUS55_ISSUE52_WEEKLY_PP = 183.0
-# 维护者本机 TokenView 样本（issue #206，采样 2026-11-07，2026-11-08 提供）：Claude Code 满 5h 窗
-#   = 134.4M raw（读 133.1M / 写 924.8K / 入≈0 / 出 359K）＝周额度 13%；
-#   读数面板只有 1 位小数（133.1M/924.8K/359K），模型以 Opus 5.5 为主、另有 Haiku 5.5 细条未拆；
-#   TokenView 自身估值 $40.49 与本库价目重算 $38.42 差 5.4%，按本库价目计。
-CLAUDE_PRO_OPUS55_MAINTAINER_SEGMENT = {"cache_read": 133_100_000, "cache_write": 924_800,
-                                        "input": 0, "output": 359_000}
-CLAUDE_PRO_OPUS55_MAINTAINER_5H_TOKENS = 134_400_000
-CLAUDE_PRO_OPUS55_MAINTAINER_WEEKLY_PP = 13.0
+# 维护者本机 TokenView 满 5h 窗（issue #206，2026-11-07 22:22–23:38 PT，508 次）。
+# 面板整数读数是周额度 13%；本轮周份额取 12.5%。写入实际是 1h，worth 仍按 5 分钟写价 $5
+# （与 Reddit 段、ANTHROPIC_CACHE_WRITE_5M 同一档），不改按 1h $8。
+CLAUDE_PRO_OPUS55_MAINTAINER_SEGMENT = {"cache_read": 133_100_000, "cache_write": 924_800, "input": 0, "output": 359_000}
+CLAUDE_PRO_OPUS55_MAINTAINER_WEEKLY_PP = 12.5
 
 
 def claude_pro_opus55_raw_monthly_yi() -> float:
@@ -758,19 +832,21 @@ def claude_pro_opus55_segment_worth_usd() -> float:
             + s["input"] * OPUS55_LIST[1] + s["output"] * OPUS55_LIST[2]) / 1e6
 
 
-def claude_pro_opus55_maintainer_segment_worth_usd() -> float:
-    # 维护者 5h 满窗段 list-worth（入≈0，写按 5 分钟价 $5）
+def claude_pro_opus55_maintainer_worth_usd(write_price: float | None = None) -> float:
+    # 维护者 5h 窗 list-worth。默认写价 $5；1h $8 只作不采用的敏感性。
     s = CLAUDE_PRO_OPUS55_MAINTAINER_SEGMENT
-    return (s["cache_read"] * OPUS55_LIST[0] + s["cache_write"] * ANTHROPIC_CACHE_WRITE_5M["claude-opus-5.5"]
+    write = ANTHROPIC_CACHE_WRITE_5M["claude-opus-5.5"] if write_price is None else write_price
+    return (s["cache_read"] * OPUS55_LIST[0] + s["cache_write"] * write
             + s["input"] * OPUS55_LIST[1] + s["output"] * OPUS55_LIST[2]) / 1e6
 
 
 def claude_pro_opus55_monthly_yi() -> float:
-    # （Reddit 段 worth + #52 worth + 维护者 5h 段 worth）÷（13.333 + 183 + 13 个百分点）
-    #   → 每 pp worth ×100 ×4周 ÷ Anthropic 档混合价 $0.419/MTok
-    #   （2026-09-29 裁定按百分点合并；2026-11-08 issue #206 并入维护者第三源）
-    worth_per_pp = (claude_pro_opus55_segment_worth_usd() + CLAUDE_PRO_OPUS55_ISSUE52_WORTH_USD
-                    + claude_pro_opus55_maintainer_segment_worth_usd()) / (
+    # （Reddit 段 + #52 + 维护者 5h 窗）按周百分点合并 → ×100 ×4周 ÷ Anthropic 档 $0.419/MTok。
+    # 维护者窗单独（29.35 亿）不替换前两源。Max 20x 的 Pro 腿仍只用前两源。
+    worth_per_pp = (
+        claude_pro_opus55_segment_worth_usd() + CLAUDE_PRO_OPUS55_ISSUE52_WORTH_USD
+        + claude_pro_opus55_maintainer_worth_usd()
+    ) / (
         CLAUDE_PRO_OPUS55_5H_WEEKLY_FRACTION * 100 + CLAUDE_PRO_OPUS55_ISSUE52_WEEKLY_PP
         + CLAUDE_PRO_OPUS55_MAINTAINER_WEEKLY_PP)
     return round(
@@ -778,6 +854,37 @@ def claude_pro_opus55_monthly_yi() -> float:
         / blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-opus-5.5"], OPUS55_LIST[2]) / 100,
         2,
     )
+
+
+# Claude Pro × Fable 5.2 —— 2026-11-09 本机单段（issue #226）。周条 +7pp，没有上一条 Fable 5.2 样本可并。
+# 段 worth 按实际 1h 写价 $16；月 token 仍除以 Anthropic 档（5 分钟写价 $10 的混合价 $0.644）。
+# 不替换 claude_pro × opus-5.5，也不套 50% 周帽（这次动的是主周条，没有单独的 Fable 子条）。
+FABLE52_LIST = (0.2, 8.0, 40.0)  # cached / input / output
+FABLE52_CACHE_WRITE_1H = 16.0
+CLAUDE_PRO_FABLE52_SEGMENT = {"cache_read": 9_410_355, "cache_write": 282_950, "input": 89, "output": 60_022}
+CLAUDE_PRO_FABLE52_TOKENS = 9_753_416
+CLAUDE_PRO_FABLE52_WEEKLY_PP = 7.0
+CLAUDE_PRO_FABLE52_SESSION_PP = 49.0
+assert sum(CLAUDE_PRO_FABLE52_SEGMENT.values()) == CLAUDE_PRO_FABLE52_TOKENS
+
+
+def claude_pro_fable52_segment_worth_usd() -> float:
+    s = CLAUDE_PRO_FABLE52_SEGMENT
+    return (s["cache_read"] * FABLE52_LIST[0] + s["cache_write"] * FABLE52_CACHE_WRITE_1H
+            + s["input"] * FABLE52_LIST[1] + s["output"] * FABLE52_LIST[2]) / 1e6
+
+
+def claude_pro_fable52_monthly_yi() -> float:
+    return round(
+        claude_pro_fable52_segment_worth_usd() / CLAUDE_PRO_FABLE52_WEEKLY_PP * 100
+        * MONTH_WEEKS
+        / blended_anthropic(FABLE52_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-fable-5.2"], FABLE52_LIST[2]) / 100,
+        2,
+    )
+
+
+def claude_pro_fable52_raw_monthly_yi() -> float:
+    return round(CLAUDE_PRO_FABLE52_TOKENS / CLAUDE_PRO_FABLE52_WEEKLY_PP * 100 * MONTH_WEEKS / YI, 2)
 
 
 def claude_opus55_max20x_session_worth_usd() -> float:
@@ -1295,7 +1402,7 @@ SUBS = [
     # GPT-6 Luna（9/22 新发）—— 维护者Plus账号本机Codex新一周周窗直测；round2（97%→91%，effort=max）取代 round1；只挂Plus，Pro 5x/20x不派生（沿Sol裁定）
     ("chatgpt_plus", "ChatGPT Plus", 20, "USD", "gpt-6-luna", chatgpt_luna6_monthly_yi(), "high", "维护者本机Codex实测（effort=max）：新一周窗09-27 22:09 97%→09-28 20:44 91%增量全为gpt-6-luna total 137,648,446 tokens（input 3,129,683/output 757,355含reasoning 471,268/cache_read 133,761,408，hit 97.71%）；chatgpt-gpt6luna-plus-round2-2026-09-28.json", f"91.77→{chatgpt_luna6_monthly_yi():g}亿（2026-09-30 裁定带分项实测统一折算）：段 worth ${worth_usd(CHATGPT_PLUS_LUNA6_SEGMENT, GPT6_LUNA_LIST):.4f}（cache 133.76M×$0.01＋入3.13M×$0.1＋出0.76M×$0.5）÷6%×4周＝${worth_usd(CHATGPT_PLUS_LUNA6_SEGMENT, GPT6_LUNA_LIST)/0.06*4:.2f} ÷标准档混合价${blended(*GPT6_LUNA_LIST):.4f}/MTok；raw 口径 {chatgpt_luna6_raw_monthly_yi():g} 留作对照。以下为原采用决策——44.05→{chatgpt_luna6_raw_monthly_yi():g}亿：137,648,446÷6%×4周（原 raw 口径）；面板整数%读数Δpp5~7折算口径对应78.88~110.44亿（raw 口径78.66~110.12）；本周22.94M tok/pp≈round1合并样本11.01M的2.08×（standard段10.20M的2.25×），两侧取整区间不重叠，判为周池放大或effort计权变化（本周max、round1未记effort，两因果链不可区分）而非噪声；裁定新一周分开记，round1 44.05亿留作对照不合并不平均；段内gpt-5.6-luna累计205,934,189、6sol/astra均未动，6pp全归6-luna；Pro 5x/20x不派生（沿Sol裁定）；榜分沿用scores-gpt6luna-round1-2026-09-26.json"),
     # GPT-6.1 Sol —— 维护者Plus账号本机Codex周窗直测（剩余81%→50%，31pp，round1~round3三段拼合）；只挂Plus，Pro 5x/20x不派生（沿Sol裁定）；暂无榜分
-    ("chatgpt_plus", "ChatGPT Plus", 20, "USD", "gpt-6.1-sol", chatgpt_sol61_monthly_yi(), "high", "维护者本机Codex实测：周窗剩余81%→50%（31pp）整段 gpt-6.1-sol total 55,532,850 tokens（input 2,742,389/cache_read 52,536,064/cache_write 0/output 254,397含reasoning 72,105，hit 95.04%）；chatgpt-gpt61sol-plus-round1/round2/round3-2026-09-30.json；workload-conversion-round1-2026-09-30.json", f"7.75→{chatgpt_sol61_monthly_yi():g}亿（2026-09-30 裁定带分项实测统一折算，并入第三段60%→50%后整体重算）：段 worth ${worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST):.4f}（cache 52.54M×$0.10＋入2.74M×$2＋出0.25M×$10）÷31%×4周＝${worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST)/0.31*4:.2f} ÷标准档混合价${blended(*GPT61_SOL_LIST):.3f}/MTok；GPT-6.1 Sol 官方价 $0.10/$2/$10（learn.chatgpt.com credits 2.5/50/250 ÷25，cached=输入5%，取代先按 6-Sol $0.2 假设的 8.96亿；若仍按 6-Sol 价为 8.14亿留作对照）；raw 口径 {chatgpt_sol61_raw_monthly_yi():g} 留作对照。；疑点（2026-10-01 裁定先记录、按整段 81%→50% 采用）：第三段 60%→50% 每 1% $0.330，比前两段 $0.476/$0.473 低约 30%，10pp 整数读数取整（约 ±10%）不足以解释，原因未明。缓存读价经2026-10-01 确认：GPT-6.1 Sol $0.10、GPT-6 Sol $0.20。原采用决策——新增{chatgpt_sol61_raw_monthly_yi():g}亿：整段55,532,850÷31%×4周（=81%→65%段30,109,568÷16pp + 65%→60%段10,562,908÷5pp + 60%→50%段14,860,374÷10pp，三段边界拼合且分量逐项吻合）；面板整数%读数Δpp30~32折算口径对应8.43~8.99亿；截图标题82%/32pp起始读数经更正为81%；按6.1官方credits档反推周池1,071cr（$42.85），linux.do观察Plus约3,426cr/周与Pro20x同池Sol-worth÷20更接近5.6等价费率下的$119.6/周——订阅内计费率或池口径差异记入不确定性；分段密度（6.1价）：seg1 $0.476/pp、seg2 $0.473/pp、seg3 $0.330/pp；Pro 5x/20x不派生（沿Sol裁定）；暂无榜分，有分后补supplement"),
+    ("chatgpt_plus", "ChatGPT Plus", 20, "USD", "gpt-6.1-sol", chatgpt_sol61_monthly_yi(), "high", "维护者本机 Codex，2026-11-09 周窗两条标准负载读数等权中点（旧 31pp / 8.70 亿不入权；整周 67% used 外推 2.151 亿、$38.47 已丢弃、不作输入）：日志 6 点 65%→71% 标准负载 4.08 亿、$73.17；7 点下降标准负载 3.50 亿、$62.71；local-samples-round1-2026-11-09.json", f"8.70→{chatgpt_sol61_monthly_yi():g}亿（2026-11-10）：两条标准负载周读数等权中点。旧 31pp / 8.70 亿不入权。整周按 67% used 外推的 2.151 亿、$38.47 已丢弃，不是输入。日志 6 点 65%→71%：4.08 亿、$73.17；7 点下降：3.50 亿、$62.71。中点周池 {chatgpt_sol61_weekly_standard_load_yi():g} 亿、${chatgpt_sol61_weekly_api_usd():.2f} ×{MONTH_WEEKS:g}周＝{chatgpt_sol61_monthly_yi():g} 亿/月。不采：旧 31pp 与 $25.77/67pp 合并的 8.09 亿，以及把 2.151 亿算进中点的 12.48 亿。Pro 5x/20x 不派生。证据：local-samples-round1-2026-11-09.json。以下为原决策——7.75→8.7亿（2026-09-30 裁定带分项实测统一折算，并入第三段60%→50%后整体重算）：段 worth ${worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST):.4f}（cache 52.54M×$0.10＋入2.74M×$2＋出0.25M×$10）÷31%×4周＝${worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST)/0.31*4:.2f} ÷标准档混合价${blended(*GPT61_SOL_LIST):.3f}/MTok；GPT-6.1 Sol 官方价 $0.10/$2/$10（learn.chatgpt.com credits 2.5/50/250 ÷25，cached=输入5%，取代先按 6-Sol $0.2 假设的 8.96亿；若仍按 6-Sol 价为 8.14亿留作对照）；raw 口径 {chatgpt_sol61_raw_monthly_yi():g} 留作对照。；疑点（2026-10-01 裁定先记录、按整段 81%→50% 采用）：第三段 60%→50% 每 1% $0.330，比前两段 $0.476/$0.473 低约 30%，10pp 整数读数取整（约 ±10%）不足以解释，原因未明。缓存读价经2026-10-01 确认：GPT-6.1 Sol $0.10、GPT-6 Sol $0.20。原采用决策——新增{chatgpt_sol61_raw_monthly_yi():g}亿：整段55,532,850÷31%×4周（=81%→65%段30,109,568÷16pp + 65%→60%段10,562,908÷5pp + 60%→50%段14,860,374÷10pp，三段边界拼合且分量逐项吻合）；面板整数%读数Δpp30~32折算口径对应8.43~8.99亿；截图标题82%/32pp起始读数经更正为81%；按6.1官方credits档反推周池1,071cr（$42.85），linux.do观察Plus约3,426cr/周与Pro20x同池Sol-worth÷20更接近5.6等价费率下的$119.6/周——订阅内计费率或池口径差异记入不确定性；分段密度（6.1价）：seg1 $0.476/pp、seg2 $0.473/pp、seg3 $0.330/pp；Pro 5x/20x不派生（沿Sol裁定）；暂无榜分，有分后补supplement"),
     # Pro20x Astra —— round12 因三源分歧2.7×暂不挂点；round13 维护者转交的同框批次（g5a/g8）+ sdmat 使 8 亿簇达 5 条独立来源，裁决收敛
     ("chatgpt_pro_20x", "ChatGPT Pro 20x", 200, "USD", "gpt-6-astra", CHATGPT_PRO20X_ASTRA_MONTHLY_YI, "medium", "8条实测源加权：Observatory 8.53、round10截图13.8、round13同框7.52、round14维护者面板10.0、msg7086 8.07、round14图4(2/3周)8.18、图2自述9.25、图3后台10.3亿/周；chatgpt-astra-round12/13/14", f"新增{CHATGPT_PRO20X_ASTRA_MONTHLY_YI:g}亿：周池{CHATGPT_PRO20X_ASTRA_WEEK_YI:g}亿×{MONTH_WEEKS:g}周——实测源按验证等级加权（面板同框/维护者面板/连续序列×3、自述份额×2、社区口述×1），round10的10%与档位经确认由不采改为入权；round14新口径：周池≈$1200~1500 list-worth（Astra），同池Sol $2200~2500，内部计权对Astra惩罚~1.9×；维护者自测≈32亿/月与lichengzhe网关21~23亿按裁定不入权，纯口述与仅下限源不进均值；隐含权重≈{CHATGPT_PRO20X_SOL_MONTHLY_YI/4/CHATGPT_PRO20X_ASTRA_WEEK_YI:.2f}×Sol；同源真实测量仍散布6.8~15.6亿/周，账号间池子可能本就不同，此值为加权中心而非普适常数；未折算：八源加权、多数来源无 token 分项"),
     # Devin —— 维护者Max账号本周87pt近满周段astra单列反推（305M tokens/667 calls）；swe-2-max等免费不占额度，Max官方为周池无日上限
@@ -1330,6 +1437,9 @@ SUBS = [
     ("google_ai_pro_us", "Google AI Pro", 19.99, "USD", "gemini-3.6-flash", google_ai_pro_36_monthly_yi(), "medium", "issue #55（NTRYourWaifu）：agy CLI 每 5 分钟轮询周额度 %，只计 3.6 Flash ≥95% 区段，95.60M raw = 周 +21.70pp；community-issues-round1-2026-09-29.json；workload-conversion-round1-2026-09-30.json", f"17.62→{google_ai_pro_36_monthly_yi():g}亿（2026-09-30 裁定带分项实测统一折算，低缓存档）：#55 段 worth ${worth_usd(GOOGLE_PRO_ISSUE55_SEGMENT, GEMINI_FLASH_LIST):.3f}（cache 78.32M×$0.075＋入14.95M×$0.75＋出2.33M×$3.75）÷21.70pp＝$1.19005/pp → 周$119.0×4周 ÷ 低缓存档$0.19125/MTok；raw 口径 17.62 留作对照。以下为 2026-09-29 原采用决策（raw 口径）——新增17.62亿，2026-09-29 裁定：issue #55（agy CLI，方法同 #54，只计 3.6 Flash 占 95% 以上区段）95.60M raw = 周 +21.70 个百分点 ×100×4周，cache 命中 84.0%。每 1% 标价美元约 $1.19，与 3.8 Flash 相同，支持 Google AI Pro 各模型共用按价额度池。样本仅 21.7 个百分点、单一投稿人 → medium。不派生 Ultra。证据：community-issues-round1-2026-09-29.json。"),
     # Gemini 4 Argon —— Pro 独立 weekly-only 周池的首个采用点；官方确认不与 3.8 Flash 合池（2026-10-15 论坛回复）
     ("google_ai_pro_us", "Google AI Pro", 19.99, "USD", "gemini-4-argon", google_ai_pro_argon_monthly_yi(), "low", "X @leo114119 推文截图（维护者提供）：第三方网关面板 Gemini 4 Argon·7天 已用 15.1%，网关统计 23 次调用（输入 109K／输出 75.1K 含推理 28K／缓存读 955K，命中率 90%）；gemini-argon-round1-2026-10-16.json", f"新增{google_ai_pro_argon_monthly_yi():g}亿：首个 Gemini 4 Argon 采用点（低缓存档）。段 worth ${worth_usd(GOOGLE_PRO_ARGON_SEGMENT, GEMINI_ARGON_LIST):.4f}（cache 0.955M×$0.10＋入 0.109M×$2＋出 0.0751M×$10；引入价至 2026-11-30，其后 $0.2/$4/$20 须复核，输出含 thinking 与面板「推理计入输出」一致）÷15.1pp＝$0.0705/pp，周 worth $7.05×{MONTH_WEEKS:g}周 ÷ 低缓存档混合价 $0.425/MTok。官方论坛 2026-10-15 确认 Argon 为 Pro 独立 weekly-only 周池（无 5 小时条），不与 Gemini 3.8 Flash 合池；面板其余各池均 0%，23 次调用用量归 Argon 为推断。帖主反推周限约 $10 为取整上界——若推理 28K 在输出外另计则周 $8.90（0.84亿）。raw 口径 0.30亿、标准档口径 1.43亿留作对照不采；同套餐 Gemini 合池周 worth $123.42 的 1/17，与「少的可怜」一致。样本 15.1pp、单一推文、第三方网关面板 → low，待第二样本复核。证据：gemini-argon-round1-2026-10-16.json。"),
+    ("google_ai_pro_us", "Google AI Pro", 19.99, "USD", "gemini-4-neon", google_ai_pro_neon_monthly_yi(), "medium",
+     "维护者本机 Antigravity，新 Google AI Pro（与 Ultra 5x、已采用 Argon 行分开）：2026-11-20 7:51 AM PT 各表 100%，6:40 PM PT Gemini 周剩余 63%（37pp，刷新约 2026-11-27 7:40 AM PT）；Neon 277 次，7:51:44 AM–6:40:38 PM PT（入 6,657,933 / 出 287,026 / 缓存读 49,013,359 / 缓存写 0，raw 55,958,318，命中 88.04%）；High 234 次 raw 35,353,418，XHigh 43 次 raw 20,604,900；issue #248；local-samples-round2-2026-11-20.json",
+     f"新增{google_ai_pro_neon_monthly_yi():g}亿（2026-11-21，低缓存档，medium）：首个 Gemini 4 Neon 采用点。段 worth ${google_ai_pro_neon_worth_usd():.6f}（读 {GOOGLE_PRO_NEON_SEGMENT['cache_read']/1e6:.6f}M×$0.15＋入 {GOOGLE_PRO_NEON_SEGMENT['input']/1e6:.6f}M×$3＋出 {GOOGLE_PRO_NEON_SEGMENT['output']/1e6:.6f}M×$15；Gemini Developer API 2026-11-18 公布，High 与 XHigh 同价，缓存写 0）÷{GOOGLE_PRO_NEON_WEEKLY_PP:g}pp＝${google_ai_pro_neon_weekly_worth_usd():.5f}/周。低缓存混合价 ${blended_low(*GEMINI_NEON_LIST):.4f}/MTok（{LOW_CACHE_MIX['cache']:.2f}×$0.15＋{LOW_CACHE_MIX['input']:.3f}×$3＋{LOW_CACHE_MIX['output']:.3f}×$15）。低缓存周 {google_ai_pro_neon_weekly_tokens():,} token（{google_ai_pro_neon_weekly_tokens()/YI:.3f}亿）×{MONTH_WEEKS:g}周＝{google_ai_pro_neon_weekly_tokens()*MONTH_WEEKS:,} token，未舍入 {google_ai_pro_neon_weekly_tokens()*MONTH_WEEKS/YI:.3f}亿，round(..., 2) 存 {google_ai_pro_neon_monthly_yi():g}亿。没有上一条 Neon 样本可并，这 {GOOGLE_PRO_NEON_WEEKLY_PP:g}pp 就是全部权重；不替换 google_ai_pro_us × gemini-4-argon（{google_ai_pro_argon_monthly_yi():g}亿）。不派生 Ultra。raw 周 {google_ai_pro_neon_raw_week_tokens():,}（{GOOGLE_PRO_NEON_RAW_TOKENS/GOOGLE_PRO_NEON_WEEKLY_PP*100/YI:.3f}亿）留作对照不采。5h 反推 $26.01 / 低缓存 0.408亿不采：当天跨过不止一个 5h 窗，该切片只约占当前窗 1 小时。50% 周帽不套。n=1、整数读数 → medium。证据：local-samples-round2-2026-11-20.json；issue #248。"),
     ("google_ai_ultra_5x_us", "Google AI Ultra 5x", 99.99, "USD", "gemini-3.8-flash", round(google_ai_pro_monthly_yi() * 5, 2), "low", "官方：Ultra $100 = 5× Pro token worth（antigravity.google/blog 2026-05-19）", f"新增{google_ai_pro_monthly_yi()*5:g}亿：Pro采用值×官方worth倍率5；LLMDevs Ultra~5.0B/周同量级旁证；非独立实测"),
     ("google_ai_ultra_20x_us", "Google AI Ultra 20x", 199.99, "USD", "gemini-3.8-flash", round(google_ai_pro_monthly_yi() * 20, 2), "low", "官方：Ultra $200 = 20× Pro token worth（antigravity.google/blog 2026-05-19）", f"新增{google_ai_pro_monthly_yi()*20:g}亿：Pro采用值×官方worth倍率20；非独立实测"),
     # Anthropic —— Pro采用shownotover面板截图反推Opus5周池；Max采用9/14永久口径估算157亿，非当期boost或纯Opus5硬上限
@@ -1345,7 +1455,10 @@ SUBS = [
     ("claude_max_20x", "Claude Max 20x (9/14+)", 200, "USD", "claude-opus-5.5", CLAUDE_OPUS55_MAX20X_MONTHLY_YI, "medium", "X @MiaAI_lab 推文（维护者提供截图）：xHigh 1h2m 烧 10.305亿 raw = ~75% of 5h limit；claude-opus55-round1-2026-09-23.json；round10 条目#15 Max 20x ≈5.5 满窗/周（claude-adoption-round10-2026-09-25.json）；Claude Pro × Opus 5.5 采用样本（issue #52 + Reddit 段）×10；claude-opus55-max20x-round2-2026-09-30.json", f"{CLAUDE_OPUS55_MAX20X_RAW_MONTHLY_YI:g}→{CLAUDE_OPUS55_MAX20X_MONTHLY_YI:g}亿（2026-09-30 裁定，Anthropic 档）：两路各折成 Max 20x 周额度百分点后按百分点合并——① MiaAI 窗 worth ${claude_max20x_opus55_sources()['mia'][0]:.2f}（写按 5m，与推文 $482.63 闭合）= 75% 窗 ÷ {CLAUDE_MAX20X_WINDOWS_PER_WEEK:g} 窗/周 = 周 {claude_max20x_opus55_sources()['mia'][1]:.3f}pp，单独 {claude_max20x_opus55_yi(*claude_max20x_opus55_sources()['mia']):g}亿；② Pro × Opus 5.5 合并 worth ${claude_max20x_opus55_sources()['pro10'][0]:.2f} / 196.333 Pro pp ÷ Max 20x 周额度 = Pro×{CLAUDE_MAX20X_TO_PRO_WEEKLY:g} → 周 {claude_max20x_opus55_sources()['pro10'][1]:.3f}pp，单独 {claude_max20x_opus55_yi(*claude_max20x_opus55_sources()['pro10']):g}亿；两路差 8%。不采：Pro 5h/周 13.333%（7.5 窗）直接套 Max 20x 得 449.7 亿（Max 20x 窗 20×、周 10×，窗/周比与 Pro 不同）；官方倍率推 3.75 窗/周得 224.9 亿（MiaAI 窗仅为 Pro 窗 15.5× 而非 20×，与两倍率同时精确不自洽）；等权平均 317.58 亿；#65 混合样本暂不处理。以下为旧 301.7 决策原文——新增301.7亿：5h池 10.305亿÷~75%={CLAUDE_OPUS55_POOL5H_YI:.2f}亿 raw（9/22发布已上调 Pro/Max/Team 5h 上限，窗池系发布期口径）；隐含权重 {CLAUDE_OPUS55_5H_WEIGHTED_YI:.2f}/{CLAUDE_OPUS55_POOL5H_YI:.2f}={CLAUDE_OPUS55_W:.4f}×Opus5 → 月池157÷{CLAUDE_OPUS55_W:.4f}；标价混合比0.5143独立互证（备选305.28亿差1.2%）；样本按新价$471.1≈推文$482.63闭合(+2.4%)；n=1推文无面板、~75%取整读数（月额区间约283~322亿）、effort仅影响速率；若官方权重偏离价格比（Fable 6.5×前车之鉴）需重推；周池面板直测/reset后受控打满可升high"),
     ("claude_max_5x", "Claude Max 5x (9/14+)", 100, "USD", "claude-opus-5.5", claude_max5x_opus55_monthly_yi(), "medium", "社区截图（维护者提供，2026-10-03）：Claude Code /usage 单会话 claude-opus-5-5 in 23.0k/out 3.0m/cache读 1.3b/cache写 5.6m（CC 标 $366.96）＝周额度（all models）19%，Fable 周 0%；claude-max5x-opus55-round1-2026-10-03.json", f"157.69→{claude_max5x_opus55_monthly_yi():g}亿（2026-10-03 直测替换借 20x÷2 派生，low→medium，Anthropic 档）：段 worth ${claude_max5x_opus55_segment_worth_usd():.2f}（读1.3B×$0.2＋1h写5.6M×$8＋入0.023M×$4＋出3.0M×$20，按实际写档计）÷19%×{MONTH_WEEKS:g}周＝月${claude_max5x_opus55_segment_worth_usd()/0.19*4:.2f} ÷ Anthropic 档混合价${blended_anthropic(0.2,5.0,20.0):.3f}/MTok；社区截图来源未确认，19% 是否全归本会话未知——若周内另有用量则 Opus 实占 pp 更少、周池更大，本值偏保守；19% 为整数读数，18.5~19.5% 对应 {claude_max5x_opus55_monthly_yi(0.195):g}~{claude_max5x_opus55_monthly_yi(0.185):g}亿；1.3b 仅两位有效数字（±0.05b 约 ±3.7%）；截图为 1h TTL、CC 标 $366.96 即按 1h 写闭合；cache 写按 5m $5 折 {claude_max5x_opus55_monthly_yi(write_price=ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5']):g}亿留作对照；原始 total 口径 {claude_max5x_opus55_raw_monthly_yi():g}亿留作对照；haiku-4-5（$0.06）不计；张力：按 20x 周池＝5x×2 推 20x 约 {claude_max5x_opus55_monthly_yi()*2:g}亿，比 20x 采用值 {CLAUDE_OPUS55_MAX20X_MONTHLY_YI:g}亿 高 {claude_max5x_opus55_monthly_yi()*2/CLAUDE_OPUS55_MAX20X_MONTHLY_YI-1:.0%}，20x 暂不改，5x/20x 不再同价并点"),
     # Opus 5.5 × Pro —— round10 Reddit 满窗样本（2026-09-25 裁定 worth 口径，替换借权重派生值36.09亿）
-    ("claude_pro", "Claude Pro", 20, "USD", "claude-opus-5.5", claude_pro_opus55_monthly_yi(), "high", "issue #52（NTRYourWaifu）：两个 Pro 账号轮询 /api/oauth/usage seven_day %、按 message.id 去重，Opus 5.5 ≥95% 区段 1,396.81M raw = 周 +183pp；community-issues-round1-2026-09-29.json；另与 Reddit r/ClaudeCode 帖满窗段（grok_report 条目#1：151,193,723 raw = 周 13.333%）按百分点合并；claude-adoption-round10-2026-09-25.json；issue #206 维护者本机 TokenView 满 5h 窗 134.4M raw = 周 13%（claude-pro-opus55-maintainer-5h-round1-2026-11-08.json）", "30.54→30.39亿（2026-11-08，issue #206 并入维护者第三源）：维护者本机 TokenView 满 5h 窗 134.4M raw（读 133.1M/写 924.8K/入≈0/出 359K）＝周额度 13%，按本库价目 worth $38.42；与 #52 $587.52/183pp、Reddit $40.48/13.333pp 按百分点合并：($587.52+$40.48+$38.42)÷(183+13.333+13)=$3.1836/pp → 月 $1,273.4 ÷ Anthropic 档 $0.419/MTok＝30.39亿；TokenView 自身估值 $40.49 会得 30.49，取本库价目 30.39；Haiku 5.5 细条未拆、周% 为整数读数，弱点见 issue #206。以下为 2026-09-29 裁定原文——28.99→30.54亿，2026-09-29 裁定：issue #52（两个 Pro 账号，每 5 分钟轮询 seven_day %，按 message.id 去重，只计 Opus 5.5 占 95% 以上区段）1,396.81M raw = 周 +183 个百分点，标价 worth $587.52（读 $0.2 / 1h 写 $8 / 5m 写 $5 / 入 $4 / 出 $20）；与原 Reddit 5h 段（worth $40.48 / 周 13.333%）按百分点合并：($40.48+$587.52)÷(13.333+183)＝$3.19865/pp → 月 $1,279.46 ÷ Anthropic 档 $0.419/MTok＝30.54亿。单看 #52 为 30.65、Reddit 段 28.98；raw total 口径 30.53，写全按 5m 价 27.39 不采。high/xhigh 每 1% 标价美元均约 $3.2，effort 只影响速率。互证（仅记录不入权，2026-09-30 裁定关闭 PR #77）：X @kanzakichiya ccusage 两周 478.15M raw＝周 22%+47%（口述），缓存写全为 1h，按实际写价 worth $208.25 → $3.018/pp → 28.81 亿，与 #52 $3.210/pp、Reddit 段 $3.036/pp 差 <7%；三源按百分点合并为 30.09 亿、写按 5m 为 24.52 亿，均不采（claude-adoption-round11-2026-09-30.json）。证据：community-issues-round1-2026-09-29.json。"),
+    ("claude_pro", "Claude Pro", 20, "USD", "claude-opus-5.5", claude_pro_opus55_monthly_yi(), "high", "issue #52（NTRYourWaifu）：两个 Pro 账号轮询 /api/oauth/usage seven_day %、按 message.id 去重，Opus 5.5 ≥95% 区段 1,396.81M raw = 周 +183pp；community-issues-round1-2026-09-29.json；另与 Reddit r/ClaudeCode 帖满窗段（grok_report 条目#1：151,193,723 raw = 周 13.333%）及维护者 2026-11-07 满 5h 窗（508 次，周份额 12.5%）按百分点合并；claude-adoption-round10-2026-09-25.json；local-samples-round1-2026-11-09.json", f"30.54→{claude_pro_opus55_monthly_yi():g}亿（2026-11-10，Anthropic 档）：维护者满 5h 窗 worth ${claude_pro_opus55_maintainer_worth_usd():.3f}（读 133.1M×$0.2＋写 924.8K×$5＋出 359K×$20；写入是 1h，仍按 5 分钟 $5）/12.5pp，与 #52 ${CLAUDE_PRO_OPUS55_ISSUE52_WORTH_USD:.2f}/183pp、Reddit 段 ${claude_pro_opus55_segment_worth_usd():.2f}/13.333pp 合并＝${(claude_pro_opus55_segment_worth_usd()+CLAUDE_PRO_OPUS55_ISSUE52_WORTH_USD+claude_pro_opus55_maintainer_worth_usd())/(CLAUDE_PRO_OPUS55_5H_WEEKLY_FRACTION*100+CLAUDE_PRO_OPUS55_ISSUE52_WEEKLY_PP+CLAUDE_PRO_OPUS55_MAINTAINER_WEEKLY_PP):.5f}/pp → 月 ${(claude_pro_opus55_segment_worth_usd()+CLAUDE_PRO_OPUS55_ISSUE52_WORTH_USD+claude_pro_opus55_maintainer_worth_usd())/(CLAUDE_PRO_OPUS55_5H_WEEKLY_FRACTION*100+CLAUDE_PRO_OPUS55_ISSUE52_WEEKLY_PP+CLAUDE_PRO_OPUS55_MAINTAINER_WEEKLY_PP)*100*MONTH_WEEKS:.2f} ÷$0.419/MTok。本窗单独 {claude_pro_opus55_maintainer_worth_usd()/CLAUDE_PRO_OPUS55_MAINTAINER_WEEKLY_PP*100*MONTH_WEEKS/blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2])/100:.2f}亿 不替换旧样本。写改按 1h $8 的合并 {((claude_pro_opus55_segment_worth_usd()+CLAUDE_PRO_OPUS55_ISSUE52_WORTH_USD+claude_pro_opus55_maintainer_worth_usd(8.0))/(CLAUDE_PRO_OPUS55_5H_WEEKLY_FRACTION*100+CLAUDE_PRO_OPUS55_ISSUE52_WEEKLY_PP+CLAUDE_PRO_OPUS55_MAINTAINER_WEEKLY_PP)*100*MONTH_WEEKS/blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2])/100):.2f}亿 不采。面板整数 13% 的三源合并 30.39 亿不采。Max 20x 的 Pro 腿仍是 #52+Reddit，不并入本窗。证据：local-samples-round1-2026-11-09.json。以下为原 30.54 决策——28.99→30.54亿，2026-09-29 裁定：issue #52（两个 Pro 账号，每 5 分钟轮询 seven_day %，按 message.id 去重，只计 Opus 5.5 占 95% 以上区段）1,396.81M raw = 周 +183 个百分点，标价 worth $587.52（读 $0.2 / 1h 写 $8 / 5m 写 $5 / 入 $4 / 出 $20）；与原 Reddit 5h 段（worth $40.48 / 周 13.333%）按百分点合并：($40.48+$587.52)÷(13.333+183)＝$3.19865/pp → 月 $1,279.46 ÷ Anthropic 档 $0.419/MTok＝30.54亿。单看 #52 为 30.65、Reddit 段 28.98；raw total 口径 30.53，写全按 5m 价 27.39 不采。high/xhigh 每 1% 标价美元均约 $3.2，effort 只影响速率。互证（仅记录不入权，2026-09-30 裁定关闭 PR #77）：X @kanzakichiya ccusage 两周 478.15M raw＝周 22%+47%（口述），缓存写全为 1h，按实际写价 worth $208.25 → $3.018/pp → 28.81 亿，与 #52 $3.210/pp、Reddit 段 $3.036/pp 差 <7%；三源按百分点合并为 30.09 亿、写按 5m 为 24.52 亿，均不采（claude-adoption-round11-2026-09-30.json）。证据：community-issues-round1-2026-09-29.json。"),
+    ("claude_pro", "Claude Pro", 20, "USD", "claude-fable-5.2", claude_pro_fable52_monthly_yi(), "medium",
+     "维护者本机 Claude Code：2026-11-09 19:56–20:19 PT，44 次 claude-fable-5-2（入 89 / 出 60,022 / 缓存读 9,410,355 / 1h 缓存写 282,950）；同一 5h 窗 15%→64%（+49pp）、同一周条 22%→29%（+7pp）；local-samples-round1-2026-11-09.json；https://platform.claude.com/docs/en/about-claude/pricing",
+     f"新增{claude_pro_fable52_monthly_yi():g}亿（2026-11-10，Anthropic 档，medium）：段 worth ${claude_pro_fable52_segment_worth_usd():.4f}（读 9.410M×$0.20＋1h 写 0.283M×$16＋入 89×$8＋出 0.060M×$40）÷7pp×{MONTH_WEEKS:g}周＝月${claude_pro_fable52_segment_worth_usd()/CLAUDE_PRO_FABLE52_WEEKLY_PP*100*MONTH_WEEKS:.2f} ÷ Anthropic 档 ${blended_anthropic(FABLE52_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-fable-5.2'], FABLE52_LIST[2]):.3f}/MTok（5 分钟写价 $10）。没有上一条 Fable 5.2 样本可并，这一条就是该点的全部权重；不替换 claude_pro × claude-opus-5.5。raw 口径 {claude_pro_fable52_raw_monthly_yi():g}亿留作对照。5h 窗 +49pp 与周 +7pp 之比是 7。7pp ±0.5 对应 {claude_pro_fable52_monthly_yi()*7/7.5:.2f}~{claude_pro_fable52_monthly_yi()*7/6.5:.2f}亿。50% 周帽不套（读到的是主周条，没有单独的 Fable 子条）；若套帽为 {claude_pro_fable52_monthly_yi()*CLAUDE_FABLE_WEEKLY_CAP:.2f}亿，不采。n=1、整数读数，且 token 日志与额度条不是同一库 → medium。"),
     # Claude Team Premium 席 × Opus 5.5 —— X @leo114119 推文面板直测（relay 7d 满打周池）
     ("claude_team", "Claude Team Premium", 125, "USD", "claude-opus-5.5", claude_team_opus55_monthly_yi(), "low", "X @leo114119 推文（维护者提供截图）：Claude Team「6.25x」席第三方 relay 使用统计，7d 窗 Opus 5.5 共 4,091,470,718 raw（12,836 次请求；命中读 40.29亿/创建写 4923.9万/新增输入 2.6万/输出 1341.6万，hit 98.8%），帖主称整周用满；面板总成本 $1,320.3794；https://claude.com/pricing（Premium 席 $125/月付、$100/月年付）；claude-team-opus55-round1-2026-10-06.json", f"新增{claude_team_opus55_monthly_yi():g}亿（2026-10-06，Anthropic 档；2026-10-08 裁定 medium→low）：面板分项按 Opus 5.5 标价逐项闭合（写按 5m $5：读×$0.2＋写×$5＋入×$4＋出×$20＝${claude_team_opus55_segment_worth_usd():.2f}≈面板 $1,320.3794）→ 采面板 worth 为周 list-worth，×{MONTH_WEEKS:g}周＝月${CLAUDE_TEAM_OPUS55_WEEK_WORTH_USD * MONTH_WEEKS:,.2f} ÷ Anthropic 档混合价${blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2]):.3f}/MTok；raw 口径 {claude_team_opus55_raw_monthly_yi():g}亿（周 {CLAUDE_TEAM_OPUS55_WEEK_TOKENS / YI:.2f}亿 raw）留作对照；写全按 1h $8 敏感性 {claude_team_opus55_monthly_yi_1h():g}亿 不采（面板按 5m 闭合）。档位：claude.com/pricing（2026-10-08 核对）Premium 席 $125/月付、$100/月年付，官方写 5× Standard 席用量，Standard 席仅写「多于 Pro」、无具体倍数（倍数按 5 小时会话计）；「6.25× Pro」为社区按 Standard≈1.25× Pro 推的说法，非官方口径；挂月付价 $125。自洽（按周 list-worth，采用值×${blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2]):.3f}÷{MONTH_WEEKS:g}）：本周 ${CLAUDE_TEAM_OPUS55_WEEK_WORTH_USD:,.2f} = Pro × Opus 5.5 周 ${claude_pro_opus55_monthly_yi() * 100 * blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2]) / MONTH_WEEKS:,.2f} 的 {CLAUDE_TEAM_OPUS55_WEEK_WORTH_USD / (claude_pro_opus55_monthly_yi() * 100 * blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2]) / MONTH_WEEKS):.2f}×、Max 5x 直测周 ${claude_max5x_opus55_monthly_yi() * 100 * blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2]) / MONTH_WEEKS:,.2f} 的 {CLAUDE_TEAM_OPUS55_WEEK_WORTH_USD / (claude_max5x_opus55_monthly_yi() * 100 * blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2]) / MONTH_WEEKS):.0%}；若 Premium 真为 6.25× Pro 月额应约 {claude_pro_opus55_monthly_yi() * 6.25:.2f}亿，本值仅其 {claude_team_opus55_monthly_yi() / (claude_pro_opus55_monthly_yi() * 6.25):.0%}；初稿「帖主称≈Max 5x、差 4~8%」系 Team raw 比 Max 5x 折算值，单位不同，作废。弱点 → low：n=1 推文、「用满」为帖主口述且面板无额度百分比；第三方 relay 面板非官方 /usage、车头共享席位，7d 滚动窗未对齐官方周重置；官方席位池与 Pro/Max 是否同权重未证；与 6.25× Pro 说法差 34%。Team Standard 席（$20年付/$25月付）无额度样本不画"),
     # xAI —— 面板周额度（维护者面板：Super $25 / Plus $100 / Heavy $250）是 Grok 自己的额度美元，不等于公开标价美元
@@ -1374,7 +1487,7 @@ SUBS = [
     ("kimi_allegretto_cn", "Kimi 会员 199", 199, "CNY", "kimi-k3", kimi_199_monthly_yi(), "medium", f"维护者实测：Allegretto(赠送) k3.1-pro 单日 {KIMI_199_USED_TOKENS} ÷ 控制台月总{KIMI_199_MONTHLY_FRACTION:.2%} 直推月池；kimi-allegretto-quota-round2-2026-10-27.json", "19.46亿（2026-10-27换基）：k3.1-pro 单日37.36M ÷ 月总1.92% 直推；同窗7天9.61%得周池3.89亿、月/周=5.005吻合月池=周池×5；替换旧基14.51亿（2026-07 k3-256k混合ccusage 243.74M/84%反推）——模型等效不同（k3.1-pro vs k3-256k混合），非纯池变化；未折算：面板只存合计"),
     ("kimi_moderato_cn", "Kimi 会员 99", 99, "CNY", "kimi-k3", round(kimi_199_monthly_yi() * 4 / 20, 2), "medium", "199档×官方4/20；kimi-allegretto-quota-round2-2026-10-27.json", "旧2.90亿→3.89亿：随199档换基（k3.1-pro实测）；继承模型等效，不是K3 1M纯模型实测"),
     ("kimi_andante_cn", "Kimi 会员 49", 49, "CNY", "kimi-k3", round(kimi_199_monthly_yi() / 20, 2), "medium", "199档×官方1/20", ""),
-    ("kimi_allegro_cn", "Kimi 会员 699", 699, "CNY", "kimi-k3", round(kimi_199_monthly_yi() * 60 / 20, 2), "medium", "199档×官方60/20；kimi-allegretto-quota-round2-2026-10-27.json", "旧43.53亿→58.38亿：随199档换基（k3.1-pro实测）；继承模型等效，不是K3 1M纯模型实测"),
+    ("kimi_allegro_cn", "Kimi 会员 699", 699, "CNY", "kimi-k3", kimi_699_monthly_yi(), "medium", "issue #182（X @achaosxyz，2026-11-02）：旧版 699 Allegro × k3.1-pro 控制台双图——周额度 99% + Usage over time 分项 787.1M（Input 784.9M 含 Cache 761.6M/97%、Output 2.2M、5552 requests）；kimi-allegro-weekly-panel-x-2026-11-02.json", "58.38→37.95亿（2026-11-08，#182 直测换基）：段 list-worth $220.92（读 761.6M×$0.2 ＋ 普通输入 23.3M×$2 ＋ 出 2.2M×$10）÷99% ×5 周 ÷ 标准负载混合价 $0.294/MTok；raw 口径 787.1M÷99%×5＝39.75亿 留作对照（未折算时即旧口径）。与 199 档×官方 60/20 的 58.38 亿差 35%——直测取代档间倍率，199 档自身 19.46 亿（raw）不动，两者比值由 3.0× 变为 1.95×，官方 60/20 倍率与实测不符记为准；弱点：作者称另有对话消耗未计入统计，99% 可能包含未计入用量，周池为下限；单账号 n=1，置信度维持 medium"),
     # K2.7 Standard —— ¥199纯模型面板直接按月百分比反推；其余档按官方Code credits 1x/4x/20x/60x
     ("kimi_allegretto_cn", "Kimi 会员 199", 199, "CNY", "kimi-k2.7-code", kimi_k27_199_monthly_yi(), "medium", f"V2EX纯K2.7面板 {KIMI_K27_199_USED_TOKENS}/{KIMI_K27_199_MONTHLY_USED_FRACTION:.2%}=15.68亿；kimi-k27-round7-2026-09-08.json；kimi-k27-adoption-round8-2026-09-08.json", "新增K2.7 Standard独立点：采用直接月%反推15.68亿，不与较弱的699档混合样本取中点；可信范围约15.6~16.7亿。单一纯模型账号证据high，但跨账号/时期采用降为medium；未折算：只有 cache 读＋合计，缺 input/output 分项"),
     ("kimi_moderato_cn", "Kimi 会员 99", 99, "CNY", "kimi-k2.7-code", round(kimi_k27_199_monthly_yi() * 4 / 20, 2), "medium", "199档×官方4/20；kimi-k27-adoption-round8-2026-09-08.json", "新增3.14亿：继承199档15.68亿与官方Code credits倍率；非独立实测"),
@@ -1387,8 +1500,8 @@ SUBS = [
     #   证据：kimi-v2-plans-round1-2026-10-26.json
     ("kimi_plus_cn", "Kimi Plus 99", 99, "CNY", "kimi-k3", round(kimi_199_monthly_yi() * 4 / 20 / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增1.95亿（v2）：Plus ¥99 接 Moderato ¥99 价位＝v1 3.89亿×1/2；取消周限额仅留5h+月池；非独立实测"),
     ("kimi_pro_cn", "Kimi Pro 199", 199, "CNY", "kimi-k3", round(kimi_199_monthly_yi() / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增9.73亿（v2）：Pro ¥199 接 Allegretto ¥199 价位＝v1 19.46亿×1/2；取消周限额仅留5h+月池；非独立实测"),
-    ("kimi_max_cn", "Kimi Max 699", 699, "CNY", "kimi-k3", round(kimi_199_monthly_yi() * 60 / 20 / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增29.19亿（v2）：Max ¥699 接 Allegro ¥699 价位＝v1 58.38亿×1/2；取消周限额仅留5h+月池；非独立实测"),
-    ("kimi_ultra_cn", "Kimi Ultra 1399", 1399, "CNY", "kimi-k3", round(kimi_199_monthly_yi() * 60 / 20 / 2 * 2, 2), "medium", "官方新套餐页「Ultra为Max的2倍」+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增58.38亿（v2）：Ultra ¥1399 无 v1 同价对照，按官方 Agent 额度 28/14=2× Max 派生；数值恰同 v1 Allegro；非独立实测"),
+    ("kimi_max_cn", "Kimi Max 699", 699, "CNY", "kimi-k3", round(kimi_699_monthly_yi() / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json；issue #182 直测换基", f"29.19→{round(kimi_699_monthly_yi() / 2, 2):g}亿（v2）：Max ¥699 接 Allegro ¥699 价位＝v1 {kimi_699_monthly_yi():g}亿×1/2，随 #182 直测换基；取消周限额仅留5h+月池；非独立实测"),
+    ("kimi_ultra_cn", "Kimi Ultra 1399", 1399, "CNY", "kimi-k3", round(kimi_699_monthly_yi(), 2), "medium", "官方新套餐页「Ultra为Max的2倍」+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json；issue #182 直测换基", f"58.38→{kimi_699_monthly_yi():g}亿（v2）：Ultra ¥1399 无 v1 同价对照，按官方 Agent 额度 28/14=2× Max 派生，随 #182 直测换基后与 v1 Allegro 同值；非独立实测"),
     ("kimi_plus_cn", "Kimi Plus 99", 99, "CNY", "kimi-k2.7-code", round(kimi_k27_199_monthly_yi() * 4 / 20 / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增1.57亿（v2）：Plus ¥99 接 Moderato ¥99 价位＝v1 3.14亿×1/2；非独立实测"),
     ("kimi_pro_cn", "Kimi Pro 199", 199, "CNY", "kimi-k2.7-code", round(kimi_k27_199_monthly_yi() / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增7.84亿（v2）：Pro ¥199 接 Allegretto ¥199 价位＝v1 15.68亿×1/2；非独立实测"),
     ("kimi_max_cn", "Kimi Max 699", 699, "CNY", "kimi-k2.7-code", round(kimi_k27_199_monthly_yi() * 60 / 20 / 2, 2), "medium", "官方新套餐页+维护者裁定v2=v1×1/2；kimi-v2-plans-round1-2026-10-26.json", "新增23.52亿（v2）：Max ¥699 接 Allegro ¥699 价位＝v1 47.04亿×1/2；非独立实测"),
@@ -1435,6 +1548,9 @@ RATIO_COMPOSER = blended(0.5, 2, 6) / blended(0.2, 0.5, 2.5)   # Grok 4.6 → Co
 RATIO_COMPOSER_FAST = blended(0.5, 2, 6) / blended(0.5, 3, 15)
 RATIO_SONNET = round(blended(0.5, 5, 25) / blended(0.2, 2, 10), 2)       # Opus → Sonnet 5 = 2.5
 # Opus 5.5 → Sonnet 5.5 / Haiku 5.5：5.5 家族统一锚 Pro×Opus5.5 实测池（$1,279.46/月 list-worth，图取整 $1,280）
+# Pro × Sonnet 5.5 / Haiku 5.5 仍按 2026-09-29 的 Opus 锚 30.54 亿做价格比派生。
+# 2026-11-10 把维护者 5h 窗并进 Opus 5.5 后，这两行不跟着改。
+CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI = 30.54
 RATIO_SONNET55 = blended_anthropic(0.2, 5.0, 20.0) / blended_anthropic(0.1, 2.5, 10.0)   # Sonnet 5.5 降价后 = 2.0
 # Haiku 5.5 分段价（platform.claude.com pricing，2026-10-08 核对）：≤100K / >100K（5×）两档 (cached, 写5m, 出)。
 #   2026-10-08 裁定按 token 计 90% 落 ≤100K 档、10% 落 >100K 档混合（社区说法「约 90% 请求 <100K」，
@@ -1495,13 +1611,14 @@ DERIVED = [
     # Fable 5.1：20x 已按 round3 同框样本挂 30.06亿（SUBS 直测行）；5x 借其隐含权重 2.61 派生，
     #   注意 Fable5 权重两档本就不同（6.5/4.25），跨档同权重只是假设 → low
     ("claude_max_5x", "claude-opus-5", "claude-fable-5.1", CLAUDE_FABLE_WEEKLY_CAP / CLAUDE_FABLE51_W, "low", f"15.03→{78.5*CLAUDE_FABLE_WEEKLY_CAP/CLAUDE_FABLE51_W:g}亿：78.5×0.5/{CLAUDE_FABLE51_W:.2f}——借20x同框样本隐含权重派生（round9 时间线校正后权重2.61→4.54），非独立实测；单权重跨档沿用仍属假设（Fable5 两档不同为前车之鉴）；claude-fable51-round3/round9", False),
-    # Opus 5.5：20x 按 MiaAI 窗×5.5 窗/周与 Pro×10 加权 315.38亿、Pro 按 #52+Reddit 段 30.54亿（均 SUBS 行）；
+    # Opus 5.5：20x 按 MiaAI 窗×5.5 窗/周与 Pro×10 加权 315.38亿（Pro 腿仍是 #52+Reddit，不含 2026-11-07 窗）；
+    # Pro 本身在 SUBS 行按 #52+Reddit+维护者 12.5pp 合并。
     #   5x 按裁定的 20x=5x×2 周池关系由 20x 采用值 ÷2 派生（同 Opus 5 行 157÷2）——2026-09-27 裁定两档精确同价并为一点 → low（标价混合比法 152.64亿 差1.2% 留作备选口径）
     # Sonnet 5.5 / Haiku 5.5（2026-10-08 Haiku 发布日入）：X @1kartikkabadi1 推算图，全部按同套餐 Opus 5.5 锚
     #   × 标价混合价比派生，非实测（池权重=价格比假设，Haiku ~19.5× 外推敏感 → 全档 low）；
     #   Haiku 按 90/10 分段混合（2026-10-08 裁定），纯 ≤100K 与 50/50 留注；5x 锚同套餐 Opus 5.5 直测行（2026-10-08 裁定，不再借 20x÷2）
-    ("claude_pro", "claude-opus-5.5", "claude-sonnet-5.5", RATIO_SONNET55, "low", f"新增{claude_pro_opus55_monthly_yi()*RATIO_SONNET55:.2f}亿：Pro Opus5.5 实测锚 {claude_pro_opus55_monthly_yi():g}亿 × 混合价比 {RATIO_SONNET55:g}（Sonnet5.5 降价后 $0.2095 vs Opus5.5 $0.419）；发布价 $0.3065 口径 {claude_pro_opus55_monthly_yi()*blended_anthropic(0.2,5.0,20.0)/blended_anthropic(0.2,2.5,10.0):.2f}亿 留对照；X @1kartikkabadi1 推算图 + 官方价表；claude-haiku55-round1-2026-10-08.json", True),
-    ("claude_pro", "claude-opus-5.5", "claude-haiku-5.5", RATIO_HAIKU55, "low", f"新增{claude_pro_opus55_monthly_yi()*RATIO_HAIKU55:.2f}亿：Pro Opus5.5 实测锚 {claude_pro_opus55_monthly_yi():g}亿 × 混合价比 {RATIO_HAIKU55:.4f}（Opus5.5 $0.419 vs Haiku5.5 90/10 分段混合 ${HAIKU55_BLEND:.6f}：≤100K 档 $0.015325 占 90%、>100K 档 $0.076625 占 10%，2026-10-08 裁定按 token 近似 90% 落 ≤100K；社区说法为约 90% 请求 <100K，按请求数折 token 会低估 >100K 份额）；不采：纯 ≤100K 档 {claude_pro_opus55_monthly_yi()*RATIO_HAIKU55_LE100K:.2f}亿、50/50 {claude_pro_opus55_monthly_yi()*RATIO_HAIKU55_5050:.2f}亿；X @1kartikkabadi1 推算图；claude-haiku55-round1-2026-10-08.json", True),
+    ("claude_pro", "claude-opus-5.5", "claude-sonnet-5.5", RATIO_SONNET55, "low", f"新增{CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI*RATIO_SONNET55:.2f}亿：Pro Opus5.5 实测锚 {CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI:g}亿 × 混合价比 {RATIO_SONNET55:g}（Sonnet5.5 降价后 $0.2095 vs Opus5.5 $0.419）；发布价 $0.3065 口径 {CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI*blended_anthropic(0.2,5.0,20.0)/blended_anthropic(0.2,2.5,10.0):.2f}亿 留对照；X @1kartikkabadi1 推算图 + 官方价表；claude-haiku55-round1-2026-10-08.json", True),
+    ("claude_pro", "claude-opus-5.5", "claude-haiku-5.5", RATIO_HAIKU55, "low", f"新增{CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI*RATIO_HAIKU55:.2f}亿：Pro Opus5.5 实测锚 {CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI:g}亿 × 混合价比 {RATIO_HAIKU55:.4f}（Opus5.5 $0.419 vs Haiku5.5 90/10 分段混合 ${HAIKU55_BLEND:.6f}：≤100K 档 $0.015325 占 90%、>100K 档 $0.076625 占 10%，2026-10-08 裁定按 token 近似 90% 落 ≤100K；社区说法为约 90% 请求 <100K，按请求数折 token 会低估 >100K 份额）；不采：纯 ≤100K 档 {CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI*RATIO_HAIKU55_LE100K:.2f}亿、50/50 {CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI*RATIO_HAIKU55_5050:.2f}亿；X @1kartikkabadi1 推算图；claude-haiku55-round1-2026-10-08.json", True),
     ("claude_max_20x", "claude-opus-5.5", "claude-sonnet-5.5", RATIO_SONNET55, "low", f"新增{CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_SONNET55:.2f}亿：20x Opus5.5 采用值 {CLAUDE_OPUS55_MAX20X_MONTHLY_YI:g}亿 × 混合价比 {RATIO_SONNET55:g}，同 Pro 口径派生非实测；claude-haiku55-round1-2026-10-08.json", True),
     ("claude_max_20x", "claude-opus-5.5", "claude-haiku-5.5", RATIO_HAIKU55, "low", f"新增{CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_HAIKU55:.2f}亿：20x Opus5.5 采用值 {CLAUDE_OPUS55_MAX20X_MONTHLY_YI:g}亿 × 混合价比 {RATIO_HAIKU55:.4f}（Haiku5.5 90/10 分段混合），同 Pro 口径派生非实测；外推幅度大，若池权重偏离价格比须重推；不采：纯 ≤100K {CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_HAIKU55_LE100K:.2f}亿、50/50 {CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_HAIKU55_5050:.2f}亿；claude-haiku55-round1-2026-10-08.json", True),
     ("claude_max_5x", "claude-opus-5.5", "claude-sonnet-5.5", RATIO_SONNET55, "low", f"新增{claude_max5x_opus55_monthly_yi()*RATIO_SONNET55:.2f}亿：5x Opus5.5 直测锚 {claude_max5x_opus55_monthly_yi():g}亿 × 混合价比 {RATIO_SONNET55:g}，同 Pro 口径派生非实测；2026-10-08 裁定锚同套餐直测行，不用 20x÷2（得 {CLAUDE_OPUS55_MAX20X_MONTHLY_YI*RATIO_SONNET55/CLAUDE_WEEKLY_20X_TO_5X:.2f}亿，不采）；claude-haiku55-round1-2026-10-08.json", False),
@@ -1600,7 +1717,7 @@ DATA_DATES = {
     ("chatgpt_plus", "gpt-6-astra"): ("2026-09-11", "sample"),
     ("chatgpt_plus", "gpt-6-sol"): ("2026-09-24", "sample"),
     ("chatgpt_plus", "gpt-6-luna"): ("2026-09-27~2026-09-28", "sample"),
-    ("chatgpt_plus", "gpt-6.1-sol"): ("2026-09-30", "sample"),
+    ("chatgpt_plus", "gpt-6.1-sol"): ("2026-11-09", "sample"),
     ("chatgpt_pro_20x", "gpt-6-astra"): ("2026-09-07~2026-09-21", "sample"),
     ("devin_max", "gpt-6-astra"): ("2026-09-14", "sample"),
     ("devin_max", "claude-opus-5.5"): ("2026-09-23", "sample"),
@@ -1614,12 +1731,16 @@ DATA_DATES = {
     ("google_ai_pro_us", "gemini-3.8-flash"): ("2026-09-12~2026-09-27", "sample"),
     ("google_ai_pro_us", "gemini-3.6-flash"): ("2026-09-13~2026-09-27", "sample"),
     ("google_ai_pro_us", "gemini-4-argon"): ("2026-10-16", "sample"),
+    ("google_ai_pro_us", "gemini-4-neon"): ("2026-11-20", "sample"),
     ("claude_pro", "claude-opus-5"): ("2026-09-14~2026-09-22", "sample"),
     ("claude_max_20x", "claude-opus-5"): ("2026-08", "sample"),
     ("claude_max_20x", "claude-fable-5.1"): ("2026-09-04~2026-09-05", "sample"),
     ("claude_max_20x", "claude-opus-5.5"): ("2026-09-22~2026-09-27", "sample"),
     ("claude_max_5x", "claude-opus-5.5"): ("2026-09-29~2026-10-03", "sample"),
     ("claude_pro", "claude-opus-5.5"): ("2026-09-22~2026-11-07", "sample"),
+    ("claude_pro", "claude-fable-5.2"): ("2026-11-09", "sample"),
+    ("claude_pro", "claude-sonnet-5.5"): ("2026-09-22~2026-09-27", "derived", "Claude Pro · claude-opus-5.5"),
+    ("claude_pro", "claude-haiku-5.5"): ("2026-09-22~2026-09-27", "derived", "Claude Pro · claude-opus-5.5"),
     ("claude_team", "claude-opus-5.5"): ("2026-09-30~2026-10-06", "sample"),
     ("supergrok", "grok-4.6"): ("2026-08-23~2026-09-20", "sample"),
     ("supergrok_lite", "grok-4.6"): ("2026-07", "sample"),
@@ -1629,6 +1750,7 @@ DATA_DATES = {
     ("cursor_pro", "grok-4.6"): ("2026-08-27", "sample"),
     ("cursor_ultra", "claude-opus-5.5"): ("2026-09-14~2026-10-05", "sample"),
     ("kimi_allegretto_cn", "kimi-k3"): ("2026-10-27", "sample"),
+    ("kimi_allegro_cn", "kimi-k3"): ("2026-10-26~2026-11-02", "sample"),
     ("kimi_allegretto_cn", "kimi-k2.7-code"): ("2026-08-20", "sample"),
     ("aliyun_coding_pro_cn", "qwen3.7-plus"): ("2026-07~2026-08", "sample"),
     ("minimax_token_plus_cn", "minimax-m3"): ("2026-06-01", "official"),
@@ -1687,7 +1809,6 @@ DATA_DATE_INHERIT = {
     ("claude_max_5x", "claude-opus-5"): ("claude_max_20x", "claude-opus-5"),
     ("cursor_pro_plus", "grok-4.6"): ("cursor_ultra", "grok-4.6"),
     ("kimi_moderato_cn", "kimi-k3"): ("kimi_allegretto_cn", "kimi-k3"),
-    ("kimi_allegro_cn", "kimi-k3"): ("kimi_allegretto_cn", "kimi-k3"),
     ("kimi_moderato_cn", "kimi-k2.7-code"): ("kimi_allegretto_cn", "kimi-k2.7-code"),
     ("kimi_andante_cn", "kimi-k2.7-code"): ("kimi_allegretto_cn", "kimi-k2.7-code"),
     ("kimi_allegro_cn", "kimi-k2.7-code"): ("kimi_allegretto_cn", "kimi-k2.7-code"),
@@ -1761,6 +1882,8 @@ def workload_of(pid: str, billing: str, model: str = "") -> str:
     if (pid == "chatgpt_plus" and model in ("gpt-6-sol", "gpt-6-luna", "gpt-6.1-sol", "gpt-5.6-luna")) \
             or (pid in ("chatgpt_pro_10x", "chatgpt_pro_20x") and model == "gpt-5.6-luna"):
         return "standard"
+    if pid in ("kimi_allegro_cn", "kimi_max_cn", "kimi_ultra_cn") and model == "kimi-k3":
+        return "standard"
     if pid.startswith(("opencode_", "command_code_", "ollama_", "glm_coding_", "mimo_token_")):
         return "standard"
     return "measured"
@@ -1812,8 +1935,11 @@ def main() -> None:
     derived_base = {}  # (派生行 plan_id, served_model) -> (锚点 plan_id, served_model)，数据日期沿用锚点
     for pid, bmodel, model, ratio, conf, how, main_ in DERIVED:
         b = base[(pid, bmodel)]
-        rows.append(sub_row(pid, b["plan_name"], b["price"], b["currency"], model, b["monthly_yi"] * ratio, conf,
-                            f"由同套餐 {bmodel} {b['monthly_yi']} 亿 × {ratio}", how, "main" if main_ and is_main(pid, bmodel) else "full"))
+        anchor_yi = b["monthly_yi"]
+        if (pid, model) in {("claude_pro", "claude-sonnet-5.5"), ("claude_pro", "claude-haiku-5.5")}:
+            anchor_yi = CLAUDE_PRO_OPUS55_PRICE_RATIO_ANCHOR_YI
+        rows.append(sub_row(pid, b["plan_name"], b["price"], b["currency"], model, anchor_yi * ratio, conf,
+                            f"由同套餐 {bmodel} {anchor_yi} 亿 × {ratio}", how, "main" if main_ and is_main(pid, bmodel) else "full"))
         derived_base[(pid, model)] = (pid, bmodel)
     for pid in ("cursor_ultra", "cursor_pro", "cursor_pro_plus"):
         b = base[(pid, "grok-4.6")]

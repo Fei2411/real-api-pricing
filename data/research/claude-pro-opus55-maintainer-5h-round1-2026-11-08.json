@@ -28,7 +28,7 @@
         "tokenViewPath": "$40.49 ÷ 13% × 4 周 ÷ $0.419/MTok ≈ 29.73 亿/月（TokenView 自身估值口径，不采用）",
         "merged3": "($587.52+$40.48+$38.42) ÷ (183+13.333+13) = $3.1836/pp → 月 $1,273.4 ÷ $0.419/MTok = 30.39 亿/月（采用）"
       },
-      "adopted": "claude_pro::claude-opus-5.5 30.54→30.39亿（high，2026-11-08）",
+      "adopted": "superseded by local-samples-round1-2026-11-09.json (#228, 12.5% weekly share → 30.46亿; the 13% integer reading 30.39亿 was not adopted)",
       "caveats": [
         "周额度 13% 为整数读数，未记窗口起止百分比；5h 窗是否精确跑到 0% 剩余未记录",
         "面板数字为 1 位小数，token 有取整误差",

@@ -1,0 +1,256 @@
+{
+  "collectedAt": "2026-11-10",
+  "adoptionStatus": "Adopted 2026-11-10 in scripts/build_adopted.py by percentage-point weighting. A new sample is merged with the older samples of the same point; it does not replace them. claude_pro × claude-fable-5.2 has no older sample, so its 7 weekly pp are the whole weight and do not replace claude_pro × claude-opus-5.5.",
+  "scopeNote": "2026-11-09 本机一轮的三个样本。Claude Pro × Fable 5.2 见 issue #226；ChatGPT Plus × gpt-6.1-sol 周窗见 issue #227；Claude Pro × Opus 5.5 是 issue #206 / PR #207 的同一满 5h 窗（508 次，2026-11-07 22:22–23:38 PT），周份额改按 12.5% 而不是面板整数 13%。截图不入库。",
+  "method": "CONVENTIONS.md §2.4：带分项的样本按该模型标价折 list-worth，÷ 段占额度的百分点，再与已有样本按百分点合并。月 = 周 worth × 4。Anthropic 行的 token 分母用 anthropicTokenMix（缓存读 97% / 5 分钟缓存写 2.5% / 输出 0.5%，混合价 $0.419/MTok）。OpenAI 行用 standardTokenMix（97% / 2.5% / 0.5%）。单独一条新样本的外推不替换已采用值。",
+  "samples": [
+    {
+      "id": "claude-pro-fable52-2026-11-09",
+      "issue": 226,
+      "issueUrl": "https://github.com/Fei2411/real-api-pricing/issues/226",
+      "planId": "claude_pro",
+      "plan": "Claude Pro",
+      "priceUsd": 20,
+      "model": "claude-fable-5.2",
+      "client": "Claude Code",
+      "window": {
+        "timezone": "America/Los_Angeles",
+        "calls": 44,
+        "callRangePt": "2026-11-09 19:56:49–20:19:50",
+        "sessionResetPt": "2026-11-09 21:50",
+        "weekReset": "Sunday 06:00",
+        "readingsPt": [
+          {"at": "2026-11-09 19:25", "sessionUsedPct": 15, "weekUsedPct": 22},
+          {"at": "2026-11-09 21:06", "sessionUsedPct": 64, "weekUsedPct": 29}
+        ],
+        "sessionPp": 49,
+        "weekPp": 7,
+        "weekOverSession": 7,
+        "usageCreditsUsd": 0,
+        "fableResetExpiresPt": "2026-11-16 23:59"
+      },
+      "tokens": {
+        "input": 89,
+        "output": 60022,
+        "cacheRead": 9410355,
+        "cacheWrite1h": 282950,
+        "total": 9753416,
+        "hitRate": 0.9708,
+        "hitRateFormula": "cacheRead / (input + cacheWrite + cacheRead) = 9410355 / 9693394"
+      },
+      "pricesPerMtok": {
+        "input": 8,
+        "output": 40,
+        "cacheRead": 0.2,
+        "cacheWrite1h": 16,
+        "cacheWrite5mUsedOnlyForStandardMix": 10,
+        "source": "platform.claude.com；本段写入全部是 1h，段 worth 按 $16，不改按 $10",
+        "standardBlend": 0.644,
+        "standardBlendFormula": "0.97×$0.20 + 0.025×$10 + 0.005×$40；$10 = 输入 $8 × 1.25，与库内其他 Anthropic 模型的 5 分钟写价同倍率"
+      },
+      "listWorthUsd": 8.810863,
+      "listWorthFormula": "(89×8 + 60022×40 + 9410355×0.20 + 282950×16) / 1e6",
+      "pools": {
+        "sessionTokens": 19904931,
+        "sessionYi": 0.199,
+        "weekTokens": 139334514,
+        "weekYi": 1.393,
+        "sessionWorthUsd": 17.981353,
+        "weekWorthUsd": 125.869471,
+        "stated": {"sessionWorthUsd": 17.98, "weekWorthUsd": 125.87},
+        "formula": "9753416 / 0.49 与 / 0.07；美元同样除以百分点"
+      },
+      "standardLoad": {
+        "sessionTokens": 27921355,
+        "sessionYi": 0.279,
+        "weekTokens": 195449488,
+        "weekYi": 1.954,
+        "monthYiIfSaturated": 7.818,
+        "rawMonthYi": 5.573,
+        "formula": "段 API 美元 ÷ 占比 ÷ $0.644/MTok；美元池不变。月 = 周 × 4，只作对照"
+      },
+      "adopted": "claude_pro × claude-fable-5.2 = 7.82 亿/月 medium。周 +7pp 是该点的全部权重。不替换 claude_pro × claude-opus-5.5。50% 周帽不套。",
+      "notUsed": "若表不计缓存读，池会变成 700,124 与 4,900,871。套 50% 周帽为 3.91 亿。都不采。"
+    },
+    {
+      "id": "chatgpt-plus-gpt61sol-week-2026-11-09",
+      "issue": 227,
+      "issueUrl": "https://github.com/Fei2411/real-api-pricing/issues/227",
+      "planId": "chatgpt_plus",
+      "plan": "ChatGPT Plus",
+      "priceUsd": 20,
+      "model": "gpt-6.1-sol",
+      "client": "Codex",
+      "window": {
+        "timezone": "America/Los_Angeles",
+        "startPt": "2026-11-04 21:02",
+        "resetPt": "2026-11-11 21:02",
+        "lengthMinutes": 10080,
+        "readingPt": "2026-11-09 22:11",
+        "weekUsedPct": 67,
+        "callsAllModels": 1044,
+        "callsSol": 710,
+        "note": "67% 是 Plus 周条，不是 Sol 独占。同窗另有 334 次调用，含 codex-auto-review 与 11 次 terra。不能把 67pp 记成纯 gpt-6.1-sol。"
+      },
+      "solTokens": {
+        "input": 2275419,
+        "output": 387282,
+        "cacheRead": 147337984,
+        "cacheWrite": 0,
+        "total": 150000685,
+        "totalYi": 1.5,
+        "hitRate": 0.9848,
+        "hitRateFormula": "147337984 / (2275419 + 147337984)"
+      },
+      "pricesPerMtok": {
+        "cacheRead": 0.1,
+        "input": 2,
+        "output": 10,
+        "cacheWrite": 2.5,
+        "cacheWriteApplies": false,
+        "standardBlend": 0.197,
+        "standardBlendFormula": "0.97×$0.10 + 0.025×$2 + 0.005×$10",
+        "source": "与采用行相同：learn.chatgpt.com credits 2.5/50/250 ÷ 25"
+      },
+      "solListWorthUsd": 23.157456,
+      "solListWorthFormula": "(2275419×2 + 147337984×0.10 + 387282×10) / 1e6",
+      "allModelsAt67Pct": {
+        "rawTokens": 181646925,
+        "hitRate": 0.9825,
+        "apiUsd": 25.77,
+        "nonSolRawTokens": 31646240
+      },
+      "weekDividedBy067": {
+        "rawTokens": 271114813,
+        "rawYi": 2.711,
+        "apiUsd": 38.47,
+        "apiUsdUnrounded": 38.46268656716418,
+        "standardLoadYi": 2.151,
+        "standardLoadMonthYiIfSaturated": 8.604,
+        "standardLoadNote": "2.151 亿是基线对窗口内全部 Plus 模型做周 ÷ 0.67 的标准负载，不是从 Sol 的 $23.16 单独除以 $0.197 得到的。只折 Sol：$23.157456 / $0.197 × 1e6 = 117,550,540（1.176 亿），这是 67% 处的 Sol，不是整周。",
+        "adoption": "discarded; not an input. The full-week 2.151亿 / $38.47 extrapolation is not averaged into chatgpt_plus × gpt-6.1-sol."
+      },
+      "falseSolOnlyExtrapolation": {
+        "weekWorthUsd": 34.56,
+        "monthYi": 7.02,
+        "formula": "$23.157456 / 0.67 × 4 / $0.197/MTok",
+        "whyNotUsed": "把其他模型烧掉的额度记到 Sol 上"
+      },
+      "comparisonToAdopted": {
+        "adoptedMonthlyYi": 8.7,
+        "adoptedWeeklyWorthUsd": 42.85,
+        "adoptedEvidence": "chatgpt-gpt61sol-plus-round3-2026-09-30.json；周窗剩余 81%→50%（31pp）纯 Sol，list-worth $13.2824",
+        "thisWeekApiOverAdoptedWeek": 0.9,
+        "thisStandardLoadMonthOverAdopted": 0.99,
+        "notASolSample": "8.604 亿/月与 8.70 亿只差约 1%，但分子混有 codex-auto-review 和 terra，不能当成第二条纯 Sol 百分点并进 31pp。"
+      },
+      "adopted": "chatgpt_plus × gpt-6.1-sol 8.70→15.16 亿/月。旧 31pp / 8.70 亿不入权。整周 67% used 外推 2.151 亿 / $38.47 已丢弃，不是输入。只平均两条标准负载周读数：日志 6 点 65%→71% 为 4.08 亿、$73.17；7 点下降为 3.50 亿、$62.71。中点周池 3.79 亿、$67.94 ×4 周 = 15.16 亿/月，$20/15.16亿 token = $0.013192612/MTok。Pro 5x/20x 不派生。",
+      "discardedReading": {"label": "full week at 67% used", "standardLoadYi": 2.151, "apiUsd": 38.47, "reason": "not an input"},
+      "newWeekReadings": [
+        {"label": "6 logged points, 65% to 71%", "standardLoadYi": 4.08, "apiUsd": 73.17},
+        {"label": "7-point drop", "standardLoadYi": 3.50, "apiUsd": 62.71}
+      ],
+      "midpoint": {"weeklyStandardLoadYi": 3.79, "weeklyApiUsd": 67.94, "monthlyYi": 15.16, "usdPerMtok": 0.013192612}
+    },
+    {
+      "id": "claude-pro-opus55-5h-2026-11-07",
+      "issue": 206,
+      "issueUrl": "https://github.com/Fei2411/real-api-pricing/issues/206",
+      "openAdoptionPr": {
+        "number": 207,
+        "url": "https://github.com/Fei2411/real-api-pricing/pull/207",
+        "proposed": "30.54 → 30.39 亿/月，周份额用面板整数 13%",
+        "state": "open, not merged; origin/main adopted.csv is still 30.54"
+      },
+      "planId": "claude_pro",
+      "plan": "Claude Pro",
+      "priceUsd": 20,
+      "model": "claude-opus-5.5",
+      "client": "Claude Code",
+      "window": {
+        "timezone": "America/Los_Angeles",
+        "date": "2026-11-07",
+        "rangePt": "22:22–23:38",
+        "calls": 508,
+        "kind": "one full 5h session",
+        "weekShare": 0.125,
+        "weekShareNot": 0.13,
+        "weekShareNote": "issue #206 与 PR #207 用的是面板整数 13%。本轮把同一窗的周份额取为 12.5%（1/8），不是 13%。没有新的截图入库。"
+      },
+      "tokens": {
+        "cacheRead": 133100000,
+        "cacheWrite": 924800,
+        "input": 0,
+        "output": 359000,
+        "componentSum": 134383800,
+        "panelTotal": 134400000,
+        "source": "issue #206 TokenView 1 位小数：读 133.1M / 写 924.8K / 出 359K；输入按「新增 1.3M 不含缓存读」≈ 写+输出，取 0。worth 用分量，不用 134.4M 顶栏。",
+        "cacheWriteTtl": "1h",
+        "pricedWriteTier": "5m",
+        "pricedWritePerMtok": 5,
+        "actual1hWritePerMtok": 8,
+        "why5m": "写入实际是 1h。本库这条 Reddit 段和 PR #207 都按 ANTHROPIC_CACHE_WRITE_5M 的 $5 计价。本文件沿用 $5，不改按 $8。"
+      },
+      "pricesPerMtok": {
+        "cacheRead": 0.2,
+        "input": 4,
+        "output": 20,
+        "cacheWrite5m": 5,
+        "anthropicBlend": 0.419,
+        "anthropicBlendFormula": "0.97×$0.20 + 0.025×$5 + 0.005×$20"
+      },
+      "segmentWorthUsd": 38.424,
+      "segmentWorthFormula": "(133100000×0.2 + 924800×5 + 359000×20) / 1e6",
+      "statedRounded": {
+        "segmentWorthUsd": 38.43,
+        "sessionStandardLoadYi": 0.917,
+        "weekStandardLoadYi": 7.34,
+        "weekWorthUsd": 307.44,
+        "note": "$38.43 是 $38.424 的分位写法；307.44 = 38.43 / 0.125。标准负载 token = 美元 ÷ $0.419/MTok。精确分量：$38.424 → 5h 0.917 亿，周 7.336 亿 / $307.39。"
+      },
+      "standardLoadExact": {
+        "sessionTokens": 91704057,
+        "sessionYi": 0.917,
+        "weekTokens": 733632458,
+        "weekYi": 7.336,
+        "weekWorthUsd": 307.392,
+        "formula": "$38.424 / $0.419 × 1e6；周 = 该数 / 0.125"
+      },
+      "percentagePointMerge": {
+        "existing": [
+          {
+            "source": "issue #52",
+            "worthUsd": 587.52,
+            "weeklyPp": 183,
+            "evidence": "community-issues-round1-2026-09-29.json"
+          },
+          {
+            "source": "Reddit r/ClaudeCode full 5h",
+            "worthUsd": 40.481924,
+            "weeklyPp": 13.333,
+            "weeklyFractionInCode": 0.13333,
+            "evidence": "CLAUDE_PRO_OPUS55_SEGMENT in scripts/build_adopted.py；写按 5m $5"
+          }
+        ],
+        "thisSample": {"worthUsd": 38.424, "weeklyPp": 12.5},
+        "worthSumUsd": 666.425924,
+        "ppSum": 208.833,
+        "usdPerPp": 3.1911906834647783,
+        "usdPerPpRounded": 3.191,
+        "monthlyYiExact": 30.464827527110053,
+        "monthlyYiRepoRound2": 30.46,
+        "monthlyYiInBrief": 30.47,
+        "roundingNote": "月亿数按 build_adopted.py 的 round(..., 2)：30.4648 → 30.46。任务书写的 $3.191/pp → 30.47 是同一合并的另一侧舍入，不另算一条样本。两条都不替换已采用数。",
+        "formula": "(40.481924 + 587.52 + 38.424) / (13.333 + 183 + 12.5) × 100 × 4 / $0.419 / 100",
+        "sampleAloneMonthlyYi": 29.35,
+        "sampleAloneFormula": "$38.424 / 0.125 × 4 / $0.419 / 100 = 29.345；这是单条样本，不采用",
+        "oneHourWriteNotUsed": {
+          "segmentWorthUsd": 41.1984,
+          "mergedMonthlyYi": 30.59,
+          "note": "写改按 1h $8 的合并。不采用。本文件按仓库的 5 分钟 $5。"
+        }
+      },
+      "adopted": "claude_pro × claude-opus-5.5 30.54→30.46 亿/月。#52 $587.52/183pp、Reddit $40.481924/13.333pp、本窗 $38.424/12.5pp 合并为 $3.19119/pp。round(..., 2) 得 30.46；未舍入是 30.465。本窗单独 29.35 亿不替换旧样本。面板整数 13% 的 30.39 不采。写按 1h $8 的 30.59 不采。Max 20x 仍不并入本窗。"
+    }
+  ]
+}

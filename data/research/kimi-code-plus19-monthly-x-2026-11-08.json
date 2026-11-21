@@ -1,0 +1,37 @@
+{
+  "recordedAt": "2026-11-08",
+  "sourceType": "public_x_post_with_sessions_table (issue #202)",
+  "scope": "Kimi Code Plus $19 月池打满样本（单账号，9 天用尽）。档位经官方国际价表核对为 v2 Plus（¥99 / $19 = kimi_plus_cn）。仅记录，不改 adopted：raw 与归一两种口径差 2.3 倍，Kimi 全族现用 raw 口径，换口径属族级决定。",
+  "sources": [
+    "https://x.com/ren8peter/status/2118601947062444316 (@ren8peter, 2026-11-06T07:10:40Z)",
+    "https://www.kimi.com/pricing（v2 套餐页，2026-10-26 读取：CN ¥99 / intl $19 = Plus）"
+  ],
+  "items": [
+    {
+      "id": "ren8peter-kimicode-plus19-9day-monthly",
+      "plan": "Kimi Code Plus $19（= v2 Plus ¥99 / kimi_plus_cn）",
+      "model": "K2.8 Preview + K3 混合",
+      "window": "9 天月池打满（期间：9 日・ローカル＋サーバー合算）",
+      "monthlyPercentUsed": 100,
+      "tokens": {
+        "totalRaw": 203000000,
+        "byModel": {
+          "k2.8-preview": {"input": 3290000, "cacheRead": 188800000, "output": 890000, "apiWorthUsd": 35.30, "cacheShare": 0.983},
+          "k3": {"input": 340000, "cacheRead": 9600000, "output": 90000, "apiWorthUsd": 3.27, "cacheShare": 0.966}
+        },
+        "apiWorthUsd": 38.57,
+        "apiRatio": 2.03,
+        "note": "作者按 API 牌价折 worth $38.57；203.0M = 3.62M 输入 + 198.4M 缓存读 + 0.98M 输出"
+      },
+      "derivation": {
+        "raw": "月池 203.0M raw = 2.03 亿/月；现采用 kimi_plus_cn × kimi-k3 = 1.95 亿（v1 3.89 亿 × 1/2，raw 口径）→ 高 4%",
+        "normalized": "月池 worth $38.57 ÷ 标准负载混合价（k3 $0.441/MTok）≈ 87.5M = 0.875 亿/月 → 比现值低 55%",
+        "whyGap": "该样本缓存读占 98%，raw token 便宜；归一后同样美元只能买到更少的折扣 token"
+      },
+      "whyNotAdopted": "Kimi 全族（199 锚点及其派生）都是 raw 口径，且 v2 行按 v1×1/2 裁定派生；只把 Plus 一档改成归一会打破族内一致性与 2× 档间比例。是否把 Kimi 全族换到归一 basis 属口径级决定，需维护者裁定；本文件先记录样本，不改 adopted。",
+      "adoptionStatus": "research-only / not adopted (pending basis decision)"
+    }
+  ],
+  "confidence": "high for the sample itself (分项 + 月池打满口述 + 2.03x 自洽；缺控制台百分比条)",
+  "related": ["#163", "#182", "kimi-v2-plans-round1-2026-10-26.json", "kimi-allegretto-quota-round2-2026-10-27.json"]
+}

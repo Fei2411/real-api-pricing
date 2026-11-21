@@ -1,0 +1,258 @@
+{
+  "collectedAt": "2026-11-17",
+  "collectionMethod": "Manual capture of the official Command Code GOAT plan page, the pricing-limits resource page and the public pricing page (English) around 10:39 Beijing time / 02:39Z on 2026-11-17: https://commandcode.ai/docs/plans/goat, https://commandcode.ai/docs/resources/pricing-limits and https://commandcode.ai/pricing, read as published. The RSC payload (modelScope / planScope on the plan page, models + rows on the pricing-limits page), the rendered plan-page model tables (context, prices, monthly credits, caps) and the official 'Estimated requests' table were read field by field, and the same three pages captured on 2026-11-16 were compared line by line (both the rendered text and the embedded RSC payload diff on budgetUsd / rates / budgetSteps / shape / timeOfDay per model). Two new paid models observed (Qwen 4 Max and Tencent Hy4 Flash), no free variant of either observed, plus the same-day observations on the new free model Flint, on the /pricing page wording and on the shared pool wording recorded for context. Research-only — no adopted row generated, no adopted value changed, no script changed.",
+  "sources": [
+    "https://commandcode.ai/docs/plans/goat",
+    "https://commandcode.ai/docs/resources/pricing-limits",
+    "https://commandcode.ai/pricing"
+  ],
+  "scope": "Command Code GOAT official catalog only. Two new paid models observed on 2026-11-17: 'Tencent Hy4 Flash' (slug hy4-flash, plan-page id and pricing-limits id both 'tencent/hy4-flash') and 'Qwen 4 Max' (slug qwen4-max, plan-page id 'Qwen/Qwen4-Max', pricing-limits id 'qwen-4-max'). Tencent Hy4 Flash: vendor Tencent, category opensource, blurb 'low-cost Hy4 for coding, reasoning & agentic work', launchedAt 2026-11-16, minPlanName Go, 1M context (1024000 tokens), reasoning true, vision true, marked 'not yet scored'. Qwen 4 Max: vendor Alibaba, category opensource, blurb 'flagship coding, agentic & knowledge work', launchedAt 2026-11-15, minPlanName Go, 1M context (1000000 tokens), reasoning true, vision true, marked 'not yet scored'. Tencent Hy4 Flash is priced $0.07 input / $0.281 output / $0.003 cached read per 1M tokens with no cache-write price listed, Qwen 4 Max is priced $1.50 input / $4.50 output / $0.075 cached read / $1.875 cache write per 1M tokens. Both models carry $15 per-model monthly credits on the GOAT plan (RSC budgetUsd 15, no budgetSteps, credits column '$15'). The RSC payload additionally carries blendedCostPerMTok 0.12275000000000001 / agentLoopInputPerMTok 0.023100000000000006 for Tencent Hy4 Flash and blendedCostPerMTok 2.25 / agentLoopInputPerMTok 0.5025000000000001 for Qwen 4 Max, transcribed as published. The GOAT plan page model counters moved All plans 100 -> 103, GOAT plan 72 -> 75, Deals 3 -> 4, Free 2 -> 3, and the pricing-limits All / Models counter moved 102 -> 105 (Deals 3 -> 4, Free 2 -> 3). The other previously listed paid GOAT models keep the same budgetUsd / rates / budgetSteps (GLM-5.3 stays at budgetUsd 70), and the shared-pool wording did not change. No leaderboard/score data, no shared-pool change, no other GOAT row changes, no adopted.csv row.",
+  "previousCapture": {
+    "capturedAt": "2026-11-16",
+    "file": null,
+    "note": "The 2026-11-16 baseline used here is the same-pages re-capture taken on 2026-11-16 for the 2026-11-17 comparison; it is not stored as a separate research file in this repo. The last stored GOAT capture is data/research/goat-glm53-boost-round1-2026-11-13.json.",
+    "lastStoredCaptureFile": "goat-glm53-boost-round1-2026-11-13.json",
+    "baselineValues": {
+      "tencentHy4Flash": {
+        "present": false,
+        "paidRowPresent": false,
+        "freeModelId": null,
+        "note": "No 'Tencent Hy4 Flash' row of any kind (paid or free) existed in the official GOAT catalog on 2026-11-16."
+      },
+      "qwen4Max": {
+        "present": false,
+        "paidRowPresent": false,
+        "freeModelId": null,
+        "note": "No 'Qwen 4 Max' row of any kind (paid or free) existed in the official GOAT catalog on 2026-11-16."
+      },
+      "goatModelCounters": {
+        "planPageAllPlansCount": 100,
+        "planPageGoatPlanCount": 72,
+        "planPageDealsCount": 3,
+        "planPageFreeCount": 2,
+        "planPageModelsCount": 100,
+        "pricingLimitsAllCount": 102,
+        "pricingLimitsDealsCount": 3,
+        "pricingLimitsFreeCount": 2,
+        "pricingLimitsModelsCount": 102
+      },
+      "pricingLimitsPlanBudgetUsd": {
+        "tencentHy4Flash": null,
+        "qwen4Max": null,
+        "note": "Neither model existed on 2026-11-16, so no per-model planBudgetUsd / planAllowanceUsd existed. On 2026-11-17 both new models publish go 6 / goat 15 / pro 25 for these two models."
+      },
+      "pricingLimitsPlanAllowanceUsd": {
+        "tencentHy4Flash": null,
+        "qwen4Max": null,
+        "note": "Neither model existed on 2026-11-16, so no per-model planAllowanceUsd existed. On 2026-11-17 both new models publish go 6 / goat 15 / pro 25 for these two models."
+      },
+      "goatSharedPoolWording": {
+        "goat": "Up to $100",
+        "pro": "Up to $110"
+      },
+      "glm53": {
+        "rscBudgetUsd": 70,
+        "creditsColumnDisplay": "$70",
+        "note": "GLM-5.3 keeps budgetUsd 70 on both the 2026-11-16 and the 2026-11-17 plan-page payloads; its rates, budgetSteps, request shape and timeOfDay are unchanged."
+      },
+      "freeModels": {
+        "flint": {
+          "present": false,
+          "freeModelId": null,
+          "pricingPageWording": null
+        },
+        "note": "Only the new Flint free entry is tracked in this comparison; the other free GOAT models (glyph-cluster, inkling-2-small) were unchanged and are not tracked by this repo."
+      }
+    },
+    "diff": {
+      "modelsAdded": [
+        "Tencent Hy4 Flash",
+        "Qwen 4 Max"
+      ],
+      "modelsRemoved": [],
+      "budgetUsdChanged": false,
+      "ratesChanged": false,
+      "budgetStepsChanged": false,
+      "counterChange": {
+        "planPageAllPlansCount": "100 -> 103",
+        "planPageGoatPlanCount": "72 -> 75",
+        "planPageDealsCount": "3 -> 4",
+        "planPageFreeCount": "2 -> 3",
+        "planPageModelsCount": "100 -> 103",
+        "pricingLimitsAllCount": "102 -> 105",
+        "pricingLimitsDealsCount": "3 -> 4",
+        "pricingLimitsFreeCount": "2 -> 3",
+        "pricingLimitsModelsCount": "102 -> 105"
+      },
+      "note": "Compared with the 2026-11-16 capture of the same pages, the only paid catalog change is the addition of two paid rows: 'Tencent Hy4 Flash' and 'Qwen 4 Max'. Every other paid row keeps the same budgetUsd / rates / budgetSteps; GLM-5.3 stays at budgetUsd 70. The plan-page RSC rows array grew 62 -> 64 entries. The 'Jev 1.14.0' row keeps budgetUsd 20 and the same rates, but its 'rates' value is a reference into the rows array ('$1c:props:rows:60:rates' -> '$1c:props:rows:62:rates') whose index simply shifted with the two inserted rows; the referenced rate values did not change."
+    }
+  },
+  "adoptionStatus": "research-only; not adopted; no command_code_goat × hy4-flash row in adopted.csv yet — adding one requires a COMMAND_CODE_GOAT_MODELS entry in scripts/build_adopted.py, left to maintainer review",
+  "observed": {
+    "paidModel": {
+      "name": "Tencent Hy4 Flash",
+      "slug": "hy4-flash",
+      "modelId": "tencent/hy4-flash",
+      "idVariants": {
+        "planPageId": "tencent/hy4-flash",
+        "pricingLimitsId": "tencent/hy4-flash"
+      },
+      "vendor": "Tencent",
+      "provider": "Tencent",
+      "category": "opensource",
+      "blurb": "low-cost Hy4 for coding, reasoning & agentic work",
+      "launchedAt": "2026-11-16",
+      "releaseDate": null,
+      "releaseDateNote": "No release date published for this model (page shows '$undefined' in the payload).",
+      "minPlanName": "Go",
+      "contextWindow": 1024000,
+      "contextWindowNote": "Published as 1M context on the plan page; the payload carries 1024000 tokens.",
+      "reasoning": true,
+      "vision": true,
+      "caps": {
+        "text": true,
+        "vision": true,
+        "reasoning": true
+      },
+      "deal": null,
+      "dealNote": "No deal entry for this model (page shows '$undefined').",
+      "scheduledChange": null,
+      "scheduledChangeNote": "No scheduled change entry for this model.",
+      "timeOfDay": null,
+      "timeOfDayNote": "No time-of-day (peak/off-peak) pricing entry for this model.",
+      "score": "not yet scored",
+      "scoreIndexes": {
+        "intelligenceIndex": null,
+        "codingIndex": null,
+        "note": "Neither the intelligence index nor the coding index is rated on the official page for this model ('not yet scored')."
+      },
+      "threePartPrice": {
+        "inputPerMTokUsd": 0.07,
+        "outputPerMTokUsd": 0.281,
+        "cachedReadPerMTokUsd": 0.003,
+        "cacheWritePerMTokUsd": null,
+        "cacheWriteNote": "Cache-write price not listed in the official table (page shows '$undefined' in the payload and '-' in the table cell)."
+      },
+      "rscExtraCostFields": {
+        "blendedCostPerMTok": 0.12275000000000001,
+        "agentLoopInputPerMTok": 0.023100000000000006,
+        "note": "Additional per-MTok cost fields present in the RSC payload for this model, transcribed as published. No blended price is derived or adopted here."
+      },
+      "perModelCreditsUsd": 15,
+      "creditsSource": {
+        "rscBudgetUsd": 15,
+        "budgetSteps": null,
+        "creditDeal": null,
+        "creditsColumnDisplay": "$15",
+        "table": "GOAT model table",
+        "tableNote": "Per-model monthly credits on the GOAT plan are $15 for this model (RSC budgetUsd 15, no budgetSteps, credits column '$15')."
+      },
+      "pricingLimitsAvailability": {
+        "individual-go": true,
+        "individual-go-v1": true,
+        "individual-goat": true,
+        "individual-pro": true,
+        "individual-pro-v1": true,
+        "individual-provider": true,
+        "individual-max": true,
+        "individual-ultra": true,
+        "teams-pro": true,
+        "all": true
+      },
+      "pageRequestShape": {
+        "inputTokens": 800,
+        "outputTokens": 200,
+        "cacheReadTokens": 50000
+      },
+      "pageRequestEstimate": {
+        "per5Hours": 11400,
+        "perWeek": 28600,
+        "perMonth": 57200,
+        "source": "https://commandcode.ai/docs/plans/goat — official 'Estimated requests' table row 'Tencent Hy4 Flash' (Requests / 5 hours = 11,400, Requests / week = 28,600, Requests / month = 57,200)",
+        "note": "These three figures are published on the official plan page for this model and are transcribed as printed; they are not derived from the request shape or from the per-token prices."
+      },
+      "pricingLimitsPlanBudgetUsd": {
+        "go": 6,
+        "goat": 15,
+        "pro": 25
+      },
+      "pricingLimitsPlanAllowanceUsd": {
+        "go": 6,
+        "goat": 15,
+        "pro": 25
+      },
+      "planPageTableRows": {
+        "newModelsTable": {
+          "model": "Tencent Hy4 Flash",
+          "context": "1M",
+          "input": "$0.07",
+          "output": "$0.281",
+          "cacheRead": "$0.003",
+          "cacheWrite": "—",
+          "newBadge": "+1"
+        },
+        "goatPlanModelTable": {
+          "model": "Tencent Hy4 Flash",
+          "input": "$0.07",
+          "output": "$0.281",
+          "cacheRead": "$0.003",
+          "cacheWrite": "-",
+          "monthlyCredits": "$15"
+        },
+        "estimatedRequestsTable": {
+          "model": "Tencent Hy4 Flash",
+          "requestsPer5Hours": "11,400",
+          "requestsPerWeek": "28,600",
+          "requestsPerMonth": "57,200"
+        }
+      }
+    }
+  },
+  "notAdopted": "none — no free variant was observed for 'Tencent Hy4 Flash' in the official Command Code GOAT catalog on 2026-11-17 (no tencent/hy4-flash:free entry), and no paid row for it is adopted yet.",
+  "otherObservations": [
+    {
+      "model": "Flint (free, recursive/flint-v1.0:free)",
+      "observation": "A new free model appeared in the official GOAT catalog: id 'recursive/flint-v1.0:free', vendor Recursive, category opensource, blurb 'open-weight MoE coding model, 2.5B active', 262144 tokens context (262K on the plan page), input $0 / output $0, 1000 requests a day, deal id 'flint-free' with 100% discount and term 'while the free tier lasts'. The pricing-limits page shows the free deal ids 'flint-free' / 'flint-v1.0:free', and https://commandcode.ai/pricing now carries the 'Free on Flint' wording.",
+      "adopted": false,
+      "reason": "Free GOAT models are not tracked in this repo. Recorded as an observation only; no adopted value affected."
+    },
+    {
+      "topic": "/pricing page text and counters",
+      "observation": "The visible paid price table on https://commandcode.ai/pricing does not list a 'Tencent Hy4 Flash' or a 'Qwen 4 Max' row. The differences between the 2026-11-16 and the 2026-11-17 /pricing captures are the new Flint wording and the page timestamp nowMs 1794796642708 -> 1794883145327.",
+      "adopted": false,
+      "reason": "Public pricing page wording only; no adopted value affected."
+    },
+    {
+      "topic": "GOAT plan page wording for the two new models",
+      "observation": "The plan page body reads: 'New models start at 2x credits i.e. $20 credits on the $10/mo GOAT plan until we negotiate better deals. That's still 2x your money at public API prices, and the allowance updates automatically the moment a deal starts - no codes, no toggles. Qwen 4 Max and Tencent Hy4 Flash start at $15.' The page publishes no end date for that sentence. The 'Deals' counter moved 3 -> 4 on both the plan page and the pricing-limits page, but the two new models carry no deal entry of their own ('$undefined'); the fourth deal is the new 'flint-free' entry. The model objects' deal fields stay '$undefined'.",
+      "adopted": false,
+      "reason": "Wording and counter observation only; the deal counter change is attributable to Flint, not to the two new paid models. No adopted value affected."
+    },
+    {
+      "topic": "GOAT / Pro shared monthly pool wording",
+      "observation": "https://commandcode.ai/pricing and https://commandcode.ai/docs/resources/pricing-limits still write GOAT 'Up to $100' and Pro 'Up to $110', and the plan page still lists up to $20 (5-hour limit) / $50 (weekly limit) / $100 (monthly limit). The shared monthly pool script constant COMMAND_CODE_GOAT_SHARED_USD = 70 is unchanged.",
+      "adopted": false,
+      "reason": "Shared-pool wording did not change between the 2026-11-16 and the 2026-11-17 captures, and scripts/ is out of scope for this file."
+    },
+    {
+      "topic": "Other GOAT models unchanged",
+      "observation": "Of the 62 paid models in the GOAT plan-page RSC payload on 2026-11-16, only two new rows were added on 2026-11-17 (62 -> 64 rows). Every other paid row keeps the same budgetUsd / rates / budgetSteps, and no other per-model credit row moved. GLM-5.3 remains at budgetUsd 70 with the same rates and credits column '$70'.",
+      "adopted": false,
+      "reason": "Recorded for completeness of the comparison; no adopted value affected."
+    },
+    {
+      "topic": "Cross-observation — OpenCode Go Qwen4 Max",
+      "observation": "The OpenCode Go documentation published monthly limits for Qwen4 Max on the same cycle; see the separate research file data/research/opencode-go-qwen4-max-round1-2026-11-16.json.",
+      "adopted": false,
+      "reason": "Different vendor and different plan. This Command Code GOAT record does not depend on and does not change the OpenCode Go row; recorded as a cross-observation only, no adopted value affected."
+    }
+  ],
+  "sharedPoolUnchanged": {
+    "commandCodeGoatSharedMonthlyUsd": 70,
+    "note": "Shared monthly pool $70 (script constant COMMAND_CODE_GOAT_SHARED_USD = 70) and every existing GOAT row are unchanged by this observation."
+  },
+  "computationNote": "No monthlyYi, no blended per-MTok price and no adopted allowance are computed in this file; all numbers are transcribed as published on the official pages and in the official RSC payload.",
+  "confidence": "medium",
+  "confidenceNote": "The prices, the per-model credits and the request estimates are official and consistent across the plan page, the pricing-limits page and the RSC payload. Confidence is not 'high' because the plan-page sentence 'Qwen 4 Max and Tencent Hy4 Flash start at $15.' carries no end date and no term, so whether the $15 per-model credit level is permanent or of unstated duration cannot be settled from the captured pages.",
+  "basis": "official"
+}
