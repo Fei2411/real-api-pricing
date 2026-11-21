@@ -3,6 +3,13 @@
 本地 `AGENTS.md`（不入库）只放 Agent 工作流程；口径与规则见 [`CONVENTIONS.md`](CONVENTIONS.md)；本文件记录每条采用值的取舍（旧值 → 新值 → 依据 → 未采来源）。
 最权威的表述仍在 `scripts/build_adopted.py` 的 `decision_note` 和 `data/research/` 证据文件里；本文件是按时间的索引摘要。改数只能改 `build_adopted.py`，改完在这里同步记一笔。
 
+## 2026-11-21 · Google AI Pro × Gemini 4 Neon 首个采用点
+
+- **采用**：新增 `google_ai_pro_us × gemini-4-neon` = **5.36 亿/月 medium**（低缓存档）。新 Google AI Pro，与 Ultra 5x、已采用 Argon 行分开。2026-11-20 7:51 AM PT 各表 100%；6:40 PM PT Gemini 周剩余 63%（37pp）。Neon only，277 次，7:51:44 AM–6:40:38 PM PT。段 worth $31.631193（读 $0.15 / 入 $3 / 出 $15，2026-11-18 Gemini Developer API；High 与 XHigh 同价，缓存写 0）÷37pp＝周 $85.48971。低缓存混合价 $0.6375/MTok（85/14.5/0.5）。展示周美元 ÷ 该价＝134,101,506 token（1.341亿）×4 周＝536,406,024 token，未舍入 5.364亿，`round(..., 2)` 存 **5.36**。月费仍是现有 Google AI Pro $19.99。没有上一条 Neon 样本，这 37pp 就是全部权重。不派生 Ultra。50% 周帽不套。
+- **不替换**：`google_ai_pro_us × gemini-4-argon` 仍是 **0.66 亿/月**。`claude_pro × claude-sonnet-5.5`、`claude_pro × claude-haiku-5.5`、Opus 各行不动。
+- **不采**：5h 反推 $26.01 / 低缓存 0.408亿。当天从 7:51 AM 到 6:40 PM 跨过不止一个 5h 窗，该切片只约占当前窗一小时。同账号 Claude/GPT（2 次 `claude-sonnet-5-5-low`，raw 305,930，API $0.31，8 周点，隐含周 API $3.86）和 Argon（0 次）只记在 issue #248，不入采用值。
+- **证据**：`data/research/local-samples-round2-2026-11-20.json`（#248）。
+
 ## 2026-11-10 · 三样本按百分点并入采用值
 
 - **Claude Pro × Opus 5.5**：30.54→**30.46 亿/月** high（Anthropic 档）。维护者 2026-11-07 22:22–23:38 PT 满 5h 窗（508 次）worth $38.424，周份额 **12.5%**（不是面板整数 13%）。写入是 1h，仍按 5 分钟写价 $5。与 #52 $587.52/183pp、Reddit 段 $40.48/13.333pp 合并：$3.19119/pp → 未舍入 30.465 亿，`round(..., 2)` 为 30.46。本窗单独 29.35 亿不替换旧样本。不采：13% 三源合并 30.39 亿、写按 1h $8 的 30.59 亿。Max 20x 的 Pro 腿仍是 #52+Reddit，保持 315.38 亿。
