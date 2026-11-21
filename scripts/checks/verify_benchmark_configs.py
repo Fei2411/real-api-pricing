@@ -114,4 +114,11 @@ assert indexed["opencode_go::deepseek-v4.1-flash"]["terminal_bench_4__score_is_s
 assert indexed["chatgpt_plus::gpt-6-astra"]["aa_intelligence_index__score"] is None
 assert indexed["claude_pro::claude-opus-5.5"]["aa_intelligence_index__score"] == 59.106
 assert indexed["claude_pro::claude-opus-5.5"]["aa_intelligence_index__configuration_count"] == 5
+# Archived reasoningEffort fields win over display labels, and "Max" in a Qwen model
+# name never leaks into reasoning_effort when no effort suffix is declared.
+assert next(c for c in configs if c["board"] == "aa_coding_agent_index" and c["model"] == "kimi-k3.1-pro")["reasoning_effort"] == "max"
+assert next(c for c in configs if c["board"] == "aa_intelligence_index" and c["model"] == "qwen4-max")["reasoning_effort"] is None
+assert next(c for c in configs if c["board"] == "aa_coding_agent_index" and c["model"] == "qwen3.8-max")["reasoning_effort"] is None
+assert next(c for c in configs if c["board"] == "deepswe_1_1" and c["model"] == "qwen3.8-max")["reasoning_effort"] == "xhigh"
+assert next(c for c in configs if c["board"] == "open_design_arena" and c["model"] == "qwen3.8-max")["reasoning_effort"] is None
 print(f"PASS: {len(configs)} configurations preserved, {len(links)} explicit mappings, exact modes, source CIs/costs and price inputs verified")

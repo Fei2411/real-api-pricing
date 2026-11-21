@@ -1543,7 +1543,7 @@
     "score_is_estimated": null,
     "score_is_self_reported": false,
     "agent_harness": "OpenDesign",
-    "reasoning_effort": "max",
+    "reasoning_effort": null,
     "service_mode": null,
     "score": 72,
     "score_low": null,
@@ -4318,7 +4318,7 @@
     "score_is_estimated": null,
     "score_is_self_reported": false,
     "agent_harness": null,
-    "reasoning_effort": "max",
+    "reasoning_effort": null,
     "service_mode": null,
     "score": 1674,
     "score_low": 1667.0,
@@ -4360,7 +4360,7 @@
     "score_is_estimated": null,
     "score_is_self_reported": false,
     "agent_harness": null,
-    "reasoning_effort": "max",
+    "reasoning_effort": null,
     "service_mode": null,
     "score": 1672,
     "score_low": 1659.9,
@@ -5746,7 +5746,7 @@
     "score_is_estimated": null,
     "score_is_self_reported": false,
     "agent_harness": null,
-    "reasoning_effort": "max",
+    "reasoning_effort": null,
     "service_mode": null,
     "score": 1515,
     "score_low": 1507.6,
@@ -6040,7 +6040,7 @@
     "score_is_estimated": null,
     "score_is_self_reported": false,
     "agent_harness": null,
-    "reasoning_effort": "max",
+    "reasoning_effort": null,
     "service_mode": null,
     "score": 1482,
     "score_low": 1469.5,
@@ -7742,7 +7742,7 @@
     "score_is_estimated": null,
     "score_is_self_reported": false,
     "agent_harness": null,
-    "reasoning_effort": "max",
+    "reasoning_effort": null,
     "service_mode": null,
     "score": 1.63,
     "score_low": 1.02,
@@ -8430,7 +8430,7 @@
     "score_is_estimated": null,
     "score_is_self_reported": false,
     "agent_harness": null,
-    "reasoning_effort": "max",
+    "reasoning_effort": null,
     "service_mode": null,
     "score": -6.34,
     "score_low": -7.5,
@@ -10329,7 +10329,7 @@
     "score_is_estimated": null,
     "score_is_self_reported": false,
     "agent_harness": "mini-swe-agent",
-    "reasoning_effort": "max",
+    "reasoning_effort": "xhigh",
     "service_mode": null,
     "score": 57.46102449888642,
     "score_low": 54.798231826378874,
@@ -11421,7 +11421,7 @@
     "score_is_estimated": null,
     "score_is_self_reported": false,
     "agent_harness": "mini-swe-agent",
-    "reasoning_effort": "none",
+    "reasoning_effort": null,
     "service_mode": null,
     "score": 30.53097345132743,
     "score_low": 30.030271799081337,
@@ -12014,7 +12014,8 @@
         "effort": "max",
         "terminalBench40": 0.595959595959596,
         "frontierCode20": 0.487597222222222,
-        "hleDiamond": 0.802
+        "hleDiamond": 0.802,
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12058,7 +12059,8 @@
         "effort": "xhigh",
         "terminalBench40": 0.616161616161616,
         "frontierCode20": 0.475810858585859,
-        "hleDiamond": 0.758
+        "hleDiamond": 0.758,
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12102,7 +12104,8 @@
         "effort": "max",
         "terminalBench40": 0.641414141414141,
         "frontierCode20": 0.453801767676768,
-        "hleDiamond": 0.722
+        "hleDiamond": 0.722,
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12146,7 +12149,8 @@
         "effort": "high",
         "terminalBench40": 0.595959595959596,
         "frontierCode20": 0.491275757575758,
-        "hleDiamond": 0.738
+        "hleDiamond": 0.738,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12190,7 +12194,8 @@
         "effort": "xhigh",
         "terminalBench40": 0.641414141414141,
         "frontierCode20": 0.489513383838384,
-        "hleDiamond": 0.673
+        "hleDiamond": 0.673,
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12234,7 +12239,8 @@
         "effort": "xhigh",
         "terminalBench40": 0.636363636363636,
         "frontierCode20": 0.444105303030303,
-        "hleDiamond": 0.713
+        "hleDiamond": 0.713,
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12278,7 +12284,8 @@
         "effort": "high",
         "terminalBench40": 0.601010101010101,
         "frontierCode20": 0.471319444444444,
-        "hleDiamond": 0.659
+        "hleDiamond": 0.659,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12322,7 +12329,8 @@
         "effort": "high",
         "terminalBench40": 0.651515151515151,
         "frontierCode20": 0.405606060606061,
-        "hleDiamond": 0.691
+        "hleDiamond": 0.691,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12366,7 +12374,8 @@
         "effort": "high",
         "terminalBench40": 0.616161616161616,
         "frontierCode20": 0.432772727272727,
-        "hleDiamond": 0.684
+        "hleDiamond": 0.684,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12410,7 +12419,8 @@
         "effort": "max",
         "terminalBench40": 0.595959595959596,
         "frontierCode20": 0.464359595959596,
-        "hleDiamond": 0.679
+        "hleDiamond": 0.679,
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12454,7 +12464,8 @@
         "effort": "medium",
         "terminalBench40": 0.606060606060606,
         "frontierCode20": 0.394523232323232,
-        "hleDiamond": 0.674
+        "hleDiamond": 0.674,
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12498,7 +12509,8 @@
         "effort": "xhigh",
         "terminalBench40": 0.595959595959596,
         "frontierCode20": 0.437547474747475,
-        "hleDiamond": 0.64
+        "hleDiamond": 0.64,
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12542,7 +12554,8 @@
         "effort": "max",
         "terminalBench40": 0.601010101010101,
         "frontierCode20": 0.443797727272727,
-        "hleDiamond": 0.64
+        "hleDiamond": 0.64,
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12586,7 +12599,8 @@
         "effort": "medium",
         "terminalBench40": 0.585858585858586,
         "frontierCode20": 0.46559797979798,
-        "hleDiamond": 0.56
+        "hleDiamond": 0.56,
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12630,7 +12644,8 @@
         "effort": "medium",
         "terminalBench40": 0.55050505050505,
         "frontierCode20": 0.412984090909091,
-        "hleDiamond": 0.663
+        "hleDiamond": 0.663,
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12674,7 +12689,8 @@
         "effort": "xhigh",
         "terminalBench40": 0.560606060606061,
         "frontierCode20": 0.427523484848485,
-        "hleDiamond": 0.618
+        "hleDiamond": 0.618,
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12718,7 +12734,8 @@
         "effort": "high",
         "terminalBench40": 0.585858585858586,
         "frontierCode20": 0.40224898989899,
-        "hleDiamond": 0.583
+        "hleDiamond": 0.583,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12762,7 +12779,8 @@
         "effort": "medium",
         "terminalBench40": 0.545454545454545,
         "frontierCode20": 0.369268434343434,
-        "hleDiamond": 0.636
+        "hleDiamond": 0.636,
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12806,7 +12824,8 @@
         "effort": "max",
         "terminalBench40": 0.636363636363636,
         "frontierCode20": 0.416993434343434,
-        "hleDiamond": 0.533
+        "hleDiamond": 0.533,
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12850,7 +12869,8 @@
         "effort": "low",
         "terminalBench40": 0.626262626262626,
         "frontierCode20": 0.296189898989899,
-        "hleDiamond": 0.619
+        "hleDiamond": 0.619,
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12894,7 +12914,8 @@
         "effort": "low",
         "terminalBench40": 0.545454545454545,
         "frontierCode20": 0.384397474747475,
-        "hleDiamond": 0.608
+        "hleDiamond": 0.608,
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12938,7 +12959,8 @@
         "effort": "medium",
         "terminalBench40": 0.560606060606061,
         "frontierCode20": 0.413984848484848,
-        "hleDiamond": 0.507
+        "hleDiamond": 0.507,
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -12982,7 +13004,8 @@
         "effort": "high",
         "terminalBench40": 0.565656565656566,
         "frontierCode20": 0.359278535353535,
-        "hleDiamond": 0.556
+        "hleDiamond": 0.556,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13026,7 +13049,8 @@
         "effort": "high",
         "terminalBench40": 0.570707070707071,
         "frontierCode20": 0.257076262626263,
-        "hleDiamond": 0.567
+        "hleDiamond": 0.567,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13070,7 +13094,8 @@
         "effort": "xhigh",
         "terminalBench40": 0.570707070707071,
         "frontierCode20": 0.356494696969697,
-        "hleDiamond": 0.441
+        "hleDiamond": 0.441,
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13114,7 +13139,8 @@
         "effort": "medium",
         "terminalBench40": 0.525252525252525,
         "frontierCode20": 0.330793181818182,
-        "hleDiamond": 0.514
+        "hleDiamond": 0.514,
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13158,7 +13184,8 @@
         "effort": "medium",
         "terminalBench40": 0.55050505050505,
         "frontierCode20": 0.250184848484849,
-        "hleDiamond": 0.425
+        "hleDiamond": 0.425,
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13202,7 +13229,8 @@
         "effort": null,
         "terminalBench40": 0.671717171717172,
         "frontierCode20": 0.254519444444444,
-        "hleDiamond": 0.373
+        "hleDiamond": 0.373,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13246,7 +13274,8 @@
         "effort": "low",
         "terminalBench40": 0.51010101010101,
         "frontierCode20": 0.326629292929293,
-        "hleDiamond": 0.477
+        "hleDiamond": 0.477,
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13290,7 +13319,8 @@
         "effort": "low",
         "terminalBench40": 0.328282828282828,
         "frontierCode20": 0.269490151515151,
-        "hleDiamond": 0.542
+        "hleDiamond": 0.542,
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13334,7 +13364,8 @@
         "effort": "max",
         "terminalBench40": 0.52020202020202,
         "frontierCode20": 0.27875303030303,
-        "hleDiamond": 0.39
+        "hleDiamond": 0.39,
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13348,7 +13379,7 @@
     "score_is_estimated": false,
     "score_is_self_reported": false,
     "agent_harness": null,
-    "reasoning_effort": "max",
+    "reasoning_effort": null,
     "service_mode": null,
     "score": 42.8915,
     "score_low": null,
@@ -13375,10 +13406,11 @@
         "isReasoning": true,
         "deprecated": false,
         "modelCreatorName": "Alibaba",
-        "effort": "max",
+        "effort": null,
         "terminalBench40": 0.484848484848485,
         "frontierCode20": 0.264534595959596,
-        "hleDiamond": 0.449
+        "hleDiamond": 0.449,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13422,7 +13454,8 @@
         "effort": "high",
         "terminalBench40": 0.439393939393939,
         "frontierCode20": 0.257380050505051,
-        "hleDiamond": 0.338
+        "hleDiamond": 0.338,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13466,7 +13499,8 @@
         "effort": "low",
         "terminalBench40": 0.378787878787879,
         "frontierCode20": 0.313682323232323,
-        "hleDiamond": 0.345
+        "hleDiamond": 0.345,
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13510,7 +13544,8 @@
         "effort": "high",
         "terminalBench40": 0.383838383838384,
         "frontierCode20": 0.266252272727273,
-        "hleDiamond": 0.345
+        "hleDiamond": 0.345,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13554,7 +13589,8 @@
         "effort": "max",
         "terminalBench40": 0.328282828282828,
         "frontierCode20": 0.349325505050505,
-        "hleDiamond": 0.296
+        "hleDiamond": 0.296,
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13598,7 +13634,8 @@
         "effort": "max",
         "terminalBench40": 0.409090909090909,
         "frontierCode20": 0.271696212121212,
-        "hleDiamond": 0.251
+        "hleDiamond": 0.251,
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13642,7 +13679,8 @@
         "effort": "xhigh",
         "terminalBench40": 0.257575757575758,
         "frontierCode20": 0.286575505050505,
-        "hleDiamond": 0.232
+        "hleDiamond": 0.232,
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13686,7 +13724,8 @@
         "effort": "high",
         "terminalBench40": 0.247474747474747,
         "frontierCode20": 0.277836363636364,
-        "hleDiamond": 0.236
+        "hleDiamond": 0.236,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13730,7 +13769,8 @@
         "effort": "low",
         "terminalBench40": 0.313131313131313,
         "frontierCode20": 0.158378282828283,
-        "hleDiamond": 0.417
+        "hleDiamond": 0.417,
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13774,7 +13814,8 @@
         "effort": "xhigh",
         "terminalBench40": 0.292929292929293,
         "frontierCode20": 0.299334090909091,
-        "hleDiamond": 0.288
+        "hleDiamond": 0.288,
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13818,7 +13859,8 @@
         "effort": null,
         "terminalBench40": 0.373737373737374,
         "frontierCode20": 0.31447601010101,
-        "hleDiamond": 0.327
+        "hleDiamond": 0.327,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13862,7 +13904,8 @@
         "effort": "xhigh",
         "terminalBench40": 0.353535353535354,
         "frontierCode20": 0.21974898989899,
-        "hleDiamond": 0.236
+        "hleDiamond": 0.236,
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13906,7 +13949,8 @@
         "effort": "max",
         "terminalBench40": 0.338383838383838,
         "frontierCode20": 0.284711616161616,
-        "hleDiamond": 0.253
+        "hleDiamond": 0.253,
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13950,7 +13994,8 @@
         "effort": "max",
         "terminalBench40": 0.419191919191919,
         "frontierCode20": 0.21587095959596,
-        "hleDiamond": 0.179
+        "hleDiamond": 0.179,
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -13994,7 +14039,8 @@
         "effort": "low",
         "terminalBench40": 0.161616161616162,
         "frontierCode20": 0.218224494949495,
-        "hleDiamond": 0.185
+        "hleDiamond": 0.185,
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14038,7 +14084,8 @@
         "effort": "medium",
         "terminalBench40": 0.297979797979798,
         "frontierCode20": 0.109708080808081,
-        "hleDiamond": 0.238
+        "hleDiamond": 0.238,
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14082,7 +14129,8 @@
         "effort": null,
         "terminalBench40": 0.348484848484849,
         "frontierCode20": 0.239701262626263,
-        "hleDiamond": 0.152
+        "hleDiamond": 0.152,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14126,7 +14174,8 @@
         "effort": "high",
         "terminalBench40": 0.217171717171717,
         "frontierCode20": 0.232000505050505,
-        "hleDiamond": 0.237
+        "hleDiamond": 0.237,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14170,7 +14219,8 @@
         "effort": null,
         "terminalBench40": 0.328282828282828,
         "frontierCode20": 0.170090151515151,
-        "hleDiamond": 0.172
+        "hleDiamond": 0.172,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14214,7 +14264,8 @@
         "effort": null,
         "terminalBench40": 0.257575757575758,
         "frontierCode20": 0.208218181818182,
-        "hleDiamond": 0.281
+        "hleDiamond": 0.281,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14258,7 +14309,8 @@
         "effort": "high",
         "terminalBench40": 0.287878787878788,
         "frontierCode20": 0.168437878787879,
-        "hleDiamond": 0.208
+        "hleDiamond": 0.208,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14302,7 +14354,8 @@
         "effort": null,
         "terminalBench40": 0.333333333333333,
         "frontierCode20": 0.120010101010101,
-        "hleDiamond": 0.243
+        "hleDiamond": 0.243,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14346,7 +14399,8 @@
         "effort": "max",
         "terminalBench40": 0.126262626262626,
         "frontierCode20": 0.251747727272727,
-        "hleDiamond": 0.222
+        "hleDiamond": 0.222,
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14390,7 +14444,8 @@
         "effort": null,
         "terminalBench40": 0.328282828282828,
         "frontierCode20": 0.176070454545455,
-        "hleDiamond": 0.182
+        "hleDiamond": 0.182,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14434,7 +14489,8 @@
         "effort": null,
         "terminalBench40": 0.227272727272727,
         "frontierCode20": 0.216152272727273,
-        "hleDiamond": 0.137
+        "hleDiamond": 0.137,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14478,7 +14534,8 @@
         "effort": "low",
         "terminalBench40": 0.207070707070707,
         "frontierCode20": 0.0712575757575758,
-        "hleDiamond": 0.206
+        "hleDiamond": 0.206,
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14522,7 +14579,8 @@
         "effort": "medium",
         "terminalBench40": 0.151515151515152,
         "frontierCode20": 0.16091994949495,
-        "hleDiamond": 0.168
+        "hleDiamond": 0.168,
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14566,7 +14624,8 @@
         "effort": "xhigh",
         "terminalBench40": 0.0808080808080808,
         "frontierCode20": 0.184238888888889,
-        "hleDiamond": 0.189
+        "hleDiamond": 0.189,
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14610,7 +14669,8 @@
         "effort": "low",
         "terminalBench40": 0.348484848484849,
         "frontierCode20": 0.127379797979798,
-        "hleDiamond": 0.175
+        "hleDiamond": 0.175,
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14654,7 +14714,8 @@
         "effort": "max",
         "terminalBench40": 0.141414141414141,
         "frontierCode20": 0.170742929292929,
-        "hleDiamond": 0.195
+        "hleDiamond": 0.195,
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14698,7 +14759,8 @@
         "effort": "high",
         "terminalBench40": 0.0454545454545455,
         "frontierCode20": 0.186015151515152,
-        "hleDiamond": 0.156
+        "hleDiamond": 0.156,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14742,7 +14804,8 @@
         "effort": "high",
         "terminalBench40": 0.0606060606060606,
         "frontierCode20": 0.166702525252525,
-        "hleDiamond": 0.205
+        "hleDiamond": 0.205,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14786,7 +14849,8 @@
         "effort": "xhigh",
         "terminalBench40": 0.0555555555555556,
         "frontierCode20": 0.149142929292929,
-        "hleDiamond": 0.153
+        "hleDiamond": 0.153,
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14830,7 +14894,8 @@
         "effort": null,
         "terminalBench40": 0.0202020202020202,
         "frontierCode20": 0.219031313131313,
-        "hleDiamond": 0.16
+        "hleDiamond": 0.16,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14874,7 +14939,8 @@
         "effort": "low",
         "terminalBench40": 0.126262626262626,
         "frontierCode20": 0.0803666666666667,
-        "hleDiamond": 0.141
+        "hleDiamond": 0.141,
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14918,7 +14984,8 @@
         "effort": null,
         "terminalBench40": 0.0909090909090909,
         "frontierCode20": 0.060984595959596,
-        "hleDiamond": 0.071
+        "hleDiamond": 0.071,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -14962,7 +15029,8 @@
         "effort": "medium",
         "terminalBench40": 0.0252525252525253,
         "frontierCode20": 0.127693181818182,
-        "hleDiamond": 0.151
+        "hleDiamond": 0.151,
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -15006,7 +15074,8 @@
         "effort": "medium",
         "terminalBench40": 0.0505050505050505,
         "frontierCode20": 0.115037626262626,
-        "hleDiamond": 0.067
+        "hleDiamond": 0.067,
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -15050,7 +15119,8 @@
         "effort": "low",
         "terminalBench40": 0.0252525252525253,
         "frontierCode20": 0.123696212121212,
-        "hleDiamond": 0.068
+        "hleDiamond": 0.068,
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -15094,7 +15164,8 @@
         "effort": null,
         "terminalBench40": 0.0151515151515152,
         "frontierCode20": 0.103058585858586,
-        "hleDiamond": 0.072
+        "hleDiamond": 0.072,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -15138,7 +15209,8 @@
         "effort": "xhigh",
         "terminalBench40": 0.0101010101010101,
         "frontierCode20": 0.0392487373737374,
-        "hleDiamond": 0.106
+        "hleDiamond": 0.106,
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -15182,7 +15254,8 @@
         "effort": null,
         "terminalBench40": 0.00505050505050505,
         "frontierCode20": 0.0109007575757576,
-        "hleDiamond": 0.085
+        "hleDiamond": 0.085,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -15226,7 +15299,8 @@
         "effort": "high",
         "terminalBench40": 0.00505050505050505,
         "frontierCode20": 0.0283247474747475,
-        "hleDiamond": 0.098
+        "hleDiamond": 0.098,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -15270,7 +15344,8 @@
         "effort": null,
         "terminalBench40": 0,
         "frontierCode20": 0.0371893939393939,
-        "hleDiamond": 0.042
+        "hleDiamond": 0.042,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -15314,7 +15389,8 @@
         "effort": "low",
         "terminalBench40": 0,
         "frontierCode20": 0.0219545454545455,
-        "hleDiamond": 0.102
+        "hleDiamond": 0.102,
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -15358,7 +15434,8 @@
         "effort": null,
         "terminalBench40": 0.0151515151515152,
         "frontierCode20": 0.0158234848484848,
-        "hleDiamond": 0.063
+        "hleDiamond": 0.063,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -15372,7 +15449,7 @@
     "score_is_estimated": false,
     "score_is_self_reported": false,
     "agent_harness": null,
-    "reasoning_effort": "medium",
+    "reasoning_effort": null,
     "service_mode": null,
     "score": 4.6451,
     "score_low": null,
@@ -15399,10 +15476,11 @@
         "isReasoning": true,
         "deprecated": false,
         "modelCreatorName": "Mistral",
-        "effort": "medium",
+        "effort": null,
         "terminalBench40": 0,
         "frontierCode20": 0.0176893939393939,
-        "hleDiamond": 0.047
+        "hleDiamond": 0.047,
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -16526,7 +16604,7 @@
     "score_is_estimated": null,
     "score_is_self_reported": false,
     "agent_harness": "Artificial Analysis",
-    "reasoning_effort": "max",
+    "reasoning_effort": null,
     "service_mode": null,
     "score": 48.4848,
     "score_low": null,
@@ -16547,7 +16625,7 @@
         "slug": "qwen4-max",
         "shortName": "Qwen4 Max",
         "agentHarness": "Artificial Analysis",
-        "reasoningEffort": "max",
+        "reasoningEffort": null,
         "terminalBench40Fraction": 0.484848484848485
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
@@ -18450,7 +18528,7 @@
     "score_is_estimated": null,
     "score_is_self_reported": false,
     "agent_harness": "Artificial Analysis",
-    "reasoning_effort": "medium",
+    "reasoning_effort": null,
     "service_mode": null,
     "score": 0,
     "score_low": null,
@@ -18471,7 +18549,7 @@
         "slug": "mistral-medium-3-5",
         "shortName": "Mistral Medium 3.5",
         "agentHarness": "Artificial Analysis",
-        "reasoningEffort": "medium",
+        "reasoningEffort": null,
         "terminalBench40Fraction": 0
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
@@ -18550,7 +18628,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -18628,7 +18707,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -18706,7 +18786,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -18784,7 +18865,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -18862,7 +18944,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -18940,7 +19023,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -19018,7 +19102,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -19096,7 +19181,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -19174,7 +19260,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -19252,7 +19339,8 @@
               "dateReleased": "2026-09-04"
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -19330,7 +19418,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -19408,7 +19497,8 @@
               "dateReleased": "2026-09-06"
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -19486,7 +19576,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -19564,7 +19655,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -19642,7 +19734,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -19720,7 +19813,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -19735,7 +19829,7 @@
     "score_is_estimated": null,
     "score_is_self_reported": false,
     "agent_harness": "Kimi Code CLI",
-    "reasoning_effort": null,
+    "reasoning_effort": "max",
     "service_mode": null,
     "score": 48.638,
     "score_low": null,
@@ -19798,7 +19892,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -19876,7 +19971,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -19954,7 +20050,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -20032,7 +20129,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -20110,7 +20208,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -20188,7 +20287,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -20266,7 +20366,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -20344,7 +20445,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -20422,7 +20524,8 @@
               "dateReleased": "2026-09-04"
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -20500,7 +20603,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -20578,7 +20682,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -20656,7 +20761,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -20734,7 +20840,8 @@
               "dateReleased": "2026-09-04"
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -20812,7 +20919,8 @@
               "dateReleased": "2026-07-24"
             }
           }
-        }
+        },
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -20890,7 +20998,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -20905,7 +21014,7 @@
     "score_is_estimated": null,
     "score_is_self_reported": false,
     "agent_harness": "Claude Code",
-    "reasoning_effort": "max",
+    "reasoning_effort": null,
     "service_mode": null,
     "score": 32.7277,
     "score_low": null,
@@ -20968,7 +21077,8 @@
               "dateReleased": "2026-09-04"
             }
           }
-        }
+        },
+        "reasoningEffort": null
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -21046,7 +21156,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -21124,7 +21235,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "max"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",
@@ -21169,7 +21281,8 @@
         "effort": "xhigh",
         "terminalBench40": 0.535353535353535,
         "frontierCode20": 0.389591919191919,
-        "hleDiamond": 0.588
+        "hleDiamond": 0.588,
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -21213,7 +21326,8 @@
         "effort": "high",
         "terminalBench40": 0.54040404040404,
         "frontierCode20": 0.363275252525253,
-        "hleDiamond": 0.549
+        "hleDiamond": 0.549,
+        "reasoningEffort": "high"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -21257,7 +21371,8 @@
         "effort": "medium",
         "terminalBench40": 0.292929292929293,
         "frontierCode20": 0.315239393939394,
-        "hleDiamond": 0.477
+        "hleDiamond": 0.477,
+        "reasoningEffort": "medium"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -21301,7 +21416,8 @@
         "effort": "low",
         "terminalBench40": 0.0656565656565657,
         "frontierCode20": 0.0928621212121212,
-        "hleDiamond": 0.322
+        "hleDiamond": 0.322,
+        "reasoningEffort": "low"
       },
       "source": "https://artificialanalysis.ai/leaderboards/models",
       "checkedAt": "2026-11-21"
@@ -21526,7 +21642,8 @@
               "dateReleased": null
             }
           }
-        }
+        },
+        "reasoningEffort": "xhigh"
       },
       "source": "https://artificialanalysis.ai/agents/coding-agents",
       "checkedAt": "2026-11-21",

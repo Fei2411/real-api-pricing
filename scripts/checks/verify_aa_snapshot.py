@@ -32,6 +32,9 @@ for name, row in current_score_records(archives):
         expected = source["indexScore"] * 100
         assert secondary["agentHarness"] == source["agentName"]
         assert row["variantLabel"] == source["displayLabel"]
+        if "model" in source and isinstance(source["model"], dict) and "effort" in source["model"]:
+            eff = source["model"]["effort"]
+            assert secondary["reasoningEffort"] == (eff["slug"].lower() if isinstance(eff, dict) and eff.get("slug") else None)
     assert abs(row["score"] - expected) <= 0.000051, (row, expected)
     assert row["checkedAt"] == raw_archives[name]["collectedAt"]
     assert row["source"].startswith("https://artificialanalysis.ai/")
