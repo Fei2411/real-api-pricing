@@ -1,0 +1,86 @@
+{
+  "collectedAt": "2026-11-21",
+  "adoptionStatus": "Adopted 2026-11-21 in scripts/build_adopted.py. devin_max × gemini-4-carbon uses the maintainer-set weekly API equivalent of $200. It does not replace devin_max × gpt-6-astra or devin_max × claude-opus-5.5. It does not change devin_pro rows, google_ai_pro_us × gemini-4-argon, google_ai_pro_us × gemini-4-neon, or Claude Sonnet, Haiku, or Opus.",
+  "scopeNote": "2026-11-21 Devin Max 的 Gemini 4 Carbon 周样本，见 issue #251。这是 Devin Max（$200/月），不是已有的 Devin Pro 行。截图不入库。7% 与 9% 两次拉伸、以及多出的 2 个百分点，只在 issue 里记为不采用。",
+  "method": "CONVENTIONS.md 低缓存档：维护者指定的周 API 等价 ÷ conventions.lowCacheTokenMix（85% / 14.5% / 0.5%）混合价。月 = 未舍入周 × 4，再按仓库的 round(..., 2) 存亿。不把两次读数加权。",
+  "why200": "维护者把这一周的真实 API 等价定为 $200。7% 拉伸 $201.21 与 9% 拉伸 $191.07 落在两侧，但不做加权，也不取中点。多出的 2 个百分点隐含 $155.55，不采用。",
+  "samples": [
+    {
+      "id": "devin-max-carbon-week-2026-11-21",
+      "issue": 251,
+      "issueUrl": "https://github.com/Fei2411/real-api-pricing/issues/251",
+      "planId": "devin_max",
+      "plan": "Devin Max",
+      "priceUsd": 200,
+      "model": "gemini-4-carbon",
+      "separateFrom": [
+        "devin_pro",
+        "devin_max::gpt-6-astra",
+        "devin_max::claude-opus-5.5",
+        "google_ai_pro_us::gemini-4-argon",
+        "google_ai_pro_us::gemini-4-neon"
+      ],
+      "window": {
+        "timezone": "America/Los_Angeles",
+        "baselinePt": "2026-11-20 20:11",
+        "baselineUsedPct": 0,
+        "meterStill9PctAtPt": "2026-11-21 05:40",
+        "extraUsdAfter9Pct": 0.24
+      },
+      "pricesPerMtok": {
+        "input": 2,
+        "output": 10,
+        "cacheRead": 0.1,
+        "cacheWrite": 0,
+        "source": "TokenView prices.json",
+        "sameAsAdoptedIntroList": "google_ai_carbon_api through 2026-11-30",
+        "lowCacheBlend": 0.425,
+        "lowCacheBlendFormula": "0.85×$0.10 + 0.145×$2 + 0.005×$10",
+        "mix": "conventions.lowCacheTokenMix 85/14.5/0.5"
+      },
+      "adoptedWeek": {
+        "apiUsd": 200,
+        "setBy": "maintainer",
+        "notAWeightedMerge": true,
+        "lowCacheTokens": 470588235,
+        "lowCacheYi": 4.71,
+        "formula": "200 / 0.425 × 1e6, rounded"
+      },
+      "month": {
+        "weeks": 4,
+        "lowCacheTokens": 1882352941,
+        "lowCacheYiUnrounded": 18.824,
+        "storedYi": 18.82,
+        "storedBecause": "round(unrounded monthly yi, 2), same rounding as Neon 5.364 → 5.36",
+        "priceUsd": 200,
+        "usdPerMtokField": "real_usd_per_mtok = plan price $200 / stored month tokens, same field as the other rows"
+      },
+      "notAdopted": [
+        {
+          "atPt": "2026-11-21 05:16",
+          "meterPct": 7,
+          "stretchApiUsd": 14.08,
+          "weekApiUsd": 201.21,
+          "lowCacheYi": 4.73,
+          "carbonHighCalls": 225,
+          "carbonHighRaw": 52911702
+        },
+        {
+          "atPt": "2026-11-21 05:29",
+          "meterPct": 9,
+          "stretchApiUsd": 17.2,
+          "weekApiUsd": 191.07,
+          "lowCacheYi": 4.5,
+          "carbonHighCalls": 263,
+          "carbonHighRaw": 65021830
+        },
+        {
+          "extraPoints": 2,
+          "impliedWeekApiUsd": 155.55,
+          "reason": "User said the real weekly equivalent is $200"
+        }
+      ],
+      "adopted": "devin_max × gemini-4-carbon = 18.82 亿/月 medium. Weekly API equivalent $200 is the whole weight. Does not change Devin Pro, Google AI Pro Argon or Neon, or Claude Sonnet, Haiku, or Opus."
+    }
+  ]
+}
