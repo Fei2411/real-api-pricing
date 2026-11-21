@@ -1,0 +1,56 @@
+{
+  "recordedAt": "2026-11-21",
+  "capturedAtUtc": "2026-11-21T01:31:21Z",
+  "devinAndOpenaiCapturedAtUtc": "2026-11-21T01:32:07Z",
+  "openaiMarkdownCapturedAtUtc": "2026-11-21T01:33:20Z",
+  "timezone": "Asia/Taipei (UTC+8)",
+  "sourceType": "official_docs_recheck",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false,
+  "pendingMaintainerConfirmation": true,
+  "snapshots": [
+    "official/opencode-glm53-2026-11-21-snapshot.json",
+    "official/devin-swe2-2026-11-21-snapshot.json",
+    "official/openai-gpt56-sol-2026-11-21-snapshot.json"
+  ],
+  "opencodeGoGlm53": {
+    "comparedTo2026-11-20": "UNCHANGED on pricing/limit facts",
+    "monthly": {
+      "go": 500,
+      "goPlus": 1000,
+      "goTeams": 505
+    },
+    "unitPrices": {
+      "input": 1.4,
+      "output": 4.4,
+      "cacheRead": 0.26
+    },
+    "docsPromo": "GLM-5.3: Higher usage limits apply through November 22, 2026.",
+    "docsPromoStillPresent": true,
+    "landingStillShows500And6600": true,
+    "landingMentionsNovember22": false,
+    "gemini4ArgonDocs": "Gemini 4 Argon: The 50% discount applies through November 30, 2026.",
+    "fallbackValuePublished": false,
+    "notANewAdoptedConclusion": true,
+    "promoEndsTomorrow": "2026-11-22"
+  },
+  "devinSwe2": {
+    "conflictUnchanged": true,
+    "blogQuote": "We're also making free SWE-2 in Devin Desktop and CLI a permanent part of our Teams, Pro, and Max plans.",
+    "pricingPage": "Free use of SWE-2 / Free SWE-2, no end date, no November 30 on the pricing page",
+    "docsQuote": "SWE-2 is free for self-serve plans in Devin Desktop and Devin CLI through November 30, 2026; it does not apply to Devin cloud sessions.",
+    "docsMdIdenticalTo2026-11-20": true,
+    "doNotChangeAdopted": true
+  },
+  "gpt56SolConflict": {
+    "fetchWasBefore0700Z": true,
+    "fetchAtUtc": "2026-11-21T01:32:07Z",
+    "openaiModelPage": "Input $4 / Cached input $0.4 / Output $20 per 1M tokens. Quote: GPT-5.6 Sol’s promotional pricing is available until November 30, 2026.",
+    "openaiPricingPage": "Standard short-context gpt-5.6-sol $4.00 / $20.00 / $0.40. Same promo sentence: GPT-5.6 Sol’s promotional pricing is available until November 30, 2026.",
+    "openaiChangelogAug21": "GPT-5.6 Sol now costs $4 per million input tokens and $20 per million output tokens, representing 20% lower input pricing and 33% lower output pricing. GPT-5.6 Sol’s promotional pricing is available at least through November 21, 2026.",
+    "devinDocsStillSays": "On both token-based plans, GPT-5.6 Sol's standard-context rates change on November 21, 2026 at 07:00 UTC from $4 to $5 per million input tokens and from $20 to $30 per million output tokens. Fast mode costs twice those rates.",
+    "doNotReconcile": true,
+    "apiListPriceIsNotSubscriptionQuota": true,
+    "doNotAutoChangeAdopted": true
+  }
+}

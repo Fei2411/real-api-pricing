@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-11-21",
+  "capturedAtUtc": "2026-11-21T01:16:48.000Z",
+  "visuallyReadAtUtc": "2026-11-21T01:41:40Z",
+  "sourceType": "x_post_plus_console_screenshot",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false,
+  "pendingMaintainerConfirmation": true,
+  "grade": "Medium",
+  "gradeNote": "Grok Bot 周额度面板 97%（Nov 15–22），来源拆分 You 17% / Routines 35% / Bot-to-Bot 46%，与口述 46% 一致。无 token。不要把 Grok Bot 周池当成 Cursor 共用池。",
+  "author": "keyelifeai",
+  "authorId": "14078109",
+  "post": {
+    "id": "2123948710837231888",
+    "createdAt": "2026-11-21T01:16:48.000Z",
+    "url": "https://x.com/keyelifeai/status/2123948710837231888",
+    "oral": "My Grok @bot burned all my weekly usage in 3 days and left nothing for other apps like Cursor in the rest of this week. As you can see from the images, messages between bots cost 46%."
+  },
+  "screenshot1": {
+    "file": "images/keyelifeai-2123948710837231888-1.png",
+    "title": "Grok Bot usage",
+    "weekly": "97% of your weekly limit · Nov 15 – Nov 22",
+    "otherApps": "The other 3% of your weekly limit went to other apps",
+    "bySource": {
+      "You": "17%",
+      "Routines": "35%",
+      "Bot-to-Bot": "46%"
+    }
+  },
+  "screenshot2": {
+    "file": "images/keyelifeai-2123948710837231888-2.png",
+    "view": "By Bot",
+    "weekly": "97% of your weekly limit · Nov 15 – Nov 22",
+    "bots": "Alfred 21%, Primary 16%, AI Signal Radar 10%, Global Mobility Desk 8.9%, Theatre Scout 6.7%, Research Desk 5.6%, Execution Desk 5.6%, dr eggbot v2 5.3%, Other Bots 18%"
+  },
+  "whyNotAdopt": [
+    "无 tokens。",
+    "图上写明另外 3% 去了 other apps，并不能支持「Cursor 额度被烧光」这一更强说法。",
+    "这是 Grok Bot 自己的周限拆分，不是 Cursor 控制台。"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "recordedAt": "2026-11-21",
+  "sourceType": "x_post_plus_console_screenshot",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false,
+  "pendingMaintainerConfirmation": true,
+  "grade": "Medium",
+  "gradeNote": "Antigravity 官方风格面板：Gemini 池周剩余 82.00%、5h 剩余 36.70%，与口述已用周 18%、5h 约 63% 一致。计划 Pro 可从 Argon 说明推断。Neon 12M / Hydrogen 29M / $17.42 只在口述，不在这张用量图上。不是打满。作者后续自绘对照图把同一组数字外推「全用 Neon」到 5h 97% / 周 28%，不是第二次实测。",
+  "author": "leo114119",
+  "authorId": "1647958531461480448",
+  "posts": {
+    "usage": {
+      "id": "2123571639581581745",
+      "createdAt": "2026-11-20T00:18:27.000Z",
+      "url": "https://x.com/leo114119/status/2123571639581581745",
+      "note": "在上轮截止 01:51Z 之前，但上轮关键词首屏未收入，本轮作者检索补到。不是今天的新窗口样本，是新的未归档 ID。"
+    },
+    "authorGraphic": {
+      "id": "2123624142385959326",
+      "createdAt": "2026-11-20T03:47:05.000Z",
+      "url": "https://x.com/leo114119/status/2123624142385959326",
+      "note": "作者自制「编排省了多少」图，不是厂商控制台。"
+    }
+  },
+  "planOrModel": "Google AI Pro / Antigravity，Orchestrator（Neon 规划 + Hydrogen 执行），口述不含 Argon 单独额度",
+  "screenshot": {
+    "file": "images/leo114119-2123571639581581745-1.jpg",
+    "geminiGroup": {
+      "models": "Gemini 4 Neon, Gemini 4 Hydrogen, Orchestrator (Neon), Gemini 3.8 Flash",
+      "weeklyRemaining": "82.00%",
+      "weeklyRefresh": "166h 15m",
+      "fiveHourRemaining": "36.70%",
+      "fiveHourRefresh": "3h 15m"
+    },
+    "claudeAndGpt": {
+      "weeklyRemaining": "100%",
+      "fiveHourRemaining": "100%"
+    },
+    "argon": {
+      "weeklyRemaining": "100%",
+      "noteOnImage": "For paid Pro plans, Argon quota is separate. Higher Argon quota (included as part of the larger Gemini quota bucket) is available on Ultra plans."
+    }
+  },
+  "oral": {
+    "weeklyAbout": "大概每周100刀（不包括 Agron 的单独额度）",
+    "fiveHourUsed": "约63%",
+    "weeklyUsed": "约18%",
+    "tokens": {
+      "neon": "12M",
+      "hydrogen": "29M",
+      "cost": "17.42$"
+    },
+    "weekly100IsExtrapolation": true
+  },
+  "authorGraphicObserved": {
+    "file1": "images/leo114119-2123624142385959326-1.jpg",
+    "allNeonEquivalent": "41M",
+    "orchestrator": "12M Neon + 29M Hydrogen（Hydrogen 标为半价）= 26.5M 等价，-35.4%",
+    "fiveHourCompare": "编排 63% vs 全用 Neon 97%",
+    "weeklyCompare": "编排 18% vs 全用 Neon 28%",
+    "file2": "images/leo114119-2123624142385959326-2.jpg",
+    "file2IsCartoonNotConsole": true
+  },
+  "whyNotAdopt": [
+    "不是打满（周已用约 18%）。禁止用 18% 外推周/月容量后写入 adopted。",
+    "12M/29M/$17.42 与周 $100 不在用量截图上。",
+    "自绘对照图的 41M / 97% / 28% 是作者按「Hydrogen 半价」换算，不是全 Neon 实测。"
+  ],
+  "relatedAlreadyArchivedDoNotRecount": "2123585760909791742 Devin Max Fable 5.2 已在 11-20 草稿中，Medium 不采用。"
+}

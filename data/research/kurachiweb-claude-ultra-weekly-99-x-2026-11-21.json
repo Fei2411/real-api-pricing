@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-11-21",
+  "capturedAtUtc": "2026-11-21T01:39:14.000Z",
+  "visuallyReadAtUtc": "2026-11-21T01:41:30Z",
+  "sourceType": "x_post_plus_console_screenshot",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false,
+  "pendingMaintainerConfirmation": true,
+  "grade": "Medium",
+  "gradeNote": "Claude 日文用量面板计划名 Ultra，本周 99% 使用済み，Fable 行 0%。无 token。接近打满但缺少 tokens，不能反推容量后采用。",
+  "author": "KurachiWeb",
+  "authorId": "1738778568895918080",
+  "post": {
+    "id": "2123954355799986405",
+    "createdAt": "2026-11-21T01:39:14.000Z",
+    "url": "https://x.com/KurachiWeb/status/2123954355799986405",
+    "oral": "Finishing kiro-impl(cc-sdd) at 99% of my Claude weekly limit"
+  },
+  "screenshot": {
+    "file": "images/KurachiWeb-2123954355799986405-1.jpg",
+    "clockOnScreen": "11月21日(土) 10:35:18（与发帖 01:39Z 相符，应为 JST）",
+    "heading": "ご利用状況 Ultra",
+    "warning": "このペースでは、明日のリセットを待たずに、今日の午後に上限に達する見込みです。",
+    "thisWeek": {
+      "used": "99% 使用済み",
+      "resets": "1:00（日曜日）にリセット"
+    },
+    "fable": {
+      "capNote": "週間の利用上限の最大 50%",
+      "used": "0% 使用済み",
+      "resets": "1:00（日曜日）にリセット"
+    },
+    "limitResetsAvailable": "4 件利用可能",
+    "fableResetItem": "Fable リセット · 3，すべて 2027年3月9日 16:59 JST に期限切れ，無料でリセット"
+  },
+  "whyNotAdopt": [
+    "图上没有 tokens，不能从 99% 反推周/月容量。",
+    "Fable 池是分开的且为 0%，不要和主周额度混算。",
+    "接近打满本身不足以写入 adopted。"
+  ]
+}

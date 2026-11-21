@@ -1,0 +1,83 @@
+{
+  "recordedAt": "2026-11-21",
+  "capturedAtUtc": "2026-11-20T02:09:56Z",
+  "visuallyReadAtUtc": "2026-11-21T01:39:30Z",
+  "sourceType": "x_post_plus_console_screenshot",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false,
+  "pendingMaintainerConfirmation": true,
+  "grade": "High",
+  "gradeNote": "Codex Plus 用量面板同帖可见 Today $2.42 · 8.7M tokens，以及 Weekly 54% left 与 Weekly capacity ≈ $69.55 · 86.9M tokens。计划名 Codex Plus 在图上。缺少 input/cache/output 分项。口述 3% 是本次 Sol 任务的美元份额（2.42/69.55≈3.5%），不是图上的累计周已用。主帖附件是视频，未声称看过。不采用。",
+  "author": "shownotover",
+  "authorId": "2080910665041010688",
+  "posts": {
+    "solTask": {
+      "id": "2123599696526717303",
+      "createdAt": "2026-11-20T02:09:56.000Z",
+      "url": "https://x.com/shownotover/status/2123599696526717303",
+      "media": "video, not visually read"
+    },
+    "nerdPanel": {
+      "id": "2123600545885847645",
+      "createdAt": "2026-11-20T02:13:19.000Z",
+      "url": "https://x.com/shownotover/status/2123600545885847645",
+      "media": "static png, visually read"
+    },
+    "samePlanQuote": {
+      "id": "2123600683366846787",
+      "createdAt": "2026-11-20T02:13:52.000Z",
+      "url": "https://x.com/shownotover/status/2123600683366846787"
+    },
+    "astraPrior": {
+      "id": "2123359392657441179",
+      "createdAt": "2026-11-19T10:15:03.000Z",
+      "url": "https://x.com/shownotover/status/2123359392657441179",
+      "media": "video, not visually read",
+      "note": "同一面板 Yesterday 行与此口述一致。11-19 窗口内但上轮未拉该作者，本轮作为对照归档，不另计一次打满。"
+    }
+  },
+  "planOrModel": "Codex Plus × GPT-6.2 Sol at Max（口述）；对照前一日 GPT-6.2 Astra at Max",
+  "screenshot": {
+    "file": "images/shownotover-2123600545885847645-1.png",
+    "product": "Codex Plus",
+    "weeklyLeft": "54% left",
+    "limitIn": "1d 6h",
+    "resetsIn": "5d 21h",
+    "extraUsage": "$0.00 - 0 credits",
+    "rateLimitResets": "1 available",
+    "weeklyCapacity": "≈ $69.55 · 86.9M tokens",
+    "today": "$2.42 · 8.7M tokens",
+    "yesterday": "$29.58 · 31.3M tokens",
+    "last30Days": "$225.62 · 197.3M tokens"
+  },
+  "oralSol": {
+    "duration": "42 mins of work",
+    "tokens": "8.7M tokens",
+    "apiUsage": "$2.42",
+    "weeklyUsedThisTask": "3% weekly limit used",
+    "sameTaskAstraWeekly": "43%",
+    "qualityClaim": "Quality is SAME (almost)",
+    "notOnImage": [
+      "42 mins",
+      "GPT-6.2 Sol at Max label",
+      "explicit 3% badge"
+    ]
+  },
+  "oralAstra": {
+    "tokens": "31.3M",
+    "apiEquivalent": "$29.58",
+    "weeklyGone": "43%",
+    "duration": "50 mins",
+    "extrapolatedFullWeekly": "72.8M tokens / about $68.79 / around $298 per month",
+    "extrapolationNote": "31.3M/0.43≈72.8M 把美元口径的 43%（29.58/69.55≈42.5%）套到 token 上。图上官方 Weekly capacity 是 86.9M tokens / $69.55，31.3/86.9≈36%。不要把 72.8M 当成官方周容量。"
+  },
+  "whyNotAdopt": [
+    "不是打满：图上周剩余 54%（累计已用约 46%，含昨日 Astra）。",
+    "无 input/cache/output 分项。",
+    "口述 3% 未在图上标出，只与 Today $2.42 / 周容量 $69.55 大致相符。",
+    "主帖为视频，未看。",
+    "作者先前把 43% 外推成 72.8M 周容量，与后来面板 86.9M 冲突；外推不等于官方额度。",
+    "Last 30 Days $225.62 不是月配额。",
+    "API 等价美元不是订阅配额本身。"
+  ]
+}

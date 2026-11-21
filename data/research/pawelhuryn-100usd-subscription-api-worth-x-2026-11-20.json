@@ -1,0 +1,405 @@
+{
+  "id": "aifunss-pawelhuryn-100usd-subscription-api-worth-x-2026-11-20",
+  "recordedAt": "2026-11-20T16:53:38+08:00",
+  "timezoneNote": "source timestamps are UTC (Z); createdAtTaipei is converted to Asia/Taipei (UTC+8).",
+  "sourceType": "x_user_supplied_repost_of_third_party_infographic",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false,
+  "pendingMaintainerConfirmation": true,
+  "confidence": "mixed-by-field",
+  "confidenceNote": "图是 Pawel Huryn 的第三方 API 美元等价信息图，不是官方配额面板，也不是 ai_funss 自己的用量截图。有套餐价、模型、工具、倍率区间、测量日期和脚注口径，研究归档可标 Medium；不足以改 adopted。ai_funss 正文把 27.3x 说成 Fable 5.2 的 2730 刀，与图中 Fable 纯用 $1,360 / 13.6x 不符；其自回中文表又把 27.3x 和 $1,360（纯用上限）写在同一行，内部不自洽。以 Pawel 原图为准。这是美元等价，不是打满实测，也不是缓存命中率。",
+  "planId": "multi_plan_comparison",
+  "plansOnChart": [
+    "claude_max $100/mo",
+    "google_ai_ultra $99.99/mo (label on chart; may not be the same SKU as other Ultra price claims)",
+    "x_premium $30/mo (on chart, omitted by ai_funss oral/table)",
+    "chatgpt_pro $100/mo",
+    "muse_code_high_usage $15/mo (on chart, omitted by ai_funss oral/table)"
+  ],
+  "currency": "USD",
+  "model": "multiple; see observed.screenshotChart.rows",
+  "tool": "Claude Code / Antigravity CLI / Grok Build / Codex CLI / Muse Code, as printed",
+  "source": {
+    "type": "x_post_reprinting_another_author_chart",
+    "url": "https://x.com/ai_funss/status/2123655136291746237",
+    "account": "ai_funss",
+    "profileUrl": "https://x.com/ai_funss",
+    "authorName": "AI Fun",
+    "authorId": "768746623627366400",
+    "createdAt": "2026-11-20T05:50:14.000Z",
+    "createdAtTaipei": "2026-11-20 13:50:14 Asia/Taipei",
+    "conversationId": "2123655136291746237",
+    "standaloneRoot": true,
+    "replyCountAtFetch": 9,
+    "text": "如果都是 $100 的订阅最多可以使用多少额度\n\n- Claude Max：4640🔪的Opus 5.5或 2730🔪的Fable 5.2\n \n- Google AI Ultra：2580🔪 的 Gemini 4 Neon\n\n- ChatGPT Pro：1025 🔪的 GPT-6.1 Sol\n\n总体来说还是Claude的额度更多，GPT的最少，Gemini中规中矩，根据模型的单价和缓存也有关系……",
+    "primaryMeasurementSource": {
+      "url": "https://x.com/PawelHuryn/status/2123650574373605874",
+      "account": "PawelHuryn",
+      "authorName": "Paweł Huryn",
+      "createdAt": "2026-11-20T05:32:07.000Z",
+      "createdAtTaipei": "2026-11-20 13:32:07 Asia/Taipei",
+      "noteTweet": "Just measured how much more AI usage you get from a subscription. $100 of Claude Max buys about $4,640 of Opus at API prices.\n\nThe results:\n- Claude Max ($100): 46.4x on Opus 5.5, 27.3x on Fable 5.2\n- Google AI Ultra ($99.99): 25.8x on Gemini 4 Neon\n- X Premium ($30): 20.3x on Grok 4.7\n- ChatGPT Pro ($100): 10.25x (measured in October)\n- Muse Code High Usage ($15): 9.3x (October)\n\nHow this affects the Bug Hunt Benchmark: 🧵"
+    }
+  },
+  "distinctFrom": [
+    {
+      "url": "https://x.com/ai_funss/status/2120065411240874466",
+      "fileOnPr234": "data/research/claude-ultra-monthly-api-worth-x-2026-11-10.json",
+      "why": "同作者 11-10 的 Claude Ultra $200 API 价值图（Opus 5.5 only $14,662；Fable 5.2 only $3,021；一个月按 30 天=4.3 个周限）。套餐是 Ultra $200 不是 Max $100，测量声称是 Aug 11–Nov 9 的 1.1M proxied requests，不是本图 Nov 19–20 的 plan meter。风格相近，但不能把 $14,662/200 折成 $100 去对 $4,640，也不能当本条的补强更新。"
+    },
+    {
+      "url": "https://x.com/ai_funss/status/2120068769804693678",
+      "fileOnPr234": "data/research/aifunss-carbon-vertex-skus-x-2026-11-10.json",
+      "why": "Carbon Vertex 价目卡，不是用量或订阅倍率。"
+    },
+    {
+      "url": "https://x.com/2232960089q/status/2121837005831324041",
+      "fileOnPr234": "data/research/2232960089q-fable-subscription-multiplier-oral-x-2026-11-15.json",
+      "why": "另一作者口述 Fable 订阅额外消耗约 2.3–2.5 倍。不是本图，不要和 27.3x / 13.6x 混算。"
+    }
+  ],
+  "observed": {
+    "evidenceKind": "third-party API-list-price monthly-worth infographic, reprinted; not a raw quota dashboard and not a filled-month token log",
+    "unitNote": "🔪 在正文里当作「刀」= USD。图内是 API list-price 美元等价和倍率，不是配额已用/剩余百分比，也不是缓存命中率。",
+    "oralAiFunss": {
+      "frame": "如果都是 $100 的订阅最多可以使用多少额度",
+      "claudeMaxOpus55Usd": 4640,
+      "claudeMaxFable52UsdClaim": 2730,
+      "googleAiUltraNeonUsd": 2580,
+      "chatgptProGpt61SolUsd": 1025,
+      "omittedFromOral": [
+        "X Premium $30 / Grok 4.7 / 20.3x / ≈$610",
+        "Muse Code High Usage $15 / Muse Spark 1.3 / 9.3x / ≈$140"
+      ],
+      "cacheMention": "根据模型的单价和缓存也有关系——仅定性，无命中率或分项",
+      "fableOralProblem": "把图中 27.3x（$2,730）写成「2730刀的Fable 5.2」，但图的 Fable 纯用是 ≈$1,360 / 13.6x"
+    },
+    "screenshotChart": {
+      "path": "images/ai_funss-100usd-compare.jpg",
+      "visuallyRead": true,
+      "mediaType": "photo",
+      "designer": "Pawel Huryn · productcompass.pm · 141K+ readers",
+      "version": "v1 · 2026-11",
+      "title": "How much more AI usage does a subscription buy than the API?",
+      "subtitle": "A month of each plan's allowance, priced at the vendor's public API rates, divided by the plan's price. 46.4x means $100 a month buys what $4,640 buys on the API.",
+      "footer": "Black whiskers: the measured range. Measured Nov 19-20, 2026 (ChatGPT Pro, Muse: Oct 1) on each plan's own meter, at public API list rates. Assumes the whole week is usable. Claude Max's $100 of monthly API credits not counted.",
+      "notAUsageMeter": true,
+      "noTokenSplit": true,
+      "noQuotaUsedOrRemainingPct": true,
+      "monthConventionOnChart": "A month of each plan's allowance; assumes the whole week is usable. Does not state repo monthWeeks=4 vs 30/7.",
+      "rows": [
+        {
+          "plan": "Claude Max",
+          "planPriceUsdPerMonth": 100,
+          "model": "Opus 5.5",
+          "tool": "Claude Code",
+          "multiplier": 46.4,
+          "range": [
+            45.2,
+            47.6
+          ],
+          "apiWorthUsdApprox": 4640,
+          "measured": "Nov 19",
+          "arithmeticCheck": "46.4 × 100 = 4640"
+        },
+        {
+          "plan": "Claude Max",
+          "planPriceUsdPerMonth": 100,
+          "model": "Fable 5.2",
+          "tool": "Claude Code",
+          "multiplierFullBar": 27.3,
+          "range": [
+            25.6,
+            29.0
+          ],
+          "fableOnlyApiWorthUsdApprox": 1360,
+          "fableOnlyMultiplierPrinted": 13.6,
+          "note": "≈ $1,360 of Fable a month. Fable may use only half the week: 13.6× on Fable alone. 27.3× is the full bar, not Fable-only (27.3×100=2730). Hatched remainder is visible on the bar.",
+          "arithmeticCheck": "13.6 × 100 = 1360; 27.3 × 100 = 2730"
+        },
+        {
+          "plan": "Google AI Ultra",
+          "planPriceUsdPerMonth": 99.99,
+          "model": "Gemini 4 Neon",
+          "tool": "Antigravity CLI",
+          "multiplier": 25.8,
+          "range": [
+            25.3,
+            26.3
+          ],
+          "apiWorthUsdApprox": 2580,
+          "caveat": "Likely 28–41×: the CLI's token counts read 10–38% low",
+          "arithmeticCheck": "25.8 × 99.99 = 2579.742 ≈ 2580",
+          "priceSkuCaveat": "Chart prints $99.99. Local research also has Google AI Ultra Lite $100 and an official-price dispute around issue #23. Do not silently treat this as a $249.99-class Ultra."
+        },
+        {
+          "plan": "The X Subscription, Premium",
+          "planPriceUsdPerMonth": 30,
+          "model": "Grok 4.7",
+          "tool": "Grok Build",
+          "multiplier": 20.3,
+          "range": [
+            20.1,
+            20.5
+          ],
+          "apiWorthUsdApprox": 610,
+          "caveat": "At low effort; ≈ 20–26× on xhigh agent work",
+          "arithmeticCheck": "20.3 × 30 = 609 ≈ 610",
+          "omittedByAiFunssOralAndTable": true
+        },
+        {
+          "plan": "ChatGPT Pro",
+          "planPriceUsdPerMonth": 100,
+          "model": "GPT-6.1 Sol",
+          "tool": "Codex CLI",
+          "multiplier": 10.25,
+          "range": [
+            9.95,
+            10.55
+          ],
+          "apiWorthUsdApprox": 1025,
+          "measured": "Historical: measured Oct 1",
+          "staleness": "Not the Nov 19–20 window used for Claude / Google / X rows",
+          "arithmeticCheck": "10.25 × 100 = 1025"
+        },
+        {
+          "plan": "Muse Code High Usage",
+          "planPriceUsdPerMonth": 15,
+          "model": "Muse Spark 1.3",
+          "tool": "Muse Code",
+          "multiplier": 9.3,
+          "range": [
+            8.9,
+            9.7
+          ],
+          "apiWorthUsdApprox": 140,
+          "measured": "Oct 1",
+          "arithmeticCheck": "9.3 × 15 = 139.5 ≈ 140",
+          "omittedByAiFunssOralAndTable": true
+        }
+      ]
+    },
+    "screenshotAuthorTable": {
+      "url": "https://x.com/ai_funss/status/2123655368903627247",
+      "createdAt": "2026-11-20T05:51:10.000Z",
+      "createdAtTaipei": "2026-11-20 13:51:10 Asia/Taipei",
+      "path": "images/ai_funss-author-reply.png",
+      "visuallyRead": true,
+      "mediaType": "photo",
+      "kind": "Chinese summary table of four rows, not a raw meter",
+      "columns": [
+        "套餐（月费）",
+        "实测模型 & 工具",
+        "实测倍率（区间）",
+        "$100 可用等效 API 额度/月"
+      ],
+      "rows": [
+        {
+          "plan": "Claude Max ($100/月)",
+          "modelTool": "Opus 5.5 · Claude Code",
+          "multiplier": "46.4× (45.2–47.6×)",
+          "apiWorth": "约 $4,640",
+          "matchesChart": true
+        },
+        {
+          "plan": "Claude Max ($100/月)",
+          "modelTool": "Fable 5.2 · Claude Code",
+          "multiplier": "27.3× (25.6–29.0×)",
+          "apiWorth": "约 $1,360（纯用上限）",
+          "matchesChart": false,
+          "problem": "倍率取了整条 27.3x，美元取了 Fable 纯用 $1,360，还标「纯用上限」。27.3×$100 应是 $2,730，不是 $1,360。"
+        },
+        {
+          "plan": "Google AI Ultra ($99.99/月)",
+          "modelTool": "Gemini 4 Neon · Antigravity CLI",
+          "multiplier": "25.8× (25.3–26.3×)",
+          "apiWorth": "约 $2,580",
+          "matchesChart": true,
+          "omittedCaveat": "CLI 少计 10–38%、或为 28–41×"
+        },
+        {
+          "plan": "ChatGPT Pro ($100/月)",
+          "modelTool": "GPT-6.1 Sol · Codex CLI",
+          "multiplier": "10.25× (9.95–10.55×)",
+          "apiWorth": "约 $1,025",
+          "matchesChart": true,
+          "omittedCaveat": "Measured Oct 1"
+        }
+      ],
+      "omittedFromTable": [
+        "X Premium",
+        "Muse Code",
+        "footer caveats about credits, full-week assumption, whiskers"
+      ]
+    },
+    "pawelMethodReplies": [
+      {
+        "url": "https://x.com/PawelHuryn/status/2123682949635743889",
+        "createdAt": "2026-11-20T07:40:45.000Z",
+        "createdAtTaipei": "2026-11-20 15:40:45 Asia/Taipei",
+        "text": "I just burned through a few % of my weekly usage and observed every 1% tick. Default settings. In Claude, you can type /autocompact 300000 for example to lower the bill.",
+        "implication": "未打满。是消耗周额度的百分之几、看每 1% 跳动后外推到「整周可用」，再合成「一个月的 allowance」。不是整月打满面板。"
+      },
+      {
+        "url": "https://x.com/PawelHuryn/status/2123683463198810439",
+        "createdAt": "2026-11-20T07:42:48.000Z",
+        "createdAtTaipei": "2026-11-20 15:42:48 Asia/Taipei",
+        "text": "It does. I didn't want to purchase it just for this experiment. Also, my primary Claude subscription is $200/mo. Used another one, $100/mo, that wasn't busy.",
+        "implication": "Claude Max $100 行来自另一只不忙的 $100 账户，不是他主用的 $200 订阅。"
+      },
+      {
+        "url": "https://x.com/PawelHuryn/status/2123686167019225389",
+        "createdAt": "2026-11-20T07:53:33.000Z",
+        "createdAtTaipei": "2026-11-20 15:53:33 Asia/Taipei",
+        "text": "Neither: Google's standard paid rate, $3 in / $15 out per MTok. It listed no promo when I measured (Nov 18). If the API price changes, the multiplier changes with it. The cost of a run on the subscription doesn't: it's the share of the plan the run uses up (1.8% of $99.99 ≈",
+        "implication": "Neon 按标准价 $3/$15 计（无促销）。$99.99 是他用的套餐价。回复在 1.8% of $99.99 处截断。倍率随 API 标价变动。"
+      }
+    ],
+    "conventions": {
+      "source": "data/conventions.json on PR #234 head 98080389, updatedAt 2026-11-10",
+      "monthWeeks": 4,
+      "monthWeeksAlt": "30/7 只作灵敏度",
+      "standardTokenMix": "cache 0.97 / input 0.025 / output 0.005",
+      "sourcePriorityThirdParty": "第三方综述和跨档假设仅作低置信旁证",
+      "apply": "本图是美元等价外推，不是 token 分项，不能用标准负载把这些美元再折成可上线的月 token。图未声明 4 周还是 30/7。11-10 Ultra 图用了 30/7。不要替作者改算。"
+    }
+  },
+  "threadChallengesNotThisSample": [
+    {
+      "url": "https://x.com/jhhh260211/status/2123678249721229422",
+      "createdAtTaipei": "2026-11-20 15:22:05 Asia/Taipei",
+      "text": "事实上我上个月的gpt pro 100用了4350刀的额度。当然，可能有受到多次重置的影响，但是在考虑额度的时候也不得不把每个厂商的重置习惯考虑进去",
+      "note": "另一作者口述，且可能含多次重置；与图中 ChatGPT Pro 月等价 $1,025 冲突。不与本图合并，也不采用。"
+    },
+    {
+      "url": "https://x.com/woaishuoshihual/status/2123674175076516318",
+      "followUp": "https://x.com/woaishuoshihual/status/2123674415485591657",
+      "createdAtTaipei": "2026-11-20 15:05:53 / 15:06:51 Asia/Taipei",
+      "text": "自己天天高强度用 100 刀 gpt，比你这个价值高多了；而且这是一周的额度，一个月是 120 亿不算重置",
+      "note": "另一作者自述+配图，本核实未把该图当作本样本。不合并。"
+    },
+    {
+      "url": "https://x.com/7wx6n63iz0cDYAr/status/2123682527546327226",
+      "createdAtTaipei": "2026-11-20 15:39:05 Asia/Taipei",
+      "text": "怎么我实测gemini 5x，周限只有200刀？？",
+      "note": "档位是 5x 不是图中 Ultra $99.99，窗口是周限不是月等价。不合并。"
+    }
+  ],
+  "dedup": {
+    "thisPostIdOnMain": false,
+    "pawelPostIdOnMain": false,
+    "issuesSearch": 0,
+    "pr234Head": "98080389f9e739eab7f65401fa72ee4d65681b99",
+    "pr234Title": "研究归档：收敛 #205/#208/#216/#223/#233，并追加至 11-20（不改 adopted）",
+    "pr234ScanWindowEnded": "2026-11-20T01:51:04Z = 2026-11-20 09:51:04 Asia/Taipei",
+    "thisPostAfterScan": true,
+    "pr234AlreadyHasAiFunssFiles": [
+      "data/research/claude-ultra-monthly-api-worth-x-2026-11-10.json",
+      "data/research/aifunss-carbon-vertex-skus-x-2026-11-10.json"
+    ],
+    "thisPostIdOnPr234Head": false,
+    "pawelPostIdOnPr234Filenames": false,
+    "local1120KnownIdsAtCheck": "2123655136291746237, 2123650574373605874, 2123655368903627247 absent from daily-2026-11-20 known-ids / draft",
+    "onlineAdoptedRows": "PR body says research-only, 线上 345 数据行不变. This pass did not dump adopted.csv.",
+    "disposition": "new post IDs; reprint of a new PawelHuryn chart, not a duplicate of ai_funss 11-10 Ultra $200 chart and not a second independent measurement of the same numbers"
+  },
+  "currentAdoptedNotToOverwrite": [
+    "Do not write these multipliers or dollar-worth figures into adopted.csv.",
+    "Do not overwrite or rescale the 11-10 Claude Ultra $200 API-worth sample with this Max $100 chart.",
+    "Do not convert these USD equivalents into monthly tokens via standardTokenMix.",
+    "Do not treat cache mentions or 27.3x as quota fill or as Fable-only worth."
+  ],
+  "conflictsToKeep": [
+    "ai_funss 口述 2730 刀 Fable 5.2 vs 原图 Fable 纯用 $1,360 / 13.6x vs 其自回表 27.3x 配 $1,360（纯用上限）。以原图为准，不静默取一个。",
+    "Pawel 正文同样写 27.3x on Fable 5.2，但图有 Fable-only 标注；仍以图为准。",
+    "Google AI Ultra 标 $99.99，与仓库里 Ultra / Ultra Lite 标价争议（#23、Lite $100）可能不是同一 SKU。",
+    "ChatGPT Pro 行为 10 月 1 日测量；评论区另有作者称月用 $4,350 或更高，且可能含重置。不覆盖、不合并。",
+    "图声明未计入 Claude Max 每月 $100 API credits，46.4x 可能偏低。"
+  ],
+  "recommendAdoptItems": [],
+  "doNotAdoptItems": [
+    {
+      "item": "Claude Max Opus 5.5 46.4x / ≈$4,640",
+      "grade": "Medium (research only)",
+      "reason": "第三方信息图+短时 1% tick 外推，无 token 分项、无官方表。可归档，不上 adopted。"
+    },
+    {
+      "item": "Claude Max Fable 5.2 口述 2730 刀",
+      "grade": "Low",
+      "reason": "与原图纯用 $1,360 / 13.6x 不符。"
+    },
+    {
+      "item": "Google AI Ultra Neon 25.8x / ≈$2,580",
+      "grade": "Medium (research only)",
+      "reason": "图自己说 CLI 可能少计 10–38%，或为 28–41×；$99.99 档位待核对。不上 adopted。"
+    },
+    {
+      "item": "ChatGPT Pro 10.25x / ≈$1,025",
+      "grade": "Low-Medium",
+      "reason": "测量日是 10 月 1 日，且评论区有重置口径冲突。"
+    },
+    {
+      "item": "X Premium 20.3x / Muse 9.3x",
+      "grade": "Medium (research only)",
+      "reason": "只在原图，ai_funss 未转述。同样是第三方外推，不上 adopted。"
+    }
+  ],
+  "whyNotAdopt": [
+    "这是订阅月费相对 API 标价的美元等价，不是打满实测，也不是配额百分比或缓存命中率。",
+    "测量者说只烧掉周额度的百分之几、观察每 1% 跳动，再假设整周可用后外推到月。",
+    "原图没有 input/cache/output token，也没有已用/剩余进度条。",
+    "ai_funss 不是独立第二次测量，只是转图和有误差的中文转述。",
+    "仓库 conventions：第三方综述仅作低置信旁证；月换算默认 4 周，图未声明用 4 还是 30/7。",
+    "线上 adopted 345 行不应被这些倍率改写。"
+  ],
+  "gaps": [
+    "未见各套餐原始 meter 截图或 token 分项",
+    "1% tick 的样本量、cache mix、是否含 cache write 未公布",
+    "月窗口是 4 周还是 30/7 未印出",
+    "Google $99.99 与其他 Ultra 标价的对应关系未裁定",
+    "Claude Max $100 credits 被排除后的完整价值未知"
+  ],
+  "imagesVisuallyChecked": [
+    "images/ai_funss-100usd-compare.jpg",
+    "images/ai_funss-author-reply.png"
+  ],
+  "mediaIsVideo": false,
+  "verifiedOn": "2026-11-21",
+  "verifiedAtUtc": "2026-11-21T01:38:00Z",
+  "verificationThisRound": {
+    "postsStillPresent": true,
+    "ids": [
+      "2123650574373605874",
+      "2123655136291746237",
+      "2123655368903627247"
+    ],
+    "sharedMediaKey": "3_2123650568237314048",
+    "sharedImageUrl": "https://pbs.twimg.com/media/HXi48LLXcAAlzcM.jpg",
+    "replyMediaKey": "3_2123655353699274752",
+    "imageMd5IdenticalToPack": true,
+    "visuallyReread": true,
+    "methodFollowUpConfirmed": {
+      "id": "2123682949635743889",
+      "createdAt": "2026-11-20T07:40:45.000Z",
+      "url": "https://x.com/PawelHuryn/status/2123682949635743889",
+      "quote": "I just burned through a few % of my weekly usage and observed every 1% tick. Default settings."
+    },
+    "neonPricingFollowUpConfirmed": {
+      "id": "2123686167019225389",
+      "createdAt": "2026-11-20T07:53:33.000Z",
+      "quote": "Neither: Google's standard paid rate, $3 in / $15 out per MTok. It listed no promo when I measured (Nov 18). If the API price changes, the multiplier changes with it. The cost of a run on the subscription doesn't: it's the share of the plan the run uses up (1.8% of $99.99 ≈ $1.80 for Neon xhigh)."
+    },
+    "secondAccountFollowUpConfirmed": {
+      "id": "2123683463198810439",
+      "createdAt": "2026-11-20T07:42:48.000Z",
+      "quote": "Also, my primary Claude subscription is $200/mo. Used another one, $100/mo, that wasn't busy."
+    },
+    "doNotOverturnPackConclusion": true,
+    "echoSameDay": {
+      "id": "2123949917836320788",
+      "author": "xulijian1994",
+      "note": "Chinese restatement of the same chart; repeats the incorrect Fable $2,730 (27.3x treated as pure Fable). Not an independent sample."
+    }
+  },
+  "grade": "Medium"
+}

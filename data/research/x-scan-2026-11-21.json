@@ -1,0 +1,152 @@
+{
+  "scannedAt": "2026-11-21T01:43:00Z",
+  "recordedAt": "2026-11-21",
+  "taipeiLocal": "2026-11-21 09:30:59–09:43:00",
+  "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
+  "source": "精简自 2026-11-21 扫描结论（scan.json）。不另开 PR。分页 token、原始搜索大文件、截图二进制和账号密钥不入库。tweetCountSnapshot 不是发帖频率。",
+  "method": "公开 X 读取，外加 2026-11-21 09:31–09:33 台北时间复核 OpenCode、Devin 与 OpenAI 官方页，以及只读核对 issue #247。未回复评论，未发帖，未部署，未改 adopted。确认 origin/main 仍是 13080beb25054a0ab567ed5b6b60ce37c5c40f1b 后执行 git merge origin/main，结果为 Already up to date，无新提交。",
+  "window": {
+    "start": "2026-11-19T01:51:04Z",
+    "end": "2026-11-21T01:43:00Z",
+    "previousEnd": "2026-11-20T01:51:04Z",
+    "overlap": "增量起点 2026-11-19T01:51:04Z，相对上轮结束 2026-11-20T01:51:04Z 重叠 24 小时。已归档 post ID 只补缺、不重计。作者 14 日回补约从 2026-11-07T01:26:00Z 起。",
+    "scanStartedUtc": "2026-11-21T01:30:59Z",
+    "scanEndedUtc": "2026-11-21T01:43:00Z",
+    "scanStartedTaipei": "2026-11-21 09:30:59 Asia/Taipei",
+    "scanEndedTaipei": "2026-11-21 09:43:00 Asia/Taipei"
+  },
+  "counts": {
+    "uniquePostsScanned": 361,
+    "knownIdHits": 1,
+    "newIdsSeen": 360,
+    "recommendAdopt": 0,
+    "notAdoptedHigh": 1,
+    "notAdoptedMedium": 5,
+    "officialRecheckNotCountedAsSample": 1,
+    "discussAdoptPendingConfirmation": 0,
+    "directAdopt": 0,
+    "note": "uniquePostsScanned 只计本轮 X 检索/时间线去重 ID。knownIdHits 为 1。这不是搜全。扫描包 scan.json 的 notAdoptedMedium 有 6 条，其中 postId=official-recheck 是官方复核占位，不是新的用户样本。这里按 11-20 的写法把官方复核单列，用户 Medium 计 5。#247 无新证据，不计入 notAdoptedHigh。"
+  },
+  "judgmentNote": "recommendAdopt 为空。没有可直接写入 adopted 的改动。shownotover 的 Codex Plus 面板同帖能对上 Today $2.42 · 8.7M，但不是打满，无 input/cache/output，主帖为视频未看，且不要采用作者用 43% 外推的 72.8M 周容量。5 条 Medium 不升级、不采用。官方 OpenCode / Devin / OpenAI 相对 11-20 与已合并的 #246 没有新的采用结论。",
+  "notExhaustive": [
+    "OpenCode/GLM、Cursor、Claude、Antigravity/Gemini、Codex/ChatGPT 带图检索各 1 页（start_time=2026-11-19T01:51:04Z），全部仍有分页，未关到窗口起点。OpenCode/GLM 图搜最旧 2026-11-20T18:23:49Z。Cursor 图搜最旧 2026-11-20T17:30:50Z。Claude、Antigravity/Gemini、Codex/ChatGPT 图搜首屏几乎都停在 11-21 凌晨（最旧大约 00:35–00:50Z）。",
+    "Kimi、DeepSeek、Devin、MiniMax、千问/Qwen、Grok 的独立带图检索本轮未单独跑完。中文控制台 11-16 01:37–03:00 缺口仍在。",
+    "from:Fei2411 增量 1 页 25 条，最新 2026-11-21T01:28:16Z，最旧 2026-11-20T11:33:03Z，仍有分页，未关到 2026-11-19T01:51:04Z。to:Fei2411 最旧 2026-11-20T15:15:46Z；@Fei2411 -from:Fei2411 最旧 2026-11-20T15:42:45Z。各 1 页，仍有分页。7 日更旧缺口（11-17T01:39:07Z、11-16 提及窗、11-15 10:41–12:39、11-11 01:30 附近约 42 分钟）本轮未补。",
+    "Fei2411 口述 MiniMax M3.1 Flash one-shot 33M tokens、缓存 99%（https://x.com/Fei2411/status/2123797286446825571）。附件是视频，未看。不是配额打满，不升 High。",
+    "14 日已关、本轮增量 0 条：UYouximi58156、ceciiiax、ZShipZuck、big_mm_cat、mamaruo、bebuu、capputschino。",
+    "上轮完全未拉、本轮首次拉但 14 日未关完：ai_funss 2 页，最旧 2026-11-19T15:41:31Z，仍有分页；shengtang135754 1 页，最旧 2026-11-20T08:54:41Z，仍有分页；leo114119 时间线 1 页几乎全是短回复，另做计量向关键词 1 页，14 日未关；shownotover 2 页，最旧 2026-11-17T19:21:59Z，仍有分页。",
+    "2232960089q 本轮增量 3 条口头 Kimi 回复，无截图。14 日更旧分页未续，上轮最旧仍是 2026-11-07T15:00:45Z。",
+    "14 日未关、本轮未再翻旧页：MartinM91217805、niko70129972、Riom510、imranbru99、lechattys。",
+    "本轮未拉时间线：pcshipp、bebuu_ai、maanasms、ethan_leee9113、jkgorka、Hsanli_x、VersunPan、huang18825。Octoberry、TorhileCharles、kimmonismus 仍不宣称拉全。",
+    "missionaryjdot 不存在，未再查。停止是为了把已目视样本、Pawel 归档和官方复核写完，不是搜全，也不是额度耗尽。"
+  ],
+  "budget": {
+    "source": "共享公开 X 读取，不是用户 X 插件。",
+    "visibleAfterFirstPostFetch": "994/1000",
+    "remainingAtLastCall": "951/1000",
+    "dailyCap": 1000,
+    "approxReadsUsed": 49,
+    "executorCalls": 27,
+    "reservedUnused": "100+",
+    "resetsAt": "2026-11-22T00:00:00.000Z",
+    "http429": "本轮无 429。",
+    "maxResultsNote": "接口每次最多 25 条。",
+    "stopReason": "已把目视过的 High/Medium 样本、Pawel 复核和官方页对照归档。预留额度未用尽。最后一次作者增量约剩 951/1000。"
+  },
+  "nextBackfillCutoff": "2026-11-21T01:43:00Z",
+  "mergedMain": {
+    "sha": "13080beb25054a0ab567ed5b6b60ce37c5c40f1b",
+    "alreadyContained": true,
+    "mergeResult": "Already up to date",
+    "pullRequestsAlreadyOnMain": [
+      246,
+      237
+    ],
+    "note": "远程 main 相对 11-20 没有新提交。不重计 #246 / #237，不把 OpenCode $500 或本轮官方复核当成新的采用项，不改 adopted。"
+  },
+  "noDirectAdopt": true,
+  "recommendAdopt": [],
+  "recommendDiscussAdopt": [],
+  "notAdoptedHigh": [
+    "https://x.com/shownotover/status/2123599696526717303"
+  ],
+  "notAdoptedMedium": [
+    "https://x.com/PawelHuryn/status/2123650574373605874",
+    "https://x.com/leo114119/status/2123571639581581745",
+    "https://x.com/_mohansolo/status/2123848516581892181",
+    "https://x.com/KurachiWeb/status/2123954355799986405",
+    "https://x.com/keyelifeai/status/2123948710837231888"
+  ],
+  "notAdoptedLowExamples": [
+    "https://x.com/silentworks/status/2123938420590313929：Agents 条可见 242.4K tokens today 与 Antigravity 几乎为空，但条上无标出的百分比；口述 Gemini Neon 与面板产品名不完全对齐。",
+    "https://x.com/xulijian1994/status/2123949917836320788：Pawel 图的中文转述，Fable 写成 $2,730，不是独立样本。",
+    "https://x.com/Fei2411/status/2123797286446825571：口述 MiniMax M3.1 Flash one-shot 33M tokens、缓存 99%。附件是视频，未看。不是配额打满，不升 High。",
+    "https://x.com/ai_funss/status/2123678512922214830：口述 $73、近 1 亿 token 做宣传视频。附件是视频，未看。",
+    "https://x.com/leo114119/status/2123769963634954696：Devin Fusion 模型选择器，SWE-2 High 标 Free，不是用量面板。",
+    "https://x.com/2232960089q/status/2123786025386303611：口头说 kimiwork 消耗速度 x4，无截图。"
+  ],
+  "officialRecheck": {
+    "notANewAdoptionItem": true,
+    "recommendAdopt": false,
+    "file": "official-opencode-devin-openai-recheck-2026-11-21.json",
+    "taipeiWindow": "2026-11-21 09:31–09:33",
+    "opencodeGoGlm53": {
+      "fetchedAtUtc": "2026-11-21T01:31:21Z",
+      "unchangedVs2026-11-20": true,
+      "alreadyOnMain": "data/research/opencode-go-glm53-limit-round2-2026-11-19.json",
+      "sameConclusionAlsoOnThisBranch": "data/research/official-opencode-go-glm53-limit-round2-2026-11-19.json",
+      "monthlyUsageUsd": {
+        "go": 500,
+        "goPlus": 1000,
+        "goTeams": 505
+      },
+      "pricesPerMillionUsd": {
+        "input": 1.4,
+        "output": 4.4,
+        "cacheRead": 0.26
+      },
+      "docsQuote": "GLM-5.3: Higher usage limits apply through November 22, 2026.",
+      "docsByteIdenticalTo2026-11-20": true,
+      "landing": "Go $500 / Plus $1000；Est. requests / 5 hr 6,600 / 13,200。落地页仍未写 November 22。",
+      "gemini4ArgonDocs": "Gemini 4 Argon: The 50% discount applies through November 30, 2026.",
+      "fallbackValuePublished": false,
+      "adoptedStill": "opencode_go × glm-5.3 仍是 48500000。不是新结论。"
+    },
+    "devinSwe2": {
+      "fetchedAtUtc": "2026-11-21T01:32:07Z",
+      "blogRetryAtUtc": "2026-11-21T01:32:29Z",
+      "conflictUnchanged": true,
+      "blog": "free SWE-2 in Desktop and CLI is a permanent part of Teams, Pro, and Max",
+      "pricing": "Free use of SWE-2 / Free SWE-2，无截止日期。",
+      "docsSelfServeThrough": "2026-11-30",
+      "docsExcludesCloudSessions": true,
+      "docsMdIdenticalTo2026-11-20": true,
+      "adoptedStill": "devin_pro × swe-2 仍是 unmetered，计划名仍写促销至 10/31，promo_until 仍是 2026-10-31。"
+    },
+    "gpt56SolWordingSplit": {
+      "fetchWasBefore0700Z": true,
+      "fetchAtUtc": "2026-11-21T01:32:07Z",
+      "openaiMarkdownCapturedAtUtc": "2026-11-21T01:33:20Z",
+      "doNotReconcile": true,
+      "openaiModelPage": "Input $4 / Cached input $0.4 / Output $20 per 1M。GPT-5.6 Sol’s promotional pricing is available until November 30, 2026.",
+      "openaiPricingPage": "短上下文 $4.00 / $20.00 / $0.40。同一句 until November 30, 2026。",
+      "openaiChangelogAug21": "promotional pricing is available at least through November 21, 2026.",
+      "devinDocs": "标准上下文价将于 2026-11-21T07:00Z 从 $4/$20 调到 $5/$30（Fast mode 2x）。",
+      "apiListPriceIsNotSubscriptionQuota": true
+    }
+  },
+  "issue247": {
+    "url": "https://github.com/Fei2411/real-api-pricing/issues/247",
+    "updatedAt": "2026-11-20T04:44:08Z",
+    "comments": 0,
+    "bodyChangedVs1120Draft": false,
+    "grade": "High",
+    "recommendAdopt": false,
+    "adopted": false,
+    "replied": false,
+    "regraded": false,
+    "note": "正文关键数字与 11-20 草稿一致。无新证据，不重评，不回复。不覆盖 #240。不计入 counts.notAdoptedHigh。"
+  },
+  "suggestion": "没有可直接写入 adopted 的改动。官方复核不产生新的采用项。若在 2026-11-21T07:00Z 之后继续，应再抓一次 OpenAI / Devin 的 GPT-5.6 Sol 文案，仍然只记录、不调和。",
+  "index": "backlog-archive-index-2026-11-21.json"
+}

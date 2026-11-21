@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-11-21",
+  "sourceType": "official_adjacent_x_post",
+  "adoptionStatus": "research-only; not adopted",
+  "recommendAdopt": false,
+  "pendingMaintainerConfirmation": true,
+  "grade": "Medium",
+  "gradeNote": "Antigravity 构建者 Varun Mohan 的原话，不是用户打满实测。只记录原文，不改 adopted。",
+  "author": "_mohansolo",
+  "authorName": "Varun Mohan",
+  "authorId": "1086145626633494528",
+  "descriptionSnapshot": "building @antigravity @GoogleDeepMind",
+  "posts": {
+    "main": {
+      "id": "2123848516581892181",
+      "createdAt": "2026-11-20T18:38:40.000Z",
+      "url": "https://x.com/_mohansolo/status/2123848516581892181"
+    },
+    "followUp": {
+      "id": "2123850306153062427",
+      "createdAt": "2026-11-20T18:45:46.000Z",
+      "url": "https://x.com/_mohansolo/status/2123850306153062427"
+    }
+  },
+  "originalEnglish": "We’re rolling out a change to increase cache hit rate on Neon by around 4% on Antigravity by massive increasing the cache pool size. This will increase what you can get done in quota by at least 20%.\n\nWill issue a reset after it’s done since it burned quota faster!",
+  "followUpEnglish": "More info: The hit rate was particularly bad for workloads where there was more time between model invocatikns (cache was evicted). This should fix that and they should see a much higher improvement.\n\nWe will continue to improve this metric globally, sorry for the inconvenience!",
+  "leoRestatement": {
+    "id": "2123912645892092217",
+    "createdAt": "2026-11-20T22:53:29.000Z",
+    "url": "https://x.com/leo114119/status/2123912645892092217",
+    "note": "中文转述+Grok 翻译截图。截图时间 02:38 · 11/21/26 对应原帖 18:38Z。口述「额度大概会增加 20%」与原文 at least 20% 一致。以英文原文为准。"
+  },
+  "whyNotAdopt": [
+    "这是产品变更预告，不是配额打满或 token 实测。",
+    "「至少 20%」是可完成工作量的宣称，不是新的官方月/周 token 表。",
+    "reset 尚未在本轮核到已发生的官方文档页。"
+  ]
+}

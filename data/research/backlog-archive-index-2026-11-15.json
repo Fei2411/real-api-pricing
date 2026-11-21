@@ -4,34 +4,40 @@
   "adoptionStatus": "research-only; not adopted; do not change adopted.csv without maintainer confirmation",
   "parentIndex": "backlog-archive-index-2026-11-14.json",
   "laterIncrement": {
-    "date": "2026-11-20",
-    "index": "backlog-archive-index-2026-11-20.json",
-    "scan": "x-scan-2026-11-20.json",
+    "date": "2026-11-21",
+    "index": "backlog-archive-index-2026-11-21.json",
+    "scan": "x-scan-2026-11-21.json",
+    "note": "11-21 扫描追加在同一 PR #234，不另开分支。指向最新增量。更早的采用判断不改写。本轮 recommendAdopt 为空。shownotover Codex Plus × GPT-6.2 Sol 分级 High、暂不采用。PawelHuryn $100 订阅 API 等价图、leo114119 Antigravity Pro Orchestrator、Varun Mohan Neon 缓存/reset 预告、KurachiWeb Claude Ultra 周 99%、keyelifeai Grok Bot 周 97% 为 Medium、不采用。ai_funss 是转述，Fable 口述 $2730 有误，以 Pawel 原图为准。官方复核不是新采用项：OpenCode Go × GLM-5.3 仍是 $500 / $1000 / $505，docs 仍写到 2026-11-22，回落值未公布；Devin SWE-2 博客/定价仍写 Desktop+CLI 永久免费，docs 仍写到 2026-11-30 且不含 cloud sessions，冲突未消失；GPT-5.6 Sol 抓取早于 2026-11-21T07:00Z：OpenAI 模型/定价页仍是 $4 / $0.4 / $20 并写 until November 30, 2026，changelog 写 at least through November 21, 2026，Devin docs 仍写 07:00Z 调到 $5 / $30。不调和，不自动改 adopted。确认 origin/main 仍是 13080beb25054a0ab567ed5b6b60ce37c5c40f1b，本分支已包含该提交，git merge origin/main 为 Already up to date，无冲突、无新提交。不重计 #246 / #237，不改 adopted。#247 正文相对 11-20 无新数字，不重评、不回复。",
     "previous": {
-      "date": "2026-11-19",
-      "index": "backlog-archive-index-2026-11-19.json",
-      "scan": "x-scan-2026-11-19.json",
+      "date": "2026-11-20",
+      "index": "backlog-archive-index-2026-11-20.json",
+      "scan": "x-scan-2026-11-20.json",
       "previous": {
-        "date": "2026-11-18",
-        "index": "backlog-archive-index-2026-11-18.json",
-        "scan": "x-scan-2026-11-18.json",
+        "date": "2026-11-19",
+        "index": "backlog-archive-index-2026-11-19.json",
+        "scan": "x-scan-2026-11-19.json",
         "previous": {
-          "date": "2026-11-17",
-          "index": "backlog-archive-index-2026-11-17.json",
-          "scan": "x-scan-2026-11-17.json",
+          "date": "2026-11-18",
+          "index": "backlog-archive-index-2026-11-18.json",
+          "scan": "x-scan-2026-11-18.json",
           "previous": {
-            "date": "2026-11-16",
-            "index": "backlog-archive-index-2026-11-16.json",
-            "scan": "x-scan-2026-11-16.json",
-            "note": "11-16 早扫描追加在同一 PR #234，不另开分支。指向最新增量。11-15 及更早的采用判断不改写。Hydrogen API 价、Codex banked reset、11-13T23:13Z Gemini 配额重置、Carbon/Argon 价与 11-13T00:42Z Orchestrator 对 Pro 开放不重计。官方 Ultra 100 再述（2121847427582022021）不是新测量。没有可直接上线的 adopted 改动。"
+            "date": "2026-11-17",
+            "index": "backlog-archive-index-2026-11-17.json",
+            "scan": "x-scan-2026-11-17.json",
+            "previous": {
+              "date": "2026-11-16",
+              "index": "backlog-archive-index-2026-11-16.json",
+              "scan": "x-scan-2026-11-16.json",
+              "note": "11-16 早扫描追加在同一 PR #234，不另开分支。指向最新增量。11-15 及更早的采用判断不改写。Hydrogen API 价、Codex banked reset、11-13T23:13Z Gemini 配额重置、Carbon/Argon 价与 11-13T00:42Z Orchestrator 对 Pro 开放不重计。官方 Ultra 100 再述（2121847427582022021）不是新测量。没有可直接上线的 adopted 改动。"
+            },
+            "note": "11-17 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-16 及更早的采用判断不改写。已把 main 057882f6b5d1e072648a22856e14a92614de7361（Merge #236，OpenCode Go qwen4-max 官方 API 价，research-only）merge 进本分支，不重计、不改 adopted。X 上的二手 $1.50/$4.50 不作为未核实新项。没有可直接上线的 adopted 改动。"
           },
-          "note": "11-17 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-16 及更早的采用判断不改写。已把 main 057882f6b5d1e072648a22856e14a92614de7361（Merge #236，OpenCode Go qwen4-max 官方 API 价，research-only）merge 进本分支，不重计、不改 adopted。X 上的二手 $1.50/$4.50 不作为未核实新项。没有可直接上线的 adopted 改动。"
+          "note": "11-18 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-17 及更早的采用判断不改写，唯 #240 按补图更正为 High、仍不采用。已把 main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5（#238 Magpie round3、#241 Command Code GOAT Qwen4 Max / Hy4 Flash，均 research-only）merge 进本分支，不重计、不改 adopted。OpenCode Go × GLM-5.3 月限 $200 只归档待核对试算。没有可直接上线的 adopted 改动。"
         },
-        "note": "11-18 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-17 及更早的采用判断不改写，唯 #240 按补图更正为 High、仍不采用。已把 main b8117804ff9cce7a5f4eecb1f0f5fbcb3ef80ab5（#238 Magpie round3、#241 Command Code GOAT Qwen4 Max / Hy4 Flash，均 research-only）merge 进本分支，不重计、不改 adopted。OpenCode Go × GLM-5.3 月限 $200 只归档待核对试算。没有可直接上线的 adopted 改动。"
+        "note": "11-19 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-18 及更早的采用判断不改写，只注明 11-18 的 OpenCode Go × GLM-5.3 月限 $200 讨论项已被本轮官方 Go $500 / Plus $1000 / Teams $505、promo_until=2026-11-22 捕获取代，仍不写入 adopted。已把 main 40cfb4e34ca2263ef4ddf4b06c44cfa578a3d10c（#242 GOAT Hy4、#243 OpenCode Go GLM-5.3 $200 round1、#244 OpenCode Go Qwen4 Max round2，均 research-only）merge 进本分支，不重计、不改 adopted。recommendAdopt 为空。没有可直接上线的 adopted 改动。"
       },
-      "note": "11-19 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-18 及更早的采用判断不改写，只注明 11-18 的 OpenCode Go × GLM-5.3 月限 $200 讨论项已被本轮官方 Go $500 / Plus $1000 / Teams $505、promo_until=2026-11-22 捕获取代，仍不写入 adopted。已把 main 40cfb4e34ca2263ef4ddf4b06c44cfa578a3d10c（#242 GOAT Hy4、#243 OpenCode Go GLM-5.3 $200 round1、#244 OpenCode Go Qwen4 Max round2，均 research-only）merge 进本分支，不重计、不改 adopted。recommendAdopt 为空。没有可直接上线的 adopted 改动。"
-    },
-    "note": "11-20 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-19 及更早的采用判断不改写。本轮 recommendAdopt 为空。#247 分级 High、暂不采用。OpenCode Go × GLM-5.3 的 $500 已由 main 13080beb25054a0ab567ed5b6b60ce37c5c40f1b 的 #246 收录（opencode-go-glm53-limit-round2-2026-11-19.json），与本分支既有 official-opencode-go-glm53-limit-round2-2026-11-19.json 是同一结论；11-20 官方复核不是新发现，不把 $500 当成新的采用项。Devin SWE-2 博客/定价与 docs 的冲突未消失，不改 adopted。已把该 main merge 进本分支（另含 #237 Copilot / synthetic.new，均 research-only），不重计、不改 adopted。没有可直接上线的 adopted 改动。"
+      "note": "11-20 扫描追加在同一 PR #234，不另开分支。指向最新增量。11-19 及更早的采用判断不改写。本轮 recommendAdopt 为空。#247 分级 High、暂不采用。OpenCode Go × GLM-5.3 的 $500 已由 main 13080beb25054a0ab567ed5b6b60ce37c5c40f1b 的 #246 收录（opencode-go-glm53-limit-round2-2026-11-19.json），与本分支既有 official-opencode-go-glm53-limit-round2-2026-11-19.json 是同一结论；11-20 官方复核不是新发现，不把 $500 当成新的采用项。Devin SWE-2 博客/定价与 docs 的冲突未消失，不改 adopted。已把该 main merge 进本分支（另含 #237 Copilot / synthetic.new，均 research-only），不重计、不改 adopted。没有可直接上线的 adopted 改动。"
+    }
   },
   "pullRequest": 234,
   "branch": "cursor/research-backlog-archive-2026-11-12-d2d8",
