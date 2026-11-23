@@ -1,0 +1,213 @@
+{
+  "collectedAt": "2026-11-23",
+  "collectionMethod": "Manual capture around 10:36 Beijing time / 02:36Z on 2026-11-23 of the official OpenCode Go documentation page (https://opencode.ai/docs/go/, which 301-redirects to /docs/console/go/), the Go landing page (https://opencode.ai/go, which 302-redirects to /console/go), the documentation markdown export (https://opencode.ai/docs/console/go.md), the OpenCode console changelog RSS feed (https://opencode.ai/console/changelog/rss.xml) and the full model catalog endpoint referenced by the documentation (https://opencode.ai/inference/go/v1/models). All surfaces were compared against the 2026-11-21 captures of the same URLs (the 2026-11-22 routine scan did not complete, so the 2026-11-21 capture is used as the baseline). Every price, limit, estimate and sentence below is transcribed as published. Research-only — no adopted row generated, no adopted value changed, no script changed, no chart or site change.",
+  "sources": [
+    "https://opencode.ai/docs/go/",
+    "https://opencode.ai/go",
+    "https://opencode.ai/docs/console/go.md",
+    "https://opencode.ai/v2/docs/console/go",
+    "https://opencode.ai/console/changelog/rss.xml",
+    "https://opencode.ai/inference/go/v1/models"
+  ],
+  "scope": "OpenCode Go official catalog only. The change on 2026-11-23 is that a new paid model 'LongCat 2.5' appeared in the official OpenCode Go catalog, and the two previously listed LongCat rows (longcat-2.0 and longcat-2.5-free) are no longer published on the models API or the landing page. The models API count moved 31 → 30 and the landing-page counter moved 'View all 32 models' → 'View all 31 models'. No leaderboard/score data, no adopted.csv row, no computed allowance, no script change in this file.",
+  "adoptionStatus": "research-only; not adopted; no opencode_go × longcat-2.5 row in adopted.csv yet — adding one requires an OPENCODE_GO_MODELS entry in scripts/build_adopted.py, left to maintainer review",
+  "observed": {
+    "paidModel": {
+      "name": "LongCat-2.5",
+      "displayNameNote": "The models API publishes the name 'LongCat-2.5'; the Go landing page and the official documentation publish the same model as 'LongCat 2.5' (without the hyphen). Both spellings are recorded here as published.",
+      "modelId": "longcat-2.5",
+      "canonicalId": "meituan/longcat-2.5",
+      "vendor": "Meituan",
+      "vendorNote": "Vendor is derived from the 'meituan/' prefix of canonical_id in the models API.",
+      "family": "longcat",
+      "openWeights": false,
+      "description": "Meituan's multimodal reasoning model for long-horizon coding and agent tasks, with visual understanding and a 1M-token context window",
+      "descriptionSource": "models API description field, transcribed verbatim",
+      "releaseDate": "2026-11-02",
+      "lastUpdated": "2026-11-02",
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "capabilities": {
+        "tools": {
+          "supported": true
+        },
+        "reasoning": {
+          "supported": true,
+          "toggle": true
+        },
+        "temperature": false,
+        "top_p": true,
+        "top_k": true,
+        "system_updates": false,
+        "effort_updates": false
+      },
+      "statusChange": "On 2026-11-23 the models API published a new paid catalog entry 'LongCat-2.5' (model id longcat-2.5) and the Go landing-page model table published a new row 'LongCat 2.5' carrying the 'New' and 'Limited regions' labels. The models API count moved 31 → 30 and the landing-page counter moved 'View all 32 models' → 'View all 31 models'.",
+      "endpoint": {
+        "apiBaseUrl": "https://opencode.ai/inference/go/openai/v1",
+        "sdk": "@ai-sdk/openai-compatible",
+        "opencodeaiSdk": "@opencode/ai/providers/openai-compatible",
+        "recommendedApi": "chat-completions",
+        "compatibility": {
+          "reasoning_field": "reasoning_content"
+        }
+      },
+      "limit": {
+        "context": 1000000,
+        "output": 262144
+      },
+      "threePartPrice": {
+        "unit": "USD / MTok",
+        "inputPerMTokUsd": 0.3,
+        "outputPerMTokUsd": 1.2,
+        "cachedReadPerMTokUsd": 0.006,
+        "cacheWritePerMTokUsd": 0,
+        "cacheWriteNote": "The models API cost.text block explicitly writes cache.write = 0 for this model. This is an explicitly published 0, not a missing field and not a dash on the page.",
+        "sourceQuote": "models API cost.text: input.price = 0.3, input.cache.read = 0.006, input.cache.write = 0, output.price = 1.2"
+      },
+      "monthlyLimitUsd": {
+        "go": 60,
+        "goPlus": 240,
+        "goTeams": 65
+      },
+      "monthlyLimitSource": "models API go.monthly_usage = {go: 60, go-plus: 240, go-teams: 65}",
+      "goBlock": {
+        "training": false,
+        "zdr": true,
+        "limited_regions": false,
+        "featured": false,
+        "source": "models API go block for longcat-2.5"
+      },
+      "landingPageRow": {
+        "rowAsPublished": "LongCat 2.5 | New | Limited regions | 11,400 | 45,700 | Go: 11,400; Go Plus: 45,700 | $60 | $240 | Go: $60; Go Plus: $240",
+        "labels": [
+          "New",
+          "Limited regions"
+        ],
+        "estimatedRequestsPer5h": {
+          "go": 11400,
+          "goPlus": 45700
+        },
+        "monthlyLimitUsd": {
+          "go": 60,
+          "goPlus": 240
+        },
+        "note": "The Go landing-page model table lists this row with the 'New' and 'Limited regions' labels, publishes Est. requests / 5 hr as Go: 11,400 and Go Plus: 45,700, and publishes Monthly limit Go: $60; Go Plus: $240. The landing page has no Go Teams column for this row.",
+        "docsEstimateTableNote": "The official documentation markdown export (https://opencode.ai/docs/console/go.md) has no corresponding 5-hour estimated-requests row for LongCat 2.5; the string 'LongCat 2.5' does not appear in its 'Estimated requests' section. The figures above come from the landing page only."
+      },
+      "regionsAndPrivacy": {
+        "documentationRegionsNote": "LongCat 2.5: select Global under Regions.",
+        "documentationHostingNote": "LongCat 2.5: Hosted in China. Requires Global regions in your workspace privacy settings.",
+        "documentationDataRetention": "0 days",
+        "privacyTableRow": "LongCat 2.5 | 0 days",
+        "source": "Official documentation markdown export https://opencode.ai/docs/console/go.md — 'Enable restricted models' section, Privacy section and data-retention table."
+      },
+      "regionConsistencyConflict": {
+        "observation": "The models API go block publishes limited_regions = false for longcat-2.5, while the Go landing-page row carries a 'Limited regions' label and the official documentation states 'LongCat 2.5: Hosted in China. Requires Global regions in your workspace privacy settings.' plus the restricted-model instruction to select Global under Regions.",
+        "note": "Both readings are recorded exactly as published on their own surface. This file does not adjudicate which surface is authoritative; the conflict is left for maintainer review."
+      },
+      "modelCount": {
+        "landingPage": {
+          "before": 32,
+          "after": 31,
+          "pageWording": "'View all 32 models' → 'View all 31 models'"
+        },
+        "modelsApi": {
+          "before": 31,
+          "after": 30,
+          "note": "The models API returned 30 model entries on 2026-11-23 versus 31 in the 2026-11-21 capture."
+        },
+        "changeArithmetic": "The models API net change is −1: longcat-2.0 and longcat-2.5-free were removed from the published catalog and longcat-2.5 was added. This is a description of the published list lengths as captured, not a computed adopted value."
+      }
+    }
+  },
+  "context": {
+    "replacedModels": {
+      "note": "Both LongCat rows that were still published in the 2026-11-21 capture are no longer present on the 2026-11-23 models API or the Go landing-page model table. The delisting is recorded here as evidence only; the decision to drop the corresponding adopted rows is left to upstream per the established convention.",
+      "longcat20": {
+        "name": "LongCat-2.0",
+        "modelId": "longcat-2.0",
+        "canonicalId": "meituan/longcat-2.0",
+        "status": "Still published in the 2026-11-21 models API and on the 2026-11-21 landing page; no longer present on either surface on 2026-11-23.",
+        "threePartPrice": {
+          "inputPerMTokUsd": 0.3,
+          "outputPerMTokUsd": 1.2,
+          "cachedReadPerMTokUsd": 0.006,
+          "cacheWritePerMTokUsd": null,
+          "cacheWriteNote": "The 2026-11-21 models API entry had no cache write key at all (not an explicit 0)."
+        },
+        "outputLimit": 131072,
+        "monthlyLimitUsd": {
+          "go": 60,
+          "goPlus": 240,
+          "goTeams": 65
+        },
+        "landingPageRow": {
+          "estimatedRequestsPer5h": {
+            "go": 11400,
+            "goPlus": 45700
+          },
+          "monthlyLimitUsd": {
+            "go": 60,
+            "goPlus": 240
+          },
+          "note": "The old LongCat-2.0 landing-page row also showed 5-hour estimates of 11,400 (Go) and 45,700 (Go Plus) and monthly limits $60 (Go) and $240 (Go Plus)."
+        },
+        "repoState": "The repo already carries an opencode_go × longcat-2.0 adopted row (31.056 亿, Go Monthly limit $60, generated from the 'longcat-2.0' entry in scripts/build_adopted.py OPENCODE_GO_MODELS) and a command_code_goat × longcat-2.0 adopted row (25.88 亿). This capture changes neither row and does not delete the adopted row."
+      },
+      "longcat25Free": {
+        "name": "LongCat 2.5 Free",
+        "modelId": "longcat-2.5-free",
+        "status": "Still published in the 2026-11-21 models API and on the 2026-11-21 landing page; no longer present on either surface on 2026-11-23.",
+        "price": {
+          "inputPerMTokUsd": 0,
+          "outputPerMTokUsd": 0,
+          "note": "Published at price 0 in the 2026-11-21 models API entry."
+        },
+        "usage": "The 2026-11-21 models API entry had an empty usage block.",
+        "landingPageRow": {
+          "label": "Limited time",
+          "estimatedRequests": "∞",
+          "note": "The old LongCat 2.5 Free landing-page row was marked 'Limited time' with an infinity sign for its request estimate."
+        }
+      }
+    }
+  },
+  "otherObservations": [
+    {
+      "topic": "GLM-5.3 monthly limit change",
+      "observation": "A GLM-5.3 monthly-limit change was observed on the same day and is recorded in a separate file under its own record; this file does not treat it as its subject.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Changelog RSS is byte-identical to the 2026-11-21 capture",
+      "observation": "The OpenCode console changelog RSS (5743 bytes) is byte-identical to the 2026-11-21 capture of the same URL, and also matches the size recorded in the 2026-11-18 / 2026-11-19 captures. No new entry announces LongCat 2.5.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Documentation gained a Usage API section",
+      "observation": "The official documentation markdown export now carries a '### Usage' section under '## Endpoints' documenting 'curl https://opencode.ai/inference/go/v1/usage' for reading consumed usage limits. This is not a per-model price table and is outside this file's scope.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Landing page still carries a hidden GLM-5.2 row",
+      "observation": "The Go landing page still contains a GLM-5.2 model row that is not shown in the published table (hidden markup). Its row is not restated here.",
+      "note": "Recorded only; the delisting decision for that row is left to upstream, and no adopted value changed."
+    }
+  ],
+  "computationNote": "This file computes no monthlyYi, no blended per-MTok price, no derived allowance and no adopted value; all numbers are transcribed as published on the models API, the landing page and the official documentation. The model-count change is stated as the published list lengths observed in the two captures, not as a computed adopted quantity.",
+  "relatedFiles": [
+    "opencode-go-round5-2026-09-06.json",
+    "opencode-go-hy4-round1-2026-11-05.json",
+    "opencode-go-glm53-limit-round2-2026-11-19.json",
+    "opencode-go-teams-round1-2026-10-30.json"
+  ],
+  "confidence": "medium",
+  "basis": "official"
+}
