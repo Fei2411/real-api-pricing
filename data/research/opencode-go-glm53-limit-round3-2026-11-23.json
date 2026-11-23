@@ -1,0 +1,153 @@
+{
+  "collectedAt": "2026-11-23",
+  "collectionMethod": "Manual capture around 10:36 Beijing time / 02:36Z on 2026-11-23 of the official OpenCode Go documentation page (https://opencode.ai/docs/go/, which 301-redirects to /docs/console/go/), the Go landing page (https://opencode.ai/go, 302-redirects to /console/go), the documentation markdown export (https://opencode.ai/docs/console/go.md), the prerendered documentation HTML (https://opencode.ai/v2/docs/console/go), the OpenCode console changelog RSS feed (https://opencode.ai/console/changelog/rss.xml) and the full model catalog endpoint referenced by the documentation (https://opencode.ai/inference/go/v1/models). All surfaces were compared against the 2026-11-21 captures of the same URLs; the 2026-11-22 routine scan was not completed, so the 2026-11-21 captures are the baseline. Every price, limit, estimate and sentence below is transcribed as published. Research-only — no adopted row generated, no adopted value changed, no script changed, no chart or site change.",
+  "sources": [
+    "https://opencode.ai/docs/go/",
+    "https://opencode.ai/go",
+    "https://opencode.ai/docs/console/go.md",
+    "https://opencode.ai/v2/docs/console/go",
+    "https://opencode.ai/console/changelog/rss.xml",
+    "https://opencode.ai/inference/go/v1/models"
+  ],
+  "scope": "OpenCode Go official catalog only. The change on 2026-11-23 is that the published monthly limit for GLM-5.3 moved back down from the temporary promotional tier (Go $500 / Go Plus $1000 / Go Teams $505, recorded in opencode-go-glm53-limit-round2-2026-11-19.json) to the standing tier Go $200 / Go Plus $400 / Go Teams $205 — the same values recorded in opencode-go-glm53-limit-round1-2026-11-18.json before the promotion started. The official documentation deleted the sentence 'GLM-5.3: Higher usage limits apply through November 22, 2026.', matching the published end date of the promotion. The three-part token price is unchanged. GLM-5.3-Flash and every other paid model's monthly_usage in the models API are unchanged. Research-only — not adopted; no computed allowance, no script change, no leaderboard/score data. LongCat catalog changes are handled in a separate PR and are not a topic of this file.",
+  "adoptionStatus": "research-only; not adopted; the opencode_go × glm-5.3 adopted row was already merged on 2026-11-21 (#250, 087b092) at the standing $200 Go monthly limit (adopted value 6.468 亿/月), with the 4-day $500 temporary activity through 2026-11-22 left as a research / decision note and not entering the standing main value. This file records the official confirmation that the promotion has ended and the catalog has reverted to the standing tier; it does not change data/adopted.csv, does not change scripts/build_adopted.py, and changes no derived output.",
+  "previous": {
+    "capturedAt": "2026-11-19",
+    "file": "opencode-go-glm53-limit-round2-2026-11-19.json",
+    "modelsApiMonthlyUsage": {
+      "go": 500,
+      "go-plus": 1000,
+      "go-teams": 505
+    },
+    "landingPage": {
+      "per5h": {
+        "go": 6600,
+        "goPlus": 13200
+      },
+      "monthlyLimitUsd": {
+        "go": 500,
+        "goPlus": 1000
+      },
+      "rowAsPublished": "GLM-5.3 | Est. requests / 5 hr: Go: 6,600; Go Plus: 13,200 | Monthly limit: Go: $500; Go Plus: $1,000 (the same row also contains $1000)",
+      "promoMarker": "none on the landing-page row — no 'New' or 'Limited time' label; the November 22 end date appeared only in the official documentation"
+    },
+    "docsPromoSentence": "GLM-5.3: Higher usage limits apply through November 22, 2026.",
+    "threePartPrice": {
+      "inputPerMTokUsd": 1.4,
+      "outputPerMTokUsd": 4.4,
+      "cachedReadPerMTokUsd": 0.26
+    }
+  },
+  "observed": {
+    "paidModel": {
+      "name": "GLM-5.3",
+      "modelId": "glm-5.3",
+      "canonicalId": "zhipuai/glm-5.3",
+      "vendor": "ZhipuAI",
+      "vendorNote": "Vendor is derived from the 'zhipuai/' prefix of canonical_id in the models API.",
+      "openWeights": true,
+      "releaseDate": "2026-08-14",
+      "lastUpdated": "2026-08-14",
+      "metadataNote": "releaseDate / lastUpdated / description are carried over from the 2026-11-19 capture; the 2026-11-23 change is confined to the monthly limit figures and the removed documentation sentence.",
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "statusChange": "On 2026-11-23 the models API go.monthly_usage block and the Go landing-page model table published a lower GLM-5.3 monthly limit than the 2026-11-21 capture, reverting to the standing tier Go $200 / Go Plus $400 / Go Teams $205 recorded on 2026-11-18. The official documentation deleted the sentence 'GLM-5.3: Higher usage limits apply through November 22, 2026.', which is the published end date of the temporary promotion. The three-part price, context / output limits, and the GLM-5.3-Flash monthly limits are unchanged.",
+      "endpoint": {
+        "apiBaseUrl": "https://opencode.ai/inference/go/openai/v1",
+        "sdk": "@ai-sdk/openai-compatible"
+      },
+      "contextLimit": 1000000,
+      "outputLimit": 131072,
+      "threePartPrice": {
+        "unit": "USD / MTok",
+        "inputPerMTokUsd": 1.4,
+        "outputPerMTokUsd": 4.4,
+        "cachedReadPerMTokUsd": 0.26,
+        "cacheWritePerMTokUsd": null,
+        "priceUnchanged": true,
+        "sourceQuote": "models API cost.text: input.price = 1.4, input.cache.read = 0.26, output.price = 4.4, identical to the 2026-11-19 and 2026-11-21 captures"
+      },
+      "monthlyLimitUsd": {
+        "go": 200,
+        "goPlus": 400,
+        "goTeams": 205
+      },
+      "monthlyLimitChange": {
+        "go": {
+          "before": 500,
+          "after": 200
+        },
+        "goPlus": {
+          "before": 1000,
+          "after": 400
+        },
+        "goTeams": {
+          "before": 505,
+          "after": 205
+        },
+        "source": "models API go.monthly_usage, compared with the 2026-11-21 capture of the same endpoint (the 2026-11-22 routine scan was not completed)"
+      },
+      "promoEndDate": {
+        "date": "2026-11-22",
+        "asPublished": "GLM-5.3: Higher usage limits apply through November 22, 2026.",
+        "status": "removed — the sentence was still present in the 2026-11-21 markdown export and prerendered HTML and is no longer present in either on 2026-11-23",
+        "source": "Official documentation markdown export https://opencode.ai/docs/console/go.md and the prerendered HTML of /docs/go/ (which 301-redirects to /docs/console/go/), compared with the 2026-11-21 captures of the same URLs",
+        "landingPageAndModelsApi": "The Go landing-page GLM-5.3 row has no 'New' or 'Limited time' label and does not print any end date. The models API entry has no end-date field; only the monthly_usage figures changed, back to the standing values."
+      },
+      "monthlyLimitNote": "Published on the models API as go.monthly_usage = {go: 200, go-plus: 400, go-teams: 205}. The Go landing-page table independently publishes Monthly limit Go: $200; Go Plus: $400 (no Go Teams column). The 2026-11-23 documentation HTML and markdown export do not print the $200 / $400 / $205 figures or the 5-hour estimates; they continue to point readers to https://opencode.ai/console/go#limits.",
+      "landingPageRequestEstimates": {
+        "note": "The Go landing page model table publishes its own per-5-hour figures for GLM-5.3. The documentation markdown export does not include a corresponding estimated-requests table in this capture, so no docs-side 5-hour / week / month figures are transcribed here.",
+        "go": {
+          "per5h": 2640,
+          "monthlyLimitUsd": 200
+        },
+        "goPlus": {
+          "per5h": 5280,
+          "monthlyLimitUsd": 400
+        },
+        "rowAsPublished": "GLM-5.3 | Est. requests / 5 hr: Go: 2,640; Go Plus: 5,280 | Monthly limit: Go: $200; Go Plus: $400",
+        "previousRowAsPublished": "GLM-5.3 | Est. requests / 5 hr: Go: 6,600; Go Plus: 13,200 | Monthly limit: Go: $500; Go Plus: $1,000",
+        "promoMarker": "none on the landing-page row — no 'New' or 'Limited time' label"
+      }
+    }
+  },
+  "otherObservations": [
+    {
+      "topic": "GLM-5.3-Flash monthly limits unchanged",
+      "observation": "models API go.monthly_usage for glm-5.3-flash remains {go: 60, go-plus: 180, go-teams: 65}. The landing page still shows GLM-5.3-Flash Est. requests / 5 hr Go: 6,320; Go Plus: 18,900 and Monthly limit Go: $60; Go Plus: $180, identical to the 2026-11-19 landing-page row. Three-part price remains $0.15 / $0.50 / $0.03.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Documentation adds a Usage API section",
+      "observation": "The 2026-11-23 documentation (markdown export and prerendered HTML) now describes a Usage API, GET https://opencode.ai/inference/go/v1/usage. This is an endpoint description, not a price table; no price, limit or estimate is taken from it in this file.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Changelog RSS has no new entry",
+      "observation": "The OpenCode console changelog RSS is byte-identical to the 2026-11-21 capture (5743 bytes); the newest item is still 2026-11-14 'Pay for Go with WeChat Pay'.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Hidden glm-5.2 landing-page row still present, still absent from the models API",
+      "observation": "The Go landing page still contains a hidden glm-5.2 row; the models API still does not list glm-5.2. Delisting of that row is left to upstream and is not actioned here.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Plan prices unchanged",
+      "observation": "Plan prices remain Go $10 / Go Plus $40 / Go Teams $20 per member.",
+      "note": "Recorded only; plan prices are not expanded or recomputed in this file and no adopted value changed."
+    },
+    {
+      "topic": "Scope boundary — LongCat",
+      "observation": "LongCat catalog changes are tracked in a separate PR and are deliberately not a topic of this file; no LongCat price table is transcribed here.",
+      "note": "Recorded only; no adopted value changed."
+    }
+  ],
+  "computationNote": "This file computes no monthlyYi, no blended per-MTok price and no adopted allowance; all numbers are transcribed as published on the models API, the landing page, and the official documentation. No ratio, scale factor or reconstruction from the previous $500 / $1000 / $505 limits is used to derive the reverted figures. No adopted value is derived from this capture.",
+  "relatedFiles": [
+    "opencode-go-glm53-limit-round2-2026-11-19.json",
+    "opencode-go-glm53-limit-round1-2026-11-18.json",
+    "opencode-go-round5-2026-09-06.json"
+  ],
+  "confidence": "medium",
+  "basis": "official"
+}
