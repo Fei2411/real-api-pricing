@@ -1,0 +1,1178 @@
+{
+  "_doc": "Anonymised OpenDesign Cloud workspace usage export (one page of the workspace usage feed) for a single Coding Plan workspace. Workspace id, member id, initiator name and row ids are removed; only the billing arithmetic remains. usageType \"design_plan\" and chargeCredits 0: these calls were served by the Design-Plan path and did not debit the Coding Plan credit balance, so this is not a Coding Plan allowance measurement. It is used to confirm the unit prices and the 0.5x multiplier.",
+  "source": "https://open-design.ai/cloud/workspace/usage (logged-in workspace; feed behind the page)",
+  "collectedAt": "2026-11-23T10:58:33Z",
+  "window": {
+    "from": "2026-11-16T10:58:33Z",
+    "to": "2026-11-23T10:58:33Z",
+    "page": 1,
+    "hasMore": true,
+    "entriesOnPage": 50,
+    "firstEntryAt": "2026-11-23T10:30:53.539Z",
+    "lastEntryAt": "2026-11-23T10:56:00.217Z"
+  },
+  "fieldSemantics": "inputTokens includes cacheReadTokens (non-cached input = inputTokens - cacheReadTokens); outputTokens includes reasoning; listChargedUsd / listChargeCredits are the list-price value of the call (1 credit = $0.0001); planContribution.amountUsd is what the plan charged.",
+  "billingRule": "listChargeCredits = ceil(cost x 10000) where cost = (input - cacheRead) x inputPrice + cacheRead x cacheReadPrice + output x outputPrice, per 1M tokens; planContribution.amountUsd = ceil(listChargeCredits x multiplier) / 10000. Verified on every entry on the page: 50/50 list charges and 50/50 plan charges.",
+  "aggregates": {
+    "entries": 50,
+    "inputTokens": 20588537,
+    "cacheReadTokens": 20528000,
+    "outputTokens": 39425,
+    "cacheShareOfInput": 0.99706,
+    "listChargedUsd": 0.1914,
+    "planContributionUsd": 0.0968,
+    "planToListRatio": 0.505747
+  },
+  "entries": [
+    {
+      "createdAt": "2026-11-23T10:56:00.217Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 452251,
+      "cacheReadTokens": 452096,
+      "outputTokens": 1394,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0045,
+      "listChargeCredits": 45,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0023
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:55:53.713Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 452011,
+      "cacheReadTokens": 451456,
+      "outputTokens": 180,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0031,
+      "listChargeCredits": 31,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0016
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:55:50.496Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 451507,
+      "cacheReadTokens": 450560,
+      "outputTokens": 345,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0035,
+      "listChargeCredits": 35,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0018
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:55:44.010Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 450432,
+      "cacheReadTokens": 448640,
+      "outputTokens": 472,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0038,
+      "listChargeCredits": 38,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0019
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:55:30.368Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 447680,
+      "cacheReadTokens": 445440,
+      "outputTokens": 1411,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0051,
+      "listChargeCredits": 51,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0026
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:55:18.570Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 444812,
+      "cacheReadTokens": 442624,
+      "outputTokens": 1112,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0047,
+      "listChargeCredits": 47,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0024
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:55:02.179Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 441730,
+      "cacheReadTokens": 439552,
+      "outputTokens": 1264,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0049,
+      "listChargeCredits": 49,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0025
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:54:53.079Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 439300,
+      "cacheReadTokens": 435712,
+      "outputTokens": 708,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0046,
+      "listChargeCredits": 46,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0023
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:54:46.492Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 435698,
+      "cacheReadTokens": 435456,
+      "outputTokens": 515,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0034,
+      "listChargeCredits": 34,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0017
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:38:16.250Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 433878,
+      "cacheReadTokens": 432640,
+      "outputTokens": 1728,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0051,
+      "listChargeCredits": 51,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0026
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:38:05.188Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 432111,
+      "cacheReadTokens": 431616,
+      "outputTokens": 1014,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.004,
+      "listChargeCredits": 40,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.002
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:37:58.737Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 431477,
+      "cacheReadTokens": 427904,
+      "outputTokens": 171,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0039,
+      "listChargeCredits": 39,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.002
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:37:42.191Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 426910,
+      "cacheReadTokens": 426368,
+      "outputTokens": 3359,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0068,
+      "listChargeCredits": 68,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0034
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:37:39.297Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 426441,
+      "cacheReadTokens": 424704,
+      "outputTokens": 54,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0032,
+      "listChargeCredits": 32,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0016
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:37:28.961Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 423898,
+      "cacheReadTokens": 423424,
+      "outputTokens": 1322,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0043,
+      "listChargeCredits": 43,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0022
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:37:26.257Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 423431,
+      "cacheReadTokens": 421120,
+      "outputTokens": 56,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0033,
+      "listChargeCredits": 33,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0017
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:37:15.919Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 420123,
+      "cacheReadTokens": 417024,
+      "outputTokens": 1468,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0052,
+      "listChargeCredits": 52,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0026
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:37:08.031Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 417039,
+      "cacheReadTokens": 415744,
+      "outputTokens": 471,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0035,
+      "listChargeCredits": 35,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0018
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:36:59.827Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 415693,
+      "cacheReadTokens": 415488,
+      "outputTokens": 543,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0033,
+      "listChargeCredits": 33,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0017
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:36:53.839Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 415398,
+      "cacheReadTokens": 414592,
+      "outputTokens": 200,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.003,
+      "listChargeCredits": 30,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0015
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:36:46.550Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 414662,
+      "cacheReadTokens": 413184,
+      "outputTokens": 417,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0035,
+      "listChargeCredits": 35,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0018
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:36:36.965Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 412344,
+      "cacheReadTokens": 411904,
+      "outputTokens": 1250,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0042,
+      "listChargeCredits": 42,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0021
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:36:28.834Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 411822,
+      "cacheReadTokens": 411136,
+      "outputTokens": 209,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.003,
+      "listChargeCredits": 30,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0015
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:36:21.439Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 411168,
+      "cacheReadTokens": 410496,
+      "outputTokens": 449,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0033,
+      "listChargeCredits": 33,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0017
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:36:13.987Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 410538,
+      "cacheReadTokens": 410368,
+      "outputTokens": 375,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.003,
+      "listChargeCredits": 30,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0015
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:36:08.956Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 410217,
+      "cacheReadTokens": 408192,
+      "outputTokens": 214,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0034,
+      "listChargeCredits": 34,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0017
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:35:53.583Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 406825,
+      "cacheReadTokens": 406528,
+      "outputTokens": 1814,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0048,
+      "listChargeCredits": 48,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0024
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:35:50.466Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 406533,
+      "cacheReadTokens": 405376,
+      "outputTokens": 98,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0029,
+      "listChargeCredits": 29,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0015
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:35:43.561Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 404978,
+      "cacheReadTokens": 404736,
+      "outputTokens": 748,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0034,
+      "listChargeCredits": 34,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0017
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:35:36.428Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 404696,
+      "cacheReadTokens": 401792,
+      "outputTokens": 216,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0036,
+      "listChargeCredits": 36,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0018
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:35:23.868Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 401093,
+      "cacheReadTokens": 400640,
+      "outputTokens": 2647,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0058,
+      "listChargeCredits": 58,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0029
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:35:18.532Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 400683,
+      "cacheReadTokens": 400512,
+      "outputTokens": 277,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0028,
+      "listChargeCredits": 28,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0014
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:34:58.723Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 400355,
+      "cacheReadTokens": 400128,
+      "outputTokens": 184,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0027,
+      "listChargeCredits": 27,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0014
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:34:55.572Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 400122,
+      "cacheReadTokens": 398464,
+      "outputTokens": 185,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0032,
+      "listChargeCredits": 32,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0016
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:33:34.048Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 397397,
+      "cacheReadTokens": 396800,
+      "outputTokens": 1453,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0044,
+      "listChargeCredits": 44,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0022
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:33:29.231Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 396832,
+      "cacheReadTokens": 396032,
+      "outputTokens": 301,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.003,
+      "listChargeCredits": 30,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0015
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:32:25.387Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 396150,
+      "cacheReadTokens": 395904,
+      "outputTokens": 373,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0029,
+      "listChargeCredits": 29,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0015
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:32:21.980Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 396033,
+      "cacheReadTokens": 394240,
+      "outputTokens": 99,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0031,
+      "listChargeCredits": 31,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0016
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:32:13.938Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 394189,
+      "cacheReadTokens": 393984,
+      "outputTokens": 1546,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0043,
+      "listChargeCredits": 43,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0022
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:32:09.123Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 393553,
+      "cacheReadTokens": 391808,
+      "outputTokens": 594,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0036,
+      "listChargeCredits": 36,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0018
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:32:00.306Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 390785,
+      "cacheReadTokens": 389888,
+      "outputTokens": 1121,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.004,
+      "listChargeCredits": 40,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.002
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:31:54.465Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 389656,
+      "cacheReadTokens": 387840,
+      "outputTokens": 524,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0036,
+      "listChargeCredits": 36,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0018
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:31:44.917Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 387140,
+      "cacheReadTokens": 386304,
+      "outputTokens": 1066,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0039,
+      "listChargeCredits": 39,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.002
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:31:39.927Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 386312,
+      "cacheReadTokens": 384768,
+      "outputTokens": 358,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0033,
+      "listChargeCredits": 33,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0017
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:31:28.061Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 383890,
+      "cacheReadTokens": 383744,
+      "outputTokens": 1317,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.004,
+      "listChargeCredits": 40,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.002
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:31:25.229Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 383643,
+      "cacheReadTokens": 383360,
+      "outputTokens": 105,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0026,
+      "listChargeCredits": 26,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0013
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:31:21.532Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 383376,
+      "cacheReadTokens": 381440,
+      "outputTokens": 197,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0032,
+      "listChargeCredits": 32,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0016
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:31:09.705Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 380039,
+      "cacheReadTokens": 377984,
+      "outputTokens": 1743,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.005,
+      "listChargeCredits": 50,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0025
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:30:58.875Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 376833,
+      "cacheReadTokens": 375040,
+      "outputTokens": 1567,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.0047,
+      "listChargeCredits": 47,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0024
+      }
+    },
+    {
+      "createdAt": "2026-11-23T10:30:53.539Z",
+      "model": "deepseek-v4.1-flash",
+      "usageType": "design_plan",
+      "inputTokens": 374853,
+      "cacheReadTokens": 373248,
+      "outputTokens": 191,
+      "cacheWriteTokens": null,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "listChargedUsd": 0.003,
+      "listChargeCredits": 30,
+      "chargeCredits": 0,
+      "billingMultiplier": 1,
+      "planContribution": {
+        "multiplier": 0.5,
+        "amountUsd": 0.0015
+      }
+    }
+  ]
+}

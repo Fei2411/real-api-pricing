@@ -1,0 +1,1271 @@
+{
+  "collectedAt": "2026-11-23",
+  "collectionMethod": "Manual capture of the public OpenDesign pricing page (https://open-design.ai/pricing/) and the model-credits rules page (https://open-design.ai/model-credits/) around 11:30 Europe/Madrid / 10:30Z on 2026-11-23, read as published. Both pages were fetched as raw HTML: the rendered plan cards, the 'Coding Plan usage' table (estimated requests per 7 days and monthly usage by model for each tier) and the 'Coding Plan models and credit multipliers' table were parsed field by field. The tier table, the Go 7-day / 5-hour windows and every model's multiplier were checked against the same pages' rendered text. Per-model list rates (cache read / input / output, USD per 1M tokens) are the OpenDesign Cloud console catalogue: captured on 2026-11-18 and re-captured row by row on 2026-11-23 (see cloudConsole). The catalogue is not the vendors' own list-price sheet: GLM-5.3 Flash prints at half the vendor rate here. First commit of the series: research only. The second commit adopts the eleven rows; the pool reading was corrected on 2026-11-24 (see allowanceReading.previousReading).",
+  "sources": [
+    "https://open-design.ai/pricing/",
+    "https://open-design.ai/model-credits/",
+    "https://api-docs.deepseek.com/quick_start/pricing",
+    "https://platform.minimaxi.com/document/Price",
+    "https://mimo.mi.com/docs",
+    "https://docs.bigmodel.cn/cn/guide/start/model-overview",
+    "https://platform.moonshot.cn/docs/pricing/chat",
+    "https://cloud.tencent.com/document/product/1729/104753",
+    "https://open-design.ai/cloud/workspace/models"
+  ],
+  "scope": "OpenDesign Go ($10/month) only: the plan's public price, monthly Coding Plan credit pool, both usage windows and all 11 Coding Plan models with their official credit multipliers and three-part list rates. Go Plus / Go Pro / Go Max are captured for context but not priced here. No leaderboard/score data is asserted in this file.",
+  "plan": {
+    "id": "opendesign_go",
+    "label": "OpenDesign Go",
+    "billing": "monthly",
+    "priceUsd": 10.0,
+    "currency": "USD",
+    "monthlyCreditsUsd": 60.0,
+    "windows": {
+      "sevenDayCreditsUsd": 15.0,
+      "fiveHourCreditsUsd": 5.0,
+      "note": "The card prints $55 / $18 for these two windows, which are the 0.27x (Eco) equivalents: 15/0.27 = 55.6 -> 55 and 5/0.27 = 18.5 -> 18. The base is 15 and 5 credits."
+    },
+    "promos": {
+      "firstMonth": "Go is shown at $8 for the first month (20% off); the regular monthly price is $10 and is the figure adopted.",
+      "yearly": "$84 billed yearly ($7/month); not used, the project compares regular monthly fees.",
+      "blackFriday": "2026-11-21 18:00 to 2026-12-05 00:00 (UTC+8), from the campaign countdown: \"Selected models 7d unlimited\" (DeepSeek V4.1 Flash and Flash Eco), Claude/GPT up to 10-20% off, Go Max yearly from $100/mo, yearly up to 50% off. It applies to subscriptions bought during the campaign, so it is not the base rate.",
+      "offPeakMultiplier": "DeepSeek V4.1 Flash Off-peak promo row (0.25x) is a stale one-week offer: the page tooltip dates it 2026-10-20 18:00 to 2026-10-27 18:00 (UTC+8) and says the multiplier returns to 0.5x. Excluded from the base rate."
+    },
+    "tiersForContext": {
+      "Go": {
+        "regularPriceUsd": 10,
+        "monthlyMaximumCreditsUsd": 220,
+        "topModelCreditsUsd": 0,
+        "codingPlanCreditsUsd": 220,
+        "sevenDayCreditsUsd": 55,
+        "fiveHourCreditsUsd": 18
+      },
+      "Go Plus": {
+        "regularPriceUsd": 20,
+        "monthlyMaximumCreditsUsd": 310,
+        "topModelCreditsUsd": 20,
+        "codingPlanCreditsUsd": 290,
+        "sevenDayCreditsUsd": 74,
+        "fiveHourCreditsUsd": null
+      },
+      "Go Pro": {
+        "regularPriceUsd": 100,
+        "monthlyMaximumCreditsUsd": 780,
+        "topModelCreditsUsd": 120,
+        "codingPlanCreditsUsd": 660,
+        "sevenDayCreditsUsd": 90,
+        "fiveHourCreditsUsd": null
+      },
+      "Go Max": {
+        "regularPriceUsd": 200,
+        "monthlyMaximumCreditsUsd": 1410,
+        "topModelCreditsUsd": 300,
+        "codingPlanCreditsUsd": 1110,
+        "sevenDayCreditsUsd": 150,
+        "fiveHourCreditsUsd": null
+      }
+    },
+    "quotaRules": "Go is Coding Plan credits only: one shared pool of $60 base credits per month, $15 per 7-day window and $5 per 5-hour window. The card's \"Coding Plan Up to $220\" and its $55 / $18 windows are those three base numbers divided by the lowest multiplier (Eco 0.27x): 60/0.27 = 222 -> 220, 15/0.27 = 55.6 -> 55, 5/0.27 = 18.5 -> 18. Go Plus / Pro / Max add Top Model Credits outside the two windows; Go has none.",
+    "pricingPageQuotes": [
+      "Total monthly credits, up to $220",
+      "After reaching a 5-hour or 7-day limit, wait for the corresponding window to reset.",
+      "A lower multiplier uses fewer Coding Plan credits for the same dollar value of model usage."
+    ],
+    "monthlyBaseCreditsUsd": 60.0,
+    "cardMaximumUsd": 220.0,
+    "cardArithmetic": {
+      "Go": {
+        "baseMonthly": 60,
+        "baseWeekly": 15,
+        "base5h": 5,
+        "cardMonthly": 220,
+        "cardWeekly": 55,
+        "card5h": 18
+      },
+      "Go Plus": {
+        "baseMonthly": 80,
+        "baseWeekly": 20,
+        "cardMonthly": 290
+      },
+      "Go Pro": {
+        "baseMonthly": 180,
+        "baseWeekly": 45,
+        "cardMonthly": 660
+      },
+      "Go Max": {
+        "baseMonthly": 300,
+        "baseWeekly": 75,
+        "cardMonthly": 1110
+      },
+      "note": "Each card figure is the base divided by 0.27 and floored to the next $10: 60/0.27=222->220, 80/0.27=296->290, 180/0.27=667->660, 300/0.27=1111->1110. The face values are maximum usage equivalents in Eco, not base credits."
+    }
+  },
+  "models": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "multiplier": 0.5,
+      "listPerMTok": {
+        "cachedInput": 0.006,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "officialMonthlyUsageUsd": 120.0,
+      "note": "Mixed into the official table twice: 0.5x standard and a 0.25x off-peak promo row (145,600 vs 291,200 estimated requests per 7 days). The 0.5x standard rate is adopted; the promo tooltip dates it 2026-10-20 18:00 to 2026-10-27 18:00 (UTC+8) and it is a stale row now."
+    },
+    {
+      "model": "deepseek-v4.1-flash-eco",
+      "multiplier": 0.27,
+      "listPerMTok": {
+        "cachedInput": 0.006,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "officialMonthlyUsageUsd": 220.0,
+      "note": "Separate Eco tier of the same model at 0.27x, so one credit buys roughly 3.7x the usage. The official table's $220 is the pool cap."
+    },
+    {
+      "model": "minimax-m3.1-flash",
+      "multiplier": 1.0,
+      "listPerMTok": {
+        "cachedInput": 0.015,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "officialMonthlyUsageUsd": 60.0,
+      "note": "1x baseline."
+    },
+    {
+      "model": "mimo-v2.6-pro",
+      "multiplier": 4.0,
+      "listPerMTok": {
+        "cachedInput": 0.0036,
+        "input": 0.435,
+        "output": 0.87
+      },
+      "officialMonthlyUsageUsd": 15.0,
+      "note": "4x: the page raised MiMo V2.6 Flash and Pro from 1x to 4x in the 2026-11-18 build (the 2026-11-16 console catalogue still said 1x). The official usage table is unchanged at $15."
+    },
+    {
+      "model": "mimo-v2.6-flash",
+      "multiplier": 4.0,
+      "listPerMTok": {
+        "cachedInput": 0.0028,
+        "input": 0.14,
+        "output": 0.28
+      },
+      "officialMonthlyUsageUsd": 15.0,
+      "note": "4x, raised with V2.6 Pro on 2026-11-18."
+    },
+    {
+      "model": "deepseek-v4-pro",
+      "multiplier": 1.0,
+      "listPerMTok": {
+        "cachedInput": 0.044,
+        "input": 1.32,
+        "output": 3.96
+      },
+      "officialMonthlyUsageUsd": 60.0,
+      "note": "1x baseline at DeepSeek's standard (peak) rate."
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "multiplier": 1.0,
+      "listPerMTok": {
+        "cachedInput": 0.014,
+        "input": 0.44,
+        "output": 1.32
+      },
+      "officialMonthlyUsageUsd": 60.0,
+      "note": "1x baseline at DeepSeek's standard (peak) rate."
+    },
+    {
+      "model": "glm-5.3-flash",
+      "multiplier": 1.0,
+      "listPerMTok": {
+        "cachedInput": 0.015,
+        "input": 0.075,
+        "output": 0.25
+      },
+      "officialMonthlyUsageUsd": 60.0,
+      "note": "1x baseline. The catalogue rate ($0.075 input / $0.25 output) is half the rate the same model carries on Command Code GOAT and OpenCode Go ($0.15 / $0.50); the catalogue rate is used because it is the one the multiplier applies to."
+    },
+    {
+      "model": "kimi-k2.7-code",
+      "multiplier": 1.0,
+      "listPerMTok": {
+        "cachedInput": 0.19,
+        "input": 0.95,
+        "output": 4.0
+      },
+      "officialMonthlyUsageUsd": 60.0,
+      "note": "1x baseline."
+    },
+    {
+      "model": "hy4-preview",
+      "multiplier": 1.0,
+      "listPerMTok": {
+        "cachedInput": 0.042,
+        "input": 0.834,
+        "output": 2.501
+      },
+      "officialMonthlyUsageUsd": 60.0,
+      "note": "1x baseline."
+    },
+    {
+      "model": "deepseek-v4-flash-vision-exp",
+      "multiplier": 1.0,
+      "listPerMTok": {
+        "cachedInput": 0.014,
+        "input": 0.44,
+        "output": 1.32
+      },
+      "officialMonthlyUsageUsd": 60.0,
+      "note": "1x baseline; experimental vision row of V4 Flash."
+    }
+  ],
+  "allowanceReading": {
+    "question": "Is the card's \"Coding Plan Up to $220\" a base pool of credits, or the maximum usage equivalent?",
+    "observed": "It is the maximum equivalent, not a base pool. The card prints 220 / 55 / 18; each divides by 0.27 (Eco) to a round base: 220*0.27 = 59.4 ~ 60, 55*0.27 = 14.85 ~ 15, 18*0.27 = 4.86 ~ 5. The four tiers confirm it: 60/80/180/300 divided by 0.27 give 222/296/667/1111, printed as 220/290/660/1110.",
+    "adopted": "Monthly usage equivalent = min(220, 60 / multiplier): 1x = $60, 0.5x = $120, 4x = $15, Eco 0.27x = 222.2 capped at $220. Monthly tokens = that equivalent divided by the standard-workload blend at the catalogue rate.",
+    "previousReading": "The first draft of this file took the $220 face value as a base pool and divided it by the multiplier again, which double-counted the 0.27x conversion and priced every model 3.67x too cheap. The maintainer ruled against it on 2026-11-24; the rows now use the base pool."
+  },
+  "computed": [
+    {
+      "model": "deepseek-v4.1-flash",
+      "multiplier": 0.5,
+      "monthlyUsageEquivalentUsd": 120.0,
+      "monthlyTokens": 6211200000,
+      "realUsdPerMTok": 0.00160999
+    },
+    {
+      "model": "deepseek-v4.1-flash-eco",
+      "multiplier": 0.27,
+      "monthlyUsageEquivalentUsd": 220.0,
+      "monthlyTokens": 11387200000,
+      "realUsdPerMTok": 0.00087818
+    },
+    {
+      "model": "minimax-m3.1-flash",
+      "multiplier": 1.0,
+      "monthlyUsageEquivalentUsd": 60.0,
+      "monthlyTokens": 2816900000,
+      "realUsdPerMTok": 0.00355
+    },
+    {
+      "model": "mimo-v2.6-pro",
+      "multiplier": 4.0,
+      "monthlyUsageEquivalentUsd": 15.0,
+      "monthlyTokens": 801400000,
+      "realUsdPerMTok": 0.01247816
+    },
+    {
+      "model": "mimo-v2.6-flash",
+      "multiplier": 4.0,
+      "monthlyUsageEquivalentUsd": 15.0,
+      "monthlyTokens": 1969500000,
+      "realUsdPerMTok": 0.00507743
+    },
+    {
+      "model": "deepseek-v4-pro",
+      "multiplier": 1.0,
+      "monthlyUsageEquivalentUsd": 60.0,
+      "monthlyTokens": 628400000,
+      "realUsdPerMTok": 0.01591343
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "multiplier": 1.0,
+      "monthlyUsageEquivalentUsd": 60.0,
+      "monthlyTokens": 1924300000,
+      "realUsdPerMTok": 0.00519669
+    },
+    {
+      "model": "glm-5.3-flash",
+      "multiplier": 1.0,
+      "monthlyUsageEquivalentUsd": 60.0,
+      "monthlyTokens": 3394600000,
+      "realUsdPerMTok": 0.00294586
+    },
+    {
+      "model": "kimi-k2.7-code",
+      "multiplier": 1.0,
+      "monthlyUsageEquivalentUsd": 60.0,
+      "monthlyTokens": 263100000,
+      "realUsdPerMTok": 0.03800836
+    },
+    {
+      "model": "hy4-preview",
+      "multiplier": 1.0,
+      "monthlyUsageEquivalentUsd": 60.0,
+      "monthlyTokens": 809800000,
+      "realUsdPerMTok": 0.01234873
+    },
+    {
+      "model": "deepseek-v4-flash-vision-exp",
+      "multiplier": 1.0,
+      "monthlyUsageEquivalentUsd": 60.0,
+      "monthlyTokens": 1924300000,
+      "realUsdPerMTok": 0.00519669
+    }
+  ],
+  "computedFormula": "monthly tokens = min($220, $60 / multiplier) / standardWorkloadBlend(cached, input, output) with the project's 97% cache / 2.5% input / 0.5% output mix; real USD/MTok = $10 / (monthly tokens / 1e6). Rounded to 3 decimals in hundred-millions for adopted.csv, as the project does.",
+  "adoptionStatus": "adopted as 11 opendesign_go rows (new channel OpenDesign) in scripts/build_adopted.py OPEN_DESIGN_MODELS; confidence medium (official plan page + official multiplier table + catalogue rates, conversion by the project standard workload); pool corrected to the $60 base on 2026-11-24, rates re-verified on the 2026-11-23 cloud catalogue and usage export",
+  "noCrossCheckWithOpenCode": "OpenCode Go is a different channel with its own pool and per-model limits and is left untouched; the two are not merged or compared here beyond the GLM-5.3 Flash rate note.",
+  "rawCapture": {
+    "note": "Literals read from the two pages on 2026-11-23, kept as captured strings so the numbers can be re-checked without the pages.",
+    "pricingPagePlanCards": {
+      "go": [
+        "$10 / mo (regular)",
+        "20% off 1st month",
+        "Total monthly credits, up to $220",
+        "Monthly maximum $220",
+        "Maximum credits per 7-day window $55",
+        "Maximum credits per 5-hour window $18",
+        "Top Model Credits $0"
+      ],
+      "goPlus": [
+        "$20",
+        "Monthly maximum $310",
+        "Top Model Credits $20",
+        "Coding Plan $290 bonus",
+        "Maximum credits per 7-day window $74",
+        "No limit window"
+      ],
+      "goPro": [
+        "$100",
+        "Monthly maximum $780",
+        "Top Model Credits $120 (limited-time 20% bonus)",
+        "Coding Plan $660 bonus",
+        "Maximum credits per 7-day window $90",
+        "No limit window"
+      ],
+      "goMax": [
+        "$200",
+        "Monthly maximum $1,410",
+        "Top Model Credits $300 (limited-time 50% bonus)",
+        "Coding Plan $1,110 bonus",
+        "Maximum credits per 7-day window $150",
+        "No limit window"
+      ],
+      "yearly": "$7 / mo, Save $36, Billed $84/year"
+    },
+    "creditMultiplierTable": [
+      {
+        "model": "DeepSeek V4.1 Flash",
+        "row": "Off-peak promo",
+        "multiplier": "0.25×"
+      },
+      {
+        "model": "DeepSeek V4.1 Flash",
+        "row": "",
+        "multiplier": "0.5×"
+      },
+      {
+        "model": "DeepSeek V4.1 Flash Eco",
+        "row": "",
+        "multiplier": "0.27×"
+      },
+      {
+        "model": "MiniMax M3.1 Flash",
+        "row": "",
+        "multiplier": "1×"
+      },
+      {
+        "model": "Hy4 Preview",
+        "row": "",
+        "multiplier": "1×"
+      },
+      {
+        "model": "DeepSeek V4 Flash",
+        "row": "",
+        "multiplier": "1×"
+      },
+      {
+        "model": "DeepSeek V4 Flash Vision Exp",
+        "row": "",
+        "multiplier": "1×"
+      },
+      {
+        "model": "DeepSeek V4 Pro",
+        "row": "",
+        "multiplier": "1×"
+      },
+      {
+        "model": "GLM-5.3 Flash",
+        "row": "",
+        "multiplier": "1×"
+      },
+      {
+        "model": "Kimi K2.7 Code",
+        "row": "",
+        "multiplier": "1×"
+      },
+      {
+        "model": "MiMo V2.6 Flash",
+        "row": "",
+        "multiplier": "4×"
+      },
+      {
+        "model": "MiMo V2.6 Pro",
+        "row": "",
+        "multiplier": "4×"
+      }
+    ],
+    "codingPlanUsageTable": [
+      {
+        "model": "DeepSeek V4 Pro",
+        "estimatedRequestsPer7Days": "3,120",
+        "goMonthlyUsage": "$60"
+      },
+      {
+        "model": "Kimi K2.7 Code",
+        "estimatedRequestsPer7Days": "3,750",
+        "goMonthlyUsage": "$60"
+      },
+      {
+        "model": "Hy4 Preview",
+        "estimatedRequestsPer7Days": "3,920",
+        "goMonthlyUsage": "$60"
+      },
+      {
+        "model": "MiMo V2.6 Pro",
+        "estimatedRequestsPer7Days": "6,650",
+        "goMonthlyUsage": "$15"
+      },
+      {
+        "model": "MiniMax M3.1 Flash",
+        "estimatedRequestsPer7Days": "16,300",
+        "goMonthlyUsage": "$60"
+      },
+      {
+        "model": "GLM-5.3 Flash",
+        "estimatedRequestsPer7Days": "18,000",
+        "goMonthlyUsage": "$60"
+      },
+      {
+        "model": "DeepSeek V4 Flash Vision Exp",
+        "estimatedRequestsPer7Days": "19,000",
+        "goMonthlyUsage": "$60"
+      },
+      {
+        "model": "MiMo V2.6 Flash",
+        "estimatedRequestsPer7Days": "20,675",
+        "goMonthlyUsage": "$15"
+      },
+      {
+        "model": "DeepSeek V4 Flash",
+        "estimatedRequestsPer7Days": "36,700",
+        "goMonthlyUsage": "$60"
+      },
+      {
+        "model": "DeepSeek V4.1 Flash",
+        "estimatedRequestsPer7Days": "145,600",
+        "goMonthlyUsage": "$120"
+      },
+      {
+        "model": "DeepSeek V4.1 Flash Eco",
+        "estimatedRequestsPer7Days": "266,933",
+        "goMonthlyUsage": "$220"
+      },
+      {
+        "model": "DeepSeek V4.1 Flash",
+        "row": "Off-peak promo",
+        "estimatedRequestsPer7Days": "291,200",
+        "goMonthlyUsage": "$60 / week campaign note"
+      }
+    ],
+    "rulesPageQuotes": [
+      "Go uses Coding Plan credits only and has no additional Top Model Credits.",
+      "Coding Plan models share a credit pool, consumed first.",
+      "Credit multipliers vary by model as shown below. A lower multiplier uses fewer Coding Plan credits for the same dollar value of model usage.",
+      "New subscriptions: the 7-day Coding Plan allowance resets 7 days after the subscription starts."
+    ]
+  },
+  "cloudConsole": {
+    "capturedAt": "2026-11-23T11:56:33+01:00",
+    "page": "https://open-design.ai/cloud/workspace/models (logged-in workspace; workspace id, owner name and member ids redacted before publication)",
+    "file": "data/research/evidence/opendesign-cloud-model-catalog-2026-11-23.html",
+    "note": "The Cloud console's own model price catalog: 50 models (59 rows once the size tiers are counted), with input / output / cache read / cache write per 1M tokens. This is the catalogue the credit multipliers are applied to, so it is the list-price source for the adopted rows.",
+    "tierRule": "The price tier uses total input per request, including cached tokens, and applies to the entire request. (printed under the table title)",
+    "rows": [
+      {
+        "model": "claude-fable-5",
+        "tier": "",
+        "input": "$10",
+        "output": "$50",
+        "cacheRead": "$1",
+        "cacheWrite": "$12.5"
+      },
+      {
+        "model": "claude-fable-5.1",
+        "tier": "",
+        "input": "$10",
+        "output": "$50",
+        "cacheRead": "$0.25",
+        "cacheWrite": "$12.5"
+      },
+      {
+        "model": "claude-fable-5.2",
+        "tier": "",
+        "input": "$8",
+        "output": "$40",
+        "cacheRead": "$0.2",
+        "cacheWrite": "$10"
+      },
+      {
+        "model": "claude-haiku-5.5",
+        "tier": "Input ≤ 100,000 tokens",
+        "input": "$0.1",
+        "output": "$0.5",
+        "cacheRead": "$0.01",
+        "cacheWrite": "$0.125"
+      },
+      {
+        "model": "claude-haiku-5.5",
+        "tier": "Input &gt; 100,000 tokens",
+        "input": "$0.5",
+        "output": "$2.5",
+        "cacheRead": "$0.05",
+        "cacheWrite": "$0.625"
+      },
+      {
+        "model": "claude-opus-4.8",
+        "tier": "",
+        "input": "$5",
+        "output": "$25",
+        "cacheRead": "$0.5",
+        "cacheWrite": "$6.25"
+      },
+      {
+        "model": "claude-opus-5",
+        "tier": "",
+        "input": "$5",
+        "output": "$25",
+        "cacheRead": "$0.5",
+        "cacheWrite": "$6.25"
+      },
+      {
+        "model": "claude-opus-5.5",
+        "tier": "",
+        "input": "$4",
+        "output": "$20",
+        "cacheRead": "$0.2",
+        "cacheWrite": "$5"
+      },
+      {
+        "model": "claude-sonnet-5",
+        "tier": "",
+        "input": "$2",
+        "output": "$10",
+        "cacheRead": "$0.2",
+        "cacheWrite": "$2.5"
+      },
+      {
+        "model": "claude-sonnet-5.5",
+        "tier": "",
+        "input": "$2",
+        "output": "$10",
+        "cacheRead": "$0.2",
+        "cacheWrite": "$2.5"
+      },
+      {
+        "model": "deepseek-v4-flash",
+        "tier": "",
+        "input": "$0.44",
+        "output": "$1.32",
+        "cacheRead": "$0.014",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "deepseek-v4-flash-vision-exp",
+        "tier": "",
+        "input": "$0.44",
+        "output": "$1.32",
+        "cacheRead": "$0.014",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "tier": "",
+        "input": "$1.32",
+        "output": "$3.96",
+        "cacheRead": "$0.044",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "deepseek-v4.1-flash",
+        "tier": "",
+        "input": "$0.3",
+        "output": "$1.2",
+        "cacheRead": "$0.006",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "deepseek-v4.1-flash-eco",
+        "tier": "",
+        "input": "$0.3",
+        "output": "$1.2",
+        "cacheRead": "$0.006",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "gemini-3.7-flash",
+        "tier": "",
+        "input": "$1.5",
+        "output": "$7.5",
+        "cacheRead": "$0.15",
+        "cacheWrite": "$0.083333"
+      },
+      {
+        "model": "gemini-3.8-flash",
+        "tier": "",
+        "input": "$1.5",
+        "output": "$7.5",
+        "cacheRead": "$0.15",
+        "cacheWrite": "$0.083333"
+      },
+      {
+        "model": "gemini-4-argon",
+        "tier": "",
+        "input": "$4",
+        "output": "$20",
+        "cacheRead": "$0.2",
+        "cacheWrite": "$0.375"
+      },
+      {
+        "model": "gemini-4-carbon",
+        "tier": "",
+        "input": "$4",
+        "output": "$20",
+        "cacheRead": "$0.2",
+        "cacheWrite": "$0.375"
+      },
+      {
+        "model": "gemini-4-hydrogen",
+        "tier": "",
+        "input": "$1.5",
+        "output": "$7.5",
+        "cacheRead": "$0.075",
+        "cacheWrite": "$0.083333"
+      },
+      {
+        "model": "gemini-4-neon",
+        "tier": "",
+        "input": "$1.5",
+        "output": "$7.5",
+        "cacheRead": "$0.075",
+        "cacheWrite": "$0.041667"
+      },
+      {
+        "model": "glm-5.2",
+        "tier": "",
+        "input": "$1.4",
+        "output": "$4.4",
+        "cacheRead": "$0.26",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "glm-5.3-flash",
+        "tier": "",
+        "input": "$0.075",
+        "output": "$0.25",
+        "cacheRead": "$0.015",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "glm-5.3-flashx",
+        "tier": "",
+        "input": "$0.37",
+        "output": "$1.25",
+        "cacheRead": "$0.075",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "tier": "Input ≤ 272,000 tokens",
+        "input": "$0.2",
+        "output": "$1.2",
+        "cacheRead": "$0.02",
+        "cacheWrite": "$0.25"
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "tier": "Input &gt; 272,000 tokens",
+        "input": "$0.4",
+        "output": "$1.8",
+        "cacheRead": "$0.04",
+        "cacheWrite": "$0.5"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "tier": "Input ≤ 272,000 tokens",
+        "input": "$4",
+        "output": "$20",
+        "cacheRead": "$0.4",
+        "cacheWrite": "$5"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "tier": "Input &gt; 272,000 tokens",
+        "input": "$8",
+        "output": "$30",
+        "cacheRead": "$0.8",
+        "cacheWrite": "$10"
+      },
+      {
+        "model": "gpt-5.6-terra",
+        "tier": "Input ≤ 272,000 tokens",
+        "input": "$2",
+        "output": "$12",
+        "cacheRead": "$0.2",
+        "cacheWrite": "$2.5"
+      },
+      {
+        "model": "gpt-5.6-terra",
+        "tier": "Input &gt; 272,000 tokens",
+        "input": "$4",
+        "output": "$18",
+        "cacheRead": "$0.4",
+        "cacheWrite": "$5"
+      },
+      {
+        "model": "gpt-6-astra",
+        "tier": "Input ≤ 272,000 tokens",
+        "input": "$10",
+        "output": "$50",
+        "cacheRead": "$1",
+        "cacheWrite": "$12.5"
+      },
+      {
+        "model": "gpt-6-astra",
+        "tier": "Input &gt; 272,000 tokens",
+        "input": "$20",
+        "output": "$75",
+        "cacheRead": "$2",
+        "cacheWrite": "$25"
+      },
+      {
+        "model": "gpt-6-luna",
+        "tier": "Input ≤ 272,000 tokens",
+        "input": "$0.1",
+        "output": "$0.5",
+        "cacheRead": "$0.01",
+        "cacheWrite": "$0.125"
+      },
+      {
+        "model": "gpt-6-luna",
+        "tier": "Input &gt; 272,000 tokens",
+        "input": "$0.2",
+        "output": "$0.75",
+        "cacheRead": "$0.02",
+        "cacheWrite": "$0.25"
+      },
+      {
+        "model": "gpt-6-sol",
+        "tier": "Input ≤ 272,000 tokens",
+        "input": "$2",
+        "output": "$10",
+        "cacheRead": "$0.2",
+        "cacheWrite": "$2.5"
+      },
+      {
+        "model": "gpt-6-sol",
+        "tier": "Input &gt; 272,000 tokens",
+        "input": "$4",
+        "output": "$15",
+        "cacheRead": "$0.4",
+        "cacheWrite": "$5"
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "tier": "Input ≤ 272,000 tokens",
+        "input": "$2",
+        "output": "$10",
+        "cacheRead": "$0.1",
+        "cacheWrite": "$2.5"
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "tier": "Input &gt; 272,000 tokens",
+        "input": "$4",
+        "output": "$15",
+        "cacheRead": "$0.2",
+        "cacheWrite": "$5"
+      },
+      {
+        "model": "gpt-6.1-terra",
+        "tier": "Input ≤ 272,000 tokens",
+        "input": "$1",
+        "output": "$5",
+        "cacheRead": "$0.05",
+        "cacheWrite": "$1.25"
+      },
+      {
+        "model": "gpt-6.1-terra",
+        "tier": "Input &gt; 272,000 tokens",
+        "input": "$2",
+        "output": "$7.5",
+        "cacheRead": "$0.1",
+        "cacheWrite": "$2.5"
+      },
+      {
+        "model": "gpt-6.2-astra",
+        "tier": "",
+        "input": "$8",
+        "output": "$40",
+        "cacheRead": "$0.4",
+        "cacheWrite": "$10"
+      },
+      {
+        "model": "gpt-6.2-sol",
+        "tier": "",
+        "input": "$2",
+        "output": "$10",
+        "cacheRead": "$0.1",
+        "cacheWrite": "$2.5"
+      },
+      {
+        "model": "grok-4.5",
+        "tier": "",
+        "input": "$2",
+        "output": "$6",
+        "cacheRead": "$0.5",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "grok-4.6",
+        "tier": "",
+        "input": "$2",
+        "output": "$6",
+        "cacheRead": "$0.5",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "grok-4.7",
+        "tier": "",
+        "input": "$2",
+        "output": "$6",
+        "cacheRead": "$0.5",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "hy4",
+        "tier": "",
+        "input": "$0.834",
+        "output": "$2.501",
+        "cacheRead": "$0.042",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "hy4-flash",
+        "tier": "",
+        "input": "$0.07",
+        "output": "$0.281",
+        "cacheRead": "$0.003",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "hy4-preview",
+        "tier": "",
+        "input": "$0.834",
+        "output": "$2.501",
+        "cacheRead": "$0.042",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "kimi-k2.7-code",
+        "tier": "",
+        "input": "$0.95",
+        "output": "$4",
+        "cacheRead": "$0.19",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "kimi-k3",
+        "tier": "",
+        "input": "$3",
+        "output": "$15",
+        "cacheRead": "$0.3",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "kimi-k3.1-pro",
+        "tier": "",
+        "input": "$2",
+        "output": "$10",
+        "cacheRead": "$0.2",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "mimo-v2.6-flash",
+        "tier": "",
+        "input": "$0.14",
+        "output": "$0.28",
+        "cacheRead": "$0.0028",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "mimo-v2.6-pro",
+        "tier": "",
+        "input": "$0.435",
+        "output": "$0.87",
+        "cacheRead": "$0.0036",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "minimax-m3.1-flash",
+        "tier": "",
+        "input": "$0.15",
+        "output": "$0.6",
+        "cacheRead": "$0.015",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "muse-ember-1.0",
+        "tier": "",
+        "input": "$0.1",
+        "output": "$0.5",
+        "cacheRead": "$0.004",
+        "cacheWrite": "$0.125"
+      },
+      {
+        "model": "muse-spark-1.3",
+        "tier": "",
+        "input": "$1.25",
+        "output": "$4.25",
+        "cacheRead": "$0.15",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "muse-wonder",
+        "tier": "",
+        "input": "$4",
+        "output": "$20",
+        "cacheRead": "$0.2",
+        "cacheWrite": "-"
+      },
+      {
+        "model": "qwen3.7-max",
+        "tier": "",
+        "input": "$2.5",
+        "output": "$7.5",
+        "cacheRead": "$0.5",
+        "cacheWrite": "$3.125"
+      },
+      {
+        "model": "qwen4-max",
+        "tier": "",
+        "input": "$1.5",
+        "output": "$4.5",
+        "cacheRead": "$0.075",
+        "cacheWrite": "$1.875"
+      }
+    ],
+    "confirmsAdoptedRates": [
+      {
+        "model": "deepseek-v4.1-flash",
+        "console": {
+          "input": "$0.3",
+          "output": "$1.2",
+          "cacheRead": "$0.006",
+          "cacheWrite": "-"
+        },
+        "match": true
+      },
+      {
+        "model": "deepseek-v4.1-flash-eco",
+        "console": {
+          "input": "$0.3",
+          "output": "$1.2",
+          "cacheRead": "$0.006",
+          "cacheWrite": "-"
+        },
+        "match": true
+      },
+      {
+        "model": "minimax-m3.1-flash",
+        "console": {
+          "input": "$0.15",
+          "output": "$0.6",
+          "cacheRead": "$0.015",
+          "cacheWrite": "-"
+        },
+        "match": true
+      },
+      {
+        "model": "mimo-v2.6-pro",
+        "console": {
+          "input": "$0.435",
+          "output": "$0.87",
+          "cacheRead": "$0.0036",
+          "cacheWrite": "-"
+        },
+        "match": true
+      },
+      {
+        "model": "mimo-v2.6-flash",
+        "console": {
+          "input": "$0.14",
+          "output": "$0.28",
+          "cacheRead": "$0.0028",
+          "cacheWrite": "-"
+        },
+        "match": true
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "console": {
+          "input": "$1.32",
+          "output": "$3.96",
+          "cacheRead": "$0.044",
+          "cacheWrite": "-"
+        },
+        "match": true
+      },
+      {
+        "model": "deepseek-v4-flash",
+        "console": {
+          "input": "$0.44",
+          "output": "$1.32",
+          "cacheRead": "$0.014",
+          "cacheWrite": "-"
+        },
+        "match": true
+      },
+      {
+        "model": "glm-5.3-flash",
+        "console": {
+          "input": "$0.075",
+          "output": "$0.25",
+          "cacheRead": "$0.015",
+          "cacheWrite": "-"
+        },
+        "match": true
+      },
+      {
+        "model": "kimi-k2.7-code",
+        "console": {
+          "input": "$0.95",
+          "output": "$4",
+          "cacheRead": "$0.19",
+          "cacheWrite": "-"
+        },
+        "match": true
+      },
+      {
+        "model": "hy4-preview",
+        "console": {
+          "input": "$0.834",
+          "output": "$2.501",
+          "cacheRead": "$0.042",
+          "cacheWrite": "-"
+        },
+        "match": true
+      },
+      {
+        "model": "deepseek-v4-flash-vision-exp",
+        "console": {
+          "input": "$0.44",
+          "output": "$1.32",
+          "cacheRead": "$0.014",
+          "cacheWrite": "-"
+        },
+        "match": true
+      }
+    ],
+    "observedVs118Catalogue": "Every rate is unchanged from the 2026-11-18 console capture; GLM-5.3 Flash still prints $0.075 input / $0.25 output / $0.015 cache read, i.e. half the vendor list rate used for the same model on Command Code GOAT and OpenCode Go."
+  },
+  "workspaceUsage": {
+    "file": "data/raw/opendesign-workspace-usage-2026-11-16_2026-11-23.json",
+    "source": "https://open-design.ai/cloud/workspace/usage (logged-in workspace; feed behind the page)",
+    "collectedAt": "2026-11-23T10:58:33Z",
+    "page": {
+      "from": "2026-11-16T10:58:33Z",
+      "to": "2026-11-23T10:58:33Z",
+      "page": 1,
+      "hasMore": true,
+      "entriesOnPage": 50,
+      "firstEntryAt": "2026-11-23T10:30:53.539Z",
+      "lastEntryAt": "2026-11-23T10:56:00.217Z"
+    },
+    "observed": {
+      "models": [
+        "deepseek-v4.1-flash"
+      ],
+      "usageType": "design_plan",
+      "chargeCredits": 0,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "billingMultiplier": 1,
+      "planMultiplier": 0.5,
+      "cacheShareOfInput": 0.99706,
+      "inputTokens": 20588537,
+      "cacheReadTokens": 20528000,
+      "outputTokens": 39425,
+      "listChargedUsd": 0.1914,
+      "planContributionUsd": 0.0968,
+      "planToListRatio": 0.505747
+    },
+    "billingRule": "listChargeCredits = ceil(cost x 10000) where cost = (input - cacheRead) x inputPrice + cacheRead x cacheReadPrice + output x outputPrice, per 1M tokens; planContribution.amountUsd = ceil(listChargeCredits x multiplier) / 10000. Verified on every entry on the page: 50/50 list charges and 50/50 plan charges.",
+    "interpretation": "Confirms two things and one thing only: the catalogue unit prices (0.3 / 1.2 / 0.006, same as the 2026-11-23 catalogue) and the 0.5x multiplier as the console applies it, on credits already rounded up (45 credits -> 23 credits, $0.0023). It is not a Coding Plan allowance measurement: usageType is design_plan and chargeCredits is 0 on every row, so no Coding Plan credits were debited. The 99.71% cache share is a property of this design-plan workload (each call re-sends a ~400K context) and is not a reason to change the project standard 97% / 2.5% / 0.5% mix.",
+    "arithmeticChecks": "listChargeCredits = ceil(cost x 10000) on 50/50 entries; planContribution = ceil(listChargeCredits x 0.5) / 10000 on 50/50 entries."
+  },
+  "vendorWording": {
+    "why": "The \"Monthly usage\" column is the only place the per-model $60 appears, so the vendor's own words around it decide whether it is a cap or an equivalent. These are the strings the pricing page and the console render (captured 2026-11-23).",
+    "sharedAllowance": "These models share one Coding Plan allowance. The model list may change as new models are released.",
+    "perModelEquivalent": "DeepSeek V4.1 Flash has twice the Coding Plan usage allowance: up to $120 / $160 / $360 / $600 per month on Go / Plus / Pro / Max. Its estimated requests per 7 days are also doubled. This is a model-specific usage equivalent, not an increase in the shared plan credits.",
+    "campaignNote": "During the campaign week, Go Coding Plan credits at off-peak rates provide up to $60 in DeepSeek V4.1 Flash usage equivalent. This is not extra credit; shared allowances and reset times stay unchanged.",
+    "consoleQuotaLabels": [
+      "5-hour limit",
+      "Weekly limit",
+      "Subscription credits remaining",
+      "Both credit types are shared by the team. The model selected when a task starts determines which credits are used."
+    ],
+    "sources": [
+      "https://open-design.ai/pricing/ (Campaign help text, rendered in the Go/Plus/Pro/Max usage table)",
+      "https://open-design.ai/cloud/assets/pricing-plans-xU-4imLk.js (model-credits copy the pricing page renders, including the model note above)",
+      "https://open-design.ai/cloud/assets/app-B1HYMP9A.js (console wallet labels: only 5-hour, weekly and subscription-credit counters, no per-model limit)"
+    ],
+    "reading": "Two things are explicit: the models \"share one Coding Plan allowance\", and the per-model monthly figure is a \"model-specific usage equivalent\", i.e. the same credits converted at the model multiplier, not extra credits. The console tracks the quota as 5-hour window, 7-day window and subscription credits remaining; no per-model limit appears in its wallet or usage copy. That is consistent with the saturated-pool reading adopted here. It does not by itself prove that one model can drain all $220 in a month: that needs an account that actually burns more than 60 credits on a single model, which is the experiment recorded under howToSettle.",
+    "howToSettle": {
+      "settled": "Settled 2026-11-24 by the maintainer ruling: the $220 face value is the 0.27x equivalent, so the base pool is $60. No burn test is needed.",
+      "keptForReference": "The earlier plan (burn more than 60 credits on one model) would have shown the same thing but is superseded."
+    }
+  },
+  "planCallBreakdown": {
+    "file": "data/research/evidence/opendesign-usage-plan-breakdown-2026-11-23.png",
+    "capturedAt": "2026-11-23T12:17Z (call timestamp in the console)",
+    "page": "https://open-design.ai/cloud/usage-records (logged-in workspace; the workspace name and the \"Started by\" column are pixelated in the committed copy)",
+    "whatItShows": {
+      "model": "deepseek-v4.1-flash",
+      "inputTokensExcludingCache": 505,
+      "outputTokens": 79,
+      "cacheReadTokens": 184448,
+      "unitPrices": {
+        "input": 0.3,
+        "output": 1.2,
+        "cacheRead": 0.006,
+        "cacheWrite": 0.3
+      },
+      "billedListPriceUsd": 0.0014,
+      "planContributionMultiplier": 0.5,
+      "actualPlanCreditsUsedUsd": 0.0007,
+      "rowLabel": "Included in Coding Plan"
+    },
+    "arithmetic": "505 x $0.3000/M + 79 x $1.2000/M + 184,448 x $0.0060/M = $0.0013530, shown as a billed list price of $0.0014 (rounded up to $0.0001); the plan then charges list x 0.5 = $0.0007 of Coding Plan credits.",
+    "whatItProves": "The unit prices match the 2026-11-23 catalogue; the 0.5x multiplier is applied to the plan charge as the model-credits page describes; and this call is \"Included in Coding Plan\", i.e. it does consume Coding Plan credits (unlike the design_plan rows of the raw export, which charge nothing). It is a second, independent confirmation of the billing arithmetic from the console UI rather than the JSON feed.",
+    "whatItDoesNotProve": "It does not show the size of the monthly pool or whether a per-model cap exists: the screen is one call in the usage list, not the Plan & balance header. The $220 vs $60 question still needs the balance panel (Subscription credits remaining + the 5-hour and 7-day windows) and/or an account that burns more than 60 credits on a single model."
+  },
+  "planBalance": {
+    "file": "data/research/evidence/opendesign-plan-balance-2026-11-23.png",
+    "capturedAt": "2026-11-23T12:17Z (console clock)",
+    "page": "https://open-design.ai/cloud/dashboard (logged-in workspace; URL bar cropped, avatar and workspace name pixelated)",
+    "observed": {
+      "plan": "Go",
+      "periodEnds": "2026-12-16",
+      "fiveHourWindow": {
+        "left": "86%",
+        "resetsIn": "3h 46m"
+      },
+      "sevenDayWindow": {
+        "left": "57%",
+        "resetsIn": "0d 6h 46m"
+      },
+      "payAsYouGoCredits": "-$0.05",
+      "note": "Both credit types are shared by the team. The model selected when a task starts determines which credits are used. (plus a \"View models and their credit types\" link)"
+    },
+    "interpretation": "The console presents the Coding Plan quota as two percentage counters only, the 5-hour and 7-day windows, plus a pay-as-you-go balance. There is no per-model allowance, no per-model counter and no dollar figure for the monthly pool anywhere on the screen. That is what a single shared pool looks like in the UI, and it matches the vendor copy (\"These models share one Coding Plan allowance\"). As a consistency check, 57% left on the weekly window means 43% used; at the published $55 weekly window that is about $23.65 of credits, a plausible reading of the workspace's week.",
+    "whatItDoesNotProve": "The $220 monthly maximum is not shown as a live counter, only the two windows are, so this screen cannot show on its own whether one model could drain the whole month. That still needs an account that burns more than 60 credits on a single model, or a written answer from support."
+  },
+  "cardCap": {
+    "what": "Why the card stops at $220 for Eco: 60/0.27 = 222.2, and the card prints 220. Every other model is below the cap (1x = 60, 0.5x = 120, 4x = 15), so only Eco is capped.",
+    "rows": [
+      {
+        "model": "deepseek-v4.1-flash",
+        "multiplier": 0.5,
+        "monthlyUsageEquivalentUsd": 120.0,
+        "monthlyTokens": 6211200000,
+        "realUsdPerMTok": 0.00160999
+      },
+      {
+        "model": "deepseek-v4.1-flash-eco",
+        "multiplier": 0.27,
+        "monthlyUsageEquivalentUsd": 220.0,
+        "monthlyTokens": 11387200000,
+        "realUsdPerMTok": 0.00087818
+      },
+      {
+        "model": "minimax-m3.1-flash",
+        "multiplier": 1.0,
+        "monthlyUsageEquivalentUsd": 60.0,
+        "monthlyTokens": 2816900000,
+        "realUsdPerMTok": 0.00355
+      },
+      {
+        "model": "mimo-v2.6-pro",
+        "multiplier": 4.0,
+        "monthlyUsageEquivalentUsd": 15.0,
+        "monthlyTokens": 801400000,
+        "realUsdPerMTok": 0.01247816
+      },
+      {
+        "model": "mimo-v2.6-flash",
+        "multiplier": 4.0,
+        "monthlyUsageEquivalentUsd": 15.0,
+        "monthlyTokens": 1969500000,
+        "realUsdPerMTok": 0.00507743
+      },
+      {
+        "model": "deepseek-v4-pro",
+        "multiplier": 1.0,
+        "monthlyUsageEquivalentUsd": 60.0,
+        "monthlyTokens": 628400000,
+        "realUsdPerMTok": 0.01591343
+      },
+      {
+        "model": "deepseek-v4-flash",
+        "multiplier": 1.0,
+        "monthlyUsageEquivalentUsd": 60.0,
+        "monthlyTokens": 1924300000,
+        "realUsdPerMTok": 0.00519669
+      },
+      {
+        "model": "glm-5.3-flash",
+        "multiplier": 1.0,
+        "monthlyUsageEquivalentUsd": 60.0,
+        "monthlyTokens": 3394600000,
+        "realUsdPerMTok": 0.00294586
+      },
+      {
+        "model": "kimi-k2.7-code",
+        "multiplier": 1.0,
+        "monthlyUsageEquivalentUsd": 60.0,
+        "monthlyTokens": 263100000,
+        "realUsdPerMTok": 0.03800836
+      },
+      {
+        "model": "hy4-preview",
+        "multiplier": 1.0,
+        "monthlyUsageEquivalentUsd": 60.0,
+        "monthlyTokens": 809800000,
+        "realUsdPerMTok": 0.01234873
+      },
+      {
+        "model": "deepseek-v4-flash-vision-exp",
+        "multiplier": 1.0,
+        "monthlyUsageEquivalentUsd": 60.0,
+        "monthlyTokens": 1924300000,
+        "realUsdPerMTok": 0.00519669
+      }
+    ]
+  },
+  "correction2026_11_24": {
+    "what": "The $220 face value on the card is the 0.27x (Eco) equivalent, not a base pool. The base is $60/month, $15/week, $5/5h; a model's monthly usage equivalent is min(220, 60 / multiplier).",
+    "effect": "Every row moves from fee / ($220 / multiplier) to fee / (min(220, 60 / multiplier)): deepseek-v4.1-flash 227.743 -> 62.112 亿/月, deepseek-v4.1-flash-eco 421.747 -> 113.872, glm-5.3-flash 124.470 -> 33.946.",
+    "source": "Maintainer review on Fei-Craft/real-api-pricing#257, 2026-11-24, cross-checked against the four tier cards (60/0.27=222->220, 80/0.27=296->290, 180/0.27=667->660, 300/0.27=1111->1110) and the 0.25x campaign note ($60/week = 15/0.25)."
+  }
+}
