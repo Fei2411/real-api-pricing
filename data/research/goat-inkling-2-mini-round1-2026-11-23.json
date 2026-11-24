@@ -1,0 +1,188 @@
+{
+  "collectedAt": "2026-11-23",
+  "collectionMethod": "Manual capture of the official Command Code GOAT plan page, the pricing-limits resource page and the public pricing page (English) around 10:36 Beijing time / 02:36Z on 2026-11-23: https://commandcode.ai/docs/plans/goat, https://commandcode.ai/docs/resources/pricing-limits and https://commandcode.ai/pricing, read as published. The RSC payload (model catalog + budgetUsd rows on the plan page; models + planBudgetUsd / planAllowanceUsd / availability on the pricing-limits page), the rendered plan-page model tables (context, prices, monthly credits, caps) and the official 'Estimated requests' table were read field by field, and the same three pages captured on 2026-11-21 were compared on budgetUsd / rates / shape / timeOfDay per model. One new paid GOAT model observed (Inkling 2 Mini). Research-only — no adopted row generated, no adopted value changed, no script changed.",
+  "sources": [
+    "https://commandcode.ai/docs/plans/goat",
+    "https://commandcode.ai/docs/resources/pricing-limits",
+    "https://commandcode.ai/pricing"
+  ],
+  "scope": "Command Code GOAT official catalog only. One new paid model observed on 2026-11-23: 'Inkling 2 Mini' (slug inkling-2-mini, plan-page id 'thinkingmachines/inkling-2-mini', pricing-limits id 'inkling-2-mini'). Vendor Thinking Machines, category opensource, blurb 'compact multimodal reasoning with 1M context', launchedAt 2026-11-20, releaseDate unpublished ($undefined), minPlanName Go, context 1,048,576 tokens, reasoning true, vision true, marked 'not yet scored' (intelligenceIndex and codingIndex unpublished). Priced $0.075 input / $0.30 output / $0.015 cached read per 1M tokens with no cache-write price listed (credits table Cache Write column shows '-'). GOAT per-model monthly credits budgetUsd 15 (credits column '$15'). pricing-limits planBudgetUsd / planAllowanceUsd = {go: 6, goat: 15, pro: 25}. Official estimated requests on the plan page: 3,450 / 5h, 8,620 / week, 17,200 / month (row as published 'Inkling 2 Mini 3,450 8,620 17,200'). Availability includes individual-go / individual-go-v1 / individual-goat / individual-pro / individual-pro-v1 / individual-provider / individual-max / individual-ultra / teams-pro / all, all true. The plan-page counters moved All plans 106 -> 107, GOAT plan 75 -> 76; Deals stayed 3 and Free stayed 2. The plan-page paid budgetUsd rows grew 65 -> 66. The pricing-limits named rows grew 108 -> 109. Other previously listed paid GOAT models keep the same budgetUsd / rates / shape (GLM-5.3 stays at budgetUsd 70). Shared-pool wording did not change. No leaderboard/score data, no adopted.csv row.",
+  "previousCapture": {
+    "capturedAt": "2026-11-21",
+    "file": "list-prices-nov2026-round1-2026-11-21.json",
+    "note": "The 2026-11-21 routine capture of the same pages is used as the baseline. The 2026-11-22 routine scan did not complete, so the comparison is made against 2026-11-21. The last full same-pages GOAT catalog capture with the same counter fields is goat-hy4-round1-2026-11-18.json.",
+    "baselineValues": {
+      "inkling2Mini": {
+        "present": false,
+        "paidRowPresent": false,
+        "note": "No 'Inkling 2 Mini' row (plan-page id thinkingmachines/inkling-2-mini, pricing-limits id inkling-2-mini, slug inkling-2-mini) existed in the official GOAT catalog on 2026-11-21. Inkling (thinkingmachines/inkling, budgetUsd 20) and Inkling Small (thinkingmachines/inkling-small, budgetUsd 20) were already present."
+      },
+      "goatModelCounters": {
+        "planPageAllPlansCount": 106,
+        "planPageGoatPlanCount": 75,
+        "planPageDealsCount": 3,
+        "planPageFreeCount": 2,
+        "planPagePaidBudgetUsdRowCount": 65,
+        "pricingLimitsNamedRowsCount": 108
+      },
+      "goatSharedPoolWording": {
+        "goat": "Up to $100",
+        "pro": "Up to $110"
+      },
+      "glm53": {
+        "rscBudgetUsd": 70,
+        "creditsColumnDisplay": "$70",
+        "note": "GLM-5.3 keeps budgetUsd 70 on both the 2026-11-21 and the 2026-11-23 plan-page payloads; its rates, request shape and timeOfDay are unchanged."
+      }
+    },
+    "diff": {
+      "modelsAdded": [
+        "Inkling 2 Mini"
+      ],
+      "modelsRemoved": [],
+      "budgetUsdChanged": false,
+      "ratesChanged": false,
+      "counterChange": {
+        "planPagePaidBudgetUsdRowCount": "65 -> 66",
+        "planPageAllPlansCount": "106 -> 107",
+        "planPageGoatPlanCount": "75 -> 76",
+        "planPageDealsCount": "3 -> 3",
+        "planPageFreeCount": "2 -> 2",
+        "pricingLimitsNamedRowsCount": "108 -> 109"
+      },
+      "note": "Compared with the 2026-11-21 capture of the same pages, the only paid GOAT catalog change is the addition of 'Inkling 2 Mini'. Every other paid GOAT row keeps the same budgetUsd / rates / shape; GLM-5.3 stays at budgetUsd 70. The pricing-limits catalog gained exactly one named row, this model."
+    }
+  },
+  "adoptionStatus": "research-only; not adopted; no command_code_goat × inkling-2-mini row in adopted.csv yet — adding one requires a COMMAND_CODE_GOAT_MODELS entry in scripts/build_adopted.py, left to maintainer review",
+  "observed": {
+    "paidModel": {
+      "name": "Inkling 2 Mini",
+      "slug": "inkling-2-mini",
+      "modelId": "thinkingmachines/inkling-2-mini",
+      "idVariants": {
+        "planPageId": "thinkingmachines/inkling-2-mini",
+        "pricingLimitsId": "inkling-2-mini"
+      },
+      "vendor": "Thinking Machines",
+      "category": "opensource",
+      "blurb": "compact multimodal reasoning with 1M context",
+      "launchedAt": "2026-11-20",
+      "releaseDate": null,
+      "releaseDateNote": "releaseDate is unpublished on the plan-page RSC payload ($undefined); only launchedAt 2026-11-20 is published.",
+      "minPlanName": "Go",
+      "contextWindow": 1048576,
+      "reasoning": true,
+      "vision": true,
+      "scored": false,
+      "scoreNote": "intelligenceIndex and codingIndex are both unpublished ($undefined); the model is shown as not yet scored.",
+      "availability": {
+        "individual-go": true,
+        "individual-go-v1": true,
+        "individual-goat": true,
+        "individual-pro": true,
+        "individual-pro-v1": true,
+        "individual-provider": true,
+        "individual-max": true,
+        "individual-ultra": true,
+        "teams-pro": true,
+        "all": true
+      },
+      "threePartPrice": {
+        "unit": "USD / MTok",
+        "inputPerMTokUsd": 0.075,
+        "outputPerMTokUsd": 0.3,
+        "cachedReadPerMTokUsd": 0.015,
+        "cacheWritePerMTokUsd": null,
+        "cacheWriteNote": "No cache-write price is listed on the plan page or the pricing-limits page (cacheWriteCost is $undefined and the credits table shows '-' for Cache Write).",
+        "rscBlendedCostPerMTok": 0.13124999999999998,
+        "rscAgentLoopInputPerMTok": 0.033,
+        "blendedNote": "blendedCostPerMTok and agentLoopInputPerMTok are transcribed from the plan-page RSC payload as published; they are not computed or rounded in this file."
+      },
+      "renderedTableRow": {
+        "note": "Plan-page rendered models table row for this model, read field by field.",
+        "context": "1M",
+        "input": "$0.075",
+        "output": "$0.30",
+        "cachedRead": "$0.015",
+        "cacheWrite": "-",
+        "credits": "$15"
+      },
+      "monthlyCredits": {
+        "goatBudgetUsd": 15,
+        "creditsColumnDisplay": "$15",
+        "planBudgetUsd": {
+          "go": 6,
+          "goat": 15,
+          "pro": 25
+        },
+        "planAllowanceUsd": {
+          "go": 6,
+          "goat": 15,
+          "pro": 25
+        }
+      },
+      "requestShape": {
+        "inputTokens": 800,
+        "outputTokens": 200,
+        "cacheReadTokens": 50000,
+        "source": "plan-page RSC budgetUsd row shape block"
+      },
+      "officialRequestEstimates": {
+        "note": "Official estimated-requests table on the GOAT plan page.",
+        "per5h": 3450,
+        "perWeek": 8620,
+        "perMonth": 17200,
+        "rowAsPublished": "Inkling 2 Mini 3,450 8,620 17,200"
+      },
+      "deal": null,
+      "dealNote": "The plan-page deal wording is now 'Qwen 4 Max, Tencent Hy4 Flash and Inkling 2 Mini start at $15.' The model therefore appears in the $15 credits group. Its own credits column is $15, with no deal object in the RSC payload (deal is unpublished / $undefined).",
+      "scheduledChange": null,
+      "scheduledChangeNote": "scheduledChange is unpublished in the plan-page RSC payload ($undefined).",
+      "timeOfDay": null,
+      "timeOfDayNote": "timeOfDay is unpublished in the plan-page RSC payload ($undefined).",
+      "caps": {
+        "text": true,
+        "vision": true,
+        "reasoning": true
+      }
+    }
+  },
+  "notAdopted": {
+    "reason": "Adding a command_code_goat × inkling-2-mini adopted row requires a COMMAND_CODE_GOAT_MODELS entry in scripts/build_adopted.py. This PR only records the official catalog evidence.",
+    "scriptsChangeRequired": true
+  },
+  "otherObservations": [
+    {
+      "topic": "Inkling 2 Mini absent from the public /pricing page; releases moved are product changelog only",
+      "observation": "The public /pricing page does not list a price row for Inkling 2 Mini, and the visible dollar-amount set on /pricing is unchanged. nowMs moved 1795228829862 -> 1795401401773. totalReleases moved 436 -> 438, corresponding to product changelog entries v1.93.0 (2026-11-21: reduced motion / help grouping) and v1.93.2 (2026-11-22: open-source models follow /design, contrast checks).",
+      "note": "Recorded only. Both changelog entries are product/UI releases, not pricing or quota changes; nothing on /pricing indicates a price or allowance change for this model."
+    },
+    {
+      "topic": "RSC rates pointer index shift for Jev 1.14.0 is not a price-table change",
+      "observation": "The Jev 1.14.0 RSC rates pointer index moved from rows:63 to rows:64 because one row was inserted ahead of it. The referenced rate table itself is unchanged.",
+      "note": "Recorded only. This is a pointer/index shift caused by the inserted Inkling 2 Mini row, not a rates change, so ratesChanged stays false for this capture."
+    },
+    {
+      "topic": "Deals wording now names Inkling 2 Mini; Deals and Free counts unchanged",
+      "observation": "The plan-page Deals sentence is now 'Qwen 4 Max, Tencent Hy4 Flash and Inkling 2 Mini start at $15.' The Deals count stayed 3 and the Free count stayed 2. Flint remains a free-while-it-lasts model and is not tracked.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Existing paid GOAT rows unchanged",
+      "observation": "No other already-listed paid GOAT row changed its budgetUsd, rates or request shape. GLM-5.3 still shows budgetUsd 70. The pricing-limits named rows grew 108 -> 109 with exactly one addition (this model).",
+      "note": "Recorded only; no adopted value changed."
+    }
+  ],
+  "sharedPoolUnchanged": {
+    "planPage": "up to $20 of usage in any 5 hours, $50 weekly, $100 monthly",
+    "pricingLimits": {
+      "goat": "Up to $100",
+      "pro": "Up to $110"
+    },
+    "note": "Shared-pool wording is unchanged from 2026-11-21. The hardcoded scripts/build_adopted.py shared-pool constant is left to upstream and is not changed here."
+  },
+  "computationNote": "This file computes no monthlyYi, no blended per-MTok price and no adopted allowance; blendedCostPerMTok / agentLoopInputPerMTok and official request estimates are transcribed as published, and the $15 GOAT credits value is transcribed as published. No adopted value is derived from this capture.",
+  "confidence": "medium",
+  "confidenceNote": "The official Command Code plan page and pricing-limits page agree on the new paid row, the three-part price, the GOAT $15 credits and the Go/GOAT/Pro plan budgets, and the plan-page RSC payload was read directly. The public /pricing page does not list the model yet, and the model is not scored (no intelligenceIndex / codingIndex published).",
+  "basis": "official"
+}
