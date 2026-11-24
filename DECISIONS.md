@@ -3,11 +3,18 @@
 本地 `AGENTS.md`（不入库）只放 Agent 工作流程；口径与规则见 [`CONVENTIONS.md`](CONVENTIONS.md)；本文件记录每条采用值的取舍（旧值 → 新值 → 依据 → 未采来源）。
 最权威的表述仍在 `scripts/build_adopted.py` 的 `decision_note` 和 `data/research/` 证据文件里；本文件是按时间的索引摘要。改数只能改 `build_adopted.py`，改完在这里同步记一笔。
 
-## 2026-11-21 · Devin Max × Gemini 4 Carbon 首个采用点
+## 2026-11-24 · Devin Max 周池统一按 $200/周重算（新增 Carbon / Sonnet 5.5 / Fable 5.2 / Neon / GPT-6.1 Sol，重算 Astra / Opus 5.5）
 
-- **采用**：新增 `devin_max × gemini-4-carbon` = **18.82 亿/月 medium**（低缓存档）。Devin Max $200/月，不是 Devin Pro。维护者把周 API 等价定为 **$200**，不把 7% 与 9% 两次拉伸加权，也不取中点。TokenView `prices.json`：入 $2 / 出 $10 / 缓存读 $0.10 / 缓存写 $0。低缓存混合价 $0.425/MTok（85/14.5/0.5）。周 470,588,235 token（4.71亿）＝200÷0.425。×4 周＝1,882,352,941 token，未舍入 18.824亿，`round(..., 2)` 存 **18.82**。订阅 USD/MTok 用月费 $200 除以 round 后的月 token，字段与其他行相同。基线 2026-11-20 8:11 PM PT 周表 0%。没有上一条 Carbon 订阅样本，这就是全部权重。
-- **不改**：`devin_pro` 各行不动。`google_ai_pro_us × gemini-4-argon` 仍是 **0.66 亿/月**，`google_ai_pro_us × gemini-4-neon` 仍是 **5.36 亿/月**。Claude Sonnet、Haiku、Opus 各行不动。已有的 `devin_max × gpt-6-astra` 与 `devin_max × claude-opus-5.5` 不动。Gemini 4 Carbon 按量 API 行不动。
-- **不采**：5:16 AM PT 的 7% 拉伸 API $14.08、周 $201.21、低缓存 4.73亿（Carbon High 225 次，raw 52,911,702）。5:29 AM PT 的 9% 拉伸 API $17.20、周 $191.07、低缓存 4.50亿（Carbon High 263 次，raw 65,021,830）。多出的 2 个百分点隐含 $155.55。5:40 AM PT 表仍是 9%，其间又多 $0.24。
+- **锚点采用（#251）**：新增 `devin_max × gemini-4-carbon` = **18.82 亿/月 medium**（低缓存档，`$0.10627/MTok`）。Devin Max $200/月，不是 Devin Pro。维护者把周 API 等价定为 **$200**（月 $800），不把 7%（$201.21）与 9%（$191.07）两次拉伸加权，也不取中点；多出的 2 个百分点隐含 $155.55 不采。TokenView `prices.json`：入 $2 / 出 $10 / 缓存读 $0.10 / 缓存写 $0（同 Google 11/30 前导入价）。低缓存混合价 $0.425/MTok（85/14.5/0.5）；周 470,588,235 token（4.71亿）×4 周＝1,882,352,941 token，未舍入 18.824亿，`round(..., 2)` 存 **18.82**。基线 2026-11-20 8:11 PM PT 周表 0%；5:40 AM PT 表仍是 9%（其间又多 $0.24）。
+- **同池重算旧行（2026-11-24 裁定）**：维护者确认 Devin Max 当前周额度统一按 **$200/周（月 $800）**计，取代 2026-09 历史实测池（Astra 9/14 $409.83/周、Opus 5.5 9/23 $700.77/周），按各模型标价混合价重算并标 **low**（沿用 Carbon 锚点日期）：
+  - `devin_max × gpt-6-astra`（标准档 $1.47/MTok）：11.15 → **5.44 亿/月**（`$0.36765/MTok`）
+  - `devin_max × claude-opus-5.5`（Anthropic 档 $0.419/MTok）：66.9 → **19.09 亿/月**（`$0.10477/MTok`）
+- **同池新增 4 款主力模型（low，沿用 Carbon 锚点日期；三段价核对 `docs.devin.ai/desktop/models` `TEAMS_TIER_PRO` 与官方价表）**：
+  - `devin_max × claude-sonnet-5.5`（Anthropic 档 $0.2095/MTok）：**38.19 亿/月**（`$0.05237/MTok`）
+  - `devin_max × claude-fable-5.2`（Anthropic 档 $0.644/MTok）：**12.42 亿/月**（`$0.16103/MTok`）
+  - `devin_max × gemini-4-neon`（低缓存档 $0.6375/MTok）：**12.55 亿/月**（`$0.15936/MTok`）
+  - `devin_max × gpt-6.1-sol`（标准档 $0.197/MTok）：**40.61 亿/月**（`$0.04925/MTok`）
+- **不改**：`devin_pro` 各行不动（保留 10-31 / 11-01 实测 ~$30.65–$33.73/周）；`google_ai_pro_us`、Anthropic/OpenAI 订阅行及按量 API 行均不动。
 - **证据**：`data/research/local-samples-round3-2026-11-21.json`（#251）。
 
 ## 2026-11-21 · 千问/阿里云百炼 Token Plan 个人版收录、AA v5.0.1/v2.1 整榜切换、Devin SWE-2 常设免费及新模型 API/目录补齐

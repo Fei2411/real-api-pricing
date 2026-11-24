@@ -15,7 +15,7 @@
 3. **每个点 = (订阅套餐, 实际服务模型)**，Y 轴按实际服务模型查分。
 4. **负载折算**：凡是美元额度、credits 额度、三段价、模型间价格比换算成 token 的，统一按 `conventions.json` 的负载档折算，这是比较基准，不代表任何平台的实测负载。
    - **标准档** `standardTokenMix`：默认。
-   - **低缓存档** `lowCacheTokenMix`：只用于经裁定、实测确实打不到标准缓存的渠道（当前 Step 全系、Google，以及 2026-11-21 裁定的 Devin Max × Gemini 4 Carbon）。缓存固定，输出占比跟随标准档，余量归输入。
+   - **低缓存档** `lowCacheTokenMix`：只用于经裁定、实测确实打不到标准缓存的渠道（当前 Step 全系、Google，以及 2026-11-21/24 裁定的 Devin Max × Gemini 4 Carbon / Neon）。缓存固定，输出占比跟随标准档，余量归输入。
    - **Anthropic 档** `anthropicTokenMix`：Anthropic 单独收缓存写入费、未命中输入几乎全部走缓存写，故标准档的普通输入份额按 5 分钟缓存写入价计；用于 Anthropic 按量 API 行，以及经裁定折算的 Anthropic 面板实测。
    - 不为单个渠道或单个用户样本另设专用负载档。某家实测缓存偏低时，先区分是渠道本身的属性还是客户端 harness 的问题。
    - **带 token 分项的实测样本**（面板反推、本地日志、ccusage）：按该模型标价把段内 token 折成 list-worth，÷ 段占额度 → 周 worth × 4 周，再 ÷ 该渠道负载档的混合价得到月 token（2026-09-30 裁定统一；此前只有 Devin Max、Claude Pro × Opus 5.5、Droid Max 这样做）。例外：Factory Droid 的 30 天窗 = 2× 7 天窗，月 = 周 worth × 2（2026-10-03 裁定）。Anthropic 样本的缓存写按实际档位（1h / 5m）计价。

@@ -1,9 +1,10 @@
 {
   "collectedAt": "2026-11-21",
-  "adoptionStatus": "Adopted 2026-11-21 in scripts/build_adopted.py. devin_max × gemini-4-carbon uses the maintainer-set weekly API equivalent of $200. It does not replace devin_max × gpt-6-astra or devin_max × claude-opus-5.5. It does not change devin_pro rows, google_ai_pro_us × gemini-4-argon, google_ai_pro_us × gemini-4-neon, or Claude Sonnet, Haiku, or Opus.",
-  "scopeNote": "2026-11-21 Devin Max 的 Gemini 4 Carbon 周样本，见 issue #251。这是 Devin Max（$200/月），不是已有的 Devin Pro 行。截图不入库。7% 与 9% 两次拉伸、以及多出的 2 个百分点，只在 issue 里记为不采用。",
-  "method": "CONVENTIONS.md 低缓存档：维护者指定的周 API 等价 ÷ conventions.lowCacheTokenMix（85% / 14.5% / 0.5%）混合价。月 = 未舍入周 × 4，再按仓库的 round(..., 2) 存亿。不把两次读数加权。",
-  "why200": "维护者把这一周的真实 API 等价定为 $200。7% 拉伸 $201.21 与 9% 拉伸 $191.07 落在两侧，但不做加权，也不取中点。多出的 2 个百分点隐含 $155.55，不采用。",
+  "rebasedAt": "2026-11-24",
+  "adoptionStatus": "Adopted 2026-11-24 in scripts/build_adopted.py. devin_max × gemini-4-carbon (18.82 亿/月 medium) anchors the maintainer-confirmed Devin Max weekly API-worth pool of $200/week ($800/month). On 2026-11-24 the maintainer confirmed the $200/week pool applies across Devin Max models, rebasing devin_max × gpt-6-astra (11.15 → 5.44 亿/月 low) and devin_max × claude-opus-5.5 (66.9 → 19.09 亿/月 low) from their Sep 2026 samples, and adding four flagship Devin Max rows derived from the same $200/week pool: claude-sonnet-5.5 (38.19 亿/月 low), claude-fable-5.2 (12.42 亿/月 low), gemini-4-neon (12.55 亿/月 low), and gpt-6.1-sol (40.61 亿/月 low). Does not change devin_pro rows, google_ai_pro_us rows, or other channels.",
+  "scopeNote": "2026-11-21 Devin Max 的 Gemini 4 Carbon 周样本（issue #251），以及 2026-11-24 维护者确认 Devin Max 共享周池为 $200/周（月 $800）后的全模型重算。这是 Devin Max（$200/月），不是已有的 Devin Pro 行。截图不入库。7% 与 9% 两次拉伸、以及多出的 2 个百分点，记为不采用。",
+  "method": "anchor（gemini-4-carbon）：CONVENTIONS.md 低缓存档，$200/周 × 4 ÷ lowCacheTokenMix（85/14.5/0.5）混合价 $0.425/MTok；同池派生模型按 $200/周 × 4 = $800/月 ÷ 各模型所属负载档混合价（Anthropic 模型用 anthropicTokenMix、Gemini 用 lowCacheTokenMix、OpenAI 用 standardTokenMix），round(..., 2) 存亿，置信度 low，数据日期沿用 Carbon 锚点。",
+  "why200": "维护者确认 Devin Max 周池真实 API 等价为 $200/周（月 $800）。Carbon 7% 拉伸 $201.21 与 9% 拉伸 $191.07 落在两侧，不做加权也不取中点；多出的 2 个百分点隐含 $155.55 不采用。旧 2026-09 Astra（$409.83/周）与 Opus 5.5（$700.77/周）周池已过时，统一改按 $200/周重算。",
   "samples": [
     {
       "id": "devin-max-carbon-week-2026-11-21",
@@ -15,8 +16,6 @@
       "model": "gemini-4-carbon",
       "separateFrom": [
         "devin_pro",
-        "devin_max::gpt-6-astra",
-        "devin_max::claude-opus-5.5",
         "google_ai_pro_us::gemini-4-argon",
         "google_ai_pro_us::gemini-4-neon"
       ],
@@ -80,7 +79,66 @@
           "reason": "User said the real weekly equivalent is $200"
         }
       ],
-      "adopted": "devin_max × gemini-4-carbon = 18.82 亿/月 medium. Weekly API equivalent $200 is the whole weight. Does not change Devin Pro, Google AI Pro Argon or Neon, or Claude Sonnet, Haiku, or Opus."
+      "adopted": "devin_max × gemini-4-carbon = 18.82 亿/月 medium. Weekly API equivalent $200 is the anchor for Devin Max."
     }
-  ]
+  ],
+  "sharedPoolRebase20261124": {
+    "weeklyApiUsd": 200,
+    "monthlyApiUsd": 800,
+    "rateReference": "https://docs.devin.ai/desktop/models (TEAMS_TIER_PRO checked 2026-11-24) & official provider list prices",
+    "derivedRows": [
+      {
+        "model": "gpt-6-astra",
+        "workload": "standard",
+        "blendUsdPerMtok": 1.47,
+        "ratesPerMtok": {"cacheRead": 1.0, "input": 10.0, "output": 50.0},
+        "storedYi": 5.44,
+        "previousYi": 11.15,
+        "previousSource": "devin-usage-round4-2026-09-14.json ($409.83/week)",
+        "confidence": "low"
+      },
+      {
+        "model": "claude-opus-5.5",
+        "workload": "anthropic",
+        "blendUsdPerMtok": 0.419,
+        "ratesPerMtok": {"cacheRead": 0.2, "cacheWrite5m": 5.0, "input": 4.0, "output": 20.0},
+        "storedYi": 19.09,
+        "previousYi": 66.9,
+        "previousSource": "devin-opus55-round1-2026-09-23.json ($700.77/week)",
+        "confidence": "low"
+      },
+      {
+        "model": "claude-sonnet-5.5",
+        "workload": "anthropic",
+        "blendUsdPerMtok": 0.2095,
+        "ratesPerMtok": {"cacheRead": 0.1, "cacheWrite5m": 2.5, "input": 2.0, "output": 10.0},
+        "storedYi": 38.19,
+        "confidence": "low"
+      },
+      {
+        "model": "claude-fable-5.2",
+        "workload": "anthropic",
+        "blendUsdPerMtok": 0.644,
+        "ratesPerMtok": {"cacheRead": 0.2, "cacheWrite5m": 10.0, "input": 8.0, "output": 40.0},
+        "storedYi": 12.42,
+        "confidence": "low"
+      },
+      {
+        "model": "gemini-4-neon",
+        "workload": "lowCache",
+        "blendUsdPerMtok": 0.6375,
+        "ratesPerMtok": {"cacheRead": 0.15, "input": 3.0, "output": 15.0},
+        "storedYi": 12.55,
+        "confidence": "low"
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "workload": "standard",
+        "blendUsdPerMtok": 0.197,
+        "ratesPerMtok": {"cacheRead": 0.1, "input": 2.0, "output": 10.0},
+        "storedYi": 40.61,
+        "confidence": "low"
+      }
+    ]
+  }
 }

@@ -43,34 +43,38 @@ No.  Plan                                Monthly fee      Served model         M
 33   Droid Max                           USD 200          GLM 5.2              7.2171              0.02771   medium
 34   Cursor Ultra (Composer Fast)        USD 200          Composer 2.5         6.8841              0.02905   medium
 35   Droid Max                           USD 200          Mistral Medium 3.5   6.736               0.02969   medium
-36   Devin Max                           USD 200          Claude Opus 5.5      6.69                0.0299    medium
-37   GLM Coding Max (v3 ¥1078) Off-peak  CNY 1078         GLM 5.3              5.769               0.02757   high
-38   SuperGrok Heavy                     USD 300          Grok 4.7             5.72                0.05245   medium
-39   SuperGrok Heavy                     USD 300          Grok 4.6             5.16                0.05814   medium
-40   SuperGrok Heavy                     USD 300          Grok 4.5             5.16                0.05814   medium
-41   Droid Max                           USD 200          Claude Sonnet 5.5    5.052               0.03959   medium
-42   Droid Max                           USD 200          GPT-6 Sol            5.052               0.03959   medium
-43   Droid Max                           USD 200          GPT 5.6 Terra        5.052               0.03959   medium
-44   Droid Max                           USD 200          Grok 4.7             5.052               0.03959   medium
-45   Droid Max                           USD 200          Grok 4.6             5.052               0.03959   medium
-46   Droid Max                           USD 200          Qwen3.8 Max          5.052               0.03959   medium
-47   Droid Max                           USD 200          GLM 5.2 Fast         4.8114              0.04157   medium
-48   Kimi Ultra †                        $199 · CN ¥1399  Kimi K2.7 Code       4.704               0.0423    medium
-49   GLM Coding Max (v3 ¥1078) Midpoint  CNY 1078         GLM 5.3              4.327               0.03675   high
-50   ChatGPT Pro 20x                     USD 200          GPT-6 Astra          3.812               0.05247   medium
-51   Kimi Ultra †                        $199 · CN ¥1399  Kimi K3              3.795               0.05244   medium
-52   Droid Max                           USD 200          Kimi K3              3.368               0.05938   medium
-53   Cursor Ultra (Fast)                 USD 200          Grok 4.6             3.074               0.06506   high
-54   GLM Coding Max (v3 ¥1078) Peak      CNY 1078         GLM 5.3              2.884               0.05514   high
-55   Droid Max                           USD 200          Claude Opus 5.5      2.526               0.07918   medium
-56   Droid Max                           USD 200          GPT 5.6 Sol          2.526               0.07918   medium
-57   Droid Max                           USD 200          Claude Opus 5        2.0208              0.09897   medium
-58   Droid Max                           USD 200          Claude Opus 4.8      2.0208              0.09897   medium
-59   Devin Max                           USD 200          Gemini 4 Carbon      1.882               0.10627   medium
-60   Claude Max 20x (9/14+)              USD 200          Claude Fable 5.1     1.728               0.11574   medium
-61   Claude Max 20x (9/14+)              USD 200          Claude Fable 5       1.2077              0.1656    low
-62   Devin Max                           USD 200          GPT-6 Astra          1.115               0.17937   medium
-63   Droid Max                           USD 200          Claude Fable 5.1     1.0104              0.19794   medium
-64   Droid Max                           USD 200          Claude Fable 5       1.0104              0.19794   medium
-65   Droid Max                           USD 200          GPT-6 Astra          1.0104              0.19794   medium
-66   Cursor Ultra (Other Models)         USD 200          Claude Opus 5.5      0.896               0.22321   medium
+36   GLM Coding Max (v3 ¥1078) Off-peak  CNY 1078         GLM 5.3              5.769               0.02757   high
+37   SuperGrok Heavy                     USD 300          Grok 4.7             5.72                0.05245   medium
+38   SuperGrok Heavy                     USD 300          Grok 4.6             5.16                0.05814   medium
+39   SuperGrok Heavy                     USD 300          Grok 4.5             5.16                0.05814   medium
+40   Droid Max                           USD 200          Claude Sonnet 5.5    5.052               0.03959   medium
+41   Droid Max                           USD 200          GPT-6 Sol            5.052               0.03959   medium
+42   Droid Max                           USD 200          GPT 5.6 Terra        5.052               0.03959   medium
+43   Droid Max                           USD 200          Grok 4.7             5.052               0.03959   medium
+44   Droid Max                           USD 200          Grok 4.6             5.052               0.03959   medium
+45   Droid Max                           USD 200          Qwen3.8 Max          5.052               0.03959   medium
+46   Droid Max                           USD 200          GLM 5.2 Fast         4.8114              0.04157   medium
+47   Kimi Ultra †                        $199 · CN ¥1399  Kimi K2.7 Code       4.704               0.0423    medium
+48   GLM Coding Max (v3 ¥1078) Midpoint  CNY 1078         GLM 5.3              4.327               0.03675   high
+49   Devin Max                           USD 200          GPT-6.1 Sol          4.061               0.04925   low
+50   Devin Max                           USD 200          Claude Sonnet 5.5    3.819               0.05237   low
+51   ChatGPT Pro 20x                     USD 200          GPT-6 Astra          3.812               0.05247   medium
+52   Kimi Ultra †                        $199 · CN ¥1399  Kimi K3              3.795               0.05244   medium
+53   Droid Max                           USD 200          Kimi K3              3.368               0.05938   medium
+54   Cursor Ultra (Fast)                 USD 200          Grok 4.6             3.074               0.06506   high
+55   GLM Coding Max (v3 ¥1078) Peak      CNY 1078         GLM 5.3              2.884               0.05514   high
+56   Droid Max                           USD 200          Claude Opus 5.5      2.526               0.07918   medium
+57   Droid Max                           USD 200          GPT 5.6 Sol          2.526               0.07918   medium
+58   Droid Max                           USD 200          Claude Opus 5        2.0208              0.09897   medium
+59   Droid Max                           USD 200          Claude Opus 4.8      2.0208              0.09897   medium
+60   Devin Max                           USD 200          Claude Opus 5.5      1.909               0.10477   low
+61   Devin Max                           USD 200          Gemini 4 Carbon      1.882               0.10627   medium
+62   Claude Max 20x (9/14+)              USD 200          Claude Fable 5.1     1.728               0.11574   medium
+63   Devin Max                           USD 200          Gemini 4 Neon        1.255               0.15936   low
+64   Devin Max                           USD 200          Claude Fable 5.2     1.242               0.16103   low
+65   Claude Max 20x (9/14+)              USD 200          Claude Fable 5       1.2077              0.1656    low
+66   Droid Max                           USD 200          Claude Fable 5.1     1.0104              0.19794   medium
+67   Droid Max                           USD 200          Claude Fable 5       1.0104              0.19794   medium
+68   Droid Max                           USD 200          GPT-6 Astra          1.0104              0.19794   medium
+69   Cursor Ultra (Other Models)         USD 200          Claude Opus 5.5      0.896               0.22321   medium
+70   Devin Max                           USD 200          GPT-6 Astra          0.544               0.36765   low

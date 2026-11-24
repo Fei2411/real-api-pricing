@@ -221,12 +221,15 @@ GOOGLE_PRO_NEON_RAW_TOKENS = 55_958_318
 GOOGLE_PRO_NEON_WEEKLY_PP = 37
 GEMINI_NEON_LIST = (0.15, 3.0, 15.0)  # Gemini Developer API，2026-11-18：cache read $0.15 / input $3 / output $15；无显式 cache write，本段写 0
 assert sum(GOOGLE_PRO_NEON_SEGMENT.values()) == GOOGLE_PRO_NEON_RAW_TOKENS
-# Devin Max × Gemini 4 Carbon —— 维护者把周 API 等价定为 $200（issue #251）。
-#   不把 7%（$201.21）与 9%（$191.07）两次拉伸加权，也不取中点；+2pp 隐含 $155.55 不采。
-#   TokenView prices.json：cache read $0.10 / input $2 / output $10，cache write $0。
-#   低缓存混合价 $0.425/MTok。周 token＝200/0.425×1e6，月＝该未舍入周×4 再取整。
-DEVIN_MAX_CARBON_WEEKLY_USD = 200
+# Devin Max 共享周池 —— 维护者把周 API 等价定为 $200（月 $800；issue #251，2026-11-24 确认适用于 Devin Max 全模型重算）。
+#   锚点：Gemini 4 Carbon（2026-11-20~21），不把 7%（$201.21）与 9%（$191.07）两次拉伸加权，也不取中点；+2pp 隐含 $155.55 不采。
+#   TokenView prices.json：cache read $0.10 / input $2 / output $10，cache write $0（低缓存混合价 $0.425/MTok）。
+#   其余 6 款 Devin Max 主力模型（重算 Astra / Opus 5.5 + 新增 Sonnet 5.5 / Fable 5.2 / Gemini 4 Neon / GPT-6.1 Sol）
+#   统一按周 $200 × 4 = 月 $800 ÷ 各自所属负载档混合价派生（置信度 low，数据日期沿用 Carbon 锚点）。
+DEVIN_MAX_WEEKLY_USD = 200
+DEVIN_MAX_CARBON_WEEKLY_USD = DEVIN_MAX_WEEKLY_USD
 GEMINI_CARBON_LIST = (0.10, 2.0, 10.0)  # cache read, input, output；cache write $0，不进混合价
+GPT6_ASTRA_LIST = (1.0, 10.0, 50.0)     # GPT-6 Astra 官方标价：cache read $1 / input $10 / output $50
 KIMI_199_USED_TOKENS = 37_362_656
 KIMI_199_MONTHLY_FRACTION = 0.0192
 KIMI_199_WEEKLY_FRACTION = 0.0961
@@ -748,6 +751,11 @@ def google_ai_pro_neon_raw_week_tokens() -> int:
     return round(GOOGLE_PRO_NEON_RAW_TOKENS / GOOGLE_PRO_NEON_WEEKLY_PP * 100)
 
 
+def devin_max_pool_monthly_yi(blend_usd_per_mtok: float) -> float:
+    # Devin Max $200/周 × 4 周 = $800/月 ÷ 各模型所属负载档混合价，round(..., 2) 存亿。
+    return round(DEVIN_MAX_WEEKLY_USD * MONTH_WEEKS / blend_usd_per_mtok * 1e6 / YI, 2)
+
+
 def devin_max_carbon_weekly_tokens() -> int:
     # 200 / $0.425 × 1e6，四舍五入。未舍入商约 470,588,235.29。
     return round(DEVIN_MAX_CARBON_WEEKLY_USD / blended_low(*GEMINI_CARBON_LIST) * 1e6)
@@ -760,11 +768,7 @@ def devin_max_carbon_monthly_tokens() -> int:
 
 def devin_max_carbon_monthly_yi() -> float:
     # 未舍入月 token / 1e8，round(..., 2)。18.8235… → 18.82，同 Neon 5.364 → 5.36。
-    return round(
-        DEVIN_MAX_CARBON_WEEKLY_USD * MONTH_WEEKS
-        / blended_low(*GEMINI_CARBON_LIST) * 1e6 / YI,
-        2,
-    )
+    return devin_max_pool_monthly_yi(blended_low(*GEMINI_CARBON_LIST))
 
 
 assert blended_low(*GEMINI_CARBON_LIST) == 0.425
@@ -773,6 +777,11 @@ assert devin_max_carbon_monthly_tokens() == 1_882_352_941
 assert devin_max_carbon_monthly_yi() == 18.82
 assert round(devin_max_carbon_weekly_tokens() / YI, 2) == 4.71
 assert round(devin_max_carbon_monthly_tokens() / YI, 3) == 18.824
+assert devin_max_pool_monthly_yi(blended(*GPT6_ASTRA_LIST)) == 5.44
+assert devin_max_pool_monthly_yi(blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-opus-5.5"], OPUS55_LIST[2])) == 19.09
+assert devin_max_pool_monthly_yi(blended_anthropic(SONNET55_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-sonnet-5.5"], SONNET55_LIST[2])) == 38.19
+assert devin_max_pool_monthly_yi(blended_low(*GEMINI_NEON_LIST)) == 12.55
+assert devin_max_pool_monthly_yi(blended(*GPT61_SOL_LIST)) == 40.61
 
 
 def kimi_199_monthly_yi() -> float:
@@ -1498,14 +1507,30 @@ SUBS = [
     ("chatgpt_plus", "ChatGPT Plus", 20, "USD", "gpt-6.1-sol", chatgpt_sol61_monthly_yi(), "high", "维护者本机 Codex，2026-11-09 周窗两条标准负载读数等权中点（旧 31pp / 8.70 亿不入权；整周 67% used 外推 2.151 亿、$38.47 已丢弃、不作输入）：日志 6 点 65%→71% 标准负载 4.08 亿、$73.17；7 点下降标准负载 3.50 亿、$62.71；local-samples-round1-2026-11-09.json", f"8.70→{chatgpt_sol61_monthly_yi():g}亿（2026-11-10）：两条标准负载周读数等权中点。旧 31pp / 8.70 亿不入权。整周按 67% used 外推的 2.151 亿、$38.47 已丢弃，不是输入。日志 6 点 65%→71%：4.08 亿、$73.17；7 点下降：3.50 亿、$62.71。中点周池 {chatgpt_sol61_weekly_standard_load_yi():g} 亿、${chatgpt_sol61_weekly_api_usd():.2f} ×{MONTH_WEEKS:g}周＝{chatgpt_sol61_monthly_yi():g} 亿/月。不采：旧 31pp 与 $25.77/67pp 合并的 8.09 亿，以及把 2.151 亿算进中点的 12.48 亿。Pro 5x/20x 不派生。证据：local-samples-round1-2026-11-09.json。以下为原决策——7.75→8.7亿（2026-09-30 裁定带分项实测统一折算，并入第三段60%→50%后整体重算）：段 worth ${worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST):.4f}（cache 52.54M×$0.10＋入2.74M×$2＋出0.25M×$10）÷31%×4周＝${worth_usd(CHATGPT_PLUS_SOL61_SEGMENT, GPT61_SOL_LIST)/0.31*4:.2f} ÷标准档混合价${blended(*GPT61_SOL_LIST):.3f}/MTok；GPT-6.1 Sol 官方价 $0.10/$2/$10（learn.chatgpt.com credits 2.5/50/250 ÷25，cached=输入5%，取代先按 6-Sol $0.2 假设的 8.96亿；若仍按 6-Sol 价为 8.14亿留作对照）；raw 口径 {chatgpt_sol61_raw_monthly_yi():g} 留作对照。；疑点（2026-10-01 裁定先记录、按整段 81%→50% 采用）：第三段 60%→50% 每 1% $0.330，比前两段 $0.476/$0.473 低约 30%，10pp 整数读数取整（约 ±10%）不足以解释，原因未明。缓存读价经2026-10-01 确认：GPT-6.1 Sol $0.10、GPT-6 Sol $0.20。原采用决策——新增{chatgpt_sol61_raw_monthly_yi():g}亿：整段55,532,850÷31%×4周（=81%→65%段30,109,568÷16pp + 65%→60%段10,562,908÷5pp + 60%→50%段14,860,374÷10pp，三段边界拼合且分量逐项吻合）；面板整数%读数Δpp30~32折算口径对应8.43~8.99亿；截图标题82%/32pp起始读数经更正为81%；按6.1官方credits档反推周池1,071cr（$42.85），linux.do观察Plus约3,426cr/周与Pro20x同池Sol-worth÷20更接近5.6等价费率下的$119.6/周——订阅内计费率或池口径差异记入不确定性；分段密度（6.1价）：seg1 $0.476/pp、seg2 $0.473/pp、seg3 $0.330/pp；Pro 5x/20x不派生（沿Sol裁定）；暂无榜分，有分后补supplement"),
     # Pro20x Astra —— round12 因三源分歧2.7×暂不挂点；round13 维护者转交的同框批次（g5a/g8）+ sdmat 使 8 亿簇达 5 条独立来源，裁决收敛
     ("chatgpt_pro_20x", "ChatGPT Pro 20x", 200, "USD", "gpt-6-astra", CHATGPT_PRO20X_ASTRA_MONTHLY_YI, "medium", "8条实测源加权：Observatory 8.53、round10截图13.8、round13同框7.52、round14维护者面板10.0、msg7086 8.07、round14图4(2/3周)8.18、图2自述9.25、图3后台10.3亿/周；chatgpt-astra-round12/13/14", f"新增{CHATGPT_PRO20X_ASTRA_MONTHLY_YI:g}亿：周池{CHATGPT_PRO20X_ASTRA_WEEK_YI:g}亿×{MONTH_WEEKS:g}周——实测源按验证等级加权（面板同框/维护者面板/连续序列×3、自述份额×2、社区口述×1），round10的10%与档位经确认由不采改为入权；round14新口径：周池≈$1200~1500 list-worth（Astra），同池Sol $2200~2500，内部计权对Astra惩罚~1.9×；维护者自测≈32亿/月与lichengzhe网关21~23亿按裁定不入权，纯口述与仅下限源不进均值；隐含权重≈{CHATGPT_PRO20X_SOL_MONTHLY_YI/4/CHATGPT_PRO20X_ASTRA_WEEK_YI:.2f}×Sol；同源真实测量仍散布6.8~15.6亿/周，账号间池子可能本就不同，此值为加权中心而非普适常数；未折算：八源加权、多数来源无 token 分项"),
-    # Devin —— 维护者Max账号本周87pt近满周段astra单列反推（305M tokens/667 calls）；swe-2-max等免费不占额度，Max官方为周池无日上限
-    ("devin_max", "Devin Max", 200, "USD", "gpt-6-astra", devin_max_astra_monthly_yi(), "medium", "维护者Devin Max面板cc usage：本周gpt-6-astra-high total 305,025,580 tokens（calls 667，in 1,998/out 369,918/cache_read 300,944,710/cache_create 3,708,954）= 周额度87pt（剩余100%→13%）；devin-usage-round4-2026-09-14.json；anthropic-token-mix-round1-2026-09-24.json；https://devin.ai/pricing Max $200/月", f"{devin_max_astra_raw_monthly_yi():g}→{devin_max_astra_monthly_yi():g}亿（2026-09-24裁定按统一负载折算）：段 worth ${devin_max_astra_segment_worth_usd():.2f}（cache读300.945M×$1＋写/输入3.711M×$10＋输出0.370M×$50；OpenAI无缓存写费，cache_create按普通输入计）÷87%×4周＝月${devin_max_astra_segment_worth_usd()/0.87*4:.2f} list-worth ÷ 标准负载混合价${blended(1,10,50):.2f}/MTok；面板%取整区间约11.03~11.28亿；原始total口径305,025,580÷87%×4周＝14.02亿留作对照；87pt近满周样本（round2 20pt段的3.76倍）取代旧反推，raw周池406M→350.6M（-13.7%，round2/3留作历史证据）；命中率按含cache_create口径98.78%（与round2段97.84%同量级，极端缓存型负载）；swe-2-max等免费不占额度；折算假设Devin按标价比例扣额度；Pro $20档无数据不派生"),
-    # Opus 5.5 —— 同账号同面板双检查点增量法：云端剩余75%→27%段内 Opus5.5 净增525.3M raw
-    ("devin_max", "Devin Max", 200, "USD", "claude-opus-5.5", devin_max_opus55_monthly_yi(), "medium", "维护者Devin Max面板cc usage双检查点：云端周额度剩余75%→27%（差48pt）段内 claude-opus-5-5-xhigh +1,142 calls/+512,221,810 tok、claude-opus-5-5-high +118/+13,111,946，合计 +1,260 calls/+525,333,756 tokens；devin-opus55-round1-2026-09-23.json；anthropic-token-mix-round1-2026-09-24.json；https://devin.ai/pricing Max $200/月", f"{devin_max_opus55_raw_monthly_yi():g}→{devin_max_opus55_monthly_yi():g}亿（2026-09-24裁定按统一负载折算）：本段实测负载 cache读91.97%/cache写7.67%/输入0.001%/输出0.365% 偏离标准档；按Opus 5.5标价 cached$0.2/写5m $5/in$4/out$20 折段 worth ${devin_max_opus55_segment_worth_usd():.2f} ÷48%×4周＝月${devin_max_opus55_segment_worth_usd()/0.48*4:.2f} list-worth ÷ Anthropic档混合价${blended_anthropic(0.2,5.0,20.0):.3f}/MTok；面板%取整区间约65.53~68.32亿；cache写按1h $8敏感性77.12亿不采；原始total口径525,333,756÷48%×4周＝43.78亿（取整42.88~44.71）留作对照；裁定48pp全归Opus 5.5（若段内有其他计费模型消耗，Opus实际所占pp更少、周池更大，本值偏保守）；swe-2等免费不占额度；worth对账：恒定池口径Opus5.5按约0.6×标价计（与Astra周池3.12×张力指向共享池模型加权）；仅本行与同面板Astra行折算；effort仅影响速率；Pro $20档无数据不派生"),
-    # Gemini 4 Carbon —— 维护者指定周 API 等价 $200（issue #251）。不是 Devin Pro，也不改 Astra / Opus 行。
+    # Devin Max ($200/月) —— 2026-11-24 维护者确认周池统一按 $200/周（月 $800）重算；锚点为 2026-11-21 Gemini 4 Carbon（#251）。
+    #   其余 6 款主力模型按 $800/月 ÷ 各模型所属负载档混合价派生（low），历史 2026-09 Astra/Opus 5.5 样本留注归档。
+    ("devin_max", "Devin Max", 200, "USD", "gpt-6-astra", devin_max_pool_monthly_yi(blended(*GPT6_ASTRA_LIST)), "low",
+     "由 Devin Max 共享周池 $200/周（月 $800，2026-11-21/24 维护者确认，锚点 gemini-4-carbon #251）按 GPT-6 Astra 标价 $1/$10/$50 折标准档；历史 2026-09-14 样本见 devin-usage-round4-2026-09-14.json；local-samples-round3-2026-11-21.json；https://docs.devin.ai/desktop/models；https://devin.ai/pricing",
+     f"{devin_max_astra_monthly_yi():g}→{devin_max_pool_monthly_yi(blended(*GPT6_ASTRA_LIST)):g}亿（2026-11-24 裁定按 Devin Max 现行周池 $200/周重算，标准档，low）：周 $200×{MONTH_WEEKS:g}周＝月 $800 ÷ GPT-6 Astra 标准负载混合价 ${blended(*GPT6_ASTRA_LIST):.2f}/MTok（cache $1 / input $10 / output $50；docs.devin.ai/desktop/models TEAMS_TIER_PRO 核对）＝{devin_max_pool_monthly_yi(blended(*GPT6_ASTRA_LIST)):g}亿；假设共享池按 1× API 标价扣减，非本轮独立实测 → low。历史 2026-09-14 实测池（87pt 推周 $409.83 / 月 $1,639.31 折 {devin_max_astra_monthly_yi():g}亿，raw {devin_max_astra_raw_monthly_yi():g}亿，devin-usage-round4-2026-09-14.json）已过时留作对照。同套餐各模型共享周池不可相加；swe-2 桌面/CLI 不占额度；不改 devin_pro。证据：local-samples-round3-2026-11-21.json；issue #251。"),
+    ("devin_max", "Devin Max", 200, "USD", "claude-opus-5.5", devin_max_pool_monthly_yi(blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-opus-5.5"], OPUS55_LIST[2])), "low",
+     "由 Devin Max 共享周池 $200/周（月 $800，2026-11-21/24 维护者确认，锚点 gemini-4-carbon #251）按 Claude Opus 5.5 标价 cached $0.20 / 5m 写 $5 / out $20 折 Anthropic 档；历史 2026-09-23 样本见 devin-opus55-round1-2026-09-23.json；local-samples-round3-2026-11-21.json；https://docs.devin.ai/desktop/models；https://devin.ai/pricing",
+     f"{devin_max_opus55_monthly_yi():g}→{devin_max_pool_monthly_yi(blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2])):g}亿（2026-11-24 裁定按 Devin Max 现行周池 $200/周重算，Anthropic 档，low）：周 $200×{MONTH_WEEKS:g}周＝月 $800 ÷ Opus 5.5 Anthropic 档混合价 ${blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2]):.3f}/MTok（cache $0.20 / 5m 写 $5 / out $20；docs.devin.ai/desktop/models TEAMS_TIER_PRO 核对）＝{devin_max_pool_monthly_yi(blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2])):g}亿；假设共享池按 1× API 标价扣减，非本轮独立实测 → low。历史 2026-09-23 实测池（48pt 推周 $700.77 / 月 $2,803.06 折 {devin_max_opus55_monthly_yi():g}亿，raw {devin_max_opus55_raw_monthly_yi():g}亿，devin-opus55-round1-2026-09-23.json）已过时留作对照。同套餐各模型共享周池不可相加；swe-2 桌面/CLI 不占额度；不改 devin_pro。证据：local-samples-round3-2026-11-21.json；issue #251。"),
+    # Gemini 4 Carbon —— 维护者指定周 API 等价 $200（issue #251），作 Devin Max $200/周共享池锚点。
     ("devin_max", "Devin Max", 200, "USD", "gemini-4-carbon", devin_max_carbon_monthly_yi(), "medium",
      "维护者本机 Devin Max（不是 Devin Pro）：2026-11-20 8:11 PM PT 周表 0%；2026-11-21 5:16 AM PT 7%、5:29 AM PT 9%、5:40 AM PT 仍 9%（其后 +$0.24）。采用周 API 等价 $200。Carbon High 在 7% 为 225 次 raw 52,911,702，在 9% 为 263 次 raw 65,021,830。TokenView prices.json：入 $2 / 出 $10 / 缓存读 $0.10 / 缓存写 $0。issue #251；local-samples-round3-2026-11-21.json；https://devin.ai/pricing",
-     f"新增{devin_max_carbon_monthly_yi():g}亿（2026-11-21，低缓存档，medium）：首个 Devin Max × Gemini 4 Carbon 采用点。维护者把周 API 等价定为 $200，不把 7% 与 9% 两次读数加权，也不取中点。低缓存混合价 ${blended_low(*GEMINI_CARBON_LIST):.3f}/MTok（{LOW_CACHE_MIX['cache']:.2f}×$0.10＋{LOW_CACHE_MIX['input']:.3f}×$2＋{LOW_CACHE_MIX['output']:.3f}×$10；TokenView prices.json，缓存写 $0）。周 {devin_max_carbon_weekly_tokens():,} token（{devin_max_carbon_weekly_tokens()/YI:.2f}亿）＝200÷0.425。×{MONTH_WEEKS:g}周＝{devin_max_carbon_monthly_tokens():,} token，未舍入 {devin_max_carbon_monthly_tokens()/YI:.3f}亿，round(..., 2) 存 {devin_max_carbon_monthly_yi():g}亿。订阅 USD/MTok 用月费 $200 除以 round 后的月 token，字段与其他行相同。不改 devin_pro。不替换 google_ai_pro_us × gemini-4-argon（{google_ai_pro_argon_monthly_yi():g}亿）与 gemini-4-neon（{google_ai_pro_neon_monthly_yi():g}亿）。不改 Claude Sonnet、Haiku、Opus。不采：5:16 AM PT 的 7% 拉伸 API $14.08、周 $201.21、低缓存 4.73亿（Carbon High 225 次，raw 52,911,702）；5:29 AM PT 的 9% 拉伸 API $17.20、周 $191.07、低缓存 4.50亿（Carbon High 263 次，raw 65,021,830）；多出的 2 个百分点隐含 $155.55。基线 0% 在 2026-11-20 8:11 PM PT。5:40 AM PT 表仍是 9%，其间又多 $0.24。n=1、整数读数、周值由维护者指定 → medium。证据：local-samples-round3-2026-11-21.json；issue #251。"),
+     f"新增{devin_max_carbon_monthly_yi():g}亿（2026-11-21，低缓存档，medium）：首个 Devin Max × Gemini 4 Carbon 采用点，并作 Devin Max $200/周共享池锚点。维护者把周 API 等价定为 $200，不把 7% 与 9% 两次读数加权，也不取中点。低缓存混合价 ${blended_low(*GEMINI_CARBON_LIST):.3f}/MTok（{LOW_CACHE_MIX['cache']:.2f}×$0.10＋{LOW_CACHE_MIX['input']:.3f}×$2＋{LOW_CACHE_MIX['output']:.3f}×$10；TokenView prices.json，缓存写 $0，同 Google 11/30 前导入价）。周 {devin_max_carbon_weekly_tokens():,} token（{devin_max_carbon_weekly_tokens()/YI:.2f}亿）＝200÷0.425。×{MONTH_WEEKS:g}周＝{devin_max_carbon_monthly_tokens():,} token，未舍入 {devin_max_carbon_monthly_tokens()/YI:.3f}亿，round(..., 2) 存 {devin_max_carbon_monthly_yi():g}亿。订阅 USD/MTok 用月费 $200 除以 round 后的月 token，字段与其他行相同。不改 devin_pro。不替换 google_ai_pro_us × gemini-4-argon（{google_ai_pro_argon_monthly_yi():g}亿）与 gemini-4-neon（{google_ai_pro_neon_monthly_yi():g}亿）。不采：5:16 AM PT 的 7% 拉伸 API $14.08、周 $201.21、低缓存 4.73亿（Carbon High 225 次，raw 52,911,702）；5:29 AM PT 的 9% 拉伸 API $17.20、周 $191.07、低缓存 4.50亿（Carbon High 263 次，raw 65,021,830）；多出的 2 个百分点隐含 $155.55。基线 0% 在 2026-11-20 8:11 PM PT。5:40 AM PT 表仍是 9%，其间又多 $0.24。n=1、整数读数、周值由维护者指定 → medium。证据：local-samples-round3-2026-11-21.json；issue #251。"),
+    ("devin_max", "Devin Max", 200, "USD", "claude-sonnet-5.5", devin_max_pool_monthly_yi(blended_anthropic(SONNET55_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-sonnet-5.5"], SONNET55_LIST[2])), "low",
+     "由 Devin Max 共享周池 $200/周（月 $800，2026-11-21/24 维护者确认，锚点 gemini-4-carbon #251）按 Claude Sonnet 5.5 标价 cached $0.10 / 5m 写 $2.5 / out $10 折 Anthropic 档；local-samples-round3-2026-11-21.json；https://docs.devin.ai/desktop/models；https://devin.ai/pricing",
+     f"新增{devin_max_pool_monthly_yi(blended_anthropic(SONNET55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-sonnet-5.5'], SONNET55_LIST[2])):g}亿（2026-11-24，Anthropic 档，low）：由 Devin Max 共享周池 $200/周 × {MONTH_WEEKS:g}周＝月 $800 ÷ Sonnet 5.5 Anthropic 档混合价 ${blended_anthropic(SONNET55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-sonnet-5.5'], SONNET55_LIST[2]):.4f}/MTok（cache $0.10 / 5m 写 $2.5 / out $10；docs.devin.ai/desktop/models TEAMS_TIER_PRO 核对）派生，round(..., 2) 存 {devin_max_pool_monthly_yi(blended_anthropic(SONNET55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-sonnet-5.5'], SONNET55_LIST[2])):g}亿。假设共享池按 1× API 标价扣减、非本模型独立实测 → low；同套餐各模型共享周池不可相加；不改 devin_pro。证据：local-samples-round3-2026-11-21.json；issue #251。"),
+    ("devin_max", "Devin Max", 200, "USD", "claude-fable-5.2", devin_max_pool_monthly_yi(blended_anthropic(FABLE52_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-fable-5.2"], FABLE52_LIST[2])), "low",
+     "由 Devin Max 共享周池 $200/周（月 $800，2026-11-21/24 维护者确认，锚点 gemini-4-carbon #251）按 Claude Fable 5.2 标价 cached $0.20 / 5m 写 $10 / out $40 折 Anthropic 档；local-samples-round3-2026-11-21.json；https://docs.devin.ai/desktop/models；https://devin.ai/pricing",
+     f"新增{devin_max_pool_monthly_yi(blended_anthropic(FABLE52_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-fable-5.2'], FABLE52_LIST[2])):g}亿（2026-11-24，Anthropic 档，low）：由 Devin Max 共享周池 $200/周 × {MONTH_WEEKS:g}周＝月 $800 ÷ Fable 5.2 Anthropic 档混合价 ${blended_anthropic(FABLE52_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-fable-5.2'], FABLE52_LIST[2]):.3f}/MTok（cache $0.20 / 5m 写 $10 / out $40；docs.devin.ai/desktop/models TEAMS_TIER_PRO 核对）派生，round(..., 2) 存 {devin_max_pool_monthly_yi(blended_anthropic(FABLE52_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-fable-5.2'], FABLE52_LIST[2])):g}亿。假设共享池按 1× API 标价扣减、非本模型独立实测 → low；同套餐各模型共享周池不可相加；不改 devin_pro。证据：local-samples-round3-2026-11-21.json；issue #251。"),
+    ("devin_max", "Devin Max", 200, "USD", "gemini-4-neon", devin_max_pool_monthly_yi(blended_low(*GEMINI_NEON_LIST)), "low",
+     "由 Devin Max 共享周池 $200/周（月 $800，2026-11-21/24 维护者确认，锚点 gemini-4-carbon #251）按 Gemini 4 Neon 标价 cached $0.15 / in $3 / out $15 折低缓存档；local-samples-round3-2026-11-21.json；https://docs.devin.ai/desktop/models；https://devin.ai/pricing",
+     f"新增{devin_max_pool_monthly_yi(blended_low(*GEMINI_NEON_LIST)):g}亿（2026-11-24，低缓存档，low）：由 Devin Max 共享周池 $200/周 × {MONTH_WEEKS:g}周＝月 $800 ÷ Gemini 4 Neon 低缓存档混合价 ${blended_low(*GEMINI_NEON_LIST):.4f}/MTok（{LOW_CACHE_MIX['cache']:.2f}×$0.15＋{LOW_CACHE_MIX['input']:.3f}×$3＋{LOW_CACHE_MIX['output']:.3f}×$15；docs.devin.ai/desktop/models TEAMS_TIER_PRO 与 Gemini Developer API 核对）派生，round(..., 2) 存 {devin_max_pool_monthly_yi(blended_low(*GEMINI_NEON_LIST)):g}亿。假设共享池按 1× API 标价扣减、非本模型独立实测 → low；同套餐各模型共享周池不可相加；不改 google_ai_pro_us 与 devin_pro。证据：local-samples-round3-2026-11-21.json；issue #251。"),
+    ("devin_max", "Devin Max", 200, "USD", "gpt-6.1-sol", devin_max_pool_monthly_yi(blended(*GPT61_SOL_LIST)), "low",
+     "由 Devin Max 共享周池 $200/周（月 $800，2026-11-21/24 维护者确认，锚点 gemini-4-carbon #251）按 GPT-6.1 Sol 标价 cached $0.10 / in $2 / out $10 折标准档；local-samples-round3-2026-11-21.json；https://docs.devin.ai/desktop/models；https://devin.ai/pricing",
+     f"新增{devin_max_pool_monthly_yi(blended(*GPT61_SOL_LIST)):g}亿（2026-11-24，标准档，low）：由 Devin Max 共享周池 $200/周 × {MONTH_WEEKS:g}周＝月 $800 ÷ GPT-6.1 Sol 标准档混合价 ${blended(*GPT61_SOL_LIST):.3f}/MTok（cache $0.10 / in $2 / out $10；docs.devin.ai/desktop/models TEAMS_TIER_PRO 核对）派生，round(..., 2) 存 {devin_max_pool_monthly_yi(blended(*GPT61_SOL_LIST)):g}亿。假设共享池按 1× API 标价扣减、非本模型独立实测 → low；同套餐各模型共享周池不可相加；不改 chatgpt_plus 与 devin_pro。证据：local-samples-round3-2026-11-21.json；issue #251。"),
     # Devin Pro ($20) × Sonnet 5.5 —— 维护者 Devin CLI 两个 /usage 检查点直测；首个 Pro 档 token+% 同框样本
     ("devin_pro", "Devin Pro", 20, "USD", "claude-sonnet-5.5", devin_pro_sonnet55_monthly_yi(), "medium",
      "维护者 Devin CLI /usage + /session-stats 双检查点（2026-10-31）：会话开始 Daily 0%/Weekly 47%，结束 Daily 13%/Weekly 53%；同一会话 in 321,872/out 41,557/cache_read 8,035,217 = 8,398,646 tok（8.4M，100% claude-sonnet-5.5 High）；devin-sonnet55-round1-2026-10-31.json；https://docs.devin.ai/admin/billing/self-serve Pro $20/月",
@@ -1842,8 +1867,6 @@ DATA_DATES = {
     ("chatgpt_plus", "gpt-6-luna"): ("2026-09-27~2026-09-28", "sample"),
     ("chatgpt_plus", "gpt-6.1-sol"): ("2026-11-09", "sample"),
     ("chatgpt_pro_20x", "gpt-6-astra"): ("2026-09-07~2026-09-21", "sample"),
-    ("devin_max", "gpt-6-astra"): ("2026-09-14", "sample"),
-    ("devin_max", "claude-opus-5.5"): ("2026-09-23", "sample"),
     ("devin_max", "gemini-4-carbon"): ("2026-11-20~2026-11-21", "sample"),
     ("devin_pro", "claude-sonnet-5.5"): ("2026-10-31", "sample"),
     ("devin_pro", "claude-haiku-5.5"): ("2026-10-31", "sample"),
@@ -1952,6 +1975,12 @@ DATA_DATE_INHERIT = {
     ("kimi_max_cn", "kimi-k2.7-code"): ("kimi_allegro_cn", "kimi-k2.7-code"),
     ("kimi_ultra_cn", "kimi-k2.7-code"): ("kimi_allegro_cn", "kimi-k2.7-code"),
     ("aliyun_coding_pro_global", "qwen3.7-plus"): ("aliyun_coding_pro_cn", "qwen3.7-plus"),
+    ("devin_max", "gpt-6-astra"): ("devin_max", "gemini-4-carbon"),
+    ("devin_max", "claude-opus-5.5"): ("devin_max", "gemini-4-carbon"),
+    ("devin_max", "claude-sonnet-5.5"): ("devin_max", "gemini-4-carbon"),
+    ("devin_max", "claude-fable-5.2"): ("devin_max", "gemini-4-carbon"),
+    ("devin_max", "gemini-4-neon"): ("devin_max", "gemini-4-carbon"),
+    ("devin_max", "gpt-6.1-sol"): ("devin_max", "gemini-4-carbon"),
 }
 
 
@@ -1994,24 +2023,26 @@ def plan_gen_of(pid: str) -> str:
 
 def workload_of(pid: str, billing: str, model: str = "") -> str:
     # 额度口径分类（详情面板用）：standard=美元/积分池÷standardTokenMix 混合价；
-    # anthropic=÷anthropicTokenMix（Anthropic 按量 API、claude_pro 全部行，及经 2026-09-24/09-25 裁定
-    # 按 Anthropic 档折算的 devin_max::claude-opus-5.5、由其按倍率折算的 droid_ 行）；
-    # lowCache=÷lowCacheTokenMix（Step 全系、Google，以及 2026-11-21 裁定的 devin_max::gemini-4-carbon）；
+    # anthropic=÷anthropicTokenMix（Anthropic 按量 API、claude_pro 全部行，及经 2026-09-24/09-25/11-24 裁定
+    # 按 Anthropic 档折算的 devin_max/devin_pro Claude 行、由其按倍率折算的 droid_ 行）；
+    # lowCache=÷lowCacheTokenMix（Step 全系、Google，以及 2026-11-21/24 裁定的 devin_max::gemini-4-carbon/neon）；
     # measured=缺 token 分项的 raw 直测样本、
     # 多源加权样本与官方绝对 token 表——2026-09-30 裁定带分项实测统一折算后，measured 仅余未折算行。
     if billing == "metered":
         return "anthropic" if model in ANTHROPIC_CACHE_WRITE_5M else "standard"
-    if pid == "claude_pro" or (pid, model) == ("devin_max", "claude-opus-5.5") or pid.startswith("droid_") \
+    if pid == "claude_pro" or pid.startswith("droid_") \
             or (pid in ("claude_max_20x", "claude_max_5x") and model in ("claude-opus-5.5", "claude-sonnet-5.5", "claude-haiku-5.5")) \
             or (pid, model) in (("claude_team", "claude-opus-5.5"), ("cursor_ultra", "claude-opus-5.5"),
+                                ("devin_max", "claude-opus-5.5"), ("devin_max", "claude-sonnet-5.5"),
+                                ("devin_max", "claude-fable-5.2"),
                                 ("devin_pro", "claude-sonnet-5.5"), ("devin_pro", "claude-haiku-5.5"),
                                 ("devin_pro", "claude-fable-5.1"), ("devin_pro", "claude-opus-5.5")):
         return "anthropic"
-    if pid.startswith(("google_", "stepfun_")) or (pid, model) == ("devin_max", "gemini-4-carbon"):
+    if pid.startswith(("google_", "stepfun_")) or (pid, model) in (("devin_max", "gemini-4-carbon"), ("devin_max", "gemini-4-neon")):
         return "lowCache"
     if pid in ("supergrok", "supergrok_plus", "supergrok_heavy"):
         return "standard"
-    if (pid, model) == ("devin_max", "gpt-6-astra"):
+    if (pid, model) in (("devin_max", "gpt-6-astra"), ("devin_max", "gpt-6.1-sol")):
         return "standard"
     if (pid == "chatgpt_plus" and model in ("gpt-6-sol", "gpt-6-luna", "gpt-6.1-sol", "gpt-5.6-luna")) \
             or (pid in ("chatgpt_pro_10x", "chatgpt_pro_20x") and model == "gpt-5.6-luna"):
