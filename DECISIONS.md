@@ -24,6 +24,26 @@
 - **不改**：`google_ai_pro_us × gemini-3.6-flash`（24.89 亿，`lowCache`）、StepFun 全系 12 行（`lowCache`）、所有 Gemini 按量 API 行（`standard`）、OpenCode Go / Command Code GOAT / Droid Max 各行均不动。
 - **证据**：`data/research/gemini-token-mix-round1-2026-11-24.json`、`data/research/local-samples-round4-2026-11-23.json`（#258）。
 
+## 2026-11-24 · OpenDesign Go 池口径校正：$60 基础池，$220 是 0.27× 档的等效上限
+
+- **裁定（维护者，PR #257 review）**：卡片上的 `Coding Plan Up to $220` 不是基础 credit 池，而是基础池 `$60` 除以最低倍率 `0.27×`（Eco）后的等效上限；同样，7 天窗 `$55`、5 小时窗 `$18` 是 `$15`、`$5` 的基础窗换算而来（60÷0.27≈222→220、15÷0.27≈55.6→55、5÷0.27≈18.5→18）。四档同时闭环：`60/80/180/300 ÷ 0.27 = 222/296/667/1111` → 卡片 `220/290/660/1110`；0.25× 活动脚注的 `$60/周` = `15 ÷ 0.25`；官网 7 天估算请求数 V4.1 Flash（0.5×）145,600 与 Eco（0.27×）266,933 之比恰为 `220/120`。
+- **新口径**：单模型月度等效用量 = `min($220, $60 ÷ multiplier)`：1× = $60、0.5× = $120、4× = $15、Eco 0.27× = 222.2 触及 `$220` 封顶。月 token = 该等效用量 ÷ 统一标准负载混合价；真实单价 = $10 ÷ 月 token。
+- **旧值 → 新值（亿/月）**：V4.1 Flash 227.743 → **62.112**；Eco 421.747 → **113.872**（封顶）；GLM-5.3 Flash 124.470 → **33.946**；Kimi K2.7 Code 9.647 → **2.631**；MiMo V2.6 Pro 29.385 → **8.014**；MiniMax M3.1 Flash 103.286 → **28.169**；DeepSeek V4 Pro 23.041 → **6.284**；DeepSeek V4 Flash 70.558 → **19.243**；MiMo V2.6 Flash 72.216 → **19.695**；Hy4 Preview 29.692 → **8.098**；Vision Exp 70.558 → **19.243**。全部 11 行 ×3.67 虚高来自把 `$220` 当基础池再除一次倍率。
+- **连带修正**：`workload_of()` 补 `"opendesign_"` 前缀（此前 11 行被误标 `measured`）；`source`/`decision_note` 改回中文并经 `verify_i18n.py --sync` 补 `adopted.en.json` 英文；`plot_quotas.py` 脚注改为 `$60` 基础池；研究 JSON 增 `correction2026_11_24`、`cardArithmetic`，删去旧的 `sliceAlternative` 与“research-only/无截止日/115.022”三处矛盾。
+- **不采**：把 `$220` 当基础池再除倍率（旧口径，全部虚高 3.67×）；首月 $8、年付 $84、0.25× 谷价（2026-10-20 18:00–10-27 18:00 UTC+8，已成历史行）、Black Friday（2026-11-21 18:00–2026-12-05 00:00 UTC+8，仅限活动期新购）均不入常设月费。
+- **证据**：`data/research/opendesign-go-round1-2026-11-23.json`（`correction2026_11_24`、`cardArithmetic`、`allowanceReading`）；维护者 review https://github.com/Fei-Craft/real-api-pricing/pull/257 。
+
+## 2026-11-23 · 新增渠道 OpenDesign（Go $10/月，11 款模型）
+
+- **（池口径已由 2026-11-24 条校正：$220 为 0.27× 等效上限，基础池 $60；下述 $220 与行数值为当时旧值，以 2026-11-24 条为准）**
+- **新增渠道与 11 条采用值**：`opendesign_go` × 官方 Coding Plan 全部 11 款模型，单价 = $10 ÷ 月 token。官方口径（2026-11-23 核对 `open-design.ai/pricing` 与 `open-design.ai/model-credits`）：Go 常规月费 **$10**（首月 $8 为一次性优惠，不采）、月度 **$220 Coding Plan credits** 一个共享池、**7 天窗 $55 / 5 小时窗 $18**；每模型有官方 **credit multiplier**，同样是 1 credit 换 1 美元标价用量，0.5× 换 2 倍、4× 换 1/4。月 token = ($220 ÷ multiplier) ÷ 标准负载混合价，置信度 **medium**（官方价表 + 官方倍率表 + 目录三段价，折算按项目标准负载）。
+- **饱和口径取 $220 池、不取官方 $60 切片**：官方定价页的「Monthly usage」列是 **60 credits 的等额切片**（60 ÷ multiplier）——1× $60、0.5× $120、4× $15、Eco 0.27× $220（已触池上限），扣掉的始终是 60 credits，不是每模型上限；Go 只卖一个共享池且 4×$55 = $220，单模型可吃满整月。按 CONVENTIONS.md 第 2 节饱和使用取 220 ÷ multiplier，切片值写进每行 `decision_note` 作对照；若维护者裁定按切片口径，只需把 `OPEN_DESIGN_PLAN` 的 credits 常量改成 60（首行 `OPEN_DESIGN_SLICE_CREDITS` 即该切片）。
+- **不采**：首月 $8（一次性）、年付 $84（$7/月）、DeepSeek V4.1 Flash 的 0.25× off-peak（页面 tooltip 写明 2026-10-20 18:00–10-27 18:00 UTC+8，已成历史行，按常设 0.5× 计）、Black Friday 活动（2026-11-21 18:00–2026-12-05 00:00 UTC+8：指定模型 7 天不限量 DeepSeek V4.1 Flash / Eco、Claude/GPT 9–8 折、Go Max 年付 $100/月起；仅限活动期新购订阅，不入常设月费）。Go Plus/Pro/Max 三档只作背景记录，不画。
+- **列价来源**：cache/input/output 取 OpenDesign 云端目录价（2026-11-18 抓取、2026-11-23 逐行复核，见 `data/research/evidence/opendesign-cloud-model-catalog-2026-11-23.html`），只用于把 credits 折 token；该目录并非厂商原价表——GLM-5.3 Flash 在此为 $0.075/$0.25，是仓库 list-prices 的 $0.15/$0.50 的一半，按其目录价计并在注中说明。
+- **配色**：`config/channel-colors.json` 新增 OpenDesign `#087599`（品牌 mark 为黑色，与 Zhipu 冲突；取空档深青色，`verify_palette` 对现存 18 渠道最小 ΔE2000 17.7 ≥ 15）。图例顺序加在 plot_svg / plot_quotas / build_html 末尾。
+- **已知命名重叠**：OpenDesign Arena 榜的 `agentHarness` 字段本身就叫 `OpenDesign`，因此该榜标签会读成 `OpenDesign · DeepSeek V4.1 Flash` + 套餐 `OpenDesign Go`（同一词两行）；这是榜单 harness 与渠道同名的结果，不改榜单口径，留待维护者决定是否给渠道换名。
+- **证据**：`data/research/opendesign-go-round1-2026-11-23.json`（方案、窗口、11 款倍率、目录价、$60 切片与 $220 池两种口径的推算值）。同日补强两项：①云端目录 `open-design.ai/cloud/workspace/models`（50 款、59 行，2026-11-23 11:56 抓取，已脱敏存 `data/research/evidence/opendesign-cloud-model-catalog-2026-11-23.html`）逐行复核，11 款费率与本表一致，GLM-5.3 Flash 仍为 $0.075/$0.25/$0.015；②同一账号 Design Plan 用量导出 50 条（10:30:53–10:56:00Z，20,588,537 输入 / 20,528,000 缓存读 / 39,425 输出，list $0.1914 / plan $0.0968）逐条验证 `listChargeCredits = ceil(成本×10000)` 与 `plan = ceil(credits×0.5)` 成立，佐证 0.5× 乘在 credits 上；该导出的 `usageType=design_plan` 且 `chargeCredits=0`，只证费率与倍率、不作额度实测，99.71% 缓存占比也不改项目 97/2.5/0.5 口径。原始导出去标识后存 `data/raw/opendesign-workspace-usage-2026-11-16_2026-11-23.json`。
+
 ## 2026-11-24 · Devin Max 周池统一按 $200/周重算（新增 Carbon / Sonnet 5.5 / Fable 5.2 / Neon / GPT-6.1 Sol，重算 Astra / Opus 5.5）
 
 - **锚点采用（#251）**：新增 `devin_max × gemini-4-carbon` = **18.82 亿/月 medium**（低缓存档，`$0.10627/MTok`）。Devin Max $200/月，不是 Devin Pro。维护者把周 API 等价定为 **$200**（月 $800），不把 7%（$201.21）与 9%（$191.07）两次拉伸加权，也不取中点；多出的 2 个百分点隐含 $155.55 不采。TokenView `prices.json`：入 $2 / 出 $10 / 缓存读 $0.10 / 缓存写 $0（同 Google 11/30 前导入价）。低缓存混合价 $0.425/MTok（85/14.5/0.5）；周 470,588,235 token（4.71亿）×4 周＝1,882,352,941 token，未舍入 18.824亿，`round(..., 2)` 存 **18.82**。基线 2026-11-20 8:11 PM PT 周表 0%；5:40 AM PT 表仍是 9%（其间又多 $0.24）。
@@ -37,6 +57,7 @@
   - `devin_max × gpt-6.1-sol`（标准档 $0.197/MTok）：**40.61 亿/月**（`$0.04925/MTok`）
 - **不改**：`devin_pro` 各行不动（保留 10-31 / 11-01 实测 ~$30.65–$33.73/周）；`google_ai_pro_us`、Anthropic/OpenAI 订阅行及按量 API 行均不动。
 - **证据**：`data/research/local-samples-round3-2026-11-21.json`（#251）。
+
 
 ## 2026-11-21 · 千问/阿里云百炼 Token Plan 个人版收录、AA v5.0.1/v2.1 整榜切换、Devin SWE-2 常设免费及新模型 API/目录补齐
 

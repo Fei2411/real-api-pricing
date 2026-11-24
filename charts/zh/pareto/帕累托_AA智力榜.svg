@@ -368,7 +368,7 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0032199897" data-score="32.5896" data-x="945.658" data-y="471.849" transform="translate(945.658 471.849)"><title>DeepSeek V4.1 Flash · Ollama Pro · $0.00322/MTok · 32.5896 · mediumDeepSeek V4.1 Flash 1017 (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#FC8EA7" opacity=".68"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="false" data-price="0.015913431" data-score="23.0633" data-x="724.687" data-y="537.972" transform="translate(724.687 537.972)"><title>DeepSeek V4 Pro · Ollama Pro / DeepSeek V4 Pro · Ollama Max · $0.01591/MTok · 23.0633 · mediumDeepSeek V4 Pro 0813 (max) · Exact served-model reference; quota-measurement effort is unverified. / DeepSeek V4 Pro 0813 (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.015913431" data-score="23.0633" data-x="724.687" data-y="537.972" transform="translate(724.687 537.972)"><title>DeepSeek V4 Pro · Ollama Pro / DeepSeek V4 Pro · Ollama Max / DeepSeek V4 Pro · OpenDesign Go · $0.01591/MTok · 23.0633 · mediumDeepSeek V4 Pro 0813 (max) · Exact served-model reference; quota-measurement effort is unverified. / DeepSeek V4 Pro 0813 (max) · Exact served-model reference; quota-measurement effort is unverified. / DeepSeek V4 Pro 0813 (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#FC8EA7" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.10309278" data-score="31.6534" data-x="466.282" data-y="478.347" transform="translate(466.282 478.347)"><title>GLM 5.3 · Ollama Pro · $0.10309/MTok · 31.6534 · mediumGLM-5.3 (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
@@ -487,6 +487,21 @@
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.052469818" data-score="31.6534" data-x="559.687" data-y="478.347" transform="translate(559.687 478.347)"><title>GLM 5.3 · 阿里云百炼 Token Plan Pro (¥312) · $0.05247/MTok · 31.6534 · mediumGLM-5.3 (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#C0142F" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0016099948" data-score="32.5896" data-x="1041.520" data-y="471.849" transform="translate(1041.520 471.849)"><title>DeepSeek V4.1 Flash · OpenDesign Go · $0.00161/MTok · 32.5896 · mediumDeepSeek V4.1 Flash 1017 (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#087599" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0035500018" data-score="29.0595" data-x="932.165" data-y="496.352" transform="translate(932.165 496.352)"><title>MiniMax M3.1 Flash · OpenDesign Go · $0.00355/MTok · 29.0595 · mediumMiniMax-M3.1-Flash · Exact served-model reference; quota-measurement effort is unverified.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#087599" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.012478163" data-score="29.8898" data-x="758.319" data-y="490.588" transform="translate(758.319 490.588)"><title>MiMo V2.6 Pro · OpenDesign Go · $0.01248/MTok · 29.8898 · mediumMiMo-V2.6-Pro · Exact served-model reference; quota-measurement effort is unverified.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#087599" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0050774308" data-score="26.7277" data-x="882.674" data-y="512.537" transform="translate(882.674 512.537)"><title>MiMo V2.6 Flash · OpenDesign Go · $0.00508/MTok · 26.7277 · mediumMiMo-V2.6-Flash · Exact served-model reference; quota-measurement effort is unverified.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#087599" opacity=".68"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.0029458552" data-score="27.8039" data-x="957.964" data-y="505.067" transform="translate(957.964 505.067)"><title>GLM 5.3 Flash · OpenDesign Go · $0.00295/MTok · 27.8039 · mediumGLM-5.3-Flash · Exact served-model reference; quota-measurement effort is unverified.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#087599" opacity=".68"/>
 </g>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0032743942" data-score="54.5413" data-x="943.341" data-y="319.478" transform="translate(943.341 319.478)"><title>Claude Sonnet 5.5 · Pro · $0.00327/MTok · 54.5413 · lowClaude Sonnet 5.5 (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#CC5A2E" opacity=".68"/>
@@ -651,12 +666,14 @@
 <text x="1344.160" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Devin</text>
 <rect x="57" y="850" width="8" height="8" fill="#0A0ABF"/>
 <text x="74.000" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Factory</text>
-<path d="M157.72 854h22" stroke="#303630" stroke-width="1.65"/>
-<text x="187.720" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >帕累托前沿</text>
-<path d="M278.72 849l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>
-<text x="292.720" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >按量 API</text>
+<rect x="148.72" y="850" width="8" height="8" fill="#087599"/>
+<text x="165.720" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >OpenDesign</text>
+<path d="M270.32 854h22" stroke="#303630" stroke-width="1.65"/>
+<text x="300.320" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >帕累托前沿</text>
+<path d="M391.32 849l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>
+<text x="405.320" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >按量 API</text>
 <text x="56.000" y="898.000" font-size="12" fill="#727B72" text-anchor="start" font-weight="400" >默认月=4周；Kimi月池=周池×5，Droid月=周×2 · 美元/credits换算：缓存97% / 输入2.5% / 输出0.5% · 直接total实测不重算</text>
-<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >156 个订阅位置 / 17 个 API 位置 / 5 个前沿位置</text>
+<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >161 个订阅位置 / 17 个 API 位置 / 5 个前沿位置</text>
 <text x="56.000" y="922.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Claude Max：9/14 起永久额度估算；Pro：Opus 5 周池面板反推。Y 取同模型存档最高分变体。</text>
 <text x="56.000" y="943.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >订阅与按量API共同参与前沿；连线中间不代表可购套餐。完整出处与假设见项目核对报告。</text>
 <text x="1384.000" y="943.000" font-size="11" fill="#929A90" text-anchor="end" font-weight="400" >artificialanalysis.ai/leaderboards/models</text>

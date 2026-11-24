@@ -18,7 +18,8 @@
     "Tencent": "#7DD3FC",
     "StepFun": "#00F4E5",
     "Devin": "#A1A1AA",
-    "Factory": "#0A0ABF"
+    "Factory": "#0A0ABF",
+    "OpenDesign": "#087599"
   },
   "aliases": {
     "Claude": "Anthropic",
@@ -45,7 +46,8 @@
     ["mimo_", "Xiaomi"],
     ["devin", "Devin"],
     ["droid", "Factory"],
-    ["google_ai", "Google"]
+    ["google_ai", "Google"],
+    ["opendesign", "OpenDesign"]
   ],
   "fallback": "#8A94A6",
   "frontier": "#1F2328"

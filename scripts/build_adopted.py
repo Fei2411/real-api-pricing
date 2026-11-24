@@ -1580,6 +1580,60 @@ def aliyun_token_rows() -> list[tuple]:
     return rows
 
 
+# OpenDesign Go：官方 $10/月 = 月度 $60 基础 Coding Plan credits（7 天窗 $15、5 小时窗 $5），
+# 每模型按官方 credit multiplier 扣 credits：0.5× 模型同一份 credits 换 2 倍用量，4× 模型换 1/4。
+# 饱和使用口径：单模型打满整月 credits → 月 token = min($220, $60 ÷ multiplier) ÷ 标准负载混合价。
+# 卡片上的 $220 / $55 / $18 是 0.27×（Eco）档的等效上限：60÷0.27≈222→220、15÷0.27≈55、5÷0.27≈18，
+# 不能再除以倍率（2026-11-24 维护者裁定；旧口径误把 $220 当基础池再除倍率，全部虚高 3.67×）。
+# multiplier 与模型清单：https://open-design.ai/model-credits/（2026-11-23 抓取，11 款全量收录）。
+# 列价（cached/input/output，USD/MTok）取 OpenDesign 云端目录价（2026-11-18 抓取、2026-11-23 逐行复核；
+# GLM-5.3 Flash 在其目录为厂商价的一半），只用于把 credits 折成 token，不另作按量 API 行。
+OPEN_DESIGN_PLAN = ("opendesign_go", "OpenDesign Go", 10, "USD", 60.0)
+OPEN_DESIGN_CAP_USD = 220.0
+OPEN_DESIGN_MODELS = (
+    # (model, multiplier, cached, input, output, 采用说明)
+    ("deepseek-v4.1-flash", 0.5, 0.006, 0.30, 1.20, "0.25× 谷价活动已于 2026-10-27 18:00（UTC+8）结束，按常设 0.5× 计"),
+    ("deepseek-v4.1-flash-eco", 0.27, 0.006, 0.30, 1.20, "Eco 独立档 0.27×，三段价与 V4.1 Flash 相同"),
+    ("minimax-m3.1-flash", 1.0, 0.015, 0.15, 0.60, "1× 基准"),
+    ("mimo-v2.6-pro", 4.0, 0.0036, 0.435, 0.87, "4× 倍率，2026-11-18 由 1× 上调"),
+    ("mimo-v2.6-flash", 4.0, 0.0028, 0.14, 0.28, "4× 倍率，2026-11-18 由 1× 上调"),
+    ("deepseek-v4-pro", 1.0, 0.044, 1.32, 3.96, "1× 基准；DeepSeek 标准（峰时）价"),
+    ("deepseek-v4-flash", 1.0, 0.014, 0.44, 1.32, "1× 基准；DeepSeek 标准（峰时）价"),
+    ("glm-5.3-flash", 1.0, 0.015, 0.075, 0.25, "1× 基准；按 OpenDesign 目录价（$0.075/$0.25，为厂商价一半）"),
+    ("kimi-k2.7-code", 1.0, 0.19, 0.95, 4.00, "1× 基准"),
+    ("hy4-preview", 1.0, 0.042, 0.834, 2.501, "1× 基准"),
+    ("deepseek-v4-flash-vision-exp", 1.0, 0.014, 0.44, 1.32, "1× 基准；V4 Flash 的实验视觉行"),
+)
+OPEN_DESIGN_SOURCE = (
+    "https://open-design.ai/pricing/ 官方 $10/月、月度基础 $60 Coding Plan credits（7 天窗 $15、5 小时窗 $5），"
+    "卡片 $220/$55/$18 为 0.27× 档的等效上限；https://open-design.ai/model-credits/ 官方 11 款模型 credit "
+    "multiplier 与窗口规则；https://open-design.ai/cloud/workspace/models 云端目录（50 款，2026-11-23）；"
+    "opendesign-go-round1-2026-11-23.json"
+)
+
+
+def open_design_rows() -> list[tuple]:
+    rows = []
+    pid, name, price, cur, credits = OPEN_DESIGN_PLAN
+    for model, mult, cached, inp, out, extra in OPEN_DESIGN_MODELS:
+        raw_usd = credits / mult
+        usage_usd = min(OPEN_DESIGN_CAP_USD, raw_usd)
+        blend = blended(cached, inp, out)
+        yi = round(usage_usd / blend / 100, 3)
+        cap_note = (f"（60÷{mult:g}={raw_usd:.2f}，触卡片上限 $220，按 220 计）"
+                    if raw_usd > OPEN_DESIGN_CAP_USD else "")
+        rows.append((
+            pid, name, price, cur, model, yi, "medium", OPEN_DESIGN_SOURCE,
+            f"新增{yi:g}亿：月基础池 ${credits:g} Coding Plan credits ÷ {mult:g}× 倍率 = "
+            f"${raw_usd:g} 等效目录用量{cap_note} ÷ 统一标准负载混合价 ${blend:.6f}/MTok。"
+            f"Go 是单一共享池（7 天窗 $15、5 小时窗 $5）；卡片上的 $220/$55/$18 是 0.27× 档的等效上限"
+            f"（60÷0.27≈222→220、15÷0.27≈55、5÷0.27≈18），不能再除以倍率。{extra}。"
+            f"证据：opendesign-go-round1-2026-11-23.json（2026-11-24 按维护者裁定校正池口径）"
+        ))
+    return rows
+
+
+
 # ---- 订阅：(plan_id, plan_name, price, currency, served_model, monthly_yi, confidence, source, decision_note)
 SUBS = [
     # OpenAI —— Sol 为 Terra/5.5 基准；Luna 改用 Plus 维护者面板实测，Pro 档按官方 10x/20x 推算（$100 档 2026-10-30 起由 5x 提为 10x）
@@ -1754,6 +1808,8 @@ SUBS = [
     *mimo_rows(),
     # 千问/阿里云百炼 Token Plan 个人版国内站 —— 官方月度 Credits（1 Credit=¥0.01，#247 遥测逐位闭环）× 人民币实时三段价。
     *aliyun_token_rows(),
+    # OpenDesign Go —— 官方 $10/月共享 $60 credits（卡片 $220 为 0.27× 等效上限）× 官方 11 款 credit multiplier × 目录三段价。
+    *open_design_rows(),
 ]
 
 # ---- 不计额度（unmetered）订阅点：月费 ÷ 无界可用量 → $0/MTok。无 token 分母，图上用专用刻度位，不进对数换算。
@@ -1959,6 +2015,11 @@ DATA_DATES = {
     ("command_code_goat", "hy4-flash"): ("2026-11-17", "official"),
     ("command_code_goat", "hy4"): ("2026-11-18", "official"),
     ("aliyun_token_lite_cn", "deepseek-v4.1-flash"): ("2026-11-19", "sample"),
+    # OpenDesign Go：官方定价页与 model-credits 页于 2026-11-23 核对；目录列价为 console 2026-11-18 抓取、2026-11-23 云端目录全量复核。
+    **{("opendesign_go", m): ("2026-11-23", "official")
+       for m in ("deepseek-v4.1-flash", "deepseek-v4.1-flash-eco", "minimax-m3.1-flash", "mimo-v2.6-pro",
+                 "mimo-v2.6-flash", "deepseek-v4-pro", "deepseek-v4-flash", "glm-5.3-flash",
+                 "kimi-k2.7-code", "hy4-preview", "deepseek-v4-flash-vision-exp")},
     ("minimax_m_plan_go_cn", "minimax-m3.1-flash-preview"): ("2026-10-01", "sample"),
     ("chatgpt_plus", "gpt-5.6-sol"): ("2026-07-30", "sample"),
     ("chatgpt_pro_20x", "gpt-5.6-sol"): ("2026-06-10~2026-09-06", "sample"),
@@ -2156,7 +2217,7 @@ def workload_of(pid: str, billing: str, model: str = "") -> str:
         return "standard"
     if pid in ("kimi_allegro_cn", "kimi_max_cn", "kimi_ultra_cn") and model == "kimi-k3":
         return "standard"
-    if pid.startswith(("opencode_", "command_code_", "ollama_", "glm_coding_", "mimo_token_", "aliyun_token_")):
+    if pid.startswith(("opencode_", "command_code_", "ollama_", "glm_coding_", "mimo_token_", "aliyun_token_", "opendesign_")):
         return "standard"
     return "measured"
 

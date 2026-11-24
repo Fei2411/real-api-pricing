@@ -38,6 +38,7 @@ const slugs: Record<string, string> = {
   StepFun: "stepfun",
   Step: "stepfun",
   Devin: "devin",
+  OpenDesign: "opendesign",
 };
 /**
  * Marks drawn in near-black ink. On a dark surface they would vanish, so the
@@ -52,6 +53,7 @@ const MONO = new Set([
   "anthropic",
   "ollama",
   "meituan",
+  "opendesign",
 ]);
 const DARK_INK = /#(?:111111|111|191919|0e0e0e)\b/gi;
 const svgUrl = (text: string) =>
