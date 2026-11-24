@@ -1,0 +1,651 @@
+{
+  "schema_version": 1,
+  "collected_at": "2026-11-23",
+  "observation_cutoff": "2026-11-22T16:00:00Z",
+  "statistical_window": {
+    "start": "2026-11-15T16:00:00Z",
+    "end": "2026-11-22T16:00:00Z",
+    "end_exclusive": true,
+    "label": "2026-11-16 00:00 inclusive through 2026-11-23 00:00 exclusive, Asia/Shanghai",
+    "timezone": "Asia/Shanghai",
+    "completed_cycle_note": "The Devin weekly (7 days) cycle that started 2026-11-15T08:00:00Z and reset 2026-11-22T08:00:00Z completed during this natural week and is the cycle used for the published measurement. Both selected calibration intervals also fall inside the natural week."
+  },
+  "title": "Anonymous Magpie single-model weekly capacity, round4",
+  "series": {
+    "name": "magpie",
+    "round": 4,
+    "predecessor": "data/research/magpie-single-model-weekly-round3-2026-11-16.json",
+    "predecessor_pull_request": "https://github.com/Fei2411/real-api-pricing/pull/238",
+    "naming_note": "The Magpie research series on main has round1 (local + Tokyo, cutoff 2026-10-21), round2 (single-model weekly, window 2026-11-02..11-09, PR #225) and round3 (window 2026-11-09..11-16, PR #238). This file is round4 of the same single-model weekly question for the next natural week."
+  },
+  "adoption_status": "Research-only, not adopted.",
+  "adoption_reason": "Conditional observational evidence for one anonymous Devin account using only Claude Opus 5.5. The plan tier is not verified in the logs. The sample meets medium under delta_sample_stability_v1 but is thin (18pp, 34 calls, 1.67 effective segments) and must not be averaged with other accounts or with prior rounds. The estimate does not replace adopted rows. CONVENTIONS.md section 3 requires maintainer resolution before any adoption.",
+  "reference_repository": {
+    "url": "https://github.com/Fei2411/real-api-pricing",
+    "revision": "9c8ffc039781023e41d5e3071778ee61b4ff3618",
+    "conventions": {
+      "updatedAt": "2026-11-21",
+      "project": "真实API定价",
+      "role": "定义当前采用、计算、绘图和公开发布共用的项目口径",
+      "formula": "订阅价 ÷ 用户实际能用到的月 token = 真实混合单价",
+      "usdPerCny": 6.7787,
+      "exchangeRate": {
+        "date": "2026-09-04",
+        "pair": "USD/CNY",
+        "units": "CNY per USD; legacy field usdPerCny stores this direction",
+        "kind": "人民币汇率中间价",
+        "labelZh": "中国外汇交易中心中间价，新华社转载",
+        "labelEn": "CFETS central parity, via Xinhua",
+        "source": "https://www.xinhuanet.com/20260904/4c1ce1cbf39d416997cb9c237d6f5024/c.html",
+        "evidence": "data/research/fx-caijing-round5-2026-09-05.json",
+        "previousRate": 7.2,
+        "note": "2026-09-05为周六，采用最近交易日9月4日中间价；非银行卡实际结算价。100美元=677.87人民币。"
+      },
+      "unmeteredPolicy": "订阅内明确不占额度、无并发上限的模型：真实单价记 0、显示为 ≈$0/MTok（分母无界，趋于 0 而非精确 0），X 轴以专用‘不计额度’刻度位表示、不进对数换算；参与前沿。促销口径必须标截止日并在到期后复核。",
+      "promotions": {
+        "devin_swe2": {
+          "startDate": "2026-09-10",
+          "endDate": "2026-10-31",
+          "labelZh": "SWE-2 促销：Pro/Max/Teams 不计额度",
+          "labelEn": "SWE-2 promo: unmetered on Pro/Max/Teams",
+          "endDateBasis": "2026-09-12 给定；官推仅写 for the next month",
+          "evidence": "data/research/devin-swe2-round1-2026-09-12.json"
+        }
+      },
+      "monthWeeks": 4,
+      "monthWeeksAlt": "30/7 只作灵敏度",
+      "tokenPolicy": "所有 token 一视同仁；美元额度和三段价统一按项目标准负载折算",
+      "standardTokenMix": {
+        "cache": 0.97,
+        "input": 0.025,
+        "output": 0.005,
+        "labelZh": "项目统一标准负载：缓存读取97% / 普通输入2.5% / 输出0.5%",
+        "labelEn": "Project standard workload: 97% cache reads / 2.5% fresh input / 0.5% output",
+        "note": "固定比较口径，不代表任何平台或用户的实际负载；三项合计100%。当前不单列cache write；厂商另收缓存写入费时，换算可能偏高估token。2026-09-23 由 97.5%/2.15%/0.35% 修订为本值：standard-token-mix-round2-2026-09-23.json 14样本审计（输出中位0.51%、输入中位2.79%、剔除网关池化96.89/2.57/0.54），裁定。"
+      },
+      "lowCacheTokenMix": {
+        "cache": 0.85,
+        "input": 0.145,
+        "output": 0.005,
+        "labelZh": "低缓存负载：缓存读取85% / 普通输入14.5% / 输出0.5%",
+        "labelEn": "Low-cache workload: 85% cache reads / 14.5% fresh input / 0.5% output",
+        "note": "2026-09-22 裁定的第二档统一负载，用于实测打不到标准 97% cache 的渠道（当前：Step 全系、Google——Gemini 实测 82.6% 属同族，2026-09-30 裁定其实测样本按标价折 worth 后用本档换算）。锚点：step-5-preview 本机实测 mix 79.0%/20.7%/0.34%（210.17M tokens，stepfun-step5-panel-round5-2026-09-21.json）与 Google AI Pro 实测 82.6%，统一取 85% 档；step5 采用值的 decision_note 内保留 79% 实测口径对照数。非cache部分输出占比 0.5% 跟随标准负载、余量归输入。2026-09-23 随标准档由 85%/14.65%/0.35% 修订（standard-token-mix-round2-2026-09-23.json）。"
+      },
+      "anthropicTokenMix": {
+        "cache": 0.97,
+        "cacheWrite": 0.025,
+        "output": 0.005,
+        "labelZh": "Anthropic 统一负载：缓存读97% / 缓存写2.5% / 输出0.5%",
+        "labelEn": "Anthropic workload: 97% cache reads / 2.5% cache writes / 0.5% output",
+        "note": "Anthropic 单独收缓存写入费，未命中缓存的输入几乎全部走缓存写（Devin 面板 input 0.001%/write 7.67%；MiaAI Claude Code 样本 input 0.14%/write 2.05%），故标准档的普通输入份额对 Anthropic 按 5 分钟缓存写入价计；份额与 standardTokenMix 联动（cacheWrite = standard.input）。2026-09-24 裁定。"
+      },
+      "sourcePriority": [
+        "维护者面板截图反推、受控打满实测、官方绝对token或积分表",
+        "本地日志/ccusage与同窗额度百分比",
+        "确认；若与多个独立来源冲突，必须公开冲突并重新拍板",
+        "官方美元/credits额度与三段价按项目统一标准负载换算",
+        "第三方综述和跨档假设仅作低置信旁证"
+      ]
+    }
+  },
+  "source_files": {
+    "aligned_evidence_csv": {
+      "path": "data/research/magpie-single-model-weekly-round4-2026-11-23-aligned-evidence.csv",
+      "sha256": "38148c24d42964d1eda8287a659e5bdf3987ff5de2ff5c7df8b7db5e803ebf30",
+      "bytes": 3130,
+      "rows": 34,
+      "time_basis": "UTC",
+      "model_ids": "Repository ids. Collector slug claude-opus-5-5 is stored as claude-opus-5.5."
+    }
+  },
+  "collection": {
+    "account_identity": "A06 is an anonymous label reused from round2 and round3 for the same anonymous account. It is not a service account id and is not a pool. No identity map is exported.",
+    "tool": "Magpie aligned request log with same-cycle quota history",
+    "rows_in_public_csv": 34,
+    "quota_endpoint_source": "Local Magpie quota history. Raw quota history and source account identifiers are not part of this public file.",
+    "deduplication": "Do not collapse equal token vectors: absent request ids, equal values alone do not prove duplication.",
+    "counted_calls": "Positive-token Claude Opus 5.5 calls inside the selected contiguous pure-model intervals. Zero-token rows are not capacity samples."
+  },
+  "qualification_policy": {
+    "version": "delta_sample_stability_v1",
+    "high": {
+      "delta_pp": 30,
+      "model_calls": 200,
+      "effective_segments": 4,
+      "weighted_cv": 0.25,
+      "leave_one_out_change": 0.15,
+      "rounding_ratio": 0.1
+    },
+    "medium": {
+      "delta_pp": 10,
+      "model_calls": 30,
+      "effective_segments": 1.5,
+      "weighted_cv": 0.5,
+      "leave_one_out_change": 0.35,
+      "rounding_ratio": 0.25
+    },
+    "gap_fraction_medium_cap": 0.25,
+    "direct_ratio_medium_cap": 0.05,
+    "direct_ratio_low_cap": 0.2,
+    "interpretation": "Local evidence rubric; thresholds are not vendor rules or confidence probabilities"
+  },
+  "methodology": {
+    "equation": "weekly_official_api_equivalent_usd = 100 * sum(sample official API value USD) / sum(delta percentage points)",
+    "unit": "USD per week for one anonymous account using only Claude Opus 5.5 until 100% of the weekly quota, at the observed cache mix",
+    "effective_segments": "(sum(delta_pp))^2 / sum(delta_pp^2), after merging contiguous pure-model runs",
+    "weighted_cv": "sqrt(sum(delta_pp * (run_value_per_100pp / pooled_value_per_100pp - 1)^2) / sum(delta_pp))",
+    "leave_one_out": "Maximum relative change in the pooled estimate after dropping one whole contiguous run. Undefined for a single run, which fails medium.",
+    "rounding": "Conservative 1pp uncertainty per merged run, divided by total delta. The published range is a sensitivity envelope from request-timestamp shifts of +/-120s and +/-300s and each run delta +/-1pp. It is not a statistical confidence interval.",
+    "rounding_sensitivity_is_confidence_interval": false,
+    "token_semantics": "Official Anthropic input_tokens exclude cache reads and cache creation. cache_write_5m and cache_write_1h are parts of cache creation, not charges on top of the creation total. Output includes thinking; do not add reasoning again. Collector-adapter equivalence is assumed, and the alternate maximum-overlap input treatment is inside the sensitivity envelope.",
+    "official_rates_usd_per_million_tokens": {
+      "input": 4,
+      "cache_read": 0.2,
+      "cache_write_5m": 5,
+      "cache_write_1h": 8,
+      "output": 20,
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "cache_semantics_source": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
+    },
+    "not_used": [
+      "Project standardTokenMix 97/2.5/0.5 is not applied.",
+      "Project anthropicTokenMix is not applied.",
+      "No subscription price was used to fit or check the estimate.",
+      "Daily and weekly pools are not added.",
+      "Accounts are not added."
+    ],
+    "scope": "One anonymous subscription account × one model × 100% of the weekly quota, official API equivalent at the observed workload only."
+  },
+  "official_facts": [
+    {
+      "id": "anthropic-opus55-standard-global-api-pricing",
+      "verified_on": "2026-11-23",
+      "verified_on_timezone": "Asia/Shanghai",
+      "verified_at": "2026-11-23 11:30 Asia/Shanghai",
+      "urls": [
+        "https://platform.claude.com/docs/en/about-claude/pricing",
+        "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
+      ],
+      "rates_usd_per_million_tokens": {
+        "input": 4,
+        "cache_read": 0.2,
+        "cache_write_5m": 5,
+        "cache_write_1h": 8,
+        "output": 20
+      },
+      "context": "Full 1M context at standard prices. No batch, fast-mode, region, tool or tax premium is assumed. Rates are unchanged from the 2026-11-16 round3 check."
+    }
+  ],
+  "measurements": [
+    {
+      "account_ref": "A06",
+      "provider": "Devin",
+      "plan": "unknown; tier not recorded",
+      "model": "claude-opus-5.5",
+      "telemetry_model": "claude-opus-5-5",
+      "weekly_official_api_equivalent_usd": 29.630945555555556,
+      "sample_value_usd": 5.3335702000000005,
+      "sensitivity_range_usd": [
+        15.706306666666668,
+        34.80738
+      ],
+      "confidence_assessment": {
+        "policy_version": "delta_sample_stability_v1",
+        "base_grade": "medium",
+        "grade": "medium",
+        "scope": "observed_workload_single_model_weekly_api_equivalent",
+        "delta_pp": 18,
+        "model_calls": 34,
+        "segments": 2,
+        "effective_segments": 1.6701030927835052,
+        "weighted_cv": 0.049109857354956335,
+        "leave_one_out_max_relative_change": 0.07918726559556644,
+        "rounding_delta_relative_error": 0.1111111111111111,
+        "rounding_basis": "Conservative sum of 1pp remaining-difference uncertainty per contiguous run / total delta; aggregate-only 1pp ratio also reported.",
+        "aggregate_only_rounding_ratio": 0.05555555555555555,
+        "criteria": {
+          "medium": {
+            "delta": true,
+            "sample_count": true,
+            "effective_segments": true,
+            "stability": true,
+            "leave_one_out": true,
+            "rounding": true
+          }
+        },
+        "is_probability": false,
+        "misses_high": "delta 18<30, calls 34<200, effective_segments 1.67<4, rounding 0.111>0.10"
+      },
+      "pr_eligible_capacity": true,
+      "id": "devin-a06-opus55-weekly-2026-11-16",
+      "evidence_grade": "medium",
+      "scope": "conditional_account_single_model_weekly_capacity",
+      "plan_identity": {
+        "basis": "unknown",
+        "vendor_tier_label": null,
+        "note": "No invoice or tier evidence; no plan value used to validate estimate. Logs do not record a Devin plan label this week."
+      },
+      "period_start": "2026-11-16T08:25:13Z",
+      "period_end": "2026-11-16T10:05:28Z",
+      "cycle_start": "2026-11-15T08:00:00Z",
+      "cycle_reset": "2026-11-22T08:00:00Z",
+      "cycle_remaining_observed": [
+        100,
+        0
+      ],
+      "hours_before_reset_unobserved": 102.1536111111111,
+      "delta_pp": 18,
+      "calls": 34,
+      "normalized": false,
+      "adopted": false,
+      "quota_window": "7 days",
+      "reference_rates_usd_per_MTok": {
+        "input": 4,
+        "cache_read": 0.2,
+        "cache_write_5m": 5,
+        "cache_write_1h": 8,
+        "output": 20
+      },
+      "observed_token_mix": {
+        "input": 9.804877824583586e-06,
+        "cache_read": 0.937551201123067,
+        "cache_write": 0.05943931418964983,
+        "output": 0.002999679809458541
+      },
+      "observed_token_counts": {
+        "input": 96,
+        "cache_read": 9179606,
+        "cache_write": 581973,
+        "cache_write_5m": 581973,
+        "cache_write_1h": 0,
+        "output": 29370,
+        "reasoning": 0
+      },
+      "input_overlap_sensitivity_relative": 7.199680244208354e-05,
+      "clusters": [
+        {
+          "id": "A06-claude-opus-5-5-C1",
+          "account_ref": "A06",
+          "model": "claude-opus-5.5",
+          "telemetry_model": "claude-opus-5-5",
+          "window": "7 days",
+          "start": "2026-11-16T08:25:13Z",
+          "end": "2026-11-16T08:53:42Z",
+          "remaining_start": 74,
+          "remaining_end": 61,
+          "delta_pp": 13,
+          "requests": 21,
+          "sample_value_usd": 3.9693426,
+          "per_100pp_usd": 30.533404615384615,
+          "lag_cases": [
+            {
+              "lag_seconds": -120,
+              "input_exclusive": false,
+              "requests": 21,
+              "sample_value_usd": 3.9243892,
+              "per_100pp_usd": 30.18760923076923
+            },
+            {
+              "lag_seconds": -120,
+              "input_exclusive": true,
+              "requests": 21,
+              "sample_value_usd": 3.9246132,
+              "per_100pp_usd": 30.189332307692307
+            },
+            {
+              "lag_seconds": 0,
+              "input_exclusive": false,
+              "requests": 21,
+              "sample_value_usd": 3.9691186,
+              "per_100pp_usd": 30.531681538461537
+            },
+            {
+              "lag_seconds": 0,
+              "input_exclusive": true,
+              "requests": 21,
+              "sample_value_usd": 3.9693426,
+              "per_100pp_usd": 30.533404615384615
+            },
+            {
+              "lag_seconds": 120,
+              "input_exclusive": false,
+              "requests": 22,
+              "sample_value_usd": 4.0462717999999995,
+              "per_100pp_usd": 31.125167692307688
+            },
+            {
+              "lag_seconds": 120,
+              "input_exclusive": true,
+              "requests": 22,
+              "sample_value_usd": 4.0465038,
+              "per_100pp_usd": 31.126952307692306
+            },
+            {
+              "lag_seconds": 300,
+              "input_exclusive": false,
+              "requests": 21,
+              "sample_value_usd": 4.1766616,
+              "per_100pp_usd": 32.12816615384615
+            },
+            {
+              "lag_seconds": 300,
+              "input_exclusive": true,
+              "requests": 21,
+              "sample_value_usd": 4.1768856,
+              "per_100pp_usd": 32.12988923076924
+            }
+          ],
+          "sensitivity_range_usd_per_100pp": [
+            28.03135142857143,
+            34.80738
+          ],
+          "zero_token_rows": 2,
+          "bins_merged": 2
+        },
+        {
+          "id": "A06-claude-opus-5-5-C2",
+          "account_ref": "A06",
+          "model": "claude-opus-5.5",
+          "telemetry_model": "claude-opus-5-5",
+          "window": "7 days",
+          "start": "2026-11-16T09:53:02Z",
+          "end": "2026-11-16T10:05:28Z",
+          "remaining_start": 40,
+          "remaining_end": 35,
+          "delta_pp": 5,
+          "requests": 13,
+          "sample_value_usd": 1.3642276,
+          "per_100pp_usd": 27.284552,
+          "lag_cases": [
+            {
+              "lag_seconds": -120,
+              "input_exclusive": false,
+              "requests": 12,
+              "sample_value_usd": 1.250302,
+              "per_100pp_usd": 25.006040000000002
+            },
+            {
+              "lag_seconds": -120,
+              "input_exclusive": true,
+              "requests": 12,
+              "sample_value_usd": 1.250462,
+              "per_100pp_usd": 25.00924
+            },
+            {
+              "lag_seconds": 0,
+              "input_exclusive": false,
+              "requests": 13,
+              "sample_value_usd": 1.3640676,
+              "per_100pp_usd": 27.281352
+            },
+            {
+              "lag_seconds": 0,
+              "input_exclusive": true,
+              "requests": 13,
+              "sample_value_usd": 1.3642276,
+              "per_100pp_usd": 27.284552
+            },
+            {
+              "lag_seconds": 120,
+              "input_exclusive": false,
+              "requests": 11,
+              "sample_value_usd": 1.0900808,
+              "per_100pp_usd": 21.801616
+            },
+            {
+              "lag_seconds": 120,
+              "input_exclusive": true,
+              "requests": 11,
+              "sample_value_usd": 1.0902168,
+              "per_100pp_usd": 21.804336
+            },
+            {
+              "lag_seconds": 300,
+              "input_exclusive": false,
+              "requests": 9,
+              "sample_value_usd": 0.9423784000000001,
+              "per_100pp_usd": 18.847568000000003
+            },
+            {
+              "lag_seconds": 300,
+              "input_exclusive": true,
+              "requests": 9,
+              "sample_value_usd": 0.9424904000000001,
+              "per_100pp_usd": 18.849808000000003
+            }
+          ],
+          "sensitivity_range_usd_per_100pp": [
+            15.706306666666668,
+            34.10569
+          ],
+          "zero_token_rows": 0,
+          "bins_merged": 1
+        }
+      ],
+      "limitations": [
+        "Only local Magpie aligned request logs and quota history were available. Endpoint authenticity, omitted stream activity and activity outside the selected intervals are not independently authenticated.",
+        "Conditional on recorded requests explaining quota drops in the selected pure-model intervals; no completed collector-adapter semantic audit.",
+        "Observed cache-heavy workload only; not a workload-independent entitlement or guarantee of future throughput.",
+        "The qualifying sample is thin: 18 percentage points, 34 token-bearing calls, two runs, 1.67 effective segments. It meets medium and misses high. The sensitivity envelope is wide because the second run is only 5pp.",
+        "The weekly cycle was observed from 100 to 0, but the last cycle reading is 2026-11-18T01:50:47Z, leaving 102.2h unobserved before reset. Remaining was already 0 at that last reading. Four collector gaps over 6h in the cycle truncated candidate bins conservatively.",
+        "Two zero-token swe-2 rows with HTTP 499 occurred inside the first run and were excluded from value and from the token-bearing purity test.",
+        "A mixed swe-2 / Opus / Sonnet interval of about 21pp sits between the two published runs and was excluded. The two runs are not a mechanical split of one contiguous interval.",
+        "No daily/weekly summing, cross-account pooling, known-plan calibration or automatic adopted-value change.",
+        "Devin plan tier is unknown and is not inferred from the size of the estimate or from round2/round3 figures for this or other accounts."
+      ],
+      "rounding_sensitivity_is_confidence_interval": false,
+      "accounts_are_additive": false,
+      "workload_scope": "observed_cache_mix_only",
+      "normalized_to_project_standard_mix": false
+    }
+  ],
+  "excluded": [
+    {
+      "account_ref": "A05",
+      "provider": "Devin",
+      "model": "claude-opus-5.5",
+      "grade": "low",
+      "included_in_measurements": false,
+      "reason": "One completed-cycle pure Opus run existed (48pp, 69 calls) but leave-one-out is undefined for a single run, so the record fails medium under delta_sample_stability_v1. A 7pp GLM-5.3 slice on the same cycle also fails (delta 7<10, 27 calls, one run). Mixed-model traffic and 102.2h unobserved tail after remaining reached 0. No figure is published as weekly capacity."
+    },
+    {
+      "account_ref": "A04",
+      "provider": "Devin",
+      "model": null,
+      "grade": "inestimable",
+      "included_in_measurements": false,
+      "reason": "No quota snapshots or request rows for this account in the natural week (last snapshot 2026-11-11). Cannot import a prior-round figure."
+    },
+    {
+      "account_ref": "A07",
+      "provider": "Devin",
+      "model": null,
+      "grade": "inestimable",
+      "included_in_measurements": false,
+      "reason": "No quota snapshots or request rows for this account in the natural week (last snapshot 2026-11-11). Cannot import the round3 medium figure."
+    },
+    {
+      "account_ref": "A18",
+      "provider": "Devin",
+      "model": null,
+      "grade": "inestimable",
+      "included_in_measurements": false,
+      "reason": "New account this week. The 7-day cycle starting 2026-11-22T08:00:00Z had not completed by week end (resets 2026-11-29). Observed remaining 100 to 99."
+    },
+    {
+      "account_ref": "A19",
+      "provider": "Devin",
+      "model": null,
+      "grade": "inestimable",
+      "included_in_measurements": false,
+      "reason": "New account this week. The 7-day cycle starting 2026-11-22T08:00:00Z had not completed by week end (resets 2026-11-29). Mixed or incomplete coverage."
+    },
+    {
+      "account_ref": "A02",
+      "provider": "Codex",
+      "plan": "plus",
+      "model": "gpt-6-astra / gpt-6.1-terra / gpt-6.1-sol",
+      "grade": "low / incomplete",
+      "included_in_measurements": false,
+      "reason": "The 7-day cycle 2026-11-09T04:40:17Z to 2026-11-16T04:40:17Z completed in this natural week (100 to 0) but request mix is three GPT models. Surviving pure gpt-6-astra slices (31pp, 4 runs) have weighted CV 0.70 and inconsistent per-100pp values, so they grade low. A later 7-day marker starting 2026-11-16T04:44:39Z with pure gpt-6.1-terra slices did not complete before week end (reset 2026-11-23T04:44:39Z) and cannot be published as weekly capacity."
+    },
+    {
+      "account_ref": "A09",
+      "provider": "SuperGrok",
+      "plan": "Heavy (user-confirmed 2026-11-09; not recorded in logs)",
+      "model": "grok-4.7-build",
+      "grade": "low",
+      "included_in_measurements": false,
+      "reason": "Completed 7-day cycle 2026-11-13T14:14:17Z to 2026-11-20T14:14:17Z, observed remaining 100 to 47. Two pure grok-4.7-build runs (5pp + 25pp, 3073 calls, CV 1.0%, LOO 2.3%) fail medium because effective segments are 1.385 < 1.5. The later cycle had not completed. Official global standard grok-4.7 rates were checked 2026-11-23 ($2 / $0.50 / $6 below 200k prompt, 2x above). Grok 4.7 Fast / Priority / US-regional rates were not used. This is not a medium record and no weekly-capacity figure is published."
+    },
+    {
+      "account_ref": "A03",
+      "provider": "Cursor",
+      "plan": "Ultra (snapshot label)",
+      "model": "Grok Bot shared pool",
+      "grade": "inestimable",
+      "included_in_measurements": false,
+      "reason": "The Grok Bot 7-day pool completed 100 to 0.5 in this week but is shared across grok-bot-default, grok-bot-automation, helios-alpha, grok-bot-cua and other labels, most of which have no official public API price in this package. Pure-model attribution fails. Cursor Models / Total are monthly-like and are not treated as weekly capacity."
+    },
+    {
+      "account_ref": "A08",
+      "provider": "MiniMax Code",
+      "plan": "M Plan Build - annual (snapshot label)",
+      "model": "MiniMax-M3.1-Flash",
+      "grade": "low",
+      "included_in_measurements": false,
+      "reason": "Completed 7-day cycle 2026-11-15T12:53:25Z to 2026-11-22T12:53:25Z, observed remaining 95 to 57, almost all MiniMax-M3.1-Flash. One surviving pure run (23pp, 137 calls) has undefined leave-one-out and therefore fails medium. Credits have no completed issuance period and are not called weekly capacity. Official M3.1-Flash rates checked 2026-11-23: $0.15 / $0.015 / $0.60 per MTok."
+    },
+    {
+      "account_ref": "A12",
+      "provider": "MiniMax Code",
+      "plan": "Free (snapshot label)",
+      "model": null,
+      "grade": "excluded",
+      "included_in_measurements": false,
+      "reason": "Free plan. Reference only; not a paid subscription weekly capacity."
+    },
+    {
+      "account_ref": "A01",
+      "provider": "Antigravity",
+      "plan": "Google AI Pro (last recorded 2026-11-06)",
+      "model": null,
+      "grade": "inestimable",
+      "included_in_measurements": false,
+      "reason": "No snapshots in the natural week (last snapshot 2026-11-06). Do not multiply 5-hour windows by 33.6 or add 5-hour and 7-day pools."
+    },
+    {
+      "account_ref": "A16",
+      "provider": "Antigravity",
+      "plan": "unknown; not recorded",
+      "model": null,
+      "grade": "inestimable",
+      "included_in_measurements": false,
+      "reason": "Appeared on the collector late in the week. Quota history has remaining rises, mid-cycle marker resets and long unobserved tails. No request rows for this account are in the local usage log this week, so quota drops cannot be attributed. Do not multiply 5-hour windows by 33.6."
+    },
+    {
+      "account_ref": "A17",
+      "provider": "OpenCode Go",
+      "model": null,
+      "grade": "inestimable",
+      "included_in_measurements": false,
+      "reason": "A 7-day cycle 2026-11-09T00:00:00Z to 2026-11-16T00:00:00Z completed (99 to 94) but the local usage log has zero requests for this account. The following cycle had not completed. Inestimable."
+    },
+    {
+      "account_ref": "A10",
+      "provider": "WorkBuddy",
+      "plan": "Free plan (snapshot label)",
+      "grade": "excluded",
+      "included_in_measurements": false,
+      "reason": "Free credits mode. Monthly credits reset 2026-11-30, not completed this week. Reference only; not paid weekly capacity."
+    },
+    {
+      "account_ref": "A11",
+      "provider": "WorkBuddy",
+      "plan": "Free plan (snapshot label)",
+      "grade": "excluded",
+      "included_in_measurements": false,
+      "reason": "Free credits mode. Monthly credits reset 2026-11-30. Reference only."
+    },
+    {
+      "account_ref": "A13",
+      "provider": "WorkBuddy",
+      "plan": "Free plan (snapshot label)",
+      "grade": "excluded",
+      "included_in_measurements": false,
+      "reason": "Snapshot plan is Free plan. Monthly credits reset 2026-11-30, not completed. Free-plan reference only; not mixed into paid subscription capacity."
+    },
+    {
+      "account_ref": "A14",
+      "provider": "WorkBuddy",
+      "plan": "Free plan (snapshot label)",
+      "grade": "excluded",
+      "included_in_measurements": false,
+      "reason": "Snapshot plan is Free plan. Monthly credits reset 2026-11-30. Free-plan reference only."
+    },
+    {
+      "account_ref": "A15",
+      "provider": "WorkBuddy",
+      "plan": "Free plan (snapshot label)",
+      "grade": "excluded",
+      "included_in_measurements": false,
+      "reason": "Snapshot plan is Free plan. Monthly credits reset 2026-11-30. Free-plan reference only."
+    },
+    {
+      "account_ref": "SWE-2",
+      "provider": "Devin",
+      "model": "swe-2",
+      "grade": "excluded",
+      "included_in_measurements": false,
+      "reason": "Self-serve Desktop/CLI remains free through 2026-11-30 (docs.devin.ai/desktop/models, checked 2026-11-23). Nominal list $3 / $0.30 / $15 is not used as a public API replacement price for weekly capacity."
+    }
+  ],
+  "duplicate_check": {
+    "status": "no_equivalent_submission",
+    "checked_at": "2026-11-23 Asia/Shanghai",
+    "upstream": "https://github.com/Fei2411/real-api-pricing",
+    "upstream_revision": "9c8ffc039781023e41d5e3071778ee61b4ff3618",
+    "fork": "https://github.com/klarkxy/real-api-pricing",
+    "equivalent_open_or_merged_pull_request": null,
+    "distinct_from": [
+      {
+        "pull_request": 130,
+        "state": "merged",
+        "why": "Magpie round1 local + Tokyo evidence, observation cutoff 2026-10-21. Different window and question."
+      },
+      {
+        "pull_request": 225,
+        "state": "merged",
+        "why": "Magpie round2 single-model weekly capacity for 2026-11-02..11-09. Not resubmitted."
+      },
+      {
+        "pull_request": 238,
+        "state": "merged",
+        "why": "Magpie round3 single-model weekly capacity for 2026-11-09..11-16. Predecessor; not resubmitted."
+      },
+      {
+        "pull_request": 253,
+        "state": "merged",
+        "why": "OpenCode Go GLM-5.3 monthly limit, 2026-11-23. Different topic."
+      },
+      {
+        "pull_request": 254,
+        "state": "merged",
+        "why": "OpenCode Go LongCat-2.5, 2026-11-23. Different topic."
+      },
+      {
+        "pull_request": 255,
+        "state": "merged",
+        "why": "Command Code GOAT Inkling 2 Mini, 2026-11-23. Different topic."
+      }
+    ],
+    "note": "No open or merged PR already submitted this natural week for Magpie single-model weekly capacity was identified. Round3 PR #238 is merged and is not resubmitted."
+  },
+  "verification_summary": {
+    "independent_recalculation": "The 34 public CSV rows were rebuilt from the request log and independently valued at official Opus 5.5 standard rates. Sample total 5.3335702 USD matches 100 * total / 18 = 29.630945555555556 USD/week. Cache-creation total equals the 5-minute plus 1-hour subcounts on every included row. Qualification metrics were recounted: neff=1.670103, CV=0.049110, LOO=0.079187, rounding=0.111111, all medium gates pass, high gates fail as listed.",
+    "request_value_field_max_error": 0.0,
+    "cache_creation_total_equals_5m_plus_1h": true,
+    "medium_rule": "Whole contiguous pure-model runs, not sub-bins. A06 meets medium and misses high (delta, calls, effective segments, and rounding).",
+    "limits": "Interval identity and purity outside the published windows, and activity not present in the local logs, are not independently authenticated. No invoice or collector-adapter audit is in this public file. The envelope describes the observed cache-heavy workload only. Low-confidence diagnostics (A05, A09, A08, Codex) are exclusions only."
+  }
+}
