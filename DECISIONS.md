@@ -3,6 +3,20 @@
 本地 `AGENTS.md`（不入库）只放 Agent 工作流程；口径与规则见 [`CONVENTIONS.md`](CONVENTIONS.md)；本文件记录每条采用值的取舍（旧值 → 新值 → 依据 → 未采来源）。
 最权威的表述仍在 `scripts/build_adopted.py` 的 `decision_note` 和 `data/research/` 证据文件里；本文件是按时间的索引摘要。改数只能改 `build_adopted.py`，改完在这里同步记一笔。
 
+## 2026-11-24 · Devin Max 周池统一按 $200/周重算（新增 Carbon / Sonnet 5.5 / Fable 5.2 / Neon / GPT-6.1 Sol，重算 Astra / Opus 5.5）
+
+- **锚点采用（#251）**：新增 `devin_max × gemini-4-carbon` = **18.82 亿/月 medium**（低缓存档，`$0.10627/MTok`）。Devin Max $200/月，不是 Devin Pro。维护者把周 API 等价定为 **$200**（月 $800），不把 7%（$201.21）与 9%（$191.07）两次拉伸加权，也不取中点；多出的 2 个百分点隐含 $155.55 不采。TokenView `prices.json`：入 $2 / 出 $10 / 缓存读 $0.10 / 缓存写 $0（同 Google 11/30 前导入价）。低缓存混合价 $0.425/MTok（85/14.5/0.5）；周 470,588,235 token（4.71亿）×4 周＝1,882,352,941 token，未舍入 18.824亿，`round(..., 2)` 存 **18.82**。基线 2026-11-20 8:11 PM PT 周表 0%；5:40 AM PT 表仍是 9%（其间又多 $0.24）。
+- **同池重算旧行（2026-11-24 裁定）**：维护者确认 Devin Max 当前周额度统一按 **$200/周（月 $800）**计，取代 2026-09 历史实测池（Astra 9/14 $409.83/周、Opus 5.5 9/23 $700.77/周），按各模型标价混合价重算并标 **low**（沿用 Carbon 锚点日期）：
+  - `devin_max × gpt-6-astra`（标准档 $1.47/MTok）：11.15 → **5.44 亿/月**（`$0.36765/MTok`）
+  - `devin_max × claude-opus-5.5`（Anthropic 档 $0.419/MTok）：66.9 → **19.09 亿/月**（`$0.10477/MTok`）
+- **同池新增 4 款主力模型（low，沿用 Carbon 锚点日期；三段价核对 `docs.devin.ai/desktop/models` `TEAMS_TIER_PRO` 与官方价表）**：
+  - `devin_max × claude-sonnet-5.5`（Anthropic 档 $0.2095/MTok）：**38.19 亿/月**（`$0.05237/MTok`）
+  - `devin_max × claude-fable-5.2`（Anthropic 档 $0.644/MTok）：**12.42 亿/月**（`$0.16103/MTok`）
+  - `devin_max × gemini-4-neon`（低缓存档 $0.6375/MTok）：**12.55 亿/月**（`$0.15936/MTok`）
+  - `devin_max × gpt-6.1-sol`（标准档 $0.197/MTok）：**40.61 亿/月**（`$0.04925/MTok`）
+- **不改**：`devin_pro` 各行不动（保留 10-31 / 11-01 实测 ~$30.65–$33.73/周）；`google_ai_pro_us`、Anthropic/OpenAI 订阅行及按量 API 行均不动。
+- **证据**：`data/research/local-samples-round3-2026-11-21.json`（#251）。
+
 ## 2026-11-21 · 千问/阿里云百炼 Token Plan 个人版收录、AA v5.0.1/v2.1 整榜切换、Devin SWE-2 常设免费及新模型 API/目录补齐
 
 - **千问/阿里云百炼 Token Plan 个人版（#232、#240、#247）**：新增国内站四档 `aliyun_token_{lite,essential,standard,pro}_cn`（Lite ¥39 / 20,000 Credits、Essential ¥79 / 45,000 Credits、Standard ¥139 / 80,000 Credits、Pro ¥312 / 200,000 Credits；2026-11-09 20:00 UTC+8 扩容调价口径）× 5 款常设主力模型（`qwen4-max` ¥0.5/¥10/¥30、`qwen3.8-max` ¥1.5/¥12/¥36、`qwen3.8-flash` ¥0.1/¥0.8/¥2.7、`deepseek-v4.1-flash` 忙时 ¥0.04/¥2/¥8、`glm-5.3` ¥2/¥8/¥28），共 **20 条**（标准负载档）。`1 Credit = ¥0.01`（100 Credits = ¥1 实时推理标价）由官方《用量与额度》`qwen3.6-plus` 示例（3.17328 ≈ 3.18 Credits）与 @mamaruo #247 4h 忙时整点遥测样本（`deepseek-v4.1-flash-1017` 7,886,665 tok = ¥1.67926848 = 167.926848 Credits）双向逐位闭环：`aliyun_token_lite_cn × deepseek-v4.1-flash` = **15.528 亿/月 high**，其余 19 行借同一 Credit 计费口径标 **medium**（如 Lite × `qwen4-max` = **2.26 亿/月**、Pro × `qwen4-max` = **22.599 亿/月**、Pro × `deepseek-v4.1-flash` = **155.28 亿/月**）。不采：新客首月半价（¥19.5/¥39.5，至 11-30 一次性优惠）、官方标「限时夜间折扣」无截止日的 22:00–08:00 4 折/5 折（留决策注对照）、以及 #240 的 `qwen4-max-preview`（11-25 24:00 下线、无独立按量标价且样本处于预览 2 折×夜间 4 折=0.8 折叠加态，归入 `research-only`）。证据：`aliyun-token-plan-credits-2026-11-11.json`、`aliyun-token-plan-adoption-round1-2026-11-21.json`、`mamaruo-qwen-tokenplan-lite-deepseek-v41-flash-1017-2026-11-19.json`、`mamaruo-qwen-tokenplan-lite-qwen4-max-preview-2026-11-16.json`。
