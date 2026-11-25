@@ -64,6 +64,7 @@ function fixture(): DatasetContext {
         exchangeRate: { date: "2000-12-01", source: "fixture", labelEn: "fixture", labelZh: "样本" },
         standardTokenMix: { cache: .97, input: .025, output: .005 },
         lowCacheTokenMix: { cache: .85, input: .145, output: .005 },
+        geminiTokenMix: { cache: .9, input: .095, output: .005 },
         anthropicTokenMix: { cache: .97, cacheWrite: .025, output: .005 },
       },
     },

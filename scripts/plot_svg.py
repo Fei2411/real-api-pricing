@@ -148,13 +148,14 @@ def label_lines(p, language, board=None):
 
 # 完整档前沿标签的逐榜偏移 (dx, dy, anchor)：按 verify_label_overlap 搜索得到，优先于下方规则。
 FULL_TIER_LABEL_OFFSETS = {
-    ("claude-fable-5.2", "aa_intelligence_index"): (-24, -18, "end"),
+    ("claude-fable-5.2", "aa_intelligence_index"): (-24, -46, "end"),
+    ("gemini-4-neon", "aa_intelligence_index"): (0, -66, "start"),
     ("claude-opus-5.5", "aa_intelligence_index"): (20, -48, "start"),
     ("deepseek-v4.1-flash", "aa_intelligence_index"): (40, 40, "middle"),
     ("claude-haiku-5.5", "aa_intelligence_index"): (-8, -60, "middle"),
-    ("gemini-4-neon", "aa_coding_agent_index"): (-28, -40, "end"),
+    ("gemini-4-neon", "aa_coding_agent_index"): (-22, -62, "end"),
     ("claude-fable-5.2", "aa_coding_agent_index"): (6, 52, "start"),
-    ("claude-opus-5.5", "aa_coding_agent_index"): (0, -48, "middle"),
+    ("claude-opus-5.5", "aa_coding_agent_index"): (12, -58, "start"),
     ("claude-sonnet-5.5", "aa_coding_agent_index"): (28, -14, "start"),
     ("deepseek-v4.1-flash", "aa_coding_agent_index"): (-64, 52, "end"),
     ("claude-haiku-5.5", "aa_coding_agent_index"): (-18, -46, "middle"),

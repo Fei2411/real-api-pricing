@@ -724,6 +724,12 @@ export function workloadLine(
 ): string {
   const zh = lang === "zh";
   const pct = (n: number) => `${+(n * 100).toFixed(2)}%`;
+  if (p.workload === "gemini" && conventions.geminiTokenMix) {
+    const m = conventions.geminiTokenMix;
+    return zh
+      ? `Gemini 负载：缓存读 ${pct(m.cache)} / 输入 ${pct(m.input)} / 输出 ${pct(m.output)}`
+      : `Gemini workload: ${pct(m.cache)} cache reads / ${pct(m.input)} input / ${pct(m.output)} output`;
+  }
   if (p.workload === "lowCache") {
     const m = conventions.lowCacheTokenMix;
     return zh

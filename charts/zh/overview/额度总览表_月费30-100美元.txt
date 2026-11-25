@@ -20,12 +20,12 @@
 10    MiMo Token Plan Max 夜间0.8×      ¥659（国际 $100）      MiMo V2.5                   188.42      0.00531  medium
 11    Claude Max 5x (9/14+)             USD 100                Claude Opus 5.5             183.34      0.00545  medium
 12    GLM Coding Max (v2 ¥469) 闲时     CNY 469                GLM 5.3 Flash               174.81      0.00396  high
-13    阿里云百炼 Token Plan Pro (¥312)  CNY 312                DeepSeek V4.1 Flash         155.28      0.00296  medium
-14    阿里云百炼 Token Plan Pro (¥312)  CNY 312                Qwen3.8 Flash               153.257     0.003    medium
-15    MiMo Token Plan Max 日间          ¥659（国际 $100）      MiMo V2.6 Flash             150.74      0.00663  medium
-16    MiMo Token Plan Max 日间          ¥659（国际 $100）      MiMo V2.5                   150.74      0.00663  medium
-17    GLM Coding Max (v2 ¥469) 中间值   CNY 469                GLM 5.3 Flash               131.11      0.00528  high
-18    Google AI Ultra 5x                USD 99.99              Gemini 3.8 Flash            129.05      0.00775  low
+13    Google AI Ultra 5x                USD 99.99              Gemini 3.8 Flash            156.7       0.00638  low
+14    阿里云百炼 Token Plan Pro (¥312)  CNY 312                DeepSeek V4.1 Flash         155.28      0.00296  medium
+15    阿里云百炼 Token Plan Pro (¥312)  CNY 312                Qwen3.8 Flash               153.257     0.003    medium
+16    MiMo Token Plan Max 日间          ¥659（国际 $100）      MiMo V2.6 Flash             150.74      0.00663  medium
+17    MiMo Token Plan Max 日间          ¥659（国际 $100）      MiMo V2.5                   150.74      0.00663  medium
+18    GLM Coding Max (v2 ¥469) 中间值   CNY 469                GLM 5.3 Flash               131.11      0.00528  high
 19    ChatGPT Pro 10x                   USD 100                GPT 5.6 Terra               119.147     0.00839  medium
 20    GLM Coding Max (v2 ¥469) 忙时     CNY 469                GLM 5.3 Flash               87.4        0.00792  high
 21    MiMo Token Plan Pro 夜间0.8×      ¥329（国际 $50）       MiMo V2.6 Flash             87.32       0.00573  medium

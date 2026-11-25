@@ -1874,8 +1874,8 @@ z
    </g>
    <g id="patch_6">
     <path d="M 453.6 413.496 
-L 784.753366 413.496 
-L 784.753366 466.998545 
+L 805.100002 413.496 
+L 805.100002 466.998545 
 L 453.6 466.998545 
 z
 " clip-path="url(#p6354b7e420)" style="fill: #a1a1aa"/>
@@ -2327,20 +2327,20 @@ z
    </g>
    <g id="text_14">
     <g id="patch_12">
-     <path d="M 786.13974 452.512273 
-L 871.565052 452.512273 
-L 871.565052 427.982273 
-L 786.13974 427.982273 
+     <path d="M 806.486375 452.512273 
+L 891.911688 452.512273 
+L 891.911688 427.982273 
+L 806.486375 427.982273 
 z
 " style="fill: #ffffff; opacity: 0.72"/>
     </g>
-    <!-- 18.82  DV [M] -->
-    <g style="fill: #20252b" transform="translate(787.12974 438.652273) scale(0.11 -0.11)">
-     <use xlink:href="#NotoSansCJKsc-Regular-f6b2"/>
-     <use xlink:href="#NotoSansCJKsc-Regular-f6b9" transform="translate(55.5 0)"/>
+    <!-- 24.24  DV [M] -->
+    <g style="fill: #20252b" transform="translate(807.476375 438.652273) scale(0.11 -0.11)">
+     <use xlink:href="#NotoSansCJKsc-Regular-f6b3"/>
+     <use xlink:href="#NotoSansCJKsc-Regular-f6b5" transform="translate(55.5 0)"/>
      <use xlink:href="#NotoSansCJKsc-Regular-f" transform="translate(111 0)"/>
-     <use xlink:href="#NotoSansCJKsc-Regular-f6b9" transform="translate(138.796875 0)"/>
-     <use xlink:href="#NotoSansCJKsc-Regular-f6b3" transform="translate(194.296875 0)"/>
+     <use xlink:href="#NotoSansCJKsc-Regular-f6b3" transform="translate(138.796875 0)"/>
+     <use xlink:href="#NotoSansCJKsc-Regular-f6b5" transform="translate(194.296875 0)"/>
      <use xlink:href="#NotoSansCJKsc-Regular-1" transform="translate(249.796875 0)"/>
      <use xlink:href="#NotoSansCJKsc-Regular-1" transform="translate(272.203125 0)"/>
      <use xlink:href="#NotoSansCJKsc-Regular-25" transform="translate(294.609375 0)"/>
@@ -2351,7 +2351,7 @@ z
      <use xlink:href="#NotoSansCJKsc-Regular-3e" transform="translate(557.21875 0)"/>
     </g>
     <!-- 得分: +65.1515% -->
-    <g style="fill: #20252b" transform="translate(787.12974 450.202273) scale(0.11 -0.11)">
+    <g style="fill: #20252b" transform="translate(807.476375 450.202273) scale(0.11 -0.11)">
      <defs>
       <path id="NotoSansCJKsc-Regular-16" d="M 1677 -83 
 C 2464 -83 3213 499 3213 1523 

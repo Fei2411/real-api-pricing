@@ -20,12 +20,12 @@ No.  Plan                                    Monthly fee            Served model
 10   MiMo Token Plan Max (Night 0.8x)        $100 · CN ¥659         MiMo V2.5                   18.842              0.00531   medium
 11   Claude Max 5x (9/14+)                   USD 100                Claude Opus 5.5             18.334              0.00545   medium
 12   GLM Coding Max (v2 ¥469) Off-peak       CNY 469                GLM 5.3 Flash               17.481              0.00396   high
-13   Alibaba Cloud CN Token Plan Pro (¥312)  CNY 312                DeepSeek V4.1 Flash         15.528              0.00296   medium
-14   Alibaba Cloud CN Token Plan Pro (¥312)  CNY 312                Qwen3.8 Flash               15.3257             0.003     medium
-15   MiMo Token Plan Max (Day)               $100 · CN ¥659         MiMo V2.6 Flash             15.074              0.00663   medium
-16   MiMo Token Plan Max (Day)               $100 · CN ¥659         MiMo V2.5                   15.074              0.00663   medium
-17   GLM Coding Max (v2 ¥469) Midpoint       CNY 469                GLM 5.3 Flash               13.111              0.00528   high
-18   Google AI Ultra 5x                      USD 99.99              Gemini 3.8 Flash            12.905              0.00775   low
+13   Google AI Ultra 5x                      USD 99.99              Gemini 3.8 Flash            15.67               0.00638   low
+14   Alibaba Cloud CN Token Plan Pro (¥312)  CNY 312                DeepSeek V4.1 Flash         15.528              0.00296   medium
+15   Alibaba Cloud CN Token Plan Pro (¥312)  CNY 312                Qwen3.8 Flash               15.3257             0.003     medium
+16   MiMo Token Plan Max (Day)               $100 · CN ¥659         MiMo V2.6 Flash             15.074              0.00663   medium
+17   MiMo Token Plan Max (Day)               $100 · CN ¥659         MiMo V2.5                   15.074              0.00663   medium
+18   GLM Coding Max (v2 ¥469) Midpoint       CNY 469                GLM 5.3 Flash               13.111              0.00528   high
 19   ChatGPT Pro 10x                         USD 100                GPT 5.6 Terra               11.9147             0.00839   medium
 20   GLM Coding Max (v2 ¥469) Peak           CNY 469                GLM 5.3 Flash               8.74                0.00792   high
 21   MiMo Token Plan Pro (Night 0.8x)        $50 · CN ¥329          MiMo V2.6 Flash             8.732               0.00573   medium

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24",
+  "updatedAt": "2026-11-25",
   "project": "真实API定价",
   "role": "定义当前采用、计算、绘图和公开发布共用的项目口径",
   "formula": "订阅价 ÷ 用户实际能用到的月 token = 真实混合单价",
@@ -45,7 +45,15 @@
     "output": 0.005,
     "labelZh": "低缓存负载：缓存读取85% / 普通输入14.5% / 输出0.5%",
     "labelEn": "Low-cache workload: 85% cache reads / 14.5% fresh input / 0.5% output",
-    "note": "2026-09-22 裁定的第二档统一负载，用于实测打不到标准 97% cache 的渠道（当前：Step 全系、Google——Gemini 实测 82.6% 属同族，2026-09-30 裁定其实测样本按标价折 worth 后用本档换算；2026-11-21/24 裁定 Devin Max × Gemini 4（Carbon / Neon）同样用本档，周 API 等价 ÷ 本档混合价，不改 Step / Google 各行）。锚点：step-5-preview 本机实测 mix 79.0%/20.7%/0.34%（210.17M tokens，stepfun-step5-panel-round5-2026-09-21.json）与 Google AI Pro 实测 82.6%，统一取 85% 档；step5 采用值的 decision_note 内保留 79% 实测口径对照数。非cache部分输出占比 0.5% 跟随标准负载、余量归输入。2026-09-23 随标准档由 85%/14.65%/0.35% 修订（standard-token-mix-round2-2026-09-23.json）。"
+    "note": "2026-09-22 裁定的低缓存档，用于实测缓存命中率明显偏低的渠道（当前：Step 全系与即将下架的 Google AI Pro × Gemini 3.6 Flash）。锚点：step-5-preview 本机实测 mix 79.0%/20.7%/0.34%（210.17M tokens，stepfun-step5-panel-round5-2026-09-21.json）；step5 采用值的 decision_note 内保留 79% 实测口径对照数。2026-09-23 随标准档由 85%/14.65%/0.35% 修订（standard-token-mix-round2-2026-09-23.json）。2026-11-24 裁定 Gemini 主力订阅（含 Gemini 4 全系与 3.8 Flash，以及 Devin Max × Gemini 4 Carbon / Neon）独立至 90% Gemini 负载档（geminiTokenMix），本档保留给 Step 与待下架的 3.6 Flash。"
+  },
+  "geminiTokenMix": {
+    "cache": 0.9,
+    "input": 0.095,
+    "output": 0.005,
+    "labelZh": "Gemini 负载：缓存读取90% / 普通输入9.5% / 输出0.5%",
+    "labelEn": "Gemini workload: 90% cache reads / 9.5% fresh input / 0.5% output",
+    "note": "2026-11-24 裁定从 85% 低缓存档独立，用于 Gemini 订阅实测与共享池换算（当前：Google AI Pro/Ultra 除即将下架的 3.6 Flash 外全部行，以及 Devin Max × Gemini 4 Carbon / Neon；Gemini 按量 API 仍保持标准档 97% 横向标尺）。锚点：维护者本机 2026-10~11 全量 Gemini 汇总 73.73 亿 raw tokens（35,589 次调用，Antigravity + Devin）实测 89.88%/9.52%/0.60%（命中率 90.42%；其中 Gemini 4 Neon 49.23 亿为 91.93%/7.50%/0.57%、Hydrogen 10.05 亿 89.06%、Devin Argon/Carbon 88–89%），统一取 90% 档；输出占比 0.5% 跟随标准档、余量归输入。证据：gemini-token-mix-round1-2026-11-24.json。"
   },
   "anthropicTokenMix": {
     "cache": 0.97,

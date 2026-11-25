@@ -1,8 +1,8 @@
 {
   "collectedAt": "2026-11-24",
-  "adoptionStatus": "research-only; not adopted yet; no row added to data/adopted.csv and no script changed. Awaiting a third reading (e.g. 40-60pp+ cumulative weekly usage) on issue #258 to narrow the 1.59x tension between weekly segment 1 (~$1,310/week) and segment 2 (~$2,079/week) before deciding whether the weekly pool sits near ~$1,530 (~18x Pro) or ~$1,710+ (~20x Pro). Separate from adopted google_ai_pro_us × gemini-4-neon (5.36 亿/月, #248/#249) and derived google_ai_ultra_20x_us × gemini-3.8-flash (516.2 亿/月); Ultra 5x is not derived.",
-  "scopeNote": "2026-11-23 ~ 2026-11-24 PT 维护者本机单账号实测：Google AI Ultra 20x（google_ai_ultra_20x_us，$199.99/月），Antigravity 主客户端与 T3Code Antigravity ACP 登录同一账号，全部本地调用为 gemini-4-neon（High / XHigh），Claude & GPT 双表全程 100% 未动。见 issue #258。research-only，暂不改 adopted.csv；截图不入库，只记数值。",
-  "method": "对齐 #248（local-samples-round2-2026-11-20.json）口径：直接扫描 Antigravity 主端与 T3Code ACP 两路原始 transcript.jsonl，仅计 source == \"MODEL\" 调用（cache_write = 0；15 次 SYSTEM/CHECKPOINT 压缩另列敏感性不入主值），核验 0 重复事件、0 缺失 transcript 并排除截屏后调用；按 Gemini Developer API 2026-11-18 标价折 list-worth ÷ 周百分点 → 周 API 等价 × 4 周 ÷ conventions.lowCacheTokenMix（85% / 14.5% / 0.5%，混合价 $0.6375/MTok）。",
+  "adoptionStatus": "Adopted 2026-11-24 in scripts/build_adopted.py using the 4-reading cumulative weekly stretch (36pp, 5,847 calls, 1,387,418,586 raw, $583.168536 -> $1,619.91260/week) on the new 90% Gemini workload tier (conventions.geminiTokenMix 90/9.5/0.5, $0.495/MTok): google_ai_ultra_20x_us × gemini-4-neon = 130.90 亿/月 medium ($0.015278075/MTok). Fourth reading (19:42:05 PT, 64% remaining, +8pp / $153.24 -> $1,915.47/week) plus 5h window #4 (12pp / $58.28 -> $485.68/5h; pooled 3 clean 5h windows 54pp -> $499.74/5h = 19.21x Pro 5h) further tightened the 36pp cumulative rate to 18.95x Pro Neon weekly ($1,619.91 vs $85.49). Separate from google_ai_pro_us × gemini-4-neon (6.91 亿/月 under 90% tier) and derived google_ai_ultra_20x_us × gemini-3.8-flash (626.8 亿/月); Ultra 5x is not derived.",
+  "scopeNote": "2026-11-23 ~ 2026-11-24 PT 维护者本机单账号实测：Google AI Ultra 20x（google_ai_ultra_20x_us，$199.99/月），Antigravity 主客户端与 T3Code Antigravity ACP 登录同一账号，全部本地调用为 gemini-4-neon（High / XHigh），Claude & GPT 双表全程 100% 未动。见 issue #258；2026-11-24 19:42 PT 补齐第四张面板读数后累计 36pp（13.87 亿 raw）并按新 90% Gemini 负载档正式采用。截图不入库，只记数值。",
+  "method": "对齐 #248（local-samples-round2-2026-11-20.json）口径并应用 2026-11-24 裁定的 Gemini 负载档（gemini-token-mix-round1-2026-11-24.json）：直接扫描 Antigravity 主端与 T3Code ACP 两路原始 transcript.jsonl，仅计 source == \"MODEL\" 调用（cache_write = 0；31 次 SYSTEM/CHECKPOINT 压缩另列敏感性不入主值），核验 0 重复事件、0 缺失 transcript 并排除截屏后调用；按 Gemini Developer API 2026-11-18 标价折 list-worth ÷ 周百分点 → 周 API 等价 × 4 周 ÷ conventions.geminiTokenMix（90% / 9.5% / 0.5%，混合价 $0.495/MTok）。",
   "samples": [
     {
       "id": "google-ai-ultra-20x-neon-week-2026-11-23",
@@ -20,12 +20,16 @@
       ],
       "windows": {
         "timezone": "America/Los_Angeles",
-        "weekBaselineStartPt": "2026-11-23 16:53–17:42",
+        "weekBaselineStartPt": "2026-11-23 16:59–17:42",
         "weekFirstCallPt": "2026-11-23 17:20:51",
-        "weekRefreshLockPt": "2026-11-30 16:53–17:42",
+        "weekRefreshLockPt": "2026-11-30 16:42–17:42",
         "fiveHourFirstWindowPt": "2026-11-23 17:20:51–22:20:51",
         "fiveHourSecondWindowStartPt": "2026-11-23 22:23–22:24",
-        "fiveHourRefreshLockPt": "2026-11-24 03:23–03:24",
+        "fiveHourSecondWindowRefreshPt": "2026-11-24 03:23–03:24",
+        "fiveHourThirdWindowStartPt": "2026-11-24 03:21–03:22",
+        "fiveHourThirdWindowRefreshPt": "2026-11-24 08:21",
+        "fiveHourFourthWindowStartPt": "2026-11-24 17:14",
+        "fiveHourFourthWindowRefreshPt": "2026-11-24 22:14",
         "readings": [
           {
             "index": 1,
@@ -46,17 +50,44 @@
             "gemini5hRefreshCountdown": "1h 42m",
             "claudeAndGptWeekRemainingPct": 100,
             "claudeAndGpt5hRemainingPct": 100
+          },
+          {
+            "index": 3,
+            "atPt": "2026-11-24 05:59:02",
+            "geminiWeekRemainingPct": 72,
+            "geminiWeekRefreshCountdown": "6d 11h",
+            "gemini5hRemainingPct": 87,
+            "gemini5hRefreshCountdown": "2h 22m",
+            "claudeAndGptWeekRemainingPct": 100,
+            "claudeAndGpt5hRemainingPct": 100
+          },
+          {
+            "index": 4,
+            "atPt": "2026-11-24 19:42:05",
+            "geminiWeekRemainingPct": 64,
+            "geminiWeekRefreshCountdown": "5d 21h",
+            "gemini5hRemainingPct": 88,
+            "gemini5hRefreshCountdown": "2h 32m",
+            "claudeAndGptWeekRemainingPct": 100,
+            "claudeAndGpt5hRemainingPct": 100
           }
         ],
         "weekDeltaPp": {
           "seg1": 15,
           "seg2": 6,
-          "cumulative": 21
+          "seg3": 7,
+          "seg4": 8,
+          "cumulative21": 21,
+          "cumulative28": 28,
+          "cumulative36": 36
         },
         "fiveHourDeltaPp": {
-          "seg1": 6,
-          "seg2": 23,
-          "cumulative": 29
+          "window2Seg1": 6,
+          "window2Seg2": 23,
+          "window2Cumulative": 29,
+          "window3": 13,
+          "window4": 12,
+          "pooledClean5h": 54
         }
       },
       "segments": {
@@ -74,9 +105,9 @@
           "hitRate": 0.9446,
           "listWorthUsd": 196.448086,
           "impliedWeekWorthUsd": 1309.65,
-          "impliedWeekWorthRoundingIntervalUsd": [1267, 1355],
           "ratioVsProNeon": 15.32,
-          "impliedMonthLowCacheYi": 82.17
+          "impliedMonthGemini90Yi": 105.83,
+          "impliedMonthLowCache85Yi": 82.17
         },
         "seg2Delta": {
           "callRangePt": "2026-11-23 22:53:33–11-24 01:42:13",
@@ -93,15 +124,46 @@
           "hitRate": 0.9098,
           "listWorthUsd": 124.722329,
           "impliedWeekWorthUsd": 2078.71,
-          "impliedWeekWorth5To7PpUsd": [1782, 2494],
           "ratioVsProNeon": 24.32,
-          "impliedMonthLowCacheYi": 130.43,
+          "impliedMonthGemini90Yi": 167.98,
           "implied5hWorthUsd": 542.27,
-          "implied5hWorth22To24PpUsd": [520, 567],
-          "implied5hRatioVsPro": 20.85,
-          "implied5hLowCacheYi": 8.506
+          "implied5hRatioVsPro": 20.85
         },
-        "weekCumulative": {
+        "seg3Delta": {
+          "callRangePt": "2026-11-24 01:42:40–05:58:53",
+          "weekPp": 7,
+          "calls": 1064,
+          "callsHigh": 139,
+          "callsXHigh": 925,
+          "input": 16795987,
+          "output": 1243578,
+          "cacheRead": 264793514,
+          "cacheWrite": 0,
+          "rawTotal": 282833079,
+          "hitRate": 0.9404,
+          "listWorthUsd": 108.760658,
+          "impliedWeekWorthUsd": 1553.72,
+          "ratioVsProNeon": 18.17,
+          "impliedMonthGemini90Yi": 125.55
+        },
+        "seg4Delta": {
+          "callRangePt": "2026-11-24 05:59:07–19:41:58",
+          "weekPp": 8,
+          "calls": 1461,
+          "callsHigh": 321,
+          "callsXHigh": 1140,
+          "input": 26314087,
+          "output": 1562967,
+          "cacheRead": 339004646,
+          "cacheWrite": 0,
+          "rawTotal": 366881700,
+          "hitRate": 0.928,
+          "listWorthUsd": 153.237463,
+          "impliedWeekWorthUsd": 1915.47,
+          "ratioVsProNeon": 22.41,
+          "impliedMonthGemini90Yi": 154.79
+        },
+        "weekCumulative21": {
           "callRangePt": "2026-11-23 17:20:51–11-24 01:42:13",
           "weekPp": 21,
           "calls": 3322,
@@ -113,26 +175,39 @@
           "cacheWrite": 0,
           "rawTotal": 737703807,
           "hitRate": 0.934,
-          "listWorthUsd": 321.170415
+          "listWorthUsd": 321.170415,
+          "impliedWeekWorthUsd": 1529.38
         },
-        "fiveHourSeg1": {
-          "callRangePt": "2026-11-23 22:29:47–22:53:25",
-          "fiveHourPp": 6,
-          "calls": 256,
-          "callsHigh": 96,
-          "callsXHigh": 160,
-          "input": 4839574,
-          "output": 393983,
-          "cacheRead": 40282307,
+        "weekCumulative28": {
+          "callRangePt": "2026-11-23 17:20:51–11-24 05:58:53",
+          "weekPp": 28,
+          "calls": 4386,
+          "callsHigh": 796,
+          "callsXHigh": 3590,
+          "input": 65156053,
+          "output": 6138437,
+          "cacheRead": 949242396,
           "cacheWrite": 0,
-          "rawTotal": 45515864,
-          "hitRate": 0.8927,
-          "listWorthUsd": 26.470813,
-          "implied5hWorthUsd": 441.18,
-          "implied5hRatioVsPro": 16.96,
-          "implied5hLowCacheYi": 6.92
+          "rawTotal": 1020536886,
+          "hitRate": 0.9358,
+          "listWorthUsd": 429.931073,
+          "impliedWeekWorthUsd": 1535.47
         },
-        "fiveHourCumulative": {
+        "weekCumulative36": {
+          "callRangePt": "2026-11-23 17:20:51–11-24 19:41:58",
+          "weekPp": 36,
+          "calls": 5847,
+          "callsHigh": 1117,
+          "callsXHigh": 4730,
+          "input": 91470140,
+          "output": 7701404,
+          "cacheRead": 1288247042,
+          "cacheWrite": 0,
+          "rawTotal": 1387418586,
+          "hitRate": 0.9337,
+          "listWorthUsd": 583.168536
+        },
+        "fiveHourWindow2Cumulative": {
           "callRangePt": "2026-11-23 22:29:47–11-24 01:42:13",
           "fiveHourPp": 29,
           "calls": 1415,
@@ -146,56 +221,100 @@
           "hitRate": 0.9069,
           "listWorthUsd": 151.193142,
           "implied5hWorthUsd": 521.36,
-          "implied5hWorthRoundingIntervalUsd": [513, 531],
-          "implied5hWorthWithCheckpointsUsd": 535.15,
           "implied5hRatioVsPro": 20.04,
-          "implied5hLowCacheYi": 8.178,
-          "implied5hRawYi": 9.353
+          "implied5hGemini90Yi": 10.532
+        },
+        "fiveHourWindow3": {
+          "callRangePt": "2026-11-24 03:22:01–05:58:53",
+          "fiveHourPp": 13,
+          "calls": 577,
+          "callsHigh": 89,
+          "callsXHigh": 488,
+          "input": 9009329,
+          "output": 726567,
+          "cacheRead": 149734165,
+          "cacheWrite": 0,
+          "rawTotal": 159470061,
+          "hitRate": 0.9432,
+          "listWorthUsd": 60.386617,
+          "implied5hWorthUsd": 464.51,
+          "implied5hRatioVsPro": 17.86,
+          "implied5hGemini90Yi": 9.384
+        },
+        "fiveHourWindow4": {
+          "callRangePt": "2026-11-24 17:14:34–19:41:58",
+          "fiveHourPp": 12,
+          "calls": 536,
+          "callsHigh": 85,
+          "callsXHigh": 451,
+          "input": 10110431,
+          "output": 631332,
+          "cacheRead": 123198674,
+          "cacheWrite": 0,
+          "rawTotal": 133940437,
+          "hitRate": 0.9242,
+          "listWorthUsd": 58.281074,
+          "implied5hWorthUsd": 485.68,
+          "implied5hRatioVsPro": 18.67,
+          "implied5hGemini90Yi": 9.812
+        },
+        "fiveHourPooledClean54": {
+          "note": "fiveHourWindow2Cumulative (29pp) + fiveHourWindow3 (13pp) + fiveHourWindow4 (12pp)",
+          "fiveHourPp": 54,
+          "listWorthUsd": 269.860833,
+          "implied5hWorthUsd": 499.74,
+          "implied5hRatioVsPro": 19.21
         }
       },
       "clientBreakdown": {
-        "weekCumulative": {
+        "weekCumulative36": {
           "antigravityMain": {
-            "calls": 2368,
-            "input": 31137584,
-            "output": 2701109,
-            "cacheRead": 511732078,
-            "rawTotal": 545570771,
-            "listWorthUsd": 210.689199
+            "calls": 4660,
+            "callsHigh": 425,
+            "callsXHigh": 4235,
+            "input": 63719891,
+            "output": 5074588,
+            "cacheRead": 1054270303,
+            "rawTotal": 1123064782,
+            "hitRate": 0.943,
+            "listWorthUsd": 425.419038
           },
           "t3codeAcp": {
-            "calls": 954,
-            "input": 17222482,
-            "output": 2193750,
-            "cacheRead": 172716804,
-            "rawTotal": 192133036,
-            "listWorthUsd": 110.481217
+            "calls": 1187,
+            "callsHigh": 692,
+            "callsXHigh": 495,
+            "input": 27750249,
+            "output": 2626816,
+            "cacheRead": 233976739,
+            "rawTotal": 264353804,
+            "hitRate": 0.894,
+            "listWorthUsd": 157.749498
           }
         },
-        "fiveHourCumulative": {
+        "fiveHourWindow4": {
           "antigravityMain": {
-            "calls": 662,
-            "rawTotal": 132275949,
-            "listWorthUsd": 61.613313
+            "calls": 504,
+            "rawTotal": 125991260,
+            "listWorthUsd": 49.889724
           },
           "t3codeAcp": {
-            "calls": 753,
-            "rawTotal": 138968318,
-            "listWorthUsd": 89.579829
+            "calls": 32,
+            "rawTotal": 7949177,
+            "listWorthUsd": 8.39135
           }
         }
       },
-      "effortsWeekCumulative": {
-        "neonHigh": {"calls": 657, "rawTotal": 123666129},
-        "neonXHigh": {"calls": 2665, "rawTotal": 614037678},
+      "effortsWeekCumulative36": {
+        "neonHigh": {"calls": 1117, "rawTotal": 245927253},
+        "neonXHigh": {"calls": 4730, "rawTotal": 1141491333},
         "sameListPrice": true
       },
       "checkpointsExcludedFromMain": {
         "note": "SYSTEM/CHECKPOINT 压缩步骤按 #248 口径未计入主值",
-        "weekCalls": 15,
-        "weekWorthUsd": 5.00676,
-        "fiveHourCalls": 10,
-        "fiveHourWorthUsd": 3.999822
+        "weekCalls": 31,
+        "weekWorthUsd": 8.069269,
+        "fiveHourWindow4Calls": 2,
+        "fiveHourWindow4WorthUsd": 0.333823
       },
       "pricesPerMtok": {
         "input": 3,
@@ -204,48 +323,36 @@
         "cacheWrite": 0,
         "published": "2026-11-18",
         "source": "Gemini Developer API (uniform 1M context, no >200k tier)",
-        "lowCacheBlend": 0.6375,
-        "lowCacheBlendFormula": "0.85×$0.15 + 0.145×$3 + 0.005×$15",
-        "mix": "conventions.lowCacheTokenMix 85/14.5/0.5"
+        "gemini90Blend": 0.495,
+        "gemini90BlendFormula": "0.90×$0.15 + 0.095×$3 + 0.005×$15",
+        "mix": "conventions.geminiTokenMix 90/9.5/0.5"
       },
-      "referenceEstimateNotAdopted": {
-        "basis": "weekCumulative 21pp",
-        "weekWorthUsd": 1529.38293,
-        "weekWorthRoundingIntervalUsd": [1493.82, 1566.68],
-        "ratioVsProNeonWeek": 17.89,
+      "adoptedCalculation": {
+        "basis": "weekCumulative36 (36pp across 4 readings)",
+        "weekWorthUsd": 1619.9126,
+        "weekWorthRoundingIntervalUsd": [1597.72, 1642.73],
+        "ratioVsProNeonWeek": 18.95,
         "proNeonAnchorWeekWorthUsd": 85.48971,
-        "weekLowCacheTokens": 2399032047,
-        "weekLowCacheYi": 23.99,
+        "weekGemini90Tokens": 3272550709,
+        "weekGemini90Yi": 32.726,
         "monthWeeks": 4,
-        "monthLowCacheTokens": 9596128188,
-        "monthLowCacheYiUnrounded": 95.961,
-        "monthLowCacheYiRounded2": 95.96,
-        "monthLowCacheRoundingIntervalYi": [93.73, 98.3],
-        "impliedRealUsdPerMtok": 0.020840975,
+        "monthGemini90Tokens": 13090202835,
+        "monthGemini90YiUnrounded": 130.902,
+        "storedYi": 130.9,
+        "monthGemini90RoundingIntervalYi": [129.11, 132.75],
+        "realUsdPerMtok": 0.015278075,
         "sensitivities": {
-          "withCheckpointsWeekWorthUsd": 1553.22,
-          "withCheckpointsRatioVsPro": 18.17,
-          "withCheckpointsMonthLowCacheYi": 97.46,
-          "rawWeekYi": 35.13,
-          "rawMonthYi": 140.52,
-          "standardMixMonthYi": 207.02
+          "withCheckpointsWeekWorthUsd": 1642.33,
+          "withCheckpointsMonthGemini90Yi": 132.71,
+          "seg2PlusSeg3PlusSeg4CleanDelta21ppWeekWorthUsd": 1841.53,
+          "seg2PlusSeg3PlusSeg4CleanDelta21ppMonthGemini90Yi": 148.81,
+          "lowCache85MonthYi": 101.64,
+          "rawWeekYi": 38.539,
+          "rawMonthYi": 154.16,
+          "standardMixMonthYi": 219.28
         }
       },
-      "crossChecksAndTensions": {
-        "first5hWindowActualSpendUsd": 169.98,
-        "seg2PercentRatio5hToWeek": 3.83,
-        "cumulativeWorthRatioWeekTo5h": 2.93,
-        "weekSegTensionFactor": 1.59,
-        "weekSeg1UsdPerPp": 13.1,
-        "weekSeg2UsdPerPp": 20.79,
-        "rawTokensPerPpSeg1M": 34.13,
-        "rawTokensPerPpSeg2M": 37.62,
-        "tensionNotes": [
-          "周条两段存在 1.59× 差异（$13.10/pp vs $20.79/pp），极端 floor 舍入区间仍不重叠（差约 2.5–3pp / $50–$70）。",
-          "已排除重复事件、漏扫 transcript、effort 权重与 >200k 2× 阶梯；可能原因为第一段存在本机之外同账号消耗，或内部 cache 计权与两段命中率差异（94.46% vs 90.98%，按 raw token/pp 仅差 10%）。",
-          "留待后续累计 40–60pp+ 追加第三读数后再决定采用值。"
-        ]
-      }
+      "adopted": "google_ai_ultra_20x_us × gemini-4-neon = 130.90 亿/月 medium (gemini 90% workload). 36pp across 4 readings (13.87 亿 raw, $583.17 worth) -> $1,619.91/week (18.95x Pro Neon), corroborated by 3 clean 5h windows pooled (54pp -> $499.74/5h, 19.21x Pro 5h; week/5h ratio 3.24x vs Pro 3.29x). Does not derive Ultra 5x."
     }
   ]
 }

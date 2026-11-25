@@ -47,6 +47,7 @@ const context: DatasetContext = {
       exchangeRate: { date: "2026-09-04", source: "Exchange source", labelEn: "", labelZh: "" },
       standardTokenMix: { cache: 0.97, input: 0.025, output: 0.005 },
       lowCacheTokenMix: { cache: 0.85, input: 0.145, output: 0.005 },
+      geminiTokenMix: { cache: 0.9, input: 0.095, output: 0.005 },
       anthropicTokenMix: { cache: 0.97, cacheWrite: 0.025, output: 0.005 },
     },
   },
