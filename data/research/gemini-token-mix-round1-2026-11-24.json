@@ -54,7 +54,8 @@
     "google_ai_pro_us::gemini-4-neon (5.36 -> 6.91 亿/月)",
     "google_ai_ultra_5x_us::gemini-3.8-flash (129.05 -> 156.7 亿/月)",
     "google_ai_ultra_20x_us::gemini-3.8-flash (516.2 -> 626.8 亿/月)",
-    "google_ai_ultra_20x_us::gemini-4-neon (新增采用 130.90 亿/月, #258 四读数 36pp)"
+    "google_ai_ultra_5x_us::gemini-4-neon (新增采用 43.06 亿/月, #263 36pp)",
+    "google_ai_ultra_20x_us::gemini-4-neon (采用 141.55 亿/月, #258 五读数 39pp)"
   ],
   "unaffectedRows": [
     "google_ai_pro_us::gemini-3.6-flash (24.89 亿/月, 即将下架，保留 lowCache 85%)",

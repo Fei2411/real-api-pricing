@@ -1,8 +1,8 @@
 {
-  "collectedAt": "2026-11-24",
-  "adoptionStatus": "Adopted 2026-11-24 in scripts/build_adopted.py using the 4-reading cumulative weekly stretch (36pp, 5,847 calls, 1,387,418,586 raw, $583.168536 -> $1,619.91260/week) on the new 90% Gemini workload tier (conventions.geminiTokenMix 90/9.5/0.5, $0.495/MTok): google_ai_ultra_20x_us × gemini-4-neon = 130.90 亿/月 medium ($0.015278075/MTok). Fourth reading (19:42:05 PT, 64% remaining, +8pp / $153.24 -> $1,915.47/week) plus 5h window #4 (12pp / $58.28 -> $485.68/5h; pooled 3 clean 5h windows 54pp -> $499.74/5h = 19.21x Pro 5h) further tightened the 36pp cumulative rate to 18.95x Pro Neon weekly ($1,619.91 vs $85.49). Separate from google_ai_pro_us × gemini-4-neon (6.91 亿/月 under 90% tier) and derived google_ai_ultra_20x_us × gemini-3.8-flash (626.8 亿/月); Ultra 5x is not derived.",
-  "scopeNote": "2026-11-23 ~ 2026-11-24 PT 维护者本机单账号实测：Google AI Ultra 20x（google_ai_ultra_20x_us，$199.99/月），Antigravity 主客户端与 T3Code Antigravity ACP 登录同一账号，全部本地调用为 gemini-4-neon（High / XHigh），Claude & GPT 双表全程 100% 未动。见 issue #258；2026-11-24 19:42 PT 补齐第四张面板读数后累计 36pp（13.87 亿 raw）并按新 90% Gemini 负载档正式采用。截图不入库，只记数值。",
-  "method": "对齐 #248（local-samples-round2-2026-11-20.json）口径并应用 2026-11-24 裁定的 Gemini 负载档（gemini-token-mix-round1-2026-11-24.json）：直接扫描 Antigravity 主端与 T3Code ACP 两路原始 transcript.jsonl，仅计 source == \"MODEL\" 调用（cache_write = 0；31 次 SYSTEM/CHECKPOINT 压缩另列敏感性不入主值），核验 0 重复事件、0 缺失 transcript 并排除截屏后调用；按 Gemini Developer API 2026-11-18 标价折 list-worth ÷ 周百分点 → 周 API 等价 × 4 周 ÷ conventions.geminiTokenMix（90% / 9.5% / 0.5%，混合价 $0.495/MTok）。",
+  "collectedAt": "2026-11-25",
+  "adoptionStatus": "Adopted 2026-11-24 and refreshed 2026-11-25 in scripts/build_adopted.py using the 5-reading cumulative weekly stretch (39pp, 6,941 calls, 1,648,332,608 raw, $683.172576 -> $1,751.72455/week, 20.49x Pro Neon) on the 90% Gemini workload tier (conventions.geminiTokenMix 90/9.5/0.5, $0.495/MTok): google_ai_ultra_20x_us × gemini-4-neon = 141.55 亿/月 medium ($0.014128577/MTok). Fifth reading (2026-11-25 01:57:29 PT, 61% remaining, +3pp / $100.00) plus 5h window #5 (11pp / $57.76 -> $525.11/5h = 20.19x Pro 5h; pooled 4 clean 5h windows 65pp -> $504.04/5h = 19.38x Pro 5h) converged closely to the nominal 20x Pro ratio. Separate from google_ai_pro_us × gemini-4-neon (#248, 6.91 亿/月), independently measured google_ai_ultra_5x_us × gemini-4-neon (#263, 43.06 亿/月), and derived google_ai_ultra_20x_us × gemini-3.8-flash (626.8 亿/月).",
+  "scopeNote": "2026-11-23 ~ 2026-11-25 PT 维护者本机单账号实测：Google AI Ultra 20x（google_ai_ultra_20x_us，$199.99/月），Antigravity 主客户端与 T3Code Antigravity ACP 登录同一账号，全部本地调用为 gemini-4-neon（High / XHigh），Claude & GPT 双表全程 100% 未动。见 issue #258；2026-11-25 01:57 PT 补齐第五张面板读数后累计 39pp（16.48 亿 raw）并同步刷新采用值。截图不入库，只记数值。",
+  "method": "对齐 #248（local-samples-round2-2026-11-20.json）口径并应用 2026-11-24 裁定的 Gemini 负载档（gemini-token-mix-round1-2026-11-24.json）：直接扫描 Antigravity 主端与 T3Code ACP 两路原始 transcript.jsonl，仅计 source == \"MODEL\" 调用（cache_write = 0；37 次 SYSTEM/CHECKPOINT 压缩另列敏感性不入主值），核验 0 重复事件、0 缺失 transcript 并排除截屏后调用；按 Gemini Developer API 2026-11-18 标价折 list-worth ÷ 周百分点 → 周 API 等价 × 4 周 ÷ conventions.geminiTokenMix（90% / 9.5% / 0.5%，混合价 $0.495/MTok）。",
   "samples": [
     {
       "id": "google-ai-ultra-20x-neon-week-2026-11-23",
@@ -15,14 +15,14 @@
       "clients": ["Antigravity", "T3Code Antigravity ACP"],
       "separateFrom": [
         "google_ai_pro_us::gemini-4-neon",
-        "google_ai_ultra_20x_us::gemini-3.8-flash",
-        "google_ai_ultra_5x_us"
+        "google_ai_ultra_5x_us::gemini-4-neon",
+        "google_ai_ultra_20x_us::gemini-3.8-flash"
       ],
       "windows": {
         "timezone": "America/Los_Angeles",
         "weekBaselineStartPt": "2026-11-23 16:59–17:42",
         "weekFirstCallPt": "2026-11-23 17:20:51",
-        "weekRefreshLockPt": "2026-11-30 16:42–17:42",
+        "weekRefreshLockPt": "2026-11-30 16:57–17:42",
         "fiveHourFirstWindowPt": "2026-11-23 17:20:51–22:20:51",
         "fiveHourSecondWindowStartPt": "2026-11-23 22:23–22:24",
         "fiveHourSecondWindowRefreshPt": "2026-11-24 03:23–03:24",
@@ -30,6 +30,8 @@
         "fiveHourThirdWindowRefreshPt": "2026-11-24 08:21",
         "fiveHourFourthWindowStartPt": "2026-11-24 17:14",
         "fiveHourFourthWindowRefreshPt": "2026-11-24 22:14",
+        "fiveHourFifthWindowStartPt": "2026-11-24 22:14",
+        "fiveHourFifthWindowRefreshPt": "2026-11-25 03:14",
         "readings": [
           {
             "index": 1,
@@ -70,6 +72,16 @@
             "gemini5hRefreshCountdown": "2h 32m",
             "claudeAndGptWeekRemainingPct": 100,
             "claudeAndGpt5hRemainingPct": 100
+          },
+          {
+            "index": 5,
+            "atPt": "2026-11-25 01:57:29",
+            "geminiWeekRemainingPct": 61,
+            "geminiWeekRefreshCountdown": "5d 15h",
+            "gemini5hRemainingPct": 89,
+            "gemini5hRefreshCountdown": "1h 17m",
+            "claudeAndGptWeekRemainingPct": 100,
+            "claudeAndGpt5hRemainingPct": 100
           }
         ],
         "weekDeltaPp": {
@@ -77,9 +89,11 @@
           "seg2": 6,
           "seg3": 7,
           "seg4": 8,
+          "seg5": 3,
           "cumulative21": 21,
           "cumulative28": 28,
-          "cumulative36": 36
+          "cumulative36": 36,
+          "cumulative39": 39
         },
         "fiveHourDeltaPp": {
           "window2Seg1": 6,
@@ -87,7 +101,8 @@
           "window2Cumulative": 29,
           "window3": 13,
           "window4": 12,
-          "pooledClean5h": 54
+          "window5": 11,
+          "pooledClean5h": 65
         }
       },
       "segments": {
@@ -163,35 +178,20 @@
           "ratioVsProNeon": 22.41,
           "impliedMonthGemini90Yi": 154.79
         },
-        "weekCumulative21": {
-          "callRangePt": "2026-11-23 17:20:51–11-24 01:42:13",
-          "weekPp": 21,
-          "calls": 3322,
-          "callsHigh": 657,
-          "callsXHigh": 2665,
-          "input": 48360066,
-          "output": 4894859,
-          "cacheRead": 684448882,
+        "seg5Delta": {
+          "callRangePt": "2026-11-24 19:42:09–11-25 01:57:27",
+          "weekPp": 3,
+          "calls": 1094,
+          "callsHigh": 269,
+          "callsXHigh": 825,
+          "input": 12098100,
+          "output": 1776926,
+          "cacheRead": 247038996,
           "cacheWrite": 0,
-          "rawTotal": 737703807,
-          "hitRate": 0.934,
-          "listWorthUsd": 321.170415,
-          "impliedWeekWorthUsd": 1529.38
-        },
-        "weekCumulative28": {
-          "callRangePt": "2026-11-23 17:20:51–11-24 05:58:53",
-          "weekPp": 28,
-          "calls": 4386,
-          "callsHigh": 796,
-          "callsXHigh": 3590,
-          "input": 65156053,
-          "output": 6138437,
-          "cacheRead": 949242396,
-          "cacheWrite": 0,
-          "rawTotal": 1020536886,
-          "hitRate": 0.9358,
-          "listWorthUsd": 429.931073,
-          "impliedWeekWorthUsd": 1535.47
+          "rawTotal": 260914022,
+          "hitRate": 0.9533,
+          "listWorthUsd": 100.004039,
+          "impliedWeekWorthUsd": 3333.47
         },
         "weekCumulative36": {
           "callRangePt": "2026-11-23 17:20:51–11-24 19:41:58",
@@ -205,7 +205,22 @@
           "cacheWrite": 0,
           "rawTotal": 1387418586,
           "hitRate": 0.9337,
-          "listWorthUsd": 583.168536
+          "listWorthUsd": 583.168536,
+          "impliedWeekWorthUsd": 1619.91
+        },
+        "weekCumulative39": {
+          "callRangePt": "2026-11-23 17:20:51–11-25 01:57:27",
+          "weekPp": 39,
+          "calls": 6941,
+          "callsHigh": 1386,
+          "callsXHigh": 5555,
+          "input": 103568240,
+          "output": 9478330,
+          "cacheRead": 1535286038,
+          "cacheWrite": 0,
+          "rawTotal": 1648332608,
+          "hitRate": 0.9368,
+          "listWorthUsd": 683.172576
         },
         "fiveHourWindow2Cumulative": {
           "callRangePt": "2026-11-23 22:29:47–11-24 01:42:13",
@@ -258,63 +273,80 @@
           "implied5hRatioVsPro": 18.67,
           "implied5hGemini90Yi": 9.812
         },
-        "fiveHourPooledClean54": {
-          "note": "fiveHourWindow2Cumulative (29pp) + fiveHourWindow3 (13pp) + fiveHourWindow4 (12pp)",
-          "fiveHourPp": 54,
-          "listWorthUsd": 269.860833,
-          "implied5hWorthUsd": 499.74,
-          "implied5hRatioVsPro": 19.21
+        "fiveHourWindow5": {
+          "callRangePt": "2026-11-24 22:20:50–11-25 01:57:27",
+          "fiveHourPp": 11,
+          "calls": 593,
+          "callsHigh": 258,
+          "callsXHigh": 335,
+          "input": 7810504,
+          "output": 1231490,
+          "cacheRead": 105722277,
+          "cacheWrite": 0,
+          "rawTotal": 114764271,
+          "hitRate": 0.9312,
+          "listWorthUsd": 57.762204,
+          "implied5hWorthUsd": 525.11,
+          "implied5hRatioVsPro": 20.19,
+          "implied5hGemini90Yi": 10.608
+        },
+        "fiveHourPooledClean65": {
+          "note": "fiveHourWindow2Cumulative (29pp) + fiveHourWindow3 (13pp) + fiveHourWindow4 (12pp) + fiveHourWindow5 (11pp)",
+          "fiveHourPp": 65,
+          "listWorthUsd": 327.623037,
+          "implied5hWorthUsd": 504.04,
+          "implied5hRatioVsPro": 19.38
         }
       },
       "clientBreakdown": {
-        "weekCumulative36": {
+        "weekCumulative39": {
           "antigravityMain": {
-            "calls": 4660,
+            "calls": 5485,
             "callsHigh": 425,
-            "callsXHigh": 4235,
-            "input": 63719891,
-            "output": 5074588,
-            "cacheRead": 1054270303,
-            "rawTotal": 1123064782,
-            "hitRate": 0.943,
-            "listWorthUsd": 425.419038
+            "callsXHigh": 5060,
+            "input": 72091420,
+            "output": 6142677,
+            "cacheRead": 1270212622,
+            "rawTotal": 1348446719,
+            "hitRate": 0.9463,
+            "listWorthUsd": 498.946308
           },
           "t3codeAcp": {
-            "calls": 1187,
-            "callsHigh": 692,
+            "calls": 1456,
+            "callsHigh": 961,
             "callsXHigh": 495,
-            "input": 27750249,
-            "output": 2626816,
-            "cacheRead": 233976739,
-            "rawTotal": 264353804,
-            "hitRate": 0.894,
-            "listWorthUsd": 157.749498
+            "input": 31476820,
+            "output": 3335653,
+            "cacheRead": 265073416,
+            "rawTotal": 299885889,
+            "hitRate": 0.8939,
+            "listWorthUsd": 184.226267
           }
         },
-        "fiveHourWindow4": {
+        "fiveHourWindow5": {
           "antigravityMain": {
-            "calls": 504,
-            "rawTotal": 125991260,
-            "listWorthUsd": 49.889724
+            "calls": 335,
+            "rawTotal": 82442125,
+            "listWorthUsd": 32.096528
           },
           "t3codeAcp": {
-            "calls": 32,
-            "rawTotal": 7949177,
-            "listWorthUsd": 8.39135
+            "calls": 258,
+            "rawTotal": 32322146,
+            "listWorthUsd": 25.665676
           }
         }
       },
-      "effortsWeekCumulative36": {
-        "neonHigh": {"calls": 1117, "rawTotal": 245927253},
-        "neonXHigh": {"calls": 4730, "rawTotal": 1141491333},
+      "effortsWeekCumulative39": {
+        "neonHigh": {"calls": 1386, "rawTotal": 281459338},
+        "neonXHigh": {"calls": 5555, "rawTotal": 1366873270},
         "sameListPrice": true
       },
       "checkpointsExcludedFromMain": {
         "note": "SYSTEM/CHECKPOINT 压缩步骤按 #248 口径未计入主值",
-        "weekCalls": 31,
-        "weekWorthUsd": 8.069269,
-        "fiveHourWindow4Calls": 2,
-        "fiveHourWindow4WorthUsd": 0.333823
+        "weekCalls": 37,
+        "weekWorthUsd": 9.433696,
+        "fiveHourWindow5Calls": 3,
+        "fiveHourWindow5WorthUsd": 0.708145
       },
       "pricesPerMtok": {
         "input": 3,
@@ -328,31 +360,29 @@
         "mix": "conventions.geminiTokenMix 90/9.5/0.5"
       },
       "adoptedCalculation": {
-        "basis": "weekCumulative36 (36pp across 4 readings)",
-        "weekWorthUsd": 1619.9126,
-        "weekWorthRoundingIntervalUsd": [1597.72, 1642.73],
-        "ratioVsProNeonWeek": 18.95,
+        "basis": "weekCumulative39 (39pp across 5 readings)",
+        "weekWorthUsd": 1751.72455,
+        "weekWorthRoundingIntervalUsd": [1729.55, 1774.47],
+        "ratioVsProNeonWeek": 20.49,
         "proNeonAnchorWeekWorthUsd": 85.48971,
-        "weekGemini90Tokens": 3272550709,
-        "weekGemini90Yi": 32.726,
+        "weekGemini90Tokens": 3538837481,
+        "weekGemini90Yi": 35.388,
         "monthWeeks": 4,
-        "monthGemini90Tokens": 13090202835,
-        "monthGemini90YiUnrounded": 130.902,
-        "storedYi": 130.9,
-        "monthGemini90RoundingIntervalYi": [129.11, 132.75],
-        "realUsdPerMtok": 0.015278075,
+        "monthGemini90Tokens": 14155349924,
+        "monthGemini90YiUnrounded": 141.553,
+        "storedYi": 141.55,
+        "monthGemini90RoundingIntervalYi": [139.76, 143.39],
+        "realUsdPerMtok": 0.014128577,
         "sensitivities": {
-          "withCheckpointsWeekWorthUsd": 1642.33,
-          "withCheckpointsMonthGemini90Yi": 132.71,
-          "seg2PlusSeg3PlusSeg4CleanDelta21ppWeekWorthUsd": 1841.53,
-          "seg2PlusSeg3PlusSeg4CleanDelta21ppMonthGemini90Yi": 148.81,
-          "lowCache85MonthYi": 101.64,
-          "rawWeekYi": 38.539,
-          "rawMonthYi": 154.16,
-          "standardMixMonthYi": 219.28
+          "withCheckpointsWeekWorthUsd": 1775.91,
+          "withCheckpointsMonthGemini90Yi": 143.51,
+          "lowCache85MonthYi": 109.91,
+          "rawWeekYi": 42.265,
+          "rawMonthYi": 169.06,
+          "standardMixMonthYi": 237.12
         }
       },
-      "adopted": "google_ai_ultra_20x_us × gemini-4-neon = 130.90 亿/月 medium (gemini 90% workload). 36pp across 4 readings (13.87 亿 raw, $583.17 worth) -> $1,619.91/week (18.95x Pro Neon), corroborated by 3 clean 5h windows pooled (54pp -> $499.74/5h, 19.21x Pro 5h; week/5h ratio 3.24x vs Pro 3.29x). Does not derive Ultra 5x."
+      "adopted": "google_ai_ultra_20x_us × gemini-4-neon = 141.55 亿/月 medium (gemini 90% workload). 39pp across 5 readings (16.48 亿 raw, $683.17 worth) -> $1,751.72/week (20.49x Pro Neon), corroborated by 4 clean 5h windows pooled (65pp -> $504.04/5h, 19.38x Pro 5h; 5h #5 alone $525.11/5h = 20.19x Pro 5h)."
     }
   ]
 }

@@ -221,12 +221,21 @@ GOOGLE_PRO_NEON_RAW_TOKENS = 55_958_318
 GOOGLE_PRO_NEON_WEEKLY_PP = 37
 GEMINI_NEON_LIST = (0.15, 3.0, 15.0)  # Gemini Developer API，2026-11-18：cache read $0.15 / input $3 / output $15；无显式 cache write，本段写 0
 assert sum(GOOGLE_PRO_NEON_SEGMENT.values()) == GOOGLE_PRO_NEON_RAW_TOKENS
+# Google AI Ultra 5x × Gemini 4 Neon —— 维护者本机 T3Code ACP 独立账号（issue #263）：
+#   2026-11-23 19:46:12–11-25 01:49:40 PT，01:57 读数周剩 64%（36pp，5d 17h 倒计时锁定起点），
+#   1,904 次纯 MODEL 调用（Neon 1,838 次占 98.89% worth + Hydrogen 66 次占 1.11% worth），raw 447,625,207（命中 94.17%），段 worth $191.835760 → 周 $532.88。
+GEMINI_HYDROGEN_LIST = (0.075, 1.5, 7.5)  # Gemini Developer API，2026-11-18：cache read $0.075 / input $1.5 / output $7.5
+GOOGLE_ULTRA5X_NEON_SEGMENT = {"cache_read": 414_414_874, "input": 25_178_425, "output": 3_466_798}
+GOOGLE_ULTRA5X_HYDROGEN_SEGMENT = {"cache_read": 3_750_380, "input": 709_245, "output": 105_485}
+GOOGLE_ULTRA5X_NEON_RAW_TOKENS = 447_625_207
+GOOGLE_ULTRA5X_NEON_WEEKLY_PP = 36
+assert sum(GOOGLE_ULTRA5X_NEON_SEGMENT.values()) + sum(GOOGLE_ULTRA5X_HYDROGEN_SEGMENT.values()) == GOOGLE_ULTRA5X_NEON_RAW_TOKENS
 # Google AI Ultra 20x × Gemini 4 Neon —— 维护者本机 Antigravity 主端 + T3Code ACP 同一账号（issue #258）：
-#   2026-11-23 17:20:51–11-24 19:41:58 PT 四次面板读数（22:53 剩 85% / 01:42 剩 79% / 05:59 剩 72% / 19:42 剩 64%）累计 36pp，
-#   5,847 次纯 MODEL 调用（High 1,117 / XHigh 4,730），raw 1,387,418,586（命中 93.37%），段 worth $583.168536 → 周 $1,619.91。
-GOOGLE_ULTRA20X_NEON_SEGMENT = {"cache_read": 1_288_247_042, "input": 91_470_140, "output": 7_701_404}
-GOOGLE_ULTRA20X_NEON_RAW_TOKENS = 1_387_418_586
-GOOGLE_ULTRA20X_NEON_WEEKLY_PP = 36
+#   2026-11-23 17:20:51–11-25 01:57:27 PT 五次面板读数（22:53 剩 85% / 01:42 剩 79% / 05:59 剩 72% / 19:42 剩 64% / 01:57 剩 61%）累计 39pp，
+#   6,941 次纯 MODEL 调用（High 1,386 / XHigh 5,555），raw 1,648,332,608（命中 93.68%），段 worth $683.172576 → 周 $1,751.72。
+GOOGLE_ULTRA20X_NEON_SEGMENT = {"cache_read": 1_535_286_038, "input": 103_568_240, "output": 9_478_330}
+GOOGLE_ULTRA20X_NEON_RAW_TOKENS = 1_648_332_608
+GOOGLE_ULTRA20X_NEON_WEEKLY_PP = 39
 assert sum(GOOGLE_ULTRA20X_NEON_SEGMENT.values()) == GOOGLE_ULTRA20X_NEON_RAW_TOKENS
 # Devin Max 共享周池 —— 维护者把周 API 等价定为 $200（月 $800；issue #251，2026-11-24 确认适用于 Devin Max 全模型重算）。
 #   锚点：Gemini 4 Carbon（2026-11-20~21），不把 7%（$201.21）与 9%（$191.07）两次拉伸加权，也不取中点；+2pp 隐含 $155.55 不采。
@@ -765,12 +774,43 @@ def google_ai_pro_neon_raw_week_tokens() -> int:
     return round(GOOGLE_PRO_NEON_RAW_TOKENS / GOOGLE_PRO_NEON_WEEKLY_PP * 100)
 
 
+def google_ai_ultra_5x_neon_worth_usd() -> float:
+    return (worth_usd(GOOGLE_ULTRA5X_NEON_SEGMENT, GEMINI_NEON_LIST)
+            + worth_usd(GOOGLE_ULTRA5X_HYDROGEN_SEGMENT, GEMINI_HYDROGEN_LIST))
+
+
+def google_ai_ultra_5x_neon_weekly_worth_usd() -> float:
+    # 段 worth $191.835760 ÷36pp → $532.87711/周（6.23× Pro Neon）。
+    return google_ai_ultra_5x_neon_worth_usd() / GOOGLE_ULTRA5X_NEON_WEEKLY_PP * 100
+
+
+def google_ai_ultra_5x_neon_weekly_tokens() -> int:
+    return round(google_ai_ultra_5x_neon_weekly_worth_usd() / blended_gemini(*GEMINI_NEON_LIST) * 1e6)
+
+
+def google_ai_ultra_5x_neon_monthly_tokens() -> int:
+    return round(google_ai_ultra_5x_neon_weekly_worth_usd() * MONTH_WEEKS / blended_gemini(*GEMINI_NEON_LIST) * 1e6)
+
+
+def google_ai_ultra_5x_neon_monthly_yi() -> float:
+    # 未舍入周 worth ×4周 ÷ Gemini 90% 负载档 $0.495/MTok → 43.061 亿 → 43.06 亿。
+    return round(
+        google_ai_ultra_5x_neon_weekly_worth_usd() * MONTH_WEEKS
+        / blended_gemini(*GEMINI_NEON_LIST) * 1e6 / YI,
+        2,
+    )
+
+
+def google_ai_ultra_5x_neon_raw_week_tokens() -> int:
+    return round(GOOGLE_ULTRA5X_NEON_RAW_TOKENS / GOOGLE_ULTRA5X_NEON_WEEKLY_PP * 100)
+
+
 def google_ai_ultra_20x_neon_worth_usd() -> float:
     return worth_usd(GOOGLE_ULTRA20X_NEON_SEGMENT, GEMINI_NEON_LIST)
 
 
 def google_ai_ultra_20x_neon_weekly_worth_usd() -> float:
-    # 段 worth $583.168536 ÷36pp → $1,619.91260/周（18.95× Pro Neon）。
+    # 段 worth $683.172576 ÷39pp → $1,751.72455/周（20.49× Pro Neon）。
     return google_ai_ultra_20x_neon_worth_usd() / GOOGLE_ULTRA20X_NEON_WEEKLY_PP * 100
 
 
@@ -783,7 +823,7 @@ def google_ai_ultra_20x_neon_monthly_tokens() -> int:
 
 
 def google_ai_ultra_20x_neon_monthly_yi() -> float:
-    # 未舍入周 worth ×4周 ÷ Gemini 90% 负载档 $0.495/MTok → 130.902 亿 → 130.90 亿。
+    # 未舍入周 worth ×4周 ÷ Gemini 90% 负载档 $0.495/MTok → 141.553 亿 → 141.55 亿。
     return round(
         google_ai_ultra_20x_neon_weekly_worth_usd() * MONTH_WEEKS
         / blended_gemini(*GEMINI_NEON_LIST) * 1e6 / YI,
@@ -822,7 +862,8 @@ assert google_ai_pro_monthly_yi() == 31.34
 assert google_ai_pro_36_monthly_yi() == 24.89
 assert google_ai_pro_argon_monthly_yi() == 0.85
 assert google_ai_pro_neon_monthly_yi() == 6.91
-assert google_ai_ultra_20x_neon_monthly_yi() == 130.90
+assert google_ai_ultra_5x_neon_monthly_yi() == 43.06
+assert google_ai_ultra_20x_neon_monthly_yi() == 141.55
 assert devin_max_carbon_weekly_tokens() == 606_060_606
 assert devin_max_carbon_monthly_tokens() == 2_424_242_424
 assert devin_max_carbon_monthly_yi() == 24.24
@@ -1613,12 +1654,15 @@ SUBS = [
     ("google_ai_pro_us", "Google AI Pro", 19.99, "USD", "gemini-4-argon", google_ai_pro_argon_monthly_yi(), "low", "X @leo114119 推文截图（维护者提供）：第三方网关面板 Gemini 4 Argon·7天 已用 15.1%，网关统计 23 次调用（输入 109K／输出 75.1K 含推理 28K／缓存读 955K，命中率 90%）；gemini-argon-round1-2026-10-16.json；gemini-token-mix-round1-2026-11-24.json", f"0.66→{google_ai_pro_argon_monthly_yi():g}亿（2026-11-24 裁定迁入 Gemini 90% 负载档，混合价 ${blended_gemini(*GEMINI_ARGON_LIST):.2f}/MTok；原低缓存 85% 口径 0.66 亿留作对照）：首个 Gemini 4 Argon 采用点。段 worth ${worth_usd(GOOGLE_PRO_ARGON_SEGMENT, GEMINI_ARGON_LIST):.4f}（cache 0.955M×$0.10＋入 0.109M×$2＋出 0.0751M×$10；引入价至 2026-11-30，其后 $0.2/$4/$20 须复核，输出含 thinking 与面板「推理计入输出」一致）÷15.1pp＝$0.0705/pp，周 worth $7.05×{MONTH_WEEKS:g}周 ÷ Gemini 90% 负载档混合价 $0.33/MTok。官方论坛 2026-10-15 确认 Argon 为 Pro 独立 weekly-only 周池（无 5 小时条），不与 Gemini 3.8 Flash 合池；面板其余各池均 0%，23 次调用用量归 Argon 为推断。帖主反推周限约 $10 为取整上界——若推理 28K 在输出外另计则周 $8.90（1.08亿）。raw 口径 0.30亿、标准档口径 1.43亿留作对照不采；同套餐 Gemini 合池周 worth $123.42 的 1/17，与「少的可怜」一致。样本 15.1pp、单一推文、第三方网关面板 → low，待第二样本复核。证据：gemini-argon-round1-2026-10-16.json；gemini-token-mix-round1-2026-11-24.json。"),
     ("google_ai_pro_us", "Google AI Pro", 19.99, "USD", "gemini-4-neon", google_ai_pro_neon_monthly_yi(), "medium",
      "维护者本机 Antigravity，新 Google AI Pro（与 Ultra 5x、已采用 Argon 行分开）：2026-11-20 7:51 AM PT 各表 100%，6:40 PM PT Gemini 周剩余 63%（37pp，刷新约 2026-11-27 7:40 AM PT）；Neon 277 次，7:51:44 AM–6:40:38 PM PT（入 6,657,933 / 出 287,026 / 缓存读 49,013,359 / 缓存写 0，raw 55,958,318，命中 88.04%）；High 234 次 raw 35,353,418，XHigh 43 次 raw 20,604,900；issue #248；local-samples-round2-2026-11-20.json；gemini-token-mix-round1-2026-11-24.json",
-     f"5.36→{google_ai_pro_neon_monthly_yi():g}亿（2026-11-24 裁定迁入 Gemini 90% 负载档，medium；原低缓存 85% 口径 5.36 亿留作对照）：首个 Google AI Pro × Gemini 4 Neon 采用点。段 worth ${google_ai_pro_neon_worth_usd():.6f}（读 {GOOGLE_PRO_NEON_SEGMENT['cache_read']/1e6:.6f}M×$0.15＋入 {GOOGLE_PRO_NEON_SEGMENT['input']/1e6:.6f}M×$3＋出 {GOOGLE_PRO_NEON_SEGMENT['output']/1e6:.6f}M×$15；Gemini Developer API 2026-11-18 公布，High 与 XHigh 同价，缓存写 0）÷{GOOGLE_PRO_NEON_WEEKLY_PP:g}pp＝${google_ai_pro_neon_weekly_worth_usd():.5f}/周。Gemini 90% 负载档混合价 ${blended_gemini(*GEMINI_NEON_LIST):.3f}/MTok（{GEMINI_MIX['cache']:.2f}×$0.15＋{GEMINI_MIX['input']:.3f}×$3＋{GEMINI_MIX['output']:.3f}×$15）。周 {google_ai_pro_neon_weekly_tokens():,} token（{google_ai_pro_neon_weekly_tokens()/YI:.3f}亿）×{MONTH_WEEKS:g}周＝{round(google_ai_pro_neon_weekly_worth_usd()*MONTH_WEEKS/blended_gemini(*GEMINI_NEON_LIST)*1e6):,} token，未舍入 {google_ai_pro_neon_weekly_worth_usd()*MONTH_WEEKS/blended_gemini(*GEMINI_NEON_LIST)*1e6/YI:.3f}亿，round(..., 2) 存 {google_ai_pro_neon_monthly_yi():g}亿。没有上一条 Pro Neon 样本可并，这 {GOOGLE_PRO_NEON_WEEKLY_PP:g}pp 就是全部权重；不替换 google_ai_pro_us × gemini-4-argon（{google_ai_pro_argon_monthly_yi():g}亿）。Ultra 20x × Neon 另由 issue #258 独立实测采用，Ultra 5x 仍不派生。raw 周 {google_ai_pro_neon_raw_week_tokens():,}（{GOOGLE_PRO_NEON_RAW_TOKENS/GOOGLE_PRO_NEON_WEEKLY_PP*100/YI:.3f}亿）留作对照不采。5h 反推 $26.01 不采：当天跨过不止一个 5h 窗，该切片只约占当前窗 1 小时。50% 周帽不套。n=1、整数读数 → medium。证据：local-samples-round2-2026-11-20.json；gemini-token-mix-round1-2026-11-24.json；issue #248。"),
+     f"5.36→{google_ai_pro_neon_monthly_yi():g}亿（2026-11-24 裁定迁入 Gemini 90% 负载档，medium；原低缓存 85% 口径 5.36 亿留作对照）：首个 Google AI Pro × Gemini 4 Neon 采用点。段 worth ${google_ai_pro_neon_worth_usd():.6f}（读 {GOOGLE_PRO_NEON_SEGMENT['cache_read']/1e6:.6f}M×$0.15＋入 {GOOGLE_PRO_NEON_SEGMENT['input']/1e6:.6f}M×$3＋出 {GOOGLE_PRO_NEON_SEGMENT['output']/1e6:.6f}M×$15；Gemini Developer API 2026-11-18 公布，High 与 XHigh 同价，缓存写 0）÷{GOOGLE_PRO_NEON_WEEKLY_PP:g}pp＝${google_ai_pro_neon_weekly_worth_usd():.5f}/周。Gemini 90% 负载档混合价 ${blended_gemini(*GEMINI_NEON_LIST):.3f}/MTok（{GEMINI_MIX['cache']:.2f}×$0.15＋{GEMINI_MIX['input']:.3f}×$3＋{GEMINI_MIX['output']:.3f}×$15）。周 {google_ai_pro_neon_weekly_tokens():,} token（{google_ai_pro_neon_weekly_tokens()/YI:.3f}亿）×{MONTH_WEEKS:g}周＝{round(google_ai_pro_neon_weekly_worth_usd()*MONTH_WEEKS/blended_gemini(*GEMINI_NEON_LIST)*1e6):,} token，未舍入 {google_ai_pro_neon_weekly_worth_usd()*MONTH_WEEKS/blended_gemini(*GEMINI_NEON_LIST)*1e6/YI:.3f}亿，round(..., 2) 存 {google_ai_pro_neon_monthly_yi():g}亿。没有上一条 Pro Neon 样本可并，这 {GOOGLE_PRO_NEON_WEEKLY_PP:g}pp 就是全部权重；不替换 google_ai_pro_us × gemini-4-argon（{google_ai_pro_argon_monthly_yi():g}亿）。Ultra 5x × Neon（issue #263）与 Ultra 20x × Neon（issue #258）均另由独立实测采用。raw 周 {google_ai_pro_neon_raw_week_tokens():,}（{GOOGLE_PRO_NEON_RAW_TOKENS/GOOGLE_PRO_NEON_WEEKLY_PP*100/YI:.3f}亿）留作对照不采。5h 反推 $26.01 不采：当天跨过不止一个 5h 窗，该切片只约占当前窗 1 小时。50% 周帽不套。n=1、整数读数 → medium。证据：local-samples-round2-2026-11-20.json；gemini-token-mix-round1-2026-11-24.json；issue #248。"),
     ("google_ai_ultra_5x_us", "Google AI Ultra 5x", 99.99, "USD", "gemini-3.8-flash", round(google_ai_pro_monthly_yi() * 5, 2), "low", "官方：Ultra $100 = 5× Pro token worth（antigravity.google/blog 2026-05-19）；gemini-token-mix-round1-2026-11-24.json", f"129.05→{google_ai_pro_monthly_yi()*5:g}亿（2026-11-24 随 Pro 3.8 Flash 迁入 Gemini 90% 负载档 25.81→{google_ai_pro_monthly_yi():g}亿联动）：Pro采用值×官方worth倍率5；LLMDevs Ultra~5.0B/周同量级旁证；非独立实测"),
+    ("google_ai_ultra_5x_us", "Google AI Ultra 5x", 99.99, "USD", "gemini-4-neon", google_ai_ultra_5x_neon_monthly_yi(), "medium",
+     "维护者本机 T3Code Antigravity ACP 独立账号（Google AI Ultra 5x $99.99/月，未在其他设备登录，与 Pro #248 及 Ultra 20x #258 分开）：2026-11-23 19:46:12–11-25 01:49:40 PT，01:57 面板读数 Gemini 周剩余 64%（36pp，5d 17h 倒计时锁定起点，已排除上一周窗 11 次 $1.67）、5h 剩余 96%（4pp，3h 49m）；1,904 次纯 MODEL 调用（Neon 1,838 次占 98.89% worth：High 1,396 次 raw 318,256,342 / XHigh 442 次 raw 124,803,755；另含 Hydrogen 66 次 raw 4,565,110 占 1.11% worth；合计入 25,887,670 / 出 3,572,283 / 缓存读 418,165,254 / 缓存写 0，raw 447,625,207，命中 94.17%）；issue #263；local-samples-round5-2026-11-25.json；gemini-token-mix-round1-2026-11-24.json",
+     f"新增{google_ai_ultra_5x_neon_monthly_yi():.2f}亿（2026-11-25，Gemini 90% 负载档，medium）：首个 Google AI Ultra 5x × Gemini 4 Neon 独立实测采用点。段 worth ${google_ai_ultra_5x_neon_worth_usd():.6f}（Neon 读 {GOOGLE_ULTRA5X_NEON_SEGMENT['cache_read']/1e6:.6f}M×$0.15＋入 {GOOGLE_ULTRA5X_NEON_SEGMENT['input']/1e6:.6f}M×$3＋出 {GOOGLE_ULTRA5X_NEON_SEGMENT['output']/1e6:.6f}M×$15＝$189.699476 占 98.89%，加同池 Hydrogen 66 次 $2.136283 占 1.11%，按官方价 $0.075/$1.5/$7.5 计）÷{GOOGLE_ULTRA5X_NEON_WEEKLY_PP:g}pp＝${google_ai_ultra_5x_neon_weekly_worth_usd():.5f}/周（{google_ai_ultra_5x_neon_weekly_worth_usd()/google_ai_pro_neon_weekly_worth_usd():.2f}× Pro Neon 周 ${google_ai_pro_neon_weekly_worth_usd():.2f}）。Gemini 90% 负载档混合价 ${blended_gemini(*GEMINI_NEON_LIST):.3f}/MTok（{GEMINI_MIX['cache']:.2f}×$0.15＋{GEMINI_MIX['input']:.3f}×$3＋{GEMINI_MIX['output']:.3f}×$15）。周 {google_ai_ultra_5x_neon_weekly_tokens():,} token（{google_ai_ultra_5x_neon_weekly_tokens()/YI:.3f}亿）×{MONTH_WEEKS:g}周＝{google_ai_ultra_5x_neon_monthly_tokens():,} token，未舍入 {google_ai_ultra_5x_neon_monthly_tokens()/YI:.3f}亿，round(..., 2) 存 {google_ai_ultra_5x_neon_monthly_yi():.2f}亿。36pp 整数读数 ±0.5pp 对应 {google_ai_ultra_5x_neon_monthly_tokens()/YI*36/36.5:.2f}~{google_ai_ultra_5x_neon_monthly_tokens()/YI*36/35.5:.2f}亿/月。不含 7 次 SYSTEM/CHECKPOINT 压缩调用（若计入 +$1.32，周 $536.54 / 月 43.36亿）；5h 窗实测 4pp（43 次纯 Neon High，worth $5.67）推 $141.67/5h（5.45× Pro 5h）作旁证不入主值；同账号 Claude/GPT 周剩余 68% 属独立池不合池。对照不采：剔除 Hydrogen 仅计 Neon 42.58亿、原低缓存 85% 口径 33.44亿、raw 周 {google_ai_ultra_5x_neon_raw_week_tokens():,}（月 {google_ai_ultra_5x_neon_raw_week_tokens()*MONTH_WEEKS/YI:.2f}亿）、标准 97% 口径 72.13亿。n=1 单账号、整数读数 36pp → medium。证据：local-samples-round5-2026-11-25.json；gemini-token-mix-round1-2026-11-24.json；issue #263。"),
     ("google_ai_ultra_20x_us", "Google AI Ultra 20x", 199.99, "USD", "gemini-3.8-flash", round(google_ai_pro_monthly_yi() * 20, 2), "low", "官方：Ultra $200 = 20× Pro token worth（antigravity.google/blog 2026-05-19）；gemini-token-mix-round1-2026-11-24.json", f"516.2→{google_ai_pro_monthly_yi()*20:g}亿（2026-11-24 随 Pro 3.8 Flash 迁入 Gemini 90% 负载档 25.81→{google_ai_pro_monthly_yi():g}亿联动）：Pro采用值×官方worth倍率20；非独立实测"),
     ("google_ai_ultra_20x_us", "Google AI Ultra 20x", 199.99, "USD", "gemini-4-neon", google_ai_ultra_20x_neon_monthly_yi(), "medium",
-     "维护者本机 Antigravity 主端 + T3Code Antigravity ACP（同一 Google AI Ultra 20x 账号，与 Pro Neon #248 分开）：2026-11-23 17:20:51 PT 起新周窗，四次面板读数 11-23 22:53 PT 剩 85%（15pp）/ 11-24 01:42 PT 剩 79%（21pp）/ 11-24 05:59 PT 剩 72%（28pp）/ 11-24 19:42 PT 剩 64%（累计 36pp，Claude/GPT 全程 100% 未动）；5,847 次纯 MODEL 调用（High 1,117 次 raw 245,927,253 / XHigh 4,730 次 raw 1,141,491,333；入 91,470,140 / 出 7,701,404 / 缓存读 1,288,247,042 / 缓存写 0，raw 1,387,418,586，命中 93.37%）；issue #258；local-samples-round4-2026-11-23.json；gemini-token-mix-round1-2026-11-24.json",
-     f"新增{google_ai_ultra_20x_neon_monthly_yi():.2f}亿（2026-11-24，Gemini 90% 负载档，medium）：首个 Google AI Ultra 20x × Gemini 4 Neon 独立实测采用点。段 worth ${google_ai_ultra_20x_neon_worth_usd():.6f}（读 {GOOGLE_ULTRA20X_NEON_SEGMENT['cache_read']/1e6:.6f}M×$0.15＋入 {GOOGLE_ULTRA20X_NEON_SEGMENT['input']/1e6:.6f}M×$3＋出 {GOOGLE_ULTRA20X_NEON_SEGMENT['output']/1e6:.6f}M×$15；Gemini Developer API 2026-11-18 公布，High 与 XHigh 同价，缓存写 0）÷{GOOGLE_ULTRA20X_NEON_WEEKLY_PP:g}pp＝${google_ai_ultra_20x_neon_weekly_worth_usd():,.5f}/周（{google_ai_ultra_20x_neon_weekly_worth_usd()/google_ai_pro_neon_weekly_worth_usd():.2f}× Pro Neon 周 ${google_ai_pro_neon_weekly_worth_usd():.2f}）。Gemini 90% 负载档混合价 ${blended_gemini(*GEMINI_NEON_LIST):.3f}/MTok（{GEMINI_MIX['cache']:.2f}×$0.15＋{GEMINI_MIX['input']:.3f}×$3＋{GEMINI_MIX['output']:.3f}×$15）。周 {google_ai_ultra_20x_neon_weekly_tokens():,} token（{google_ai_ultra_20x_neon_weekly_tokens()/YI:.3f}亿）×{MONTH_WEEKS:g}周＝{google_ai_ultra_20x_neon_monthly_tokens():,} token，未舍入 {google_ai_ultra_20x_neon_monthly_tokens()/YI:.3f}亿，round(..., 2) 存 {google_ai_ultra_20x_neon_monthly_yi():.2f}亿。36pp 整数读数 ±0.5pp 对应 {google_ai_ultra_20x_neon_monthly_tokens()/YI*36/36.5:.2f}~{google_ai_ultra_20x_neon_monthly_tokens()/YI*36/35.5:.2f}亿/月。不含 31 次 SYSTEM/CHECKPOINT 压缩调用（若计入 +$8.07，周 $1,642.33 / 月 132.71亿）；主端与 T3Code ACP 去重无重复；三段 5h 窗独立实测 #2 29pp 推 $521.36/5h（20.04× Pro 5h）、#3 13pp 推 $464.51/5h（17.86× Pro 5h）、#4 12pp 推 $485.68/5h（18.67× Pro 5h），合并 54pp 推 $499.74/5h（19.21× Pro 5h），均作旁证不入主值。对照不采：原低缓存 85% 口径 101.64亿、raw 周 {google_ai_ultra_20x_neon_raw_week_tokens():,}（月 {google_ai_ultra_20x_neon_raw_week_tokens()*MONTH_WEEKS/YI:.2f}亿）、标准 97% 口径 219.28亿。不派生 Ultra 5x。n=1 单账号、4 次整数读数 36pp → medium。证据：local-samples-round4-2026-11-23.json；gemini-token-mix-round1-2026-11-24.json；issue #258。"),
+     "维护者本机 Antigravity 主端 + T3Code Antigravity ACP（同一 Google AI Ultra 20x 账号，与 Pro #248 及 Ultra 5x #263 分开）：2026-11-23 17:20:51 PT 起新周窗，五次面板读数 11-23 22:53 PT 剩 85%（15pp）/ 11-24 01:42 PT 剩 79%（21pp）/ 11-24 05:59 PT 剩 72%（28pp）/ 11-24 19:42 PT 剩 64%（36pp）/ 11-25 01:57 PT 剩 61%（累计 39pp，Claude/GPT 全程 100% 未动）；6,941 次纯 MODEL 调用（High 1,386 次 raw 281,459,338 / XHigh 5,555 次 raw 1,366,873,270；入 103,568,240 / 出 9,478,330 / 缓存读 1,535,286,038 / 缓存写 0，raw 1,648,332,608，命中 93.68%）；issue #258；local-samples-round4-2026-11-23.json；gemini-token-mix-round1-2026-11-24.json",
+     f"130.90→{google_ai_ultra_20x_neon_monthly_yi():.2f}亿（2026-11-25 刷新至 5 次读数 39pp，Gemini 90% 负载档，medium；原 36pp 130.90 亿留作对照）：首个 Google AI Ultra 20x × Gemini 4 Neon 独立实测采用点。段 worth ${google_ai_ultra_20x_neon_worth_usd():.6f}（读 {GOOGLE_ULTRA20X_NEON_SEGMENT['cache_read']/1e6:.6f}M×$0.15＋入 {GOOGLE_ULTRA20X_NEON_SEGMENT['input']/1e6:.6f}M×$3＋出 {GOOGLE_ULTRA20X_NEON_SEGMENT['output']/1e6:.6f}M×$15；Gemini Developer API 2026-11-18 公布，High 与 XHigh 同价，缓存写 0）÷{GOOGLE_ULTRA20X_NEON_WEEKLY_PP:g}pp＝${google_ai_ultra_20x_neon_weekly_worth_usd():,.5f}/周（{google_ai_ultra_20x_neon_weekly_worth_usd()/google_ai_pro_neon_weekly_worth_usd():.2f}× Pro Neon 周 ${google_ai_pro_neon_weekly_worth_usd():.2f}）。Gemini 90% 负载档混合价 ${blended_gemini(*GEMINI_NEON_LIST):.3f}/MTok（{GEMINI_MIX['cache']:.2f}×$0.15＋{GEMINI_MIX['input']:.3f}×$3＋{GEMINI_MIX['output']:.3f}×$15）。周 {google_ai_ultra_20x_neon_weekly_tokens():,} token（{google_ai_ultra_20x_neon_weekly_tokens()/YI:.3f}亿）×{MONTH_WEEKS:g}周＝{google_ai_ultra_20x_neon_monthly_tokens():,} token，未舍入 {google_ai_ultra_20x_neon_monthly_tokens()/YI:.3f}亿，round(..., 2) 存 {google_ai_ultra_20x_neon_monthly_yi():.2f}亿。39pp 整数读数 ±0.5pp 对应 {google_ai_ultra_20x_neon_monthly_tokens()/YI*39/39.5:.2f}~{google_ai_ultra_20x_neon_monthly_tokens()/YI*39/38.5:.2f}亿/月。不含 37 次 SYSTEM/CHECKPOINT 压缩调用（若计入 +$9.43，周 $1,775.91 / 月 143.51亿）；主端与 T3Code ACP 去重无重复；四段 5h 窗独立实测 #2 29pp 推 $521.36/5h（20.04× Pro 5h）、#3 13pp 推 $464.51/5h（17.86× Pro 5h）、#4 12pp 推 $485.68/5h（18.67× Pro 5h）、#5 11pp 推 $525.11/5h（20.19× Pro 5h），合并 65pp 推 $504.04/5h（19.38× Pro 5h），均作旁证不入主值。Ultra 5x 另由 issue #263 独立实测采用。对照不采：原低缓存 85% 口径 109.91亿、raw 周 {google_ai_ultra_20x_neon_raw_week_tokens():,}（月 {google_ai_ultra_20x_neon_raw_week_tokens()*MONTH_WEEKS/YI:.2f}亿）、标准 97% 口径 237.12亿。n=1 单账号、5 次整数读数 39pp → medium。证据：local-samples-round4-2026-11-23.json；gemini-token-mix-round1-2026-11-24.json；issue #258。"),
     # Anthropic —— Pro采用shownotover面板截图反推Opus5周池；Max采用9/14永久口径估算157亿，非当期boost或纯Opus5硬上限
     #   5x/20x是5h窗口倍率；已确认20x周池仅为5x的2倍，旧2.25周池比例不再采用；Pro无独立Opus周池（官方文档），7% all-models周读数即绑定约束
     ("claude_pro", "Claude Pro", 20, "USD", "claude-opus-5", claude_pro_opus5_monthly_yi(), "high", "issue #53（NTRYourWaifu）：两个 Pro 账号 9/14~9/22 轮询 /api/oauth/usage seven_day %、按 message.id 去重，Opus 5 共 1,022.02M raw = 周 +148pp；community-issues-round1-2026-09-29.json；旧源 X @shownotover Pro /usage 面板 32.87M = 周池7%（claude-adoption-round8-2026-09-20.json）不再入权；workload-conversion-round1-2026-09-30.json", f"27.62→{claude_pro_opus5_monthly_yi():g}亿（2026-09-30 裁定带分项实测统一折算，Anthropic 档）：段 worth ${CLAUDE_PRO_OPUS5_ISSUE53_WORTH_USD:g}（读1,004.96M×$0.5＋1h写12.99M×$10＋入0.01M×$5＋出4.06M×$25）＝每1% $4.96 → 周$495.9×4周 ÷ Anthropic 档混合价${blended_anthropic(0.5, ANTHROPIC_CACHE_WRITE_5M['claude-opus-5'], 25.0):.5f}/MTok；raw 口径 {claude_pro_opus5_raw_monthly_yi():g} 留作对照。以下为 issue #53 采用决策——{claude_pro_opus5_panel_monthly_yi():g}→{claude_pro_opus5_raw_monthly_yi():g}亿，2026-09-30 裁定改用 issue #53：两个 Pro 账号、全部在 9/14 永久 +25% 之后，1,022.02M raw（读1,004.96M/1h写12.99M/入0.01M/出4.06M）＝周 +148 个百分点 → 6.906M/pp ×100 ×{MONTH_WEEKS:g}周；两个整周分别 24.60/28.96 亿；按标价每 1% worth $4.96。旧面板样本每 1% $3.67（7% 整数读数，区间 17.53~20.23 亿），高出 35%/47% 与 +25% 调整幅度相近，疑为 9/14 前测得，故不与之合并（合并为 27.22 亿不采）；Anthropic 档 worth 口径 25.89 亿（2026-09-30 起改判为采用，见首行）。张力：与 Max 20x 采用值 157 的比从 8.35× 变为 5.68×，与 Opus 5.5 的 301.7/30.54≈9.9× 不一致，指向 Max 20x 侧口径或 5.5/5 池权重（#52/#53 推约 0.843），待裁定。以下为旧 18.78 决策原文——Opus4.8历史15.88亿→Opus5面板反推{claude_pro_opus5_panel_monthly_yi():g}亿：32,868,513 total（opus5 32.85M + haiku 23k）÷7%×{MONTH_WEEKS:g}周；周池4.70亿、5h池56.7M，周池为绑定约束；周%取整区间约17.5~20.2亿；单会话n=1初定medium；round5候选Opus5约1.9亿（假定周消息数）被面板直测推翻作废；标价闭合校验$25.68吻合；2026-09-21裁定Opus4.8旧测不入权——round8曾按基准期读法×1.25=19.85亿作互证，但round6记录该值含+50%活动期boost，忠实映射为÷1.5×1.25=13.23亿且与面板矛盾，故仅面板单源；round9同作者第二条40M=周13%记为张力：新周读法12.3亿/续周读法26.7亿/下限读法不约束，基线不可考不入权；2026-09-21裁定升high：面板级形式+价格闭合校验+下调后口径+与Max20x周池比8.35×自洽；#3新周读法12.3亿与Max池比将失衡（$20得$100档的相对池份额异常），反证18.78侧。注：曾引'8.28窗/周与Max同构'为旁证，round9检查点反推Max档5h池~7.1亿（非4.74亿满窗读法）后该互证撤回——Max周满窗数~5.5非8.3"),
@@ -1880,6 +1924,7 @@ MAIN_EXTRA = {
     ("opencode_go", "deepseek-v4.1-flash"),
     ("opencode_go", "glm-5.3-flash"),
     ("command_code_goat", "deepseek-v4.1-flash"),
+    ("google_ai_ultra_5x_us", "gemini-4-neon"),
     ("google_ai_ultra_20x_us", "gemini-4-neon"),
 }
 
@@ -1935,7 +1980,8 @@ DATA_DATES = {
     ("google_ai_pro_us", "gemini-3.6-flash"): ("2026-09-13~2026-09-27", "sample"),
     ("google_ai_pro_us", "gemini-4-argon"): ("2026-10-16", "sample"),
     ("google_ai_pro_us", "gemini-4-neon"): ("2026-11-20", "sample"),
-    ("google_ai_ultra_20x_us", "gemini-4-neon"): ("2026-11-23~2026-11-24", "sample"),
+    ("google_ai_ultra_5x_us", "gemini-4-neon"): ("2026-11-23~2026-11-25", "sample"),
+    ("google_ai_ultra_20x_us", "gemini-4-neon"): ("2026-11-23~2026-11-25", "sample"),
     ("claude_pro", "claude-opus-5"): ("2026-09-14~2026-09-22", "sample"),
     ("claude_max_20x", "claude-opus-5"): ("2026-08", "sample"),
     ("claude_max_20x", "claude-fable-5.1"): ("2026-09-04~2026-09-05", "sample"),

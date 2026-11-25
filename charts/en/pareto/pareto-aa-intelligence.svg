@@ -64,7 +64,7 @@
 <text x="66.000" y="469.000" font-size="12" fill="#697169" text-anchor="middle" font-weight="400" transform="rotate(-90 66 469.0)">Intelligence Index</text>
 <text x="720.000" y="775.000" font-size="13" fill="#5D655E" text-anchor="middle" font-weight="400" >Real price · USD per million tokens</text>
 <text x="1338.000" y="775.000" font-size="12" fill="#737B74" text-anchor="end" font-weight="400" >Cheaper →</text>
-<path id="frontier" d="M120.000,249.911 L659.069,249.911 L730.322,271.883 L872.770,287.794 L968.632,319.478 L1283.781,444.813 L1338.000,444.813" fill="none" stroke="#303630" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="frontier" d="M120.000,249.911 L659.069,249.911 L741.140,271.883 L872.770,287.794 L968.632,319.478 L1283.781,444.813 L1338.000,444.813" fill="none" stroke="#303630" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.0021732044" data-score="27.8552" data-x="1000.034" data-y="504.711" transform="translate(1000.034 504.711)"><title>GPT-6 Luna · Plus · $0.00217/MTok · 27.8552 · highGPT-6 Luna (max) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
@@ -107,7 +107,10 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.028929088" data-score="61.3982" data-x="642.029" data-y="271.883" transform="translate(642.029 271.883)"><title>Gemini 4 Neon · Google AI Pro · $0.02893/MTok · 61.3982 · mediumGemini 4 Neon (xhigh) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#84CC16" opacity=".68" stroke="#5A8B0F" stroke-width=".9"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="true" data-price="0.015278075" data-score="61.3982" data-x="730.322" data-y="271.883" transform="translate(730.322 271.883)"><title>Gemini 4 Neon · Google AI Ultra 20x · $0.01528/MTok · 61.3982 · mediumGemini 4 Neon (xhigh) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.023221087" data-score="61.3982" data-x="672.425" data-y="271.883" transform="translate(672.425 271.883)"><title>Gemini 4 Neon · Google AI Ultra 5x · $0.02322/MTok · 61.3982 · mediumGemini 4 Neon (xhigh) · Exact served-model reference; quota-measurement effort is unverified.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#84CC16" opacity=".68" stroke="#5A8B0F" stroke-width=".9"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="true" data-price="0.014128576" data-score="61.3982" data-x="741.140" data-y="271.883" transform="translate(741.140 271.883)"><title>Gemini 4 Neon · Google AI Ultra 20x · $0.01413/MTok · 61.3982 · mediumGemini 4 Neon (xhigh) · Exact served-model reference; quota-measurement effort is unverified.</title>
 <rect x="-11" y="-11" width="22" height="22" rx="6" fill="#FFF" stroke="#84CC16" stroke-width="1.35"/>
 <circle r="4" fill="#84CC16"/>
 </g>
@@ -593,10 +596,10 @@
 <text x="635.069" y="243.911" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.02558</text>
 </g>
 <g class="front-label" data-model="gemini-4-neon">
-<path d="M728.423,257.004Q728.423,224.883 724.322,224.883" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="730.322" y="205.883" font-size="16" fill="#343C34" text-anchor="start" font-weight="400" class="label-name">Gemini 4 Neon · xhigh</text>
-<text x="730.322" y="225.883" font-size="11.5" fill="#8B9487" text-anchor="start" font-weight="400" >Google AI Ultra 20x</text>
-<text x="730.322" y="245.883" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.01528</text>
+<path d="M739.240,257.004Q739.240,224.883 735.140,224.883" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="741.140" y="205.883" font-size="16" fill="#343C34" text-anchor="start" font-weight="400" class="label-name">Gemini 4 Neon · xhigh</text>
+<text x="741.140" y="225.883" font-size="11.5" fill="#8B9487" text-anchor="start" font-weight="400" >Google AI Ultra 20x</text>
+<text x="741.140" y="245.883" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.01413</text>
 </g>
 <g class="front-label" data-model="claude-opus-5.5">
 <path d="M879.292,274.285Q879.292,258.794 886.770,258.794" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
@@ -653,7 +656,7 @@
 <path d="M323.12 849l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>
 <text x="337.120" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Metered API</text>
 <text x="56.000" y="898.000" font-size="12" fill="#727B72" text-anchor="start" font-weight="400" >Default month = 4 weeks; Kimi pool = 5×, Droid = 2× weekly · Dollar/credit: 97% cache / 2.5% input / 0.5% output · Direct totals unchanged</text>
-<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >155 subscription positions / 17 API positions / 5 frontier positions</text>
+<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >156 subscription positions / 17 API positions / 5 frontier positions</text>
 <text x="56.000" y="922.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Claude Max: permanent allowance estimate from Sep 14; Pro: historical Opus 4.8 measurement. Y uses the top archived variant per model.</text>
 <text x="56.000" y="943.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Subscriptions and metered APIs share one frontier; line segments are visual guides, not purchasable plans.</text>
 <text x="1384.000" y="943.000" font-size="11" fill="#929A90" text-anchor="end" font-weight="400" >artificialanalysis.ai/leaderboards/models</text>

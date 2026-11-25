@@ -28,10 +28,10 @@ No.  Plan                                Monthly fee      Served model         M
 18   Droid Max                           USD 200          Nemotron 3 Ultra     16.84               0.01188   medium
 19   Claude Max 20x (9/14+)              USD 200          Claude Opus 5        15.7                0.01274   medium
 20   Claude Max 20x (9/14+)              USD 200          Claude Opus 4.8      15.7                0.01274   low
-21   Droid Max                           USD 200          Gemini 3.8 Flash     13.472              0.01485   medium
-22   Droid Max                           USD 200          Gemini 3.7 Flash     13.472              0.01485   medium
-23   GLM Coding Max (v3 ¥1078) Midpoint  CNY 1078         GLM 5.3 Flash        13.111              0.01213   high
-24   Google AI Ultra 20x                 USD 199.99       Gemini 4 Neon        13.09               0.01528   medium
+21   Google AI Ultra 20x                 USD 199.99       Gemini 4 Neon        14.155              0.01413   medium
+22   Droid Max                           USD 200          Gemini 3.8 Flash     13.472              0.01485   medium
+23   Droid Max                           USD 200          Gemini 3.7 Flash     13.472              0.01485   medium
+24   GLM Coding Max (v3 ¥1078) Midpoint  CNY 1078         GLM 5.3 Flash        13.111              0.01213   high
 25   ChatGPT Pro 20x                     USD 200          GPT 5.6 Sol          12.902              0.0155    high
 26   Claude Team Premium                 USD 125          Claude Opus 5.5      12.605              0.00992   low
 27   Droid Max                           USD 200          Inkling              10.104              0.01979   medium
