@@ -1,0 +1,155 @@
+{
+  "collectedAt": "2026-11-25",
+  "adoptionStatus": "Adopted 2026-11-25 in scripts/build_adopted.py using the 36pp weekly stretch (1,904 calls, 447,625,207 raw, $191.835760 -> $532.87711/week, 6.23x Pro Neon) on the 90% Gemini workload tier (conventions.geminiTokenMix 90/9.5/0.5, $0.495/MTok): google_ai_ultra_5x_us × gemini-4-neon = 43.06 亿/月 medium ($0.023221087/MTok). Separate from google_ai_pro_us × gemini-4-neon (#248, 6.91 亿/月), google_ai_ultra_20x_us × gemini-4-neon (#258, 141.55 亿/月), and derived google_ai_ultra_5x_us × gemini-3.8-flash (156.7 亿/月).",
+  "scopeNote": "2026-11-23 ~ 2026-11-25 PT 维护者本机单账号实测：Google AI Ultra 5x（google_ai_ultra_5x_us，$99.99/月），T3Code Antigravity ACP 独立账号，未在其他设备登录。见 issue #263；截屏于 2026-11-25 01:57:29 PT，周剩余 64%（36pp）、5h 剩余 96%（4pp），倒计时均与本地首条调用严丝合缝。截图不入库，只记数值。",
+  "method": "对齐 #248 / #258 与 gemini-token-mix-round1-2026-11-24.json 口径：直接扫描该账号 T3Code Antigravity ACP 原始 transcript.jsonl，仅计 source == \"MODEL\" 调用（cache_write = 0；7 次 SYSTEM/CHECKPOINT 压缩 +$1.32 另列敏感性不入主值），按刷新倒计时精确截断至本周窗起点（排除上一周窗 11-23 07:35–07:41 的 11 次 $1.67）。Neon 占本段 98.89% worth / 98.98% raw（≥95% 归档口径），少量 Hydrogen（66 次、$2.14）按官方标价 $0.075/$1.5/$7.5 并入同池 worth ÷ 36pp → 周 API 等价 × 4 周 ÷ conventions.geminiTokenMix（90% / 9.5% / 0.5%，混合价 $0.495/MTok）。",
+  "samples": [
+    {
+      "id": "google-ai-ultra-5x-neon-week-2026-11-25",
+      "issue": 263,
+      "issueUrl": "https://github.com/Fei-Craft/real-api-pricing/issues/263",
+      "planId": "google_ai_ultra_5x_us",
+      "plan": "Google AI Ultra 5x",
+      "priceUsd": 99.99,
+      "model": "gemini-4-neon",
+      "clients": ["T3Code Antigravity ACP"],
+      "separateFrom": [
+        "google_ai_pro_us::gemini-4-neon",
+        "google_ai_ultra_20x_us::gemini-4-neon",
+        "google_ai_ultra_5x_us::gemini-3.8-flash"
+      ],
+      "windows": {
+        "timezone": "America/Los_Angeles",
+        "weekBaselineStartPt": "2026-11-23 18:57–19:57",
+        "weekFirstCallPt": "2026-11-23 19:46:12",
+        "weekRefreshLockPt": "2026-11-30 18:57–19:57",
+        "fiveHourWindowStartPt": "2026-11-25 00:46",
+        "fiveHourWindowFirstCallPt": "2026-11-25 00:46:37",
+        "fiveHourWindowRefreshPt": "2026-11-25 05:46",
+        "readings": [
+          {
+            "index": 1,
+            "atPt": "2026-11-25 01:57:29",
+            "geminiWeekRemainingPct": 64,
+            "geminiWeekRefreshCountdown": "5d 17h",
+            "gemini5hRemainingPct": 96,
+            "gemini5hRefreshCountdown": "3h 49m",
+            "claudeAndGpt5hRemainingPct": 100,
+            "claudeAndGptWeekRemainingPct": 68,
+            "claudeAndGptWeekRefreshCountdown": "2d 2h",
+            "claudeAndGptNote": "Separate pool; does not share quota with Gemini"
+          }
+        ],
+        "weekDeltaPp": 36,
+        "fiveHourDeltaPp": 4,
+        "excludedPriorWindow": {
+          "callRangePt": "2026-11-23 07:35:00–07:41:21",
+          "calls": 11,
+          "rawTotal": 1606240,
+          "listWorthUsd": 1.6661,
+          "reason": "Before the 2026-11-23 18:57–19:57 PT weekly reset confirmed by the 5d 17h countdown"
+        }
+      },
+      "segments": {
+        "weekCumulative36": {
+          "callRangePt": "2026-11-23 19:46:12–11-25 01:49:40",
+          "weekPp": 36,
+          "calls": 1904,
+          "input": 25887670,
+          "output": 3572283,
+          "cacheRead": 418165254,
+          "cacheWrite": 0,
+          "rawTotal": 447625207,
+          "hitRate": 0.9417,
+          "listWorthUsd": 191.83576,
+          "neonWorthShare": 0.9889,
+          "neonRawShare": 0.9898
+        },
+        "fiveHourWindow": {
+          "callRangePt": "2026-11-25 00:46:37–01:49:40",
+          "fiveHourPp": 4,
+          "calls": 43,
+          "callsHigh": 43,
+          "callsXHigh": 0,
+          "input": 957104,
+          "output": 95950,
+          "cacheRead": 9040621,
+          "cacheWrite": 0,
+          "rawTotal": 10093675,
+          "hitRate": 0.9043,
+          "listWorthUsd": 5.666655,
+          "implied5hWorthUsd": 141.67,
+          "implied5hRatioVsPro": 5.45,
+          "implied5hRoundingRatioVsPro": [4.84, 6.22]
+        }
+      },
+      "modelBreakdownWeek36": {
+        "gemini-4-neon-high": {
+          "calls": 1396,
+          "input": 20796022,
+          "output": 2829338,
+          "cacheRead": 294630982,
+          "rawTotal": 318256342,
+          "listWorthUsd": 149.022783
+        },
+        "gemini-4-neon-xhigh": {
+          "calls": 442,
+          "input": 4382403,
+          "output": 637460,
+          "cacheRead": 119783892,
+          "rawTotal": 124803755,
+          "listWorthUsd": 40.676693
+        },
+        "gemini-4-hydrogen-tiered-high": {
+          "calls": 66,
+          "input": 709245,
+          "output": 105485,
+          "cacheRead": 3750380,
+          "rawTotal": 4565110,
+          "listWorthUsd": 2.136283
+        }
+      },
+      "checkpointsExcludedFromMain": {
+        "note": "SYSTEM/CHECKPOINT 压缩步骤按 #248/#258 口径未计入主值",
+        "weekCalls": 7,
+        "weekRawTotal": 3651333,
+        "weekWorthUsd": 1.318582
+      },
+      "pricesPerMtok": {
+        "neon": {"input": 3, "output": 15, "cacheRead": 0.15, "cacheWrite": 0},
+        "hydrogen": {"input": 1.5, "output": 7.5, "cacheRead": 0.075, "cacheWrite": 0},
+        "published": "2026-11-18",
+        "source": "Gemini Developer API (uniform 1M context)",
+        "gemini90Blend": 0.495,
+        "gemini90BlendFormula": "0.90×$0.15 + 0.095×$3 + 0.005×$15",
+        "mix": "conventions.geminiTokenMix 90/9.5/0.5"
+      },
+      "adoptedCalculation": {
+        "basis": "weekCumulative36 (36pp, Neon 98.89% of worth + Hydrogen 1.11% in shared Gemini pool)",
+        "weekWorthUsd": 532.87711,
+        "weekWorthRoundingIntervalUsd": [525.58, 540.38],
+        "ratioVsProNeonWeek": 6.23,
+        "proNeonAnchorWeekWorthUsd": 85.48971,
+        "weekGemini90Tokens": 1076519414,
+        "weekGemini90Yi": 10.765,
+        "monthWeeks": 4,
+        "monthGemini90Tokens": 4306077657,
+        "monthGemini90YiUnrounded": 43.061,
+        "storedYi": 43.06,
+        "monthGemini90RoundingIntervalYi": [42.47, 43.67],
+        "realUsdPerMtok": 0.023221087,
+        "sensitivities": {
+          "withCheckpointsWeekWorthUsd": 536.54,
+          "withCheckpointsMonthGemini90Yi": 43.36,
+          "neonOnlyExcludingHydrogenWeekWorthUsd": 526.94,
+          "neonOnlyExcludingHydrogenMonthGemini90Yi": 42.58,
+          "lowCache85MonthYi": 33.44,
+          "rawWeekYi": 12.434,
+          "rawMonthYi": 49.74,
+          "standardMixMonthYi": 72.13
+        }
+      },
+      "adopted": "google_ai_ultra_5x_us × gemini-4-neon = 43.06 亿/月 medium (gemini 90% workload). 36pp (4.48 亿 raw, $191.84 worth, 98.89% Neon + 1.11% Hydrogen) -> $532.88/week (6.23x Pro Neon), corroborated by 5h window 4pp -> $141.67/5h (5.45x Pro 5h)."
+    }
+  ]
+}

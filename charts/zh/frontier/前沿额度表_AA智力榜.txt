@@ -12,5 +12,5 @@ Artificial Analysis Intelligence Index v5.0.1 | Intelligence Index | 2026-11-21
 1     Claude Max 5x (9/14+)  USD 100     Claude Haiku 5.5   3580.49     0.00028  low     36.4845             Claude Haiku 5.5 (max)   —        max       model_configuration_reference
 2     Claude Max 5x (9/14+)  USD 100     Claude Sonnet 5.5  366.68      0.00273  low     54.5413             Claude Sonnet 5.5 (max)  —        max       model_configuration_reference
 3     Claude Max 5x (9/14+)  USD 100     Claude Opus 5.5    183.34      0.00545  medium  59.106              Claude Opus 5.5 (max)    —        max       model_configuration_reference
-4     Google AI Ultra 20x    USD 199.99  Gemini 4 Neon      130.9       0.01528  medium  61.3982             Gemini 4 Neon (xhigh)    —        xhigh     model_configuration_reference
+4     Google AI Ultra 20x    USD 199.99  Gemini 4 Neon      141.55      0.01413  medium  61.3982             Gemini 4 Neon (xhigh)    —        xhigh     model_configuration_reference
 5     Claude Pro             USD 20      Claude Fable 5.2   7.82        0.02558  medium  64.5636             Claude Fable 5.2 (max)   —        max       model_configuration_reference

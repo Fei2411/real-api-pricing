@@ -52,7 +52,7 @@
 <text x="66.000" y="469.000" font-size="12" fill="#697169" text-anchor="middle" font-weight="400" transform="rotate(-90 66 469.0)">Coding Agent Index</text>
 <text x="720.000" y="775.000" font-size="13" fill="#5D655E" text-anchor="middle" font-weight="400" >Real price · USD per million tokens</text>
 <text x="1338.000" y="775.000" font-size="12" fill="#737B74" text-anchor="end" font-weight="400" >Cheaper →</text>
-<path id="frontier" d="M120.000,274.740 L731.791,274.740 L873.895,280.714 L969.525,303.409 L1112.712,545.592 L1283.912,635.554 L1338.000,635.554" fill="none" stroke="#303630" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="frontier" d="M120.000,274.740 L742.583,274.740 L873.895,280.714 L969.525,303.409 L1112.712,545.592 L1283.912,635.554 L1338.000,635.554" fill="none" stroke="#303630" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.12578616" data-score="53.0999" data-x="440.941" data-y="343.549" transform="translate(440.941 343.549)"><title>GPT-6 Astra · Plus · $0.12579/MTok · 53.0999 · highCodex - GPT-6 Astra (Max) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#16A34A" opacity=".68"/>
 </g>
@@ -113,7 +113,10 @@
 <g class="point" data-billing="subscription" data-frontier="false" data-price="0.028929088" data-score="58.6396" data-x="643.711" data-y="274.740" transform="translate(643.711 274.740)"><title>Gemini 4 Neon · Google AI Pro · $0.02893/MTok · 58.6396 · mediumAntigravity CLI - Gemini 4 Neon (Xhigh) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#84CC16" opacity=".68" stroke="#5A8B0F" stroke-width=".9"/>
 </g>
-<g class="point" data-billing="subscription" data-frontier="true" data-price="0.015278075" data-score="58.6396" data-x="731.791" data-y="274.740" transform="translate(731.791 274.740)"><title>Gemini 4 Neon · Google AI Ultra 20x · $0.01528/MTok · 58.6396 · mediumAntigravity CLI - Gemini 4 Neon (Xhigh) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<g class="point" data-billing="subscription" data-frontier="false" data-price="0.023221087" data-score="58.6396" data-x="674.034" data-y="274.740" transform="translate(674.034 274.740)"><title>Gemini 4 Neon · Google AI Ultra 5x · $0.02322/MTok · 58.6396 · mediumAntigravity CLI - Gemini 4 Neon (Xhigh) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
+<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="#84CC16" opacity=".68" stroke="#5A8B0F" stroke-width=".9"/>
+</g>
+<g class="point" data-billing="subscription" data-frontier="true" data-price="0.014128576" data-score="58.6396" data-x="742.583" data-y="274.740" transform="translate(742.583 274.740)"><title>Gemini 4 Neon · Google AI Ultra 20x · $0.01413/MTok · 58.6396 · mediumAntigravity CLI - Gemini 4 Neon (Xhigh) · Exact served-model reference only; product harness and quota-measurement effort are unverified. Not a benchmark measurement of this subscription or API channel.</title>
 <rect x="-11" y="-11" width="22" height="22" rx="6" fill="#FFF" stroke="#84CC16" stroke-width="1.35"/>
 <circle r="4" fill="#84CC16"/>
 </g>
@@ -407,10 +410,10 @@
 <path d="M0 -5.5L5.5 0 0 5.5 -5.5 0Z" fill="white" stroke="#84CC16" stroke-width="1.5" opacity=".68"/>
 </g>
 <g class="front-label" data-model="gemini-4-neon">
-<path d="M726.560,260.681Q726.560,231.740 715.791,231.740" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="709.791" y="212.740" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Antigravity CLI · Gemini 4 Neon · xhigh</text>
-<text x="709.791" y="232.740" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Google AI Ultra 20x</text>
-<text x="709.791" y="252.740" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.01528</text>
+<path d="M737.352,260.681Q737.352,231.740 726.583,231.740" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="720.583" y="212.740" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Antigravity CLI · Gemini 4 Neon · xhigh</text>
+<text x="720.583" y="232.740" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Google AI Ultra 20x</text>
+<text x="720.583" y="252.740" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.01413</text>
 </g>
 <g class="front-label" data-model="claude-opus-5.5">
 <path d="M876.176,265.889Q876.176,241.714 879.895,241.714" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
@@ -469,7 +472,7 @@
 <path d="M231.39999999999998 849l5 5-5 5-5-5Z" fill="none" stroke="#8B958D" stroke-width="1.2"/>
 <text x="245.400" y="858.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >Metered API</text>
 <text x="56.000" y="898.000" font-size="12" fill="#727B72" text-anchor="start" font-weight="400" >Default month = 4 weeks; Kimi pool = 5×, Droid = 2× weekly · Dollar/credit: 97% cache / 2.5% input / 0.5% output · Direct totals unchanged</text>
-<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >102 subscription positions / 14 API positions / 5 frontier positions</text>
+<text x="1384.000" y="898.000" font-size="12" fill="#727B72" text-anchor="end" font-weight="400" >103 subscription positions / 14 API positions / 5 frontier positions</text>
 <text x="56.000" y="922.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Highest archived configuration reference; harness and effort shown. Product/quota alignment unverified, not channel measurements.</text>
 <text x="56.000" y="943.000" font-size="11" fill="#929A90" text-anchor="start" font-weight="400" >Subscriptions and metered APIs share one frontier; line segments are visual guides, not purchasable plans.</text>
 <text x="1384.000" y="943.000" font-size="11" fill="#929A90" text-anchor="end" font-weight="400" >artificialanalysis.ai/agents/coding-agents</text>
