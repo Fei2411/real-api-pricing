@@ -1,0 +1,175 @@
+{
+  "collectedAt": "2026-11-25",
+  "collectionMethod": "Manual capture around 10:40 Beijing time / 02:40Z on 2026-11-25 of the official OpenCode Go documentation page (https://opencode.ai/docs/go/, which 301-redirects to /docs/console/go/), the Go landing page (https://opencode.ai/go, which 302-redirects to /console/go), the documentation markdown export (https://opencode.ai/docs/console/go.md), the v2 documentation page (https://opencode.ai/v2/docs/console/go), the OpenCode console changelog RSS feed (https://opencode.ai/console/changelog/rss.xml) and the full model catalog endpoint referenced by the documentation (https://opencode.ai/inference/go/v1/models). All surfaces were compared against the 2026-11-24 captures of the same URLs. Every price, limit, estimate and sentence below is transcribed as published, and the models API entry was read field by field against the landing page and the documentation. Research-only — no adopted row generated, no adopted value changed, no script changed, no chart or site change.",
+  "sources": [
+    "https://opencode.ai/docs/go/",
+    "https://opencode.ai/go",
+    "https://opencode.ai/docs/console/go.md",
+    "https://opencode.ai/v2/docs/console/go",
+    "https://opencode.ai/console/changelog/rss.xml",
+    "https://opencode.ai/inference/go/v1/models"
+  ],
+  "scope": "OpenCode Go official catalog only. The change on 2026-11-25 is that a new free limited-time model 'HungerG Free' (model id hungerg-free) appeared in the official OpenCode Go catalog: a new entry in the models API, a new row in the Go landing-page model table carrying the 'New' and 'Limited time' labels, a landing-page announcement banner 'HungerG is now available in Go', and two new sentences in the official documentation. The models API catalog moved 36 → 37 entries and the landing-page counter moved 'View all 31 models' → 'View all 32 models'. This is a free, time-limited entry with no dollar price and no monthly allowance, so it is recorded here as evidence only. No leaderboard/score data, no adopted.csv row, no computed allowance, no script change in this file.",
+  "adoptionStatus": "research-only; not adopted; no opencode_go × hungerg-free row in adopted.csv yet — adding one requires an OPENCODE_GO_MODELS entry in scripts/build_adopted.py, left to maintainer review",
+  "observed": {
+    "freeModel": {
+      "name": "HungerG Free",
+      "nameNote": "The models API, the Go landing page and the official documentation all publish the same display name 'HungerG Free'.",
+      "modelId": "hungerg-free",
+      "entryType": "free limited-time model",
+      "entryTypeNote": "This is a free, time-limited catalog entry, not a paid row. The models API cost.text block publishes input 0, output 0 and cache read 0; the landing page marks the row 'Limited time'; the documentation describes it as 'Free for a limited time.' The entry therefore carries no dollar allowance and is recorded here as evidence only.",
+      "canonicalId": null,
+      "canonicalIdNote": "The models API entry for hungerg-free publishes no canonical_id field at all (unlike e.g. longcat-2.5, whose canonical_id carries a 'meituan/' prefix). No canonical id is derived here.",
+      "ownedBy": "opencode",
+      "ownedByNote": "The models API publishes owned_by = 'opencode' for this entry.",
+      "family": null,
+      "familyNote": "The models API publishes no family field for this entry.",
+      "vendor": null,
+      "vendorNote": "The models API publishes no vendor field for this entry, and neither the landing page nor the documentation states a vendor name. No vendor is derived or invented here.",
+      "openWeights": false,
+      "description": "Stealth reasoning model, free for a limited time",
+      "descriptionSource": "models API description field, transcribed verbatim",
+      "releaseDate": "2026-11-24",
+      "lastUpdated": "2026-11-24",
+      "modalities": {
+        "input": [
+          "text",
+          "image/jpeg",
+          "image/png",
+          "image/gif",
+          "image/webp",
+          "video/mp4",
+          "video/quicktime",
+          "video/x-matroska"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "modalitiesNote": "Transcribed exactly as the models API publishes them, including the per-format media types. These are not collapsed into a generic 'image' or 'video' value, and no format is added or removed.",
+      "capabilities": {
+        "tools": {
+          "supported": true
+        },
+        "reasoning": {
+          "supported": true
+        },
+        "system_updates": false,
+        "effort_updates": false
+      },
+      "limit": {
+        "context": 1000000,
+        "input": 1000000,
+        "output": 65536
+      },
+      "threePartPrice": {
+        "unit": "USD / MTok",
+        "inputPerMTokUsd": 0,
+        "outputPerMTokUsd": 0,
+        "cachedReadPerMTokUsd": 0,
+        "cacheWritePerMTokUsd": null,
+        "cacheWriteNote": "The models API cost.text block for hungerg-free has no cache write key at all — the key is absent, not an explicit 0 and not a dash on the page. Cache write price is therefore not published for this entry and is recorded as absent rather than as 0.",
+        "sourceQuote": "models API cost.text: input.price = 0, input.cache.read = 0, output.price = 0"
+      },
+      "monthlyUsage": {
+        "apiMonthlyUsage": null,
+        "apiSource": "models API go block, key monthly_usage",
+        "apiNote": "The models API explicitly publishes go.monthly_usage = null for hungerg-free: the key is present and its value is null. This is neither 0 nor an absent field, and no monthly dollar limit is published for this entry in the interface.",
+        "landingPageDisplay": {
+          "go": "∞",
+          "goPlus": "∞"
+        },
+        "landingPageNote": "The landing-page row publishes ∞ in both the Est. requests / 5 hr cell and the Monthly limit cell, for Go and for Go Plus. The infinity sign is transcribed as published and is not converted into a dollar amount."
+      },
+      "goBlock": {
+        "monthly_usage": null,
+        "training": false,
+        "zdr": true,
+        "limited_regions": false,
+        "featured": true,
+        "source": "models API go block for hungerg-free"
+      },
+      "landingPageRow": {
+        "rowAsPublished": "HungerG Free | New | Limited time | Est. requests / 5 hr: Go: ∞; Go Plus: ∞ | Monthly limit: Go: ∞; Go Plus: ∞",
+        "labels": [
+          "New",
+          "Limited time"
+        ],
+        "estRequestsPer5h": {
+          "go": "∞",
+          "goPlus": "∞"
+        },
+        "monthlyLimitDisplay": {
+          "go": "∞",
+          "goPlus": "∞"
+        },
+        "note": "The Go landing-page model table lists this row under model id hungerg-free, with the 'New' badge and the 'Limited time' note next to the model name. Both the Est. requests / 5 hr cell and the Monthly limit cell publish ∞ for Go and for Go Plus (screen-reader text 'Go: ∞; Go Plus: ∞'). The row has no Go Teams column. The infinity signs are kept as published and are not restated as any dollar figure.",
+        "landingPageBanner": "HungerG is now available in Go",
+        "landingPageBannerNote": "The announcement banner on the /go landing page carries a 'New' badge and the sentence 'HungerG is now available in Go'."
+      },
+      "documentationQuotes": {
+        "estimatedRequestsNote": "HungerG Free: Free for a limited time.",
+        "estimatedRequestsNoteSource": "Official documentation markdown export https://opencode.ai/docs/console/go.md — the bullet immediately above the '### Estimated requests' heading.",
+        "privacyNote": "HungerG Free: Free for a limited time. No data training: your prompts and completions are not used to train models.",
+        "privacyNoteSource": "Official documentation markdown export https://opencode.ai/docs/console/go.md — the bullet list under '## Privacy'.",
+        "priceTableNote": "The documentation price tables, the 'Estimated requests' tables and the data-retention table carry no HungerG Free row; the string 'HungerG Free' occurs in the documentation only in the two sentences quoted above. The documentation therefore publishes no dollar price and no retention figure for this entry, and none is inferred here.",
+        "apiCrossCheck": "The models API go block publishes training = false and zdr = true, which is consistent with the documentation privacy sentence 'No data training: your prompts and completions are not used to train models.'"
+      },
+      "endpoint": {
+        "apiBaseUrl": "https://opencode.ai/inference/go/openai/v1",
+        "sdk": "@ai-sdk/openai-compatible",
+        "opencodeaiSdk": "@opencode/ai/providers/openai-compatible",
+        "recommendedApi": "chat-completions",
+        "source": "models API api['chat-completions'] block and the recommended_api field for hungerg-free"
+      },
+      "modelCount": {
+        "landingPage": {
+          "before": 31,
+          "after": 32,
+          "pageWording": "'View all 31 models' → 'View all 32 models'"
+        },
+        "modelsApi": {
+          "before": 36,
+          "after": 37,
+          "note": "The models API catalog returned 37 model entries on 2026-11-25 versus 36 in the 2026-11-24 capture, with hungerg-free as the only added row."
+        },
+        "changeArithmetic": "The models API net change is +1: hungerg-free is the only newly published entry. The landing-page counter moved 31 → 32. These are the published list lengths observed in the two captures, not computed adopted values."
+      }
+    }
+  },
+  "otherObservations": [
+    {
+      "topic": "Kimi K3.1 Pro monthly limit change",
+      "observation": "A monthly-limit change for Kimi K3.1 Pro was observed in the OpenCode Go models interface on the same day and is recorded in a separate same-day record under its own file; this file does not treat it as its subject.",
+      "note": "Recorded only as a pointer. The new limit figures are deliberately not copied here, and no adopted value changed."
+    },
+    {
+      "topic": "Documentation gained Decision models and Embedding models sections",
+      "observation": "The official documentation markdown export now carries '### Decision models' and '### Embedding models' sections under '## Endpoints', listing six model ids in total: jev-1.14, gemini-decision-1 and gpt-6-luna-decision for decision models, and text-embedding-3-small, qwen3-embedding-8b and gemini-embedding-2 for embedding models. None of the six appears in the /go landing-page coding model table on 2026-11-25.",
+      "note": "Recorded only. Per the existing repo convention these models are not tracked, so their price tables are not reproduced here and no adopted value changed."
+    },
+    {
+      "topic": "Changelog RSS is byte-identical to the 2026-11-24 capture",
+      "observation": "The OpenCode console changelog RSS is byte-identical to the 2026-11-24 capture of the same URL (5743 bytes, 11 items); the newest item is still 2026-11-14 'Pay for Go with WeChat Pay'. No RSS entry announces HungerG Free.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Landing page still carries a hidden GLM-5.2 row",
+      "observation": "The Go landing page still contains a model row for glm-5.2 that is not shown in the published table (the row element carries the hidden attribute), and the models API still does not list glm-5.2 among its 37 entries. That row's own figures are not restated here.",
+      "note": "Recorded only; the delisting decision for that row is left to upstream, and no adopted value changed."
+    },
+    {
+      "topic": "Plan prices unchanged",
+      "observation": "The documentation plan table still publishes Go $10/month, Go Plus $40/month and Go Teams $20/member/month with a 2-member minimum, unchanged from the 2026-11-24 capture.",
+      "note": "Recorded only. No plan price is recomputed, converted or expanded here, and no adopted value changed."
+    }
+  ],
+  "computationNote": "This file computes no monthlyYi, no blended per-MTok price, no mixed unit price, no derived allowance and no adopted value; all numbers are transcribed as published on the models API, the Go landing page and the official documentation. The ∞ signs published for HungerG Free are kept as published and are not converted into a dollar amount, and the absent cache write key is recorded as absent rather than as 0. The model-count change is stated as the published list lengths observed in the two captures, not as a computed adopted quantity.",
+  "relatedFiles": [
+    "opencode-go-longcat25-round1-2026-11-23.json",
+    "opencode-go-qwen4-max-round2-2026-11-17.json",
+    "opencode-go-hy4-round1-2026-11-05.json"
+  ],
+  "confidence": "medium",
+  "basis": "official"
+}
