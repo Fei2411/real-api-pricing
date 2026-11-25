@@ -156,6 +156,8 @@ const snapshotSchema = z.object({
         issue("monthly_tokens and monthly_yi disagree", ["points", i, "monthly_tokens"]);
     }
   });
+  if (data.points.some((point) => point.workload === "gemini") && !data.conventions.geminiTokenMix)
+    issue("conventions.geminiTokenMix is required when points use the gemini workload", ["conventions", "geminiTokenMix"]);
   const configs = new Map<string, typeof data.configurations[number]>();
   data.configurations.forEach((config, i) => {
     if (configs.has(config.configuration_id))

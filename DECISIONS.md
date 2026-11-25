@@ -5,7 +5,7 @@
 
 ## 2026-11-24 · Gemini 订阅独立 90% 负载档（`geminiTokenMix`）并采用 Google AI Ultra 20x × Gemini 4 Neon（130.90 亿/月）
 
-- **新增 Gemini 90% 负载档（`conventions.geminiTokenMix`：缓存读 90% / 普通输入 9.5% / 输出 0.5%）**：综合维护者本机 Gemini 全量遥测（73.73 亿 raw token、35,589 次调用，汇总 89.88% / 9.52% / 0.60%，输入侧缓存命中率 90.42%，其中 Gemini 4 Neon / Carbon 近期可达 91–94.5%）及近期采样（Argon 90%、Pro Neon 88.04%、Ultra 20x Neon 93.58%），旧低缓存 85% 档已明显偏保守。裁定新增独立的 **Gemini 90% 负载档**用于**所有在用 Gemini 订阅行**；**即将下架的 `google_ai_pro_us × gemini-3.6-flash`（24.89 亿）**与 **StepFun 全系（12 行）**留在低缓存 85% 档；**所有 Gemini 按量 API 行**（`google_ai_{carbon,neon,argon,hydrogen}_api`）维持标准 97% 档不动。
+- **新增 Gemini 90% 负载档（`conventions.geminiTokenMix`：缓存读 90% / 普通输入 9.5% / 输出 0.5%）**：综合维护者本机 Gemini 全量遥测（73.73 亿 raw token、35,589 次调用，汇总 89.88% / 9.52% / 0.60%，输入侧缓存命中率 90.42%，其中 Gemini 4 Neon / Carbon 近期可达 91–94.5%）及近期采样（Argon 90%、Pro Neon 88.04%、Ultra 20x Neon 93.37%），旧低缓存 85% 档已明显偏保守。裁定新增独立的 **Gemini 90% 负载档**用于**所有在用 Gemini 订阅行**；**即将下架的 `google_ai_pro_us × gemini-3.6-flash`（24.89 亿）**与 **StepFun 全系（12 行）**留在低缓存 85% 档；**所有 Gemini 按量 API 行**（`google_ai_{carbon,neon,argon,hydrogen}_api`）维持标准 97% 档不动。
 - **7 条既有 Gemini 订阅行随 90% 负载档重算**（混合价：Flash `$0.19125→$0.1575/MTok`，Carbon/Argon `$0.425→$0.33/MTok`，Neon `$0.6375→$0.495/MTok`）：
   - `devin_max × gemini-4-carbon`（medium）：18.82 → **24.24 亿/月**（`$0.08251/MTok`）
   - `devin_max × gemini-4-neon`（low）：12.55 → **16.16 亿/月**（`$0.12376/MTok`）
