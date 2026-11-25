@@ -40,15 +40,15 @@
 30    阿里云百炼 Token Plan Essential (¥79)  CNY 79                  DeepSeek V4.1 Flash            34.938      0.00334  medium
 31    阿里云百炼 Token Plan Essential (¥79)  CNY 79                  Qwen3.8 Flash                  34.483      0.00338  medium
 32    Step Plan Plus (¥99)                   CNY 99                  Step 3.7 Flash                 34.353      0.00425  medium
-33    OpenCode Go                            USD 10                  LongCat 2.0                    31.056      0.00322  medium
-34    Claude Pro                             USD 20                  Claude Opus 5.5                30.46       0.00657  high
-35    Command Code GOAT                      USD 10                  Qwen3.7 Flash                  27.701      0.00361  medium
-36    Command Code GOAT                      USD 10                  DeepSeek V4.1 Flash Fast       26.762      0.00374  medium
-37    Command Code GOAT                      USD 10                  MiMo V2.6 Flash                26.261      0.00381  medium
-38    Claude Pro                             USD 20                  Claude Opus 5                  25.89       0.00772  high
-39    Claude Pro                             USD 20                  Claude Opus 4.8                25.89       0.00772  low
-40    Command Code GOAT                      USD 10                  LongCat 2.0                    25.88       0.00386  medium
-41    Google AI Pro                          USD 19.99               Gemini 3.8 Flash               25.81       0.00775  high
+33    Google AI Pro                          USD 19.99               Gemini 3.8 Flash               31.34       0.00638  high
+34    OpenCode Go                            USD 10                  LongCat 2.0                    31.056      0.00322  medium
+35    Claude Pro                             USD 20                  Claude Opus 5.5                30.46       0.00657  high
+36    Command Code GOAT                      USD 10                  Qwen3.7 Flash                  27.701      0.00361  medium
+37    Command Code GOAT                      USD 10                  DeepSeek V4.1 Flash Fast       26.762      0.00374  medium
+38    Command Code GOAT                      USD 10                  MiMo V2.6 Flash                26.261      0.00381  medium
+39    Claude Pro                             USD 20                  Claude Opus 5                  25.89       0.00772  high
+40    Claude Pro                             USD 20                  Claude Opus 4.8                25.89       0.00772  low
+41    Command Code GOAT                      USD 10                  LongCat 2.0                    25.88       0.00386  medium
 42    MiMo Token Plan Standard 夜间0.8×      ¥99（国际 $16）         MiMo V2.6 Flash                25.28       0.00633  medium
 43    MiMo Token Plan Standard 夜间0.8×      ¥99（国际 $16）         MiMo V2.5                      25.28       0.00633  medium
 44    Google AI Pro                          USD 19.99               Gemini 3.6 Flash               24.89       0.00803  medium
@@ -114,17 +114,17 @@
 104   Claude Pro                             USD 20                  Claude Fable 5.2               7.82        0.02558  medium
 105   MiMo Token Plan Lite 日间              ¥39（国际 $6）          MiMo V2.6 Flash                7.54        0.00796  medium
 106   MiMo Token Plan Lite 日间              ¥39（国际 $6）          MiMo V2.5                      7.54        0.00796  medium
-107   Command Code GOAT                      USD 10                  GPT 5.6 Luna                   6.579       0.0152   medium
-108   Command Code GOAT                      USD 10                  MiniMax M3                     6.555       0.01526  medium
-109   OpenCode Go                            USD 10                  GLM 5.3                        6.468       0.01546  medium
-110   Devin Pro                              USD 20                  Claude Sonnet 5.5              6.44        0.03106  medium
-111   GLM Coding Lite (v3 ¥118) 忙时         CNY 118                 GLM 5.3 Flash                  6.24        0.0279   high
-112   GLM Coding Lite (v2 ¥49) 忙时          CNY 49                  GLM 5.3 Flash                  6.24        0.01158  high
-113   ChatGPT Plus                           USD 20                  GPT 5.6 Sol                    6.16        0.03247  medium
-114   MiniMax Token Plan Plus                CNY 49                  MiniMax M3                     6           0.01205  high
-115   MiniMax Token Plan Plus                CNY 49                  MiniMax M2.7                   6           0.01205  medium
-116   SuperGrok                              USD 30                  Grok 4.7                       5.72        0.05245  medium
-117   Google AI Pro                          USD 19.99               Gemini 4 Neon                  5.36        0.03729  medium
+107   Google AI Pro                          USD 19.99               Gemini 4 Neon                  6.91        0.02893  medium
+108   Command Code GOAT                      USD 10                  GPT 5.6 Luna                   6.579       0.0152   medium
+109   Command Code GOAT                      USD 10                  MiniMax M3                     6.555       0.01526  medium
+110   OpenCode Go                            USD 10                  GLM 5.3                        6.468       0.01546  medium
+111   Devin Pro                              USD 20                  Claude Sonnet 5.5              6.44        0.03106  medium
+112   GLM Coding Lite (v3 ¥118) 忙时         CNY 118                 GLM 5.3 Flash                  6.24        0.0279   high
+113   GLM Coding Lite (v2 ¥49) 忙时          CNY 49                  GLM 5.3 Flash                  6.24        0.01158  high
+114   ChatGPT Plus                           USD 20                  GPT 5.6 Sol                    6.16        0.03247  medium
+115   MiniMax Token Plan Plus                CNY 49                  MiniMax M3                     6           0.01205  high
+116   MiniMax Token Plan Plus                CNY 49                  MiniMax M2.7                   6           0.01205  medium
+117   SuperGrok                              USD 30                  Grok 4.7                       5.72        0.05245  medium
 118   SuperGrok                              USD 30                  Grok 4.6                       5.16        0.05814  high
 119   SuperGrok                              USD 30                  Grok 4.5                       5.16        0.05814  medium
 120   阿里云百炼 Token Plan Essential (¥79)  CNY 79                  Qwen4 Max                      5.085       0.02292  medium
@@ -199,9 +199,9 @@
 189   Command Code GOAT                      USD 10                  Inkling                        0.952       0.10504  medium
 190   阿里云百炼 Token Plan Lite (¥39)       CNY 39                  GLM 5.3                        0.877       0.0656   medium
 191   Command Code GOAT                      USD 10                  GLM 5                          0.851       0.11751  medium
-192   Kimi 会员 49 (v1) †                    CNY 49                  Kimi K2.7 Code                 0.78        0.09267  medium
-193   OpenCode Go                            USD 10                  Gemini 4 Argon Contributor     0.761       0.13141  medium
-194   Google AI Pro                          USD 19.99               Gemini 4 Argon                 0.66        0.30288  low
+192   Google AI Pro                          USD 19.99               Gemini 4 Argon                 0.85        0.23518  low
+193   Kimi 会员 49 (v1) †                    CNY 49                  Kimi K2.7 Code                 0.78        0.09267  medium
+194   OpenCode Go                            USD 10                  Gemini 4 Argon Contributor     0.761       0.13141  medium
 195   Command Code GOAT                      USD 10                  GLM 5.1                        0.647       0.15456  medium
 196   Command Code GOAT                      USD 10                  Qwen3.8 Max                    0.62        0.16129  medium
 197   Command Code GOAT                      USD 10                  Qwen3.8 Max 0902               0.62        0.16129  medium

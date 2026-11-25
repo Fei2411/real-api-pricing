@@ -15,7 +15,8 @@
 3. **每个点 = (订阅套餐, 实际服务模型)**，Y 轴按实际服务模型查分。
 4. **负载折算**：凡是美元额度、credits 额度、三段价、模型间价格比换算成 token 的，统一按 `conventions.json` 的负载档折算，这是比较基准，不代表任何平台的实测负载。
    - **标准档** `standardTokenMix`：默认。
-   - **低缓存档** `lowCacheTokenMix`：只用于经裁定、实测确实打不到标准缓存的渠道（当前 Step 全系、Google，以及 2026-11-21/24 裁定的 Devin Max × Gemini 4 Carbon / Neon）。缓存固定，输出占比跟随标准档，余量归输入。
+   - **Gemini 档** `geminiTokenMix`：用于经 2026-11-24 裁定的 Gemini 订阅实测与共享池换算（当前 Google AI Pro/Ultra 除即将下架的 3.6 Flash 外全部行，以及 Devin Max × Gemini 4 Carbon / Neon；Gemini 按量 API 行保持标准档横比）。缓存固定，输出占比跟随标准档，余量归输入。
+   - **低缓存档** `lowCacheTokenMix`：只用于经裁定、实测缓存仍显著偏低的渠道（当前 Step 全系与即将下架的 Google AI Pro × Gemini 3.6 Flash）。缓存固定，输出占比跟随标准档，余量归输入。
    - **Anthropic 档** `anthropicTokenMix`：Anthropic 单独收缓存写入费、未命中输入几乎全部走缓存写，故标准档的普通输入份额按 5 分钟缓存写入价计；用于 Anthropic 按量 API 行，以及经裁定折算的 Anthropic 面板实测。
    - 不为单个渠道或单个用户样本另设专用负载档。某家实测缓存偏低时，先区分是渠道本身的属性还是客户端 harness 的问题。
    - **带 token 分项的实测样本**（面板反推、本地日志、ccusage）：按该模型标价把段内 token 折成 list-worth，÷ 段占额度 → 周 worth × 4 周，再 ÷ 该渠道负载档的混合价得到月 token（2026-09-30 裁定统一；此前只有 Devin Max、Claude Pro × Opus 5.5、Droid Max 这样做）。例外：Factory Droid 的 30 天窗 = 2× 7 天窗，月 = 周 worth × 2（2026-10-03 裁定）。Anthropic 样本的缓存写按实际档位（1h / 5m）计价。
@@ -50,7 +51,7 @@
 - **Kimi**：月池 = 周池 × 5，不套通用的 4 周。¥49 档无 K3 调用权限，只排除该档的 K3 点；K2.7 Standard 所有会员可用。
 - **GLM Coding Plan**：按官方周积分和三段积分系数套标准负载。忙时 1×、中间值 1.5×、闲时 2× 是三个独立情景点，不互相替代。
 - **Step Plan**：按阶跃国内站官方月度 Credit 池（1M Credit = ¥1）经人民币三段价折算，用低缓存档 `lowCacheTokenMix`；国际站美元牌价不同，不采用；旧 Coding Plan 的 Prompt/5h 口径仅留作证据。
-- **Google**：Antigravity 额度按 API worth 合池扣减（官方机制，段内已实证）。实测样本按 Gemini 标价折 worth 后用低缓存档换算（实测缓存 82~84%，打不到标准档；2026-09-30 裁定，取代 2026-09-21 的 raw 口径）；Ultra 5x/20x 按官方 worth 倍率派生，置信度 low。
+- **Google**：Antigravity 额度按 API worth 合池扣减（官方机制，段内已实证）。实测样本按 Gemini 标价折 worth 后用 Gemini 负载档 `geminiTokenMix` 换算（2026-11-24 裁定由原 85% 低缓存档调高至 90%，覆盖 Gemini 4 全系与 3.8 Flash，即将下架的 3.6 Flash 留低缓存档；Gemini 按量 API 仍用标准档）；Ultra 20x × Gemini 4 Neon 为本机直测（medium），Ultra 5x/20x × 3.8 Flash 按官方 worth 倍率派生（low）。
 - **汇率**：取 `conventions.json` 的 `usdPerCny`（历史字段名，实际方向为 CNY/USD），来源日期在 `exchangeRate`。不改历史 research 文件里的旧汇率。
 - **促销**：促销口径必须标截止日，到期后复核。订阅内明确不计额度的模型，真实单价记为 ≈$0，用专用刻度位表示。
 - **数据快照日期**：`data/conventions.json` 的 `updatedAt` 是网页与 README 显示的快照日期（经 compute.py 写入 `derived/points.json` 的 generatedAt）；改采用值或口径时同步改为当天；CI 会在 adopted.csv 变化而 updatedAt 未推进过 base 分支时报错；base 已是当天时，updatedAt 与 base 相同且为今天（UTC 或 UTC+8 任一）也算通过（`scripts/checks/verify_snapshot_date.py`）。

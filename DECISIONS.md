@@ -3,6 +3,21 @@
 本地 `AGENTS.md`（不入库）只放 Agent 工作流程；口径与规则见 [`CONVENTIONS.md`](CONVENTIONS.md)；本文件记录每条采用值的取舍（旧值 → 新值 → 依据 → 未采来源）。
 最权威的表述仍在 `scripts/build_adopted.py` 的 `decision_note` 和 `data/research/` 证据文件里；本文件是按时间的索引摘要。改数只能改 `build_adopted.py`，改完在这里同步记一笔。
 
+## 2026-11-24 · Gemini 订阅独立 90% 负载档（`geminiTokenMix`）并采用 Google AI Ultra 20x × Gemini 4 Neon（130.90 亿/月）
+
+- **新增 Gemini 90% 负载档（`conventions.geminiTokenMix`：缓存读 90% / 普通输入 9.5% / 输出 0.5%）**：综合维护者本机 Gemini 全量遥测（73.73 亿 raw token、35,589 次调用，汇总 89.88% / 9.52% / 0.60%，输入侧缓存命中率 90.42%，其中 Gemini 4 Neon / Carbon 近期可达 91–94.5%）及近期采样（Argon 90%、Pro Neon 88.04%、Ultra 20x Neon 93.58%），旧低缓存 85% 档已明显偏保守。裁定新增独立的 **Gemini 90% 负载档**用于**所有在用 Gemini 订阅行**；**即将下架的 `google_ai_pro_us × gemini-3.6-flash`（24.89 亿）**与 **StepFun 全系（12 行）**留在低缓存 85% 档；**所有 Gemini 按量 API 行**（`google_ai_{carbon,neon,argon,hydrogen}_api`）维持标准 97% 档不动。
+- **7 条既有 Gemini 订阅行随 90% 负载档重算**（混合价：Flash `$0.19125→$0.1575/MTok`，Carbon/Argon `$0.425→$0.33/MTok`，Neon `$0.6375→$0.495/MTok`）：
+  - `devin_max × gemini-4-carbon`（medium）：18.82 → **24.24 亿/月**（`$0.08251/MTok`）
+  - `devin_max × gemini-4-neon`（low）：12.55 → **16.16 亿/月**（`$0.12376/MTok`）
+  - `google_ai_pro_us × gemini-3.8-flash`（high）：25.81 → **31.34 亿/月**（`$0.00638/MTok`）
+  - `google_ai_pro_us × gemini-4-argon`（low）：0.66 → **0.85 亿/月**（`$0.23518/MTok`）
+  - `google_ai_pro_us × gemini-4-neon`（medium）：5.36 → **6.91 亿/月**（`$0.02893/MTok`）
+  - `google_ai_ultra_5x_us × gemini-3.8-flash`（low，Pro ×5）：129.05 → **156.7 亿/月**（`$0.00638/MTok`）
+  - `google_ai_ultra_20x_us × gemini-3.8-flash`（low，Pro ×20）：516.2 → **626.8 亿/月**（`$0.00319/MTok`）
+- **新增采用 Google AI Ultra 20x × Gemini 4 Neon（#258，main 精选图）**：**130.90 亿/月 medium**（`$0.01528/MTok`，Gemini 90% 负载档）。维护者本机 Antigravity 主端 + T3Code Antigravity ACP（同一 Google AI Ultra 20x `$199.99/月` 账号，去重无重复）自 2026-11-23 17:20:51 PT 新周窗起四次面板读数（11-23 22:53 PT 剩 85% / 11-24 01:42 PT 剩 79% / 11-24 05:59 PT 剩 72% / 11-24 19:42 PT 剩 64%，累计 **36pp**；Claude/GPT 全程 100% 未动），共 5,847 次纯 MODEL 调用（High 1,117 / XHigh 4,730），raw 1,387,418,586（读 1,288,247,042 / 入 91,470,140 / 出 7,701,404 / 写 0，命中 93.37%），段 worth `$583.168536` ÷ 36pp ＝ **`$1,619.91260/周`**（18.95× Pro Neon 周 `$85.49`）。÷ `$0.495/MTok` × 4 周 ＝ 13,090,202,835 token（未舍入 130.902 亿 → `round(..., 2)` 存 **130.90 亿**；36pp ±0.5pp 区间 129.11–132.75 亿）。不含 31 次 `SYSTEM/CHECKPOINT` 压缩调用（若计入 +`$8.07`，周 `$1,642.33` / 月 132.71 亿）；三段 5h 窗独立实测 #2 29pp（`$521.36/5h`，20.04× Pro 5h）、#3 13pp（`$464.51/5h`，17.86× Pro 5h）、#4 12pp（`$485.68/5h`，18.67× Pro 5h）合并 54pp 推 `$499.74/5h`（19.21× Pro 5h），均作旁证。不派生 Ultra 5x × Neon；对照不采：原低缓存 85% 口径 101.64 亿、raw 154.16 亿、标准 97% 口径 219.28 亿。
+- **不改**：`google_ai_pro_us × gemini-3.6-flash`（24.89 亿，`lowCache`）、StepFun 全系 12 行（`lowCache`）、所有 Gemini 按量 API 行（`standard`）、OpenCode Go / Command Code GOAT / Droid Max 各行均不动。
+- **证据**：`data/research/gemini-token-mix-round1-2026-11-24.json`、`data/research/local-samples-round4-2026-11-23.json`（#258）。
+
 ## 2026-11-24 · Devin Max 周池统一按 $200/周重算（新增 Carbon / Sonnet 5.5 / Fable 5.2 / Neon / GPT-6.1 Sol，重算 Astra / Opus 5.5）
 
 - **锚点采用（#251）**：新增 `devin_max × gemini-4-carbon` = **18.82 亿/月 medium**（低缓存档，`$0.10627/MTok`）。Devin Max $200/月，不是 Devin Pro。维护者把周 API 等价定为 **$200**（月 $800），不把 7%（$201.21）与 9%（$191.07）两次拉伸加权，也不取中点；多出的 2 个百分点隐含 $155.55 不采。TokenView `prices.json`：入 $2 / 出 $10 / 缓存读 $0.10 / 缓存写 $0（同 Google 11/30 前导入价）。低缓存混合价 $0.425/MTok（85/14.5/0.5）；周 470,588,235 token（4.71亿）×4 周＝1,882,352,941 token，未舍入 18.824亿，`round(..., 2)` 存 **18.82**。基线 2026-11-20 8:11 PM PT 周表 0%；5:40 AM PT 表仍是 9%（其间又多 $0.24）。

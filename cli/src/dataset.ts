@@ -133,6 +133,7 @@ const snapshotSchema = z.object({
     }).passthrough(),
     standardTokenMix: tokenMix,
     lowCacheTokenMix: tokenMix,
+    geminiTokenMix: tokenMix.optional(),
     anthropicTokenMix: anthropicMix,
   }).passthrough(),
 }).passthrough().superRefine((data, ctx) => {

@@ -306,6 +306,7 @@ function infoTable(result: Result): string {
     ["Allowances across models in one plan", conventions.allowancesAcrossModels as Cell],
     ["Generic month", `${text(conventions.monthWeeks as Cell)} weeks; vendor-specific monthly pools retain their adopted basis`],
     ["Standard workload", mix("standardTokenMix")], ["Anthropic workload", mix("anthropicTokenMix", true)],
+    ...(conventions.geminiTokenMix ? [["Gemini workload", mix("geminiTokenMix")] as [string, Cell]] : []),
     ["Low-cache workload", mix("lowCacheTokenMix")], ["Measured workload", conventions.measuredWorkload as Cell],
     ["Adopted exchange rate", usdPerCny ? `1 USD = ${usdPerCny} CNY` : "N/A"],
     ["Exchange rate date", exchange?.date as Cell], ["Exchange rate source", (exchange?.labelEn ?? exchange?.source) as Cell],

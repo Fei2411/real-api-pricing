@@ -221,9 +221,16 @@ GOOGLE_PRO_NEON_RAW_TOKENS = 55_958_318
 GOOGLE_PRO_NEON_WEEKLY_PP = 37
 GEMINI_NEON_LIST = (0.15, 3.0, 15.0)  # Gemini Developer API，2026-11-18：cache read $0.15 / input $3 / output $15；无显式 cache write，本段写 0
 assert sum(GOOGLE_PRO_NEON_SEGMENT.values()) == GOOGLE_PRO_NEON_RAW_TOKENS
+# Google AI Ultra 20x × Gemini 4 Neon —— 维护者本机 Antigravity 主端 + T3Code ACP 同一账号（issue #258）：
+#   2026-11-23 17:20:51–11-24 19:41:58 PT 四次面板读数（22:53 剩 85% / 01:42 剩 79% / 05:59 剩 72% / 19:42 剩 64%）累计 36pp，
+#   5,847 次纯 MODEL 调用（High 1,117 / XHigh 4,730），raw 1,387,418,586（命中 93.37%），段 worth $583.168536 → 周 $1,619.91。
+GOOGLE_ULTRA20X_NEON_SEGMENT = {"cache_read": 1_288_247_042, "input": 91_470_140, "output": 7_701_404}
+GOOGLE_ULTRA20X_NEON_RAW_TOKENS = 1_387_418_586
+GOOGLE_ULTRA20X_NEON_WEEKLY_PP = 36
+assert sum(GOOGLE_ULTRA20X_NEON_SEGMENT.values()) == GOOGLE_ULTRA20X_NEON_RAW_TOKENS
 # Devin Max 共享周池 —— 维护者把周 API 等价定为 $200（月 $800；issue #251，2026-11-24 确认适用于 Devin Max 全模型重算）。
 #   锚点：Gemini 4 Carbon（2026-11-20~21），不把 7%（$201.21）与 9%（$191.07）两次拉伸加权，也不取中点；+2pp 隐含 $155.55 不采。
-#   TokenView prices.json：cache read $0.10 / input $2 / output $10，cache write $0（低缓存混合价 $0.425/MTok）。
+#   TokenView prices.json：cache read $0.10 / input $2 / output $10，cache write $0（Gemini 90% 负载档混合价 $0.33/MTok，2026-11-24 由低缓存 85% 档 $0.425 迁入）。
 #   其余 6 款 Devin Max 主力模型（重算 Astra / Opus 5.5 + 新增 Sonnet 5.5 / Fable 5.2 / Gemini 4 Neon / GPT-6.1 Sol）
 #   统一按周 $200 × 4 = 月 $800 ÷ 各自所属负载档混合价派生（置信度 low，数据日期沿用 Carbon 锚点）。
 DEVIN_MAX_WEEKLY_USD = 200
@@ -337,8 +344,16 @@ LOW_CACHE_MIX = CONVENTIONS["lowCacheTokenMix"]
 
 
 def blended_low(cached: float, inp: float, out: float) -> float:
-    # 低缓存负载（step-5-preview 本机实测 mix）：用于实测打不到标准 97% cache 的渠道
+    # 低缓存负载（85/14.5/0.5）：用于 Step 全系与即将下架的 Gemini 3.6 Flash
     return LOW_CACHE_MIX["cache"] * cached + LOW_CACHE_MIX["input"] * inp + LOW_CACHE_MIX["output"] * out
+
+
+GEMINI_MIX = CONVENTIONS["geminiTokenMix"]
+
+
+def blended_gemini(cached: float, inp: float, out: float) -> float:
+    # Gemini 负载（90/9.5/0.5，2026-11-24 裁定）：用于 Gemini 订阅实测与共享池换算（不含按量 API 与待下架 3.6 Flash）
+    return GEMINI_MIX["cache"] * cached + GEMINI_MIX["input"] * inp + GEMINI_MIX["output"] * out
 
 
 ANTHROPIC_MIX = CONVENTIONS["anthropicTokenMix"]
@@ -685,12 +700,12 @@ def droid_pro_opus55_monthly_yi() -> float:
 
 def google_ai_pro_monthly_yi() -> float:
     # 两样本 worth 按百分点合并（B $11.8626 + #54 $204.915）÷175.65pp → 周 worth ×4周
-    #   ÷ 低缓存档混合价 $0.19125/MTok（2026-09-30 裁定带分项实测统一折算）
+    #   ÷ Gemini 90% 负载档混合价 $0.1575/MTok（2026-11-24 由低缓存 85% 档 $0.19125 迁入）
     weekly_worth = (worth_usd(GOOGLE_PRO_B_SEGMENT, GEMINI_FLASH_LIST)
                     + worth_usd(GOOGLE_PRO_ISSUE54_SEGMENT, GEMINI_FLASH_LIST)) / (
                         GOOGLE_PRO_B_WEEKLY_FRACTION * 100 + GOOGLE_PRO_ISSUE54_WEEKLY_PP) * 100
     return round(
-        weekly_worth * MONTH_WEEKS / blended_low(*GEMINI_FLASH_LIST) * 1e6 / YI,
+        weekly_worth * MONTH_WEEKS / blended_gemini(*GEMINI_FLASH_LIST) * 1e6 / YI,
         2,
     )
 
@@ -706,7 +721,7 @@ def google_ai_pro_raw_monthly_yi() -> float:
 
 
 def google_ai_pro_36_monthly_yi() -> float:
-    # issue #55 段 worth $25.824 ÷21.70pp → 周 worth ×4周 ÷ 低缓存档 $0.19125/MTok
+    # issue #55 段 worth $25.824 ÷21.70pp → 周 worth ×4周 ÷ 低缓存档 $0.19125/MTok（3.6 Flash 即将下架，维持低缓存档不迁入 90% 档）
     return round(
         worth_usd(GOOGLE_PRO_ISSUE55_SEGMENT, GEMINI_FLASH_LIST) / GOOGLE_PRO_ISSUE55_WEEKLY_PP
         * 100 * MONTH_WEEKS / blended_low(*GEMINI_FLASH_LIST) * 1e6 / YI,
@@ -715,10 +730,10 @@ def google_ai_pro_36_monthly_yi() -> float:
 
 
 def google_ai_pro_argon_monthly_yi() -> float:
-    # Argon 段 worth $1.0645 ÷15.1pp → 周 worth $7.05 ×4周 ÷ 低缓存档 $0.425/MTok
+    # Argon 段 worth $1.0645 ÷15.1pp → 周 worth $7.05 ×4周 ÷ Gemini 90% 负载档 $0.33/MTok（2026-11-24 由低缓存档 $0.425 迁入）
     return round(
         worth_usd(GOOGLE_PRO_ARGON_SEGMENT, GEMINI_ARGON_LIST) / GOOGLE_PRO_ARGON_WEEKLY_PP
-        * 100 * MONTH_WEEKS / blended_low(*GEMINI_ARGON_LIST) * 1e6 / YI,
+        * 100 * MONTH_WEEKS / blended_gemini(*GEMINI_ARGON_LIST) * 1e6 / YI,
         2,
     )
 
@@ -728,21 +743,20 @@ def google_ai_pro_neon_worth_usd() -> float:
 
 
 def google_ai_pro_neon_weekly_worth_usd() -> float:
-    # 段 worth ÷37pp。展示到 $85.48971；未舍入再除低缓存价比展示值多不到 1 token。
+    # 段 worth ÷37pp。展示到 $85.48971。
     return google_ai_pro_neon_worth_usd() / GOOGLE_PRO_NEON_WEEKLY_PP * 100
 
 
 def google_ai_pro_neon_weekly_tokens() -> int:
-    # 采用注记的周 token：展示周美元 $85.48971 ÷ $0.6375/MTok，四舍五入。
-    # 未舍入商约 134,101,506.52，差 1 token；两种月值 round(..., 2) 都是 5.36 亿。
-    return round(round(google_ai_pro_neon_weekly_worth_usd(), 5) / blended_low(*GEMINI_NEON_LIST) * 1e6)
+    # 未舍入周美元 ÷ Gemini 90% 负载混合价 $0.495/MTok，四舍五入（≈172,706,481 token；×4 = 6.908 亿 → 6.91 亿）。
+    return round(google_ai_pro_neon_weekly_worth_usd() / blended_gemini(*GEMINI_NEON_LIST) * 1e6)
 
 
 def google_ai_pro_neon_monthly_yi() -> float:
-    # 未舍入周 worth ×4周 ÷ 低缓存档 $0.6375/MTok。没有上一条 Neon 样本可并。
+    # 未舍入周 worth ×4周 ÷ Gemini 90% 负载档 $0.495/MTok（2026-11-24 由低缓存档 $0.6375 迁入）。没有上一条 Pro Neon 样本可并。
     return round(
         google_ai_pro_neon_weekly_worth_usd() * MONTH_WEEKS
-        / blended_low(*GEMINI_NEON_LIST) * 1e6 / YI,
+        / blended_gemini(*GEMINI_NEON_LIST) * 1e6 / YI,
         2,
     )
 
@@ -751,36 +765,73 @@ def google_ai_pro_neon_raw_week_tokens() -> int:
     return round(GOOGLE_PRO_NEON_RAW_TOKENS / GOOGLE_PRO_NEON_WEEKLY_PP * 100)
 
 
+def google_ai_ultra_20x_neon_worth_usd() -> float:
+    return worth_usd(GOOGLE_ULTRA20X_NEON_SEGMENT, GEMINI_NEON_LIST)
+
+
+def google_ai_ultra_20x_neon_weekly_worth_usd() -> float:
+    # 段 worth $583.168536 ÷36pp → $1,619.91260/周（18.95× Pro Neon）。
+    return google_ai_ultra_20x_neon_worth_usd() / GOOGLE_ULTRA20X_NEON_WEEKLY_PP * 100
+
+
+def google_ai_ultra_20x_neon_weekly_tokens() -> int:
+    return round(google_ai_ultra_20x_neon_weekly_worth_usd() / blended_gemini(*GEMINI_NEON_LIST) * 1e6)
+
+
+def google_ai_ultra_20x_neon_monthly_tokens() -> int:
+    return round(google_ai_ultra_20x_neon_weekly_worth_usd() * MONTH_WEEKS / blended_gemini(*GEMINI_NEON_LIST) * 1e6)
+
+
+def google_ai_ultra_20x_neon_monthly_yi() -> float:
+    # 未舍入周 worth ×4周 ÷ Gemini 90% 负载档 $0.495/MTok → 130.902 亿 → 130.90 亿。
+    return round(
+        google_ai_ultra_20x_neon_weekly_worth_usd() * MONTH_WEEKS
+        / blended_gemini(*GEMINI_NEON_LIST) * 1e6 / YI,
+        2,
+    )
+
+
+def google_ai_ultra_20x_neon_raw_week_tokens() -> int:
+    return round(GOOGLE_ULTRA20X_NEON_RAW_TOKENS / GOOGLE_ULTRA20X_NEON_WEEKLY_PP * 100)
+
+
 def devin_max_pool_monthly_yi(blend_usd_per_mtok: float) -> float:
     # Devin Max $200/周 × 4 周 = $800/月 ÷ 各模型所属负载档混合价，round(..., 2) 存亿。
     return round(DEVIN_MAX_WEEKLY_USD * MONTH_WEEKS / blend_usd_per_mtok * 1e6 / YI, 2)
 
 
 def devin_max_carbon_weekly_tokens() -> int:
-    # 200 / $0.425 × 1e6，四舍五入。未舍入商约 470,588,235.29。
-    return round(DEVIN_MAX_CARBON_WEEKLY_USD / blended_low(*GEMINI_CARBON_LIST) * 1e6)
+    # 200 / $0.33 × 1e6，四舍五入。未舍入商约 606,060,606.06。
+    return round(DEVIN_MAX_CARBON_WEEKLY_USD / blended_gemini(*GEMINI_CARBON_LIST) * 1e6)
 
 
 def devin_max_carbon_monthly_tokens() -> int:
-    # 未舍入的周美元 ×4 再取最近整数。round(周 token)×4 会少 1，不采用。
-    return round(DEVIN_MAX_CARBON_WEEKLY_USD / blended_low(*GEMINI_CARBON_LIST) * 1e6 * MONTH_WEEKS)
+    # 未舍入的周美元 ×4 再取最近整数。
+    return round(DEVIN_MAX_CARBON_WEEKLY_USD / blended_gemini(*GEMINI_CARBON_LIST) * 1e6 * MONTH_WEEKS)
 
 
 def devin_max_carbon_monthly_yi() -> float:
-    # 未舍入月 token / 1e8，round(..., 2)。18.8235… → 18.82，同 Neon 5.364 → 5.36。
-    return devin_max_pool_monthly_yi(blended_low(*GEMINI_CARBON_LIST))
+    # 未舍入月 token / 1e8，round(..., 2)。24.2424… → 24.24。
+    return devin_max_pool_monthly_yi(blended_gemini(*GEMINI_CARBON_LIST))
 
 
-assert blended_low(*GEMINI_CARBON_LIST) == 0.425
-assert devin_max_carbon_weekly_tokens() == 470_588_235
-assert devin_max_carbon_monthly_tokens() == 1_882_352_941
-assert devin_max_carbon_monthly_yi() == 18.82
-assert round(devin_max_carbon_weekly_tokens() / YI, 2) == 4.71
-assert round(devin_max_carbon_monthly_tokens() / YI, 3) == 18.824
+assert round(blended_gemini(*GEMINI_FLASH_LIST), 6) == 0.1575
+assert round(blended_gemini(*GEMINI_CARBON_LIST), 6) == 0.33
+assert round(blended_gemini(*GEMINI_NEON_LIST), 6) == 0.495
+assert google_ai_pro_monthly_yi() == 31.34
+assert google_ai_pro_36_monthly_yi() == 24.89
+assert google_ai_pro_argon_monthly_yi() == 0.85
+assert google_ai_pro_neon_monthly_yi() == 6.91
+assert google_ai_ultra_20x_neon_monthly_yi() == 130.90
+assert devin_max_carbon_weekly_tokens() == 606_060_606
+assert devin_max_carbon_monthly_tokens() == 2_424_242_424
+assert devin_max_carbon_monthly_yi() == 24.24
+assert round(devin_max_carbon_weekly_tokens() / YI, 2) == 6.06
+assert round(devin_max_carbon_monthly_tokens() / YI, 3) == 24.242
 assert devin_max_pool_monthly_yi(blended(*GPT6_ASTRA_LIST)) == 5.44
 assert devin_max_pool_monthly_yi(blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-opus-5.5"], OPUS55_LIST[2])) == 19.09
 assert devin_max_pool_monthly_yi(blended_anthropic(SONNET55_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-sonnet-5.5"], SONNET55_LIST[2])) == 38.19
-assert devin_max_pool_monthly_yi(blended_low(*GEMINI_NEON_LIST)) == 12.55
+assert devin_max_pool_monthly_yi(blended_gemini(*GEMINI_NEON_LIST)) == 16.16
 assert devin_max_pool_monthly_yi(blended(*GPT61_SOL_LIST)) == 40.61
 
 
@@ -1517,17 +1568,17 @@ SUBS = [
      f"{devin_max_opus55_monthly_yi():g}→{devin_max_pool_monthly_yi(blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2])):g}亿（2026-11-24 裁定按 Devin Max 现行周池 $200/周重算，Anthropic 档，low）：周 $200×{MONTH_WEEKS:g}周＝月 $800 ÷ Opus 5.5 Anthropic 档混合价 ${blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2]):.3f}/MTok（cache $0.20 / 5m 写 $5 / out $20；docs.devin.ai/desktop/models TEAMS_TIER_PRO 核对）＝{devin_max_pool_monthly_yi(blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2])):g}亿；假设共享池按 1× API 标价扣减，非本轮独立实测 → low。历史 2026-09-23 实测池（48pt 推周 $700.77 / 月 $2,803.06 折 {devin_max_opus55_monthly_yi():g}亿，raw {devin_max_opus55_raw_monthly_yi():g}亿，devin-opus55-round1-2026-09-23.json）已过时留作对照。同套餐各模型共享周池不可相加；swe-2 桌面/CLI 不占额度；不改 devin_pro。证据：local-samples-round3-2026-11-21.json；issue #251。"),
     # Gemini 4 Carbon —— 维护者指定周 API 等价 $200（issue #251），作 Devin Max $200/周共享池锚点。
     ("devin_max", "Devin Max", 200, "USD", "gemini-4-carbon", devin_max_carbon_monthly_yi(), "medium",
-     "维护者本机 Devin Max（不是 Devin Pro）：2026-11-20 8:11 PM PT 周表 0%；2026-11-21 5:16 AM PT 7%、5:29 AM PT 9%、5:40 AM PT 仍 9%（其后 +$0.24）。采用周 API 等价 $200。Carbon High 在 7% 为 225 次 raw 52,911,702，在 9% 为 263 次 raw 65,021,830。TokenView prices.json：入 $2 / 出 $10 / 缓存读 $0.10 / 缓存写 $0。issue #251；local-samples-round3-2026-11-21.json；https://devin.ai/pricing",
-     f"新增{devin_max_carbon_monthly_yi():g}亿（2026-11-21，低缓存档，medium）：首个 Devin Max × Gemini 4 Carbon 采用点，并作 Devin Max $200/周共享池锚点。维护者把周 API 等价定为 $200，不把 7% 与 9% 两次读数加权，也不取中点。低缓存混合价 ${blended_low(*GEMINI_CARBON_LIST):.3f}/MTok（{LOW_CACHE_MIX['cache']:.2f}×$0.10＋{LOW_CACHE_MIX['input']:.3f}×$2＋{LOW_CACHE_MIX['output']:.3f}×$10；TokenView prices.json，缓存写 $0，同 Google 11/30 前导入价）。周 {devin_max_carbon_weekly_tokens():,} token（{devin_max_carbon_weekly_tokens()/YI:.2f}亿）＝200÷0.425。×{MONTH_WEEKS:g}周＝{devin_max_carbon_monthly_tokens():,} token，未舍入 {devin_max_carbon_monthly_tokens()/YI:.3f}亿，round(..., 2) 存 {devin_max_carbon_monthly_yi():g}亿。订阅 USD/MTok 用月费 $200 除以 round 后的月 token，字段与其他行相同。不改 devin_pro。不替换 google_ai_pro_us × gemini-4-argon（{google_ai_pro_argon_monthly_yi():g}亿）与 gemini-4-neon（{google_ai_pro_neon_monthly_yi():g}亿）。不采：5:16 AM PT 的 7% 拉伸 API $14.08、周 $201.21、低缓存 4.73亿（Carbon High 225 次，raw 52,911,702）；5:29 AM PT 的 9% 拉伸 API $17.20、周 $191.07、低缓存 4.50亿（Carbon High 263 次，raw 65,021,830）；多出的 2 个百分点隐含 $155.55。基线 0% 在 2026-11-20 8:11 PM PT。5:40 AM PT 表仍是 9%，其间又多 $0.24。n=1、整数读数、周值由维护者指定 → medium。证据：local-samples-round3-2026-11-21.json；issue #251。"),
+     "维护者本机 Devin Max（不是 Devin Pro）：2026-11-20 8:11 PM PT 周表 0%；2026-11-21 5:16 AM PT 7%、5:29 AM PT 9%、5:40 AM PT 仍 9%（其后 +$0.24）。采用周 API 等价 $200。Carbon High 在 7% 为 225 次 raw 52,911,702，在 9% 为 263 次 raw 65,021,830。TokenView prices.json：入 $2 / 出 $10 / 缓存读 $0.10 / 缓存写 $0。issue #251；local-samples-round3-2026-11-21.json；gemini-token-mix-round1-2026-11-24.json；https://devin.ai/pricing",
+     f"18.82→{devin_max_carbon_monthly_yi():g}亿（2026-11-24 裁定迁入 Gemini 90% 负载档，medium；原低缓存 85% 口径 18.82 亿留作对照）：首个 Devin Max × Gemini 4 Carbon 采用点，并作 Devin Max $200/周共享池锚点。维护者把周 API 等价定为 $200，不把 7% 与 9% 两次读数加权，也不取中点。Gemini 90% 负载档混合价 ${blended_gemini(*GEMINI_CARBON_LIST):.2f}/MTok（{GEMINI_MIX['cache']:.2f}×$0.10＋{GEMINI_MIX['input']:.3f}×$2＋{GEMINI_MIX['output']:.3f}×$10；TokenView prices.json，缓存写 $0，同 Google 11/30 前导入价）。周 {devin_max_carbon_weekly_tokens():,} token（{devin_max_carbon_weekly_tokens()/YI:.2f}亿）＝200÷0.33。×{MONTH_WEEKS:g}周＝{devin_max_carbon_monthly_tokens():,} token，未舍入 {devin_max_carbon_monthly_tokens()/YI:.3f}亿，round(..., 2) 存 {devin_max_carbon_monthly_yi():g}亿。订阅 USD/MTok 用月费 $200 除以 round 后的月 token，字段与其他行相同。不改 devin_pro。不替换 google_ai_pro_us × gemini-4-argon（{google_ai_pro_argon_monthly_yi():g}亿）与 gemini-4-neon（{google_ai_pro_neon_monthly_yi():g}亿）。不采：5:16 AM PT 的 7% 拉伸 API $14.08、周 $201.21（Carbon High 225 次，raw 52,911,702）；5:29 AM PT 的 9% 拉伸 API $17.20、周 $191.07（Carbon High 263 次，raw 65,021,830）；多出的 2 个百分点隐含 $155.55。基线 0% 在 2026-11-20 8:11 PM PT。5:40 AM PT 表仍是 9%，其间又多 $0.24。n=1、整数读数、周值由维护者指定 → medium。证据：local-samples-round3-2026-11-21.json；gemini-token-mix-round1-2026-11-24.json；issue #251。"),
     ("devin_max", "Devin Max", 200, "USD", "claude-sonnet-5.5", devin_max_pool_monthly_yi(blended_anthropic(SONNET55_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-sonnet-5.5"], SONNET55_LIST[2])), "low",
      "由 Devin Max 共享周池 $200/周（月 $800，2026-11-21/24 维护者确认，锚点 gemini-4-carbon #251）按 Claude Sonnet 5.5 标价 cached $0.10 / 5m 写 $2.5 / out $10 折 Anthropic 档；local-samples-round3-2026-11-21.json；https://docs.devin.ai/desktop/models；https://devin.ai/pricing",
      f"新增{devin_max_pool_monthly_yi(blended_anthropic(SONNET55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-sonnet-5.5'], SONNET55_LIST[2])):g}亿（2026-11-24，Anthropic 档，low）：由 Devin Max 共享周池 $200/周 × {MONTH_WEEKS:g}周＝月 $800 ÷ Sonnet 5.5 Anthropic 档混合价 ${blended_anthropic(SONNET55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-sonnet-5.5'], SONNET55_LIST[2]):.4f}/MTok（cache $0.10 / 5m 写 $2.5 / out $10；docs.devin.ai/desktop/models TEAMS_TIER_PRO 核对）派生，round(..., 2) 存 {devin_max_pool_monthly_yi(blended_anthropic(SONNET55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-sonnet-5.5'], SONNET55_LIST[2])):g}亿。假设共享池按 1× API 标价扣减、非本模型独立实测 → low；同套餐各模型共享周池不可相加；不改 devin_pro。证据：local-samples-round3-2026-11-21.json；issue #251。"),
     ("devin_max", "Devin Max", 200, "USD", "claude-fable-5.2", devin_max_pool_monthly_yi(blended_anthropic(FABLE52_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-fable-5.2"], FABLE52_LIST[2])), "low",
      "由 Devin Max 共享周池 $200/周（月 $800，2026-11-21/24 维护者确认，锚点 gemini-4-carbon #251）按 Claude Fable 5.2 标价 cached $0.20 / 5m 写 $10 / out $40 折 Anthropic 档；local-samples-round3-2026-11-21.json；https://docs.devin.ai/desktop/models；https://devin.ai/pricing",
      f"新增{devin_max_pool_monthly_yi(blended_anthropic(FABLE52_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-fable-5.2'], FABLE52_LIST[2])):g}亿（2026-11-24，Anthropic 档，low）：由 Devin Max 共享周池 $200/周 × {MONTH_WEEKS:g}周＝月 $800 ÷ Fable 5.2 Anthropic 档混合价 ${blended_anthropic(FABLE52_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-fable-5.2'], FABLE52_LIST[2]):.3f}/MTok（cache $0.20 / 5m 写 $10 / out $40；docs.devin.ai/desktop/models TEAMS_TIER_PRO 核对）派生，round(..., 2) 存 {devin_max_pool_monthly_yi(blended_anthropic(FABLE52_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-fable-5.2'], FABLE52_LIST[2])):g}亿。假设共享池按 1× API 标价扣减、非本模型独立实测 → low；同套餐各模型共享周池不可相加；不改 devin_pro。证据：local-samples-round3-2026-11-21.json；issue #251。"),
-    ("devin_max", "Devin Max", 200, "USD", "gemini-4-neon", devin_max_pool_monthly_yi(blended_low(*GEMINI_NEON_LIST)), "low",
-     "由 Devin Max 共享周池 $200/周（月 $800，2026-11-21/24 维护者确认，锚点 gemini-4-carbon #251）按 Gemini 4 Neon 标价 cached $0.15 / in $3 / out $15 折低缓存档；local-samples-round3-2026-11-21.json；https://docs.devin.ai/desktop/models；https://devin.ai/pricing",
-     f"新增{devin_max_pool_monthly_yi(blended_low(*GEMINI_NEON_LIST)):g}亿（2026-11-24，低缓存档，low）：由 Devin Max 共享周池 $200/周 × {MONTH_WEEKS:g}周＝月 $800 ÷ Gemini 4 Neon 低缓存档混合价 ${blended_low(*GEMINI_NEON_LIST):.4f}/MTok（{LOW_CACHE_MIX['cache']:.2f}×$0.15＋{LOW_CACHE_MIX['input']:.3f}×$3＋{LOW_CACHE_MIX['output']:.3f}×$15；docs.devin.ai/desktop/models TEAMS_TIER_PRO 与 Gemini Developer API 核对）派生，round(..., 2) 存 {devin_max_pool_monthly_yi(blended_low(*GEMINI_NEON_LIST)):g}亿。假设共享池按 1× API 标价扣减、非本模型独立实测 → low；同套餐各模型共享周池不可相加；不改 google_ai_pro_us 与 devin_pro。证据：local-samples-round3-2026-11-21.json；issue #251。"),
+    ("devin_max", "Devin Max", 200, "USD", "gemini-4-neon", devin_max_pool_monthly_yi(blended_gemini(*GEMINI_NEON_LIST)), "low",
+     "由 Devin Max 共享周池 $200/周（月 $800，2026-11-21/24 维护者确认，锚点 gemini-4-carbon #251）按 Gemini 4 Neon 标价 cached $0.15 / in $3 / out $15 折 Gemini 90% 负载档；local-samples-round3-2026-11-21.json；gemini-token-mix-round1-2026-11-24.json；https://docs.devin.ai/desktop/models；https://devin.ai/pricing",
+     f"12.55→{devin_max_pool_monthly_yi(blended_gemini(*GEMINI_NEON_LIST)):g}亿（2026-11-24 裁定迁入 Gemini 90% 负载档，low；原低缓存 85% 口径 12.55 亿留作对照）：由 Devin Max 共享周池 $200/周 × {MONTH_WEEKS:g}周＝月 $800 ÷ Gemini 4 Neon Gemini 档混合价 ${blended_gemini(*GEMINI_NEON_LIST):.3f}/MTok（{GEMINI_MIX['cache']:.2f}×$0.15＋{GEMINI_MIX['input']:.3f}×$3＋{GEMINI_MIX['output']:.3f}×$15；docs.devin.ai/desktop/models TEAMS_TIER_PRO 与 Gemini Developer API 核对）派生，round(..., 2) 存 {devin_max_pool_monthly_yi(blended_gemini(*GEMINI_NEON_LIST)):g}亿。假设共享池按 1× API 标价扣减、非本模型独立实测 → low；同套餐各模型共享周池不可相加；不改 google_ai_pro_us 与 devin_pro。证据：local-samples-round3-2026-11-21.json；gemini-token-mix-round1-2026-11-24.json；issue #251。"),
     ("devin_max", "Devin Max", 200, "USD", "gpt-6.1-sol", devin_max_pool_monthly_yi(blended(*GPT61_SOL_LIST)), "low",
      "由 Devin Max 共享周池 $200/周（月 $800，2026-11-21/24 维护者确认，锚点 gemini-4-carbon #251）按 GPT-6.1 Sol 标价 cached $0.10 / in $2 / out $10 折标准档；local-samples-round3-2026-11-21.json；https://docs.devin.ai/desktop/models；https://devin.ai/pricing",
      f"新增{devin_max_pool_monthly_yi(blended(*GPT61_SOL_LIST)):g}亿（2026-11-24，标准档，low）：由 Devin Max 共享周池 $200/周 × {MONTH_WEEKS:g}周＝月 $800 ÷ GPT-6.1 Sol 标准档混合价 ${blended(*GPT61_SOL_LIST):.3f}/MTok（cache $0.10 / in $2 / out $10；docs.devin.ai/desktop/models TEAMS_TIER_PRO 核对）派生，round(..., 2) 存 {devin_max_pool_monthly_yi(blended(*GPT61_SOL_LIST)):g}亿。假设共享池按 1× API 标价扣减、非本模型独立实测 → low；同套餐各模型共享周池不可相加；不改 chatgpt_plus 与 devin_pro。证据：local-samples-round3-2026-11-21.json；issue #251。"),
@@ -1554,16 +1605,20 @@ SUBS = [
     # Factory Droid —— 维护者Max账号 /limits 周窗 1%→9% 两段增量直测；月＝2×周（30 天窗绑定）；Pro 另挂社区口述点（low），Plus 不派生
     ("droid_max", "Droid Max", 200, "USD", "claude-opus-5.5", droid_max_opus55_monthly_yi(), "medium", "维护者Factory Droid本机实测：周额度（7-day rolling）已用1%→5%段（xhigh）+35,598,616 tok、5%@08:13→9%@12:40段（high，新会话47f9711d）+36,567,946 tok，合计+72,166,562 tok全为claude-opus-5-5（auto 0增量；glm-5.3-flash +50,317 属Droid Core免费池不计）；合计分拆 in 793,017/out 375,172/cache_create 3,640,056/cache_read 67,311,924/thinking 46,393；droid-opus55-max-round1-2026-09-29.json；https://factory.ai/pricing Max $200/月", f"首个Factory Droid点，按devin_max×opus-5.5同口径折算：1→9合计负载 cache读93.27%/cache写5.04%/输入1.10%/输出0.52%/thinking0.06%（hit 93.82%）偏离标准档；按Opus 5.5标价 cached$0.2/写5m $5/in$4/out$20（thinking 46,393不计费，裁定；与factoryCredits 16,935,482≈worth÷$4×1.6对账一致）折段 worth ${droid_max_opus55_segment_worth_usd():.2f} ÷8%×{DROID_MONTH_WEEKS:g}（Factory 30天窗＝2×7天窗，2026-10-03裁定；原按×4周为50.52亿）＝月${droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS:.2f} list-worth ÷ Anthropic档混合价${blended_anthropic(0.2,5.0,20.0):.3f}/MTok＝{droid_max_opus55_monthly_yi():g}亿；1%/9%为取整读数，Δpp∈[7,9]对应约22.46~28.87亿；cache写按1h $8敏感性26.96亿不采；原始total口径72,166,562÷8%×{DROID_MONTH_WEEKS:g}＝{droid_max_opus55_raw_monthly_yi():g}亿（周池902,082,025 raw）留作对照；factoryCredits 16,935,482≈2.12亿credits/周；两段4pp各8.90M/9.14M tok每pp（差2.7%），effort仅影响速率；Factory另有5h与30天滚动窗，月额度以30天窗（＝2×周池）为绑定约束；Pro $20/Plus $100官方仅写约1/10、1/5 Max用量，不派生"),
     ("droid_pro", "Droid Pro", 20, "USD", "claude-opus-5.5", droid_pro_opus55_monthly_yi(), "low", "X @SnowyWar36965 社区口述（2026-09-28，维护者转交截图）：Droid Pro $20 跑 Claude Opus 5.5 小动画用掉 5h 窗约70%，帖主按等价 API 消耗折算 5h≈$15.4、周≈$45、月≈$160（Max 10x≈$154/$450/$1,600，约合 1.76/5.1/18 亿 token）；droid-pro-opus55-community-round1-2026-09-29.json；https://factory.ai/pricing Pro $20/月", f"帖主周 list-worth ${DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['week']:g}×{DROID_MONTH_WEEKS:g}（Factory 30天窗＝2×7天窗，2026-10-03裁定）＝${DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['week']*DROID_MONTH_WEEKS:g} ÷ Anthropic档混合价${blended_anthropic(0.2,5.0,20.0):.3f}/MTok＝{droid_pro_opus55_monthly_yi():g}亿（同 droid_max×opus-5.5 口径；帖主自带 token 列 18亿/$1,600≈$0.89/MTok 为其自身负载，不采）；帖主月值 ${DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['month']:g}（{DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['month']/blended_anthropic(0.2,5.0,20.0)/100:.2f}亿，原采用值）约为其周值3.56×，与30天窗＝2×周不符，不采；弱点：口述估算、无面板截图与 token 分拆、n=1、5h/周/月换算过程未公开 → low；对照：本机实测 Droid Max 月 worth ${droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS:,.2f} ÷ 官方约10× ＝ Pro 约${droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS/10:.2f}（{droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS/10/blended_anthropic(0.2,5.0,20.0)/100:.2f}亿），帖主值约为其 {DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['week']*DROID_MONTH_WEEKS/(droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS/10):.2f}×"),
-    # Google —— Antigravity 合池按 API worth 计权（官方机制）；round7 维护者本地实测补上首个周帽同框
-    ("google_ai_pro_us", "Google AI Pro", 19.99, "USD", "gemini-3.8-flash", google_ai_pro_monthly_yi(), "high", "issue #54（NTRYourWaifu）：agy /quota 每 5 分钟轮询周额度 %，三个周窗、只计 3.8 Flash ≥95% 区段，853.43M raw = +165.77pp；community-issues-round1-2026-09-29.json；维护者本地实测：B整段55.343M raw(cache45.69M/in9.26M/out0.40M)=周条+9.88%；gemini-weekly-round7-2026-09-21.json；workload-conversion-round1-2026-09-30.json", f"20.70→{google_ai_pro_monthly_yi():g}亿（2026-09-30 裁定带分项实测统一折算，低缓存档）：两样本 worth 按百分点合并（本机B段 cache 45.69M/入9.26M/出0.40M＝${worth_usd(GOOGLE_PRO_B_SEGMENT, GEMINI_FLASH_LIST):.4f}＋#54 cache 695.70M/入146.25M/出11.48M＝${worth_usd(GOOGLE_PRO_ISSUE54_SEGMENT, GEMINI_FLASH_LIST):.3f}）÷175.65pp＝$1.23415/pp → 周$123.42×4周 ÷ 低缓存档混合价$0.19125/MTok；实测 cache 82~84% 属低缓存族，标准档口径 44.78 亿不采；raw 口径 {google_ai_pro_raw_monthly_yi():g} 留作对照。以下为 2026-09-29 原采用决策（raw 口径）——22.41→20.70亿，2026-09-29 裁定：issue #54（agy /quota 每 5 分钟周额度 %，三个周窗，只计 3.8 Flash 占 95% 以上区段）853.43M raw = 周 +165.77 个百分点（单看 20.59），与维护者本机样本 55.343M = +9.88% 按百分点合并：(55.343+853.43)÷(9.88+165.77)＝5.1738M/pp ×100×4周＝20.70亿 raw。两样本 cache 命中均约 82.6%。worth 每 1% 约 $1.19~1.25，与 effort 无关。证据：community-issues-round1-2026-09-29.json；原样本见 gemini-weekly-round 证据。"),
+    # Google —— Antigravity 合池按 API worth 计权（官方机制）；round7 维护者本地实测补上首个周帽同框；
+    #   2026-11-24 裁定在用 Gemini 订阅迁入独立 90% 负载档（geminiTokenMix），待下架的 3.6 Flash 留低缓存 85% 档。
+    ("google_ai_pro_us", "Google AI Pro", 19.99, "USD", "gemini-3.8-flash", google_ai_pro_monthly_yi(), "high", "issue #54（NTRYourWaifu）：agy /quota 每 5 分钟轮询周额度 %，三个周窗、只计 3.8 Flash ≥95% 区段，853.43M raw = +165.77pp；community-issues-round1-2026-09-29.json；维护者本地实测：B整段55.343M raw(cache45.69M/in9.26M/out0.40M)=周条+9.88%；gemini-weekly-round7-2026-09-21.json；workload-conversion-round1-2026-09-30.json；gemini-token-mix-round1-2026-11-24.json", f"25.81→{google_ai_pro_monthly_yi():g}亿（2026-11-24 裁定迁入 Gemini 90% 负载档，混合价 ${blended_gemini(*GEMINI_FLASH_LIST):.4f}/MTok；原低缓存 85% 口径 25.81 亿留作对照）：两样本 worth 按百分点合并（本机B段 cache 45.69M/入9.26M/出0.40M＝${worth_usd(GOOGLE_PRO_B_SEGMENT, GEMINI_FLASH_LIST):.4f}＋#54 cache 695.70M/入146.25M/出11.48M＝${worth_usd(GOOGLE_PRO_ISSUE54_SEGMENT, GEMINI_FLASH_LIST):.3f}）÷175.65pp＝$1.23415/pp → 周$123.42×4周 ÷ Gemini 90% 负载档混合价${blended_gemini(*GEMINI_FLASH_LIST):.4f}/MTok；标准档口径 44.78 亿不采；raw 口径 {google_ai_pro_raw_monthly_yi():g} 留作对照。以下为 2026-09-29 原采用决策（raw 口径）——22.41→20.70亿，2026-09-29 裁定：issue #54（agy /quota 每 5 分钟周额度 %，三个周窗，只计 3.8 Flash 占 95% 以上区段）853.43M raw = 周 +165.77 个百分点（单看 20.59），与维护者本机样本 55.343M = +9.88% 按百分点合并：(55.343+853.43)÷(9.88+165.77)＝5.1738M/pp ×100×4周＝20.70亿 raw。两样本 cache 命中均约 82.6%。worth 每 1% 约 $1.19~1.25，与 effort 无关。证据：community-issues-round1-2026-09-29.json；gemini-token-mix-round1-2026-11-24.json；原样本见 gemini-weekly-round 证据。"),
     ("google_ai_pro_us", "Google AI Pro", 19.99, "USD", "gemini-3.6-flash", google_ai_pro_36_monthly_yi(), "medium", "issue #55（NTRYourWaifu）：agy CLI 每 5 分钟轮询周额度 %，只计 3.6 Flash ≥95% 区段，95.60M raw = 周 +21.70pp；community-issues-round1-2026-09-29.json；workload-conversion-round1-2026-09-30.json", f"17.62→{google_ai_pro_36_monthly_yi():g}亿（2026-09-30 裁定带分项实测统一折算，低缓存档）：#55 段 worth ${worth_usd(GOOGLE_PRO_ISSUE55_SEGMENT, GEMINI_FLASH_LIST):.3f}（cache 78.32M×$0.075＋入14.95M×$0.75＋出2.33M×$3.75）÷21.70pp＝$1.19005/pp → 周$119.0×4周 ÷ 低缓存档$0.19125/MTok；raw 口径 17.62 留作对照。以下为 2026-09-29 原采用决策（raw 口径）——新增17.62亿，2026-09-29 裁定：issue #55（agy CLI，方法同 #54，只计 3.6 Flash 占 95% 以上区段）95.60M raw = 周 +21.70 个百分点 ×100×4周，cache 命中 84.0%。每 1% 标价美元约 $1.19，与 3.8 Flash 相同，支持 Google AI Pro 各模型共用按价额度池。样本仅 21.7 个百分点、单一投稿人 → medium。不派生 Ultra。证据：community-issues-round1-2026-09-29.json。"),
     # Gemini 4 Argon —— Pro 独立 weekly-only 周池的首个采用点；官方确认不与 3.8 Flash 合池（2026-10-15 论坛回复）
-    ("google_ai_pro_us", "Google AI Pro", 19.99, "USD", "gemini-4-argon", google_ai_pro_argon_monthly_yi(), "low", "X @leo114119 推文截图（维护者提供）：第三方网关面板 Gemini 4 Argon·7天 已用 15.1%，网关统计 23 次调用（输入 109K／输出 75.1K 含推理 28K／缓存读 955K，命中率 90%）；gemini-argon-round1-2026-10-16.json", f"新增{google_ai_pro_argon_monthly_yi():g}亿：首个 Gemini 4 Argon 采用点（低缓存档）。段 worth ${worth_usd(GOOGLE_PRO_ARGON_SEGMENT, GEMINI_ARGON_LIST):.4f}（cache 0.955M×$0.10＋入 0.109M×$2＋出 0.0751M×$10；引入价至 2026-11-30，其后 $0.2/$4/$20 须复核，输出含 thinking 与面板「推理计入输出」一致）÷15.1pp＝$0.0705/pp，周 worth $7.05×{MONTH_WEEKS:g}周 ÷ 低缓存档混合价 $0.425/MTok。官方论坛 2026-10-15 确认 Argon 为 Pro 独立 weekly-only 周池（无 5 小时条），不与 Gemini 3.8 Flash 合池；面板其余各池均 0%，23 次调用用量归 Argon 为推断。帖主反推周限约 $10 为取整上界——若推理 28K 在输出外另计则周 $8.90（0.84亿）。raw 口径 0.30亿、标准档口径 1.43亿留作对照不采；同套餐 Gemini 合池周 worth $123.42 的 1/17，与「少的可怜」一致。样本 15.1pp、单一推文、第三方网关面板 → low，待第二样本复核。证据：gemini-argon-round1-2026-10-16.json。"),
+    ("google_ai_pro_us", "Google AI Pro", 19.99, "USD", "gemini-4-argon", google_ai_pro_argon_monthly_yi(), "low", "X @leo114119 推文截图（维护者提供）：第三方网关面板 Gemini 4 Argon·7天 已用 15.1%，网关统计 23 次调用（输入 109K／输出 75.1K 含推理 28K／缓存读 955K，命中率 90%）；gemini-argon-round1-2026-10-16.json；gemini-token-mix-round1-2026-11-24.json", f"0.66→{google_ai_pro_argon_monthly_yi():g}亿（2026-11-24 裁定迁入 Gemini 90% 负载档，混合价 ${blended_gemini(*GEMINI_ARGON_LIST):.2f}/MTok；原低缓存 85% 口径 0.66 亿留作对照）：首个 Gemini 4 Argon 采用点。段 worth ${worth_usd(GOOGLE_PRO_ARGON_SEGMENT, GEMINI_ARGON_LIST):.4f}（cache 0.955M×$0.10＋入 0.109M×$2＋出 0.0751M×$10；引入价至 2026-11-30，其后 $0.2/$4/$20 须复核，输出含 thinking 与面板「推理计入输出」一致）÷15.1pp＝$0.0705/pp，周 worth $7.05×{MONTH_WEEKS:g}周 ÷ Gemini 90% 负载档混合价 $0.33/MTok。官方论坛 2026-10-15 确认 Argon 为 Pro 独立 weekly-only 周池（无 5 小时条），不与 Gemini 3.8 Flash 合池；面板其余各池均 0%，23 次调用用量归 Argon 为推断。帖主反推周限约 $10 为取整上界——若推理 28K 在输出外另计则周 $8.90（1.08亿）。raw 口径 0.30亿、标准档口径 1.43亿留作对照不采；同套餐 Gemini 合池周 worth $123.42 的 1/17，与「少的可怜」一致。样本 15.1pp、单一推文、第三方网关面板 → low，待第二样本复核。证据：gemini-argon-round1-2026-10-16.json；gemini-token-mix-round1-2026-11-24.json。"),
     ("google_ai_pro_us", "Google AI Pro", 19.99, "USD", "gemini-4-neon", google_ai_pro_neon_monthly_yi(), "medium",
-     "维护者本机 Antigravity，新 Google AI Pro（与 Ultra 5x、已采用 Argon 行分开）：2026-11-20 7:51 AM PT 各表 100%，6:40 PM PT Gemini 周剩余 63%（37pp，刷新约 2026-11-27 7:40 AM PT）；Neon 277 次，7:51:44 AM–6:40:38 PM PT（入 6,657,933 / 出 287,026 / 缓存读 49,013,359 / 缓存写 0，raw 55,958,318，命中 88.04%）；High 234 次 raw 35,353,418，XHigh 43 次 raw 20,604,900；issue #248；local-samples-round2-2026-11-20.json",
-     f"新增{google_ai_pro_neon_monthly_yi():g}亿（2026-11-21，低缓存档，medium）：首个 Gemini 4 Neon 采用点。段 worth ${google_ai_pro_neon_worth_usd():.6f}（读 {GOOGLE_PRO_NEON_SEGMENT['cache_read']/1e6:.6f}M×$0.15＋入 {GOOGLE_PRO_NEON_SEGMENT['input']/1e6:.6f}M×$3＋出 {GOOGLE_PRO_NEON_SEGMENT['output']/1e6:.6f}M×$15；Gemini Developer API 2026-11-18 公布，High 与 XHigh 同价，缓存写 0）÷{GOOGLE_PRO_NEON_WEEKLY_PP:g}pp＝${google_ai_pro_neon_weekly_worth_usd():.5f}/周。低缓存混合价 ${blended_low(*GEMINI_NEON_LIST):.4f}/MTok（{LOW_CACHE_MIX['cache']:.2f}×$0.15＋{LOW_CACHE_MIX['input']:.3f}×$3＋{LOW_CACHE_MIX['output']:.3f}×$15）。低缓存周 {google_ai_pro_neon_weekly_tokens():,} token（{google_ai_pro_neon_weekly_tokens()/YI:.3f}亿）×{MONTH_WEEKS:g}周＝{google_ai_pro_neon_weekly_tokens()*MONTH_WEEKS:,} token，未舍入 {google_ai_pro_neon_weekly_tokens()*MONTH_WEEKS/YI:.3f}亿，round(..., 2) 存 {google_ai_pro_neon_monthly_yi():g}亿。没有上一条 Neon 样本可并，这 {GOOGLE_PRO_NEON_WEEKLY_PP:g}pp 就是全部权重；不替换 google_ai_pro_us × gemini-4-argon（{google_ai_pro_argon_monthly_yi():g}亿）。不派生 Ultra。raw 周 {google_ai_pro_neon_raw_week_tokens():,}（{GOOGLE_PRO_NEON_RAW_TOKENS/GOOGLE_PRO_NEON_WEEKLY_PP*100/YI:.3f}亿）留作对照不采。5h 反推 $26.01 / 低缓存 0.408亿不采：当天跨过不止一个 5h 窗，该切片只约占当前窗 1 小时。50% 周帽不套。n=1、整数读数 → medium。证据：local-samples-round2-2026-11-20.json；issue #248。"),
-    ("google_ai_ultra_5x_us", "Google AI Ultra 5x", 99.99, "USD", "gemini-3.8-flash", round(google_ai_pro_monthly_yi() * 5, 2), "low", "官方：Ultra $100 = 5× Pro token worth（antigravity.google/blog 2026-05-19）", f"新增{google_ai_pro_monthly_yi()*5:g}亿：Pro采用值×官方worth倍率5；LLMDevs Ultra~5.0B/周同量级旁证；非独立实测"),
-    ("google_ai_ultra_20x_us", "Google AI Ultra 20x", 199.99, "USD", "gemini-3.8-flash", round(google_ai_pro_monthly_yi() * 20, 2), "low", "官方：Ultra $200 = 20× Pro token worth（antigravity.google/blog 2026-05-19）", f"新增{google_ai_pro_monthly_yi()*20:g}亿：Pro采用值×官方worth倍率20；非独立实测"),
+     "维护者本机 Antigravity，新 Google AI Pro（与 Ultra 5x、已采用 Argon 行分开）：2026-11-20 7:51 AM PT 各表 100%，6:40 PM PT Gemini 周剩余 63%（37pp，刷新约 2026-11-27 7:40 AM PT）；Neon 277 次，7:51:44 AM–6:40:38 PM PT（入 6,657,933 / 出 287,026 / 缓存读 49,013,359 / 缓存写 0，raw 55,958,318，命中 88.04%）；High 234 次 raw 35,353,418，XHigh 43 次 raw 20,604,900；issue #248；local-samples-round2-2026-11-20.json；gemini-token-mix-round1-2026-11-24.json",
+     f"5.36→{google_ai_pro_neon_monthly_yi():g}亿（2026-11-24 裁定迁入 Gemini 90% 负载档，medium；原低缓存 85% 口径 5.36 亿留作对照）：首个 Google AI Pro × Gemini 4 Neon 采用点。段 worth ${google_ai_pro_neon_worth_usd():.6f}（读 {GOOGLE_PRO_NEON_SEGMENT['cache_read']/1e6:.6f}M×$0.15＋入 {GOOGLE_PRO_NEON_SEGMENT['input']/1e6:.6f}M×$3＋出 {GOOGLE_PRO_NEON_SEGMENT['output']/1e6:.6f}M×$15；Gemini Developer API 2026-11-18 公布，High 与 XHigh 同价，缓存写 0）÷{GOOGLE_PRO_NEON_WEEKLY_PP:g}pp＝${google_ai_pro_neon_weekly_worth_usd():.5f}/周。Gemini 90% 负载档混合价 ${blended_gemini(*GEMINI_NEON_LIST):.3f}/MTok（{GEMINI_MIX['cache']:.2f}×$0.15＋{GEMINI_MIX['input']:.3f}×$3＋{GEMINI_MIX['output']:.3f}×$15）。周 {google_ai_pro_neon_weekly_tokens():,} token（{google_ai_pro_neon_weekly_tokens()/YI:.3f}亿）×{MONTH_WEEKS:g}周＝{round(google_ai_pro_neon_weekly_worth_usd()*MONTH_WEEKS/blended_gemini(*GEMINI_NEON_LIST)*1e6):,} token，未舍入 {google_ai_pro_neon_weekly_worth_usd()*MONTH_WEEKS/blended_gemini(*GEMINI_NEON_LIST)*1e6/YI:.3f}亿，round(..., 2) 存 {google_ai_pro_neon_monthly_yi():g}亿。没有上一条 Pro Neon 样本可并，这 {GOOGLE_PRO_NEON_WEEKLY_PP:g}pp 就是全部权重；不替换 google_ai_pro_us × gemini-4-argon（{google_ai_pro_argon_monthly_yi():g}亿）。Ultra 20x × Neon 另由 issue #258 独立实测采用，Ultra 5x 仍不派生。raw 周 {google_ai_pro_neon_raw_week_tokens():,}（{GOOGLE_PRO_NEON_RAW_TOKENS/GOOGLE_PRO_NEON_WEEKLY_PP*100/YI:.3f}亿）留作对照不采。5h 反推 $26.01 不采：当天跨过不止一个 5h 窗，该切片只约占当前窗 1 小时。50% 周帽不套。n=1、整数读数 → medium。证据：local-samples-round2-2026-11-20.json；gemini-token-mix-round1-2026-11-24.json；issue #248。"),
+    ("google_ai_ultra_5x_us", "Google AI Ultra 5x", 99.99, "USD", "gemini-3.8-flash", round(google_ai_pro_monthly_yi() * 5, 2), "low", "官方：Ultra $100 = 5× Pro token worth（antigravity.google/blog 2026-05-19）；gemini-token-mix-round1-2026-11-24.json", f"129.05→{google_ai_pro_monthly_yi()*5:g}亿（2026-11-24 随 Pro 3.8 Flash 迁入 Gemini 90% 负载档 25.81→{google_ai_pro_monthly_yi():g}亿联动）：Pro采用值×官方worth倍率5；LLMDevs Ultra~5.0B/周同量级旁证；非独立实测"),
+    ("google_ai_ultra_20x_us", "Google AI Ultra 20x", 199.99, "USD", "gemini-3.8-flash", round(google_ai_pro_monthly_yi() * 20, 2), "low", "官方：Ultra $200 = 20× Pro token worth（antigravity.google/blog 2026-05-19）；gemini-token-mix-round1-2026-11-24.json", f"516.2→{google_ai_pro_monthly_yi()*20:g}亿（2026-11-24 随 Pro 3.8 Flash 迁入 Gemini 90% 负载档 25.81→{google_ai_pro_monthly_yi():g}亿联动）：Pro采用值×官方worth倍率20；非独立实测"),
+    ("google_ai_ultra_20x_us", "Google AI Ultra 20x", 199.99, "USD", "gemini-4-neon", google_ai_ultra_20x_neon_monthly_yi(), "medium",
+     "维护者本机 Antigravity 主端 + T3Code Antigravity ACP（同一 Google AI Ultra 20x 账号，与 Pro Neon #248 分开）：2026-11-23 17:20:51 PT 起新周窗，四次面板读数 11-23 22:53 PT 剩 85%（15pp）/ 11-24 01:42 PT 剩 79%（21pp）/ 11-24 05:59 PT 剩 72%（28pp）/ 11-24 19:42 PT 剩 64%（累计 36pp，Claude/GPT 全程 100% 未动）；5,847 次纯 MODEL 调用（High 1,117 次 raw 245,927,253 / XHigh 4,730 次 raw 1,141,491,333；入 91,470,140 / 出 7,701,404 / 缓存读 1,288,247,042 / 缓存写 0，raw 1,387,418,586，命中 93.37%）；issue #258；local-samples-round4-2026-11-23.json；gemini-token-mix-round1-2026-11-24.json",
+     f"新增{google_ai_ultra_20x_neon_monthly_yi():.2f}亿（2026-11-24，Gemini 90% 负载档，medium）：首个 Google AI Ultra 20x × Gemini 4 Neon 独立实测采用点。段 worth ${google_ai_ultra_20x_neon_worth_usd():.6f}（读 {GOOGLE_ULTRA20X_NEON_SEGMENT['cache_read']/1e6:.6f}M×$0.15＋入 {GOOGLE_ULTRA20X_NEON_SEGMENT['input']/1e6:.6f}M×$3＋出 {GOOGLE_ULTRA20X_NEON_SEGMENT['output']/1e6:.6f}M×$15；Gemini Developer API 2026-11-18 公布，High 与 XHigh 同价，缓存写 0）÷{GOOGLE_ULTRA20X_NEON_WEEKLY_PP:g}pp＝${google_ai_ultra_20x_neon_weekly_worth_usd():,.5f}/周（{google_ai_ultra_20x_neon_weekly_worth_usd()/google_ai_pro_neon_weekly_worth_usd():.2f}× Pro Neon 周 ${google_ai_pro_neon_weekly_worth_usd():.2f}）。Gemini 90% 负载档混合价 ${blended_gemini(*GEMINI_NEON_LIST):.3f}/MTok（{GEMINI_MIX['cache']:.2f}×$0.15＋{GEMINI_MIX['input']:.3f}×$3＋{GEMINI_MIX['output']:.3f}×$15）。周 {google_ai_ultra_20x_neon_weekly_tokens():,} token（{google_ai_ultra_20x_neon_weekly_tokens()/YI:.3f}亿）×{MONTH_WEEKS:g}周＝{google_ai_ultra_20x_neon_monthly_tokens():,} token，未舍入 {google_ai_ultra_20x_neon_monthly_tokens()/YI:.3f}亿，round(..., 2) 存 {google_ai_ultra_20x_neon_monthly_yi():.2f}亿。36pp 整数读数 ±0.5pp 对应 {google_ai_ultra_20x_neon_monthly_yi()*36/36.5:.2f}~{google_ai_ultra_20x_neon_monthly_yi()*36/35.5:.2f}亿/月。不含 31 次 SYSTEM/CHECKPOINT 压缩调用（若计入 +$8.07，周 $1,642.33 / 月 132.71亿）；主端与 T3Code ACP 去重无重复；三段 5h 窗独立实测 #2 29pp 推 $521.36/5h（20.04× Pro 5h）、#3 13pp 推 $464.51/5h（17.86× Pro 5h）、#4 12pp 推 $485.68/5h（18.67× Pro 5h），合并 54pp 推 $499.74/5h（19.21× Pro 5h），均作旁证不入主值。对照不采：原低缓存 85% 口径 101.64亿、raw 周 {google_ai_ultra_20x_neon_raw_week_tokens():,}（月 {google_ai_ultra_20x_neon_raw_week_tokens()*MONTH_WEEKS/YI:.2f}亿）、标准 97% 口径 219.28亿。不派生 Ultra 5x。n=1 单账号、4 次整数读数 36pp → medium。证据：local-samples-round4-2026-11-23.json；gemini-token-mix-round1-2026-11-24.json；issue #258。"),
     # Anthropic —— Pro采用shownotover面板截图反推Opus5周池；Max采用9/14永久口径估算157亿，非当期boost或纯Opus5硬上限
     #   5x/20x是5h窗口倍率；已确认20x周池仅为5x的2倍，旧2.25周池比例不再采用；Pro无独立Opus周池（官方文档），7% all-models周读数即绑定约束
     ("claude_pro", "Claude Pro", 20, "USD", "claude-opus-5", claude_pro_opus5_monthly_yi(), "high", "issue #53（NTRYourWaifu）：两个 Pro 账号 9/14~9/22 轮询 /api/oauth/usage seven_day %、按 message.id 去重，Opus 5 共 1,022.02M raw = 周 +148pp；community-issues-round1-2026-09-29.json；旧源 X @shownotover Pro /usage 面板 32.87M = 周池7%（claude-adoption-round8-2026-09-20.json）不再入权；workload-conversion-round1-2026-09-30.json", f"27.62→{claude_pro_opus5_monthly_yi():g}亿（2026-09-30 裁定带分项实测统一折算，Anthropic 档）：段 worth ${CLAUDE_PRO_OPUS5_ISSUE53_WORTH_USD:g}（读1,004.96M×$0.5＋1h写12.99M×$10＋入0.01M×$5＋出4.06M×$25）＝每1% $4.96 → 周$495.9×4周 ÷ Anthropic 档混合价${blended_anthropic(0.5, ANTHROPIC_CACHE_WRITE_5M['claude-opus-5'], 25.0):.5f}/MTok；raw 口径 {claude_pro_opus5_raw_monthly_yi():g} 留作对照。以下为 issue #53 采用决策——{claude_pro_opus5_panel_monthly_yi():g}→{claude_pro_opus5_raw_monthly_yi():g}亿，2026-09-30 裁定改用 issue #53：两个 Pro 账号、全部在 9/14 永久 +25% 之后，1,022.02M raw（读1,004.96M/1h写12.99M/入0.01M/出4.06M）＝周 +148 个百分点 → 6.906M/pp ×100 ×{MONTH_WEEKS:g}周；两个整周分别 24.60/28.96 亿；按标价每 1% worth $4.96。旧面板样本每 1% $3.67（7% 整数读数，区间 17.53~20.23 亿），高出 35%/47% 与 +25% 调整幅度相近，疑为 9/14 前测得，故不与之合并（合并为 27.22 亿不采）；Anthropic 档 worth 口径 25.89 亿（2026-09-30 起改判为采用，见首行）。张力：与 Max 20x 采用值 157 的比从 8.35× 变为 5.68×，与 Opus 5.5 的 301.7/30.54≈9.9× 不一致，指向 Max 20x 侧口径或 5.5/5 池权重（#52/#53 推约 0.843），待裁定。以下为旧 18.78 决策原文——Opus4.8历史15.88亿→Opus5面板反推{claude_pro_opus5_panel_monthly_yi():g}亿：32,868,513 total（opus5 32.85M + haiku 23k）÷7%×{MONTH_WEEKS:g}周；周池4.70亿、5h池56.7M，周池为绑定约束；周%取整区间约17.5~20.2亿；单会话n=1初定medium；round5候选Opus5约1.9亿（假定周消息数）被面板直测推翻作废；标价闭合校验$25.68吻合；2026-09-21裁定Opus4.8旧测不入权——round8曾按基准期读法×1.25=19.85亿作互证，但round6记录该值含+50%活动期boost，忠实映射为÷1.5×1.25=13.23亿且与面板矛盾，故仅面板单源；round9同作者第二条40M=周13%记为张力：新周读法12.3亿/续周读法26.7亿/下限读法不约束，基线不可考不入权；2026-09-21裁定升high：面板级形式+价格闭合校验+下调后口径+与Max20x周池比8.35×自洽；#3新周读法12.3亿与Max池比将失衡（$20得$100档的相对池份额异常），反证18.78侧。注：曾引'8.28窗/周与Max同构'为旁证，round9检查点反推Max档5h池~7.1亿（非4.74亿满窗读法）后该互证撤回——Max周满窗数~5.5非8.3"),
@@ -1825,6 +1880,7 @@ MAIN_EXTRA = {
     ("opencode_go", "deepseek-v4.1-flash"),
     ("opencode_go", "glm-5.3-flash"),
     ("command_code_goat", "deepseek-v4.1-flash"),
+    ("google_ai_ultra_20x_us", "gemini-4-neon"),
 }
 
 
@@ -1879,6 +1935,7 @@ DATA_DATES = {
     ("google_ai_pro_us", "gemini-3.6-flash"): ("2026-09-13~2026-09-27", "sample"),
     ("google_ai_pro_us", "gemini-4-argon"): ("2026-10-16", "sample"),
     ("google_ai_pro_us", "gemini-4-neon"): ("2026-11-20", "sample"),
+    ("google_ai_ultra_20x_us", "gemini-4-neon"): ("2026-11-23~2026-11-24", "sample"),
     ("claude_pro", "claude-opus-5"): ("2026-09-14~2026-09-22", "sample"),
     ("claude_max_20x", "claude-opus-5"): ("2026-08", "sample"),
     ("claude_max_20x", "claude-fable-5.1"): ("2026-09-04~2026-09-05", "sample"),
@@ -2025,7 +2082,9 @@ def workload_of(pid: str, billing: str, model: str = "") -> str:
     # 额度口径分类（详情面板用）：standard=美元/积分池÷standardTokenMix 混合价；
     # anthropic=÷anthropicTokenMix（Anthropic 按量 API、claude_pro 全部行，及经 2026-09-24/09-25/11-24 裁定
     # 按 Anthropic 档折算的 devin_max/devin_pro Claude 行、由其按倍率折算的 droid_ 行）；
-    # lowCache=÷lowCacheTokenMix（Step 全系、Google，以及 2026-11-21/24 裁定的 devin_max::gemini-4-carbon/neon）；
+    # gemini=÷geminiTokenMix（2026-11-24 裁定 90/9.5/0.5：在用 Gemini 订阅行，含 google_* 除待下架 3.6 Flash 外，
+    # 以及 devin_max::gemini-4-carbon/neon；按量 API 仍走 standard）；
+    # lowCache=÷lowCacheTokenMix（Step 全系，以及即将下架未迁档的 google_ai_pro_us::gemini-3.6-flash）；
     # measured=缺 token 分项的 raw 直测样本、
     # 多源加权样本与官方绝对 token 表——2026-09-30 裁定带分项实测统一折算后，measured 仅余未折算行。
     if billing == "metered":
@@ -2038,8 +2097,10 @@ def workload_of(pid: str, billing: str, model: str = "") -> str:
                                 ("devin_pro", "claude-sonnet-5.5"), ("devin_pro", "claude-haiku-5.5"),
                                 ("devin_pro", "claude-fable-5.1"), ("devin_pro", "claude-opus-5.5")):
         return "anthropic"
-    if pid.startswith(("google_", "stepfun_")) or (pid, model) in (("devin_max", "gemini-4-carbon"), ("devin_max", "gemini-4-neon")):
+    if pid.startswith("stepfun_") or (pid, model) == ("google_ai_pro_us", "gemini-3.6-flash"):
         return "lowCache"
+    if pid.startswith("google_") or (pid, model) in (("devin_max", "gemini-4-carbon"), ("devin_max", "gemini-4-neon")):
+        return "gemini"
     if pid in ("supergrok", "supergrok_plus", "supergrok_heavy"):
         return "standard"
     if (pid, model) in (("devin_max", "gpt-6-astra"), ("devin_max", "gpt-6.1-sol")):

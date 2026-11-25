@@ -1,0 +1,64 @@
+{
+  "recordedAt": "2026-11-24",
+  "sourceType": "user_confirmed_project_convention + local_telemetry_audit",
+  "userDecision": "2026-11-24 裁定：Gemini 订阅实测与共享池换算由 85% 低缓存档（lowCacheTokenMix）独立并调高至 90% Gemini 负载档（geminiTokenMix: 缓存读 90% / 普通输入 9.5% / 输出 0.5%）。适用范围：Google AI Pro/Ultra 订阅行（含 Gemini 4 Neon / Argon 与 Gemini 3.8 Flash；即将下架的 Gemini 3.6 Flash 留低缓存档不改）以及 Devin Max × Gemini 4 Carbon / Neon。Step 全系保持 85% 低缓存档（实测 79%）；Gemini 按量 API 行（google_ai_*_api）保持 97% 标准档横向标尺，不进 Gemini 订阅缓存档。",
+  "adopted": {
+    "geminiTokenMix": {
+      "cache": 0.9,
+      "input": 0.095,
+      "output": 0.005
+    },
+    "lowCacheTokenMixRetainedForStepAndLegacy36Flash": {
+      "cache": 0.85,
+      "input": 0.145,
+      "output": 0.005
+    }
+  },
+  "whyChange": "85% 低缓存档定于 2026-09-22/30，当时锚点是 Step-5（79.0%）与 Gemini 3.8/3.6 Flash（82–84%）。2026-10~11 本机跨 Antigravity 与 Devin 累计 73.73 亿 raw token（35,589 次调用）的 Gemini 实测显示，Gemini 4 系列缓存命中率已稳定抬升至 88%–94%（全量汇总 89.88% 缓存读 / 9.52% 未缓存输入 / 0.60% 输出，命中率 90.42%），但因隐式缓存机制仍显著低于同机 Claude/Codex/Devin Opus 的 97%–98.7%（同在 Devin harness 下 Claude Opus 5.5 为 97.06%，Gemini 4 Argon/Carbon 为 89.3%/88.4%）。鉴于 Gemini 4 普通输入/缓存读价差高达 20×，继续套 85% 会系统性低估约 29%（使 Neon 折算额度远低于实测 raw），直接并回 97% 标准档又会系统性高估约 45%–68%；独立 90% 档精确贴合全量 Gemini 汇总实测，且不影响 Step。",
+  "telemetryAudit": {
+    "source": "Maintainer local TokenView aggregate (2026-10-30 ~ 2026-11-24, all Gemini rows >= 1M raw)",
+    "totalGemini": {
+      "calls": 35589,
+      "rawTokens": 7372700000,
+      "cacheShare": 0.8988,
+      "inputShare": 0.0952,
+      "outputShare": 0.006,
+      "hitRate": 0.9042
+    },
+    "byChannelAndModel": [
+      {"client": "Antigravity", "model": "gemini-4-neon", "calls": 21017, "rawYi": 49.232, "cacheShare": 0.9193, "inputShare": 0.075, "outputShare": 0.0057, "hitRate": 0.9246, "dateRange": "2026-11-18~2026-11-24"},
+      {"client": "Antigravity", "model": "gemini-4-hydrogen", "calls": 6541, "rawYi": 10.046, "cacheShare": 0.8906, "inputShare": 0.1032, "outputShare": 0.0062, "hitRate": 0.8962, "dateRange": "2026-11-12~2026-11-19"},
+      {"client": "Devin", "model": "gemini-4-argon", "calls": 2196, "rawYi": 5.319, "cacheShare": 0.8899, "inputShare": 0.1064, "outputShare": 0.0037, "hitRate": 0.8932, "dateRange": "2026-10-30~2026-11-19"},
+      {"client": "Antigravity", "model": "gemini-4-carbon", "calls": 1701, "rawYi": 2.507, "cacheShare": 0.7396, "inputShare": 0.2523, "outputShare": 0.0081, "hitRate": 0.7456, "dateRange": "2026-11-11~2026-11-18"},
+      {"client": "Devin", "model": "gemini-4-carbon", "calls": 757, "rawYi": 1.951, "cacheShare": 0.8806, "inputShare": 0.1155, "outputShare": 0.0039, "hitRate": 0.884, "dateRange": "2026-11-10~2026-11-23"},
+      {"client": "Antigravity", "model": "gemini-4-argon", "calls": 803, "rawYi": 1.066, "cacheShare": 0.9275, "inputShare": 0.0653, "outputShare": 0.0072, "hitRate": 0.9342, "dateRange": "2026-11-01~2026-11-11"},
+      {"client": "Antigravity", "model": "gemini-3.8-flash", "calls": 265, "rawYi": 0.149, "cacheShare": 0.8813, "inputShare": 0.1093, "outputShare": 0.0094, "hitRate": 0.8896, "dateRange": "2026-11-01~2026-11-24"}
+    ],
+    "crossHarnessControls": [
+      {"client": "Codex", "model": "gpt-6.1-sol", "rawYi": 3.91, "cacheShare": 0.9839, "hitRate": 0.9865},
+      {"client": "Claude Code", "model": "claude-opus-5-5", "rawYi": 13.781, "cacheShare": 0.9818, "hitRate": 0.9845},
+      {"client": "Devin", "model": "claude-opus-5-5", "rawYi": 26.12, "cacheShare": 0.9683, "hitRate": 0.9706}
+    ]
+  },
+  "blendedPricesUsdPerMtok": {
+    "gemini-3.8-flash": {"old85": 0.19125, "new90": 0.1575, "standard97": 0.11025},
+    "gemini-4-argon": {"old85": 0.425, "new90": 0.33, "standard97": 0.197},
+    "gemini-4-carbon": {"old85": 0.425, "new90": 0.33, "standard97": 0.197},
+    "gemini-4-neon": {"old85": 0.6375, "new90": 0.495, "standard97": 0.2955}
+  },
+  "affectedRows": [
+    "devin_max::gemini-4-carbon (18.82 -> 24.24 亿/月)",
+    "devin_max::gemini-4-neon (12.55 -> 16.16 亿/月)",
+    "google_ai_pro_us::gemini-3.8-flash (25.81 -> 31.34 亿/月)",
+    "google_ai_pro_us::gemini-4-argon (0.66 -> 0.85 亿/月)",
+    "google_ai_pro_us::gemini-4-neon (5.36 -> 6.91 亿/月)",
+    "google_ai_ultra_5x_us::gemini-3.8-flash (129.05 -> 156.7 亿/月)",
+    "google_ai_ultra_20x_us::gemini-3.8-flash (516.2 -> 626.8 亿/月)",
+    "google_ai_ultra_20x_us::gemini-4-neon (新增采用 124.08 亿/月, #258 三读数 28pp)"
+  ],
+  "unaffectedRows": [
+    "google_ai_pro_us::gemini-3.6-flash (24.89 亿/月, 即将下架，保留 lowCache 85%)",
+    "stepfun_* (12 行，保留 lowCache 85%)",
+    "google_ai_*_api (4 行按量 API，保留 standard 97%)"
+  ]
+}

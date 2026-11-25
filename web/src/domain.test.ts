@@ -117,6 +117,26 @@ test("Anthropic workload line prices the input share as cache writes", () => {
   assert.equal(api?.workload, "anthropic");
   assert.ok(workloadLine(api!, data.conventions, "zh").includes("缓存写"));
 });
+test("Gemini workload line applies 90% cache mix to active Gemini subscriptions while leaving APIs standard and 3.6 Flash lowCache", () => {
+  const m = data.conventions.geminiTokenMix!;
+  assert.ok(m);
+  assert.equal(m.cache + m.input + m.output, 1);
+  const p = { workload: "gemini" } as Point;
+  assert.equal(
+    workloadLine(p, data.conventions, "zh"),
+    "Gemini 负载：缓存读 90% / 输入 9.5% / 输出 0.5%",
+  );
+  assert.equal(
+    workloadLine(p, data.conventions, "en"),
+    "Gemini workload: 90% cache reads / 9.5% input / 0.5% output",
+  );
+  const ultraNeon = data.points.find((q) => q.id === "google_ai_ultra_20x_us::gemini-4-neon");
+  assert.equal(ultraNeon?.workload, "gemini");
+  const legacy36 = data.points.find((q) => q.id === "google_ai_pro_us::gemini-3.6-flash");
+  assert.equal(legacy36?.workload, "lowCache");
+  const neonApi = data.points.find((q) => q.id === "google_ai_neon_api::gemini-4-neon");
+  assert.equal(neonApi?.workload, "standard");
+});
 test("Monthly fee bands have exact non-overlapping boundaries and preserve all eligible allowances", () => {
   for (const [fee, expected] of [
     [0, "0-30"],

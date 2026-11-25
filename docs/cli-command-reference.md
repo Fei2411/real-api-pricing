@@ -560,6 +560,7 @@ rap info
 | Generic month | 4 weeks; vendor-specific monthly pools retain their adopted basis |
 | Standard workload | 97% cache reads / 2.5% fresh input / 0.5% output |
 | Anthropic workload | 97% cache reads / 2.5% cache writes / 0.5% output |
+| Gemini workload | 90% cache reads / 9.5% fresh input / 0.5% output |
 | Low-cache workload | 85% cache reads / 14.5% fresh input / 0.5% output |
 | Measured workload | Raw sample tokens; not workload-normalized |
 | Adopted exchange rate | 1 USD = 6.7787 CNY |
