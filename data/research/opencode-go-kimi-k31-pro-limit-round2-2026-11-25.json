@@ -1,0 +1,210 @@
+{
+  "collectedAt": "2026-11-25",
+  "collectionMethod": "Manual capture around 10:40–10:45 Beijing time / 02:40–02:45Z on 2026-11-25 of the official OpenCode Go documentation page (https://opencode.ai/docs/go/, which 301-redirects to /docs/console/go/), the Go landing page (https://opencode.ai/go, which 302-redirects to /console/go), the documentation markdown export (https://opencode.ai/docs/console/go.md), the prerendered documentation HTML (https://opencode.ai/v2/docs/console/go), the OpenCode console changelog RSS feed (https://opencode.ai/console/changelog/rss.xml) and the full model catalog endpoint referenced by the documentation (https://opencode.ai/inference/go/v1/models). All surfaces were compared against the 2026-11-24 captures of the same URLs. Every price, limit, estimate and sentence below is transcribed as published. Research-only — no adopted row generated, no adopted value changed, no script changed, no chart or site change.",
+  "sources": [
+    "https://opencode.ai/docs/go/",
+    "https://opencode.ai/go",
+    "https://opencode.ai/docs/console/go.md",
+    "https://opencode.ai/v2/docs/console/go",
+    "https://opencode.ai/console/changelog/rss.xml",
+    "https://opencode.ai/inference/go/v1/models"
+  ],
+  "scope": "OpenCode Go official catalog only. The change observed on 2026-11-25 is that the models API go.monthly_usage block for Kimi K3.1 Pro published a higher monthly limit than the 2026-11-24 capture: Go $15 → $60, Go Plus $60 → $120, Go Teams $20 → $65. The three-part token price is unchanged (input $2.00, output $10.00, cache read $0.20, cache write $2.00 per MTok). The Go landing-page model table for the same model still shows the previous tier — Est. requests / 5 hr Go: 147 and Go Plus: 588, Monthly limit Go: $15 and Go Plus: $60 (no Go Teams column) — with visible text identical to the 2026-11-24 capture and no 'New' or 'Limited time' label. The models API and the landing page therefore disagree on this model's monthly limit; both readings are recorded exactly as published and this file does not adjudicate between them. Research-only — not adopted; no computed allowance, no monthlyYi, no blended price, no script change, no leaderboard/score data.",
+  "adoptionStatus": "research-only; not adopted. The opencode_go × kimi-k3.1-pro adopted row already exists in data/adopted.csv and is still computed at the $15 monthly limit as 0.51 亿 (51,000,000 tokens, standard workload), with data_date 2026-10-30 and its evidence pointing to opencode-go-kimi-k31-pro-round1-2026-10-24.json. This file changes neither data/adopted.csv nor scripts/build_adopted.py nor any derived output. Whether and when to move the adopted value to the models-API tier (Go $60) is left to the maintainer, in particular because the Go landing page still publishes the $15 / $60 tier for this model and this file does not decide which surface is authoritative. The adopted value is not derived from the models-API figures recorded here, and the landing-page figures are not rewritten from the models-API figures.",
+  "previous": {
+    "capturedAt": "2026-10-24",
+    "file": "opencode-go-kimi-k31-pro-round1-2026-10-24.json",
+    "modelsApiMonthlyUsage": {
+      "go": 15,
+      "go-plus": 60,
+      "go-teams": 20
+    },
+    "modelsApiMonthlyUsageNote": "The $15 / $60 figures are the monthly limits published on the official table and on the landing page in the round1 capture. The Go Teams figure of $20 is the models-API go.monthly_usage value from the 2026-11-24 capture of https://opencode.ai/inference/go/v1/models; the round1 file did not separately record a Go Teams value in its landing-page section, because the landing page has no Go Teams column.",
+    "landingPage": {
+      "per5h": {
+        "go": 147,
+        "goPlus": 588
+      },
+      "monthlyLimitUsd": {
+        "go": 15,
+        "goPlus": 60
+      },
+      "rowAsPublished": "Kimi K3.1 Pro | Est. requests / 5 hr: Go: 147; Go Plus: 588 | Monthly limit: Go: $15; Go Plus: $60",
+      "promoMarker": "none on the landing-page row on 2026-11-25 — no 'New' or 'Limited time' label; the round1 capture recorded a 'New' marker on this row when the model was introduced on 2026-10-24"
+    },
+    "threePartPrice": {
+      "inputPerMTokUsd": 2.00,
+      "outputPerMTokUsd": 10.00,
+      "cachedReadPerMTokUsd": 0.20,
+      "cacheWritePerMTokUsd": 2.00
+    }
+  },
+  "observed": {
+    "paidModel": {
+      "name": "Kimi K3.1 Pro",
+      "modelId": "kimi-k3.1-pro",
+      "canonicalId": "moonshotai/kimi-k3.1-pro",
+      "vendor": "Moonshot / Kimi",
+      "vendorNote": "Vendor is derived from the 'moonshotai/' prefix of canonical_id in the models API.",
+      "type": "chat",
+      "family": "kimi-pro",
+      "openWeights": true,
+      "releaseDate": "2026-10-23",
+      "lastUpdated": "2026-10-23",
+      "description": "Multimodal Kimi model with a 1M-token context window and always-on reasoning, for coding, 3D creation and financial research",
+      "statusChange": "On 2026-11-25 the models API go.monthly_usage block for Kimi K3.1 Pro published a higher monthly limit than the 2026-11-24 capture of the same endpoint: Go $15 → $60, Go Plus $60 → $120, Go Teams $20 → $65. In the same go block, zdr changed from true to false. The three-part token price, the context and output limits (1,048,576 / 1,048,576) and the official documentation text for this model are unchanged. The Go landing-page model table still shows the previous tier for this row (Est. requests / 5 hr Go: 147, Go Plus: 588; Monthly limit Go: $15, Go Plus: $60) and its visible text is identical to the 2026-11-24 capture.",
+      "endpoint": {
+        "apiBaseUrl": "https://opencode.ai/inference/go/openai/v1",
+        "sdk": "@ai-sdk/openai-compatible",
+        "recommendedApi": "chat-completions"
+      },
+      "contextLimit": 1048576,
+      "outputLimit": 1048576,
+      "threePartPrice": {
+        "unit": "USD / MTok",
+        "inputPerMTokUsd": 2.00,
+        "outputPerMTokUsd": 10.00,
+        "cachedReadPerMTokUsd": 0.20,
+        "cacheWritePerMTokUsd": 2.00,
+        "priceUnchanged": true,
+        "sourceQuote": "models API cost.text: input.price = 2, input.cache.read = 0.2, input.cache.write = 2, output.price = 10, identical to the 2026-11-24 capture"
+      },
+      "monthlyLimitUsd": {
+        "go": 60,
+        "goPlus": 120,
+        "goTeams": 65
+      },
+      "monthlyLimitChange": {
+        "go": {
+          "before": 15,
+          "after": 60
+        },
+        "goPlus": {
+          "before": 60,
+          "after": 120
+        },
+        "goTeams": {
+          "before": 20,
+          "after": 65
+        },
+        "source": "models API go.monthly_usage, compared with the 2026-11-24 capture of the same endpoint (https://opencode.ai/inference/go/v1/models)"
+      },
+      "monthlyLimitNote": "Published on the models API as go.monthly_usage = {go: 60, go-plus: 120, go-teams: 65}. These are the models-API values only; the Go landing-page model table for this row still publishes Monthly limit Go: $15 and Go Plus: $60 (no Go Teams column). The 2026-11-25 documentation HTML and markdown export do not print per-model monthly limit figures for this model; they continue to point readers to the models API and to https://opencode.ai/console/go#limits.",
+      "goBlockChanges": {
+        "zdr": {
+          "before": true,
+          "after": false
+        },
+        "training": {
+          "before": false,
+          "after": false
+        },
+        "limitedRegions": {
+          "before": false,
+          "after": false
+        },
+        "featured": {
+          "before": true,
+          "after": true
+        },
+        "note": "Only the zdr flag changed inside the models API go block. training, limited_regions and featured are unchanged. The go block has no promotion end-date or label field; the only monthly_usage figures changed."
+      },
+      "surfaceConflict": {
+        "observation": "The models API and the Go landing page disagree on the Kimi K3.1 Pro monthly limit as published on 2026-11-25. The models API go.monthly_usage publishes Go $60 / Go Plus $120 / Go Teams $65, while the Go landing-page model table for the same model row still publishes Est. requests / 5 hr Go: 147 and Go Plus: 588 with Monthly limit Go: $15 and Go Plus: $60 (no Go Teams column). The landing page's visible text for this row is identical to the 2026-11-24 capture, and the row carries no 'New' or 'Limited time' label. The official documentation contains no per-row usage price table for chat models and no sentence announcing a limit adjustment for this model on 2026-11-25.",
+        "modelsApiReading": {
+          "monthlyLimitUsd": {
+            "go": 60,
+            "goPlus": 120,
+            "goTeams": 65
+          },
+          "source": "https://opencode.ai/inference/go/v1/models — go.monthly_usage for kimi-k3.1-pro"
+        },
+        "landingPageReading": {
+          "per5h": {
+            "go": 147,
+            "goPlus": 588
+          },
+          "monthlyLimitUsd": {
+            "go": 15,
+            "goPlus": 60
+          },
+          "rowAsPublished": "Kimi K3.1 Pro | Est. requests / 5 hr: Go: 147; Go Plus: 588 | Monthly limit: Go: $15; Go Plus: $60",
+          "source": "https://opencode.ai/go (→ https://opencode.ai/console/go) — Go model table row for Kimi K3.1 Pro",
+          "label": "no 'New' and no 'Limited time' label on this row on 2026-11-25"
+        },
+        "docsReading": {
+          "observation": "The 2026-11-25 documentation markdown export and prerendered HTML carry no per-row Usage price table for chat models; they point to the models API instead ('See the [model list API](/console/api/models) for every field in the response, including Go's monthly usage limits.') and contain no sentence about a limit adjustment for Kimi K3.1 Pro. The only Kimi K3.1 Pro mention in the documentation is the privacy/data-retention table row 'Kimi K3.1 Pro | 0 days'.",
+          "source": "https://opencode.ai/docs/console/go.md and https://opencode.ai/v2/docs/console/go"
+        },
+        "note": "Both readings are recorded exactly as published on their own surface. This file does not adjudicate which surface is authoritative and does not pick a winner; the decision whether to adopt the models-API tier (Go $60) or keep the landing-page tier (Go $15) is left to the maintainer. The landing-page 5-hour and monthly figures are transcribed as published and are not recomputed or rescaled from the models-API figures; no 4× / 2× reconstruction is applied to them.",
+        "unresolved": true
+      },
+      "landingPageRequestEstimates": {
+        "note": "The Go landing page model table publishes its own per-5-hour figures for Kimi K3.1 Pro. These are transcribed as published on 2026-11-25 and are unchanged from the 2026-11-24 capture.",
+        "go": {
+          "per5h": 147,
+          "monthlyLimitUsd": 15
+        },
+        "goPlus": {
+          "per5h": 588,
+          "monthlyLimitUsd": 60
+        },
+        "rowAsPublished": "Kimi K3.1 Pro | Est. requests / 5 hr: Go: 147; Go Plus: 588 | Monthly limit: Go: $15; Go Plus: $60",
+        "goTeamsColumn": "none — the landing-page model table publishes no Go Teams column for this row",
+        "promoMarker": "none on the landing-page row — no 'New' or 'Limited time' label",
+        "landingPageVisibleTextUnchanged": "The visible text of the Kimi K3.1 Pro row is identical to the 2026-11-24 capture of the same URL."
+      },
+      "privacy": {
+        "modelTraining": "Not used (models API go.training = false)",
+        "dataRetention": "0 days",
+        "privacyTableRow": "Kimi K3.1 Pro | 0 days",
+        "source": "Official documentation markdown export https://opencode.ai/docs/console/go.md — Privacy section and data-retention table."
+      }
+    }
+  },
+  "otherObservations": [
+    {
+      "topic": "HungerG Free new model tracked in a separate PR",
+      "observation": "A new HungerG Free model appeared in the catalog on the same day; it is recorded in a separate, independent PR, and this file only points to that same-day separate record.",
+      "note": "Recorded only; scope boundary — no HungerG Free price or limit is expanded in this file and no adopted value changed."
+    },
+    {
+      "topic": "kimi-k3 monthly limits unchanged",
+      "observation": "The models API go.monthly_usage for kimi-k3 remains {go: 15, go-plus: 60, go-teams: 20}. Today's only changes on that model are the description fragment ('toggleable max-effort thinking' → 'always-on thinking'; the current published description is 'Multimodal Kimi model with 1M context and always-on thinking for long-horizon agent work') and zdr true → false. The Go landing-page row for Kimi K3 still shows Est. requests / 5 hr Go: 98 and Go Plus: 392 with Monthly limit Go: $15 and Go Plus: $60.",
+      "note": "Recorded only; the existing opencode_go × kimi-k3 adopted row is not changed by this capture."
+    },
+    {
+      "topic": "Documentation adds Decision models and Embedding models sections",
+      "observation": "The 2026-11-25 documentation (markdown export and prerendered HTML) carries dedicated 'Decision models' and 'Embedding models' sections under Endpoints, with the sentence 'Decision and embedding models come at list price, with no Go discount: their monthly limit matches what you pay, $10 on Go and $40 on Go Plus. On Go Teams it's $15, $5 higher than Go as on every model.'",
+      "note": "Recorded only; these model classes are not tracked under the existing repo convention, so no price table is expanded here and no adopted value changed."
+    },
+    {
+      "topic": "Changelog RSS has no new entry",
+      "observation": "The OpenCode console changelog RSS is byte-identical to the 2026-11-24 capture (5743 bytes); the newest item is still 2026-11-14 'Pay for Go with WeChat Pay'.",
+      "note": "Recorded only; no adopted value changed."
+    },
+    {
+      "topic": "Hidden glm-5.2 landing-page row still present",
+      "observation": "The Go landing page still contains a hidden glm-5.2 row (Est. requests / 5 hr Go: 792, Go Plus: 2,370; Monthly limit Go: $60, Go Plus: $180); the models API still does not list glm-5.2.",
+      "note": "Recorded only; delisting of that row is left to upstream and is not actioned here."
+    },
+    {
+      "topic": "Plan prices unchanged",
+      "observation": "Plan prices remain Go $10 / Go Plus $40 / Go Teams $20 per member.",
+      "note": "Recorded only; plan prices are not expanded or recomputed in this file and no adopted value changed."
+    },
+    {
+      "topic": "Scope boundary — no leaderboard/score data",
+      "observation": "No leaderboard, score, shared-pool or Command Code GOAT data is restated in this file, and no cross-channel comparison is drawn from the models-API limit change.",
+      "note": "Recorded only; no adopted value changed."
+    }
+  ],
+  "computationNote": "This file computes no monthlyYi, no blended per-MTok price, no per-model token allowance and no adopted value; all numbers are transcribed as published on the models API, the Go landing page and the official documentation. No ratio, scale factor, 4× / 2× reconstruction or other rescaling is used to derive the landing-page 5-hour or monthly figures from the models-API monthly figures, and no adopted value is derived from this capture. The adopted opencode_go × kimi-k3.1-pro row remains at its $15-based value of 0.51 亿 with data_date 2026-10-30.",
+  "relatedFiles": [
+    "opencode-go-kimi-k31-pro-round1-2026-10-24.json",
+    "opencode-go-glm53-limit-round3-2026-11-23.json",
+    "opencode-go-longcat25-round1-2026-11-23.json"
+  ],
+  "confidence": "medium",
+  "basis": "official"
+}
