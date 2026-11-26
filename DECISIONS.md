@@ -3,6 +3,15 @@
 本地 `AGENTS.md`（不入库）只放 Agent 工作流程；口径与规则见 [`CONVENTIONS.md`](CONVENTIONS.md)；本文件记录每条采用值的取舍（旧值 → 新值 → 依据 → 未采来源）。
 最权威的表述仍在 `scripts/build_adopted.py` 的 `decision_note` 和 `data/research/` 证据文件里；本文件是按时间的索引摘要。改数只能改 `build_adopted.py`，改完在这里同步记一笔。
 
+## 2026-11-26 · Devin Pro × Gemini 4 Neon 首个采用点（两段合并）
+
+- **采用**：新增 `devin_pro × gemini-4-neon` = **1.21 亿/月 high**（低缓存档，`$0.16529/MTok`）。维护者 Devin CLI `/usage` + `/session-stats` 同一周窗两段连续检查点：① Daily 0%→12% / Weekly 42%→48%（6pp），in 233,424 / out 13,529 / cache_read 1,913,565 = 2,160,518 tok；② 紧接 Daily 12%→76% / Weekly 48%→81%（33pp），in 792,467 / out 126,708 / cache_read 13,566,967 = 14,486,142 tok（Neon XHigh 99%、Compactor (Luna) 95k 1%）。周条 Nov 29 11:00 AM UTC+3 重置。
+- **折算**：两段 list-worth 合计 **$7.503308**（①$1.190242 / 6pp；②$6.313066 / 33pp；读 $0.15 / 入 $3 / 出 $15，Gemini Developer API 2026-11-18）÷39pp×4 周 = 月 **$76.96** ÷ 低缓存档混合价 **$0.6375/MTok**（85/14.5/0.5）＝未舍入 120,716,868 token，`round(..., 2)` 存 **1.21 亿**。两段实测 mix 88.6/10.8/0.63 与 93.7/5.5/0.87，均打不到标准档 97%，故用低缓存档。
+- **一致性**：两段 worth/pp 分别 **$0.19837** 与 **$0.19131**（差 3.6%），合并池 worth **$19.24/周**，初段 $19.84 的读数可复现；Daily 0%→76%（76pp）反推日池 worth $9.8728，×7=周池×3.59，与既有四段（3.23/3.50/3.50/3.64）同结构 → 周池绑定。39pp 两端整数读数 ±1pp 区间约 **1.18~1.24 亿**。
+- **张力（不改口径）**：合并后周池 worth **$19.24/周** 仍低于同账号 Anthropic 四段 **$29.44~33.73/周** 约 33~41%（约 0.59~0.65×），说明初段的偏离不是整数噪声。可能 Devin 对 Gemini 按折扣费率扣减，或 Gemini 在 Pro 池另有模型权重；样本内无法区分。按官方标价折算是保守下限，待 Devin 官方费率确认。
+- **不采 / 不改**：raw total 口径 **1.71 亿**留作对照；第二段 Compactor (Luna) 95k（0.66%）按 Neon 价计入，worth 略高估、对结果影响 <0.7%。`devin_max × gemini-4-neon`（12.55 亿，low，$200/周池派生）、`google_ai_pro_us × gemini-4-neon`（5.36 亿）及 `devin_pro` 其余各行动均不变。
+- **证据**：`data/research/devin-pro-neon-round1-2026-11-26.json`、`data/research/devin-pro-neon-round2-2026-11-26.json`。
+
 ## 2026-11-24 · Devin Max 周池统一按 $200/周重算（新增 Carbon / Sonnet 5.5 / Fable 5.2 / Neon / GPT-6.1 Sol，重算 Astra / Opus 5.5）
 
 - **锚点采用（#251）**：新增 `devin_max × gemini-4-carbon` = **18.82 亿/月 medium**（低缓存档，`$0.10627/MTok`）。Devin Max $200/月，不是 Devin Pro。维护者把周 API 等价定为 **$200**（月 $800），不把 7%（$201.21）与 9%（$191.07）两次拉伸加权，也不取中点；多出的 2 个百分点隐含 $155.55 不采。TokenView `prices.json`：入 $2 / 出 $10 / 缓存读 $0.10 / 缓存写 $0（同 Google 11/30 前导入价）。低缓存混合价 $0.425/MTok（85/14.5/0.5）；周 470,588,235 token（4.71亿）×4 周＝1,882,352,941 token，未舍入 18.824亿，`round(..., 2)` 存 **18.82**。基线 2026-11-20 8:11 PM PT 周表 0%；5:40 AM PT 表仍是 9%（其间又多 $0.24）。

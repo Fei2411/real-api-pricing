@@ -172,6 +172,26 @@ DEVIN_PRO_OPUS55_SEGMENT = {"cache_read": 13_374_805, "input": 849_951, "output"
 DEVIN_PRO_OPUS55_USED_TOKENS = 14_307_644
 DEVIN_PRO_OPUS55_WEEKLY_FRACTION = 0.28
 assert sum(DEVIN_PRO_OPUS55_SEGMENT.values()) == DEVIN_PRO_OPUS55_USED_TOKENS
+# Devin Pro $20 × Gemini 4 Neon (XHigh) —— 维护者 Devin CLI 两段连续 /usage 检查点（2026-11-26，同一周窗）：
+#   ①会话开始 Daily 0% / Weekly 42%（周条 Nov 29 11:00 AM UTC+3 重置），结束 Daily 12% / Weekly 48%；
+#   in 233,424 / out 13,529 / cache_read 1,913,565 = 2,160,518 tok（Tokens by model：Neon XHigh 2.2M 100%）。
+#   ②紧接第二段 Daily 12%→76% / Weekly 48%→81%；in 792,467 / out 126,708 / cache_read 13,566,967
+#   = 14,486,142 tok（Neon XHigh 15M 99%、Compactor (Luna) 95k 1%）。两段合计 39pp。
+#   两段实测 cache 分别 88.6% 与 93.7%，均打不到标准档，按低缓存档换算（与 Devin Max × Gemini 4 同族）。
+#   worth/pp 分别 $0.19837 与 $0.19131（差 3.6%），合并池 worth $19.24/周、两段可复现。Daily 0%→76%
+#   反推日池×7=周池×3.59，与既有四段（3.23/3.50/3.50/3.64）同结构 → 周池绑定。
+#   池 worth $19.24/周仍低于同账号 Anthropic 四段 $29.44~33.73/周（约 0.6~0.65×），提示 Devin 对 Gemini
+#   折扣扣减或另有模型权重；按标价折算是保守下限，待 Devin 官方费率确认（不为此改口径）。
+DEVIN_PRO_NEON_1_SEGMENT = {"cache_read": 1_913_565, "input": 233_424, "output": 13_529}
+DEVIN_PRO_NEON_1_USED_TOKENS = 2_160_518
+DEVIN_PRO_NEON_1_WEEKLY_PP = 6
+DEVIN_PRO_NEON_2_SEGMENT = {"cache_read": 13_566_967, "input": 792_467, "output": 126_708}
+DEVIN_PRO_NEON_2_USED_TOKENS = 14_486_142
+DEVIN_PRO_NEON_2_WEEKLY_PP = 33
+DEVIN_PRO_NEON_WEEKLY_FRACTION = (DEVIN_PRO_NEON_1_WEEKLY_PP + DEVIN_PRO_NEON_2_WEEKLY_PP) / 100
+DEVIN_PRO_NEON_USED_TOKENS = DEVIN_PRO_NEON_1_USED_TOKENS + DEVIN_PRO_NEON_2_USED_TOKENS
+assert sum(DEVIN_PRO_NEON_1_SEGMENT.values()) == DEVIN_PRO_NEON_1_USED_TOKENS
+assert sum(DEVIN_PRO_NEON_2_SEGMENT.values()) == DEVIN_PRO_NEON_2_USED_TOKENS
 # Droid Max × Opus 5.5 —— 维护者 Factory Droid 本机 /limits 周窗（7-day rolling）已用 1%→9% 两段增量直测：
 #   1→5（xhigh）+35,598,616 tok、5→9（high，新会话 47f9711d）+36,567,946 tok，合计 72,166,562 tok ÷ 8pp；
 #   段内 auto 0 增量、glm-5.3-flash +50,317（占 0.14%，Droid Core 免费池不进 Opus 速率）；
@@ -630,6 +650,30 @@ def devin_pro_opus55_monthly_yi() -> float:
     return round(
         devin_pro_opus55_segment_worth_usd() / DEVIN_PRO_OPUS55_WEEKLY_FRACTION
         * MONTH_WEEKS / blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M["claude-opus-5.5"], OPUS55_LIST[2]) / 100,
+        2,
+    )
+
+
+def devin_pro_neon_raw_monthly_yi() -> float:
+    # 原始 total 口径（两段 raw token 合计 ÷ 39pp ×4周），入库后留作对照
+    return round(
+        DEVIN_PRO_NEON_USED_TOKENS / DEVIN_PRO_NEON_WEEKLY_FRACTION
+        * MONTH_WEEKS / YI,
+        2,
+    )
+
+
+def devin_pro_neon_segment_worth_usd() -> float:
+    # 两段 list-worth 合计：cached $0.15 / in $3 / out $15（Gemini Developer API 2026-11-18；High 与 XHigh 同价）
+    return (worth_usd(DEVIN_PRO_NEON_1_SEGMENT, GEMINI_NEON_LIST)
+            + worth_usd(DEVIN_PRO_NEON_2_SEGMENT, GEMINI_NEON_LIST))
+
+
+def devin_pro_neon_monthly_yi() -> float:
+    # 两段 worth 合计 ÷39pp ×4周 ÷ 低缓存档混合价 $0.6375/MTok（同 devin_max×gemini-4-neon 口径）
+    return round(
+        devin_pro_neon_segment_worth_usd() / DEVIN_PRO_NEON_WEEKLY_FRACTION
+        * MONTH_WEEKS / blended_low(*GEMINI_NEON_LIST) / 100,
         2,
     )
 
@@ -1551,6 +1595,10 @@ SUBS = [
     ("devin_pro", "Devin Pro", 20, "USD", "claude-opus-5.5", devin_pro_opus55_monthly_yi(), "high",
      "维护者 Devin CLI /usage + /session-stats 双检查点（2026-11-01，新周窗）：开始 Daily 0%/Weekly 0%（限流已重置），结束 Daily 56%/Weekly 28%；同一会话 in 849,951/out 82,888/cache_read 13,374,805 = 14,307,644 tok（Tokens by model：Opus 5.5 High 15M 100%）；devin-pro-opus55-round1-2026-11-01.json；https://docs.devin.ai/admin/billing/self-serve Pro $20/月；https://platform.claude.com/docs/en/about-claude/pricing",
      f"新增{devin_pro_opus55_monthly_yi():g}亿（2026-11-01，Anthropic 档；Devin Pro × Opus 5.5 首个零起点样本）：段 worth ${devin_pro_opus55_segment_worth_usd():.4f}（cache读13.375M×$0.2＋非缓存输入0.850M×$5＋输出0.083M×$20；非缓存输入按 Anthropic 档 5 分钟写价计）÷28%×{MONTH_WEEKS:g}周＝月${devin_pro_opus55_segment_worth_usd()/0.28*4:.2f} list-worth ÷ Anthropic 档混合价${blended_anthropic(OPUS55_LIST[0], ANTHROPIC_CACHE_WRITE_5M['claude-opus-5.5'], OPUS55_LIST[2]):.3f}/MTok；周窗 0%→28%（28pp）为项目最大单段信号之一，±0.5pp对应约{devin_pro_opus55_monthly_yi()*28/28.5:.2f}~{devin_pro_opus55_monthly_yi()*28/27.5:.2f}亿；raw total 口径 {devin_pro_opus55_raw_monthly_yi():g}亿留作对照；Daily 0%→56%（56pp）反推日池×7=周池×3.5，与 2026-10-31 四段（3.23/3.50/3.50/3.64）同结构→周池绑定；池 worth 互证：本段 ${devin_pro_opus55_segment_worth_usd()/0.28:.2f}/周，落在其余四段 $29.44~33.73 区间中部；零起点、100% 单模型、28pp → high"),
+    # Devin Pro ($20) × Gemini 4 Neon —— 2026-11-26 两段连续 /usage 检查点（周 42%→48%→81%、日 0%→12%→76%）
+    ("devin_pro", "Devin Pro", 20, "USD", "gemini-4-neon", devin_pro_neon_monthly_yi(), "high",
+     "维护者 Devin CLI /usage + /session-stats 两段连续双检查点（2026-11-26，同一周窗）：①Daily 0%→12%、Weekly 42%→48%（6pp），in 233,424/out 13,529/cache_read 1,913,565 = 2,160,518 tok；②紧接 Daily 12%→76%、Weekly 48%→81%（33pp），in 792,467/out 126,708/cache_read 13,566,967 = 14,486,142 tok（Neon XHigh 99%、Compactor (Luna) 95k 1%）；devin-pro-neon-round1-2026-11-26.json、devin-pro-neon-round2-2026-11-26.json；https://docs.devin.ai/admin/billing/self-serve Pro $20/月；https://ai.google.dev/gemini-api/docs/pricing",
+     f"新增{devin_pro_neon_monthly_yi():g}亿（2026-11-26，低缓存档；Devin Pro × Gemini 4 Neon 两段同周窗样本按百分点合并）：两段 list-worth 合计 ${devin_pro_neon_segment_worth_usd():.6f}（①读1.914M×$0.15＋入0.233M×$3＋出0.014M×$15＝$1.190242/6pp；②读13.567M×$0.15＋入0.792M×$3＋出0.127M×$15＝$6.313066/33pp）÷39pp×{MONTH_WEEKS:g}周＝月${devin_pro_neon_segment_worth_usd()/DEVIN_PRO_NEON_WEEKLY_FRACTION*MONTH_WEEKS:.2f} ÷ 低缓存档混合价${blended_low(*GEMINI_NEON_LIST):.4f}/MTok；每 pp 两段 $0.19837 与 $0.19131（差3.6%），合并池 worth ${devin_pro_neon_segment_worth_usd()/DEVIN_PRO_NEON_WEEKLY_FRACTION:.2f}/周、两段可复现；周窗 42%→48%→81%（39pp），整数读数±1pp对应约{devin_pro_neon_monthly_yi()*39/40:.2f}~{devin_pro_neon_monthly_yi()*39/38:.2f}亿；Daily 0%→12%→76%（76pp）反推日池×7=周池×3.59，与既有四段（3.23/3.50/3.50/3.64）同结构→周池绑定；两段实测 mix 88.6/10.8/0.63 与 93.7/5.5/0.87，均打不到标准档 97%，故按低缓存档；第二段 Compactor (Luna) 95k（0.66%）按 Neon 价计入，worth 略高估、对结果影响<0.7%；池 worth 仍低于同账号 Anthropic 四段 $29.44~33.73/周（约0.6~0.65×），指向 Devin 对 Gemini 折扣扣减或另有模型权重，按标价折算是保守下限，待官方费率确认；raw total 口径 {devin_pro_neon_raw_monthly_yi():g}亿留作对照；两段连续、100% Neon、39pp、worth/pp 互证 → high"),
     # Factory Droid —— 维护者Max账号 /limits 周窗 1%→9% 两段增量直测；月＝2×周（30 天窗绑定）；Pro 另挂社区口述点（low），Plus 不派生
     ("droid_max", "Droid Max", 200, "USD", "claude-opus-5.5", droid_max_opus55_monthly_yi(), "medium", "维护者Factory Droid本机实测：周额度（7-day rolling）已用1%→5%段（xhigh）+35,598,616 tok、5%@08:13→9%@12:40段（high，新会话47f9711d）+36,567,946 tok，合计+72,166,562 tok全为claude-opus-5-5（auto 0增量；glm-5.3-flash +50,317 属Droid Core免费池不计）；合计分拆 in 793,017/out 375,172/cache_create 3,640,056/cache_read 67,311,924/thinking 46,393；droid-opus55-max-round1-2026-09-29.json；https://factory.ai/pricing Max $200/月", f"首个Factory Droid点，按devin_max×opus-5.5同口径折算：1→9合计负载 cache读93.27%/cache写5.04%/输入1.10%/输出0.52%/thinking0.06%（hit 93.82%）偏离标准档；按Opus 5.5标价 cached$0.2/写5m $5/in$4/out$20（thinking 46,393不计费，裁定；与factoryCredits 16,935,482≈worth÷$4×1.6对账一致）折段 worth ${droid_max_opus55_segment_worth_usd():.2f} ÷8%×{DROID_MONTH_WEEKS:g}（Factory 30天窗＝2×7天窗，2026-10-03裁定；原按×4周为50.52亿）＝月${droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS:.2f} list-worth ÷ Anthropic档混合价${blended_anthropic(0.2,5.0,20.0):.3f}/MTok＝{droid_max_opus55_monthly_yi():g}亿；1%/9%为取整读数，Δpp∈[7,9]对应约22.46~28.87亿；cache写按1h $8敏感性26.96亿不采；原始total口径72,166,562÷8%×{DROID_MONTH_WEEKS:g}＝{droid_max_opus55_raw_monthly_yi():g}亿（周池902,082,025 raw）留作对照；factoryCredits 16,935,482≈2.12亿credits/周；两段4pp各8.90M/9.14M tok每pp（差2.7%），effort仅影响速率；Factory另有5h与30天滚动窗，月额度以30天窗（＝2×周池）为绑定约束；Pro $20/Plus $100官方仅写约1/10、1/5 Max用量，不派生"),
     ("droid_pro", "Droid Pro", 20, "USD", "claude-opus-5.5", droid_pro_opus55_monthly_yi(), "low", "X @SnowyWar36965 社区口述（2026-09-28，维护者转交截图）：Droid Pro $20 跑 Claude Opus 5.5 小动画用掉 5h 窗约70%，帖主按等价 API 消耗折算 5h≈$15.4、周≈$45、月≈$160（Max 10x≈$154/$450/$1,600，约合 1.76/5.1/18 亿 token）；droid-pro-opus55-community-round1-2026-09-29.json；https://factory.ai/pricing Pro $20/月", f"帖主周 list-worth ${DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['week']:g}×{DROID_MONTH_WEEKS:g}（Factory 30天窗＝2×7天窗，2026-10-03裁定）＝${DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['week']*DROID_MONTH_WEEKS:g} ÷ Anthropic档混合价${blended_anthropic(0.2,5.0,20.0):.3f}/MTok＝{droid_pro_opus55_monthly_yi():g}亿（同 droid_max×opus-5.5 口径；帖主自带 token 列 18亿/$1,600≈$0.89/MTok 为其自身负载，不采）；帖主月值 ${DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['month']:g}（{DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['month']/blended_anthropic(0.2,5.0,20.0)/100:.2f}亿，原采用值）约为其周值3.56×，与30天窗＝2×周不符，不采；弱点：口述估算、无面板截图与 token 分拆、n=1、5h/周/月换算过程未公开 → low；对照：本机实测 Droid Max 月 worth ${droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS:,.2f} ÷ 官方约10× ＝ Pro 约${droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS/10:.2f}（{droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS/10/blended_anthropic(0.2,5.0,20.0)/100:.2f}亿），帖主值约为其 {DROID_PRO_OPUS55_COMMUNITY_WORTH_USD['week']*DROID_MONTH_WEEKS/(droid_max_opus55_segment_worth_usd()/0.08*DROID_MONTH_WEEKS/10):.2f}×"),
@@ -1873,6 +1921,7 @@ DATA_DATES = {
     ("devin_pro", "muse-wonder"): ("2026-10-31", "sample"),
     ("devin_pro", "claude-fable-5.1"): ("2026-10-31", "sample"),
     ("devin_pro", "claude-opus-5.5"): ("2026-11-01", "sample"),
+    ("devin_pro", "gemini-4-neon"): ("2026-11-26", "sample"),
     ("droid_max", "claude-opus-5.5"): ("2026-09-29", "sample"),
     ("droid_pro", "claude-opus-5.5"): ("2026-09-28", "sample"),
     ("google_ai_pro_us", "gemini-3.8-flash"): ("2026-09-12~2026-09-27", "sample"),
@@ -2025,7 +2074,8 @@ def workload_of(pid: str, billing: str, model: str = "") -> str:
     # 额度口径分类（详情面板用）：standard=美元/积分池÷standardTokenMix 混合价；
     # anthropic=÷anthropicTokenMix（Anthropic 按量 API、claude_pro 全部行，及经 2026-09-24/09-25/11-24 裁定
     # 按 Anthropic 档折算的 devin_max/devin_pro Claude 行、由其按倍率折算的 droid_ 行）；
-    # lowCache=÷lowCacheTokenMix（Step 全系、Google，以及 2026-11-21/24 裁定的 devin_max::gemini-4-carbon/neon）；
+    # lowCache=÷lowCacheTokenMix（Step 全系、Google，以及 2026-11-21/24 裁定的 devin_max::gemini-4-carbon/neon
+    #   与 2026-11-26 的 devin_pro::gemini-4-neon）；
     # measured=缺 token 分项的 raw 直测样本、
     # 多源加权样本与官方绝对 token 表——2026-09-30 裁定带分项实测统一折算后，measured 仅余未折算行。
     if billing == "metered":
@@ -2038,7 +2088,8 @@ def workload_of(pid: str, billing: str, model: str = "") -> str:
                                 ("devin_pro", "claude-sonnet-5.5"), ("devin_pro", "claude-haiku-5.5"),
                                 ("devin_pro", "claude-fable-5.1"), ("devin_pro", "claude-opus-5.5")):
         return "anthropic"
-    if pid.startswith(("google_", "stepfun_")) or (pid, model) in (("devin_max", "gemini-4-carbon"), ("devin_max", "gemini-4-neon")):
+    if pid.startswith(("google_", "stepfun_")) or (pid, model) in (("devin_max", "gemini-4-carbon"), ("devin_max", "gemini-4-neon"),
+                                                            ("devin_pro", "gemini-4-neon")):
         return "lowCache"
     if pid in ("supergrok", "supergrok_plus", "supergrok_heavy"):
         return "standard"

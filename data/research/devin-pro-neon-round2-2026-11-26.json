@@ -1,0 +1,100 @@
+{
+  "collectedAt": "2026-11-26",
+  "scopeNote": "Devin Pro $20 在 Devin CLI 上跑 Gemini 4 Neon (XHigh) 的第二段连续样本：第一段结束于 Daily 12% / Weekly 48%，本段从同一起点继续到 Daily 76% / Weekly 81%（同一周窗）。与 round1 按百分点合并后替换单一 6pp 的初值。",
+  "items": [
+    {
+      "planId": "devin_pro",
+      "planName": "Devin Pro",
+      "priceUsd": 20,
+      "priceSource": "https://docs.devin.ai/admin/billing/self-serve（Pro $20/month；Max $200/month）；https://devin.ai/pricing",
+      "model": "gemini-4-neon",
+      "panelModelName": "Gemini 4 Neon XHigh",
+      "evidenceType": "maintainer_panel_double_checkpoint_continuous",
+      "sourceImage": "维护者提供 /usage + /session-stats 截图（2026-11-26），未入库",
+      "session": {
+        "id": "98e7319d-bd0c-44db-b87e-b84df48416b2",
+        "agentMessages": 43,
+        "activity": {"turns": 2, "toolCalls": 121, "files": 22, "commands": 8},
+        "tokens": {"input": 792467, "output": 126708, "cache_read": 13566967},
+        "totalTokens": 14486142,
+        "tokensByModel": {
+          "Gemini 4 Neon XHigh": {"tokens": 15000000, "share": 0.99},
+          "Compactor (Luna)": {"tokens": 95000, "share": 0.01}
+        },
+        "observedMix": {"cacheRead": 0.93655, "input": 0.05471, "output": 0.00875},
+        "note": "/usage 的 This session 摘要写 772k in / 12k out，与 /session-stats 的 792,467 in / 126,708 out 不一致（疑为当前轮次/上下文统计或截断显示）；本样本以 /session-stats 明细为准，其分项合计与 15M total 闭合。"
+      },
+      "checkpoints": [
+        {
+          "label": "start",
+          "dailyPct": 12,
+          "weeklyPct": 48,
+          "dailyResetsIn": "13h 51m",
+          "weeklyResets": "Nov 29, 11:00 AM (UTC+3)",
+          "sessionNote": "同一周窗、紧接 round1 结束点。"
+        },
+        {
+          "label": "end",
+          "dailyPct": 76,
+          "weeklyPct": 81,
+          "dailyResetsIn": "13h 28m",
+          "weeklyResets": "Nov 29, 11:00 AM (UTC+3)",
+          "sessionNote": "This session 2 turns / 121 tool calls / 22 files / 8 commands."
+        }
+      ],
+      "delta": {"dailyPp": 64, "weeklyPp": 33},
+      "windows": {
+        "adopted": "weekly",
+        "dailyTimesSevenVsWeekly": 3.59,
+        "note": "两段合并 Daily 0%→76%（76pp）反推日池 worth $9.8728，×7=周池×3.59，与既有四段（3.23/3.50/3.50/3.64）同结构；周池绑定。"
+      },
+      "prices": {
+        "model": "gemini-4-neon",
+        "cachedPerMtok": 0.15,
+        "inputPerMtok": 3.0,
+        "outputPerMtok": 15.0,
+        "source": "Gemini Developer API 定价页（2026-11-18）；High 与 XHigh 同价，缓存写 $0",
+        "note": "低缓存档混合价 $0.6375/MTok（0.85×$0.15＋0.145×$3＋0.005×$15）。"
+      },
+      "calculation": {
+        "segmentWorthUsd": 6.313066,
+        "segmentWorthFormula": "cache读 13,566,967×$0.15 + 非缓存输入 792,467×$3 + 输出 126,708×$15，÷1e6",
+        "segmentPoolWorthUsdPerWeek": 19.1305,
+        "round1PoolWorthUsdPerWeek": 19.8374,
+        "merged": {
+          "totalWorthUsd": 7.503308,
+          "totalWeeklyPp": 39,
+          "mergedPoolWorthUsdPerWeek": 19.2393,
+          "monthlyListWorthUsd": 76.957,
+          "blendedLowPerMtok": 0.6375,
+          "monthlyTokens": 120716868,
+          "monthlyYi": 1.21,
+          "realUsdPerMtok": 0.16528926,
+          "rawMonthlyYi": 1.71,
+          "rawMonthlyNote": "16,646,660 ÷39pp ×4周 = 170,734,974 raw",
+          "roundingIntervalYi": [1.18, 1.24],
+          "roundingNote": "39pp 两端整数读数各 ±0.5pp，合计 ±1pp 对应约 1.18~1.24 亿"
+        }
+      },
+      "crossCheck": {
+        "worthPerPpUsd": {"round1": 0.19837, "round2": 0.19131, "diffPct": 0.036},
+        "devinProWeeklyPoolWorthUsd": {
+          "claude-fable-5.1": 29.44,
+          "claude-opus-5.5": 30.65,
+          "claude-haiku-5.5": 31.45,
+          "claude-sonnet-5.5": 33.73,
+          "gemini-4-neon": 19.24
+        },
+        "tension": "合并后池 worth $19.24/周 仍低于同账号 Anthropic 四段 $29.44~33.73/周 约 33~41%（约 0.59~0.65×），说明第一段的偏离不是整数读数噪声。指向 Devin 对 Gemini 按折扣费率扣减、或 Gemini 在 Pro 池另有模型权重。按官方标价折算是保守下限；若确认 Devin 的 Gemini 费率，需重算。",
+        "note": "两段 worth/pp 相差 3.6%，Daily×7=周×3.59 与既有四段一致，支持合并与周池绑定。"
+      },
+      "confidence": "high（同一周窗两段连续检查点、39pp、100% Neon、worth/pp 两段互证 3.6%）",
+      "decision": "采用 devin_pro × gemini-4-neon = 1.21 亿/月 high（低缓存档）。合并 round1（6pp / 2,160,518 tok）与本段（33pp / 14,486,142 tok）：worth 合计 $7.503308 ÷39pp×4周 = $76.96 ÷ $0.6375/MTok。raw 口径 1.71 亿留作对照。"
+    }
+  ],
+  "notFound": [
+    "Devin Pro 官方公布的 Daily/Weekly 池绝对 token 或美元额度",
+    "Devin 对 Gemini 4 Neon 的实际扣费倍率（是否按官方 API 标价 1× 扣减）",
+    "Compactor (Luna) 在 Devin 额度中的计费方式与单价"
+  ]
+}

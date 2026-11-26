@@ -189,34 +189,35 @@ No.  Plan                                         Monthly fee             Served
 179  Command Code GOAT                            USD 10                  Nemotron 3 Ultra               0.1395              0.07168   medium
 180  Ollama Pro                                   USD 20                  Kimi K3                        0.1361              0.14695   medium
 181  Command Code GOAT                            USD 10                  DeepSeek V4.1 Flash Ultrafast  0.1294              0.07728   medium
-182  OpenCode Go                                  USD 10                  Qwen4 Max                      0.113               0.0885    medium
-183  Command Code GOAT                            USD 10                  Qwen4 Max                      0.113               0.0885    medium
-184  OpenCode Go                                  USD 10                  Step 5 Preview                 0.1107              0.09033   medium
-185  Alibaba Cloud CN Token Plan Lite (¥39)       CNY 39                  Qwen3.8 Max                    0.1034              0.05564   medium
-186  Command Code GOAT                            USD 10                  Muse Spark 1.3                 0.101               0.09901   medium
-187  Command Code GOAT                            USD 10                  Muse Spark 1.2                 0.101               0.09901   medium
-188  Command Code GOAT                            USD 10                  Kimi K2.6                      0.1005              0.0995    medium
-189  Command Code GOAT                            USD 10                  Inkling                        0.0952              0.10504   medium
-190  Alibaba Cloud CN Token Plan Lite (¥39)       CNY 39                  GLM 5.3                        0.0877              0.0656    medium
-191  Command Code GOAT                            USD 10                  GLM 5                          0.0851              0.11751   medium
-192  Kimi Andante (CN) (v1) †                     CNY 49                  Kimi K2.7 Code                 0.078               0.09267   medium
-193  OpenCode Go                                  USD 10                  Gemini 4 Argon Contributor     0.0761              0.13141   medium
-194  Google AI Pro                                USD 19.99               Gemini 4 Argon                 0.066               0.30288   low
-195  Command Code GOAT                            USD 10                  GLM 5.1                        0.0647              0.15456   medium
-196  Command Code GOAT                            USD 10                  Qwen3.8 Max                    0.062               0.16129   medium
-197  Command Code GOAT                            USD 10                  Qwen3.8 Max 0902               0.062               0.16129   medium
-198  Command Code GOAT                            USD 10                  Qwen3.6 Max Preview            0.0618              0.16181   medium
-199  Command Code GOAT                            USD 10                  Qwen3.7 Max                    0.0564              0.1773    medium
-200  Command Code GOAT                            USD 10                  MiMo V2.6 Pro UltraSpeed       0.0534              0.18727   medium
-201  OpenCode Go                                  USD 10                  Kimi K3.1 Pro                  0.051               0.19608   medium
-202  Command Code GOAT                            USD 10                  Claude Sonnet 5.5              0.0508              0.19685   medium
-203  OpenCode Go                                  USD 10                  Qwen3.8 Max                    0.0465              0.21505   medium
-204  Command Code GOAT                            USD 10                  Kimi K3                        0.0454              0.22026   medium
-205  Command Code GOAT                            USD 10                  Kimi K2.7 Code HighSpeed       0.0439              0.22779   medium
-206  Command Code GOAT                            USD 10                  Grok 4.7                       0.0354              0.28249   medium
-207  Command Code GOAT                            USD 10                  Grok 4.5                       0.0354              0.28249   medium
-208  Command Code GOAT                            USD 10                  Grok 4.6                       0.0354              0.28249   medium
-209  OpenCode Go                                  USD 10                  Kimi K3                        0.034               0.29412   medium
-210  Command Code GOAT                            USD 10                  GLM 5.2 Fast                   0.0327              0.30581   medium
-211  OpenCode Go                                  USD 10                  Grok 4.7                       0.0265              0.37736   medium
-212  Command Code GOAT                            USD 10                  GPT 5.6 Sol                    0.0263              0.38023   medium
+182  Devin Pro                                    USD 20                  Gemini 4 Neon                  0.121               0.16529   high
+183  OpenCode Go                                  USD 10                  Qwen4 Max                      0.113               0.0885    medium
+184  Command Code GOAT                            USD 10                  Qwen4 Max                      0.113               0.0885    medium
+185  OpenCode Go                                  USD 10                  Step 5 Preview                 0.1107              0.09033   medium
+186  Alibaba Cloud CN Token Plan Lite (¥39)       CNY 39                  Qwen3.8 Max                    0.1034              0.05564   medium
+187  Command Code GOAT                            USD 10                  Muse Spark 1.3                 0.101               0.09901   medium
+188  Command Code GOAT                            USD 10                  Muse Spark 1.2                 0.101               0.09901   medium
+189  Command Code GOAT                            USD 10                  Kimi K2.6                      0.1005              0.0995    medium
+190  Command Code GOAT                            USD 10                  Inkling                        0.0952              0.10504   medium
+191  Alibaba Cloud CN Token Plan Lite (¥39)       CNY 39                  GLM 5.3                        0.0877              0.0656    medium
+192  Command Code GOAT                            USD 10                  GLM 5                          0.0851              0.11751   medium
+193  Kimi Andante (CN) (v1) †                     CNY 49                  Kimi K2.7 Code                 0.078               0.09267   medium
+194  OpenCode Go                                  USD 10                  Gemini 4 Argon Contributor     0.0761              0.13141   medium
+195  Google AI Pro                                USD 19.99               Gemini 4 Argon                 0.066               0.30288   low
+196  Command Code GOAT                            USD 10                  GLM 5.1                        0.0647              0.15456   medium
+197  Command Code GOAT                            USD 10                  Qwen3.8 Max                    0.062               0.16129   medium
+198  Command Code GOAT                            USD 10                  Qwen3.8 Max 0902               0.062               0.16129   medium
+199  Command Code GOAT                            USD 10                  Qwen3.6 Max Preview            0.0618              0.16181   medium
+200  Command Code GOAT                            USD 10                  Qwen3.7 Max                    0.0564              0.1773    medium
+201  Command Code GOAT                            USD 10                  MiMo V2.6 Pro UltraSpeed       0.0534              0.18727   medium
+202  OpenCode Go                                  USD 10                  Kimi K3.1 Pro                  0.051               0.19608   medium
+203  Command Code GOAT                            USD 10                  Claude Sonnet 5.5              0.0508              0.19685   medium
+204  OpenCode Go                                  USD 10                  Qwen3.8 Max                    0.0465              0.21505   medium
+205  Command Code GOAT                            USD 10                  Kimi K3                        0.0454              0.22026   medium
+206  Command Code GOAT                            USD 10                  Kimi K2.7 Code HighSpeed       0.0439              0.22779   medium
+207  Command Code GOAT                            USD 10                  Grok 4.7                       0.0354              0.28249   medium
+208  Command Code GOAT                            USD 10                  Grok 4.5                       0.0354              0.28249   medium
+209  Command Code GOAT                            USD 10                  Grok 4.6                       0.0354              0.28249   medium
+210  OpenCode Go                                  USD 10                  Kimi K3                        0.034               0.29412   medium
+211  Command Code GOAT                            USD 10                  GLM 5.2 Fast                   0.0327              0.30581   medium
+212  OpenCode Go                                  USD 10                  Grok 4.7                       0.0265              0.37736   medium
+213  Command Code GOAT                            USD 10                  GPT 5.6 Sol                    0.0263              0.38023   medium
