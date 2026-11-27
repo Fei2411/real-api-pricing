@@ -26,7 +26,7 @@ BOARDS = {
 # 色值与 id 前缀统一来自 config/channel-colors.json；此处只定图例顺序。
 COLORS = palette(["OpenAI", "Anthropic", "SpaceXAI", "Cursor", "Kimi", "Zhipu", "MiniMax", "Alibaba",
                   "OpenCode", "Command Code", "Ollama", "DeepSeek", "Google", "Xiaomi",
-                  "Tencent", "StepFun", "Devin", "Factory"])
+                  "Tencent", "StepFun", "Devin", "Factory", "OpenDesign"])
 # 图例沿用旧显示名（Claude/GLM），内部键均为 canonical 渠道名。
 LABEL = {"Anthropic": "Claude", "Zhipu": "GLM"}
 LEFT, RIGHT, TOP, BOTTOM = 120, 1338, 233, 705

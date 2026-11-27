@@ -211,7 +211,7 @@ def main() -> None:
     # 色值统一来自 config/channel-colors.json；键顺序决定图例顺序，other 为未知渠道兜底。
     colors = palette(["OpenAI", "Anthropic", "SpaceXAI", "Kimi", "Zhipu", "MiniMax", "Alibaba", "DeepSeek",
                       "Google", "Xiaomi", "Tencent", "Cursor", "OpenCode", "Command Code", "Ollama",
-                      "StepFun", "Devin", "Factory"]) | {"other": FALLBACK}
+                      "StepFun", "Devin", "Factory", "OpenDesign"]) | {"other": FALLBACK}
     OUT.write_text(TEMPLATE.replace("__DATA__", json.dumps(data, ensure_ascii=False))
                    .replace("__COLORS__", json.dumps(colors, ensure_ascii=False)), encoding="utf-8")
     print(f"-> {OUT} ({OUT.stat().st_size // 1024} KB)")

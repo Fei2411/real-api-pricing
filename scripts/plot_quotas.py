@@ -64,7 +64,7 @@ plt.rcParams["svg.hashsalt"] = "real-api-pricing"
 # 色值与 id 前缀统一来自 config/channel-colors.json；此处只定图例顺序。
 VENDOR_COLORS = palette(["OpenAI", "Anthropic", "SpaceXAI", "Cursor", "Kimi", "Zhipu", "MiniMax", "Alibaba",
                          "OpenCode", "Command Code", "Ollama", "DeepSeek", "Google", "StepFun",
-                         "Xiaomi", "Devin", "Factory"])
+                         "Xiaomi", "Devin", "Factory", "OpenDesign"])
 # 图例沿用旧显示名（GLM/Gemini），内部键均为 canonical 渠道名。
 LABEL = {"Zhipu": "GLM", "Google": "Gemini"}
 VIEW_CN = {"quotas": "额度", "prices": "单价"}
@@ -97,7 +97,7 @@ VENDOR_CODES = {
     "Kimi": "KI", "Zhipu": "GL", "MiniMax": "MM", "Alibaba": "AL",
     "OpenCode": "OC", "Command Code": "CC", "Ollama": "OL",
     "DeepSeek": "DS", "Google": "GE", "StepFun": "SF", "Devin": "DV",
-    "Xiaomi": "MI", "Factory": "FA",
+    "Xiaomi": "MI", "Factory": "FA", "OpenDesign": "OD",
 }
 TEXT = {
     "zh": {
@@ -235,8 +235,8 @@ def frontier_rule(language: str) -> str:
 
 def evidence_note(language: str) -> str:
     if language == "zh":
-        return "† Kimi：¥199的K3点以K3-256K为主，约84%反推周池×5得14.51亿；K2.7纯样本11.9M/月0.76%得15.68亿；其余档按官方倍率推算；同名档国内外并点，月费/单价按国际版美元标价（$19/$39/$99），¥价为国内实付。OpenCode Go按官方美元池和三段价套统一标准负载换算。"
-    return "† Kimi: CNY199 K3 uses a K3-256K-dominant / ~84% weekly sample ×5 = 1.451B; pure K2.7 uses 11.9M / 0.76% = 1.568B. Other tiers are scaled by official ratios. Same-name CN/global tiers are merged; fee and unit price use the international USD list ($19/$39/$99), ¥ is the domestic list price. OpenCode Go uses official dollar pools and rates under the standard workload."
+        return "† Kimi：¥199的K3点以K3-256K为主，约84%反推周池×5得14.51亿；K2.7纯样本11.9M/月0.76%得15.68亿；其余档按官方倍率推算；同名档国内外并点，月费/单价按国际版美元标价（$19/$39/$99），¥价为国内实付。OpenCode Go按官方美元池和三段价套统一标准负载换算。OpenDesign Go按官方每月$60基础credits池（卡片上的$220/$55/$18为0.27×档等效上限）、每模型倍率与目录三段价套统一标准负载换算。"
+    return "† Kimi: CNY199 K3 uses a K3-256K-dominant / ~84% weekly sample ×5 = 1.451B; pure K2.7 uses 11.9M / 0.76% = 1.568B. Other tiers are scaled by official ratios. Same-name CN/global tiers are merged; fee and unit price use the international USD list ($19/$39/$99), ¥ is the domestic list price. OpenCode Go uses official dollar pools and rates under the standard workload. OpenDesign Go uses its official $60 monthly credit base (the card's $220/$55/$18 are the 0.27x equivalent caps), per-model multipliers and catalogue rates under the standard workload."
 
 
 def exchange_note(language: str) -> str:

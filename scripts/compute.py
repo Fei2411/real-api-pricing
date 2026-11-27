@@ -79,7 +79,7 @@ DISPLAY = {
     "minimax-m3": "MiniMax M3", "minimax-m2.7": "MiniMax M2.7", "minimax-m2.5": "MiniMax M2.5",
     "qwen4-max": "Qwen4 Max", "qwen3.8-max": "Qwen3.8 Max", "qwen3.8-flash": "Qwen3.8 Flash", "qwen3.8-omni-flash": "Qwen3.8 Omni Flash", "qwen3.7-max": "Qwen3.7 Max",
     "qwen3.7-plus": "Qwen3.7 Plus", "qwen3.7-flash": "Qwen3.7 Flash", "qwen3.6-plus": "Qwen3.6 Plus", "qwen3.6-max-preview": "Qwen3.6 Max Preview",
-    "deepseek-v4.1-flash": "DeepSeek V4.1 Flash", "deepseek-v4.1-flash-fast": "DeepSeek V4.1 Flash Fast", "deepseek-v4.1-flash-ultrafast": "DeepSeek V4.1 Flash Ultrafast", "deepseek-v4-flash": "DeepSeek V4 Flash", "deepseek-v4-flash-fast": "DeepSeek V4 Flash Fast", "deepseek-v4-pro": "DeepSeek V4 Pro",
+    "deepseek-v4.1-flash": "DeepSeek V4.1 Flash", "deepseek-v4.1-flash-fast": "DeepSeek V4.1 Flash Fast", "deepseek-v4.1-flash-ultrafast": "DeepSeek V4.1 Flash Ultrafast", "deepseek-v4.1-flash-eco": "DeepSeek V4.1 Flash Eco", "deepseek-v4-flash": "DeepSeek V4 Flash", "deepseek-v4-flash-fast": "DeepSeek V4 Flash Fast", "deepseek-v4-pro": "DeepSeek V4 Pro",
     "deepseek-v4-flash-vision-exp": "DeepSeek V4 Flash Vision Exp",
     "gemini-3.1-pro": "Gemini 3.1 Pro", "gemini-3.6-flash": "Gemini 3.6 Flash", "gemini-3.7-flash": "Gemini 3.7 Flash", "gemini-3.8-flash": "Gemini 3.8 Flash", "gemini-4-argon": "Gemini 4 Argon", "gemini-4-carbon": "Gemini 4 Carbon", "gemini-4-neon": "Gemini 4 Neon", "gemini-4-hydrogen": "Gemini 4 Hydrogen",
     "gemini-4-argon-contributor": "Gemini 4 Argon Contributor",
