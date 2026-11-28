@@ -614,10 +614,10 @@
 <text x="992.632" y="319.478" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.00273</text>
 </g>
 <g class="front-label" data-model="claude-haiku-5.5">
-<path d="M1278.934,430.618Q1278.934,403.813 1269.781,403.813" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="1275.781" y="384.813" font-size="16" fill="#343C34" text-anchor="middle" font-weight="400" class="label-name">Claude Haiku 5.5 · max</text>
-<text x="1275.781" y="404.813" font-size="11.5" fill="#8B9487" text-anchor="middle" font-weight="400" >Max 5x · 9/14+</text>
-<text x="1275.781" y="424.813" font-size="14" fill="#566150" text-anchor="middle" font-weight="400" class="number">$0.00028</text>
+<path d="M1285.351,459.731Q1285.351,463.813 1285.781,463.813" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="1291.781" y="476.813" font-size="16" fill="#343C34" text-anchor="middle" font-weight="400" class="label-name">Claude Haiku 5.5 · max</text>
+<text x="1291.781" y="496.813" font-size="11.5" fill="#8B9487" text-anchor="middle" font-weight="400" >Max 5x · 9/14+</text>
+<text x="1291.781" y="516.813" font-size="14" fill="#566150" text-anchor="middle" font-weight="400" class="number">$0.00028</text>
 </g>
 <rect x="57" y="826" width="8" height="8" fill="#16A34A"/>
 <text x="74.000" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >OpenAI</text>

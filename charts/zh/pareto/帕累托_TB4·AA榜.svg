@@ -643,28 +643,28 @@
 <path d="M0 -5.5L5.5 0 0 5.5 -5.5 0Z" fill="white" stroke="#84CC16" stroke-width="1.5" opacity=".68"/>
 </g>
 <g class="front-label" data-model="kimi-k3.1-pro">
-<path d="M363.081,259.660Q363.081,227.219 261.372,227.219" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="267.372" y="208.219" font-size="16" fill="#343C34" text-anchor="middle" font-weight="400" class="label-name">Artificial Analysis · Kimi K3.1 Pro</text>
-<text x="267.372" y="228.219" font-size="11.5" fill="#8B9487" text-anchor="middle" font-weight="400" >OpenCode Go</text>
-<text x="267.372" y="248.219" font-size="14" fill="#566150" text-anchor="middle" font-weight="400" class="number">$0.19608</text>
+<path d="M382.261,250.038Q382.261,235.219 387.372,235.219" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="393.372" y="216.219" font-size="16" fill="#343C34" text-anchor="start" font-weight="400" class="label-name">Artificial Analysis · Kimi K3.1 Pro</text>
+<text x="393.372" y="236.219" font-size="11.5" fill="#8B9487" text-anchor="start" font-weight="400" >OpenCode Go</text>
+<text x="393.372" y="256.219" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.19608</text>
 </g>
 <g class="front-label" data-model="gemini-4-carbon">
-<path d="M507.107,288.441Q507.107,326.281 541.085,326.281" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="547.085" y="339.281" font-size="16" fill="#343C34" text-anchor="start" font-weight="400" class="label-name">Artificial Analysis · Gemini 4 Carbon · high</text>
-<text x="547.085" y="359.281" font-size="11.5" fill="#8B9487" text-anchor="start" font-weight="400" >Devin Max</text>
-<text x="547.085" y="379.281" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.08251</text>
+<path d="M497.782,292.265Q497.782,320.281 499.085,320.281" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="505.085" y="333.281" font-size="16" fill="#343C34" text-anchor="start" font-weight="400" class="label-name">Artificial Analysis · Gemini 4 Carbon · high</text>
+<text x="505.085" y="353.281" font-size="11.5" fill="#8B9487" text-anchor="start" font-weight="400" >Devin Max</text>
+<text x="505.085" y="373.281" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.08251</text>
 </g>
 <g class="front-label" data-model="claude-sonnet-5.5">
-<path d="M959.950,274.844Q959.950,256.077 946.632,256.077" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="940.632" y="237.077" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Artificial Analysis · Claude Sonnet 5.5 · max</text>
-<text x="940.632" y="257.077" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Max 5x · 9/14+</text>
-<text x="940.632" y="277.077" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00273</text>
+<path d="M969.298,272.092Q969.298,242.077 970.632,242.077" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="976.632" y="223.077" font-size="16" fill="#343C34" text-anchor="start" font-weight="400" class="label-name">Artificial Analysis · Claude Sonnet 5.5 · max</text>
+<text x="976.632" y="243.077" font-size="11.5" fill="#8B9487" text-anchor="start" font-weight="400" >Max 5x · 9/14+</text>
+<text x="976.632" y="263.077" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.00273</text>
 </g>
 <g class="front-label" data-model="deepseek-v4.1-flash">
-<path d="M1104.662,466.756Q1104.662,434.743 1086.166,434.743" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="1092.166" y="415.743" font-size="16" fill="#343C34" text-anchor="middle" font-weight="400" class="label-name">Artificial Analysis · DeepSeek V4.1 Flash · max</text>
-<text x="1092.166" y="435.743" font-size="11.5" fill="#8B9487" text-anchor="middle" font-weight="400" >OpenCode Go</text>
-<text x="1092.166" y="455.743" font-size="14" fill="#566150" text-anchor="middle" font-weight="400" class="number">$0.00097</text>
+<path d="M1100.315,470.549Q1100.315,434.743 1054.166,434.743" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="1048.166" y="415.743" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Artificial Analysis · DeepSeek V4.1 Flash · max</text>
+<text x="1048.166" y="435.743" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >OpenCode Go</text>
+<text x="1048.166" y="455.743" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00097</text>
 </g>
 <g class="front-label" data-model="claude-haiku-5.5">
 <path d="M1282.673,501.234Q1282.673,513.275 1281.781,513.275" stroke="#C4CDC3" stroke-width=".8" fill="none"/>

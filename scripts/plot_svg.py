@@ -336,6 +336,214 @@ def label_position(p, board, x, y, tier="main"):
     return x - 20, y - 52, "end"
 
 
+# ---- 前沿标签防重叠（只挪被判为碰撞的标签）----
+# 几何全部用 text_width() 的字符宽度估算，不读字体文件：CI 无中文字体，
+# 只有这样才能保证本地渲染与 CI 重渲染逐字节一致（charts/*/pareto/*.svg 在 CI 里是比对的）。
+PANEL_X0, PANEL_Y0, PANEL_X1, PANEL_Y1 = 40.0, 184.0, 1400.0, 796.0
+AXIS_X0, AXIS_Y = 120.0, 705.0
+LABEL_SIZES = (16.0, 11.5, 14.0)
+LABEL_DY = (0.0, 20.0, 40.0)
+MARKER_PAD = 2.5
+WIDTH_PAD = 5.0
+HARD = 10.0
+
+
+def _line_rect(lx, ly, anchor, width, size):
+    top, bot = ly - size * .80 - 1.0, ly + size * .24 + 1.0
+    width += WIDTH_PAD
+    if anchor == "end":
+        x0, x1 = lx - width, lx
+    elif anchor == "middle":
+        x0, x1 = lx - width / 2, lx + width / 2
+    else:
+        x0, x1 = lx, lx + width
+    return (x0, top, x1, bot)
+
+
+def _label_rects(lx, ly, anchor, widths):
+    return [_line_rect(lx, ly + dy, anchor, w, s)
+            for dy, s, w in zip(LABEL_DY, LABEL_SIZES, widths)]
+
+
+def _union(rects):
+    return (min(r[0] for r in rects), min(r[1] for r in rects),
+            max(r[2] for r in rects), max(r[3] for r in rects))
+
+
+def _hit(a, b, pad=0.0):
+    return (min(a[2], b[2]) - max(a[0], b[0]) > -pad
+            and min(a[3], b[3]) - max(a[1], b[1]) > -pad)
+
+
+def _seg_hit(a, b, rect, steps=48):
+    for i in range(steps + 1):
+        t = i / steps
+        x, y = a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t
+        if rect[0] <= x <= rect[2] and rect[1] <= y <= rect[3]:
+            return True
+    return False
+
+
+def _rect_dist(pt, r):
+    dx = max(r[0] - pt[0], 0.0, pt[0] - r[2])
+    dy = max(r[1] - pt[1], 0.0, pt[1] - r[3])
+    return math.hypot(dx, dy)
+
+
+def _marker_rect(p, x, y, is_front):
+    if is_front:
+        r = 12.0 if p["billing"] == "metered" else 11.0
+    elif p["billing"] == "metered":
+        r = 5.5
+    else:
+        r = 3.5
+    return (x - r, y - r, x + r, y + r)
+
+
+def _leader(lx, ly, anchor, own, steps=48):
+    """与渲染完全一致的二次贝塞尔引线（先竖后横），返回采样点与实际长度。"""
+    end_y = ly + 19 if ly < own[1] else ly - 13
+    end_x = lx + (6 if anchor == "end" else -6)
+    vx, vy = end_x - own[0], end_y - own[1]
+    length = math.hypot(vx, vy) or 1e-9
+    start = (own[0] + vx / length * 15, own[1] + vy / length * 15)
+    ctrl = (start[0], end_y)
+    curve = [(start[0], start[1])]
+    for i in range(1, steps + 1):
+        t = i / steps
+        curve.append(((1 - t) ** 2 * start[0] + 2 * (1 - t) * t * ctrl[0] + t * t * end_x,
+                      (1 - t) ** 2 * start[1] + 2 * (1 - t) * t * ctrl[1] + t * t * end_y))
+    return curve, length
+
+
+def _curve_in_rect(curve, rect, pad=0.0):
+    return any(rect[0] - pad <= x <= rect[2] + pad and rect[1] - pad <= y <= rect[3] + pad
+               for x, y in curve)
+
+
+def _label_cost(lx, ly, anchor, widths, own, others, markers, segs, fronts):
+    rects = _label_rects(lx, ly, anchor, widths)
+    union = _union(rects)
+    hard = soft = 0.0
+    if (union[0] < AXIS_X0 or union[2] > PANEL_X1
+            or union[1] < PANEL_Y0 or union[3] > AXIS_Y):
+        hard += HARD
+    for rect in rects:
+        for m in markers:
+            if _hit(rect, m, MARKER_PAD):
+                hard += HARD
+        for a, b in segs:
+            if _seg_hit(a, b, rect):
+                hard += HARD
+        for o_union, o_rects, o_curve in others:
+            if _hit(rect, o_union, 2.0):
+                for o in o_rects:
+                    if _hit(rect, o, 2.0):
+                        hard += HARD
+                        break
+            # 别人的引线压到本标签同样算冲突：两侧对称避让，最后一条引线才能让开。
+            if _curve_in_rect(o_curve, rect, 1.0):
+                hard += HARD
+    curve, length = _leader(lx, ly, anchor, own)
+    if length > 300:
+        hard += HARD
+    elif length > 200:
+        soft += 5
+    soft += length * .02
+    for o_union, o_rects, o_curve in others:
+        if _hit((min(p[0] for p in curve), min(p[1] for p in curve),
+                 max(p[0] for p in curve), max(p[1] for p in curve)), o_union, 1.0):
+            for o in o_rects:
+                if any(_seg_hit(a, b, o, steps=1) for a, b in zip(curve, curve[1:])):
+                    hard += HARD
+                    break
+    # 归属：另一个前沿点贴得更近时算错标
+    if _rect_dist(own, union) > 2:
+        for fx, fy in fronts:
+            if (fx, fy) == own:
+                continue
+            d = _rect_dist((fx, fy), union)
+            if d < 40 and d < _rect_dist(own, union):
+                hard += HARD
+                break
+    return hard, soft
+
+
+def place_frontier_labels(frontier, sx, sy, key, points, ids, segs, language, board, tier):
+    """先按老规则摆放；只对仍有碰撞的标签在邻域里搜一个更干净的位置。"""
+    widths, defaults = {}, {}
+    for p in frontier:
+        x, y = sx(p["real_usd_per_mtok"]), sy(p[key])
+        name, plan, price = label_lines(p, language, board)
+        widths[p["id"]] = (text_width(name, 16), text_width(plan, 11.5), text_width(price, 14))
+        defaults[p["id"]] = (*label_position(p, board, x, y, tier), (x, y))
+    markers = [_marker_rect(p, sx(p["real_usd_per_mtok"]), sy(p[key]), p["id"] in ids) for p in points]
+    fronts = [(sx(p["real_usd_per_mtok"]), sy(p[key])) for p in frontier]
+    pos = {pid: v[:3] for pid, v in defaults.items()}
+    order = [p["id"] for p in reversed(frontier)]
+    for _ in range(6):
+        for pid in order:
+            own = defaults[pid][3]
+            others = [(_union(_label_rects(*pos[q], widths[q])), _label_rects(*pos[q], widths[q]),
+                       _leader(*pos[q], defaults[q][3])[0])
+                      for q in order if q != pid]
+            # 先用小窗口粗筛一次，判断这条标签当前是否干净。
+            half = 160 + widths[pid][0]
+            near = [m for m in markers
+                    if m[2] > own[0] - half and m[0] < own[0] + half
+                    and m[3] > own[1] - 140 and m[1] < own[1] + 140]
+            near_segs = [(a, b) for a, b in segs
+                         if max(a[0], b[0]) > own[0] - half and min(a[0], b[0]) < own[0] + half
+                         and max(a[1], b[1]) > own[1] - 140 and min(a[1], b[1]) < own[1] + 140]
+            lx, ly, anchor = pos[pid]
+            best = _label_cost(lx, ly, anchor, widths[pid], own, others, near, near_segs, fronts)
+            if best[0] <= 0:
+                continue
+            best_pos = (lx, ly, anchor)
+            # 近邻精搜；整片都堵死时再逐级放大范围并同步扩大参与判定的窗口。
+            for span_x, span_y, step in ((160, 120, 8), (300, 180, 12), (520, 320, 16)):
+                win_x = span_x + widths[pid][0]
+                win_y = span_y + 60
+                cand_markers = [m for m in markers
+                                if m[2] > own[0] - win_x and m[0] < own[0] + win_x
+                                and m[3] > own[1] - win_y and m[1] < own[1] + win_y]
+                cand_segs = [(a, b) for a, b in segs
+                             if max(a[0], b[0]) > own[0] - win_x and min(a[0], b[0]) < own[0] + win_x
+                             and max(a[1], b[1]) > own[1] - win_y and min(a[1], b[1]) < own[1] + win_y]
+                for cand_anchor in ("end", "start", "middle"):
+                    for dx in range(-span_x, span_x + 1, step):
+                        for dy in range(-span_y, span_y + 1, step):
+                            c = (own[0] + dx, own[1] + dy, cand_anchor)
+                            cost = _label_cost(c[0], c[1], c[2], widths[pid], own, others,
+                                               cand_markers, cand_segs, fronts)
+                            if (cost[0], cost[1]) < (best[0], best[1]):
+                                best, best_pos = cost, c
+                if best[0] <= 0:
+                    break
+            pos[pid] = best_pos
+    # 收尾：仍不干净的标签再在附近做一次 4px 精修（粗网格可能刚好跨过空档）。
+    for pid in order:
+        own = defaults[pid][3]
+        others = [(_union(_label_rects(*pos[q], widths[q])), _label_rects(*pos[q], widths[q]),
+                   _leader(*pos[q], defaults[q][3])[0])
+                  for q in order if q != pid]
+        lx, ly, anchor = pos[pid]
+        best = _label_cost(lx, ly, anchor, widths[pid], own, others, markers, segs, fronts)
+        if best[0] <= 0:
+            continue
+        best_pos = (lx, ly, anchor)
+        for cand_anchor in ("end", "start", "middle"):
+            for dx in range(-48, 49, 4):
+                for dy in range(-48, 49, 4):
+                    c = (own[0] + dx, own[1] + dy, cand_anchor)
+                    cost = _label_cost(c[0], c[1], c[2], widths[pid], own, others,
+                                       markers, segs, fronts)
+                    if (cost[0], cost[1]) < (best[0], best[1]):
+                        best, best_pos = cost, c
+        pos[pid] = best_pos
+    return pos
+
+
 def draw(board, meta, points, tier, language="zh"):
     key = board + "__score"
     valid = [p for p in points if p.get(key) is not None
@@ -418,10 +626,12 @@ def draw(board, meta, points, tier, language="zh"):
           text(720, 775, "Real price · USD per million tokens" if language == "en" else "真实单价 · 美元 / 百万 token", 13, "#5D655E", "middle"),
           text(1338, 775, "Cheaper →" if language == "en" else "越右越便宜 →", 12, "#737B74", "end")]
 
+    segs = []
     if frontier:
         xy = [(LEFT, sy(frontier[-1][key]))] + [(sx(p["real_usd_per_mtok"]), sy(p[key])) for p in reversed(frontier)] + [(RIGHT, sy(frontier[0][key]))]
         path = "M" + " L".join(f"{x:.3f},{y:.3f}" for x, y in xy)
         s.append(f'<path id="frontier" d="{path}" fill="none" stroke="#303630" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>')
+        segs = list(zip(xy, xy[1:]))
     for p in subs + api:
         x, y = sx(p["real_usd_per_mtok"]), sy(p[key])
         c = COLORS.get(channel(p), FALLBACK)
@@ -450,9 +660,10 @@ def draw(board, meta, points, tier, language="zh"):
             edge = f' stroke="{shade(c, .32)}" stroke-width=".9"' if luminance(c) > .45 else ""
             s.append(f'<rect x="-3.5" y="-3.5" width="7" height="7" rx="1.8" fill="{c}" opacity=".68"{edge}/>')
         s.append('</g>')
+    placed = place_frontier_labels(frontier, sx, sy, key, subs + api, ids, segs, language, board, tier) if frontier else {}
     for p in reversed(frontier):
         x, y = sx(p["real_usd_per_mtok"]), sy(p[key])
-        lx, ly, anchor = label_position(p, board, x, y, tier)
+        lx, ly, anchor = placed.get(p["id"]) or label_position(p, board, x, y, tier)
         name, plan, price = label_lines(p, language, board)
         # 三行标签直接排字，无卡片；短引线从留白侧连接，最高点靠近自身无需长线。
         end_y = ly + 19 if ly < y else ly - 13
