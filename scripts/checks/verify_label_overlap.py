@@ -10,8 +10,15 @@ than 300 px (>200 px = info); every label text
 box must stay left of the y-axis line (x ≥ 120) and above the x-axis line
 (y ≤ 705), and must not touch the $0 axis-break zigzag near the axis.
 Font metrics come from Pillow real glyphs (Ink box + advance), not estimates.
+For `.ttc` collections the Simplified Chinese face is selected (index 0 of
+NotoSansCJK on Debian is Japanese); set CHART_LABEL_FONT_INDEX to override.
+
+Exit codes: 0 clean (or --advisory with collisions), 1 collisions, 2 the check
+could not run (no font, unparsable SVG, no charts found) — so an advisory CI
+step can let collisions through without hiding a broken environment.
 """
 
+import argparse
 import math
 import os
 import re
@@ -35,7 +42,7 @@ MARKER_COVERAGE = 0.25
 
 
 def font_path():
-    """标签字体解析顺序：CHART_LABEL_ENV → msyh.ttc → matplotlib 里的 Noto Sans CJK SC。"""
+    """标签字体解析顺序：CHART_LABEL_FONT → msyh.ttc → matplotlib 里的 Noto Sans CJK SC。"""
     env = os.environ.get("CHART_LABEL_FONT")
     if env and os.path.isfile(env):
         return env
@@ -51,6 +58,29 @@ def font_path():
         return None
 
 
+def font_face(path):
+    """`.ttc` 集合里挑出简体中文那一支；否则 Linux 的 NotoSansCJK-Regular.ttc 会取到 index 0（日文）。"""
+    explicit = os.environ.get("CHART_LABEL_FONT_INDEX")
+    if explicit is not None:
+        index = int(explicit)
+        probe = ImageFont.truetype(path, 12, index=index)
+        return index, probe.getname()
+    if not str(path).lower().endswith(".ttc"):
+        return 0, ImageFont.truetype(path, 12).getname()
+    fallback = None
+    for index in range(16):
+        try:
+            name = ImageFont.truetype(path, 12, index=index).getname()
+        except OSError:
+            break
+        family = name[0]
+        if fallback is None:
+            fallback = (index, name)
+        if "SC" in family.split() or family.endswith("SC"):
+            return index, name
+    return fallback if fallback is not None else (0, ImageFont.truetype(path, 12, index=0).getname())
+
+
 def load_fonts():
     if os.environ.get("CHART_FONT_FALLBACK") == "1":
         print("SKIP: chart fonts unavailable (CHART_FONT_FALLBACK=1)")
@@ -62,12 +92,14 @@ def load_fonts():
                  " No CJK font found: label boxes need real glyph metrics."
                  " Install Microsoft YaHei or Noto Sans CJK SC, or set CHART_LABEL_FONT."
                  " CI-only runs may set CHART_FONT_FALLBACK=1 to skip.")
+    index, name = font_face(path)
+    print(f"font: {name[0]} {name[1]} (index {index}) from {path}")
     cache = {}
 
     def get(size):
         key = round(float(size), 2)
         if key not in cache:
-            cache[key] = ImageFont.truetype(path, key)
+            cache[key] = ImageFont.truetype(path, key, index=index)
         return cache[key]
     get.path = path
     return get
@@ -176,6 +208,12 @@ def box_pt_dist(box, pt):
 
 def parse_chart(path, font_of):
     root = ET.parse(path).getroot()
+    for t in root.iter(NS + "text"):
+        if len(t):
+            raise ValueError(
+                f"<text> with child nodes (e.g. <tspan>) in {path.name}: this checker only "
+                "understands the flat <text> plot_svg.py writes; update parse_chart() with the "
+                "SVG format change instead of measuring a truncated string")
     labels, markers, statics, frontier_pts, breaks = [], [], [], [], []
     fl_ids = set()
     for g in root.iter(NS + "g"):
@@ -347,20 +385,71 @@ def check_chart(path, font_of):
     return findings, info
 
 
+def _gh_escape(text, prop=False):
+    out = str(text).replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+    if prop:
+        out = out.replace(":", "%3A").replace(",", "%2C")
+    return out
+
+
+def annotate(rel, findings):
+    """GitHub Actions 注解：让违规直接出现在 PR 的 Files 视图里。"""
+    if os.environ.get("GITHUB_ACTIONS") != "true":
+        return
+    for rule, items in findings.items():
+        for item in items:
+            print(f"::warning file={_gh_escape(rel, True)},line=1,"
+                  f"title={_gh_escape(rule, True)}::{_gh_escape(item)}")
+
+
+def step_summary(rows, total, per_rule):
+    path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not path:
+        return
+    lines = ["## Pareto 标签重叠 / Label collisions", "",
+             f"共 **{total}** 处（{sum(1 for _, n in rows if n)}/{len(rows)} 张图有违规）。", "",
+             "| SVG | 违规 |", "|---|---:|"]
+    lines += [f"| `{rel}` | {n} |" for rel, n in rows if n]
+    if not total:
+        lines.append("| — | 0 |")
+    rules = [f"{rule} {count}" for rule, count in per_rule.items() if count]
+    if rules:
+        lines += ["", "按规则：" + "，".join(rules)]
+    with open(path, "a", encoding="utf-8") as handle:
+        handle.write("\n".join(lines) + "\n")
+
+
 def main():
+    parser = argparse.ArgumentParser(
+        description="Pareto SVG 标签碰撞检查 / label-collision check")
+    parser.add_argument("paths", nargs="*", help="SVG 文件；缺省为 charts/*/pareto/*.svg")
+    parser.add_argument("--advisory", action="store_true",
+                        help="只把标签重叠当成提示（退出码 0）；字体缺失、SVG 解析失败"
+                             "等环境问题仍然返回 2，避免被静默吞掉")
+    args = parser.parse_args()
     font_of = load_fonts()
-    charts = ([Path(p) for p in sys.argv[1:]] if len(sys.argv) > 1
+    charts = ([Path(p) for p in args.paths] if args.paths
               else sorted(ROOT.glob("charts/*/pareto/*.svg")))
+    if not charts:
+        print("charts checked: 0 — nothing matched charts/*/pareto/*.svg; "
+              "refusing to report a clean run", file=sys.stderr)
+        sys.exit(2)
     total = 0
+    rows = []
     per_rule_totals = {}
     for path in charts:
         try:
             rel = path.relative_to(ROOT).as_posix()
         except ValueError:
             rel = path.name
-        findings, info = check_chart(path, font_of)
+        try:
+            findings, info = check_chart(path, font_of)
+        except Exception as exc:  # 解析/字体异常不能伪装成“没有重叠”
+            print(f"cannot measure {rel}: {exc}", file=sys.stderr)
+            sys.exit(2)
         n = sum(len(v) for v in findings.values())
         total += n
+        rows.append((rel, n))
         print(f"\n{rel} — {n} violation(s)")
         for rule, items in findings.items():
             if items:
@@ -370,6 +459,7 @@ def main():
                     print(f"    {item}")
         for line in info:
             print(f"  info: {line}")
+        annotate(rel, findings)
     print("\n=== summary ===")
     print(f"charts checked: {len(charts)}; violations: {total}")
     for rule in ("label×label", "label×marker", "label×static",
@@ -377,7 +467,10 @@ def main():
                  "outside-panel", "association", "label×axis",
                  "label×axis-break", "long-leader"):
         print(f"  {rule}: {per_rule_totals.get(rule, 0)}")
-    sys.exit(1 if total else 0)
+    step_summary(rows, total, per_rule_totals)
+    if total and not args.advisory:
+        sys.exit(1)
+    sys.exit(0)
 
 
 if __name__ == "__main__":
