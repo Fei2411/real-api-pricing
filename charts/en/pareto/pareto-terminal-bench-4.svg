@@ -546,28 +546,28 @@
 <path d="M0 -5.5L5.5 0 0 5.5 -5.5 0Z" fill="white" stroke="#16A34A" stroke-width="1.5" opacity=".68"/>
 </g>
 <g class="front-label" data-model="claude-opus-5.5">
-<path d="M987.073,258.090Q987.073,277.497 1020.137,277.497" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="1014.137" y="290.497" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Claude Code · Claude Opus 5.5 · max</text>
-<text x="1014.137" y="310.497" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Max 5x · from Sep 14</text>
-<text x="1014.137" y="330.497" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00545</text>
+<path d="M985.619,260.148Q985.619,350.634 1093.274,350.634" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="1087.274" y="363.634" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Claude Code · Claude Opus 5.5 · max</text>
+<text x="1087.274" y="383.634" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Max 5x · from Sep 14</text>
+<text x="1087.274" y="403.634" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00545</text>
 </g>
 <g class="front-label" data-model="claude-sonnet-5.5">
-<path d="M1083.824,267.272Q1083.824,254.154 1105.062,254.154" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="1111.062" y="235.154" font-size="16" fill="#343C34" text-anchor="middle" font-weight="400" class="label-name">Claude Code · Claude Sonnet 5.5 · max</text>
-<text x="1111.062" y="255.154" font-size="11.5" fill="#8B9487" text-anchor="middle" font-weight="400" >Max 5x · from Sep 14</text>
-<text x="1111.062" y="275.154" font-size="14" fill="#566150" text-anchor="middle" font-weight="400" class="number">$0.00273</text>
+<path d="M1058.300,267.271Q1058.300,234.758 1005.665,234.758" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="1011.665" y="215.758" font-size="16" fill="#343C34" text-anchor="start" font-weight="400" class="label-name">Claude Code · Claude Sonnet 5.5 · max</text>
+<text x="1011.665" y="235.758" font-size="11.5" fill="#8B9487" text-anchor="start" font-weight="400" >Max 5x · from Sep 14</text>
+<text x="1011.665" y="255.758" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.00273</text>
 </g>
 <g class="front-label" data-model="deepseek-v4.1-flash">
-<path d="M1201.201,433.430Q1201.201,433.007 1190.189,433.007" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="1184.189" y="414.007" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Claude Code · DeepSeek V4.1 Flash [self-reported] · max</text>
-<text x="1184.189" y="434.007" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >OpenCode Go</text>
-<text x="1184.189" y="454.007" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00097</text>
+<path d="M1217.453,448.954Q1217.453,505.007 1222.189,505.007" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="1216.189" y="518.007" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Claude Code · DeepSeek V4.1 Flash [self-reported] · max</text>
+<text x="1216.189" y="538.007" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >OpenCode Go</text>
+<text x="1216.189" y="558.007" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00097</text>
 </g>
 <g class="front-label" data-model="swe-2">
-<path d="M1330.775,558.662Q1330.775,570.076 1396.000,570.076" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="1390.000" y="583.076" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Devin CLI · SWE-2 [self-reported]</text>
-<text x="1390.000" y="603.076" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Devin Pro</text>
-<text x="1390.000" y="623.076" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">≈$0 · unmetered</text>
+<path d="M1321.571,570.003Q1321.571,571.076 1322.000,571.076" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="1316.000" y="584.076" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Devin CLI · SWE-2 [self-reported]</text>
+<text x="1316.000" y="604.076" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Devin Pro</text>
+<text x="1316.000" y="624.076" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">≈$0 · unmetered</text>
 </g>
 <rect x="57" y="826" width="8" height="8" fill="#16A34A"/>
 <text x="74.000" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >OpenAI</text>

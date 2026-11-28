@@ -320,16 +320,16 @@
 <path d="M0 -5.5L5.5 0 0 5.5 -5.5 0Z" fill="white" stroke="#CC5A2E" stroke-width="1.5" opacity=".68"/>
 </g>
 <g class="front-label" data-model="gpt-6.1-sol">
-<path d="M858.257,316.964Q858.257,300.691 861.407,300.691" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="855.407" y="281.691" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">OpenDesign · GPT-6.1 Sol</text>
-<text x="855.407" y="301.691" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Plus</text>
-<text x="855.407" y="321.691" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.01319</text>
+<path d="M860.978,345.618Q860.978,346.691 861.407,346.691" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="855.407" y="359.691" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">OpenDesign · GPT-6.1 Sol</text>
+<text x="855.407" y="379.691" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Plus</text>
+<text x="855.407" y="399.691" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.01319</text>
 </g>
 <g class="front-label" data-model="claude-sonnet-5.5">
-<path d="M1109.049,363.902Q1109.049,327.891 1110.461,327.891" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="1104.461" y="308.891" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">OpenDesign · Claude Sonnet 5.5</text>
-<text x="1104.461" y="328.891" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Max 5x · from Sep 14</text>
-<text x="1104.461" y="348.891" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00273</text>
+<path d="M1110.284,364.002Q1110.284,329.891 1114.461,329.891" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="1108.461" y="310.891" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">OpenDesign · Claude Sonnet 5.5</text>
+<text x="1108.461" y="330.891" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Max 5x · from Sep 14</text>
+<text x="1108.461" y="350.891" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00273</text>
 </g>
 <g class="front-label" data-model="mimo-v2.6-flash">
 <path d="M1230.982,411.093Q1230.982,305.091 1229.230,305.091" stroke="#C4CDC3" stroke-width=".8" fill="none"/>

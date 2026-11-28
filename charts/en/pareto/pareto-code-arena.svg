@@ -964,10 +964,10 @@
 <text x="885.440" y="268.200" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00545</text>
 </g>
 <g class="front-label" data-model="claude-sonnet-5.5">
-<path d="M990.449,323.842Q990.449,316.419 992.569,316.419" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="986.569" y="329.419" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Claude Sonnet 5.5 · xhigh</text>
-<text x="986.569" y="349.419" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Max 5x · from Sep 14</text>
-<text x="986.569" y="369.419" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00273</text>
+<path d="M1008.416,303.650Q1008.416,300.135 1016.854,300.135" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="1022.854" y="281.135" font-size="16" fill="#343C34" text-anchor="start" font-weight="400" class="label-name">Claude Sonnet 5.5 · xhigh</text>
+<text x="1022.854" y="301.135" font-size="11.5" fill="#8B9487" text-anchor="start" font-weight="400" >Max 5x · from Sep 14</text>
+<text x="1022.854" y="321.135" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.00273</text>
 </g>
 <g class="front-label" data-model="deepseek-v4.1-flash">
 <path d="M1123.177,373.141Q1123.177,346.337 1114.025,346.337" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
@@ -976,10 +976,10 @@
 <text x="1120.025" y="367.337" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.00097</text>
 </g>
 <g class="front-label" data-model="claude-haiku-5.5">
-<path d="M1283.468,460.197Q1283.468,452.775 1285.589,452.775" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="1279.589" y="465.775" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Claude Haiku 5.5 · high</text>
-<text x="1279.589" y="485.775" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Max 5x · from Sep 14</text>
-<text x="1279.589" y="505.775" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00028</text>
+<path d="M1293.159,459.702Q1293.159,460.775 1293.589,460.775" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="1287.589" y="473.775" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Claude Haiku 5.5 · high</text>
+<text x="1287.589" y="493.775" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Max 5x · from Sep 14</text>
+<text x="1287.589" y="513.775" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00028</text>
 </g>
 <rect x="57" y="826" width="8" height="8" fill="#16A34A"/>
 <text x="74.000" y="834.000" font-size="12" fill="#687168" text-anchor="start" font-weight="400" >OpenAI</text>
