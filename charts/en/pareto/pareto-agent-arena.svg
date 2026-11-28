@@ -835,16 +835,16 @@
 <text x="885.440" y="286.392" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00545</text>
 </g>
 <g class="front-label" data-model="claude-sonnet-5.5">
-<path d="M990.449,387.548Q990.449,380.125 992.569,380.125" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="986.569" y="393.125" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">Claude Sonnet 5.5 · max</text>
-<text x="986.569" y="413.125" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >Max 5x · from Sep 14</text>
-<text x="986.569" y="433.125" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00273</text>
+<path d="M1008.416,367.356Q1008.416,363.841 1016.854,363.841" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="1022.854" y="344.841" font-size="16" fill="#343C34" text-anchor="start" font-weight="400" class="label-name">Claude Sonnet 5.5 · max</text>
+<text x="1022.854" y="364.841" font-size="11.5" fill="#8B9487" text-anchor="start" font-weight="400" >Max 5x · from Sep 14</text>
+<text x="1022.854" y="384.841" font-size="14" fill="#566150" text-anchor="start" font-weight="400" class="number">$0.00273</text>
 </g>
 <g class="front-label" data-model="deepseek-v4.1-flash">
-<path d="M1136.816,460.208Q1136.816,495.055 1162.025,495.055" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
-<text x="1168.025" y="508.055" font-size="16" fill="#343C34" text-anchor="middle" font-weight="400" class="label-name">DeepSeek V4.1 Flash · max</text>
-<text x="1168.025" y="528.055" font-size="11.5" fill="#8B9487" text-anchor="middle" font-weight="400" >OpenCode Go</text>
-<text x="1168.025" y="548.055" font-size="14" fill="#566150" text-anchor="middle" font-weight="400" class="number">$0.00097</text>
+<path d="M1129.057,463.019Q1129.057,535.055 1134.025,535.055" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
+<text x="1128.025" y="548.055" font-size="16" fill="#343C34" text-anchor="end" font-weight="400" class="label-name">DeepSeek V4.1 Flash · max</text>
+<text x="1128.025" y="568.055" font-size="11.5" fill="#8B9487" text-anchor="end" font-weight="400" >OpenCode Go</text>
+<text x="1128.025" y="588.055" font-size="14" fill="#566150" text-anchor="end" font-weight="400" class="number">$0.00097</text>
 </g>
 <g class="front-label" data-model="claude-haiku-5.5">
 <path d="M1282.741,469.653Q1282.741,442.848 1273.589,442.848" stroke="#C4CDC3" stroke-width=".8" fill="none"/>
