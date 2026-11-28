@@ -82,6 +82,25 @@ jobs:
           python scripts/checks/verify_four_boards.py > /dev/null
           python scripts/checks/verify_publication.py
 
+      # BUILD.md lists verify_label_overlap.py in the chart pipeline but CI never
+      # ran it, so label collisions were invisible. The check measures real glyph
+      # boxes with Pillow, which needs a CJK font: this step fails loudly when the
+      # font cannot be resolved, and the check below only warns (--advisory) until
+      # the baseline reaches zero.
+      - name: CJK font for the label-collision check
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk
+          font=$(fc-match -f '%{file}' 'Noto Sans CJK SC')
+          echo "resolved font: $font"
+          test -f "$font"
+          echo "CHART_LABEL_FONT=$font" >> "$GITHUB_ENV"
+
+      - name: Label collisions in Pareto charts (advisory)
+        env:
+          CHART_FONT_FALLBACK: "0"
+        run: python scripts/checks/verify_label_overlap.py --advisory
+
       - name: Committed outputs match the pipeline
         run: |
           # The repository stores LF; normalise the working tree the same way before comparing.
